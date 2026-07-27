@@ -10,6 +10,7 @@ PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"
 LEGACY_PLIST="$HOME/Library/LaunchAgents/$LEGACY_LABEL.plist"
 LOG_DIR="$ROOT/data/logs/macos"
 RUNNER="$ROOT/scripts/macos/run_local_daily.sh"
+LAUNCHD_DOMAIN="gui/$(id -u)"
 
 mkdir -p "$HOME/Library/LaunchAgents" "$LOG_DIR"
 
@@ -51,6 +52,7 @@ cat > "$PLIST" <<PLIST
 PLIST
 
 if [[ "$LEGACY_PLIST" != "$PLIST" ]]; then
+  launchctl bootout "$LAUNCHD_DOMAIN/$LEGACY_LABEL" >/dev/null 2>&1 || true
   launchctl unload "$LEGACY_PLIST" >/dev/null 2>&1 || true
   rm -f "$LEGACY_PLIST"
 fi
@@ -58,8 +60,18 @@ fi
 launchctl unsetenv TWITTERAPI_IO_KEY >/dev/null 2>&1 || true
 launchctl unsetenv JDCLOUD_GPT_API_KEY >/dev/null 2>&1 || true
 
+launchctl bootout "$LAUNCHD_DOMAIN/$LABEL" >/dev/null 2>&1 || true
 launchctl unload "$PLIST" >/dev/null 2>&1 || true
-launchctl load -w "$PLIST"
+if ! launchctl bootstrap "$LAUNCHD_DOMAIN" "$PLIST" >/dev/null 2>&1; then
+  launchctl load -w "$PLIST" >/dev/null
+fi
+launchctl enable "$LAUNCHD_DOMAIN/$LABEL" >/dev/null 2>&1 || true
+
+if ! launchctl print "$LAUNCHD_DOMAIN/$LABEL" >/dev/null 2>&1; then
+  printf 'ERROR: %s was written but not loaded by macOS.\n' "$PLIST" >&2
+  printf 'Run npm run local:daily:status for details, then reinstall from a normal user terminal.\n' >&2
+  exit 1
+fi
 
 printf 'Installed %s.\n' "$PLIST"
 printf '%s local daily run is scheduled for 08:00 local time.\n' "$BRAND_RADAR_DISPLAY_NAME"
