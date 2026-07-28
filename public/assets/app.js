@@ -2962,12 +2962,15 @@ function brandBreakdown(source, key, fallback = 0) {
 }
 
 async function selectDaily(date) {
+  const previousDate = (state.selectedDaily || state.daily)?.date;
   try {
     state.selectedDaily = await loadJson(`./dashboard-data/daily/${date}.json`);
   } catch (error) {
     state.selectedDaily = state.daily;
   }
+  const nextDate = (state.selectedDaily || state.daily)?.date;
   render();
+  if (nextDate && nextDate !== previousDate) resetMainScroll(document.getElementById("content"));
 }
 
 function dailyArchiveClusterCount() {
