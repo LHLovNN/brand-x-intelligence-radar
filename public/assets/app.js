@@ -13,6 +13,7 @@ const state = {
   featuredFilter: "all",
   featuredExpandedDates: new Set(),
   lastRouteKey: "",
+  conversationContexts: new Map(),
 };
 
 const USE_X_EMBED_FOR_VIDEO = false;
@@ -133,6 +134,8 @@ function render() {
   });
 
   const content = document.getElementById("content");
+  closeConversationDrawer();
+  state.conversationContexts = new Map();
   if (current.name === "all") content.innerHTML = allIntelligencePage();
   else if (current.name === "daily") content.innerHTML = dailyPage();
   else if (current.name === "settings") content.innerHTML = settingsPage();
@@ -847,6 +850,8 @@ function fallbackFeaturedItems(daily) {
         reply_to_post_id: post.reply_to_post_id || "",
         reply_to_handle: post.reply_to_handle || post.in_reply_to_screen_name || "",
         quoted_post_id: post.quoted_post_id || "",
+        conversation_id: post.conversation_id || "",
+        conversation_context: post.conversation_context || null,
         created_at: post.created_at || cluster.first_seen_at || cluster.last_seen_at,
         title: generatedOpinionTitle({ brand: "joybuy", tags, topic: cluster.topic, sentiment: score.sentiment || "neutral" }),
         display_title: "",
@@ -1374,18 +1379,50 @@ function richLink(url) {
 }
 
 function contextRelationNode(item) {
+  const conversationContext = normalizedConversationContext(item);
+  const contextUrl = safeExternalUrl(item?.external_href || item?.externalHref || item?.post_url || item?.url || item?.href);
+  if (conversationContext) {
+    const contextId = conversationContextId(item, conversationContext);
+    state.conversationContexts.set(contextId, { item, context: conversationContext });
+    const summary = conversationContext.summary_zh || "这段对话包含收录帖前后的公开讨论，可用于判断该舆情出现的语境。";
+    return `
+      <div class="context-relation context-relation-summary">
+        <p>${escapeHtml(summary)}</p>
+        <div class="button-row context-actions">
+          <button class="text-button primary" type="button" data-conversation-context="${escapeHtml(contextId)}">查看上下文</button>
+          ${contextUrl ? `<a class="text-button" href="${escapeHtml(contextUrl)}" target="_blank" rel="noreferrer">在 X 查看完整对话</a>` : ""}
+        </div>
+      </div>
+    `;
+  }
   const relation = contextRelation(item);
   if (!relation) return "";
   const target = relation.targetUrl ? richLink(relation.targetUrl) : "";
-  const contextUrl = safeExternalUrl(item?.external_href || item?.externalHref || item?.post_url || item?.url || item?.href);
+  const fallbackContextUrl = contextUrl;
   return `
     <div class="context-relation">
       <span>${escapeHtml(relation.label)}</span>
       <p>${escapeHtml(relation.text)}${target ? ` ${target}` : ""}</p>
       ${relation.note ? `<em>${escapeHtml(relation.note)}</em>` : ""}
-      ${contextUrl ? `<a href="${escapeHtml(contextUrl)}" target="_blank" rel="noreferrer">在 X 查看完整上下文</a>` : ""}
+      ${fallbackContextUrl ? `<a href="${escapeHtml(fallbackContextUrl)}" target="_blank" rel="noreferrer">在 X 查看完整上下文</a>` : ""}
     </div>
   `;
+}
+
+function normalizedConversationContext(item) {
+  const context = item?.conversation_context || item?.conversationContext || null;
+  if (!context || !Array.isArray(context.posts) || !context.posts.length) return null;
+  const anchorId = String(context.anchor_post_id || item?.post_id || item?.id || "");
+  return {
+    ...context,
+    anchor_post_id: anchorId,
+    posts: context.posts.filter(Boolean).sort((a, b) => String(a.created_at || "").localeCompare(String(b.created_at || ""))),
+  };
+}
+
+function conversationContextId(item, context) {
+  const seed = context.anchor_post_id || item?.post_id || item?.id || item?.external_href || item?.externalHref || Math.random().toString(36).slice(2);
+  return `conversation-${String(seed).replace(/[^a-zA-Z0-9_-]/g, "-")}`;
 }
 
 function contextRelation(item) {
@@ -1824,6 +1861,8 @@ function allItemFromEffectivePost(post, daily) {
     reply_to_post_id: post.reply_to_post_id || "",
     reply_to_handle: post.reply_to_handle || post.in_reply_to_screen_name || "",
     quoted_post_id: post.quoted_post_id || "",
+    conversation_id: post.conversation_id || "",
+    conversation_context: post.conversation_context || null,
     tags,
     reason: "",
     href: "",
@@ -1877,6 +1916,8 @@ function allItemFromCluster(cluster, daily) {
     reply_to_post_id: post.reply_to_post_id || "",
     reply_to_handle: post.reply_to_handle || post.in_reply_to_screen_name || "",
     quoted_post_id: post.quoted_post_id || "",
+    conversation_id: post.conversation_id || "",
+    conversation_context: post.conversation_context || null,
     tags,
     reason: score.explanation || cluster.tracking_reason || "",
     href: "",
@@ -1927,6 +1968,8 @@ function allItemFromCompetitorPost(post, daily) {
     reply_to_post_id: post.reply_to_post_id || "",
     reply_to_handle: post.reply_to_handle || post.in_reply_to_screen_name || "",
     quoted_post_id: post.quoted_post_id || "",
+    conversation_id: post.conversation_id || "",
+    conversation_context: post.conversation_context || null,
     tags: ["竞品", post.sentiment, ...(post.matched_terms || [])].filter(Boolean),
     reason: "",
     href: "",
@@ -2888,6 +2931,8 @@ function buildCompetitorEvents(daily) {
       reply_to_post_id: post.reply_to_post_id || "",
       reply_to_handle: post.reply_to_handle || post.in_reply_to_screen_name || "",
       quoted_post_id: post.quoted_post_id || "",
+      conversation_id: post.conversation_id || "",
+      conversation_context: post.conversation_context || null,
       is_sample: dailySample,
     };
   });
@@ -2918,6 +2963,8 @@ function clusterToEvent(cluster, brand, source, isSample = false) {
     reply_to_post_id: post.reply_to_post_id || "",
     reply_to_handle: post.reply_to_handle || post.in_reply_to_screen_name || "",
     quoted_post_id: post.quoted_post_id || "",
+    conversation_id: post.conversation_id || "",
+    conversation_context: post.conversation_context || null,
     reason: cluster.score?.explanation || cluster.tracking_reason || "",
     score: cluster.score,
     fermentation: cluster.fermentation,
@@ -3348,6 +3395,113 @@ function bindPageEvents(detail = null) {
     button.addEventListener("click", () => openMediaLightbox(button.dataset.mediaLightbox));
   });
 
+  document.querySelectorAll("[data-conversation-context]").forEach((button) => {
+    button.addEventListener("click", () => openConversationDrawer(button.dataset.conversationContext));
+  });
+
+}
+
+function openConversationDrawer(contextId) {
+  const record = state.conversationContexts.get(contextId);
+  if (!record?.context) return;
+  closeConversationDrawer();
+  const context = record.context;
+  const node = document.createElement("div");
+  node.className = "conversation-drawer-shell";
+  node.innerHTML = `
+    <aside class="conversation-drawer" role="dialog" aria-modal="true">
+      <div class="conversation-drawer-tools">
+        <div class="conversation-drawer-primary-tools">
+          <button type="button" class="text-button" data-conversation-top>最早</button>
+          <span class="language-toggle conversation-language-toggle" role="group" aria-label="上下文语言切换">
+            <button type="button" class="active" data-conversation-language="zh">中文译文</button>
+            <button type="button" data-conversation-language="original">原文</button>
+          </span>
+        </div>
+        <button type="button" class="conversation-drawer-close" aria-label="关闭上下文">×</button>
+      </div>
+      <div class="conversation-thread">
+        ${context.posts.map((post) => conversationThreadPost(post, context.anchor_post_id)).join("")}
+      </div>
+    </aside>
+  `;
+  node.addEventListener("click", (event) => {
+    if (event.target === node || event.target.closest(".conversation-drawer-close")) closeConversationDrawer();
+    const mediaButton = event.target.closest("[data-media-lightbox]");
+    if (mediaButton) openMediaLightbox(mediaButton.dataset.mediaLightbox);
+    if (event.target.closest("[data-conversation-top]")) {
+      node.querySelector(".conversation-thread")?.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    const languageButton = event.target.closest("[data-conversation-language]");
+    if (languageButton) setConversationLanguage(node, languageButton.dataset.conversationLanguage);
+  });
+  const onKeydown = (event) => {
+    if (event.key === "Escape") closeConversationDrawer();
+  };
+  node._onKeydown = onKeydown;
+  window.addEventListener("keydown", onKeydown);
+  document.body.appendChild(node);
+  document.body.classList.add("conversation-drawer-open");
+  requestAnimationFrame(() => {
+    centerConversationAnchor(node);
+  });
+}
+
+function centerConversationAnchor(node) {
+  const thread = node.querySelector(".conversation-thread");
+  const anchor = node.querySelector("[data-anchor-post='true']");
+  if (!thread || !anchor) return;
+  const anchorTop = anchor.offsetTop - thread.offsetTop;
+  const targetTop = anchorTop - (thread.clientHeight - anchor.offsetHeight) / 2;
+  thread.scrollTo({ top: Math.max(0, targetTop), behavior: "auto" });
+}
+
+function setConversationLanguage(node, language) {
+  const selected = language === "original" ? "original" : "zh";
+  node.querySelectorAll("[data-conversation-language]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.conversationLanguage === selected);
+  });
+  node.querySelectorAll("[data-conversation-language-panel]").forEach((panel) => {
+    panel.classList.toggle("active", panel.dataset.conversationLanguagePanel === selected);
+  });
+}
+
+function conversationThreadPost(post, anchorPostId) {
+  const isAnchor = String(post.post_id || "") === String(anchorPostId || "");
+  const variants = postTextVariants(post);
+  const zhBody = variants.zh || variants.original || "";
+  const originalBody = variants.original || variants.zh || "";
+  return `
+    <article class="conversation-post ${isAnchor ? "is-anchor" : ""}" ${isAnchor ? 'data-anchor-post="true"' : ""}>
+      <div class="conversation-post-head">
+        ${avatarNode(post)}
+        <div class="conversation-post-meta">
+          <div class="source-line">
+            ${authorNameNode(post, post.author_name || post.author_handle || "X Source")}
+            ${post.author_handle ? `<em>@${escapeHtml(post.author_handle)}</em>` : ""}
+          </div>
+          <div class="source-subline">${escapeHtml(formatDateTime(post.created_at || ""))}</div>
+        </div>
+      </div>
+      <div class="post-language-content conversation-language-content">
+        <div class="post-language-panel active" data-conversation-language-panel="zh">
+          ${richPostTextNode(post, zhBody, "conversation-post-text")}
+        </div>
+        <div class="post-language-panel" data-conversation-language-panel="original">
+          ${richPostTextNode(post, originalBody, "conversation-post-text original-text")}
+        </div>
+      </div>
+      ${mediaGridNode(post.media || [], post)}
+    </article>
+  `;
+}
+
+function closeConversationDrawer() {
+  const node = document.querySelector(".conversation-drawer-shell");
+  if (!node) return;
+  if (node._onKeydown) window.removeEventListener("keydown", node._onKeydown);
+  node.remove();
+  document.body.classList.remove("conversation-drawer-open");
 }
 
 function openMediaLightbox(url) {

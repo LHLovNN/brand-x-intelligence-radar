@@ -7,6 +7,7 @@ source "$ROOT/scripts/macos/local_env.sh"
 LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-daily-preview.lock"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 RESUME_FROM_CHECKPOINT="${BRAND_RADAR_RESUME_FROM_CHECKPOINT:-0}"
+ATTACH_CONTEXT_FROM_PROVIDER="${BRAND_RADAR_ATTACH_CONTEXT_FROM_PROVIDER:-0}"
 
 log() {
   printf '[%s] %s\n' "$(date '+%Y-%m-%d %H:%M:%S %Z')" "$*"
@@ -56,16 +57,17 @@ PY
 }
 
 run_daily() {
-  if command -v caffeinate >/dev/null 2>&1; then
-    if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
-      caffeinate -dimsu "$PYTHON_BIN" scripts/run_daily.py --resume-from-checkpoint
-    else
-      caffeinate -dimsu "$PYTHON_BIN" scripts/run_daily.py
+  local args=()
+  if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
+    args+=(--resume-from-checkpoint)
+    if [[ "$ATTACH_CONTEXT_FROM_PROVIDER" == "1" ]]; then
+      args+=(--attach-context-from-provider)
     fi
-  elif [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
-    "$PYTHON_BIN" scripts/run_daily.py --resume-from-checkpoint
+  fi
+  if command -v caffeinate >/dev/null 2>&1; then
+    caffeinate -dimsu "$PYTHON_BIN" scripts/run_daily.py "${args[@]}"
   else
-    "$PYTHON_BIN" scripts/run_daily.py
+    "$PYTHON_BIN" scripts/run_daily.py "${args[@]}"
   fi
 }
 
@@ -93,7 +95,12 @@ export TWITTERAPI_IO_KEY
 export JDCLOUD_GPT_API_KEY
 
 if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
-  log "Resuming daily dashboard generation from local checkpoint without calling X."
+  if [[ "$ATTACH_CONTEXT_FROM_PROVIDER" == "1" ]]; then
+    TWITTERAPI_IO_KEY="$(require_local_secret TWITTERAPI_IO_KEY "source connector credential")"
+    log "Resuming daily dashboard generation from local checkpoint and fetching eligible conversation context only."
+  else
+    log "Resuming daily dashboard generation from local checkpoint without calling X."
+  fi
 else
   TWITTERAPI_IO_KEY="$(require_local_secret TWITTERAPI_IO_KEY "source connector credential")"
 fi

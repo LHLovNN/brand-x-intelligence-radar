@@ -122,6 +122,8 @@ def main() -> None:
     assert capture.requests[0]["params"]["queryType"] == "Top"
     assert "since_time:" in capture.requests[0]["params"]["query"]
     assert "until_time:" in capture.requests[0]["params"]["query"]
+    capture.conversation_posts("1899999999999999999", "2026-07-16T00:00:00Z", "2026-07-17T00:00:00Z", limit=1)
+    assert capture.requests[1]["params"]["query"].startswith("conversation_id:1899999999999999999"), "conversation context should query by conversation_id"
 
     capped = TwitterApiIoAdapter(api_key="test-key", max_requests_per_run=0)
     try:

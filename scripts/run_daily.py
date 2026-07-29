@@ -14,6 +14,7 @@ sys.path.insert(0, str(ROOT))
 from src.adapters.x_source_base import ProviderBudgetExceeded
 from src.adapters.provider_factory import get_x_source
 from src.pipeline.clusterer import cluster_posts
+from src.pipeline.conversation_context import attach_conversation_contexts
 from src.pipeline.dashboard_builder import build_dashboard_data, public_collection_status_payload
 from src.pipeline.evidence_chain import attach_evidence_chains
 from src.pipeline.fermentation import update_fermentation
@@ -38,6 +39,11 @@ def parse_args() -> argparse.Namespace:
         "--resume-from-checkpoint",
         action="store_true",
         help="Resume from the latest local collection checkpoint without calling the X provider.",
+    )
+    parser.add_argument(
+        "--attach-context-from-provider",
+        action="store_true",
+        help="When resuming from checkpoint, fetch only eligible conversation context without rerunning collection.",
     )
     return parser.parse_args()
 
@@ -290,6 +296,7 @@ def main() -> None:
     start, end = beijing_daily_window(now_utc())
     today = end.astimezone(BEIJING).strftime("%Y-%m-%d")
     window_label = f"{beijing_label(start)} - {beijing_label(end)}"
+    x_source = None
 
     if args.resume_from_checkpoint:
         checkpoint = read_collection_checkpoint()
@@ -300,6 +307,10 @@ def main() -> None:
         window_label = checkpoint["window_label"]
         start = from_iso(checkpoint["window_start"])
         end = from_iso(checkpoint["window_end"])
+        if args.attach_context_from_provider:
+            x_source = get_x_source(provider)
+            runtime_limits = apply_runtime_limits(x_source, source_config)
+            collection_status["context_runtime_limits"] = runtime_limits
     else:
         provider = selected_provider(source_config)
         x_source = get_x_source(provider)
@@ -332,6 +343,17 @@ def main() -> None:
     joybuy_clusters = score_clusters(joybuy_clusters, scoring_config)
     joybuy_clusters = attach_evidence_chains(joybuy_clusters)
     joybuy_clusters = update_fermentation(joybuy_clusters)
+    conversation_status = attach_conversation_contexts(
+        normalized,
+        joybuy_clusters,
+        x_source,
+        translation_service,
+        to_iso(start),
+        to_iso(end),
+    )
+    collection_status["conversation_context"] = conversation_status
+    if conversation_status.get("warnings"):
+        collection_status.setdefault("warnings", []).extend(conversation_status["warnings"])
 
     write_jsonl(str(ROOT / "data" / "raw" / "x" / f"{provider}-posts.jsonl"), raw_posts)
     write_jsonl(str(ROOT / "data" / "processed" / "normalized-posts.jsonl"), normalized)

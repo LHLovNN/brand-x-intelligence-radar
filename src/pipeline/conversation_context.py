@@ -1,0 +1,457 @@
+from __future__ import annotations
+
+import html
+import json
+import os
+import re
+import socket
+import urllib.error
+import urllib.request
+from typing import Any
+
+from src.pipeline.translation import TranslationService, apply_translations, response_output_text
+
+
+CONTEXT_BEFORE_LIMIT = 20
+CONTEXT_AFTER_LIMIT = 20
+CONTEXT_SCORE_THRESHOLD = 60
+CONTEXT_FOLLOWER_THRESHOLD = 1000
+CONTEXT_FETCH_LIMIT = 120
+CONTEXT_TRANSLATION_TIMEOUT_SECONDS = 30
+CONTEXT_SUMMARY_TIMEOUT_SECONDS = 20
+CONTEXT_SUMMARY_CHAR_LIMIT = 200
+
+
+def attach_conversation_contexts(
+    posts: list[dict[str, Any]],
+    clusters: list[dict[str, Any]],
+    x_source: Any | None,
+    translation_service: TranslationService | None,
+    window_start: str,
+    window_end: str,
+) -> dict[str, Any]:
+    if not x_source or not hasattr(x_source, "conversation_posts"):
+        return {"attempted": 0, "attached": 0, "warnings": []}
+
+    score_by_post = cluster_score_by_post(clusters)
+    targets = context_targets(posts, score_by_post)
+    target_ids = configured_target_post_ids()
+    if target_ids:
+        targets = [post for post in targets if str(post.get("post_id") or "") in target_ids]
+    eligible = len(targets)
+    max_targets = optional_positive_int_env("CONVERSATION_CONTEXT_MAX_TARGETS")
+    if max_targets:
+        targets = targets[:max_targets]
+    if not targets:
+        return {"eligible": eligible, "attempted": 0, "attached": 0, "warnings": []}
+
+    fetched_by_conversation: dict[str, list[dict[str, Any]]] = {}
+    warnings: list[str] = []
+    attached = 0
+    summary_counts: dict[str, int] = {}
+    for post in targets:
+        conversation_id = str(post.get("conversation_id") or "")
+        if not conversation_id:
+            continue
+        if conversation_id not in fetched_by_conversation:
+            try:
+                rows = x_source.conversation_posts(conversation_id, window_start, window_end, limit=CONTEXT_FETCH_LIMIT)
+            except Exception as error:
+                warnings.append(f"conversation {conversation_id} context fetch failed: {str(error)[:180]}")
+                fetched_by_conversation[conversation_id] = []
+            else:
+                fetched_by_conversation[conversation_id] = prepare_context_rows(rows, translation_service)
+        context = build_context_for_post(post, fetched_by_conversation[conversation_id], translation_service)
+        if context:
+            post["conversation_context"] = context
+            attached += 1
+            summary_status = str(context.get("summary_status") or "fallback")
+            summary_counts[summary_status] = summary_counts.get(summary_status, 0) + 1
+
+    if summary_counts.get("fallback") and can_generate_context_summary(translation_service):
+        warnings.append("conversation context summaries fell back to local rules for some posts.")
+
+    return {
+        "attempted": len(targets),
+        "eligible": eligible,
+        "attached": attached,
+        "summary": summary_counts,
+        "warnings": warnings[:5],
+    }
+
+
+def cluster_score_by_post(clusters: list[dict[str, Any]]) -> dict[str, int]:
+    scores: dict[str, int] = {}
+    for cluster in clusters:
+        score = int(cluster.get("score", {}).get("ips") or 0)
+        for post_id in cluster.get("post_ids", []):
+            scores[str(post_id)] = score
+    return scores
+
+
+def context_targets(posts: list[dict[str, Any]], score_by_post: dict[str, int]) -> list[dict[str, Any]]:
+    targets = []
+    seen: set[str] = set()
+    for post in posts:
+        if not post.get("is_relevant"):
+            continue
+        score = score_by_post.get(str(post.get("post_id")), competitor_context_score(post))
+        if not should_fetch_context(post, score):
+            continue
+        key = str(post.get("post_id") or "")
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        targets.append((score, context_followers(post), str(post.get("created_at") or ""), post))
+    return [post for _, _, _, post in sorted(targets, key=lambda item: (item[0], item[1], item[2]), reverse=True)]
+
+
+def should_fetch_context(post: dict[str, Any], score: int) -> bool:
+    conversation_id = str(post.get("conversation_id") or "")
+    post_id = str(post.get("post_id") or "")
+    if not conversation_id:
+        return False
+    has_reply_shape = conversation_id != post_id or bool(leading_mention(post))
+    if not has_reply_shape:
+        return False
+    followers = context_followers(post)
+    return score >= CONTEXT_SCORE_THRESHOLD or followers >= CONTEXT_FOLLOWER_THRESHOLD
+
+
+def context_followers(post: dict[str, Any]) -> int:
+    return int(post.get("author_followers") or post.get("author", {}).get("followers") or 0)
+
+
+def competitor_context_score(post: dict[str, Any]) -> int:
+    if post.get("brand") != "temu":
+        return 0
+    metrics = post.get("metrics", {})
+    interactions = int(metrics.get("likes") or 0) + int(metrics.get("reposts") or 0) + int(metrics.get("replies") or 0) + int(metrics.get("quotes") or 0)
+    return min(100, 55 + round(interactions / 8))
+
+
+def leading_mention(post: dict[str, Any]) -> str:
+    text = str(post.get("text") or post.get("clean_text") or post.get("translation_zh") or "").strip()
+    if not text.startswith("@"):
+        return ""
+    handle = text.split(maxsplit=1)[0].lstrip("@")
+    return handle if handle and len(handle) <= 20 else ""
+
+
+def prepare_context_rows(rows: list[dict[str, Any]], translation_service: TranslationService | None = None) -> list[dict[str, Any]]:
+    prepared: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for row in rows:
+        post_id = str(row.get("post_id") or row.get("url") or "")
+        if not post_id or post_id in seen:
+            continue
+        seen.add(post_id)
+        clean_text = decoded_text(row.get("clean_text") or row.get("text") or "")
+        item = {
+            **row,
+            "text": decoded_text(row.get("text") or ""),
+            "clean_text": clean_text,
+            "translation_zh": row.get("translation_zh") or "",
+            "translation_status": row.get("translation_status", "pending"),
+        }
+        prepared.append(item)
+    return sorted(prepared, key=lambda item: str(item.get("created_at") or ""))
+
+
+def build_context_for_post(
+    anchor: dict[str, Any],
+    rows: list[dict[str, Any]],
+    summary_service: TranslationService | None = None,
+) -> dict[str, Any] | None:
+    anchor_id = str(anchor.get("post_id") or "")
+    if not anchor_id:
+        return None
+    sorted_rows = sorted(rows, key=lambda item: str(item.get("created_at") or ""))
+    anchor_index = next((index for index, row in enumerate(sorted_rows) if str(row.get("post_id")) == anchor_id), None)
+    if anchor_index is None:
+        sorted_rows = sorted([*sorted_rows, anchor], key=lambda item: str(item.get("created_at") or ""))
+        anchor_index = next((index for index, row in enumerate(sorted_rows) if str(row.get("post_id")) == anchor_id), None)
+    if anchor_index is None:
+        return None
+
+    before = sorted_rows[max(0, anchor_index - CONTEXT_BEFORE_LIMIT) : anchor_index]
+    after = sorted_rows[anchor_index + 1 : anchor_index + 1 + CONTEXT_AFTER_LIMIT]
+    window = [*before, sorted_rows[anchor_index], *after]
+    apply_context_translations(window, summary_service)
+    summary = summarize_context(anchor, before, after, summary_service)
+    return {
+        "conversation_id": anchor.get("conversation_id", ""),
+        "anchor_post_id": anchor_id,
+        "summary_zh": summary["summary_zh"],
+        "summary_status": summary["status"],
+        "posts": [context_item(row) for row in window],
+    }
+
+
+def summarize_context(
+    anchor: dict[str, Any],
+    before: list[dict[str, Any]],
+    after: list[dict[str, Any]],
+    summary_service: TranslationService | None = None,
+) -> dict[str, str]:
+    fallback = heuristic_context_summary(anchor, before, after)
+    if not can_generate_context_summary(summary_service):
+        return {"summary_zh": fallback, "status": "fallback"}
+    try:
+        generated = model_context_summary(anchor, before, after, summary_service)
+    except Exception:
+        return {"summary_zh": fallback, "status": "fallback"}
+    if not generated:
+        return {"summary_zh": fallback, "status": "fallback"}
+    return {"summary_zh": trim_summary(generated), "status": "model"}
+
+
+def heuristic_context_summary(anchor: dict[str, Any], before: list[dict[str, Any]], after: list[dict[str, Any]]) -> str:
+    author = anchor.get("author", {}).get("handle") or anchor.get("author_handle") or "该用户"
+    text = f"{anchor.get('translation_zh') or ''} {anchor.get('clean_text') or anchor.get('text') or ''}"
+    lower = text.lower()
+    if any(term in lower for term in ("价格", "price", "voordeliger", "half")) and any(term in lower for term in ("配送", "delivery", "levering")):
+        angle = "价格和配送优势"
+    elif "joybuy" in lower or "主品牌" in text:
+        angle = "主品牌相关信息"
+    else:
+        angle = "相关信息"
+    before_hint = short_context_hint(before[-2:])
+    after_hint = short_context_hint(after[:2])
+    lead = f"前文主要在讨论{before_hint}" if before_hint else ("这段对话原本围绕其他话题展开" if before else "这段对话中")
+    follow = f"；后续回应继续围绕{after_hint}" if after_hint else ("，后续有人回应并继续讨论" if after else "")
+    summary = f"{lead}，@{author}把话题转到{angle}，收录帖可帮助判断该提及是在回复链中自然出现，而非孤立广告式发布{follow}。"
+    return trim_summary(summary)
+
+
+def can_generate_context_summary(summary_service: TranslationService | None) -> bool:
+    return bool(
+        summary_service
+        and getattr(summary_service, "configured", False)
+        and getattr(summary_service, "api_key", None)
+        and getattr(summary_service, "endpoint", None)
+        and getattr(summary_service, "model", None)
+    )
+
+
+def apply_context_translations(window: list[dict[str, Any]], summary_service: TranslationService | None) -> None:
+    if not summary_service or not getattr(summary_service, "configured", False):
+        return
+    if str(os.getenv("CONVERSATION_CONTEXT_TRANSLATE_POSTS") or "1").strip().lower() in {"0", "false", "no", "off"}:
+        return
+    original_timeout = getattr(summary_service, "timeout_seconds", None)
+    if original_timeout:
+        summary_service.timeout_seconds = min(
+            int(original_timeout),
+            positive_int_env("CONVERSATION_CONTEXT_TRANSLATION_TIMEOUT_SECONDS", CONTEXT_TRANSLATION_TIMEOUT_SECONDS),
+        )
+    try:
+        apply_translations(window, summary_service)
+    except Exception:
+        return
+    finally:
+        if original_timeout:
+            summary_service.timeout_seconds = original_timeout
+
+
+def model_context_summary(
+    anchor: dict[str, Any],
+    before: list[dict[str, Any]],
+    after: list[dict[str, Any]],
+    summary_service: TranslationService,
+) -> str:
+    request_body = {
+        "model": getattr(summary_service, "model"),
+        "stream": False,
+        "input": context_summary_prompt(anchor, before, after),
+    }
+    request = urllib.request.Request(
+        str(getattr(summary_service, "endpoint")),
+        data=json.dumps(request_body, ensure_ascii=False).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {getattr(summary_service, 'api_key')}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    timeout = min(
+        positive_int_env("CONVERSATION_CONTEXT_SUMMARY_TIMEOUT_SECONDS", CONTEXT_SUMMARY_TIMEOUT_SECONDS),
+        int(getattr(summary_service, "timeout_seconds", CONTEXT_SUMMARY_TIMEOUT_SECONDS) or CONTEXT_SUMMARY_TIMEOUT_SECONDS),
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except (urllib.error.HTTPError, urllib.error.URLError, socket.timeout, TimeoutError, json.JSONDecodeError) as error:
+        raise RuntimeError("conversation context summary failed") from error
+    return parse_summary_response(response_output_text(payload))
+
+
+def context_summary_prompt(anchor: dict[str, Any], before: list[dict[str, Any]], after: list[dict[str, Any]]) -> str:
+    posts = []
+    window = [*before[-8:], anchor, *after[:8]]
+    anchor_id = str(anchor.get("post_id") or "")
+    before_ids = {str(post.get("post_id") or "") for post in before}
+    for post in window:
+        post_id = str(post.get("post_id") or "")
+        posts.append(
+            {
+                "role": "anchor" if post_id == anchor_id else ("before" if post_id in before_ids else "after"),
+                "author": post.get("author", {}).get("handle") or post.get("author_handle") or post.get("author_name") or "",
+                "time": post.get("created_at") or "",
+                "text": post.get("translation_zh") or post.get("clean_text") or post.get("text") or "",
+            }
+        )
+    input_payload = json.dumps(posts, ensure_ascii=False)
+    return (
+        "你是品牌海外舆情分析助手。请根据同一 X 对话中收录帖前后的公开发言，"
+        "用简体中文生成一段不超过200字的上下文摘要。摘要要更具体：说明前文主要话题、"
+        "收录帖如何把话题转向品牌/商品/价格/配送/体验，后续是否有人回应或继续补充，"
+        "以及这段上下文对判断该舆情真实性、情绪或传播价值有什么帮助。"
+        "不要输出标题、标签、风险等级、JSON 或项目符号；不要臆测未出现的信息；不要超过200字。\n\n"
+        f"收录帖 ID：{anchor_id}\n对话片段 JSON：\n{input_payload}"
+    )
+
+
+def parse_summary_response(text: str) -> str:
+    stripped = re.sub(r"^```(?:json|text)?|```$", "", str(text or "").strip(), flags=re.IGNORECASE).strip()
+    if not stripped:
+        return ""
+    try:
+        payload = json.loads(stripped)
+    except json.JSONDecodeError:
+        return trim_summary(stripped)
+    if isinstance(payload, dict):
+        for key in ("summary_zh", "summary", "text"):
+            value = str(payload.get(key) or "").strip()
+            if value:
+                return trim_summary(value)
+    if isinstance(payload, str):
+        return trim_summary(payload)
+    return ""
+
+
+def trim_summary(value: str) -> str:
+    compact = re.sub(r"\s+", " ", str(value or "")).strip()
+    compact = compact.strip("「」\"'` ")
+    return compact[:CONTEXT_SUMMARY_CHAR_LIMIT]
+
+
+def short_context_hint(posts: list[dict[str, Any]]) -> str:
+    snippets = []
+    for post in posts:
+        text = str(post.get("translation_zh") or post.get("clean_text") or post.get("text") or "").strip()
+        text = re.sub(r"\s+", " ", text)
+        if text:
+            snippets.append(text[:34])
+    return " / ".join(snippets)[:80]
+
+
+def positive_int_env(name: str, fallback: int) -> int:
+    raw = os.getenv(name)
+    if not raw:
+        return fallback
+    try:
+        value = int(raw)
+    except ValueError:
+        return fallback
+    return max(1, value)
+
+
+def optional_positive_int_env(name: str) -> int | None:
+    raw = os.getenv(name)
+    if not raw:
+        return None
+    try:
+        value = int(raw)
+    except ValueError:
+        return None
+    return value if value > 0 else None
+
+
+def configured_target_post_ids() -> set[str]:
+    raw = os.getenv("CONVERSATION_CONTEXT_TARGET_POST_IDS") or ""
+    return {item.strip() for item in raw.split(",") if item.strip()}
+
+
+def context_item(post: dict[str, Any]) -> dict[str, Any]:
+    author = post.get("author") or {}
+    metrics = post.get("metrics") or {
+        "likes": post.get("like_count", 0),
+        "reposts": post.get("repost_count", 0),
+        "replies": post.get("reply_count", 0),
+        "quotes": post.get("quote_count", 0),
+        "bookmarks": post.get("bookmark_count"),
+        "views": post.get("view_count"),
+    }
+    return {
+        "post_id": post.get("post_id"),
+        "url": post.get("url", ""),
+        "created_at": post.get("created_at"),
+        "text": decoded_text(post.get("clean_text") or post.get("text") or ""),
+        "original_text": decoded_text(post.get("text") or ""),
+        "translation_zh": decoded_text(post.get("translation_zh") or post.get("clean_text") or post.get("text") or ""),
+        "translation_status": post.get("translation_status", "unknown"),
+        "author_name": author.get("name") or post.get("author_name") or post.get("author_handle"),
+        "author_handle": author.get("handle") or post.get("author_handle"),
+        "author_avatar_url": author.get("avatar_url") or post.get("author_avatar_url"),
+        "author_followers": author.get("followers", post.get("author_followers", 0)),
+        "author_following": author.get("following", post.get("author_following", 0)),
+        "author_bio": author.get("bio", post.get("author_bio", "")),
+        "author_location": author.get("location", post.get("author_location", "")),
+        "author_joined_at": author.get("joined_at", post.get("author_joined_at", "")),
+        "author_verified": author.get("verified", post.get("author_verified", False)),
+        "links": post.get("links", []),
+        "media": context_media_items(post),
+        "metrics": metrics,
+    }
+
+
+def decoded_text(value: Any) -> str:
+    return html.unescape(str(value or ""))
+
+
+def context_media_items(post: dict[str, Any]) -> list[dict[str, Any]]:
+    items = []
+    for item in post.get("media", []) or []:
+        if isinstance(item, str):
+            items.append({"url": item, "type": "image"})
+        elif isinstance(item, dict):
+            url = (
+                item.get("media_url_https")
+                or item.get("media_url")
+                or item.get("mediaUrlHttps")
+                or item.get("mediaUrl")
+                or item.get("preview_image_url")
+                or item.get("previewImageUrl")
+                or item.get("thumbnail_url")
+                or item.get("thumbnailUrl")
+                or item.get("image_url")
+                or item.get("imageUrl")
+                or item.get("url")
+                or item.get("src")
+            )
+            if not url:
+                continue
+            media_type = str(item.get("type") or item.get("media_type") or item.get("mediaType") or "image")
+            payload: dict[str, Any] = {"url": url, "type": media_type}
+            preview_url = (
+                item.get("media_url_https")
+                or item.get("media_url")
+                or item.get("mediaUrlHttps")
+                or item.get("mediaUrl")
+                or item.get("preview_image_url")
+                or item.get("previewImageUrl")
+                or item.get("thumbnail_url")
+                or item.get("thumbnailUrl")
+            )
+            if preview_url:
+                payload["preview_image_url"] = preview_url
+                payload["media_url_https"] = preview_url
+            video_info = item.get("video_info") or item.get("videoInfo")
+            if video_info:
+                payload["video_info"] = video_info
+            expanded_url = item.get("expanded_url") or item.get("expandedUrl")
+            if expanded_url:
+                payload["expanded_url"] = expanded_url
+            items.append(payload)
+    return items[:4]

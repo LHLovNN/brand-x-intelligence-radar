@@ -102,6 +102,16 @@ class TwitterApiIoAdapter(XSourceBase):
     def hydrate_posts(self, post_ids: list[str]) -> list[dict[str, Any]]:
         raise NotImplementedError("TwitterAPI.io hydration is not needed for the daily MVP path yet.")
 
+    def conversation_posts(
+        self,
+        conversation_id: str,
+        start_time: str,
+        end_time: str,
+        limit: int = 120,
+    ) -> list[dict[str, Any]]:
+        query = f"conversation_id:{conversation_id}"
+        return self.search_posts(query, start_time, end_time, limit, query_type="Latest")
+
     def _get_json(self, path: str, params: dict[str, str]) -> dict[str, Any]:
         query_string = urllib.parse.urlencode(params)
         request = urllib.request.Request(

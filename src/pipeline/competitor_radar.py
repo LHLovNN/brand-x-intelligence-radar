@@ -79,6 +79,7 @@ def post_card(post: dict[str, Any]) -> dict[str, Any]:
         "reply_to_handle": post.get("reply_to_handle", ""),
         "quoted_post_id": post.get("quoted_post_id", ""),
         "conversation_id": post.get("conversation_id", ""),
+        "conversation_context": post.get("conversation_context", {}),
         "language": post.get("language", "und"),
         "media": post.get("media", []),
         "metrics": post["metrics"],

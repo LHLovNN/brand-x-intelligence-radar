@@ -1937,6 +1937,125 @@ select {
   text-decoration: underline;
 }
 
+.context-relation-summary {
+  gap: 9px;
+  border-color: rgba(15, 114, 128, 0.22);
+  background: #f0fbfa;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  padding: 11px 12px;
+}
+
+.context-actions {
+  justify-content: flex-start;
+}
+
+.context-actions .text-button,
+.context-relation-summary a.text-button {
+  border-color: rgba(46, 109, 246, 0.3);
+  background: #ffffff;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.context-actions .text-button:hover,
+.context-relation-summary a.text-button:hover {
+  background: #f2f6ff;
+  text-decoration: none;
+}
+
+.conversation-drawer-shell {
+  position: fixed;
+  z-index: 180;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(11, 18, 25, 0.24);
+}
+
+.conversation-drawer {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: min(620px, 100vw);
+  height: 100vh;
+  border-left: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: -20px 0 56px rgba(20, 31, 42, 0.18);
+}
+
+.conversation-drawer-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--line-soft);
+  padding: 12px 14px;
+}
+
+.conversation-drawer-primary-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.conversation-language-toggle {
+  min-height: 32px;
+}
+
+.conversation-drawer-close {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.conversation-thread {
+  overflow-y: auto;
+  padding: 18px;
+  scroll-behavior: smooth;
+}
+
+.conversation-post {
+  display: grid;
+  gap: 10px;
+  border-left: 3px solid transparent;
+  padding: 12px 12px 14px;
+}
+
+.conversation-post + .conversation-post {
+  border-top: 1px solid var(--line-soft);
+}
+
+.conversation-post.is-anchor {
+  border-left-color: #0f7280;
+  background: #f3fbfb;
+}
+
+.conversation-post-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.conversation-post-meta {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.conversation-post-text {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
 .featured-media-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 260px));

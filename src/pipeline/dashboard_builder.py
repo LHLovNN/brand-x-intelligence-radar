@@ -43,6 +43,7 @@ PUBLIC_DROP_KEYS = {
     "tracking_eligible",
     "tracking_reason",
     "archive_note",
+    "summary_status",
 }
 
 SOURCE_TEXT_KEYS = {
@@ -379,6 +380,7 @@ def effective_feed_item(post: dict[str, Any], cluster: dict[str, Any] | None = N
         "reply_to_handle": post.get("reply_to_handle", ""),
         "quoted_post_id": post.get("quoted_post_id", ""),
         "conversation_id": post.get("conversation_id", ""),
+        "conversation_context": post.get("conversation_context", {}),
         "language": post.get("language", "und"),
         "media": media_items(post),
         "metrics": post.get("metrics", {}),
@@ -485,6 +487,7 @@ def featured_item_for_cluster(cluster: dict[str, Any]) -> dict[str, Any] | None:
         "reply_to_handle": post.get("reply_to_handle", ""),
         "quoted_post_id": post.get("quoted_post_id", ""),
         "conversation_id": post.get("conversation_id", ""),
+        "conversation_context": post.get("conversation_context", {}),
         "created_at": post.get("created_at") or cluster.get("first_seen_at"),
         "language": post.get("language", "und"),
         "title": cluster["title"],
@@ -536,6 +539,7 @@ def featured_item_for_competitor_post(post: dict[str, Any]) -> dict[str, Any] | 
         "reply_to_handle": post.get("reply_to_handle", ""),
         "quoted_post_id": post.get("quoted_post_id", ""),
         "conversation_id": post.get("conversation_id", ""),
+        "conversation_context": post.get("conversation_context", {}),
         "created_at": post.get("created_at"),
         "language": post.get("language", "und"),
         "title": title,
@@ -1043,6 +1047,7 @@ def lead_post_summary(post: dict[str, Any]) -> dict[str, Any]:
         "reply_to_handle": post.get("reply_to_handle", ""),
         "quoted_post_id": post.get("quoted_post_id", ""),
         "conversation_id": post.get("conversation_id", ""),
+        "conversation_context": post.get("conversation_context", {}),
         "language": post.get("language", "und"),
         "text": post.get("text") or post.get("clean_text") or "",
         "clean_text": post.get("clean_text") or post.get("text") or "",
