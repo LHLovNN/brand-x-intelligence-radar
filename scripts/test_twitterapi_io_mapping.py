@@ -56,6 +56,18 @@ def main() -> None:
                 }
             ]
         },
+        "card": {
+            "binding_values": [
+                {
+                    "key": "thumbnail_image_original",
+                    "value": {
+                        "image_value": {
+                            "url": "https://example.com/card-preview.jpg",
+                        }
+                    },
+                }
+            ]
+        },
     }
 
     mapped = adapter._map_tweet(sample, '"joybuy uk" refund -filter:retweets')
@@ -84,6 +96,11 @@ def main() -> None:
         {
             "media_url_https": "https://pbs.twimg.com/media/example-a.jpg",
             "type": "photo",
+        },
+        {
+            "url": "https://example.com/card-preview.jpg",
+            "type": "photo",
+            "source": "card",
         },
     ]
     assert mapped["query_type"] == "Latest"

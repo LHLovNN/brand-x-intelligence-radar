@@ -328,7 +328,50 @@ class TwitterApiIoAdapter(XSourceBase):
             for item in self._list_value(tweet, key):
                 if item not in media:
                     media.append(item)
+        for item in self._card_media(tweet):
+            if item not in media:
+                media.append(item)
         return media
+
+    def _card_media(self, tweet: dict[str, Any]) -> list[dict[str, str]]:
+        media: list[dict[str, str]] = []
+        for key in ("card", "tweet_card", "tweetCard", "article", "articleData"):
+            value = self._value(tweet, key)
+            for url in self._image_urls(value):
+                item = {"url": url, "type": "photo", "source": "card"}
+                if item not in media:
+                    media.append(item)
+        return media
+
+    def _image_urls(self, value: Any) -> list[str]:
+        urls: list[str] = []
+        if isinstance(value, dict):
+            for key, child in value.items():
+                key_hint = key.lower()
+                if isinstance(child, str):
+                    url = child.strip()
+                    if self._looks_like_image_url(url, key_hint):
+                        urls.append(url)
+                else:
+                    urls.extend(self._image_urls(child))
+        elif isinstance(value, list):
+            for child in value:
+                urls.extend(self._image_urls(child))
+        result: list[str] = []
+        for url in urls:
+            if url not in result:
+                result.append(url)
+        return result
+
+    def _looks_like_image_url(self, url: str, key_hint: str = "") -> bool:
+        if not url.startswith(("http://", "https://")):
+            return False
+        lower = url.lower().split("?", 1)[0]
+        if lower.endswith((".jpg", ".jpeg", ".png", ".webp", ".gif")):
+            return True
+        if "pbs.twimg.com/media/" in lower:
+            return True
+        return any(term in key_hint for term in ("image", "thumbnail", "photo", "picture"))
 
     def _normalized_time(self, value: Any) -> str:
         if value is None:

@@ -1,12 +1,12 @@
 {
   "status": "ok",
-  "generated_at": "2026-07-29T00:06:30Z",
+  "generated_at": "2026-07-29T01:58:53Z",
   "window_start": "2026-07-28T00:00:00Z",
   "window_end": "2026-07-29T00:00:00Z",
   "window_label": "2026-07-28 08:00 BJT - 2026-07-29 08:00 BJT",
   "raw_posts": 114,
   "normalized_posts": 114,
-  "primary_signals": 3,
+  "primary_signals": 6,
   "collection_status": {
     "status": "complete",
     "warnings": [],
@@ -21,12 +21,12 @@
     }
   },
   "dashboard_metrics": {
-    "effective_intelligence": 3,
-    "high_risk": 1,
-    "needs_review": 1,
+    "effective_intelligence": 6,
+    "high_risk": 0,
+    "needs_review": 0,
     "primary_volume": 25,
     "primary_candidate_volume": 27,
     "competitor_volume": 74,
-    "negative_share": 33
+    "negative_share": 0
   }
 }

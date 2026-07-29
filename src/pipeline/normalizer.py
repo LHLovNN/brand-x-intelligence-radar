@@ -1,3 +1,4 @@
+import html
 import re
 from urllib.parse import urlparse
 from typing import Any
@@ -5,6 +6,10 @@ from typing import Any
 
 def _lower_text(value: str) -> str:
     return re.sub(r"\s+", " ", value.strip().lower())
+
+
+def _decode_html_entities(value: Any) -> str:
+    return html.unescape(str(value or ""))
 
 
 def _contains_any(text: str, terms: list[str]) -> list[str]:
@@ -20,6 +25,73 @@ def _contains_any(text: str, terms: list[str]) -> list[str]:
     return found
 
 
+COMMERCE_RISK_CONTEXT_TERMS = [
+    "order",
+    "orders",
+    "refund",
+    "return goods",
+    "return item",
+    "return package",
+    "return parcel",
+    "delivery",
+    "shipping",
+    "tracking",
+    "parcel",
+    "package",
+    "customer service",
+    "support",
+    "seller",
+    "warehouse",
+    "退货",
+    "退款",
+    "订单",
+    "包裹",
+    "物流",
+    "客服",
+    "售后",
+]
+
+FINANCIAL_RETURN_CONTEXT_TERMS = [
+    "total return",
+    "shareholder return",
+    "returns vs",
+    "stock",
+    "stocks",
+    "share",
+    "shares",
+    "equity",
+    "market",
+    "nasdaq",
+    "hang seng",
+    "index",
+    "invest",
+    "investment",
+    "portfolio",
+    "valuation",
+    "股价",
+    "股票",
+    "投资",
+    "回报率",
+    "指数",
+]
+
+
+def _has_any_phrase(text: str, terms: list[str]) -> bool:
+    return any(term.lower() in text for term in terms)
+
+
+def _filter_contextual_risk_terms(text: str, terms: list[str]) -> list[str]:
+    filtered = []
+    commerce_context = _has_any_phrase(text, COMMERCE_RISK_CONTEXT_TERMS)
+    financial_context = _has_any_phrase(text, FINANCIAL_RETURN_CONTEXT_TERMS)
+    for term in terms:
+        lower = term.lower()
+        if lower == "return" and (financial_context or not commerce_context):
+            continue
+        filtered.append(term)
+    return filtered
+
+
 def _expanded_link_text(post: dict[str, Any]) -> str:
     links = post.get("links") or []
     if not isinstance(links, list):
@@ -28,7 +100,7 @@ def _expanded_link_text(post: dict[str, Any]) -> str:
 
 
 def _matching_text(post: dict[str, Any]) -> str:
-    return _lower_text(f"{post.get('text', '')} {_expanded_link_text(post)}")
+    return _lower_text(f"{_decode_html_entities(post.get('text'))} {_expanded_link_text(post)}")
 
 
 def _readable_url_label(url: str) -> str:
@@ -46,7 +118,7 @@ def _readable_url_label(url: str) -> str:
 
 
 def _clean_text(post: dict[str, Any]) -> str:
-    text = str(post.get("text") or "")
+    text = _decode_html_entities(post.get("text"))
     links = [str(link) for link in post.get("links") or [] if link]
     cursor = 0
 
@@ -88,7 +160,7 @@ def normalize_posts(posts: list[dict[str, Any]], keyword_config: dict[str, Any])
         matched_context_required_terms = _contains_any(text, context_required_terms)
         matched_spam_terms = _contains_any(text, spam_terms)
         matched_irrelevant_terms = _contains_any(text, irrelevant_terms)
-        matched_risk_terms = _contains_any(text, risk_terms)
+        matched_risk_terms = _filter_contextual_risk_terms(text, _contains_any(text, risk_terms))
         matched_opportunity_terms = _contains_any(text, opportunity_terms)
         brand_ambiguity = bool(matched_ambiguous_terms) and not context_evidence
         context_required_missing = bool(matched_context_required_terms) and not strong_context_evidence

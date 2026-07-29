@@ -2,36 +2,253 @@ from collections import defaultdict
 from typing import Any
 
 
-RISK_TOPIC_MAP = {
-    "refund": ["refund", "return", "chargeback", "退款"],
-    "delivery": ["delivery", "shipping", "tracking", "parcel", "missing order"],
-    "customer_service": ["customer service", "support", "客服"],
-    "quality": ["damaged", "broken", "fake"],
-    "regulatory": ["regulator", "regulatory", "investigation", "foreign subsidies", "subsidy", "charge sheet", "european commission", "ceconomy", "takeover", "acquisition", "antitrust", "欧盟", "监管", "收购", "并购", "补贴", "反垄断"],
-    "price_opportunity": ["discount", "good deal", "promo", "fast delivery", "arrived early"],
-}
+def _combined_text(post: dict[str, Any]) -> str:
+    return f"{post.get('clean_text', '')} {post.get('translation_zh', '')}".lower()
+
+
+def _has_any(text: str, terms: list[str]) -> bool:
+    return any(term in text for term in terms)
+
+
+def _has_commerce_risk_context(text: str) -> bool:
+    return _has_any(
+        text,
+        [
+            "order",
+            "orders",
+            "refund",
+            "return goods",
+            "return item",
+            "return package",
+            "delivery",
+            "shipping",
+            "tracking",
+            "parcel",
+            "package",
+            "customer service",
+            "support",
+            "seller",
+            "warehouse",
+            "退货",
+            "退款",
+            "订单",
+            "配送",
+            "物流",
+            "包裹",
+            "客服",
+            "售后",
+        ],
+    )
+
+
+def _has_financial_context(text: str) -> bool:
+    return _has_any(
+        text,
+        [
+            "total return",
+            "shareholder return",
+            "stock",
+            "stocks",
+            "share",
+            "shares",
+            "equity",
+            "nasdaq",
+            "hang seng",
+            "market cap",
+            "valuation",
+            "portfolio",
+            "invest",
+            "股票",
+            "股价",
+            "投资",
+            "指数",
+            "估值",
+        ],
+    )
 
 
 def _topic_for(post: dict[str, Any]) -> str:
-    text = post["clean_text"].lower()
-    opportunity_markers = [
-        "good deal",
-        "fast delivery",
-        "discount",
-        "promo",
-        "worked",
-        "satisfied",
-        "great price",
-        "arrived early",
-        "delivered my",
-        "switch from temu to joybuy",
-    ]
-    if any(term in text for term in opportunity_markers):
-        return "price_opportunity"
-    for topic, terms in RISK_TOPIC_MAP.items():
-        if any(term in text for term in terms):
-            return topic
-    return "general"
+    text = _combined_text(post)
+
+    if _has_any(
+        text,
+        [
+            "regulator",
+            "regulatory",
+            "investigation",
+            "foreign subsidies",
+            "subsidy",
+            "charge sheet",
+            "european commission",
+            "ceconomy",
+            "takeover",
+            "antitrust",
+            "监管",
+            "欧盟",
+            "反垄断",
+            "市场准入",
+        ],
+    ):
+        return "regulatory"
+
+    if _has_financial_context(text) or _has_any(
+        text,
+        [
+            "ceo",
+            "fortune",
+            "white paper",
+            "report",
+            "strategy",
+            "ai pivot",
+            "logistics network",
+            "公司",
+            "白皮书",
+            "报告",
+            "战略",
+            "物流网络",
+            "新品方法论",
+            "女 CEO",
+        ],
+    ):
+        return "company_market"
+
+    has_refund_or_service = _has_any(
+        text,
+        [
+            "refund",
+            "chargeback",
+            "customer service",
+            "support",
+            "missing order",
+            "damaged",
+            "broken",
+            "退货",
+            "退款",
+            "售后",
+            "客服",
+            "损坏",
+        ],
+    )
+    has_return_only = "return" in text and not _has_financial_context(text)
+    if (has_refund_or_service or has_return_only) and _has_commerce_risk_context(text):
+        return "fulfillment_risk"
+
+    if _has_any(
+        text,
+        [
+            "scam",
+            "fake",
+            "privacy",
+            "security",
+            "deceptive",
+            "data",
+            "fraud",
+            "骗局",
+            "虚假",
+            "隐私",
+            "安全",
+        ],
+    ):
+        return "trust_safety"
+
+    if _has_any(
+        text,
+        [
+            "faster than",
+            "fast delivery",
+            "arrived early",
+            "delivered my",
+            "good deal",
+            "great price",
+            "recommend",
+            "satisfied",
+            "cheaper",
+            "better value",
+            "helft van de prijs",
+            "idioot snel",
+            "voordeliger",
+            "delivery is",
+            "配送快",
+            "更划算",
+            "价格通常只有一半",
+            "快得离谱",
+            "最多一天",
+            "推荐",
+            "正向",
+        ],
+    ):
+        return "positive_experience"
+
+    if _has_any(
+        text,
+        [
+            "temu",
+            "amazon",
+            "alibaba",
+            "tjin",
+            "jumia",
+            "compared",
+            "versus",
+            " vs ",
+            "instead of",
+            "switch from",
+            "same products",
+            "lower price",
+            "品类更多",
+            "同样的产品",
+            "价格更低",
+            "对比",
+        ],
+    ) and _has_any(text, ["joybuy", "jd.com", "京东"]):
+        return "competitor_comparison"
+
+    if _has_any(
+        text,
+        [
+            "deal",
+            "discount",
+            "promo",
+            "coupon",
+            "in stock",
+            "available",
+            "€",
+            "£",
+            "$",
+            "tidd.ly",
+            "affiliate",
+            "立即购买",
+            "有货",
+            "售价",
+            "价格降到",
+            "上架",
+            "折扣",
+            "优惠",
+        ],
+    ):
+        return "product_deal"
+
+    if _has_any(
+        text,
+        [
+            "marketplace",
+            "partner",
+            "partnership",
+            "subscription",
+            "live",
+            "launch",
+            "site update",
+            "shop update",
+            "jd.com live",
+            "合作伙伴",
+            "直播",
+            "订阅服务",
+            "平台接入",
+            "站点更新",
+        ],
+    ):
+        return "channel_activity"
+
+    return "general_observation"
 
 
 def cluster_posts(posts: list[dict[str, Any]], brand: str) -> list[dict[str, Any]]:
@@ -92,13 +309,15 @@ def cluster_posts(posts: list[dict[str, Any]], brand: str) -> list[dict[str, Any
 
 def title_for_topic(topic: str) -> str:
     titles = {
-        "refund": "Refund and payment complaints around Joybuy",
-        "delivery": "Delivery, tracking and parcel experience discussion",
-        "customer_service": "Customer service and return response concerns",
-        "quality": "Damaged item or product quality reports",
+        "positive_experience": "Positive shopping experience around Joybuy",
+        "product_deal": "Product, deal and availability discussion",
+        "fulfillment_risk": "Fulfillment and after-sales risk discussion",
+        "trust_safety": "Trust, safety and authenticity concerns",
+        "competitor_comparison": "Competitor comparison and substitution signals",
+        "channel_activity": "Channel, partner and campaign activity",
+        "company_market": "Corporate, market and strategy discussion",
         "regulatory": "Regulatory and market-access scrutiny around JD.com",
-        "price_opportunity": "Positive price and delivery opportunity signals",
-        "general": "General Joybuy/JD overseas shopping discussion",
+        "general_observation": "General Joybuy/JD overseas shopping discussion",
     }
     return titles.get(topic, "General Joybuy discussion")
 
@@ -106,44 +325,51 @@ def title_for_topic(topic: str) -> str:
 def summary_for_topic(topic: str, posts: list[dict[str, Any]]) -> str:
     count = len(posts)
     summaries = {
-        "refund": f"{count} related posts discuss refund progress, cancelled orders or payment holds.",
-        "delivery": f"{count} related posts discuss delivery speed, tracking status or missing parcels.",
-        "customer_service": f"{count} related posts mention customer service response and returns.",
-        "quality": f"{count} related posts mention damaged packaging or product condition.",
+        "positive_experience": f"{count} related posts praise price, delivery speed or buying experience.",
+        "product_deal": f"{count} related posts mention product availability, deals or affiliate promotion.",
+        "fulfillment_risk": f"{count} related posts discuss refund, return, delivery or after-sales issues.",
+        "trust_safety": f"{count} related posts mention trust, safety or authenticity concerns.",
+        "competitor_comparison": f"{count} related posts compare Joybuy/JD with other shopping platforms.",
+        "channel_activity": f"{count} related posts discuss channel, partner or campaign activity.",
+        "company_market": f"{count} related posts discuss corporate, market or strategy context.",
         "regulatory": f"{count} related posts discuss regulatory review, acquisition scrutiny or market-access risk.",
-        "price_opportunity": f"{count} related posts mention fast delivery, discounts or positive value signals.",
-        "general": f"{count} related posts discuss Joybuy/JD overseas shopping context.",
+        "general_observation": f"{count} related posts discuss Joybuy/JD overseas shopping context.",
     }
-    return summaries.get(topic, summaries["general"])
+    return summaries.get(topic, summaries["general_observation"])
 
 
 def summary_zh_for_topic(topic: str, posts: list[dict[str, Any]]) -> str:
     summaries = {
-        "refund": "多条帖子讨论 Joybuy 退款进度、取消订单或支付挂起问题。",
-        "delivery": "多条帖子讨论 Joybuy 配送速度、包裹追踪或未收到包裹问题。",
-        "customer_service": "相关讨论集中在客服响应、退货和售后体验。",
-        "quality": "相关讨论提到包装损坏或商品状态问题。",
+        "positive_experience": "相关讨论体现价格、配送或购物体验上的正向口碑。",
+        "product_deal": "相关讨论集中在商品上架、优惠导购或库存信息。",
+        "fulfillment_risk": "相关讨论涉及退款、退货、配送或售后体验风险。",
+        "trust_safety": "相关讨论涉及信任、安全、真假或隐私相关担忧。",
+        "competitor_comparison": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+        "channel_activity": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
+        "company_market": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
         "regulatory": "相关讨论涉及 JD.com 在海外市场的监管审查、并购交易或市场准入风险。",
-        "price_opportunity": "相关讨论体现价格、优惠或配送体验上的正向机会。",
-        "general": "相关讨论涉及 Joybuy/JD 海外购物的一般体验和认知问题。",
+        "general_observation": "相关讨论涉及 Joybuy/JD 海外购物的一般体验和认知问题。",
     }
-    return summaries.get(topic, summaries["general"])
+    return summaries.get(topic, summaries["general_observation"])
 
 
 def risk_types_for_topic(topic: str) -> list[str]:
     mapping = {
-        "refund": ["refund", "payment", "customer_service"],
-        "delivery": ["delivery", "tracking"],
-        "customer_service": ["customer_service", "returns"],
-        "quality": ["product_quality"],
+        "fulfillment_risk": ["fulfillment", "after_sales", "delivery"],
+        "trust_safety": ["brand_trust", "safety"],
         "regulatory": ["regulatory", "market_access", "acquisition"],
-        "price_opportunity": [],
-        "general": ["brand_trust"],
     }
     return mapping.get(topic, [])
 
 
 def opportunity_types_for_topic(topic: str) -> list[str]:
-    if topic == "price_opportunity":
-        return ["positive_value", "delivery_strength"]
+    mapping = {
+        "positive_experience": ["positive_value", "delivery_strength"],
+        "product_deal": ["product_interest", "promotion"],
+        "competitor_comparison": ["competitive_position"],
+        "channel_activity": ["channel_expansion"],
+        "company_market": ["corporate_context"],
+    }
+    if topic in mapping:
+        return mapping[topic]
     return []

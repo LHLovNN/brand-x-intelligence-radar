@@ -91,6 +91,7 @@ def build_dashboard_data(
     public_collection_status = public_collection_status_payload(collection_status or {})
     featured_items = build_featured_items(joybuy_clusters, competitor)
     hot_topics = build_hot_topics(joybuy_clusters, featured_items)
+    effective_feed_items = build_effective_feed_items(normalized_posts, joybuy_clusters)
 
     overview = {
         "title": "Brand X Intelligence Radar",
@@ -139,6 +140,7 @@ def build_dashboard_data(
         "competitor": competitor,
         "featured_items": featured_items,
         "hot_topics": hot_topics,
+        "effective_posts": effective_feed_items,
         "summary_only": False,
         "clusters": [cluster_summary(cluster, include_posts=False) for cluster in joybuy_clusters],
     }
@@ -326,6 +328,77 @@ def build_executive_summary(clusters: list[dict[str, Any]], competitor: dict[str
         "risk": f"Overall risk is {top['score']['level']} with IPS {top['score']['ips']}.",
         "action": f"建议动作：{top['score']['recommended_action']}。样例竞品基线讨论涉及 {shared}。",
     }
+
+
+def build_effective_feed_items(posts: list[dict[str, Any]], clusters: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    cluster_by_post: dict[str, dict[str, Any]] = {}
+    for cluster in clusters:
+        for post_id in cluster.get("post_ids", []):
+            cluster_by_post[str(post_id)] = cluster
+
+    items = []
+    for post in posts:
+        if not post.get("is_relevant"):
+            continue
+        cluster = cluster_by_post.get(str(post.get("post_id", "")))
+        items.append(effective_feed_item(post, cluster))
+    return sorted(items, key=lambda item: str(item.get("created_at") or ""), reverse=True)
+
+
+def effective_feed_item(post: dict[str, Any], cluster: dict[str, Any] | None = None) -> dict[str, Any]:
+    brand = post.get("brand", "")
+    topic = cluster.get("topic") if cluster else "competitor_baseline"
+    score = cluster.get("score", {}) if cluster else {}
+    sentiment = score.get("sentiment") if score else competitor_post_sentiment(post)
+    risk_terms = cluster.get("risk_types", []) if cluster else post.get("risk_terms", [])
+    opportunity_terms = cluster.get("opportunity_types", []) if cluster else post.get("opportunity_terms", [])
+    matched_terms = dedupe_strings([*risk_terms, *opportunity_terms, topic])
+    return {
+        "post_id": post.get("post_id"),
+        "brand": brand,
+        "cluster_id": cluster.get("cluster_id", "") if cluster else "",
+        "topic": topic,
+        "url": post.get("url", ""),
+        "text": post.get("clean_text") or post.get("text") or "",
+        "original_text": post.get("text", ""),
+        "links": post.get("links", []),
+        "translation_zh": post.get("translation_zh") or post.get("clean_text") or post.get("text") or "",
+        "translation_status": post.get("translation_status", "unknown"),
+        "summary_zh": post.get("summary_zh", ""),
+        "author_name": post.get("author", {}).get("name") or post.get("author_name"),
+        "author_handle": post.get("author", {}).get("handle") or post.get("author_handle"),
+        "author_avatar_url": post.get("author", {}).get("avatar_url") or post.get("author_avatar_url"),
+        "author_followers": post.get("author", {}).get("followers", post.get("author_followers", 0)),
+        "author_following": post.get("author", {}).get("following", post.get("author_following", 0)),
+        "author_bio": post.get("author", {}).get("bio", post.get("author_bio", "")),
+        "author_location": post.get("author", {}).get("location", post.get("author_location", "")),
+        "author_joined_at": post.get("author", {}).get("joined_at", post.get("author_joined_at", "")),
+        "author_verified": post.get("author", {}).get("verified", post.get("author_verified", False)),
+        "created_at": post.get("created_at"),
+        "reply_to_post_id": post.get("reply_to_post_id", ""),
+        "reply_to_handle": post.get("reply_to_handle", ""),
+        "quoted_post_id": post.get("quoted_post_id", ""),
+        "conversation_id": post.get("conversation_id", ""),
+        "language": post.get("language", "und"),
+        "media": media_items(post),
+        "metrics": post.get("metrics", {}),
+        "sentiment": sentiment or "neutral",
+        "level": score.get("level", "low"),
+        "score_value": score.get("ips"),
+        "score_label": "IPS" if cluster else "互动",
+        "matched_terms": matched_terms,
+    }
+
+
+def competitor_post_sentiment(post: dict[str, Any]) -> str:
+    text = str(post.get("clean_text") or post.get("text") or "").lower()
+    positive_terms = {"quick", "solved", "good", "fast", "arrived", "discount", "lower price"}
+    negative_terms = {"refund", "scam", "fake", "damaged", "slow", "missing", "customer service"}
+    if any(term in text for term in positive_terms) and not any(term in text for term in negative_terms):
+        return "positive"
+    if any(term in text for term in negative_terms):
+        return "negative"
+    return "neutral"
 
 
 def build_featured_items(joybuy_clusters: list[dict[str, Any]], competitor: dict[str, Any]) -> list[dict[str, Any]]:
@@ -602,7 +675,50 @@ def has_term(text: str, terms: list[str]) -> bool:
 
 def signal_context(text: str, brand: str, topic: str = "") -> dict[str, Any]:
     brand_label = "竞品侧" if brand == "temu" else "主品牌"
-    if topic == "refund" or has_term(text, ["refund", "退款", "退货", "售后", "chargeback"]):
+    if topic == "positive_experience":
+        return {
+            "name": "正向购物体验",
+            "angle": "用户主动提到价格、配送或购物体验上的正向感受",
+            "implication": "可作为主品牌海外口碑和履约卖点的证据样本。",
+            "useful": True,
+        }
+    if topic == "competitor_comparison":
+        return {
+            "name": "竞品对照与替代选择",
+            "angle": "用户把主品牌与其他平台进行价格、配送或品类对比",
+            "implication": "适合观察主品牌在海外用户购物选择中的竞争位置。",
+            "useful": True,
+        }
+    if topic == "channel_activity":
+        return {
+            "name": "渠道合作与活动",
+            "angle": "内容涉及渠道接入、商家合作、直播活动或站点更新",
+            "implication": "可作为市场扩展和货架露出的背景信号。",
+            "useful": True,
+        }
+    if topic == "company_market":
+        return {
+            "name": "公司/资本市场信息",
+            "angle": "内容涉及公司战略、资本市场、行业报告或管理层动态",
+            "implication": "对品牌心智有间接影响，应与消费者体验类舆情分开阅读。",
+            "useful": True,
+        }
+    if topic in {"price_opportunity", "product_deal"}:
+        return {
+            "name": "价格促销与导购",
+            "angle": "内容强调优惠、低价、券包或导购入口",
+            "implication": "有助于观察样例竞品拉新促销话术及垃圾推广占比。" if brand == "temu" else "可评估是否存在可借势传播的价格/活动卖点。",
+            "useful": True,
+        }
+    if topic == "regulatory":
+        return {
+            "name": "监管/并购风险",
+            "angle": "内容涉及海外监管审查、并购交易或市场准入风险",
+            "implication": "这类舆情可能影响管理层判断、市场信任和欧洲业务推进，应从普通消费体验中单独拎出。",
+            "useful": True,
+            "sensitive": True,
+        }
+    if topic == "fulfillment_risk" or topic == "refund" or has_term(text, ["refund", "退款", "退货", "售后", "chargeback"]):
         return {
             "name": "退款/售后体验",
             "angle": "用户明确提到退款、退货或售后处理",
@@ -617,14 +733,14 @@ def signal_context(text: str, brand: str, topic: str = "") -> dict[str, Any]:
             "implication": "可作为样例竞品履约卖点/槽点的竞品参照。" if brand == "temu" else "需要判断这是正向履约口碑还是潜在配送投诉。",
             "useful": True,
         }
-    if topic == "price_opportunity" or has_term(text, ["coupon", "discount", "promo", "deal", "save", "ultra-low", "优惠", "折扣", "券", "低价", "省钱", "促销"]):
+    if has_term(text, ["coupon", "discount", "promo", "deal", "save", "ultra-low", "优惠", "折扣", "券", "低价", "省钱", "促销"]):
         return {
             "name": "价格促销与导购",
             "angle": "内容强调优惠、低价、券包或导购入口",
             "implication": "有助于观察样例竞品拉新促销话术及垃圾推广占比。" if brand == "temu" else "可评估是否存在可借势传播的价格/活动卖点。",
             "useful": True,
         }
-    if topic == "regulatory" or has_term(text, ["regulator", "regulatory", "investigation", "foreign subsidies", "subsidy", "charge sheet", "european commission", "ceconomy", "takeover", "acquisition", "antitrust", "欧盟", "监管", "收购", "并购", "补贴", "反垄断"]):
+    if has_term(text, ["regulator", "regulatory", "investigation", "foreign subsidies", "subsidy", "charge sheet", "european commission", "ceconomy", "takeover", "acquisition", "antitrust", "欧盟", "监管", "收购", "并购", "补贴", "反垄断"]):
         return {
             "name": "监管/并购风险",
             "angle": "内容涉及海外监管审查、并购交易或市场准入风险",
@@ -836,9 +952,9 @@ def featured_priority_score(item: dict[str, Any]) -> int:
     value = 0
     if item.get("brand") != "temu":
         value += 40
-    if tags & {"refund", "delivery", "customer_service", "brand_trust"}:
+    if tags & {"refund", "delivery", "customer_service", "fulfillment_risk", "trust_safety", "regulatory"}:
         value += 16
-    if tags & {"positive_value", "delivery_strength", "price_opportunity"}:
+    if tags & {"positive_value", "delivery_strength", "price_opportunity", "positive_experience", "product_deal", "competitor_comparison"}:
         value += 10
     value += min(40, score)
     value += min(20, source_count * 4)

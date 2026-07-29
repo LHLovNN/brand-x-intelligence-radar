@@ -1,31 +1,140 @@
 {
   "title": "Brand X Intelligence Radar",
-  "generated_at": "2026-07-29T00:06:30Z",
-  "generated_at_label": "2026-07-29 08:06 BJT",
+  "generated_at": "2026-07-29T01:58:53Z",
+  "generated_at_label": "2026-07-29 09:58 BJT",
   "report_date": "2026-07-29",
   "report_window": "Past 24 hours",
   "window_label": "2026-07-28 08:00 BJT - 2026-07-29 08:00 BJT",
   "health": "normal",
   "metrics": {
-    "effective_intelligence": 3,
-    "high_risk": 1,
-    "needs_review": 1,
+    "effective_intelligence": 6,
+    "high_risk": 0,
+    "needs_review": 0,
     "primary_volume": 25,
     "primary_candidate_volume": 27,
     "competitor_volume": 74,
-    "negative_share": 33
+    "negative_share": 0
   },
   "executive_summary": {
-    "headline": "今日最高优先级主品牌舆情为：Refund and payment complaints around 主品牌。",
-    "risk": "Overall risk is high with IPS 81.",
-    "action": "建议动作：PR 准备回应。样例竞品基线讨论涉及 refund and delivery。"
+    "headline": "今日最高优先级主品牌舆情为：Channel, partner and campaign activity。",
+    "risk": "Overall risk is medium with IPS 74.",
+    "action": "建议动作：渠道观察。样例竞品基线讨论涉及 refund and delivery。"
   },
   "top_intelligence": [
     {
-      "cluster_id": "primary-signal-003",
-      "title": "Refund and payment complaints around 主品牌",
-      "summary": "2 related posts discuss refund progress, cancelled orders or payment holds.",
-      "summary_zh": "多条帖子讨论 主品牌 退款进度、取消订单或支付挂起问题。",
+      "cluster_id": "primary-signal-001",
+      "title": "Channel, partner and campaign activity",
+      "summary": "4 related posts discuss channel, partner or campaign activity.",
+      "summary_zh": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
+      "lead_post": {
+        "post_id": "2082085123533455445",
+        "created_at": "2026-07-28T12:45:51Z",
+        "author": {
+          "id": "185565166",
+          "handle": "Dauvers70",
+          "name": "Olivier Dauvers",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1869020563961741312/Wuk_Hwgq_normal.jpg",
+          "followers": 50689,
+          "following": 310,
+          "bio": null,
+          "location": "Bastille",
+          "joined_at": "2010-09-01T08:49:10Z",
+          "verified": false
+        },
+        "author_name": "Olivier Dauvers",
+        "author_handle": "Dauvers70",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1869020563961741312/Wuk_Hwgq_normal.jpg",
+        "author_followers": 50689,
+        "author_following": 310,
+        "author_bio": null,
+        "author_location": "Bastille",
+        "author_joined_at": "2010-09-01T08:49:10Z",
+        "author_verified": false,
+        "url": "https://x.com/Dauvers70/status/2082085123533455445",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2082085123533455445",
+        "language": "fr",
+        "text": "E-commerce : Joybuy se lance dans l’abonnement (avec peu de chances de réussir en l’état)\n\nIci >> https://t.co/uO0vHIOg9F",
+        "clean_text": "E-commerce : Joybuy se lance dans l’abonnement (avec peu de chances de réussir en l’état)\n\nIci >> olivierdauvers.fr/2026",
+        "links": [
+          "https://www.olivierdauvers.fr/2026/07/28/e-commerce-joybuy-se-lance-dans-labonnement-avec-peu-de-chances-de-reussir-en-letat/"
+        ],
+        "translation_zh": "电子商务：Joybuy 推出订阅服务（以目前的状态来看，成功机会不大）\n\n这里 >> olivierdauvers.fr/2026",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 10,
+          "reposts": 1,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 3550
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/card_img/2082084667767808000/fSrUwAzm?format=png&name=medium",
+            "type": "photo",
+            "expanded_url": "https://x.com/Dauvers70/status/2082085123533455445"
+          }
+        ]
+      },
+      "topic": "channel_activity",
+      "risk_types": [],
+      "opportunity_types": [
+        "channel_expansion"
+      ],
+      "post_count": 4,
+      "first_seen_at": "2026-07-28T05:16:44Z",
+      "last_seen_at": "2026-07-28T15:32:32Z",
+      "metrics": {
+        "total_likes": 169,
+        "total_reposts": 56,
+        "total_replies": 0,
+        "total_quotes": 2,
+        "total_bookmarks": 9,
+        "total_views": 7001,
+        "max_author_followers": 50689,
+        "public_interactions": 227
+      },
+      "score": {
+        "ips": 74,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 62,
+        "current_impact": 62,
+        "future_potential": 78,
+        "credibility": 86,
+        "business_impact": 58,
+        "urgency": 52,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "渠道观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "channel_expansion"
+        ],
+        "special_flags": [
+          "high_influence_account"
+        ],
+        "explanation": "渠道、合作或活动信息体现市场扩展动向，建议作为背景信号观察。综合优先级 74。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 3,
+        "amplifiers": 1,
+        "latest": 3,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-002",
+      "title": "Corporate, market and strategy discussion",
+      "summary": "11 related posts discuss corporate, market or strategy context.",
+      "summary_zh": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
       "lead_post": {
         "post_id": "2081960339382604265",
         "created_at": "2026-07-28T04:30:00Z",
@@ -90,65 +199,175 @@
           }
         ]
       },
-      "topic": "refund",
-      "risk_types": [
-        "refund",
-        "payment",
-        "customer_service"
+      "topic": "company_market",
+      "risk_types": [],
+      "opportunity_types": [
+        "corporate_context"
       ],
-      "opportunity_types": [],
-      "post_count": 2,
-      "first_seen_at": "2026-07-28T04:22:00Z",
-      "last_seen_at": "2026-07-28T04:30:00Z",
+      "post_count": 11,
+      "first_seen_at": "2026-07-28T01:50:33Z",
+      "last_seen_at": "2026-07-28T20:40:47Z",
       "metrics": {
-        "total_likes": 16,
-        "total_reposts": 3,
-        "total_replies": 1,
-        "total_quotes": 0,
-        "total_bookmarks": 1,
-        "total_views": 1904,
+        "total_likes": 142,
+        "total_reposts": 12,
+        "total_replies": 32,
+        "total_quotes": 4,
+        "total_bookmarks": 20,
+        "total_views": 20273,
         "max_author_followers": 69083,
-        "public_interactions": 20
+        "public_interactions": 190
       },
       "score": {
-        "ips": 81,
-        "level": "high",
-        "brand_relevance": 90,
-        "risk_or_opportunity_intensity": 86,
-        "current_impact": 50,
-        "future_potential": 78,
-        "credibility": 94,
-        "business_impact": 86,
-        "urgency": 86,
-        "sentiment": "negative",
+        "ips": 74,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 56,
+        "current_impact": 67,
+        "future_potential": 86,
+        "credibility": 86,
+        "business_impact": 56,
+        "urgency": 49,
+        "sentiment": "neutral",
         "confidence": 0.81,
-        "recommended_action": "PR 准备回应",
-        "risk_labels": [
-          "refund",
-          "payment",
-          "customer_service"
+        "recommended_action": "背景观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "corporate_context"
         ],
-        "opportunity_labels": [],
         "special_flags": [
+          "potential_viral",
           "high_influence_account"
         ],
-        "explanation": "退款议题直接影响信任与支付体验，当前影响力 50，未来发酵潜力 78，可信度 94。"
+        "explanation": "公司、资本市场或战略背景信息对品牌心智有间接影响，当前综合优先级为 74。"
       },
       "evidence_counts": {
         "origin": 1,
         "stakeholders": 0,
-        "popular": 2,
-        "amplifiers": 1,
-        "latest": 2,
-        "supporting_evidence": 1,
+        "popular": 3,
+        "amplifiers": 2,
+        "latest": 3,
+        "supporting_evidence": 0,
         "contradicting_evidence": 0
       }
     },
     {
-      "cluster_id": "primary-signal-001",
-      "title": "General 主品牌 overseas shopping discussion",
-      "summary": "22 related posts discuss 主品牌 overseas shopping context.",
-      "summary_zh": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "cluster_id": "primary-signal-006",
+      "title": "Product, deal and availability discussion",
+      "summary": "4 related posts mention product availability, deals or affiliate promotion.",
+      "summary_zh": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "lead_post": {
+        "post_id": "2082115403291963472",
+        "created_at": "2026-07-28T14:46:10Z",
+        "author": {
+          "id": "1195296385853251584",
+          "handle": "le_crocodeal",
+          "name": "Le CrocoDeal",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1197879690679246849/FLkW77UF_normal.jpg",
+          "followers": 27319,
+          "following": 158,
+          "bio": null,
+          "location": "Liens affiliés, publicité, ad",
+          "joined_at": "2019-11-15T11:04:26Z",
+          "verified": false
+        },
+        "author_name": "Le CrocoDeal",
+        "author_handle": "le_crocodeal",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1197879690679246849/FLkW77UF_normal.jpg",
+        "author_followers": 27319,
+        "author_following": 158,
+        "author_bio": null,
+        "author_location": "Liens affiliés, publicité, ad",
+        "author_joined_at": "2019-11-15T11:04:26Z",
+        "author_verified": false,
+        "url": "https://x.com/le_crocodeal/status/2082115403291963472",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2082115403291963472",
+        "language": "fr",
+        "text": "Prix élevé mais dispo rapide d'après le site : au besoin le climatiseur mobile TCL 12000 BTU passe à 445€ sur Joybuy (je crois qu'il faut passer par l'appli pour avoir ce prix) !\n\n❄️ Lien affilié : https://t.co/zHsD610Uiy https://t.co/zpSposPdVN",
+        "clean_text": "Prix élevé mais dispo rapide d'après le site : au besoin le climatiseur mobile TCL 12000 BTU passe à 445€ sur Joybuy (je crois qu'il faut passer par l'appli pour avoir ce prix) !\n\n❄️ Lien affilié : tidd.ly/3RXhMrK",
+        "links": [
+          "https://tidd.ly/3RXhMrK"
+        ],
+        "translation_zh": "价格偏高，但根据网站显示发货快：有需要的话，TCL 12000 BTU 移动空调在 Joybuy 价格降到 445€（我觉得需要通过应用下单才能有这个价格）！\n\n❄️ 联盟链接：tidd.ly/3RXhMrK",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 1,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 1,
+          "views": 6852
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HOUov_HWMAA0Lzp.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HOUov_HWMAA0Lzp.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HOUov_HWMAA0Lzp.jpg",
+            "expanded_url": "https://x.com/le_crocodeal/status/2082115403291963472/photo/1"
+          }
+        ]
+      },
+      "topic": "product_deal",
+      "risk_types": [],
+      "opportunity_types": [
+        "product_interest",
+        "promotion"
+      ],
+      "post_count": 4,
+      "first_seen_at": "2026-07-28T14:46:10Z",
+      "last_seen_at": "2026-07-28T22:43:47Z",
+      "metrics": {
+        "total_likes": 2,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 1,
+        "total_views": 8583,
+        "max_author_followers": 68303,
+        "public_interactions": 2
+      },
+      "score": {
+        "ips": 70,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 60,
+        "current_impact": 49,
+        "future_potential": 76,
+        "credibility": 86,
+        "business_impact": 50,
+        "urgency": 49,
+        "sentiment": "positive",
+        "confidence": 0.81,
+        "recommended_action": "传播机会",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "product_interest",
+          "promotion"
+        ],
+        "special_flags": [
+          "high_influence_account"
+        ],
+        "explanation": "商品、优惠或库存信息可反映自然需求与转化入口，综合优先级 70。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 3,
+        "amplifiers": 2,
+        "latest": 3,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-005",
+      "title": "Positive shopping experience around 主品牌",
+      "summary": "2 related posts praise price, delivery speed or buying experience.",
+      "summary_zh": "相关讨论体现价格、配送或购物体验上的正向口碑。",
       "lead_post": {
         "post_id": "2082158169363476984",
         "created_at": "2026-07-28T17:36:06Z",
@@ -195,142 +414,449 @@
         },
         "media": []
       },
-      "topic": "general",
-      "risk_types": [
-        "brand_trust"
+      "topic": "positive_experience",
+      "risk_types": [],
+      "opportunity_types": [
+        "positive_value",
+        "delivery_strength"
       ],
-      "opportunity_types": [],
-      "post_count": 22,
-      "first_seen_at": "2026-07-28T01:50:33Z",
-      "last_seen_at": "2026-07-28T22:43:47Z",
+      "post_count": 2,
+      "first_seen_at": "2026-07-28T17:36:06Z",
+      "last_seen_at": "2026-07-28T17:59:50Z",
       "metrics": {
-        "total_likes": 299,
-        "total_reposts": 65,
-        "total_replies": 33,
-        "total_quotes": 6,
-        "total_bookmarks": 29,
-        "total_views": 34109,
-        "max_author_followers": 68303,
-        "public_interactions": 403
+        "total_likes": 2,
+        "total_reposts": 0,
+        "total_replies": 1,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 93,
+        "max_author_followers": 34171,
+        "public_interactions": 3
       },
       "score": {
-        "ips": 76,
+        "ips": 66,
         "level": "medium",
-        "brand_relevance": 100,
-        "risk_or_opportunity_intensity": 53,
-        "current_impact": 83,
-        "future_potential": 88,
+        "brand_relevance": 90,
+        "risk_or_opportunity_intensity": 62,
+        "current_impact": 37,
+        "future_potential": 62,
         "credibility": 86,
-        "business_impact": 48,
-        "urgency": 50,
-        "sentiment": "mixed",
+        "business_impact": 60,
+        "urgency": 53,
+        "sentiment": "positive",
+        "confidence": 0.81,
+        "recommended_action": "传播机会",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "positive_value",
+          "delivery_strength"
+        ],
+        "special_flags": [],
+        "explanation": "该情报偏正向机会，体现价格、配送或促销优势，可用于观察传播借势。综合优先级 66。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 2,
+        "amplifiers": 2,
+        "latest": 2,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-003",
+      "title": "Competitor comparison and substitution signals",
+      "summary": "2 related posts compare 主品牌 with other shopping platforms.",
+      "summary_zh": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "lead_post": {
+        "post_id": "2082223764213805415",
+        "created_at": "2026-07-28T21:56:45Z",
+        "author": {
+          "id": "1914365349107052544",
+          "handle": "yatofix",
+          "name": "Yatofix.com",
+          "avatar_url": "https://pbs.twimg.com/profile_images/2077073269723648000/u3BHdO66_normal.png",
+          "followers": 16,
+          "following": 68,
+          "bio": null,
+          "location": "France",
+          "joined_at": "2025-04-21T17:07:27Z",
+          "verified": false
+        },
+        "author_name": "Yatofix.com",
+        "author_handle": "yatofix",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2077073269723648000/u3BHdO66_normal.png",
+        "author_followers": 16,
+        "author_following": 68,
+        "author_bio": null,
+        "author_location": "France",
+        "author_joined_at": "2025-04-21T17:07:27Z",
+        "author_verified": false,
+        "url": "https://x.com/yatofix/status/2082223764213805415",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2082223764213805415",
+        "language": "fr",
+        "text": "Update sur le site https://t.co/MV0OVEJOd5 nous avons ajouter un nouveau marchand dans nos comparatifs : https://t.co/c5D4NEyQ7t\n\nCette marketplace est en train de tout casser avec des prix agressifs et des délais de livraison pouvant aller au jour même ou le lendemain !\n\nNous remercions Joybuy de nous faire confiance et d'être partenaire de Yatofix.",
+        "clean_text": "Update sur le site yatofix.com nous avons ajouter un nouveau marchand dans nos comparatifs : joybuy.fr\n\nCette marketplace est en train de tout casser avec des prix agressifs et des délais de livraison pouvant aller au jour même ou le lendemain !\n\nNous remercions Joybuy de nous faire confiance et d'être partenaire de Yatofix.",
+        "links": [
+          "https://yatofix.com/",
+          "https://www.joybuy.fr/"
+        ],
+        "translation_zh": "yatofix.com 网站更新：我们在对比中新增了一家商家：joybuy.fr\n\n这个 marketplace 正在凭借激进的价格和最快可当天或次日送达的配送时效大杀四方！\n\n我们感谢 Joybuy 对我们的信任，并成为 Yatofix 的合作伙伴。",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 4
+        },
+        "media": []
+      },
+      "topic": "competitor_comparison",
+      "risk_types": [],
+      "opportunity_types": [
+        "competitive_position"
+      ],
+      "post_count": 2,
+      "first_seen_at": "2026-07-28T06:00:23Z",
+      "last_seen_at": "2026-07-28T21:56:45Z",
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 27,
+        "max_author_followers": 25,
+        "public_interactions": 0
+      },
+      "score": {
+        "ips": 61,
+        "level": "medium",
+        "brand_relevance": 90,
+        "risk_or_opportunity_intensity": 60,
+        "current_impact": 25,
+        "future_potential": 49,
+        "credibility": 76,
+        "business_impact": 64,
+        "urgency": 53,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "竞品对照观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "competitive_position"
+        ],
+        "special_flags": [],
+        "explanation": "用户将主品牌与其他平台对照，适合观察价格、配送或品类竞争位置。综合优先级 61。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 2,
+        "amplifiers": 0,
+        "latest": 2,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-004",
+      "title": "General 主品牌 overseas shopping discussion",
+      "summary": "2 related posts discuss 主品牌 overseas shopping context.",
+      "summary_zh": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "lead_post": {
+        "post_id": "2082109518729654436",
+        "created_at": "2026-07-28T14:22:47Z",
+        "author": {
+          "id": "2033288348576698368",
+          "handle": "notmyprublem",
+          "name": "⋆˚꩜｡⋆C⋆｡꩜˚⋆",
+          "avatar_url": "https://pbs.twimg.com/profile_images/2047951692453605376/-yGttvfJ_normal.jpg",
+          "followers": 189,
+          "following": 294,
+          "bio": null,
+          "location": "4teen",
+          "joined_at": "2026-03-15T21:05:08Z",
+          "verified": false
+        },
+        "author_name": "⋆˚꩜｡⋆C⋆｡꩜˚⋆",
+        "author_handle": "notmyprublem",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2047951692453605376/-yGttvfJ_normal.jpg",
+        "author_followers": 189,
+        "author_following": 294,
+        "author_bio": null,
+        "author_location": "4teen",
+        "author_joined_at": "2026-03-15T21:05:08Z",
+        "author_verified": false,
+        "url": "https://x.com/notmyprublem/status/2082109518729654436",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2081750018638176437",
+        "language": "en",
+        "text": "@Penelopeofitha I bought them on joybuy but it think u can order them from a lot of websites",
+        "clean_text": "@Penelopeofitha I bought them on joybuy but it think u can order them from a lot of websites",
+        "links": [],
+        "translation_zh": "@Penelopeofitha 我是在 joybuy 上买的，但我觉得你可以从很多网站订购它们",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 9
+        },
+        "media": []
+      },
+      "topic": "general_observation",
+      "risk_types": [],
+      "opportunity_types": [],
+      "post_count": 2,
+      "first_seen_at": "2026-07-28T07:59:15Z",
+      "last_seen_at": "2026-07-28T14:22:47Z",
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 1,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 94,
+        "max_author_followers": 189,
+        "public_interactions": 1
+      },
+      "score": {
+        "ips": 53,
+        "level": "low",
+        "brand_relevance": 90,
+        "risk_or_opportunity_intensity": 40,
+        "current_impact": 25,
+        "future_potential": 42,
+        "credibility": 76,
+        "business_impact": 42,
+        "urgency": 38,
+        "sentiment": "neutral",
         "confidence": 0.81,
         "recommended_action": "观察",
-        "risk_labels": [
-          "brand_trust"
-        ],
+        "risk_labels": [],
         "opportunity_labels": [],
+        "special_flags": [],
+        "explanation": "该情报与 主品牌 海外购物相关，当前综合优先级为 53。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 2,
+        "amplifiers": 0,
+        "latest": 2,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    }
+  ],
+  "negative_top": [],
+  "opportunity_top": [
+    {
+      "cluster_id": "primary-signal-006",
+      "title": "Product, deal and availability discussion",
+      "summary": "4 related posts mention product availability, deals or affiliate promotion.",
+      "summary_zh": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "lead_post": {
+        "post_id": "2082115403291963472",
+        "created_at": "2026-07-28T14:46:10Z",
+        "author": {
+          "id": "1195296385853251584",
+          "handle": "le_crocodeal",
+          "name": "Le CrocoDeal",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1197879690679246849/FLkW77UF_normal.jpg",
+          "followers": 27319,
+          "following": 158,
+          "bio": null,
+          "location": "Liens affiliés, publicité, ad",
+          "joined_at": "2019-11-15T11:04:26Z",
+          "verified": false
+        },
+        "author_name": "Le CrocoDeal",
+        "author_handle": "le_crocodeal",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1197879690679246849/FLkW77UF_normal.jpg",
+        "author_followers": 27319,
+        "author_following": 158,
+        "author_bio": null,
+        "author_location": "Liens affiliés, publicité, ad",
+        "author_joined_at": "2019-11-15T11:04:26Z",
+        "author_verified": false,
+        "url": "https://x.com/le_crocodeal/status/2082115403291963472",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2082115403291963472",
+        "language": "fr",
+        "text": "Prix élevé mais dispo rapide d'après le site : au besoin le climatiseur mobile TCL 12000 BTU passe à 445€ sur Joybuy (je crois qu'il faut passer par l'appli pour avoir ce prix) !\n\n❄️ Lien affilié : https://t.co/zHsD610Uiy https://t.co/zpSposPdVN",
+        "clean_text": "Prix élevé mais dispo rapide d'après le site : au besoin le climatiseur mobile TCL 12000 BTU passe à 445€ sur Joybuy (je crois qu'il faut passer par l'appli pour avoir ce prix) !\n\n❄️ Lien affilié : tidd.ly/3RXhMrK",
+        "links": [
+          "https://tidd.ly/3RXhMrK"
+        ],
+        "translation_zh": "价格偏高，但根据网站显示发货快：有需要的话，TCL 12000 BTU 移动空调在 Joybuy 价格降到 445€（我觉得需要通过应用下单才能有这个价格）！\n\n❄️ 联盟链接：tidd.ly/3RXhMrK",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 1,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 1,
+          "views": 6852
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HOUov_HWMAA0Lzp.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HOUov_HWMAA0Lzp.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HOUov_HWMAA0Lzp.jpg",
+            "expanded_url": "https://x.com/le_crocodeal/status/2082115403291963472/photo/1"
+          }
+        ]
+      },
+      "topic": "product_deal",
+      "risk_types": [],
+      "opportunity_types": [
+        "product_interest",
+        "promotion"
+      ],
+      "post_count": 4,
+      "first_seen_at": "2026-07-28T14:46:10Z",
+      "last_seen_at": "2026-07-28T22:43:47Z",
+      "metrics": {
+        "total_likes": 2,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 1,
+        "total_views": 8583,
+        "max_author_followers": 68303,
+        "public_interactions": 2
+      },
+      "score": {
+        "ips": 70,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 60,
+        "current_impact": 49,
+        "future_potential": 76,
+        "credibility": 86,
+        "business_impact": 50,
+        "urgency": 49,
+        "sentiment": "positive",
+        "confidence": 0.81,
+        "recommended_action": "传播机会",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "product_interest",
+          "promotion"
+        ],
         "special_flags": [
-          "potential_viral",
           "high_influence_account"
         ],
-        "explanation": "该情报与 主品牌 海外购物相关，当前综合优先级为 76。"
+        "explanation": "商品、优惠或库存信息可反映自然需求与转化入口，综合优先级 70。"
       },
       "evidence_counts": {
         "origin": 1,
         "stakeholders": 0,
         "popular": 3,
-        "amplifiers": 3,
+        "amplifiers": 2,
         "latest": 3,
         "supporting_evidence": 0,
         "contradicting_evidence": 0
       }
     },
     {
-      "cluster_id": "primary-signal-002",
-      "title": "Positive price and delivery opportunity signals",
-      "summary": "1 related posts mention fast delivery, discounts or positive value signals.",
-      "summary_zh": "相关讨论体现价格、优惠或配送体验上的正向机会。",
+      "cluster_id": "primary-signal-005",
+      "title": "Positive shopping experience around 主品牌",
+      "summary": "2 related posts praise price, delivery speed or buying experience.",
+      "summary_zh": "相关讨论体现价格、配送或购物体验上的正向口碑。",
       "lead_post": {
-        "post_id": "2081967914383720857",
-        "created_at": "2026-07-28T05:00:06Z",
+        "post_id": "2082158169363476984",
+        "created_at": "2026-07-28T17:36:06Z",
         "author": {
-          "id": "2023792007655849984",
-          "handle": "TAMPICTG87",
-          "name": "Tampic",
-          "avatar_url": "https://pbs.twimg.com/profile_images/2066475216306327552/jLgnBccg_normal.jpg",
-          "followers": 736,
-          "following": 2306,
+          "id": "1185436171",
+          "handle": "Mirjam152",
+          "name": "Mirjam152",
+          "avatar_url": "https://pbs.twimg.com/profile_images/717951790549827584/0cc925So_normal.jpg",
+          "followers": 34171,
+          "following": 4637,
           "bio": null,
-          "location": null,
-          "joined_at": "2026-02-17T16:10:44Z",
+          "location": "Haarlem",
+          "joined_at": "2013-02-16T09:34:27Z",
           "verified": false
         },
-        "author_name": "Tampic",
-        "author_handle": "TAMPICTG87",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/2066475216306327552/jLgnBccg_normal.jpg",
-        "author_followers": 736,
-        "author_following": 2306,
+        "author_name": "Mirjam152",
+        "author_handle": "Mirjam152",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/717951790549827584/0cc925So_normal.jpg",
+        "author_followers": 34171,
+        "author_following": 4637,
         "author_bio": null,
-        "author_location": null,
-        "author_joined_at": "2026-02-17T16:10:44Z",
+        "author_location": "Haarlem",
+        "author_joined_at": "2013-02-16T09:34:27Z",
         "author_verified": false,
-        "url": "https://x.com/TAMPICTG87/status/2081967914383720857",
+        "url": "https://x.com/Mirjam152/status/2082158169363476984",
         "reply_to_post_id": null,
         "reply_to_handle": null,
         "quoted_post_id": null,
-        "conversation_id": "2081967914383720857",
-        "language": "en",
-        "text": "**In-Depth Reading of the *2026 JD Home Appliances and Home Furnishings New Product White Paper***\n\nReleased by https://t.co/NR3Ez6cgIa in May 2026, with research support from HCR慧辰, the report is based on a core sample of N=400 quantitative questionnaires completed by \"consumers who had purchased new home appliance or home furnishing products within the past year, primarily online consumers,\" supplemented by brand messages and a compilation of JD's \"Lightning New Product\" methodology case studies. The report's core judgment is that the home appliance and home furnishing industry has shifted from incremental expansion to stock renewal and quality upgrading, with intelligence, health, green energy efficiency, scenario‑based design, and age‑friendliness becoming the dominant directions for new product iteration. The industry's stock characteristics can be cross‑verified with All View Cloud (AVC) data: in 2025, China's home appliance market (excluding 3C) reached RMB 893.1 billion in retail sales, down 4.3% year‑on‑year; AVC forecasts 2026 sales of RMB 833.2 billion, a further decline of 6.7% year‑on‑year. The industry as a whole has entered a stock‑based competition phase in the RMB 800‑900 billion range, with premium, smart, and suite‑oriented products continuing to grow along the upward track of K‑shaped differentiation. However, the report's own 2022‑2028 home appliance market size and category price charts are labelled only as \"compiled from public sources including the National Bureau of Statistics and AVC,\" and the specific annual figures could not be independently reproduced through public channels; they should be treated as the report's internal estimates.\n\nThe user survey section provides a clear profile of \"online new‑product buyers\": the 26‑45 age group is the core consumer segment, with 26‑35 year‑old males showing the highest acceptance of new products; 93.5% of respondents had purchased a new home appliance or home furnishing product in the past year, 87.5% chose https://t.co/NR3Ez6cgIa as their primary purchase channel, 78.3% ranked product quality as their top concern, 70.5% considered functionality a decisive factor in purchase decisions, and 62% strongly demanded intelligent features—quality and functionality were \"far more important than price and brand.\" In terms of channel pathways, e‑commerce platform recommendations ranked first as an information source at 85.3%, followed by content platform seeding at 58.3%; for final purchases, e‑commerce platforms accounted for 88.3%, while brand offline stores accounted for 32.3%; \"product performance parameters (84.0%), user口碑 (75.5%), and price (67.3%)\" were the three core dimensions of information comparison. Regarding willingness to pay, consumers were willing to pay a premium for \"quality and durability\" and \"health and environmental friendliness,\" but had the lowest acceptance of IP co‑branding premiums. The acceptable premium for new products was mostly in the 11%‑50% range, with budgets concentrated within 30% of monthly income. It should be made clear that the sample structure of N=400, primarily online consumers, means that conclusions such as \"87.5% chose https://t.co/NR3Ez6cgIa as their primary channel\" represent \"the profile of https://t.co/NR3Ez6cgIa's online active home appliance and home furnishing new‑product buyers\" and cannot be extrapolated to the preferences of the national home appliance consumer population.\n\nChapter 3 of the report systematically elaborates JD's \"Lightning New Product Marketing\" methodology, covering the full lifecycle from \"simulated trial during the pre‑launch preparation phase → pre‑launch omnichannel seeding → online ignition + offline experience during the launch phase → refined operation during the sustained‑sales phase,\" supported by four empowerment modules: operations, domain, marketing, and tools. In the case studies, JOMOO S8 Pure智能 toilet—which \"achieved over RMB 10 million in sales within 35 days of launch, with an average product price exceeding RMB 4,000, ranking firmly as the TOP 1 premium smart toilet\"—received cross‑verification from independent reports in JD Home Appliance & Home Furnishings Merchant Academy, Building Materials and Home Furnishings News Network, and Logistics Product Network; supporting data such as JD Guangzhou store's revenue per square metre exceeding RMB 150,000 were also verifiable. Historical performance data, such as JD Building Materials' revenue from major new products growing 200% year‑on‑year since 2025 and incubating over 50 million‑RMB‑class new products, provide background corroboration for the \"Lightning New Product\" IP's scaled operational capability. However, case data for Changdi Whale Quasi‑quasi stand mixer \"breaking the launch record for home stand mixers,\" TCL T7M Ultra \"TV industry sales TOP 1,\" Skyworth wallpaper TV \"sales ranking No.1 for 9 consecutive years,\" Little Swan Xiaowumei \"cumulative sales exceeding 1 million units,\" Siemens Steaming Linglong, and Fuanna J.Dear Deep Sleep series primarily come from brand messages and platform self‑statements, and could not be independently verified through public authoritative channels such as AVC or GfK; they should be treated as \"platform cases based on brand self‑statements\" rather than third‑party audited data.\n\n**Keywords**: #JDHomeAppliancesHomeFurnishings #LightningNewProduct #HCR #N400 #StockRenewal #QualityUpgrading #2025Retail893.1Billion #2026Forecast833.2Billion #AVC #KShapedDifferentiation #26‑35YearOldMales #87.5PercentPrimaryJD #78.3PercentQualityFirst #62PercentSmartDemand #EcommercePlatforms88.3Percent #OfflineExperience32.3Percent #PerformanceParameters84.0Percent #HealthEcoPremium #IPCollaborationLowestPremium #OmnichannelSeeding #OfflineExperienceStores #JDMALL #FullLifecycleOperations #SimulatedTrial #LaunchIgnition #SustainedSalesRefinement #JOMOOS8 #35DaysOver10Million #ChangdiWhaleQuasi #TCLT7MUltra #SkyworthWallpaperTV #LittleSwanXiaowumei #SmartHomeL1‑L5 #HomeIntelligentAgents #OnDeviceAI #WholeHomeIntelligence #AINativeAppliances #AgeFriendlyAppliances #PolicySubsidies #TradeIn #PremiumSmartSuiteOriented\n\n**Perspective**: This report is the most complete new‑product marketing methodology white paper from a \"platform perspective\" in the home appliance and home furnishing industry in 2026. Its core value lies not in platform‑highlighted figures such as \"87.5% primary JD\" that are easily over‑interpreted, but in systematically articulating the structural shift of the industry from incremental expansion to stock renewal and the matching \"full‑lifecycle new‑product operations\" methodology.\n\nFrom a conservative perspective, the report's judgment on the industry's macro‑level foundation is largely sound: AVC data shows the 2025 home appliance market (excluding 3C) at RMB 893.1 billion, down 4.3% year‑on‑year, and a 2026 forecast of RMB 833.2 billion, down another 6.7%, indicating the industry has entered a stock‑based phase in the RMB 800‑900 billion range, with premium, smart, and suite‑oriented products growing along the upward track of K‑shaped differentiation—this foundation is highly self‑consistent with the report's main narrative of \"stock renewal + quality upgrading.\"\n\nFrom a neutral perspective, the report's real incremental value lies in three boundary areas: First, although the user survey has a relatively small sample size of N=400 and is primarily online consumers, it provides the first detailed profile of \"online new‑product buyers\"—26‑35 year‑old males show the highest acceptance of new products, 78.3% rank quality first, 62% strongly demand intelligence, and acceptance of IP co‑branding premiums is lowest. This set of data structurally reveals the real constraints on \"new‑product premiums\": consumers are willing to pay for technological breakthroughs and experience upgrades, but refuse to pay for marketing gimmicks. Second, the quantitative breakdown of channel pathways—\"online information acquisition 85.3% + content seeding 58.3% → offline experience 32.3% → online conversion 88.3%\"—objectively reflects the integrated closed‑loop of \"online seeding + offline experience + online conversion\" for home appliance and home furnishing categories, offering practical reference for brand media budget allocation. Third, the \"Lightning New Product\" full‑lifecycle methodology (simulated trial → omnichannel seeding → launch ignition → sustained‑sales refinement) has been cross‑verified by independent reports in cases such as JOMOO S8 (over RMB 10 million in 35 days, JD Guangzhou store revenue per square metre exceeding RMB 150,000), indicating that this methodology does indeed offer reusable operational effectiveness in certain categories.\n\nFrom an aggressive perspective, as a white paper led and published by the JD platform, there are three usage boundaries that must be explicitly discounted in decision‑making: First, significant sample bias—the screening conditions of N=400, \"primarily online consumers, having purchased new products in the past year,\" mean that all percentage conclusions represent \"the profile of JD's online active home appliance and home furnishing new‑product buyers\" rather than the national home appliance consumer population. The figure \"87.5% primary JD\" is notably amplified by sample self‑selection bias and is often misinterpreted by media as \"the channel preference of national consumers.\" Second, most case data are brand self‑statements—key performance claims such as Changdi \"breaking the launch record for home stand mixers,\" TCL \"TV industry sales TOP 1,\" Skyworth wallpaper TV \"No.1 for 9 consecutive years,\" and Little Swan Xiaowumei \"cumulative sales exceeding 1 million units\" primarily come from brand messages and platform self‑statements and have not been independently verified through third‑party authoritative monitoring data such as AVC or GfK; it is more prudent to label them as [unverifiable] when citing. Third, the report is relatively aggressive in its forward‑looking judgments on \"AI‑native home appliances,\" \"home intelligent agents,\" and \"dual‑drive of on‑device AI + home large models.\" The white paper's portrayal of the deployment timeline for \"home intelligent agents with proactive sensing and scenario coordination\" is somewhat optimistic, and it does not fully discuss real‑world constraints such as cross‑brand protocol interoperability, on‑device computing costs, and user privacy concerns.\n\nFor home appliance brands, the decision implications are three‑tiered:\n\n**On the product side**, \"quality and durability + health and environmental friendliness\" are the real fulcrums for premium pricing; IP co‑branding can generate buzz but cannot serve as a profit pillar. AI functionality must be tied to specific pain points (e.g., JOMOO S8's pure oxygen deodorisation) rather than simply stacking wake‑word‑based interactions.\n\n**On the channel side**, media budgets should be allocated according to the tripartite structure of \"e‑commerce platforms (conversion) + content platforms (seeding) + offline experience stores (trust),\" and the role of offline stores is shifting from \"transaction venues\" to \"experience and trust venues.\"\n\n**On the marketing side**, the \"Lightning New Product\" methodology's full‑lifecycle cadence (simulated trial → seeding water‑storage → launch ignition → sustained‑sales refinement) can serve as a reference framework for new‑product launches, but brands need to establish independent third‑party performance attribution to avoid relying solely on platform self‑reported performance data.\n\nFor investors, the implication is that against the backdrop of overall industry pressure, structural opportunities are concentrated in four upward tracks—premiumisation, intelligence, suite‑oriented solutions, and age‑friendliness. However, caution is needed against hype around \"AI home appliances,\" with attention focused on leading enterprises that possess genuine technological moats and whole‑home connectivity capabilities.\n\n**Overall rating: ★★★☆☆ 75%** —the industry macro‑judgment is highly consistent with AVC authoritative data, the JOMOO S8 case has multiple‑source cross‑verification, and the Lightning New Product methodology offers practical reference value. However, the N=400 online sample bias means that channel preference conclusions cannot be extrapolated to the national population; most brand cases are self‑stated and unverifiable; and forward‑looking judgments such as AI‑native home appliances lean towards platform narrative. The report is insufficient as a sole decision‑making basis and should be cross‑validated with third‑party monitoring data from AVC, GfK, and brand financial reports.",
-        "clean_text": "**In-Depth Reading of the *2026 JD Home Appliances and Home Furnishings New Product White Paper***\n\nReleased by JD.com in May 2026, with research support from HCR慧辰, the report is based on a core sample of N=400 quantitative questionnaires completed by \"consumers who had purchased new home appliance or home furnishing products within the past year, primarily online consumers,\" supplemented by brand messages and a compilation of JD's \"Lightning New Product\" methodology case studies. The report's core judgment is that the home appliance and home furnishing industry has shifted from incremental expansion to stock renewal and quality upgrading, with intelligence, health, green energy efficiency, scenario‑based design, and age‑friendliness becoming the dominant directions for new product iteration. The industry's stock characteristics can be cross‑verified with All View Cloud (AVC) data: in 2025, China's home appliance market (excluding 3C) reached RMB 893.1 billion in retail sales, down 4.3% year‑on‑year; AVC forecasts 2026 sales of RMB 833.2 billion, a further decline of 6.7% year‑on‑year. The industry as a whole has entered a stock‑based competition phase in the RMB 800‑900 billion range, with premium, smart, and suite‑oriented products continuing to grow along the upward track of K‑shaped differentiation. However, the report's own 2022‑2028 home appliance market size and category price charts are labelled only as \"compiled from public sources including the National Bureau of Statistics and AVC,\" and the specific annual figures could not be independently reproduced through public channels; they should be treated as the report's internal estimates.\n\nThe user survey section provides a clear profile of \"online new‑product buyers\": the 26‑45 age group is the core consumer segment, with 26‑35 year‑old males showing the highest acceptance of new products; 93.5% of respondents had purchased a new home appliance or home furnishing product in the past year, 87.5% chose JD.com as their primary purchase channel, 78.3% ranked product quality as their top concern, 70.5% considered functionality a decisive factor in purchase decisions, and 62% strongly demanded intelligent features—quality and functionality were \"far more important than price and brand.\" In terms of channel pathways, e‑commerce platform recommendations ranked first as an information source at 85.3%, followed by content platform seeding at 58.3%; for final purchases, e‑commerce platforms accounted for 88.3%, while brand offline stores accounted for 32.3%; \"product performance parameters (84.0%), user口碑 (75.5%), and price (67.3%)\" were the three core dimensions of information comparison. Regarding willingness to pay, consumers were willing to pay a premium for \"quality and durability\" and \"health and environmental friendliness,\" but had the lowest acceptance of IP co‑branding premiums. The acceptable premium for new products was mostly in the 11%‑50% range, with budgets concentrated within 30% of monthly income. It should be made clear that the sample structure of N=400, primarily online consumers, means that conclusions such as \"87.5% chose JD.com as their primary channel\" represent \"the profile of JD.com online active home appliance and home furnishing new‑product buyers\" and cannot be extrapolated to the preferences of the national home appliance consumer population.\n\nChapter 3 of the report systematically elaborates JD's \"Lightning New Product Marketing\" methodology, covering the full lifecycle from \"simulated trial during the pre‑launch preparation phase → pre‑launch omnichannel seeding → online ignition + offline experience during the launch phase → refined operation during the sustained‑sales phase,\" supported by four empowerment modules: operations, domain, marketing, and tools. In the case studies, JOMOO S8 Pure智能 toilet—which \"achieved over RMB 10 million in sales within 35 days of launch, with an average product price exceeding RMB 4,000, ranking firmly as the TOP 1 premium smart toilet\"—received cross‑verification from independent reports in JD Home Appliance & Home Furnishings Merchant Academy, Building Materials and Home Furnishings News Network, and Logistics Product Network; supporting data such as JD Guangzhou store's revenue per square metre exceeding RMB 150,000 were also verifiable. Historical performance data, such as JD Building Materials' revenue from major new products growing 200% year‑on‑year since 2025 and incubating over 50 million‑RMB‑class new products, provide background corroboration for the \"Lightning New Product\" IP's scaled operational capability. However, case data for Changdi Whale Quasi‑quasi stand mixer \"breaking the launch record for home stand mixers,\" TCL T7M Ultra \"TV industry sales TOP 1,\" Skyworth wallpaper TV \"sales ranking No.1 for 9 consecutive years,\" Little Swan Xiaowumei \"cumulative sales exceeding 1 million units,\" Siemens Steaming Linglong, and Fuanna J.Dear Deep Sleep series primarily come from brand messages and platform self‑statements, and could not be independently verified through public authoritative channels such as AVC or GfK; they should be treated as \"platform cases based on brand self‑statements\" rather than third‑party audited data.\n\n**Keywords**: #JDHomeAppliancesHomeFurnishings #LightningNewProduct #HCR #N400 #StockRenewal #QualityUpgrading #2025Retail893.1Billion #2026Forecast833.2Billion #AVC #KShapedDifferentiation #26‑35YearOldMales #87.5PercentPrimaryJD #78.3PercentQualityFirst #62PercentSmartDemand #EcommercePlatforms88.3Percent #OfflineExperience32.3Percent #PerformanceParameters84.0Percent #HealthEcoPremium #IPCollaborationLowestPremium #OmnichannelSeeding #OfflineExperienceStores #JDMALL #FullLifecycleOperations #SimulatedTrial #LaunchIgnition #SustainedSalesRefinement #JOMOOS8 #35DaysOver10Million #ChangdiWhaleQuasi #TCLT7MUltra #SkyworthWallpaperTV #LittleSwanXiaowumei #SmartHomeL1‑L5 #HomeIntelligentAgents #OnDeviceAI #WholeHomeIntelligence #AINativeAppliances #AgeFriendlyAppliances #PolicySubsidies #TradeIn #PremiumSmartSuiteOriented\n\n**Perspective**: This report is the most complete new‑product marketing methodology white paper from a \"platform perspective\" in the home appliance and home furnishing industry in 2026. Its core value lies not in platform‑highlighted figures such as \"87.5% primary JD\" that are easily over‑interpreted, but in systematically articulating the structural shift of the industry from incremental expansion to stock renewal and the matching \"full‑lifecycle new‑product operations\" methodology.\n\nFrom a conservative perspective, the report's judgment on the industry's macro‑level foundation is largely sound: AVC data shows the 2025 home appliance market (excluding 3C) at RMB 893.1 billion, down 4.3% year‑on‑year, and a 2026 forecast of RMB 833.2 billion, down another 6.7%, indicating the industry has entered a stock‑based phase in the RMB 800‑900 billion range, with premium, smart, and suite‑oriented products growing along the upward track of K‑shaped differentiation—this foundation is highly self‑consistent with the report's main narrative of \"stock renewal + quality upgrading.\"\n\nFrom a neutral perspective, the report's real incremental value lies in three boundary areas: First, although the user survey has a relatively small sample size of N=400 and is primarily online consumers, it provides the first detailed profile of \"online new‑product buyers\"—26‑35 year‑old males show the highest acceptance of new products, 78.3% rank quality first, 62% strongly demand intelligence, and acceptance of IP co‑branding premiums is lowest. This set of data structurally reveals the real constraints on \"new‑product premiums\": consumers are willing to pay for technological breakthroughs and experience upgrades, but refuse to pay for marketing gimmicks. Second, the quantitative breakdown of channel pathways—\"online information acquisition 85.3% + content seeding 58.3% → offline experience 32.3% → online conversion 88.3%\"—objectively reflects the integrated closed‑loop of \"online seeding + offline experience + online conversion\" for home appliance and home furnishing categories, offering practical reference for brand media budget allocation. Third, the \"Lightning New Product\" full‑lifecycle methodology (simulated trial → omnichannel seeding → launch ignition → sustained‑sales refinement) has been cross‑verified by independent reports in cases such as JOMOO S8 (over RMB 10 million in 35 days, JD Guangzhou store revenue per square metre exceeding RMB 150,000), indicating that this methodology does indeed offer reusable operational effectiveness in certain categories.\n\nFrom an aggressive perspective, as a white paper led and published by the JD platform, there are three usage boundaries that must be explicitly discounted in decision‑making: First, significant sample bias—the screening conditions of N=400, \"primarily online consumers, having purchased new products in the past year,\" mean that all percentage conclusions represent \"the profile of JD's online active home appliance and home furnishing new‑product buyers\" rather than the national home appliance consumer population. The figure \"87.5% primary JD\" is notably amplified by sample self‑selection bias and is often misinterpreted by media as \"the channel preference of national consumers.\" Second, most case data are brand self‑statements—key performance claims such as Changdi \"breaking the launch record for home stand mixers,\" TCL \"TV industry sales TOP 1,\" Skyworth wallpaper TV \"No.1 for 9 consecutive years,\" and Little Swan Xiaowumei \"cumulative sales exceeding 1 million units\" primarily come from brand messages and platform self‑statements and have not been independently verified through third‑party authoritative monitoring data such as AVC or GfK; it is more prudent to label them as [unverifiable] when citing. Third, the report is relatively aggressive in its forward‑looking judgments on \"AI‑native home appliances,\" \"home intelligent agents,\" and \"dual‑drive of on‑device AI + home large models.\" The white paper's portrayal of the deployment timeline for \"home intelligent agents with proactive sensing and scenario coordination\" is somewhat optimistic, and it does not fully discuss real‑world constraints such as cross‑brand protocol interoperability, on‑device computing costs, and user privacy concerns.\n\nFor home appliance brands, the decision implications are three‑tiered:\n\n**On the product side**, \"quality and durability + health and environmental friendliness\" are the real fulcrums for premium pricing; IP co‑branding can generate buzz but cannot serve as a profit pillar. AI functionality must be tied to specific pain points (e.g., JOMOO S8's pure oxygen deodorisation) rather than simply stacking wake‑word‑based interactions.\n\n**On the channel side**, media budgets should be allocated according to the tripartite structure of \"e‑commerce platforms (conversion) + content platforms (seeding) + offline experience stores (trust),\" and the role of offline stores is shifting from \"transaction venues\" to \"experience and trust venues.\"\n\n**On the marketing side**, the \"Lightning New Product\" methodology's full‑lifecycle cadence (simulated trial → seeding water‑storage → launch ignition → sustained‑sales refinement) can serve as a reference framework for new‑product launches, but brands need to establish independent third‑party performance attribution to avoid relying solely on platform self‑reported performance data.\n\nFor investors, the implication is that against the backdrop of overall industry pressure, structural opportunities are concentrated in four upward tracks—premiumisation, intelligence, suite‑oriented solutions, and age‑friendliness. However, caution is needed against hype around \"AI home appliances,\" with attention focused on leading enterprises that possess genuine technological moats and whole‑home connectivity capabilities.\n\n**Overall rating: ★★★☆☆ 75%** —the industry macro‑judgment is highly consistent with AVC authoritative data, the JOMOO S8 case has multiple‑source cross‑verification, and the Lightning New Product methodology offers practical reference value. However, the N=400 online sample bias means that channel preference conclusions cannot be extrapolated to the national population; most brand cases are self‑stated and unverifiable; and forward‑looking judgments such as AI‑native home appliances lean towards platform narrative. The report is insufficient as a sole decision‑making basis and should be cross‑validated with third‑party monitoring data from AVC, GfK, and brand financial reports.",
-        "links": [
-          "http://JD.com",
-          "http://JD.com",
-          "http://JD.com",
-          "http://JD.com"
-        ],
-        "translation_zh": "**《2026京东家电家居新品白皮书》深度解读**\n\n该报告由 JD.com 于 2026 年 5 月发布，并获得 HCR慧辰 的研究支持。报告基于 N=400 份定量问卷的核心样本，受访者为“过去一年内购买过家电或家居新品的消费者，且以线上消费者为主”，并辅以品牌信息以及京东“闪电新品”方法论案例汇编。报告的核心判断是，家电家居行业已从增量扩张转向存量更新与品质升级，智能化、健康化、绿色节能、场景化设计和适老化正在成为新品迭代的主导方向。行业的存量特征可与奥维云网（AVC）数据相互验证：2025 年，中国家电市场（不含 3C）零售额达到人民币 8931 亿元，同比下降 4.3%；AVC 预测 2026 年销售额为人民币 8332 亿元，同比进一步下降 6.7%。整个行业已进入人民币 8000–9000 亿元区间的存量竞争阶段，高端化、智能化和套系化产品继续沿着 K 型分化的上行轨道增长。不过，报告自身的 2022–2028 年家电市场规模和品类价格图表仅标注为“根据国家统计局、AVC 等公开资料整理”，其具体年度数据无法通过公开渠道独立复现；应将其视为报告内部估算。\n\n用户调研部分清晰刻画了“线上新品购买者”的画像：26–45 岁年龄段是核心消费群体，其中 26–35 岁男性对新品的接受度最高；93.5% 的受访者在过去一年内购买过家电或家居新品，87.5% 将 JD.com 作为主要购买渠道，78.3% 将产品质量列为首要关注点，70.5% 认为功能性是购买决策中的决定性因素，62% 对智能功能有强烈需求——质量和功能“远比价格和品牌更重要”。在渠道路径方面，电商平台推荐以 85.3% 位列信息来源第一，其次是内容平台种草，占 58.3%；在最终购买渠道上，电商平台占 88.3%，品牌线下门店占 32.3%；“产品性能参数（84.0%）、用户口碑（75.5%）和价格（67.3%）”是信息比较的三大核心维度。在支付意愿方面，消费者愿意为“品质与耐用性”以及“健康与环保”支付溢价，但对 IP 联名溢价的接受度最低。新品可接受溢价大多集中在 11%–50% 区间，预算集中在月收入的 30% 以内。需要明确的是，N=400 且以线上消费者为主的样本结构意味着，“87.5% 将 JD.com 作为主要渠道”等结论代表的是“JD.com 线上活跃家电家居新品购买者画像”，不能外推为全国家电消费者群体的偏好。\n\n报告第 3 章系统阐述了京东“闪电新品营销”方法论，覆盖从“上市筹备期的模拟试用 → 上市前全域种草 → 上市期线上引爆 + 线下体验 → 持续销售期精细化运营”的全生命周期，并由运营、域、营销和工具四大赋能模块支撑。在案例研究中，JOMOO S8 Pure智能马桶——“上市 35 天销售额突破人民币 1000 万元，产品均价超过人民币 4000 元，稳居高端智能马桶 TOP 1”——获得了京东家电家居商家学院、建材家居新闻网和物流产品网等独立报道的交叉验证；京东广州门店坪效超过人民币 15 万元等支撑数据也可验证。历史业绩数据，例如自 2025 年以来京东建材重点新品收入同比增长 200%，并孵化出超过 50 个千万元级新品，为“闪电新品”IP 的规模化运营能力提供了背景佐证。然而，Changdi Whale Quasi-quasi 厨师机“打破家用厨师机首发纪录”、TCL T7M Ultra“电视行业销量 TOP 1”、Skyworth 壁纸电视“连续 9 年销量排名第一”、Little Swan Xiaowumei“累计销量突破 100 万台”、Siemens Steaming Linglong 以及 Fuanna J.Dear 深睡系列等案例数据主要来自品牌信息和平台自述，无法通过 AVC 或 GfK 等公开权威渠道独立验证；应将其视为“基于品牌自述的平台案例”，而不是第三方审计数据。\n\n**关键词**：#JDHomeAppliancesHomeFurnishings #LightningNewProduct #HCR #N400 #StockRenewal #QualityUpgrading #2025Retail893.1Billion #2026Forecast833.2Billion #AVC #KShapedDifferentiation #26‑35YearOldMales #87.5PercentPrimaryJD #78.3PercentQualityFirst #62PercentSmartDemand #EcommercePlatforms88.3Percent #OfflineExperience32.3Percent #PerformanceParameters84.0Percent #HealthEcoPremium #IPCollaborationLowestPremium #OmnichannelSeeding #OfflineExperienceStores #JDMALL #FullLifecycleOperations #SimulatedTrial #LaunchIgnition #SustainedSalesRefinement #JOMOOS8 #35DaysOver10Million #ChangdiWhaleQuasi #TCLT7MUltra #SkyworthWallpaperTV #LittleSwanXiaowumei #SmartHomeL1‑L5 #HomeIntelligentAgents #OnDeviceAI #WholeHomeIntelligence #AINativeAppliances #AgeFriendlyAppliances #PolicySubsidies #TradeIn #PremiumSmartSuiteOriented\n\n**视角**：这份报告是 2026 年家电家居行业中最完整的一份从“平台视角”出发的新品营销方法论白皮书。它的核心价值并不在于“87.5% 首选京东”这类容易被过度解读的平台亮点数字，而在于系统阐明了行业从增量扩张转向存量更新的结构性变化，以及与之匹配的“全生命周期新品运营”方法论。\n\n从保守视角看，报告对行业宏观基础的判断总体稳健：AVC 数据显示，2025 年家电市场（不含 3C）规模为人民币 8931 亿元，同比下降 4.3%，并预测 2026 年为人民币 8332 亿元，再降 6.7%，表明行业已进入人民币 8000–9000 亿元区间的存量阶段，高端化、智能化和套系化产品沿着 K 型分化的上行轨道增长——这一基础与报告“存量更新 + 品质升级”的主叙事高度自洽。\n\n从中性视角看，报告真正的增量价值在三个边界领域：第一，尽管用户调研样本量 N=400 相对较小，且以线上消费者为主，但它提供了首个较为细致的“线上新品购买者”画像——26–35 岁男性对新品接受度最高，78.3% 将质量排在第一，62% 对智能化有强烈需求，对 IP 联名溢价的接受度最低。这组数据从结构上揭示了“新品溢价”的真实约束：消费者愿意为技术突破和体验升级买单，但拒绝为营销噱头付费。第二，渠道路径的量化拆解——“线上信息获取 85.3% + 内容种草 58.3% → 线下体验 32.3% → 线上转化 88.3%”——客观反映了家电家居品类“线上种草 + 线下体验 + 线上转化”的一体化闭环，为品牌媒介预算分配提供了实践参考。第三，“闪电新品”全生命周期方法论（模拟试用 → 全域种草 → 上市引爆 → 持销精细化）已在 JOMOO S8 等案例中获得独立报道交叉验证（35 天突破人民币 1000 万元，京东广州门店坪效超过人民币 15 万元），说明该方法论在部分品类中确实具备可复用的运营有效性。\n\n从激进视角看，作为由京东平台主导并发布的白皮书，在决策使用中必须明确打折处理三个边界：第一，样本偏差显著——N=400、“以线上消费者为主、过去一年购买过新品”的筛选条件，意味着所有百分比结论代表的是“京东线上活跃家电家居新品购买者画像”，而不是全国家电消费者群体。“87.5% 首选京东”这一数字明显受到样本自选择偏差放大，且常被媒体误读为“全国消费者的渠道偏好”。第二，多数案例数据属于品牌自述——长帝“打破家用厨师机首发纪录”、TCL“电视行业销量 TOP 1”、Skyworth 壁纸电视“连续 9 年第一”、Little Swan Xiaowumei“累计销量突破 100 万台”等关键业绩宣称，主要来自品牌信息和平台自述，并未通过 AVC 或 GfK 等第三方权威监测数据独立验证；引用时更审慎的做法是标注为[不可验证]。第三，报告对于“AI 原生家电”、“家庭智能体”和“端侧 AI + 家庭大模型双驱动”的前瞻判断相对激进。白皮书对“具备主动感知和场景协同能力的家庭智能体”落地时间表的描绘略显乐观，也未充分讨论跨品牌协议互通、端侧算力成本和用户隐私顾虑等现实约束。\n\n对于家电品牌而言，决策启示分为三层：\n\n**产品侧**，“品质与耐用性 + 健康与环保”才是溢价定价的真实支点；IP 联名可以制造声量，但不能作为利润支柱。AI 功能必须绑定具体痛点（例如 JOMOO S8 的纯氧除臭），而不是简单堆叠基于唤醒词的交互。\n\n**渠道侧**，媒介预算应按照“电商平台（转化）+ 内容平台（种草）+ 线下体验店（信任）”的三元结构分配，线下门店的角色正在从“交易场所”转向“体验与信任场所”。\n\n**营销侧**，“闪电新品”方法论的全生命周期节奏（模拟试用 → 种草蓄水 → 上市引爆 → 持销精细化）可作为新品上市的参考框架，但品牌需要建立独立的第三方效果归因，避免完全依赖平台自报业绩数据。\n\n对于投资者而言，启示是，在行业整体承压的背景下，结构性机会集中在四条上行赛道——高端化、智能化、套系化解决方案和适老化。但需要警惕“AI 家电”相关炒作，将注意力集中在真正具备技术护城河和全屋互联能力的龙头企业上。\n\n**总体评级：★★★☆☆ 75%**——行业宏观判断与 AVC 权威数据高度一致，JOMOO S8 案例有多源交叉验证，闪电新品方法论具有实践参考价值。但 N=400 的线上样本偏差意味着渠道偏好结论不能外推至全国人群；大多数品牌案例为自述且不可验证；AI 原生家电等前瞻判断更偏向平台叙事。该报告不足以作为唯一决策依据，应与 AVC、GfK 以及品牌财报等第三方监测数据进行交叉验证。",
+        "conversation_id": "2082091704027398396",
+        "language": "nl",
+        "text": "@Vincentgdevlugt Iets anders: jij houdt van Aziatisch eten hè. Ik ook. Ken je Joybuy al? Zo nee, moet je eens op de site kijken: allerlei Aziatische producten vaak voor de helft van de prijs. En de levering is idioot snel, hooguit één dag.",
+        "clean_text": "@Vincentgdevlugt Iets anders: jij houdt van Aziatisch eten hè. Ik ook. Ken je Joybuy al? Zo nee, moet je eens op de site kijken: allerlei Aziatische producten vaak voor de helft van de prijs. En de levering is idioot snel, hooguit één dag.",
+        "links": [],
+        "translation_zh": "@Vincentgdevlugt 说点别的：你喜欢亚洲美食，对吧。我也是。你知道 Joybuy 吗？如果不知道，应该去网站上看看：各种亚洲产品，价格通常只有一半。而且配送快得离谱，最多一天。",
         "translation_status": "translated",
-        "summary_zh": "用户讨论价格、优惠或正向购物体验。",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
         "metrics": {
-          "likes": 0,
+          "likes": 2,
           "reposts": 0,
-          "replies": 0,
+          "replies": 1,
           "quotes": 0,
           "bookmarks": 0,
-          "views": 58
+          "views": 45
         },
         "media": []
       },
-      "topic": "price_opportunity",
+      "topic": "positive_experience",
       "risk_types": [],
       "opportunity_types": [
         "positive_value",
         "delivery_strength"
       ],
-      "post_count": 1,
-      "first_seen_at": "2026-07-28T05:00:06Z",
-      "last_seen_at": "2026-07-28T05:00:06Z",
+      "post_count": 2,
+      "first_seen_at": "2026-07-28T17:36:06Z",
+      "last_seen_at": "2026-07-28T17:59:50Z",
       "metrics": {
-        "total_likes": 0,
+        "total_likes": 2,
         "total_reposts": 0,
-        "total_replies": 0,
+        "total_replies": 1,
         "total_quotes": 0,
         "total_bookmarks": 0,
-        "total_views": 58,
-        "max_author_followers": 736,
-        "public_interactions": 0
+        "total_views": 93,
+        "max_author_followers": 34171,
+        "public_interactions": 3
       },
       "score": {
-        "ips": 51,
-        "level": "low",
-        "brand_relevance": 70,
-        "risk_or_opportunity_intensity": 58,
-        "current_impact": 25,
-        "future_potential": 40,
-        "credibility": 58,
-        "business_impact": 52,
-        "urgency": 45,
+        "ips": 66,
+        "level": "medium",
+        "brand_relevance": 90,
+        "risk_or_opportunity_intensity": 62,
+        "current_impact": 37,
+        "future_potential": 62,
+        "credibility": 86,
+        "business_impact": 60,
+        "urgency": 53,
         "sentiment": "positive",
         "confidence": 0.81,
         "recommended_action": "传播机会",
@@ -340,257 +866,24 @@
           "delivery_strength"
         ],
         "special_flags": [],
-        "explanation": "该情报偏正向机会，体现价格、配送或促销优势，可用于观察传播借势。综合优先级 51。"
-      },
-      "evidence_counts": {
-        "origin": 1,
-        "stakeholders": 0,
-        "popular": 1,
-        "amplifiers": 0,
-        "latest": 1,
-        "supporting_evidence": 0,
-        "contradicting_evidence": 1
-      }
-    }
-  ],
-  "negative_top": [
-    {
-      "cluster_id": "primary-signal-003",
-      "title": "Refund and payment complaints around 主品牌",
-      "summary": "2 related posts discuss refund progress, cancelled orders or payment holds.",
-      "summary_zh": "多条帖子讨论 主品牌 退款进度、取消订单或支付挂起问题。",
-      "lead_post": {
-        "post_id": "2081960339382604265",
-        "created_at": "2026-07-28T04:30:00Z",
-        "author": {
-          "id": "77136191",
-          "handle": "K_Securities",
-          "name": "KSecurities",
-          "avatar_url": "https://pbs.twimg.com/profile_images/1981897395966296064/9bStYiR6_normal.jpg",
-          "followers": 69083,
-          "following": 102,
-          "bio": null,
-          "location": "Phaya Thai, Bangkok",
-          "joined_at": "2009-09-25T04:45:00Z",
-          "verified": false
-        },
-        "author_name": "KSecurities",
-        "author_handle": "K_Securities",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/1981897395966296064/9bStYiR6_normal.jpg",
-        "author_followers": 69083,
-        "author_following": 102,
-        "author_bio": null,
-        "author_location": "Phaya Thai, Bangkok",
-        "author_joined_at": "2009-09-25T04:45:00Z",
-        "author_verified": false,
-        "url": "https://x.com/K_Securities/status/2081960339382604265",
-        "reply_to_post_id": null,
-        "reply_to_handle": null,
-        "quoted_post_id": null,
-        "conversation_id": "2081960339382604265",
-        "language": "th",
-        "text": "KS: 📊 เช็คผลงาน 10 หุ้นทศเทพจีน VS 7 หุ้นนางฟ้าสหรัฐฯ ครึ่งปีแรก 2026 🇨🇳🆚🇺🇸\nใครนำ ใครล้าหลัง เทียบกันชัดๆ ในช่วง 6 เดือนแรก\n\n📌 10 หุ้นทศเทพจีน — Total Return (1H26)\nภาพรวมส่วนใหญ่ติดลบ มีเพียง SMIC ที่โดดเด่น\n\nGeely -3.35%\nBYD -23.65%\nhttps://t.co/QfEhyoXfrs -7.95%\nAlibaba -34.39%\nXiaomi -44.94%\nTencent -27.41%\nBaidu -16.65%\nMeituan -33.69%\nNetease -4.19%\nSMIC +25.12% 🏆\n\n✅ 7 หุ้นนางฟ้าสหรัฐฯ — Total Return (1H26)\nครึ่งปีแรกยังผสม บางตัวกดดันจาก Valuation และ Macro\n\nNVIDIA +7.42%\nApple +6.64%\nAlphabet +14.32% 🏆\nhttps://t.co/YG8dAT0yOO +3.26%\nMeta Platforms -14.52%\nTesla -6.48%\nMicrosoft -22.53%\n\n⚠️ สรุปภาพรวม\nกลุ่มนางฟ้าสหรัฐฯ ทำผลงานได้ดีกว่าโดยรวม โดย Alphabet นำทั้ง 2 กลุ่ม ขณะที่ทศเทพจีนส่วนใหญ่ยังเผชิญแรงกดดันจากนโยบายและเศรษฐกิจในประเทศ มีเพียง SMIC ที่บวกได้จากกระแส AI Supercycle\n\n📌 Source: Bloomberg (As of 21/07/2026)\n\n📊 ลงทุนหุ้นนอกกับ KS ครอบคลุม 28 ประเทศ 39 ตลาดชั้นนำทั่วโลก 📲 เปิดพอร์ตลงทุน >> https://t.co/DUlPhbUZwq\n\n⛳Follow us :\n📲 LINE : https://t.co/G5HhGGUvjB\n📲 Facebook: https://t.co/SQhuKrVF0f\n📲 Instagram: https://t.co/OC3dPr7K48\n📲 Twitter: https://t.co/sB04PdToLH\n📲 YouTube: https://t.co/LEuNBbhCTl\n📲 Threads: https://t.co/oaLv6RCJ4U\n\n#KS #KSecurities #หลักทรัพย์กสิกรไทย #หุ้นจีน #หุ้นสหรัฐ #ทศเทพจีน #นางฟ้าสหรัฐ #NVIDIA #Tencent #Alibaba #GlobalInvesting\n\nคำเตือน : กรุณาทำความเข้าใจลักษณะสินค้า เงื่อนไขผลตอบแทน และความเสี่ยงก่อนตัดสินใจลงทุน",
-        "clean_text": "KS: 📊 เช็คผลงาน 10 หุ้นทศเทพจีน VS 7 หุ้นนางฟ้าสหรัฐฯ ครึ่งปีแรก 2026 🇨🇳🆚🇺🇸\nใครนำ ใครล้าหลัง เทียบกันชัดๆ ในช่วง 6 เดือนแรก\n\n📌 10 หุ้นทศเทพจีน — Total Return (1H26)\nภาพรวมส่วนใหญ่ติดลบ มีเพียง SMIC ที่โดดเด่น\n\nGeely -3.35%\nBYD -23.65%\nJD.com -7.95%\nAlibaba -34.39%\nXiaomi -44.94%\nTencent -27.41%\nBaidu -16.65%\nMeituan -33.69%\nNetease -4.19%\nSMIC +25.12% 🏆\n\n✅ 7 หุ้นนางฟ้าสหรัฐฯ — Total Return (1H26)\nครึ่งปีแรกยังผสม บางตัวกดดันจาก Valuation และ Macro\n\nNVIDIA +7.42%\nApple +6.64%\nAlphabet +14.32% 🏆\nAmazon.com +3.26%\nMeta Platforms -14.52%\nTesla -6.48%\nMicrosoft -22.53%\n\n⚠️ สรุปภาพรวม\nกลุ่มนางฟ้าสหรัฐฯ ทำผลงานได้ดีกว่าโดยรวม โดย Alphabet นำทั้ง 2 กลุ่ม ขณะที่ทศเทพจีนส่วนใหญ่ยังเผชิญแรงกดดันจากนโยบายและเศรษฐกิจในประเทศ มีเพียง SMIC ที่บวกได้จากกระแส AI Supercycle\n\n📌 Source: Bloomberg (As of 21/07/2026)\n\n📊 ลงทุนหุ้นนอกกับ KS ครอบคลุม 28 ประเทศ 39 ตลาดชั้นนำทั่วโลก 📲 เปิดพอร์ตลงทุน >> ksecurities.co/Open-Account_GlobalTrade\n\n⛳Follow us :\n📲 LINE : ksecurities.co/KS-LineOA\n📲 Facebook: ksecurities.co/KS-Facebook\n📲 Instagram: ksecurities.co/KS-Instagram\n📲 Twitter: ksecurities.co/KS-Twitter\n📲 YouTube: ksecurities.co/KS-Youtube\n📲 Threads: ksecurities.co/KS-Threads\n\n#KS #KSecurities #หลักทรัพย์กสิกรไทย #หุ้นจีน #หุ้นสหรัฐ #ทศเทพจีน #นางฟ้าสหรัฐ #NVIDIA #Tencent #Alibaba #GlobalInvesting\n\nคำเตือน : กรุณาทำความเข้าใจลักษณะสินค้า เงื่อนไขผลตอบแทน และความเสี่ยงก่อนตัดสินใจลงทุน",
-        "links": [
-          "http://JD.com",
-          "http://Amazon.com",
-          "http://ksecurities.co/Open-Account_GlobalTrade",
-          "https://ksecurities.co/KS-LineOA",
-          "https://ksecurities.co/KS-Facebook",
-          "https://ksecurities.co/KS-Instagram",
-          "https://ksecurities.co/KS-Twitter",
-          "https://ksecurities.co/KS-Youtube",
-          "https://ksecurities.co/KS-Threads"
-        ],
-        "translation_zh": "KS: 📊 查看 2026 上半年中国十大神股 VS 美国7只天使股的表现 🇨🇳🆚🇺🇸\n谁领先，谁落后，清晰对比前 6 个月\n\n📌 中国十大神股 — 总回报（1H26）\n整体大多为负，只有 SMIC 表现突出\n\nGeely -3.35%\nBYD -23.65%\nJD.com -7.95%\nAlibaba -34.39%\nXiaomi -44.94%\nTencent -27.41%\nBaidu -16.65%\nMeituan -33.69%\nNetease -4.19%\nSMIC +25.12% 🏆\n\n✅ 美国7只天使股 — 总回报（1H26）\n上半年表现仍然分化，部分股票受到估值和宏观因素压力\n\nNVIDIA +7.42%\nApple +6.64%\nAlphabet +14.32% 🏆\nAmazon.com +3.26%\nMeta Platforms -14.52%\nTesla -6.48%\nMicrosoft -22.53%\n\n⚠️ 总体总结\n美国天使股整体表现更好，其中 Alphabet 在两组中领先，而中国十大神股大多仍面临来自国内政策和经济的压力，只有 SMIC 因 AI Supercycle 热潮而实现上涨\n\n📌 Source: Bloomberg (As of 21/07/2026)\n\n📊 通过 KS 投资海外股票，覆盖全球 28 个国家、39 个领先市场 📲 开立投资账户 >> ksecurities.co/Open-Account_GlobalTrade\n\n⛳Follow us :\n📲 LINE : ksecurities.co/KS-LineOA\n📲 Facebook: ksecurities.co/KS-Facebook\n📲 Instagram: ksecurities.co/KS-Instagram\n📲 Twitter: ksecurities.co/KS-Twitter\n📲 YouTube: ksecurities.co/KS-Youtube\n📲 Threads: ksecurities.co/KS-Threads\n\n#KS #KSecurities #หลักทรัพย์กสิกรไทย #หุ้นจีน #หุ้นสหรัฐ #ทศเทพจีน #นางฟ้าสหรัฐ #NVIDIA #Tencent #Alibaba #GlobalInvesting\n\n警告：请在决定投资前了解产品特性、收益条件和风险",
-        "translation_status": "translated",
-        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
-        "metrics": {
-          "likes": 15,
-          "reposts": 3,
-          "replies": 0,
-          "quotes": 0,
-          "bookmarks": 1,
-          "views": 1782
-        },
-        "media": [
-          {
-            "url": "https://pbs.twimg.com/media/HN-BZwZaMAAGJqS.jpg",
-            "type": "photo",
-            "preview_image_url": "https://pbs.twimg.com/media/HN-BZwZaMAAGJqS.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/HN-BZwZaMAAGJqS.jpg",
-            "expanded_url": "https://x.com/K_Securities/status/2081960339382604265/photo/1"
-          }
-        ]
-      },
-      "topic": "refund",
-      "risk_types": [
-        "refund",
-        "payment",
-        "customer_service"
-      ],
-      "opportunity_types": [],
-      "post_count": 2,
-      "first_seen_at": "2026-07-28T04:22:00Z",
-      "last_seen_at": "2026-07-28T04:30:00Z",
-      "metrics": {
-        "total_likes": 16,
-        "total_reposts": 3,
-        "total_replies": 1,
-        "total_quotes": 0,
-        "total_bookmarks": 1,
-        "total_views": 1904,
-        "max_author_followers": 69083,
-        "public_interactions": 20
-      },
-      "score": {
-        "ips": 81,
-        "level": "high",
-        "brand_relevance": 90,
-        "risk_or_opportunity_intensity": 86,
-        "current_impact": 50,
-        "future_potential": 78,
-        "credibility": 94,
-        "business_impact": 86,
-        "urgency": 86,
-        "sentiment": "negative",
-        "confidence": 0.81,
-        "recommended_action": "PR 准备回应",
-        "risk_labels": [
-          "refund",
-          "payment",
-          "customer_service"
-        ],
-        "opportunity_labels": [],
-        "special_flags": [
-          "high_influence_account"
-        ],
-        "explanation": "退款议题直接影响信任与支付体验，当前影响力 50，未来发酵潜力 78，可信度 94。"
+        "explanation": "该情报偏正向机会，体现价格、配送或促销优势，可用于观察传播借势。综合优先级 66。"
       },
       "evidence_counts": {
         "origin": 1,
         "stakeholders": 0,
         "popular": 2,
-        "amplifiers": 1,
+        "amplifiers": 2,
         "latest": 2,
-        "supporting_evidence": 1,
-        "contradicting_evidence": 0
-      }
-    }
-  ],
-  "opportunity_top": [
-    {
-      "cluster_id": "primary-signal-002",
-      "title": "Positive price and delivery opportunity signals",
-      "summary": "1 related posts mention fast delivery, discounts or positive value signals.",
-      "summary_zh": "相关讨论体现价格、优惠或配送体验上的正向机会。",
-      "lead_post": {
-        "post_id": "2081967914383720857",
-        "created_at": "2026-07-28T05:00:06Z",
-        "author": {
-          "id": "2023792007655849984",
-          "handle": "TAMPICTG87",
-          "name": "Tampic",
-          "avatar_url": "https://pbs.twimg.com/profile_images/2066475216306327552/jLgnBccg_normal.jpg",
-          "followers": 736,
-          "following": 2306,
-          "bio": null,
-          "location": null,
-          "joined_at": "2026-02-17T16:10:44Z",
-          "verified": false
-        },
-        "author_name": "Tampic",
-        "author_handle": "TAMPICTG87",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/2066475216306327552/jLgnBccg_normal.jpg",
-        "author_followers": 736,
-        "author_following": 2306,
-        "author_bio": null,
-        "author_location": null,
-        "author_joined_at": "2026-02-17T16:10:44Z",
-        "author_verified": false,
-        "url": "https://x.com/TAMPICTG87/status/2081967914383720857",
-        "reply_to_post_id": null,
-        "reply_to_handle": null,
-        "quoted_post_id": null,
-        "conversation_id": "2081967914383720857",
-        "language": "en",
-        "text": "**In-Depth Reading of the *2026 JD Home Appliances and Home Furnishings New Product White Paper***\n\nReleased by https://t.co/NR3Ez6cgIa in May 2026, with research support from HCR慧辰, the report is based on a core sample of N=400 quantitative questionnaires completed by \"consumers who had purchased new home appliance or home furnishing products within the past year, primarily online consumers,\" supplemented by brand messages and a compilation of JD's \"Lightning New Product\" methodology case studies. The report's core judgment is that the home appliance and home furnishing industry has shifted from incremental expansion to stock renewal and quality upgrading, with intelligence, health, green energy efficiency, scenario‑based design, and age‑friendliness becoming the dominant directions for new product iteration. The industry's stock characteristics can be cross‑verified with All View Cloud (AVC) data: in 2025, China's home appliance market (excluding 3C) reached RMB 893.1 billion in retail sales, down 4.3% year‑on‑year; AVC forecasts 2026 sales of RMB 833.2 billion, a further decline of 6.7% year‑on‑year. The industry as a whole has entered a stock‑based competition phase in the RMB 800‑900 billion range, with premium, smart, and suite‑oriented products continuing to grow along the upward track of K‑shaped differentiation. However, the report's own 2022‑2028 home appliance market size and category price charts are labelled only as \"compiled from public sources including the National Bureau of Statistics and AVC,\" and the specific annual figures could not be independently reproduced through public channels; they should be treated as the report's internal estimates.\n\nThe user survey section provides a clear profile of \"online new‑product buyers\": the 26‑45 age group is the core consumer segment, with 26‑35 year‑old males showing the highest acceptance of new products; 93.5% of respondents had purchased a new home appliance or home furnishing product in the past year, 87.5% chose https://t.co/NR3Ez6cgIa as their primary purchase channel, 78.3% ranked product quality as their top concern, 70.5% considered functionality a decisive factor in purchase decisions, and 62% strongly demanded intelligent features—quality and functionality were \"far more important than price and brand.\" In terms of channel pathways, e‑commerce platform recommendations ranked first as an information source at 85.3%, followed by content platform seeding at 58.3%; for final purchases, e‑commerce platforms accounted for 88.3%, while brand offline stores accounted for 32.3%; \"product performance parameters (84.0%), user口碑 (75.5%), and price (67.3%)\" were the three core dimensions of information comparison. Regarding willingness to pay, consumers were willing to pay a premium for \"quality and durability\" and \"health and environmental friendliness,\" but had the lowest acceptance of IP co‑branding premiums. The acceptable premium for new products was mostly in the 11%‑50% range, with budgets concentrated within 30% of monthly income. It should be made clear that the sample structure of N=400, primarily online consumers, means that conclusions such as \"87.5% chose https://t.co/NR3Ez6cgIa as their primary channel\" represent \"the profile of https://t.co/NR3Ez6cgIa's online active home appliance and home furnishing new‑product buyers\" and cannot be extrapolated to the preferences of the national home appliance consumer population.\n\nChapter 3 of the report systematically elaborates JD's \"Lightning New Product Marketing\" methodology, covering the full lifecycle from \"simulated trial during the pre‑launch preparation phase → pre‑launch omnichannel seeding → online ignition + offline experience during the launch phase → refined operation during the sustained‑sales phase,\" supported by four empowerment modules: operations, domain, marketing, and tools. In the case studies, JOMOO S8 Pure智能 toilet—which \"achieved over RMB 10 million in sales within 35 days of launch, with an average product price exceeding RMB 4,000, ranking firmly as the TOP 1 premium smart toilet\"—received cross‑verification from independent reports in JD Home Appliance & Home Furnishings Merchant Academy, Building Materials and Home Furnishings News Network, and Logistics Product Network; supporting data such as JD Guangzhou store's revenue per square metre exceeding RMB 150,000 were also verifiable. Historical performance data, such as JD Building Materials' revenue from major new products growing 200% year‑on‑year since 2025 and incubating over 50 million‑RMB‑class new products, provide background corroboration for the \"Lightning New Product\" IP's scaled operational capability. However, case data for Changdi Whale Quasi‑quasi stand mixer \"breaking the launch record for home stand mixers,\" TCL T7M Ultra \"TV industry sales TOP 1,\" Skyworth wallpaper TV \"sales ranking No.1 for 9 consecutive years,\" Little Swan Xiaowumei \"cumulative sales exceeding 1 million units,\" Siemens Steaming Linglong, and Fuanna J.Dear Deep Sleep series primarily come from brand messages and platform self‑statements, and could not be independently verified through public authoritative channels such as AVC or GfK; they should be treated as \"platform cases based on brand self‑statements\" rather than third‑party audited data.\n\n**Keywords**: #JDHomeAppliancesHomeFurnishings #LightningNewProduct #HCR #N400 #StockRenewal #QualityUpgrading #2025Retail893.1Billion #2026Forecast833.2Billion #AVC #KShapedDifferentiation #26‑35YearOldMales #87.5PercentPrimaryJD #78.3PercentQualityFirst #62PercentSmartDemand #EcommercePlatforms88.3Percent #OfflineExperience32.3Percent #PerformanceParameters84.0Percent #HealthEcoPremium #IPCollaborationLowestPremium #OmnichannelSeeding #OfflineExperienceStores #JDMALL #FullLifecycleOperations #SimulatedTrial #LaunchIgnition #SustainedSalesRefinement #JOMOOS8 #35DaysOver10Million #ChangdiWhaleQuasi #TCLT7MUltra #SkyworthWallpaperTV #LittleSwanXiaowumei #SmartHomeL1‑L5 #HomeIntelligentAgents #OnDeviceAI #WholeHomeIntelligence #AINativeAppliances #AgeFriendlyAppliances #PolicySubsidies #TradeIn #PremiumSmartSuiteOriented\n\n**Perspective**: This report is the most complete new‑product marketing methodology white paper from a \"platform perspective\" in the home appliance and home furnishing industry in 2026. Its core value lies not in platform‑highlighted figures such as \"87.5% primary JD\" that are easily over‑interpreted, but in systematically articulating the structural shift of the industry from incremental expansion to stock renewal and the matching \"full‑lifecycle new‑product operations\" methodology.\n\nFrom a conservative perspective, the report's judgment on the industry's macro‑level foundation is largely sound: AVC data shows the 2025 home appliance market (excluding 3C) at RMB 893.1 billion, down 4.3% year‑on‑year, and a 2026 forecast of RMB 833.2 billion, down another 6.7%, indicating the industry has entered a stock‑based phase in the RMB 800‑900 billion range, with premium, smart, and suite‑oriented products growing along the upward track of K‑shaped differentiation—this foundation is highly self‑consistent with the report's main narrative of \"stock renewal + quality upgrading.\"\n\nFrom a neutral perspective, the report's real incremental value lies in three boundary areas: First, although the user survey has a relatively small sample size of N=400 and is primarily online consumers, it provides the first detailed profile of \"online new‑product buyers\"—26‑35 year‑old males show the highest acceptance of new products, 78.3% rank quality first, 62% strongly demand intelligence, and acceptance of IP co‑branding premiums is lowest. This set of data structurally reveals the real constraints on \"new‑product premiums\": consumers are willing to pay for technological breakthroughs and experience upgrades, but refuse to pay for marketing gimmicks. Second, the quantitative breakdown of channel pathways—\"online information acquisition 85.3% + content seeding 58.3% → offline experience 32.3% → online conversion 88.3%\"—objectively reflects the integrated closed‑loop of \"online seeding + offline experience + online conversion\" for home appliance and home furnishing categories, offering practical reference for brand media budget allocation. Third, the \"Lightning New Product\" full‑lifecycle methodology (simulated trial → omnichannel seeding → launch ignition → sustained‑sales refinement) has been cross‑verified by independent reports in cases such as JOMOO S8 (over RMB 10 million in 35 days, JD Guangzhou store revenue per square metre exceeding RMB 150,000), indicating that this methodology does indeed offer reusable operational effectiveness in certain categories.\n\nFrom an aggressive perspective, as a white paper led and published by the JD platform, there are three usage boundaries that must be explicitly discounted in decision‑making: First, significant sample bias—the screening conditions of N=400, \"primarily online consumers, having purchased new products in the past year,\" mean that all percentage conclusions represent \"the profile of JD's online active home appliance and home furnishing new‑product buyers\" rather than the national home appliance consumer population. The figure \"87.5% primary JD\" is notably amplified by sample self‑selection bias and is often misinterpreted by media as \"the channel preference of national consumers.\" Second, most case data are brand self‑statements—key performance claims such as Changdi \"breaking the launch record for home stand mixers,\" TCL \"TV industry sales TOP 1,\" Skyworth wallpaper TV \"No.1 for 9 consecutive years,\" and Little Swan Xiaowumei \"cumulative sales exceeding 1 million units\" primarily come from brand messages and platform self‑statements and have not been independently verified through third‑party authoritative monitoring data such as AVC or GfK; it is more prudent to label them as [unverifiable] when citing. Third, the report is relatively aggressive in its forward‑looking judgments on \"AI‑native home appliances,\" \"home intelligent agents,\" and \"dual‑drive of on‑device AI + home large models.\" The white paper's portrayal of the deployment timeline for \"home intelligent agents with proactive sensing and scenario coordination\" is somewhat optimistic, and it does not fully discuss real‑world constraints such as cross‑brand protocol interoperability, on‑device computing costs, and user privacy concerns.\n\nFor home appliance brands, the decision implications are three‑tiered:\n\n**On the product side**, \"quality and durability + health and environmental friendliness\" are the real fulcrums for premium pricing; IP co‑branding can generate buzz but cannot serve as a profit pillar. AI functionality must be tied to specific pain points (e.g., JOMOO S8's pure oxygen deodorisation) rather than simply stacking wake‑word‑based interactions.\n\n**On the channel side**, media budgets should be allocated according to the tripartite structure of \"e‑commerce platforms (conversion) + content platforms (seeding) + offline experience stores (trust),\" and the role of offline stores is shifting from \"transaction venues\" to \"experience and trust venues.\"\n\n**On the marketing side**, the \"Lightning New Product\" methodology's full‑lifecycle cadence (simulated trial → seeding water‑storage → launch ignition → sustained‑sales refinement) can serve as a reference framework for new‑product launches, but brands need to establish independent third‑party performance attribution to avoid relying solely on platform self‑reported performance data.\n\nFor investors, the implication is that against the backdrop of overall industry pressure, structural opportunities are concentrated in four upward tracks—premiumisation, intelligence, suite‑oriented solutions, and age‑friendliness. However, caution is needed against hype around \"AI home appliances,\" with attention focused on leading enterprises that possess genuine technological moats and whole‑home connectivity capabilities.\n\n**Overall rating: ★★★☆☆ 75%** —the industry macro‑judgment is highly consistent with AVC authoritative data, the JOMOO S8 case has multiple‑source cross‑verification, and the Lightning New Product methodology offers practical reference value. However, the N=400 online sample bias means that channel preference conclusions cannot be extrapolated to the national population; most brand cases are self‑stated and unverifiable; and forward‑looking judgments such as AI‑native home appliances lean towards platform narrative. The report is insufficient as a sole decision‑making basis and should be cross‑validated with third‑party monitoring data from AVC, GfK, and brand financial reports.",
-        "clean_text": "**In-Depth Reading of the *2026 JD Home Appliances and Home Furnishings New Product White Paper***\n\nReleased by JD.com in May 2026, with research support from HCR慧辰, the report is based on a core sample of N=400 quantitative questionnaires completed by \"consumers who had purchased new home appliance or home furnishing products within the past year, primarily online consumers,\" supplemented by brand messages and a compilation of JD's \"Lightning New Product\" methodology case studies. The report's core judgment is that the home appliance and home furnishing industry has shifted from incremental expansion to stock renewal and quality upgrading, with intelligence, health, green energy efficiency, scenario‑based design, and age‑friendliness becoming the dominant directions for new product iteration. The industry's stock characteristics can be cross‑verified with All View Cloud (AVC) data: in 2025, China's home appliance market (excluding 3C) reached RMB 893.1 billion in retail sales, down 4.3% year‑on‑year; AVC forecasts 2026 sales of RMB 833.2 billion, a further decline of 6.7% year‑on‑year. The industry as a whole has entered a stock‑based competition phase in the RMB 800‑900 billion range, with premium, smart, and suite‑oriented products continuing to grow along the upward track of K‑shaped differentiation. However, the report's own 2022‑2028 home appliance market size and category price charts are labelled only as \"compiled from public sources including the National Bureau of Statistics and AVC,\" and the specific annual figures could not be independently reproduced through public channels; they should be treated as the report's internal estimates.\n\nThe user survey section provides a clear profile of \"online new‑product buyers\": the 26‑45 age group is the core consumer segment, with 26‑35 year‑old males showing the highest acceptance of new products; 93.5% of respondents had purchased a new home appliance or home furnishing product in the past year, 87.5% chose JD.com as their primary purchase channel, 78.3% ranked product quality as their top concern, 70.5% considered functionality a decisive factor in purchase decisions, and 62% strongly demanded intelligent features—quality and functionality were \"far more important than price and brand.\" In terms of channel pathways, e‑commerce platform recommendations ranked first as an information source at 85.3%, followed by content platform seeding at 58.3%; for final purchases, e‑commerce platforms accounted for 88.3%, while brand offline stores accounted for 32.3%; \"product performance parameters (84.0%), user口碑 (75.5%), and price (67.3%)\" were the three core dimensions of information comparison. Regarding willingness to pay, consumers were willing to pay a premium for \"quality and durability\" and \"health and environmental friendliness,\" but had the lowest acceptance of IP co‑branding premiums. The acceptable premium for new products was mostly in the 11%‑50% range, with budgets concentrated within 30% of monthly income. It should be made clear that the sample structure of N=400, primarily online consumers, means that conclusions such as \"87.5% chose JD.com as their primary channel\" represent \"the profile of JD.com online active home appliance and home furnishing new‑product buyers\" and cannot be extrapolated to the preferences of the national home appliance consumer population.\n\nChapter 3 of the report systematically elaborates JD's \"Lightning New Product Marketing\" methodology, covering the full lifecycle from \"simulated trial during the pre‑launch preparation phase → pre‑launch omnichannel seeding → online ignition + offline experience during the launch phase → refined operation during the sustained‑sales phase,\" supported by four empowerment modules: operations, domain, marketing, and tools. In the case studies, JOMOO S8 Pure智能 toilet—which \"achieved over RMB 10 million in sales within 35 days of launch, with an average product price exceeding RMB 4,000, ranking firmly as the TOP 1 premium smart toilet\"—received cross‑verification from independent reports in JD Home Appliance & Home Furnishings Merchant Academy, Building Materials and Home Furnishings News Network, and Logistics Product Network; supporting data such as JD Guangzhou store's revenue per square metre exceeding RMB 150,000 were also verifiable. Historical performance data, such as JD Building Materials' revenue from major new products growing 200% year‑on‑year since 2025 and incubating over 50 million‑RMB‑class new products, provide background corroboration for the \"Lightning New Product\" IP's scaled operational capability. However, case data for Changdi Whale Quasi‑quasi stand mixer \"breaking the launch record for home stand mixers,\" TCL T7M Ultra \"TV industry sales TOP 1,\" Skyworth wallpaper TV \"sales ranking No.1 for 9 consecutive years,\" Little Swan Xiaowumei \"cumulative sales exceeding 1 million units,\" Siemens Steaming Linglong, and Fuanna J.Dear Deep Sleep series primarily come from brand messages and platform self‑statements, and could not be independently verified through public authoritative channels such as AVC or GfK; they should be treated as \"platform cases based on brand self‑statements\" rather than third‑party audited data.\n\n**Keywords**: #JDHomeAppliancesHomeFurnishings #LightningNewProduct #HCR #N400 #StockRenewal #QualityUpgrading #2025Retail893.1Billion #2026Forecast833.2Billion #AVC #KShapedDifferentiation #26‑35YearOldMales #87.5PercentPrimaryJD #78.3PercentQualityFirst #62PercentSmartDemand #EcommercePlatforms88.3Percent #OfflineExperience32.3Percent #PerformanceParameters84.0Percent #HealthEcoPremium #IPCollaborationLowestPremium #OmnichannelSeeding #OfflineExperienceStores #JDMALL #FullLifecycleOperations #SimulatedTrial #LaunchIgnition #SustainedSalesRefinement #JOMOOS8 #35DaysOver10Million #ChangdiWhaleQuasi #TCLT7MUltra #SkyworthWallpaperTV #LittleSwanXiaowumei #SmartHomeL1‑L5 #HomeIntelligentAgents #OnDeviceAI #WholeHomeIntelligence #AINativeAppliances #AgeFriendlyAppliances #PolicySubsidies #TradeIn #PremiumSmartSuiteOriented\n\n**Perspective**: This report is the most complete new‑product marketing methodology white paper from a \"platform perspective\" in the home appliance and home furnishing industry in 2026. Its core value lies not in platform‑highlighted figures such as \"87.5% primary JD\" that are easily over‑interpreted, but in systematically articulating the structural shift of the industry from incremental expansion to stock renewal and the matching \"full‑lifecycle new‑product operations\" methodology.\n\nFrom a conservative perspective, the report's judgment on the industry's macro‑level foundation is largely sound: AVC data shows the 2025 home appliance market (excluding 3C) at RMB 893.1 billion, down 4.3% year‑on‑year, and a 2026 forecast of RMB 833.2 billion, down another 6.7%, indicating the industry has entered a stock‑based phase in the RMB 800‑900 billion range, with premium, smart, and suite‑oriented products growing along the upward track of K‑shaped differentiation—this foundation is highly self‑consistent with the report's main narrative of \"stock renewal + quality upgrading.\"\n\nFrom a neutral perspective, the report's real incremental value lies in three boundary areas: First, although the user survey has a relatively small sample size of N=400 and is primarily online consumers, it provides the first detailed profile of \"online new‑product buyers\"—26‑35 year‑old males show the highest acceptance of new products, 78.3% rank quality first, 62% strongly demand intelligence, and acceptance of IP co‑branding premiums is lowest. This set of data structurally reveals the real constraints on \"new‑product premiums\": consumers are willing to pay for technological breakthroughs and experience upgrades, but refuse to pay for marketing gimmicks. Second, the quantitative breakdown of channel pathways—\"online information acquisition 85.3% + content seeding 58.3% → offline experience 32.3% → online conversion 88.3%\"—objectively reflects the integrated closed‑loop of \"online seeding + offline experience + online conversion\" for home appliance and home furnishing categories, offering practical reference for brand media budget allocation. Third, the \"Lightning New Product\" full‑lifecycle methodology (simulated trial → omnichannel seeding → launch ignition → sustained‑sales refinement) has been cross‑verified by independent reports in cases such as JOMOO S8 (over RMB 10 million in 35 days, JD Guangzhou store revenue per square metre exceeding RMB 150,000), indicating that this methodology does indeed offer reusable operational effectiveness in certain categories.\n\nFrom an aggressive perspective, as a white paper led and published by the JD platform, there are three usage boundaries that must be explicitly discounted in decision‑making: First, significant sample bias—the screening conditions of N=400, \"primarily online consumers, having purchased new products in the past year,\" mean that all percentage conclusions represent \"the profile of JD's online active home appliance and home furnishing new‑product buyers\" rather than the national home appliance consumer population. The figure \"87.5% primary JD\" is notably amplified by sample self‑selection bias and is often misinterpreted by media as \"the channel preference of national consumers.\" Second, most case data are brand self‑statements—key performance claims such as Changdi \"breaking the launch record for home stand mixers,\" TCL \"TV industry sales TOP 1,\" Skyworth wallpaper TV \"No.1 for 9 consecutive years,\" and Little Swan Xiaowumei \"cumulative sales exceeding 1 million units\" primarily come from brand messages and platform self‑statements and have not been independently verified through third‑party authoritative monitoring data such as AVC or GfK; it is more prudent to label them as [unverifiable] when citing. Third, the report is relatively aggressive in its forward‑looking judgments on \"AI‑native home appliances,\" \"home intelligent agents,\" and \"dual‑drive of on‑device AI + home large models.\" The white paper's portrayal of the deployment timeline for \"home intelligent agents with proactive sensing and scenario coordination\" is somewhat optimistic, and it does not fully discuss real‑world constraints such as cross‑brand protocol interoperability, on‑device computing costs, and user privacy concerns.\n\nFor home appliance brands, the decision implications are three‑tiered:\n\n**On the product side**, \"quality and durability + health and environmental friendliness\" are the real fulcrums for premium pricing; IP co‑branding can generate buzz but cannot serve as a profit pillar. AI functionality must be tied to specific pain points (e.g., JOMOO S8's pure oxygen deodorisation) rather than simply stacking wake‑word‑based interactions.\n\n**On the channel side**, media budgets should be allocated according to the tripartite structure of \"e‑commerce platforms (conversion) + content platforms (seeding) + offline experience stores (trust),\" and the role of offline stores is shifting from \"transaction venues\" to \"experience and trust venues.\"\n\n**On the marketing side**, the \"Lightning New Product\" methodology's full‑lifecycle cadence (simulated trial → seeding water‑storage → launch ignition → sustained‑sales refinement) can serve as a reference framework for new‑product launches, but brands need to establish independent third‑party performance attribution to avoid relying solely on platform self‑reported performance data.\n\nFor investors, the implication is that against the backdrop of overall industry pressure, structural opportunities are concentrated in four upward tracks—premiumisation, intelligence, suite‑oriented solutions, and age‑friendliness. However, caution is needed against hype around \"AI home appliances,\" with attention focused on leading enterprises that possess genuine technological moats and whole‑home connectivity capabilities.\n\n**Overall rating: ★★★☆☆ 75%** —the industry macro‑judgment is highly consistent with AVC authoritative data, the JOMOO S8 case has multiple‑source cross‑verification, and the Lightning New Product methodology offers practical reference value. However, the N=400 online sample bias means that channel preference conclusions cannot be extrapolated to the national population; most brand cases are self‑stated and unverifiable; and forward‑looking judgments such as AI‑native home appliances lean towards platform narrative. The report is insufficient as a sole decision‑making basis and should be cross‑validated with third‑party monitoring data from AVC, GfK, and brand financial reports.",
-        "links": [
-          "http://JD.com",
-          "http://JD.com",
-          "http://JD.com",
-          "http://JD.com"
-        ],
-        "translation_zh": "**《2026京东家电家居新品白皮书》深度解读**\n\n该报告由 JD.com 于 2026 年 5 月发布，并获得 HCR慧辰 的研究支持。报告基于 N=400 份定量问卷的核心样本，受访者为“过去一年内购买过家电或家居新品的消费者，且以线上消费者为主”，并辅以品牌信息以及京东“闪电新品”方法论案例汇编。报告的核心判断是，家电家居行业已从增量扩张转向存量更新与品质升级，智能化、健康化、绿色节能、场景化设计和适老化正在成为新品迭代的主导方向。行业的存量特征可与奥维云网（AVC）数据相互验证：2025 年，中国家电市场（不含 3C）零售额达到人民币 8931 亿元，同比下降 4.3%；AVC 预测 2026 年销售额为人民币 8332 亿元，同比进一步下降 6.7%。整个行业已进入人民币 8000–9000 亿元区间的存量竞争阶段，高端化、智能化和套系化产品继续沿着 K 型分化的上行轨道增长。不过，报告自身的 2022–2028 年家电市场规模和品类价格图表仅标注为“根据国家统计局、AVC 等公开资料整理”，其具体年度数据无法通过公开渠道独立复现；应将其视为报告内部估算。\n\n用户调研部分清晰刻画了“线上新品购买者”的画像：26–45 岁年龄段是核心消费群体，其中 26–35 岁男性对新品的接受度最高；93.5% 的受访者在过去一年内购买过家电或家居新品，87.5% 将 JD.com 作为主要购买渠道，78.3% 将产品质量列为首要关注点，70.5% 认为功能性是购买决策中的决定性因素，62% 对智能功能有强烈需求——质量和功能“远比价格和品牌更重要”。在渠道路径方面，电商平台推荐以 85.3% 位列信息来源第一，其次是内容平台种草，占 58.3%；在最终购买渠道上，电商平台占 88.3%，品牌线下门店占 32.3%；“产品性能参数（84.0%）、用户口碑（75.5%）和价格（67.3%）”是信息比较的三大核心维度。在支付意愿方面，消费者愿意为“品质与耐用性”以及“健康与环保”支付溢价，但对 IP 联名溢价的接受度最低。新品可接受溢价大多集中在 11%–50% 区间，预算集中在月收入的 30% 以内。需要明确的是，N=400 且以线上消费者为主的样本结构意味着，“87.5% 将 JD.com 作为主要渠道”等结论代表的是“JD.com 线上活跃家电家居新品购买者画像”，不能外推为全国家电消费者群体的偏好。\n\n报告第 3 章系统阐述了京东“闪电新品营销”方法论，覆盖从“上市筹备期的模拟试用 → 上市前全域种草 → 上市期线上引爆 + 线下体验 → 持续销售期精细化运营”的全生命周期，并由运营、域、营销和工具四大赋能模块支撑。在案例研究中，JOMOO S8 Pure智能马桶——“上市 35 天销售额突破人民币 1000 万元，产品均价超过人民币 4000 元，稳居高端智能马桶 TOP 1”——获得了京东家电家居商家学院、建材家居新闻网和物流产品网等独立报道的交叉验证；京东广州门店坪效超过人民币 15 万元等支撑数据也可验证。历史业绩数据，例如自 2025 年以来京东建材重点新品收入同比增长 200%，并孵化出超过 50 个千万元级新品，为“闪电新品”IP 的规模化运营能力提供了背景佐证。然而，Changdi Whale Quasi-quasi 厨师机“打破家用厨师机首发纪录”、TCL T7M Ultra“电视行业销量 TOP 1”、Skyworth 壁纸电视“连续 9 年销量排名第一”、Little Swan Xiaowumei“累计销量突破 100 万台”、Siemens Steaming Linglong 以及 Fuanna J.Dear 深睡系列等案例数据主要来自品牌信息和平台自述，无法通过 AVC 或 GfK 等公开权威渠道独立验证；应将其视为“基于品牌自述的平台案例”，而不是第三方审计数据。\n\n**关键词**：#JDHomeAppliancesHomeFurnishings #LightningNewProduct #HCR #N400 #StockRenewal #QualityUpgrading #2025Retail893.1Billion #2026Forecast833.2Billion #AVC #KShapedDifferentiation #26‑35YearOldMales #87.5PercentPrimaryJD #78.3PercentQualityFirst #62PercentSmartDemand #EcommercePlatforms88.3Percent #OfflineExperience32.3Percent #PerformanceParameters84.0Percent #HealthEcoPremium #IPCollaborationLowestPremium #OmnichannelSeeding #OfflineExperienceStores #JDMALL #FullLifecycleOperations #SimulatedTrial #LaunchIgnition #SustainedSalesRefinement #JOMOOS8 #35DaysOver10Million #ChangdiWhaleQuasi #TCLT7MUltra #SkyworthWallpaperTV #LittleSwanXiaowumei #SmartHomeL1‑L5 #HomeIntelligentAgents #OnDeviceAI #WholeHomeIntelligence #AINativeAppliances #AgeFriendlyAppliances #PolicySubsidies #TradeIn #PremiumSmartSuiteOriented\n\n**视角**：这份报告是 2026 年家电家居行业中最完整的一份从“平台视角”出发的新品营销方法论白皮书。它的核心价值并不在于“87.5% 首选京东”这类容易被过度解读的平台亮点数字，而在于系统阐明了行业从增量扩张转向存量更新的结构性变化，以及与之匹配的“全生命周期新品运营”方法论。\n\n从保守视角看，报告对行业宏观基础的判断总体稳健：AVC 数据显示，2025 年家电市场（不含 3C）规模为人民币 8931 亿元，同比下降 4.3%，并预测 2026 年为人民币 8332 亿元，再降 6.7%，表明行业已进入人民币 8000–9000 亿元区间的存量阶段，高端化、智能化和套系化产品沿着 K 型分化的上行轨道增长——这一基础与报告“存量更新 + 品质升级”的主叙事高度自洽。\n\n从中性视角看，报告真正的增量价值在三个边界领域：第一，尽管用户调研样本量 N=400 相对较小，且以线上消费者为主，但它提供了首个较为细致的“线上新品购买者”画像——26–35 岁男性对新品接受度最高，78.3% 将质量排在第一，62% 对智能化有强烈需求，对 IP 联名溢价的接受度最低。这组数据从结构上揭示了“新品溢价”的真实约束：消费者愿意为技术突破和体验升级买单，但拒绝为营销噱头付费。第二，渠道路径的量化拆解——“线上信息获取 85.3% + 内容种草 58.3% → 线下体验 32.3% → 线上转化 88.3%”——客观反映了家电家居品类“线上种草 + 线下体验 + 线上转化”的一体化闭环，为品牌媒介预算分配提供了实践参考。第三，“闪电新品”全生命周期方法论（模拟试用 → 全域种草 → 上市引爆 → 持销精细化）已在 JOMOO S8 等案例中获得独立报道交叉验证（35 天突破人民币 1000 万元，京东广州门店坪效超过人民币 15 万元），说明该方法论在部分品类中确实具备可复用的运营有效性。\n\n从激进视角看，作为由京东平台主导并发布的白皮书，在决策使用中必须明确打折处理三个边界：第一，样本偏差显著——N=400、“以线上消费者为主、过去一年购买过新品”的筛选条件，意味着所有百分比结论代表的是“京东线上活跃家电家居新品购买者画像”，而不是全国家电消费者群体。“87.5% 首选京东”这一数字明显受到样本自选择偏差放大，且常被媒体误读为“全国消费者的渠道偏好”。第二，多数案例数据属于品牌自述——长帝“打破家用厨师机首发纪录”、TCL“电视行业销量 TOP 1”、Skyworth 壁纸电视“连续 9 年第一”、Little Swan Xiaowumei“累计销量突破 100 万台”等关键业绩宣称，主要来自品牌信息和平台自述，并未通过 AVC 或 GfK 等第三方权威监测数据独立验证；引用时更审慎的做法是标注为[不可验证]。第三，报告对于“AI 原生家电”、“家庭智能体”和“端侧 AI + 家庭大模型双驱动”的前瞻判断相对激进。白皮书对“具备主动感知和场景协同能力的家庭智能体”落地时间表的描绘略显乐观，也未充分讨论跨品牌协议互通、端侧算力成本和用户隐私顾虑等现实约束。\n\n对于家电品牌而言，决策启示分为三层：\n\n**产品侧**，“品质与耐用性 + 健康与环保”才是溢价定价的真实支点；IP 联名可以制造声量，但不能作为利润支柱。AI 功能必须绑定具体痛点（例如 JOMOO S8 的纯氧除臭），而不是简单堆叠基于唤醒词的交互。\n\n**渠道侧**，媒介预算应按照“电商平台（转化）+ 内容平台（种草）+ 线下体验店（信任）”的三元结构分配，线下门店的角色正在从“交易场所”转向“体验与信任场所”。\n\n**营销侧**，“闪电新品”方法论的全生命周期节奏（模拟试用 → 种草蓄水 → 上市引爆 → 持销精细化）可作为新品上市的参考框架，但品牌需要建立独立的第三方效果归因，避免完全依赖平台自报业绩数据。\n\n对于投资者而言，启示是，在行业整体承压的背景下，结构性机会集中在四条上行赛道——高端化、智能化、套系化解决方案和适老化。但需要警惕“AI 家电”相关炒作，将注意力集中在真正具备技术护城河和全屋互联能力的龙头企业上。\n\n**总体评级：★★★☆☆ 75%**——行业宏观判断与 AVC 权威数据高度一致，JOMOO S8 案例有多源交叉验证，闪电新品方法论具有实践参考价值。但 N=400 的线上样本偏差意味着渠道偏好结论不能外推至全国人群；大多数品牌案例为自述且不可验证；AI 原生家电等前瞻判断更偏向平台叙事。该报告不足以作为唯一决策依据，应与 AVC、GfK 以及品牌财报等第三方监测数据进行交叉验证。",
-        "translation_status": "translated",
-        "summary_zh": "用户讨论价格、优惠或正向购物体验。",
-        "metrics": {
-          "likes": 0,
-          "reposts": 0,
-          "replies": 0,
-          "quotes": 0,
-          "bookmarks": 0,
-          "views": 58
-        },
-        "media": []
-      },
-      "topic": "price_opportunity",
-      "risk_types": [],
-      "opportunity_types": [
-        "positive_value",
-        "delivery_strength"
-      ],
-      "post_count": 1,
-      "first_seen_at": "2026-07-28T05:00:06Z",
-      "last_seen_at": "2026-07-28T05:00:06Z",
-      "metrics": {
-        "total_likes": 0,
-        "total_reposts": 0,
-        "total_replies": 0,
-        "total_quotes": 0,
-        "total_bookmarks": 0,
-        "total_views": 58,
-        "max_author_followers": 736,
-        "public_interactions": 0
-      },
-      "score": {
-        "ips": 51,
-        "level": "low",
-        "brand_relevance": 70,
-        "risk_or_opportunity_intensity": 58,
-        "current_impact": 25,
-        "future_potential": 40,
-        "credibility": 58,
-        "business_impact": 52,
-        "urgency": 45,
-        "sentiment": "positive",
-        "confidence": 0.81,
-        "recommended_action": "传播机会",
-        "risk_labels": [],
-        "opportunity_labels": [
-          "positive_value",
-          "delivery_strength"
-        ],
-        "special_flags": [],
-        "explanation": "该情报偏正向机会，体现价格、配送或促销优势，可用于观察传播借势。综合优先级 51。"
-      },
-      "evidence_counts": {
-        "origin": 1,
-        "stakeholders": 0,
-        "popular": 1,
-        "amplifiers": 0,
-        "latest": 1,
         "supporting_evidence": 0,
-        "contradicting_evidence": 1
+        "contradicting_evidence": 0
       }
     }
   ],
   "featured_items": [
     {
-      "id": "featured-primary-cluster-003",
+      "id": "featured-primary-cluster-002",
       "brand": "primary",
-      "cluster_id": "primary-signal-003",
+      "cluster_id": "primary-signal-002",
       "source_type": "公开舆情",
       "source_name": "主品牌 · @K_Securities",
       "author_name": "KSecurities",
@@ -609,12 +902,12 @@
       "conversation_id": "2081960339382604265",
       "created_at": "2026-07-28T04:30:00Z",
       "language": "th",
-      "title": "Refund and payment complaints around 主品牌",
-      "display_title": "多条帖子讨论 主品牌 退款进度、取消订单或支付挂起问题。",
+      "title": "Corporate, market and strategy discussion",
+      "display_title": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
       "original_text": "KS: 📊 เช็คผลงาน 10 หุ้นทศเทพจีน VS 7 หุ้นนางฟ้าสหรัฐฯ ครึ่งปีแรก 2026 🇨🇳🆚🇺🇸\nใครนำ ใครล้าหลัง เทียบกันชัดๆ ในช่วง 6 เดือนแรก\n\n📌 10 หุ้นทศเทพจีน — Total Return (1H26)\nภาพรวมส่วนใหญ่ติดลบ มีเพียง SMIC ที่โดดเด่น\n\nGeely -3.35%\nBYD -23.65%\nhttps://t.co/QfEhyoXfrs -7.95%\nAlibaba -34.39%\nXiaomi -44.94%\nTencent -27.41%\nBaidu -16.65%\nMeituan -33.69%\nNetease -4.19%\nSMIC +25.12% 🏆\n\n✅ 7 หุ้นนางฟ้าสหรัฐฯ — Total Return (1H26)\nครึ่งปีแรกยังผสม บางตัวกดดันจาก Valuation และ Macro\n\nNVIDIA +7.42%\nApple +6.64%\nAlphabet +14.32% 🏆\nhttps://t.co/YG8dAT0yOO +3.26%\nMeta Platforms -14.52%\nTesla -6.48%\nMicrosoft -22.53%\n\n⚠️ สรุปภาพรวม\nกลุ่มนางฟ้าสหรัฐฯ ทำผลงานได้ดีกว่าโดยรวม โดย Alphabet นำทั้ง 2 กลุ่ม ขณะที่ทศเทพจีนส่วนใหญ่ยังเผชิญแรงกดดันจากนโยบายและเศรษฐกิจในประเทศ มีเพียง SMIC ที่บวกได้จากกระแส AI Supercycle\n\n📌 Source: Bloomberg (As of 21/07/2026)\n\n📊 ลงทุนหุ้นนอกกับ KS ครอบคลุม 28 ประเทศ 39 ตลาดชั้นนำทั่วโลก 📲 เปิดพอร์ตลงทุน >> https://t.co/DUlPhbUZwq\n\n⛳Follow us :\n📲 LINE : https://t.co/G5HhGGUvjB\n📲 Facebook: https://t.co/SQhuKrVF0f\n📲 Instagram: https://t.co/OC3dPr7K48\n📲 Twitter: https://t.co/sB04PdToLH\n📲 YouTube: https://t.co/LEuNBbhCTl\n📲 Threads: https://t.co/oaLv6RCJ4U\n\n#KS #KSecurities #หลักทรัพย์กสิกรไทย #หุ้นจีน #หุ้นสหรัฐ #ทศเทพจีน #นางฟ้าสหรัฐ #NVIDIA #Tencent #Alibaba #GlobalInvesting\n\nคำเตือน : กรุณาทำความเข้าใจลักษณะสินค้า เงื่อนไขผลตอบแทน และความเสี่ยงก่อนตัดสินใจลงทุน",
       "translation_zh": "KS: 📊 查看 2026 上半年中国十大神股 VS 美国7只天使股的表现 🇨🇳🆚🇺🇸\n谁领先，谁落后，清晰对比前 6 个月\n\n📌 中国十大神股 — 总回报（1H26）\n整体大多为负，只有 SMIC 表现突出\n\nGeely -3.35%\nBYD -23.65%\nJD.com -7.95%\nAlibaba -34.39%\nXiaomi -44.94%\nTencent -27.41%\nBaidu -16.65%\nMeituan -33.69%\nNetease -4.19%\nSMIC +25.12% 🏆\n\n✅ 美国7只天使股 — 总回报（1H26）\n上半年表现仍然分化，部分股票受到估值和宏观因素压力\n\nNVIDIA +7.42%\nApple +6.64%\nAlphabet +14.32% 🏆\nAmazon.com +3.26%\nMeta Platforms -14.52%\nTesla -6.48%\nMicrosoft -22.53%\n\n⚠️ 总体总结\n美国天使股整体表现更好，其中 Alphabet 在两组中领先，而中国十大神股大多仍面临来自国内政策和经济的压力，只有 SMIC 因 AI Supercycle 热潮而实现上涨\n\n📌 Source: Bloomberg (As of 21/07/2026)\n\n📊 通过 KS 投资海外股票，覆盖全球 28 个国家、39 个领先市场 📲 开立投资账户 >> ksecurities.co/Open-Account_GlobalTrade\n\n⛳Follow us :\n📲 LINE : ksecurities.co/KS-LineOA\n📲 Facebook: ksecurities.co/KS-Facebook\n📲 Instagram: ksecurities.co/KS-Instagram\n📲 Twitter: ksecurities.co/KS-Twitter\n📲 YouTube: ksecurities.co/KS-Youtube\n📲 Threads: ksecurities.co/KS-Threads\n\n#KS #KSecurities #หลักทรัพย์กสิกรไทย #หุ้นจีน #หุ้นสหรัฐ #ทศเทพจีน #นางฟ้าสหรัฐ #NVIDIA #Tencent #Alibaba #GlobalInvesting\n\n警告：请在决定投资前了解产品特性、收益条件和风险",
       "translation_status": "translated",
-      "summary_zh": "多条帖子讨论 主品牌 退款进度、取消订单或支付挂起问题。",
+      "summary_zh": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
       "links": [
         "http://JD.com",
         "http://Amazon.com",
@@ -636,48 +929,45 @@
         }
       ],
       "score": {
-        "ips": 81,
-        "level": "high",
-        "brand_relevance": 90,
-        "risk_or_opportunity_intensity": 86,
-        "current_impact": 50,
-        "future_potential": 78,
-        "credibility": 94,
-        "business_impact": 86,
-        "urgency": 86,
-        "sentiment": "negative",
+        "ips": 74,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 56,
+        "current_impact": 67,
+        "future_potential": 86,
+        "credibility": 86,
+        "business_impact": 56,
+        "urgency": 49,
+        "sentiment": "neutral",
         "confidence": 0.81,
-        "recommended_action": "PR 准备回应",
-        "risk_labels": [
-          "refund",
-          "payment",
-          "customer_service"
+        "recommended_action": "背景观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "corporate_context"
         ],
-        "opportunity_labels": [],
         "special_flags": [
+          "potential_viral",
           "high_influence_account"
         ],
-        "explanation": "退款议题直接影响信任与支付体验，当前影响力 50，未来发酵潜力 78，可信度 94。"
+        "explanation": "公司、资本市场或战略背景信息对品牌心智有间接影响，当前综合优先级为 74。"
       },
-      "score_value": 81,
+      "score_value": 74,
       "score_label": "IPS",
       "tags": [
-        "refund",
-        "payment",
-        "customer_service",
+        "company_market",
+        "corporate_context",
         "高潜传播",
-        "高影响力账号",
-        "需处置"
+        "高影响力账号"
       ],
       "metrics": {
-        "total_likes": 16,
-        "total_reposts": 3,
-        "total_replies": 1,
-        "total_quotes": 0,
-        "total_bookmarks": 1,
-        "total_views": 1904,
+        "total_likes": 142,
+        "total_reposts": 12,
+        "total_replies": 32,
+        "total_quotes": 4,
+        "total_bookmarks": 20,
+        "total_views": 20273,
         "max_author_followers": 69083,
-        "public_interactions": 20
+        "public_interactions": 190
       },
       "post_metrics": {
         "likes": 15,
@@ -687,19 +977,213 @@
         "bookmarks": 1,
         "views": 1782
       },
-      "source_count": 2,
-      "related_sources": 1,
-      "selected_reason": "内容指向退款/售后体验：用户明确提到退款、退货或售后处理；作者具备较高影响力（69083 followers），当前 18 次赞评转引、1782 浏览，同日相似讨论 2 条；研判：主品牌的信任成本会被放大，需关注是否出现更多相似投诉。",
-      "recommended_action": "PR 准备回应",
+      "source_count": 11,
+      "related_sources": 10,
+      "selected_reason": "内容指向公司/资本市场信息：内容涉及公司战略、资本市场、行业报告或管理层动态；作者具备较高影响力（69083 followers），当前 18 次赞评转引、1782 浏览，同日相似讨论 11 条；研判：对品牌心智有间接影响，应与消费者体验类舆情分开阅读。",
+      "recommended_action": "背景观察",
       "href": "",
       "external_href": "https://x.com/K_Securities/status/2081960339382604265",
-      "sentiment": "negative",
-      "level": "high"
+      "sentiment": "neutral",
+      "level": "medium"
     },
     {
       "id": "featured-primary-cluster-001",
       "brand": "primary",
       "cluster_id": "primary-signal-001",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @Dauvers70",
+      "author_name": "Olivier Dauvers",
+      "author_handle": "Dauvers70",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1869020563961741312/Wuk_Hwgq_normal.jpg",
+      "author_followers": 50689,
+      "author_following": 310,
+      "author_bio": null,
+      "author_location": "Bastille",
+      "author_joined_at": "2010-09-01T08:49:10Z",
+      "author_verified": false,
+      "post_url": "https://x.com/Dauvers70/status/2082085123533455445",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2082085123533455445",
+      "created_at": "2026-07-28T12:45:51Z",
+      "language": "fr",
+      "title": "Channel, partner and campaign activity",
+      "display_title": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
+      "original_text": "E-commerce : Joybuy se lance dans l’abonnement (avec peu de chances de réussir en l’état)\n\nIci >> https://t.co/uO0vHIOg9F",
+      "translation_zh": "电子商务：Joybuy 推出订阅服务（以目前的状态来看，成功机会不大）\n\n这里 >> olivierdauvers.fr/2026",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
+      "links": [
+        "https://www.olivierdauvers.fr/2026/07/28/e-commerce-joybuy-se-lance-dans-labonnement-avec-peu-de-chances-de-reussir-en-letat/"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/card_img/2082084667767808000/fSrUwAzm?format=png&name=medium",
+          "type": "photo",
+          "expanded_url": "https://x.com/Dauvers70/status/2082085123533455445"
+        }
+      ],
+      "score": {
+        "ips": 74,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 62,
+        "current_impact": 62,
+        "future_potential": 78,
+        "credibility": 86,
+        "business_impact": 58,
+        "urgency": 52,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "渠道观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "channel_expansion"
+        ],
+        "special_flags": [
+          "high_influence_account"
+        ],
+        "explanation": "渠道、合作或活动信息体现市场扩展动向，建议作为背景信号观察。综合优先级 74。"
+      },
+      "score_value": 74,
+      "score_label": "IPS",
+      "tags": [
+        "channel_activity",
+        "channel_expansion",
+        "高潜传播",
+        "高影响力账号"
+      ],
+      "metrics": {
+        "total_likes": 169,
+        "total_reposts": 56,
+        "total_replies": 0,
+        "total_quotes": 2,
+        "total_bookmarks": 9,
+        "total_views": 7001,
+        "max_author_followers": 50689,
+        "public_interactions": 227
+      },
+      "post_metrics": {
+        "likes": 10,
+        "reposts": 1,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 3550
+      },
+      "source_count": 4,
+      "related_sources": 3,
+      "selected_reason": "内容指向渠道合作与活动：内容涉及渠道接入、商家合作、直播活动或站点更新；作者具备较高影响力（50689 followers），当前 11 次赞评转引、3550 浏览，同日相似讨论 4 条；研判：可作为市场扩展和货架露出的背景信号。",
+      "recommended_action": "渠道观察",
+      "href": "",
+      "external_href": "https://x.com/Dauvers70/status/2082085123533455445",
+      "sentiment": "neutral",
+      "level": "medium"
+    },
+    {
+      "id": "featured-primary-cluster-006",
+      "brand": "primary",
+      "cluster_id": "primary-signal-006",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @le_crocodeal",
+      "author_name": "Le CrocoDeal",
+      "author_handle": "le_crocodeal",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1197879690679246849/FLkW77UF_normal.jpg",
+      "author_followers": 27319,
+      "author_following": 158,
+      "author_bio": null,
+      "author_location": "Liens affiliés, publicité, ad",
+      "author_joined_at": "2019-11-15T11:04:26Z",
+      "author_verified": false,
+      "post_url": "https://x.com/le_crocodeal/status/2082115403291963472",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2082115403291963472",
+      "created_at": "2026-07-28T14:46:10Z",
+      "language": "fr",
+      "title": "Product, deal and availability discussion",
+      "display_title": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "original_text": "Prix élevé mais dispo rapide d'après le site : au besoin le climatiseur mobile TCL 12000 BTU passe à 445€ sur Joybuy (je crois qu'il faut passer par l'appli pour avoir ce prix) !\n\n❄️ Lien affilié : https://t.co/zHsD610Uiy https://t.co/zpSposPdVN",
+      "translation_zh": "价格偏高，但根据网站显示发货快：有需要的话，TCL 12000 BTU 移动空调在 Joybuy 价格降到 445€（我觉得需要通过应用下单才能有这个价格）！\n\n❄️ 联盟链接：tidd.ly/3RXhMrK",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "links": [
+        "https://tidd.ly/3RXhMrK"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HOUov_HWMAA0Lzp.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HOUov_HWMAA0Lzp.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HOUov_HWMAA0Lzp.jpg",
+          "expanded_url": "https://x.com/le_crocodeal/status/2082115403291963472/photo/1"
+        }
+      ],
+      "score": {
+        "ips": 70,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 60,
+        "current_impact": 49,
+        "future_potential": 76,
+        "credibility": 86,
+        "business_impact": 50,
+        "urgency": 49,
+        "sentiment": "positive",
+        "confidence": 0.81,
+        "recommended_action": "传播机会",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "product_interest",
+          "promotion"
+        ],
+        "special_flags": [
+          "high_influence_account"
+        ],
+        "explanation": "商品、优惠或库存信息可反映自然需求与转化入口，综合优先级 70。"
+      },
+      "score_value": 70,
+      "score_label": "IPS",
+      "tags": [
+        "product_deal",
+        "product_interest",
+        "promotion",
+        "高潜传播",
+        "高影响力账号"
+      ],
+      "metrics": {
+        "total_likes": 2,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 1,
+        "total_views": 8583,
+        "max_author_followers": 68303,
+        "public_interactions": 2
+      },
+      "post_metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 6852
+      },
+      "source_count": 4,
+      "related_sources": 3,
+      "selected_reason": "内容指向价格促销与导购：内容强调优惠、低价、券包或导购入口；作者具备较高影响力（27319 followers），当前 1 次赞评转引、6852 浏览，同日相似讨论 4 条；研判：可评估是否存在可借势传播的价格/活动卖点。",
+      "recommended_action": "传播机会",
+      "href": "",
+      "external_href": "https://x.com/le_crocodeal/status/2082115403291963472",
+      "sentiment": "positive",
+      "level": "medium"
+    },
+    {
+      "id": "featured-primary-cluster-005",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
       "source_type": "公开舆情",
       "source_name": "主品牌 · @Mirjam152",
       "author_name": "Mirjam152",
@@ -718,117 +1202,24 @@
       "conversation_id": "2082091704027398396",
       "created_at": "2026-07-28T17:36:06Z",
       "language": "nl",
-      "title": "General 主品牌 overseas shopping discussion",
-      "display_title": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "title": "Positive shopping experience around 主品牌",
+      "display_title": "相关讨论体现价格、配送或购物体验上的正向口碑。",
       "original_text": "@Vincentgdevlugt Iets anders: jij houdt van Aziatisch eten hè. Ik ook. Ken je Joybuy al? Zo nee, moet je eens op de site kijken: allerlei Aziatische producten vaak voor de helft van de prijs. En de levering is idioot snel, hooguit één dag.",
       "translation_zh": "@Vincentgdevlugt 说点别的：你喜欢亚洲美食，对吧。我也是。你知道 Joybuy 吗？如果不知道，应该去网站上看看：各种亚洲产品，价格通常只有一半。而且配送快得离谱，最多一天。",
       "translation_status": "translated",
-      "summary_zh": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "summary_zh": "相关讨论体现价格、配送或购物体验上的正向口碑。",
       "links": [],
       "media": [],
       "score": {
-        "ips": 76,
+        "ips": 66,
         "level": "medium",
-        "brand_relevance": 100,
-        "risk_or_opportunity_intensity": 53,
-        "current_impact": 83,
-        "future_potential": 88,
+        "brand_relevance": 90,
+        "risk_or_opportunity_intensity": 62,
+        "current_impact": 37,
+        "future_potential": 62,
         "credibility": 86,
-        "business_impact": 48,
-        "urgency": 50,
-        "sentiment": "mixed",
-        "confidence": 0.81,
-        "recommended_action": "观察",
-        "risk_labels": [
-          "brand_trust"
-        ],
-        "opportunity_labels": [],
-        "special_flags": [
-          "potential_viral",
-          "high_influence_account"
-        ],
-        "explanation": "该情报与 主品牌 海外购物相关，当前综合优先级为 76。"
-      },
-      "score_value": 76,
-      "score_label": "IPS",
-      "tags": [
-        "general",
-        "brand_trust",
-        "高潜传播",
-        "高影响力账号"
-      ],
-      "metrics": {
-        "total_likes": 299,
-        "total_reposts": 65,
-        "total_replies": 33,
-        "total_quotes": 6,
-        "total_bookmarks": 29,
-        "total_views": 34109,
-        "max_author_followers": 68303,
-        "public_interactions": 403
-      },
-      "post_metrics": {
-        "likes": 2,
-        "reposts": 0,
-        "replies": 1,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 45
-      },
-      "source_count": 22,
-      "related_sources": 21,
-      "selected_reason": "内容指向履约与物流心智：原帖围绕发货、仓库、配送或包裹进度展开；作者具备较高影响力（34171 followers），当前 3 次赞评转引、45 浏览，同日相似讨论 22 条；研判：需要判断这是正向履约口碑还是潜在配送投诉。",
-      "recommended_action": "观察",
-      "href": "",
-      "external_href": "https://x.com/Mirjam152/status/2082158169363476984",
-      "sentiment": "mixed",
-      "level": "medium"
-    },
-    {
-      "id": "featured-primary-cluster-002",
-      "brand": "primary",
-      "cluster_id": "primary-signal-002",
-      "source_type": "公开舆情",
-      "source_name": "主品牌 · @TAMPICTG87",
-      "author_name": "Tampic",
-      "author_handle": "TAMPICTG87",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/2066475216306327552/jLgnBccg_normal.jpg",
-      "author_followers": 736,
-      "author_following": 2306,
-      "author_bio": null,
-      "author_location": null,
-      "author_joined_at": "2026-02-17T16:10:44Z",
-      "author_verified": false,
-      "post_url": "https://x.com/TAMPICTG87/status/2081967914383720857",
-      "reply_to_post_id": null,
-      "reply_to_handle": null,
-      "quoted_post_id": null,
-      "conversation_id": "2081967914383720857",
-      "created_at": "2026-07-28T05:00:06Z",
-      "language": "en",
-      "title": "Positive price and delivery opportunity signals",
-      "display_title": "相关讨论体现价格、优惠或配送体验上的正向机会。",
-      "original_text": "**In-Depth Reading of the *2026 JD Home Appliances and Home Furnishings New Product White Paper***\n\nReleased by https://t.co/NR3Ez6cgIa in May 2026, with research support from HCR慧辰, the report is based on a core sample of N=400 quantitative questionnaires completed by \"consumers who had purchased new home appliance or home furnishing products within the past year, primarily online consumers,\" supplemented by brand messages and a compilation of JD's \"Lightning New Product\" methodology case studies. The report's core judgment is that the home appliance and home furnishing industry has shifted from incremental expansion to stock renewal and quality upgrading, with intelligence, health, green energy efficiency, scenario‑based design, and age‑friendliness becoming the dominant directions for new product iteration. The industry's stock characteristics can be cross‑verified with All View Cloud (AVC) data: in 2025, China's home appliance market (excluding 3C) reached RMB 893.1 billion in retail sales, down 4.3% year‑on‑year; AVC forecasts 2026 sales of RMB 833.2 billion, a further decline of 6.7% year‑on‑year. The industry as a whole has entered a stock‑based competition phase in the RMB 800‑900 billion range, with premium, smart, and suite‑oriented products continuing to grow along the upward track of K‑shaped differentiation. However, the report's own 2022‑2028 home appliance market size and category price charts are labelled only as \"compiled from public sources including the National Bureau of Statistics and AVC,\" and the specific annual figures could not be independently reproduced through public channels; they should be treated as the report's internal estimates.\n\nThe user survey section provides a clear profile of \"online new‑product buyers\": the 26‑45 age group is the core consumer segment, with 26‑35 year‑old males showing the highest acceptance of new products; 93.5% of respondents had purchased a new home appliance or home furnishing product in the past year, 87.5% chose https://t.co/NR3Ez6cgIa as their primary purchase channel, 78.3% ranked product quality as their top concern, 70.5% considered functionality a decisive factor in purchase decisions, and 62% strongly demanded intelligent features—quality and functionality were \"far more important than price and brand.\" In terms of channel pathways, e‑commerce platform recommendations ranked first as an information source at 85.3%, followed by content platform seeding at 58.3%; for final purchases, e‑commerce platforms accounted for 88.3%, while brand offline stores accounted for 32.3%; \"product performance parameters (84.0%), user口碑 (75.5%), and price (67.3%)\" were the three core dimensions of information comparison. Regarding willingness to pay, consumers were willing to pay a premium for \"quality and durability\" and \"health and environmental friendliness,\" but had the lowest acceptance of IP co‑branding premiums. The acceptable premium for new products was mostly in the 11%‑50% range, with budgets concentrated within 30% of monthly income. It should be made clear that the sample structure of N=400, primarily online consumers, means that conclusions such as \"87.5% chose https://t.co/NR3Ez6cgIa as their primary channel\" represent \"the profile of https://t.co/NR3Ez6cgIa's online active home appliance and home furnishing new‑product buyers\" and cannot be extrapolated to the preferences of the national home appliance consumer population.\n\nChapter 3 of the report systematically elaborates JD's \"Lightning New Product Marketing\" methodology, covering the full lifecycle from \"simulated trial during the pre‑launch preparation phase → pre‑launch omnichannel seeding → online ignition + offline experience during the launch phase → refined operation during the sustained‑sales phase,\" supported by four empowerment modules: operations, domain, marketing, and tools. In the case studies, JOMOO S8 Pure智能 toilet—which \"achieved over RMB 10 million in sales within 35 days of launch, with an average product price exceeding RMB 4,000, ranking firmly as the TOP 1 premium smart toilet\"—received cross‑verification from independent reports in JD Home Appliance & Home Furnishings Merchant Academy, Building Materials and Home Furnishings News Network, and Logistics Product Network; supporting data such as JD Guangzhou store's revenue per square metre exceeding RMB 150,000 were also verifiable. Historical performance data, such as JD Building Materials' revenue from major new products growing 200% year‑on‑year since 2025 and incubating over 50 million‑RMB‑class new products, provide background corroboration for the \"Lightning New Product\" IP's scaled operational capability. However, case data for Changdi Whale Quasi‑quasi stand mixer \"breaking the launch record for home stand mixers,\" TCL T7M Ultra \"TV industry sales TOP 1,\" Skyworth wallpaper TV \"sales ranking No.1 for 9 consecutive years,\" Little Swan Xiaowumei \"cumulative sales exceeding 1 million units,\" Siemens Steaming Linglong, and Fuanna J.Dear Deep Sleep series primarily come from brand messages and platform self‑statements, and could not be independently verified through public authoritative channels such as AVC or GfK; they should be treated as \"platform cases based on brand self‑statements\" rather than third‑party audited data.\n\n**Keywords**: #JDHomeAppliancesHomeFurnishings #LightningNewProduct #HCR #N400 #StockRenewal #QualityUpgrading #2025Retail893.1Billion #2026Forecast833.2Billion #AVC #KShapedDifferentiation #26‑35YearOldMales #87.5PercentPrimaryJD #78.3PercentQualityFirst #62PercentSmartDemand #EcommercePlatforms88.3Percent #OfflineExperience32.3Percent #PerformanceParameters84.0Percent #HealthEcoPremium #IPCollaborationLowestPremium #OmnichannelSeeding #OfflineExperienceStores #JDMALL #FullLifecycleOperations #SimulatedTrial #LaunchIgnition #SustainedSalesRefinement #JOMOOS8 #35DaysOver10Million #ChangdiWhaleQuasi #TCLT7MUltra #SkyworthWallpaperTV #LittleSwanXiaowumei #SmartHomeL1‑L5 #HomeIntelligentAgents #OnDeviceAI #WholeHomeIntelligence #AINativeAppliances #AgeFriendlyAppliances #PolicySubsidies #TradeIn #PremiumSmartSuiteOriented\n\n**Perspective**: This report is the most complete new‑product marketing methodology white paper from a \"platform perspective\" in the home appliance and home furnishing industry in 2026. Its core value lies not in platform‑highlighted figures such as \"87.5% primary JD\" that are easily over‑interpreted, but in systematically articulating the structural shift of the industry from incremental expansion to stock renewal and the matching \"full‑lifecycle new‑product operations\" methodology.\n\nFrom a conservative perspective, the report's judgment on the industry's macro‑level foundation is largely sound: AVC data shows the 2025 home appliance market (excluding 3C) at RMB 893.1 billion, down 4.3% year‑on‑year, and a 2026 forecast of RMB 833.2 billion, down another 6.7%, indicating the industry has entered a stock‑based phase in the RMB 800‑900 billion range, with premium, smart, and suite‑oriented products growing along the upward track of K‑shaped differentiation—this foundation is highly self‑consistent with the report's main narrative of \"stock renewal + quality upgrading.\"\n\nFrom a neutral perspective, the report's real incremental value lies in three boundary areas: First, although the user survey has a relatively small sample size of N=400 and is primarily online consumers, it provides the first detailed profile of \"online new‑product buyers\"—26‑35 year‑old males show the highest acceptance of new products, 78.3% rank quality first, 62% strongly demand intelligence, and acceptance of IP co‑branding premiums is lowest. This set of data structurally reveals the real constraints on \"new‑product premiums\": consumers are willing to pay for technological breakthroughs and experience upgrades, but refuse to pay for marketing gimmicks. Second, the quantitative breakdown of channel pathways—\"online information acquisition 85.3% + content seeding 58.3% → offline experience 32.3% → online conversion 88.3%\"—objectively reflects the integrated closed‑loop of \"online seeding + offline experience + online conversion\" for home appliance and home furnishing categories, offering practical reference for brand media budget allocation. Third, the \"Lightning New Product\" full‑lifecycle methodology (simulated trial → omnichannel seeding → launch ignition → sustained‑sales refinement) has been cross‑verified by independent reports in cases such as JOMOO S8 (over RMB 10 million in 35 days, JD Guangzhou store revenue per square metre exceeding RMB 150,000), indicating that this methodology does indeed offer reusable operational effectiveness in certain categories.\n\nFrom an aggressive perspective, as a white paper led and published by the JD platform, there are three usage boundaries that must be explicitly discounted in decision‑making: First, significant sample bias—the screening conditions of N=400, \"primarily online consumers, having purchased new products in the past year,\" mean that all percentage conclusions represent \"the profile of JD's online active home appliance and home furnishing new‑product buyers\" rather than the national home appliance consumer population. The figure \"87.5% primary JD\" is notably amplified by sample self‑selection bias and is often misinterpreted by media as \"the channel preference of national consumers.\" Second, most case data are brand self‑statements—key performance claims such as Changdi \"breaking the launch record for home stand mixers,\" TCL \"TV industry sales TOP 1,\" Skyworth wallpaper TV \"No.1 for 9 consecutive years,\" and Little Swan Xiaowumei \"cumulative sales exceeding 1 million units\" primarily come from brand messages and platform self‑statements and have not been independently verified through third‑party authoritative monitoring data such as AVC or GfK; it is more prudent to label them as [unverifiable] when citing. Third, the report is relatively aggressive in its forward‑looking judgments on \"AI‑native home appliances,\" \"home intelligent agents,\" and \"dual‑drive of on‑device AI + home large models.\" The white paper's portrayal of the deployment timeline for \"home intelligent agents with proactive sensing and scenario coordination\" is somewhat optimistic, and it does not fully discuss real‑world constraints such as cross‑brand protocol interoperability, on‑device computing costs, and user privacy concerns.\n\nFor home appliance brands, the decision implications are three‑tiered:\n\n**On the product side**, \"quality and durability + health and environmental friendliness\" are the real fulcrums for premium pricing; IP co‑branding can generate buzz but cannot serve as a profit pillar. AI functionality must be tied to specific pain points (e.g., JOMOO S8's pure oxygen deodorisation) rather than simply stacking wake‑word‑based interactions.\n\n**On the channel side**, media budgets should be allocated according to the tripartite structure of \"e‑commerce platforms (conversion) + content platforms (seeding) + offline experience stores (trust),\" and the role of offline stores is shifting from \"transaction venues\" to \"experience and trust venues.\"\n\n**On the marketing side**, the \"Lightning New Product\" methodology's full‑lifecycle cadence (simulated trial → seeding water‑storage → launch ignition → sustained‑sales refinement) can serve as a reference framework for new‑product launches, but brands need to establish independent third‑party performance attribution to avoid relying solely on platform self‑reported performance data.\n\nFor investors, the implication is that against the backdrop of overall industry pressure, structural opportunities are concentrated in four upward tracks—premiumisation, intelligence, suite‑oriented solutions, and age‑friendliness. However, caution is needed against hype around \"AI home appliances,\" with attention focused on leading enterprises that possess genuine technological moats and whole‑home connectivity capabilities.\n\n**Overall rating: ★★★☆☆ 75%** —the industry macro‑judgment is highly consistent with AVC authoritative data, the JOMOO S8 case has multiple‑source cross‑verification, and the Lightning New Product methodology offers practical reference value. However, the N=400 online sample bias means that channel preference conclusions cannot be extrapolated to the national population; most brand cases are self‑stated and unverifiable; and forward‑looking judgments such as AI‑native home appliances lean towards platform narrative. The report is insufficient as a sole decision‑making basis and should be cross‑validated with third‑party monitoring data from AVC, GfK, and brand financial reports.",
-      "translation_zh": "**《2026京东家电家居新品白皮书》深度解读**\n\n该报告由 JD.com 于 2026 年 5 月发布，并获得 HCR慧辰 的研究支持。报告基于 N=400 份定量问卷的核心样本，受访者为“过去一年内购买过家电或家居新品的消费者，且以线上消费者为主”，并辅以品牌信息以及京东“闪电新品”方法论案例汇编。报告的核心判断是，家电家居行业已从增量扩张转向存量更新与品质升级，智能化、健康化、绿色节能、场景化设计和适老化正在成为新品迭代的主导方向。行业的存量特征可与奥维云网（AVC）数据相互验证：2025 年，中国家电市场（不含 3C）零售额达到人民币 8931 亿元，同比下降 4.3%；AVC 预测 2026 年销售额为人民币 8332 亿元，同比进一步下降 6.7%。整个行业已进入人民币 8000–9000 亿元区间的存量竞争阶段，高端化、智能化和套系化产品继续沿着 K 型分化的上行轨道增长。不过，报告自身的 2022–2028 年家电市场规模和品类价格图表仅标注为“根据国家统计局、AVC 等公开资料整理”，其具体年度数据无法通过公开渠道独立复现；应将其视为报告内部估算。\n\n用户调研部分清晰刻画了“线上新品购买者”的画像：26–45 岁年龄段是核心消费群体，其中 26–35 岁男性对新品的接受度最高；93.5% 的受访者在过去一年内购买过家电或家居新品，87.5% 将 JD.com 作为主要购买渠道，78.3% 将产品质量列为首要关注点，70.5% 认为功能性是购买决策中的决定性因素，62% 对智能功能有强烈需求——质量和功能“远比价格和品牌更重要”。在渠道路径方面，电商平台推荐以 85.3% 位列信息来源第一，其次是内容平台种草，占 58.3%；在最终购买渠道上，电商平台占 88.3%，品牌线下门店占 32.3%；“产品性能参数（84.0%）、用户口碑（75.5%）和价格（67.3%）”是信息比较的三大核心维度。在支付意愿方面，消费者愿意为“品质与耐用性”以及“健康与环保”支付溢价，但对 IP 联名溢价的接受度最低。新品可接受溢价大多集中在 11%–50% 区间，预算集中在月收入的 30% 以内。需要明确的是，N=400 且以线上消费者为主的样本结构意味着，“87.5% 将 JD.com 作为主要渠道”等结论代表的是“JD.com 线上活跃家电家居新品购买者画像”，不能外推为全国家电消费者群体的偏好。\n\n报告第 3 章系统阐述了京东“闪电新品营销”方法论，覆盖从“上市筹备期的模拟试用 → 上市前全域种草 → 上市期线上引爆 + 线下体验 → 持续销售期精细化运营”的全生命周期，并由运营、域、营销和工具四大赋能模块支撑。在案例研究中，JOMOO S8 Pure智能马桶——“上市 35 天销售额突破人民币 1000 万元，产品均价超过人民币 4000 元，稳居高端智能马桶 TOP 1”——获得了京东家电家居商家学院、建材家居新闻网和物流产品网等独立报道的交叉验证；京东广州门店坪效超过人民币 15 万元等支撑数据也可验证。历史业绩数据，例如自 2025 年以来京东建材重点新品收入同比增长 200%，并孵化出超过 50 个千万元级新品，为“闪电新品”IP 的规模化运营能力提供了背景佐证。然而，Changdi Whale Quasi-quasi 厨师机“打破家用厨师机首发纪录”、TCL T7M Ultra“电视行业销量 TOP 1”、Skyworth 壁纸电视“连续 9 年销量排名第一”、Little Swan Xiaowumei“累计销量突破 100 万台”、Siemens Steaming Linglong 以及 Fuanna J.Dear 深睡系列等案例数据主要来自品牌信息和平台自述，无法通过 AVC 或 GfK 等公开权威渠道独立验证；应将其视为“基于品牌自述的平台案例”，而不是第三方审计数据。\n\n**关键词**：#JDHomeAppliancesHomeFurnishings #LightningNewProduct #HCR #N400 #StockRenewal #QualityUpgrading #2025Retail893.1Billion #2026Forecast833.2Billion #AVC #KShapedDifferentiation #26‑35YearOldMales #87.5PercentPrimaryJD #78.3PercentQualityFirst #62PercentSmartDemand #EcommercePlatforms88.3Percent #OfflineExperience32.3Percent #PerformanceParameters84.0Percent #HealthEcoPremium #IPCollaborationLowestPremium #OmnichannelSeeding #OfflineExperienceStores #JDMALL #FullLifecycleOperations #SimulatedTrial #LaunchIgnition #SustainedSalesRefinement #JOMOOS8 #35DaysOver10Million #ChangdiWhaleQuasi #TCLT7MUltra #SkyworthWallpaperTV #LittleSwanXiaowumei #SmartHomeL1‑L5 #HomeIntelligentAgents #OnDeviceAI #WholeHomeIntelligence #AINativeAppliances #AgeFriendlyAppliances #PolicySubsidies #TradeIn #PremiumSmartSuiteOriented\n\n**视角**：这份报告是 2026 年家电家居行业中最完整的一份从“平台视角”出发的新品营销方法论白皮书。它的核心价值并不在于“87.5% 首选京东”这类容易被过度解读的平台亮点数字，而在于系统阐明了行业从增量扩张转向存量更新的结构性变化，以及与之匹配的“全生命周期新品运营”方法论。\n\n从保守视角看，报告对行业宏观基础的判断总体稳健：AVC 数据显示，2025 年家电市场（不含 3C）规模为人民币 8931 亿元，同比下降 4.3%，并预测 2026 年为人民币 8332 亿元，再降 6.7%，表明行业已进入人民币 8000–9000 亿元区间的存量阶段，高端化、智能化和套系化产品沿着 K 型分化的上行轨道增长——这一基础与报告“存量更新 + 品质升级”的主叙事高度自洽。\n\n从中性视角看，报告真正的增量价值在三个边界领域：第一，尽管用户调研样本量 N=400 相对较小，且以线上消费者为主，但它提供了首个较为细致的“线上新品购买者”画像——26–35 岁男性对新品接受度最高，78.3% 将质量排在第一，62% 对智能化有强烈需求，对 IP 联名溢价的接受度最低。这组数据从结构上揭示了“新品溢价”的真实约束：消费者愿意为技术突破和体验升级买单，但拒绝为营销噱头付费。第二，渠道路径的量化拆解——“线上信息获取 85.3% + 内容种草 58.3% → 线下体验 32.3% → 线上转化 88.3%”——客观反映了家电家居品类“线上种草 + 线下体验 + 线上转化”的一体化闭环，为品牌媒介预算分配提供了实践参考。第三，“闪电新品”全生命周期方法论（模拟试用 → 全域种草 → 上市引爆 → 持销精细化）已在 JOMOO S8 等案例中获得独立报道交叉验证（35 天突破人民币 1000 万元，京东广州门店坪效超过人民币 15 万元），说明该方法论在部分品类中确实具备可复用的运营有效性。\n\n从激进视角看，作为由京东平台主导并发布的白皮书，在决策使用中必须明确打折处理三个边界：第一，样本偏差显著——N=400、“以线上消费者为主、过去一年购买过新品”的筛选条件，意味着所有百分比结论代表的是“京东线上活跃家电家居新品购买者画像”，而不是全国家电消费者群体。“87.5% 首选京东”这一数字明显受到样本自选择偏差放大，且常被媒体误读为“全国消费者的渠道偏好”。第二，多数案例数据属于品牌自述——长帝“打破家用厨师机首发纪录”、TCL“电视行业销量 TOP 1”、Skyworth 壁纸电视“连续 9 年第一”、Little Swan Xiaowumei“累计销量突破 100 万台”等关键业绩宣称，主要来自品牌信息和平台自述，并未通过 AVC 或 GfK 等第三方权威监测数据独立验证；引用时更审慎的做法是标注为[不可验证]。第三，报告对于“AI 原生家电”、“家庭智能体”和“端侧 AI + 家庭大模型双驱动”的前瞻判断相对激进。白皮书对“具备主动感知和场景协同能力的家庭智能体”落地时间表的描绘略显乐观，也未充分讨论跨品牌协议互通、端侧算力成本和用户隐私顾虑等现实约束。\n\n对于家电品牌而言，决策启示分为三层：\n\n**产品侧**，“品质与耐用性 + 健康与环保”才是溢价定价的真实支点；IP 联名可以制造声量，但不能作为利润支柱。AI 功能必须绑定具体痛点（例如 JOMOO S8 的纯氧除臭），而不是简单堆叠基于唤醒词的交互。\n\n**渠道侧**，媒介预算应按照“电商平台（转化）+ 内容平台（种草）+ 线下体验店（信任）”的三元结构分配，线下门店的角色正在从“交易场所”转向“体验与信任场所”。\n\n**营销侧**，“闪电新品”方法论的全生命周期节奏（模拟试用 → 种草蓄水 → 上市引爆 → 持销精细化）可作为新品上市的参考框架，但品牌需要建立独立的第三方效果归因，避免完全依赖平台自报业绩数据。\n\n对于投资者而言，启示是，在行业整体承压的背景下，结构性机会集中在四条上行赛道——高端化、智能化、套系化解决方案和适老化。但需要警惕“AI 家电”相关炒作，将注意力集中在真正具备技术护城河和全屋互联能力的龙头企业上。\n\n**总体评级：★★★☆☆ 75%**——行业宏观判断与 AVC 权威数据高度一致，JOMOO S8 案例有多源交叉验证，闪电新品方法论具有实践参考价值。但 N=400 的线上样本偏差意味着渠道偏好结论不能外推至全国人群；大多数品牌案例为自述且不可验证；AI 原生家电等前瞻判断更偏向平台叙事。该报告不足以作为唯一决策依据，应与 AVC、GfK 以及品牌财报等第三方监测数据进行交叉验证。",
-      "translation_status": "translated",
-      "summary_zh": "相关讨论体现价格、优惠或配送体验上的正向机会。",
-      "links": [
-        "http://JD.com",
-        "http://JD.com",
-        "http://JD.com",
-        "http://JD.com"
-      ],
-      "media": [],
-      "score": {
-        "ips": 51,
-        "level": "low",
-        "brand_relevance": 70,
-        "risk_or_opportunity_intensity": 58,
-        "current_impact": 25,
-        "future_potential": 40,
-        "credibility": 58,
-        "business_impact": 52,
-        "urgency": 45,
+        "business_impact": 60,
+        "urgency": 53,
         "sentiment": "positive",
         "confidence": 0.81,
         "recommended_action": "传播机会",
@@ -838,14 +1229,101 @@
           "delivery_strength"
         ],
         "special_flags": [],
-        "explanation": "该情报偏正向机会，体现价格、配送或促销优势，可用于观察传播借势。综合优先级 51。"
+        "explanation": "该情报偏正向机会，体现价格、配送或促销优势，可用于观察传播借势。综合优先级 66。"
       },
-      "score_value": 51,
+      "score_value": 66,
       "score_label": "IPS",
       "tags": [
-        "price_opportunity",
+        "positive_experience",
         "positive_value",
-        "delivery_strength"
+        "delivery_strength",
+        "高影响力账号"
+      ],
+      "metrics": {
+        "total_likes": 2,
+        "total_reposts": 0,
+        "total_replies": 1,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 93,
+        "max_author_followers": 34171,
+        "public_interactions": 3
+      },
+      "post_metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 45
+      },
+      "source_count": 2,
+      "related_sources": 1,
+      "selected_reason": "内容指向正向购物体验：用户主动提到价格、配送或购物体验上的正向感受；作者具备较高影响力（34171 followers），当前 3 次赞评转引、45 浏览，同日相似讨论 2 条；研判：可作为主品牌海外口碑和履约卖点的证据样本。",
+      "recommended_action": "传播机会",
+      "href": "",
+      "external_href": "https://x.com/Mirjam152/status/2082158169363476984",
+      "sentiment": "positive",
+      "level": "medium"
+    },
+    {
+      "id": "featured-primary-cluster-003",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @yatofix",
+      "author_name": "Yatofix.com",
+      "author_handle": "yatofix",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2077073269723648000/u3BHdO66_normal.png",
+      "author_followers": 16,
+      "author_following": 68,
+      "author_bio": null,
+      "author_location": "France",
+      "author_joined_at": "2025-04-21T17:07:27Z",
+      "author_verified": false,
+      "post_url": "https://x.com/yatofix/status/2082223764213805415",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2082223764213805415",
+      "created_at": "2026-07-28T21:56:45Z",
+      "language": "fr",
+      "title": "Competitor comparison and substitution signals",
+      "display_title": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "original_text": "Update sur le site https://t.co/MV0OVEJOd5 nous avons ajouter un nouveau marchand dans nos comparatifs : https://t.co/c5D4NEyQ7t\n\nCette marketplace est en train de tout casser avec des prix agressifs et des délais de livraison pouvant aller au jour même ou le lendemain !\n\nNous remercions Joybuy de nous faire confiance et d'être partenaire de Yatofix.",
+      "translation_zh": "yatofix.com 网站更新：我们在对比中新增了一家商家：joybuy.fr\n\n这个 marketplace 正在凭借激进的价格和最快可当天或次日送达的配送时效大杀四方！\n\n我们感谢 Joybuy 对我们的信任，并成为 Yatofix 的合作伙伴。",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "links": [
+        "https://yatofix.com/",
+        "https://www.joybuy.fr/"
+      ],
+      "media": [],
+      "score": {
+        "ips": 61,
+        "level": "medium",
+        "brand_relevance": 90,
+        "risk_or_opportunity_intensity": 60,
+        "current_impact": 25,
+        "future_potential": 49,
+        "credibility": 76,
+        "business_impact": 64,
+        "urgency": 53,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "竞品对照观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "competitive_position"
+        ],
+        "special_flags": [],
+        "explanation": "用户将主品牌与其他平台对照，适合观察价格、配送或品类竞争位置。综合优先级 61。"
+      },
+      "score_value": 61,
+      "score_label": "IPS",
+      "tags": [
+        "competitor_comparison",
+        "competitive_position"
       ],
       "metrics": {
         "total_likes": 0,
@@ -853,8 +1331,8 @@
         "total_replies": 0,
         "total_quotes": 0,
         "total_bookmarks": 0,
-        "total_views": 58,
-        "max_author_followers": 736,
+        "total_views": 27,
+        "max_author_followers": 25,
         "public_interactions": 0
       },
       "post_metrics": {
@@ -863,16 +1341,16 @@
         "replies": 0,
         "quotes": 0,
         "bookmarks": 0,
-        "views": 58
+        "views": 4
       },
-      "source_count": 1,
-      "related_sources": 0,
-      "selected_reason": "内容指向履约与物流心智：原帖围绕发货、仓库、配送或包裹进度展开；当前传播仍弱，58 浏览且暂无赞评转引；研判：需要判断这是正向履约口碑还是潜在配送投诉。",
-      "recommended_action": "传播机会",
+      "source_count": 2,
+      "related_sources": 1,
+      "selected_reason": "内容指向竞品对照与替代选择：用户把主品牌与其他平台进行价格、配送或品类对比；当前传播仍弱，4 浏览且暂无赞评转引，同日相似讨论 2 条；研判：适合观察主品牌在海外用户购物选择中的竞争位置。",
+      "recommended_action": "竞品对照观察",
       "href": "",
-      "external_href": "https://x.com/TAMPICTG87/status/2081967914383720857",
-      "sentiment": "positive",
-      "level": "low"
+      "external_href": "https://x.com/yatofix/status/2082223764213805415",
+      "sentiment": "neutral",
+      "level": "medium"
     },
     {
       "id": "featured-competitor-2082174807227899968",
@@ -1012,53 +1490,53 @@
   "hot_topics": [
     {
       "rank": 1,
-      "title": "多条帖子讨论 主品牌 退款进度、取消订单或支付挂起问题。",
-      "cluster_id": "primary-signal-003",
-      "score_value": 81,
-      "level": "high",
-      "source_count": 2,
-      "count_label": "2 条同日相似讨论",
-      "reason": "内容指向退款/售后体验：用户明确提到退款、退货或售后处理；作者具备较高影响力（69083 followers），当前 18 次赞评转引、1782 浏览，同日相似讨论 2 条；研判：主品牌的信任成本会被放大，需关注是否出现更多相似投诉。"
+      "title": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "cluster_id": "primary-signal-002",
+      "score_value": 74,
+      "level": "medium",
+      "source_count": 11,
+      "count_label": "11 条同日相似讨论",
+      "reason": "内容指向公司/资本市场信息：内容涉及公司战略、资本市场、行业报告或管理层动态；作者具备较高影响力（69083 followers），当前 18 次赞评转引、1782 浏览，同日相似讨论 11 条；研判：对品牌心智有间接影响，应与消费者体验类舆情分开阅读。"
     },
     {
       "rank": 2,
-      "title": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "title": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
       "cluster_id": "primary-signal-001",
-      "score_value": 76,
+      "score_value": 74,
       "level": "medium",
-      "source_count": 22,
-      "count_label": "22 条同日相似讨论",
-      "reason": "内容指向履约与物流心智：原帖围绕发货、仓库、配送或包裹进度展开；作者具备较高影响力（34171 followers），当前 3 次赞评转引、45 浏览，同日相似讨论 22 条；研判：需要判断这是正向履约口碑还是潜在配送投诉。"
+      "source_count": 4,
+      "count_label": "4 条同日相似讨论",
+      "reason": "内容指向渠道合作与活动：内容涉及渠道接入、商家合作、直播活动或站点更新；作者具备较高影响力（50689 followers），当前 11 次赞评转引、3550 浏览，同日相似讨论 4 条；研判：可作为市场扩展和货架露出的背景信号。"
     },
     {
       "rank": 3,
-      "title": "相关讨论体现价格、优惠或配送体验上的正向机会。",
-      "cluster_id": "primary-signal-002",
-      "score_value": 51,
-      "level": "low",
-      "source_count": 1,
-      "count_label": "公开舆情",
-      "reason": "内容指向履约与物流心智：原帖围绕发货、仓库、配送或包裹进度展开；当前传播仍弱，58 浏览且暂无赞评转引；研判：需要判断这是正向履约口碑还是潜在配送投诉。"
+      "title": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "cluster_id": "primary-signal-006",
+      "score_value": 70,
+      "level": "medium",
+      "source_count": 4,
+      "count_label": "4 条同日相似讨论",
+      "reason": "内容指向价格促销与导购：内容强调优惠、低价、券包或导购入口；作者具备较高影响力（27319 followers），当前 1 次赞评转引、6852 浏览，同日相似讨论 4 条；研判：可评估是否存在可借势传播的价格/活动卖点。"
     },
     {
       "rank": 4,
-      "title": "样例竞品退款/售后体验出现传播信号",
-      "cluster_id": "",
-      "score_value": 56,
+      "title": "相关讨论体现价格、配送或购物体验上的正向口碑。",
+      "cluster_id": "primary-signal-005",
+      "score_value": 66,
       "level": "medium",
-      "source_count": 1,
-      "count_label": "竞品异常",
-      "reason": "内容指向退款/售后体验：用户明确提到退款、退货或售后处理；评论参与高于普通样本，当前 11 次赞评转引、361 浏览；研判：竞品侧的信任成本会被放大，需关注是否出现更多相似投诉。"
+      "source_count": 2,
+      "count_label": "2 条同日相似讨论",
+      "reason": "内容指向正向购物体验：用户主动提到价格、配送或购物体验上的正向感受；作者具备较高影响力（34171 followers），当前 3 次赞评转引、45 浏览，同日相似讨论 2 条；研判：可作为主品牌海外口碑和履约卖点的证据样本。"
     },
     {
       "rank": 5,
-      "title": "样例竞品购买意向与日常购物进入竞品观察",
-      "cluster_id": "",
-      "score_value": 57,
+      "title": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "cluster_id": "primary-signal-003",
+      "score_value": 61,
       "level": "medium",
-      "source_count": 1,
-      "count_label": "竞品异常",
-      "reason": "内容指向购买意向与日常购物：用户表达下单、加购或尝试购买意向；当前 20 次赞评转引、322 浏览；研判：可作为竞品自然需求与用户使用场景样本，需结合互动与浏览判断是否异常。"
+      "source_count": 2,
+      "count_label": "2 条同日相似讨论",
+      "reason": "内容指向竞品对照与替代选择：用户把主品牌与其他平台进行价格、配送或品类对比；当前传播仍弱，4 浏览且暂无赞评转引，同日相似讨论 2 条；研判：适合观察主品牌在海外用户购物选择中的竞争位置。"
     }
   ],
   "competitor": {
@@ -1592,8 +2070,8 @@
       {
         "post_id": "2082055573848113344",
         "url": "https://x.com/DigitalHer_/status/2082055573848113344",
-        "text": "Few out of many &gt;&gt;&gt; Temu Haul 🤭\n\nHope I am not late ☺️",
-        "original_text": "Few out of many &gt;&gt;&gt; Temu Haul 🤭\n\nHope I am not late ☺️ https://t.co/Ejynv3dP41",
+        "text": "Few out of many >>> Temu Haul 🤭\n\nHope I am not late ☺️",
+        "original_text": "Few out of many >>> Temu Haul 🤭\n\nHope I am not late ☺️ https://t.co/Ejynv3dP41",
         "links": [],
         "translation_zh": "众多中的几件 >>> Temu 购物分享 🤭\n\n希望我没来晚 ☺️",
         "translation_status": "translated",

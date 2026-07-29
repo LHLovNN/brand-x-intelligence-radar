@@ -56,6 +56,9 @@ def main() -> None:
                 "EU regulator sends charge sheet to https://t.co/brand over Ceconomy deal https://t.co/news",
                 links=["http://JD.com", "https://www.reuters.com/business/eu-regulator-sends-charge-sheet-jdcom-over-ceconomy-deal/"],
             ),
+            post("9", "JD.com total return beat several China internet stocks in the first half."),
+            post("10", "Have you tried Joybuy? Asian products are often half the price and delivery is very fast."),
+            post("11", "E-commerce : Joybuy launches subscription\n\nIci &gt;&gt; https://t.co/example", links=["https://example.com/joybuy-subscription"]),
         ],
         config,
     )
@@ -73,9 +76,17 @@ def main() -> None:
     assert by_id["8"]["is_relevant"], "JD.com regulatory/acquisition news in expanded links must remain relevant"
     assert "JD.com" in by_id["8"]["clean_text"], "Expanded JD.com link should remain readable in clean text"
     assert "regulator" in by_id["8"]["risk_terms"], "Regulatory news should carry a regulatory risk signal"
+    assert by_id["9"]["is_relevant"], "JD.com financial-market context can remain relevant"
+    assert "return" not in by_id["9"]["risk_terms"], "financial total return must not become after-sales return risk"
+    assert by_id["10"]["is_relevant"], "positive Joybuy shopping experience should remain relevant"
+    assert "Ici >> example.com/joybuy-subscription" in by_id["11"]["clean_text"], "HTML entities should be decoded before public display"
     clusters = cluster_posts(rows, "joybuy")
     regulatory = [cluster for cluster in clusters if cluster["topic"] == "regulatory"]
+    positive = [cluster for cluster in clusters if cluster["topic"] == "positive_experience"]
+    company = [cluster for cluster in clusters if cluster["topic"] == "company_market"]
     assert regulatory, "JD.com regulatory/acquisition news should be grouped under regulatory topic"
+    assert positive, "positive price and delivery experience should be grouped under positive experience"
+    assert company, "JD.com financial-market context should be grouped away from after-sales risk"
     print("Quality filter tests passed.")
 
 

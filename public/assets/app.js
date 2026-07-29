@@ -529,6 +529,64 @@ function inferSignalTopic(text, item = {}) {
   const lower = String(text || "").toLowerCase();
   const brand = item.brand === "temu" ? "竞品侧" : "主品牌";
   const hasAny = (terms) => terms.some((term) => lower.includes(term.toLowerCase()) || String(text).includes(term));
+  if (item.topic === "positive_experience" || hasAny(["helft van de prijs", "idioot snel", "voordeliger", "快得离谱", "最多一天", "更划算", "价格通常只有一半", "配送快", "推荐"])) {
+    return {
+      name: "正向购物体验",
+      angle: "用户主动提到价格、配送或购买体验上的正向感受",
+      implication: "可作为主品牌海外口碑和履约卖点的证据样本。",
+      useful: true,
+    };
+  }
+  if (item.topic === "competitor_comparison") {
+    return {
+      name: "竞品对照与替代选择",
+      angle: "用户把主品牌与其他平台进行价格、配送或品类对比",
+      implication: "适合观察主品牌在海外用户购物选择中的竞争位置。",
+      useful: true,
+    };
+  }
+  if (item.topic === "channel_activity") {
+    return {
+      name: "渠道合作与活动",
+      angle: "内容涉及渠道接入、商家合作、直播活动或站点更新",
+      implication: "可作为市场扩展和货架露出的背景信号。",
+      useful: true,
+    };
+  }
+  if (item.topic === "company_market") {
+    return {
+      name: "公司/资本市场信息",
+      angle: "内容涉及公司战略、资本市场、行业报告或管理层动态",
+      implication: "对品牌心智有间接影响，应与消费者体验类舆情分开阅读。",
+      useful: true,
+    };
+  }
+  if (["product_deal", "price_opportunity"].includes(item.topic)) {
+    return {
+      name: "价格促销与导购",
+      angle: "内容强调优惠、低价、券包或导购入口",
+      implication: item.brand === "temu" ? "有助于观察样例竞品拉新促销话术及可能的垃圾推广占比。" : "可评估是否存在可借势传播的价格/活动卖点。",
+      useful: true,
+    };
+  }
+  if (item.topic === "regulatory") {
+    return {
+      name: "监管/并购风险",
+      angle: "内容涉及海外监管审查、并购交易或市场准入风险",
+      implication: "这类舆情可能影响管理层判断、市场信任和欧洲业务推进，应从普通消费体验中单独拎出。",
+      useful: true,
+      sensitive: true,
+    };
+  }
+  if (item.topic === "fulfillment_risk") {
+    return {
+      name: "履约/售后风险",
+      angle: "内容涉及订单、退款、退货、配送或售后处理",
+      implication: `${brand}的信任成本会被放大，需关注是否出现更多相似投诉。`,
+      useful: true,
+      sensitive: true,
+    };
+  }
   if (hasAny(["refund", "退款", "退货", "售后", "chargeback"])) {
     return {
       name: "退款/售后体验",
@@ -1223,7 +1281,7 @@ function richPostTextNode(item, text, className = "") {
 }
 
 function richPostTextHtml(item, text) {
-  const displayText = String(text || "").trim();
+  const displayText = decodeHtmlEntities(text).trim();
   if (!displayText) return "";
   const links = normalizedLinks(item?.links || item?.source_links || item?.urls || []);
   const sourceLineLinks = sourceLineLinksForItem(item, links);
@@ -1410,9 +1468,9 @@ function formatCompactNumber(value) {
 
 function scoreClass(item) {
   const level = item.level || item.score?.level || "low";
-  if (["urgent", "high"].includes(level)) return "score-hot";
-  if (level === "medium") return "score-warm";
   if (item.sentiment === "positive") return "score-good";
+  if (item.kind === "risk" && ["urgent", "high"].includes(level)) return "score-hot";
+  if (item.kind === "risk" && level === "medium") return "score-warm";
   return "score-calm";
 }
 
@@ -1496,7 +1554,7 @@ function allPageMetrics(allItems, filteredItems) {
   return {
     total: allItems.length,
     filtered: filteredItems.length,
-    risk: filteredItems.filter((item) => item.kind === "risk" || ["urgent", "high", "medium"].includes(item.level)).length,
+    risk: filteredItems.filter((item) => item.kind === "risk").length,
     archiveDays: state.dailyArchive.length || 1,
   };
 }
@@ -1630,6 +1688,14 @@ function generatedOpinionTitle(item) {
 
 function opinionTopicLabel(item) {
   const labels = {
+    positive_experience: "正向体验",
+    product_deal: "商品导购",
+    fulfillment_risk: "履约售后",
+    trust_safety: "信任安全",
+    competitor_comparison: "竞品对照",
+    channel_activity: "渠道活动",
+    company_market: "公司市场",
+    general_observation: "日常观察",
     refund: "退款",
     payment: "支付",
     customer_service: "客服",
@@ -1672,6 +1738,9 @@ function allExternalLinkButton(item) {
 }
 
 function allItemsForDaily(daily) {
+  if (Array.isArray(daily.effective_posts) && daily.effective_posts.length) {
+    return daily.effective_posts.map((post) => allItemFromEffectivePost(post, daily)).sort(compareEvents);
+  }
   return [...allJoybuyItemsForDaily(daily), ...allCompetitorItemsForDaily(daily)].sort(compareEvents);
 }
 
@@ -1713,6 +1782,60 @@ function allCompetitorItemsForDaily(daily) {
   return posts.map((post) => allItemFromCompetitorPost(post, daily));
 }
 
+function allItemFromEffectivePost(post, daily) {
+  const metrics = post.metrics || {};
+  const interactions = Number(metrics.likes || 0) + Number(metrics.reposts || 0) + Number(metrics.replies || 0) + Number(metrics.quotes || 0);
+  const brand = post.brand === "temu" ? "temu" : "joybuy";
+  const sentiment = post.sentiment || "neutral";
+  const kind = brand === "temu" ? "competitor" : sentiment === "positive" ? "opportunity" : sentiment === "negative" ? "risk" : "observation";
+  const tags = [sentiment, ...(post.matched_terms || [])].filter(Boolean);
+  return {
+    id: `all-effective-${daily.date}-${post.post_id || post.url || post.created_at}`,
+    brand,
+    channel: "x",
+    type: kind,
+    kind,
+    topic: post.topic || "",
+    badge: brand === "temu" ? "竞品" : "主品牌",
+    source_name: brand === "temu" ? "样例竞品" : leadPostSourceName(post, "主品牌"),
+    author_name: post.author_name || (brand === "temu" ? "样例竞品来源" : "主品牌来源"),
+    author_handle: post.author_handle || "",
+    author_avatar_url: post.author_avatar_url || "",
+    author_followers: post.author_followers || 0,
+    author_verified: post.author_verified || false,
+    author_following: post.author_following || 0,
+    author_bio: post.author_bio || post.author_description || "",
+    author_location: post.author_location || "",
+    author_joined_at: post.author_joined_at || "",
+    source_subline: "公开原帖",
+    time: post.created_at,
+    title: generatedOpinionTitle({ brand, tags, topic: post.topic, sentiment, kind }),
+    body_zh: sourcePostBody(post, post.summary_zh || ""),
+    original_text: post.original_text || post.text || "",
+    translation_status: post.translation_status || "unknown",
+    summary: post.text || "",
+    score: { level: post.level || "low", sentiment },
+    score_label: post.score_label || (post.score_value == null ? "互动" : "IPS"),
+    score_value: post.score_value ?? interactions,
+    metrics: {},
+    post_metrics: metrics,
+    media: post.media || [],
+    links: post.links || [],
+    reply_to_post_id: post.reply_to_post_id || "",
+    reply_to_handle: post.reply_to_handle || post.in_reply_to_screen_name || "",
+    quoted_post_id: post.quoted_post_id || "",
+    tags,
+    reason: "",
+    href: "",
+    external_href: post.url || "",
+    source_count: 1,
+    source_count_label: brand === "temu" ? "竞品原帖" : "主品牌原帖",
+    is_sample: isDailySample(daily),
+    level: post.level || "low",
+    sentiment,
+  };
+}
+
 function allItemFromCluster(cluster, daily) {
   const score = cluster.score || {};
   const metrics = cluster.metrics || {};
@@ -1724,8 +1847,8 @@ function allItemFromCluster(cluster, daily) {
     id: `all-${daily.date}-${cluster.cluster_id}`,
     brand: "joybuy",
     channel: summaryOnly ? "archive" : "x",
-    type: summaryOnly ? "summary" : score.sentiment === "positive" ? "opportunity" : "risk",
-    kind: score.sentiment === "positive" ? "opportunity" : "risk",
+    type: summaryOnly ? "summary" : score.sentiment === "positive" ? "opportunity" : score.sentiment === "negative" ? "risk" : "observation",
+    kind: score.sentiment === "positive" ? "opportunity" : score.sentiment === "negative" ? "risk" : "observation",
     badge: summaryOnly ? "摘要" : "主品牌",
     source_name: leadPostSourceName(post, "主品牌"),
     author_name: leadPostAuthorName(post, "主品牌"),
@@ -2330,6 +2453,14 @@ function scoreSystemPanel() {
 
 function topicDisplayName(topic) {
   const labels = {
+    positive_experience: "正向购物体验",
+    product_deal: "商品/促销/上架信息",
+    fulfillment_risk: "履约与售后风险",
+    trust_safety: "信任与安全",
+    competitor_comparison: "竞品对照与替代选择",
+    channel_activity: "品牌合作与渠道动态",
+    company_market: "公司/资本市场信息",
+    general_observation: "日常观察",
     refund: "退款与支付",
     delivery: "物流与包裹追踪",
     customer_service: "客服与售后",
@@ -3045,7 +3176,7 @@ function scoreContributionRow(row) {
 
 function scoreBoost(detail, weighted) {
   const score = detail.score || {};
-  if (["refund", "delivery"].includes(detail.topic) && Number(score.future_potential || 0) >= 80) return 3;
+  if (["refund", "delivery", "fulfillment_risk"].includes(detail.topic) && Number(score.future_potential || 0) >= 80) return 3;
   return Math.max(0, Math.round(Number(score.ips || 0) - weighted));
 }
 
@@ -3260,6 +3391,15 @@ function escapeHtml(value) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+function decodeHtmlEntities(value) {
+  return String(value ?? "")
+    .replace(/&gt;/g, ">")
+    .replace(/&lt;/g, "<")
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;|&#39;|&apos;/g, "'")
+    .replace(/&amp;/g, "&");
 }
 
 init().catch((error) => {
