@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 import json
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "public" / "dashboard-data"
+CHINESE_RE = re.compile(r"[\u3400-\u9fff]")
+URL_RE = re.compile(r"https?://\S+|t\.co/\S+", re.IGNORECASE)
+MENTION_RE = re.compile(r"@[A-Za-z0-9_]{1,20}")
+TEXT_SIGNAL_RE = re.compile(r"[A-Za-z0-9\u3400-\u9fff]")
 
 
 def load(path: Path):
@@ -20,6 +25,48 @@ def fail(message: str) -> None:
 def assert_true(condition: bool, message: str) -> None:
     if not condition:
         fail(message)
+
+
+def walk_objects(value):
+    if isinstance(value, dict):
+        yield value
+        for child in value.values():
+            yield from walk_objects(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from walk_objects(child)
+
+
+def needs_context_translation(text: str) -> bool:
+    if not text or CHINESE_RE.search(text):
+        return False
+    compact = URL_RE.sub("", text)
+    compact = MENTION_RE.sub("", compact)
+    return bool(TEXT_SIGNAL_RE.search(compact))
+
+
+def verify_conversation_contexts(payload, label: str) -> None:
+    for obj in walk_objects(payload):
+        context = obj.get("conversation_context")
+        if not isinstance(context, dict):
+            continue
+        posts = context.get("posts") or []
+        if not posts:
+            continue
+        anchor = context.get("anchor_post_id") or obj.get("post_id") or "unknown"
+        assert_true(len(posts) > 1, f"{label}:{anchor} conversation context should include neighboring posts")
+        summary = str(context.get("summary_zh") or "")
+        assert_true(len(summary) <= 200, f"{label}:{anchor} conversation context summary exceeds 200 chars")
+        for post in posts:
+            text = str(post.get("text") or post.get("original_text") or "")
+            translation = str(post.get("translation_zh") or "")
+            post_id = post.get("post_id") or "unknown"
+            assert_true(translation.strip(), f"{label}:{anchor}:{post_id} missing context translation")
+            if needs_context_translation(text):
+                assert_true(
+                    bool(CHINESE_RE.search(translation)),
+                    f"{label}:{anchor}:{post_id} context translation should be Chinese",
+                )
 
 
 def main() -> None:
@@ -47,6 +94,13 @@ def main() -> None:
     expected_source_status = "sample" if is_sample else "normal"
     assert_true(source["status"] == expected_source_status, f"source status should be {expected_source_status}")
     assert_true(source["raw_posts_collected"] >= source["effective_posts"], "raw posts should be >= effective posts")
+    verify_conversation_contexts(latest, "latest")
+    verify_conversation_contexts(daily, "daily/latest")
+    verify_conversation_contexts(competitor, "competitor")
+    for item in daily_index["items"]:
+        archive_path = DATA / "daily" / f"{item['date']}.json"
+        if archive_path.exists():
+            verify_conversation_contexts(load(archive_path), f"daily/{item['date']}")
 
     tracked = [cluster for cluster in clusters if cluster.get("tracking_eligible")]
     assert_true(len(fermentation["items"]) == len(tracked), "fermentation tracked count mismatch")
