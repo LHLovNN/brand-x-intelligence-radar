@@ -3554,12 +3554,12 @@ function openMediaLightbox(url, options = {}) {
   node.className = "media-lightbox";
   node.innerHTML = `
     <button type="button" class="media-lightbox-close" aria-label="关闭大图">×</button>
-    ${hasMultiple ? `<button type="button" class="media-lightbox-nav prev" data-media-lightbox-prev aria-label="上一张图片">&lt;</button>` : ""}
+    ${hasMultiple ? `<button type="button" class="media-lightbox-nav prev" data-media-lightbox-prev aria-label="上一张图片"><span class="media-lightbox-chevron" aria-hidden="true"></span></button>` : ""}
     <figure class="media-lightbox-content">
       <img src="${escapeHtml(group[currentIndex] || safeUrl)}" alt="" />
       ${hasMultiple ? `<figcaption class="media-lightbox-count">${escapeHtml(String(currentIndex + 1))} / ${escapeHtml(String(group.length))}</figcaption>` : ""}
     </figure>
-    ${hasMultiple ? `<button type="button" class="media-lightbox-nav next" data-media-lightbox-next aria-label="下一张图片">&gt;</button>` : ""}
+    ${hasMultiple ? `<button type="button" class="media-lightbox-nav next" data-media-lightbox-next aria-label="下一张图片"><span class="media-lightbox-chevron" aria-hidden="true"></span></button>` : ""}
   `;
   const showImage = (nextIndex) => {
     currentIndex = (nextIndex + group.length) % group.length;
