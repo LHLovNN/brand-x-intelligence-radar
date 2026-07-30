@@ -915,6 +915,8 @@ function fallbackFeaturedItems(daily) {
         reply_to_post_id: event.reply_to_post_id || "",
         reply_to_handle: event.reply_to_handle || "",
         quoted_post_id: event.quoted_post_id || "",
+        conversation_id: event.conversation_id || "",
+        conversation_context: event.conversation_context || null,
         sentiment: "neutral",
         level: "low",
       })
