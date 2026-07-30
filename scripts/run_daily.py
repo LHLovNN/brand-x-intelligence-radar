@@ -92,10 +92,22 @@ def apply_runtime_limits(x_source: Any, source_config: dict[str, Any]) -> dict[s
         "BRAND_RADAR_MAX_SOURCE_REQUESTS",
         optional_limit_from_env("X_MAX_API_REQUESTS", configured_limit),
     )
+    configured_context_limit = limit_setting(
+        limits,
+        "max_context_requests_per_run",
+        "max_conversation_context_requests_per_run",
+    )
+    max_context_requests = optional_limit_from_env(
+        "BRAND_RADAR_MAX_CONTEXT_REQUESTS",
+        optional_limit_from_env("CONVERSATION_CONTEXT_MAX_REQUESTS", configured_context_limit),
+    )
     if hasattr(x_source, "max_requests_per_run"):
         x_source.max_requests_per_run = max_api_requests
+    if hasattr(x_source, "max_context_requests_per_run"):
+        x_source.max_context_requests_per_run = max_context_requests
     return {
         "max_api_requests": max_api_requests,
+        "max_context_requests": max_context_requests,
     }
 
 
@@ -104,6 +116,9 @@ def source_request_stats(x_source: Any) -> dict[str, Any]:
         "api_requests_used": getattr(x_source, "requests_used", None),
         "max_api_requests": getattr(x_source, "max_requests_per_run", None),
         "request_budget_exhausted": bool(getattr(x_source, "request_budget_exhausted", False)),
+        "context_requests_used": getattr(x_source, "context_requests_used", None),
+        "max_context_requests": getattr(x_source, "max_context_requests_per_run", None),
+        "context_request_budget_exhausted": bool(getattr(x_source, "context_request_budget_exhausted", False)),
     }
 
 
@@ -352,6 +367,8 @@ def main() -> None:
         to_iso(end),
     )
     collection_status["conversation_context"] = conversation_status
+    if x_source:
+        collection_status.update(source_request_stats(x_source))
     if conversation_status.get("warnings"):
         collection_status.setdefault("warnings", []).extend(conversation_status["warnings"])
 

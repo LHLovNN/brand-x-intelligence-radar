@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
+import os
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.pipeline.conversation_context import build_context_for_post, prepare_context_rows, should_fetch_context
+from src.pipeline.conversation_context import (
+    attach_conversation_contexts,
+    build_context_for_post,
+    prepare_context_rows,
+    should_fetch_context,
+)
 
 
 def post(index: int, **overrides):
@@ -52,6 +58,58 @@ def main() -> None:
     media_context = build_context_for_post(prepared[0], prepared)
     assert media_context["posts"][0]["text"] == "Ici >> https://t.co/example", "context text should decode HTML entities"
     assert media_context["posts"][0]["media"][0]["media_url_https"] == "https://pbs.twimg.com/media/example.jpg", "context media should be normalized for the dashboard renderer"
+
+    class ConfiguredSummaryService:
+        configured = True
+        api_key = "test-key"
+        endpoint = "http://127.0.0.1:9/unreachable"
+        model = "test-model"
+
+    os.environ["CONVERSATION_CONTEXT_MODEL_SUMMARY"] = "0"
+    try:
+        local_summary_context = build_context_for_post(anchor, rows, ConfiguredSummaryService())
+    finally:
+        os.environ.pop("CONVERSATION_CONTEXT_MODEL_SUMMARY", None)
+    assert local_summary_context["summary_status"] == "fallback", "model summary should be skippable for bounded backfills"
+    assert len(local_summary_context["summary_zh"]) <= 200, "local context summary should stay under 200 chars"
+
+    class ConversationContextSource:
+        def __init__(self, rows):
+            self.rows = rows
+            self.conversation_calls = []
+
+        def conversation_posts(self, conversation_id, start_time, end_time, limit=120):
+            self.conversation_calls.append(conversation_id)
+            return self.rows
+
+    target = post(10, post_id="target", author_followers=1000, is_relevant=True)
+    source = ConversationContextSource([post(9), target, post(11)])
+    status = attach_conversation_contexts(
+        [target],
+        [{"score": {"ips": 0}, "post_ids": ["target"]}],
+        source,
+        None,
+        "2026-07-29T00:00:00Z",
+        "2026-07-30T00:00:00Z",
+    )
+    assert source.conversation_calls == ["conversation-1"], "context should be fetched by conversation_id"
+    assert status["attached"] == 1, "multi-post conversation context should be attached"
+    assert len(target["conversation_context"]["posts"]) == 3
+
+    solo = post(12, post_id="solo", author_followers=1000, is_relevant=True)
+    solo["conversation_context"] = {"posts": [{"post_id": "solo"}]}
+    solo_source = ConversationContextSource([solo])
+    solo_status = attach_conversation_contexts(
+        [solo],
+        [{"score": {"ips": 0}, "post_ids": ["solo"]}],
+        solo_source,
+        None,
+        "2026-07-29T00:00:00Z",
+        "2026-07-30T00:00:00Z",
+    )
+    assert solo_status["attached"] == 0, "anchor-only context should not be exposed as successful context"
+    assert solo_status["unresolved"] == 1
+    assert "conversation_context" not in solo
     print("Conversation context tests passed.")
 
 

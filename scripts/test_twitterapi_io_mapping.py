@@ -113,17 +113,33 @@ def main() -> None:
             super().__init__(api_key="test-key")
             self.requests = []
 
-        def _get_json(self, path, params):
-            self.requests.append({"path": path, "params": params})
+        def _get_json(self, path, params, budget_scope="search"):
+            self._reserve_request_budget(budget_scope)
+            self.requests.append({"path": path, "params": params, "budget_scope": budget_scope})
             return {"tweets": []}
 
     capture = CaptureAdapter()
     capture.search_posts("joybuy", "2026-07-16T00:00:00Z", "2026-07-17T00:00:00Z", 1, query_type="Top")
     assert capture.requests[0]["params"]["queryType"] == "Top"
+    assert capture.requests[0]["budget_scope"] == "search"
     assert "since_time:" in capture.requests[0]["params"]["query"]
     assert "until_time:" in capture.requests[0]["params"]["query"]
     capture.conversation_posts("1899999999999999999", "2026-07-16T00:00:00Z", "2026-07-17T00:00:00Z", limit=1)
+    assert capture.requests[1]["budget_scope"] == "context"
     assert capture.requests[1]["params"]["query"].startswith("conversation_id:1899999999999999999"), "conversation context should query by conversation_id"
+    assert capture.requests_used == 1
+    assert capture.context_requests_used == 1
+
+    context_not_main_capped = CaptureAdapter()
+    context_not_main_capped.max_requests_per_run = 0
+    context_not_main_capped.conversation_posts(
+        "1899999999999999999",
+        "2026-07-16T00:00:00Z",
+        "2026-07-17T00:00:00Z",
+        limit=1,
+    )
+    assert context_not_main_capped.requests_used == 0, "conversation context should not consume search budget"
+    assert context_not_main_capped.context_requests_used == 1
 
     capped = TwitterApiIoAdapter(api_key="test-key", max_requests_per_run=0)
     try:

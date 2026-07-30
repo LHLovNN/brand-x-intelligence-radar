@@ -30,7 +30,7 @@ def attach_conversation_contexts(
     window_start: str,
     window_end: str,
 ) -> dict[str, Any]:
-    if not x_source or not hasattr(x_source, "conversation_posts"):
+    if not x_source or not can_fetch_context(x_source):
         return {"attempted": 0, "attached": 0, "warnings": []}
 
     score_by_post = cluster_score_by_post(clusters)
@@ -48,6 +48,7 @@ def attach_conversation_contexts(
     fetched_by_conversation: dict[str, list[dict[str, Any]]] = {}
     warnings: list[str] = []
     attached = 0
+    unresolved = 0
     summary_counts: dict[str, int] = {}
     for post in targets:
         conversation_id = str(post.get("conversation_id") or "")
@@ -55,18 +56,27 @@ def attach_conversation_contexts(
             continue
         if conversation_id not in fetched_by_conversation:
             try:
-                rows = x_source.conversation_posts(conversation_id, window_start, window_end, limit=CONTEXT_FETCH_LIMIT)
+                rows = fetch_context_rows(x_source, post, conversation_id, window_start, window_end)
             except Exception as error:
                 warnings.append(f"conversation {conversation_id} context fetch failed: {str(error)[:180]}")
                 fetched_by_conversation[conversation_id] = []
             else:
                 fetched_by_conversation[conversation_id] = prepare_context_rows(rows, translation_service)
-        context = build_context_for_post(post, fetched_by_conversation[conversation_id], translation_service)
-        if context:
+        rows = fetched_by_conversation[conversation_id]
+        if not has_context_row_neighbor(post, rows):
+            post.pop("conversation_context", None)
+            unresolved += 1
+            continue
+
+        context = build_context_for_post(post, rows, translation_service)
+        if context and has_context_neighbor(context):
             post["conversation_context"] = context
             attached += 1
             summary_status = str(context.get("summary_status") or "fallback")
             summary_counts[summary_status] = summary_counts.get(summary_status, 0) + 1
+        else:
+            post.pop("conversation_context", None)
+            unresolved += 1
 
     if summary_counts.get("fallback") and can_generate_context_summary(translation_service):
         warnings.append("conversation context summaries fell back to local rules for some posts.")
@@ -75,9 +85,39 @@ def attach_conversation_contexts(
         "attempted": len(targets),
         "eligible": eligible,
         "attached": attached,
+        "unresolved": unresolved,
         "summary": summary_counts,
         "warnings": warnings[:5],
     }
+
+
+def can_fetch_context(x_source: Any) -> bool:
+    return hasattr(x_source, "conversation_posts")
+
+
+def fetch_context_rows(
+    x_source: Any,
+    post: dict[str, Any],
+    conversation_id: str,
+    window_start: str,
+    window_end: str,
+) -> list[dict[str, Any]]:
+    return x_source.conversation_posts(conversation_id, window_start, window_end, limit=CONTEXT_FETCH_LIMIT)
+
+
+def has_context_neighbor(context: dict[str, Any]) -> bool:
+    return len(context.get("posts") or []) > 1
+
+
+def has_context_row_neighbor(anchor: dict[str, Any], rows: list[dict[str, Any]]) -> bool:
+    anchor_id = str(anchor.get("post_id") or "")
+    if not anchor_id:
+        return False
+    for row in rows:
+        row_id = str(row.get("post_id") or row.get("url") or "")
+        if row_id and row_id != anchor_id:
+            return True
+    return False
 
 
 def cluster_score_by_post(clusters: list[dict[str, Any]]) -> dict[str, int]:
@@ -225,6 +265,8 @@ def heuristic_context_summary(anchor: dict[str, Any], before: list[dict[str, Any
 
 
 def can_generate_context_summary(summary_service: TranslationService | None) -> bool:
+    if not model_context_summary_enabled():
+        return False
     return bool(
         summary_service
         and getattr(summary_service, "configured", False)
@@ -232,6 +274,11 @@ def can_generate_context_summary(summary_service: TranslationService | None) -> 
         and getattr(summary_service, "endpoint", None)
         and getattr(summary_service, "model", None)
     )
+
+
+def model_context_summary_enabled() -> bool:
+    raw = str(os.getenv("CONVERSATION_CONTEXT_MODEL_SUMMARY") or "1").strip().lower()
+    return raw not in {"0", "false", "no", "off", "local"}
 
 
 def apply_context_translations(window: list[dict[str, Any]], summary_service: TranslationService | None) -> None:

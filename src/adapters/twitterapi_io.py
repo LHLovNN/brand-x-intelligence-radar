@@ -26,6 +26,7 @@ class TwitterApiIoAdapter(XSourceBase):
         max_pages_per_query: int = 200,
         max_retries: int = 3,
         max_requests_per_run: int | None = None,
+        max_context_requests_per_run: int | None = None,
     ) -> None:
         if not api_key:
             raise ProviderNotConfigured("TWITTERAPI_IO_KEY is required.")
@@ -35,8 +36,11 @@ class TwitterApiIoAdapter(XSourceBase):
         self.max_pages_per_query = max_pages_per_query
         self.max_retries = max_retries
         self.max_requests_per_run = max_requests_per_run
+        self.max_context_requests_per_run = max_context_requests_per_run
         self.requests_used = 0
+        self.context_requests_used = 0
         self.request_budget_exhausted = False
+        self.context_request_budget_exhausted = False
         self.last_request_at = 0.0
 
     def search_posts(
@@ -46,6 +50,7 @@ class TwitterApiIoAdapter(XSourceBase):
         end_time: str,
         limit: int,
         query_type: str = "Latest",
+        budget_scope: str = "search",
     ) -> list[dict[str, Any]]:
         if limit <= 0:
             return []
@@ -70,7 +75,7 @@ class TwitterApiIoAdapter(XSourceBase):
             if cursor:
                 params["cursor"] = cursor
 
-            payload = self._get_json("/twitter/tweet/advanced_search", params)
+            payload = self._get_json("/twitter/tweet/advanced_search", params, budget_scope=budget_scope)
             pages += 1
             rows = self._extract_tweets(payload)
             if not rows:
@@ -110,9 +115,9 @@ class TwitterApiIoAdapter(XSourceBase):
         limit: int = 120,
     ) -> list[dict[str, Any]]:
         query = f"conversation_id:{conversation_id}"
-        return self.search_posts(query, start_time, end_time, limit, query_type="Latest")
+        return self.search_posts(query, start_time, end_time, limit, query_type="Latest", budget_scope="context")
 
-    def _get_json(self, path: str, params: dict[str, str]) -> dict[str, Any]:
+    def _get_json(self, path: str, params: dict[str, str], budget_scope: str = "search") -> dict[str, Any]:
         query_string = urllib.parse.urlencode(params)
         request = urllib.request.Request(
             f"{self.base_url}{path}?{query_string}",
@@ -125,7 +130,7 @@ class TwitterApiIoAdapter(XSourceBase):
         )
         body = ""
         for attempt in range(self.max_retries + 1):
-            self._reserve_request_budget()
+            self._reserve_request_budget(budget_scope)
             self._wait_before_request()
             try:
                 with urllib.request.urlopen(request, timeout=self.timeout_seconds) as response:
@@ -154,7 +159,20 @@ class TwitterApiIoAdapter(XSourceBase):
             raise RuntimeError(f"TwitterAPI.io returned error: {payload.get('error')}")
         return payload
 
-    def _reserve_request_budget(self) -> None:
+    def _reserve_request_budget(self, budget_scope: str = "search") -> None:
+        if budget_scope == "context":
+            if self.max_context_requests_per_run is None:
+                self.context_requests_used += 1
+                return
+            if self.context_requests_used >= self.max_context_requests_per_run:
+                self.context_request_budget_exhausted = True
+                raise ProviderBudgetExceeded(
+                    f"TwitterAPI.io conversation context request budget exhausted: "
+                    f"{self.context_requests_used}/{self.max_context_requests_per_run} requests used."
+                )
+            self.context_requests_used += 1
+            return
+
         if self.max_requests_per_run is None:
             self.requests_used += 1
             return
