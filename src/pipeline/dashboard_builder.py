@@ -1146,10 +1146,15 @@ def public_warnings(warnings: list[Any]) -> list[str]:
     results = []
     for warning in warnings:
         text = str(warning)
-        if "translation" in text.lower():
-            results.append("Chinese translation is unavailable for some posts; original text is shown as fallback.")
-        elif "budget" in text.lower() or "request" in text.lower() or "provider" in text.lower():
-            results.append("Collection stopped early after reaching a protective runtime threshold.")
+        lower = text.lower()
+        if "conversation" in lower and "context" in lower:
+            message = "部分对话上下文暂未补齐；主帖和已取得的上下文仍会展示。"
+        elif "translation" in lower:
+            message = "Chinese translation is unavailable for some posts; original text is shown as fallback."
+        elif "budget" in lower or "request" in lower or "provider" in lower:
+            message = "Collection stopped early after reaching a protective runtime threshold."
         else:
-            results.append("Collection completed with a non-critical warning.")
+            message = "Collection completed with a non-critical warning."
+        if message not in results:
+            results.append(message)
     return results[:3]
