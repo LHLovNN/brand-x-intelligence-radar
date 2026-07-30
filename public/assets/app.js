@@ -1138,10 +1138,11 @@ function mediaGridNode(media = [], owner = {}) {
   if (!items.length) return "";
   const hasVideo = items.some(isVideoMedia);
   const xVideoEmbed = USE_X_EMBED_FOR_VIDEO && !owner?.is_sample && hasVideo ? xVideoEmbedNode(owner, items.find(isVideoMedia)) : "";
+  const lightboxUrls = imageMediaUrls(items);
   const nodes = [];
   items.forEach((mediaItem, index) => {
     if (xVideoEmbed && isVideoMedia(mediaItem)) return;
-    const node = mediaNode(mediaItem, owner, { mediaIndex: index + 1 });
+    const node = mediaNode(mediaItem, owner, { mediaIndex: index + 1, lightboxUrls });
     if (node) nodes.push(node);
   });
   if (xVideoEmbed) nodes.push(xVideoEmbed);
@@ -1151,12 +1152,12 @@ function mediaGridNode(media = [], owner = {}) {
 function mediaNode(item, owner = {}, options = {}) {
   if (typeof item === "string") {
     const safeUrl = safeExternalUrl(item);
-    return safeUrl ? imageMediaNode(safeUrl) : "";
+    return safeUrl ? imageMediaNode(safeUrl, options) : "";
   }
-  const imageUrl = safeExternalUrl(item?.media_url_https || item?.media_url || item?.preview_image_url || item?.previewImageUrl || item?.url || "");
+  const imageUrl = imageMediaUrl(item);
   if (isVideoMedia(item)) {
     const originalUrl = tweetVideoOpenUrl(owner, item, options.mediaIndex) || bestVideoUrl(item);
-    if (!originalUrl) return imageUrl ? imageMediaNode(imageUrl) : "";
+    if (!originalUrl) return imageUrl ? imageMediaNode(imageUrl, options) : "";
     const posterNode = imageUrl
       ? `<img class="media-video-thumb" src="${escapeHtml(imageUrl)}" alt="" loading="lazy" />`
       : `<span class="media-video-thumb fallback" aria-hidden="true"></span>`;
@@ -1169,7 +1170,22 @@ function mediaNode(item, owner = {}, options = {}) {
       </div>
     `;
   }
-  return imageUrl ? imageMediaNode(imageUrl) : "";
+  return imageUrl ? imageMediaNode(imageUrl, options) : "";
+}
+
+function imageMediaUrl(item) {
+  if (typeof item === "string") return safeExternalUrl(item);
+  return safeExternalUrl(item?.media_url_https || item?.media_url || item?.preview_image_url || item?.previewImageUrl || item?.url || "");
+}
+
+function imageMediaUrls(items = []) {
+  const urls = [];
+  items.forEach((item) => {
+    if (isVideoMedia(item)) return;
+    const url = imageMediaUrl(item);
+    if (url && !urls.includes(url)) urls.push(url);
+  });
+  return urls;
 }
 
 function isVideoMedia(item) {
@@ -1244,11 +1260,13 @@ function parseTweetUrl(url) {
   return { handle: cleanHandle(match[1]), id: match[2] };
 }
 
-function imageMediaNode(url) {
+function imageMediaNode(url, options = {}) {
   const safeUrl = safeExternalUrl(url);
   if (!safeUrl) return "";
+  const lightboxUrls = Array.isArray(options.lightboxUrls) && options.lightboxUrls.length ? options.lightboxUrls : [safeUrl];
+  const lightboxIndex = Math.max(0, lightboxUrls.indexOf(safeUrl));
   return `
-    <button type="button" class="media-image-button" data-media-lightbox="${escapeHtml(safeUrl)}" aria-label="查看大图">
+    <button type="button" class="media-image-button" data-media-lightbox="${escapeHtml(safeUrl)}" data-media-lightbox-group="${escapeHtml(JSON.stringify(lightboxUrls))}" data-media-lightbox-index="${escapeHtml(String(lightboxIndex))}" aria-label="查看大图">
       <img src="${escapeHtml(safeUrl)}" alt="" loading="lazy" />
     </button>
   `;
@@ -1453,7 +1471,6 @@ function contextRelation(item) {
       label: "疑似回复",
       text: `正文以 @${mention} 开头，通常表示它位于一段回复链中。`,
       targetUrl: "",
-      note: "本次数据未返回父帖 ID 和父帖正文，因此这里只标注关系，不复原父帖内容。",
     };
   }
   return null;
@@ -3394,7 +3411,7 @@ function bindPageEvents(detail = null) {
   });
 
   document.querySelectorAll("[data-media-lightbox]").forEach((button) => {
-    button.addEventListener("click", () => openMediaLightbox(button.dataset.mediaLightbox));
+    button.addEventListener("click", () => openMediaLightbox(button.dataset.mediaLightbox, mediaLightboxOptions(button)));
   });
 
   document.querySelectorAll("[data-conversation-context]").forEach((button) => {
@@ -3430,7 +3447,7 @@ function openConversationDrawer(contextId) {
   node.addEventListener("click", (event) => {
     if (event.target === node || event.target.closest(".conversation-drawer-close")) closeConversationDrawer();
     const mediaButton = event.target.closest("[data-media-lightbox]");
-    if (mediaButton) openMediaLightbox(mediaButton.dataset.mediaLightbox);
+    if (mediaButton) openMediaLightbox(mediaButton.dataset.mediaLightbox, mediaLightboxOptions(mediaButton));
     if (event.target.closest("[data-conversation-top]")) {
       node.querySelector(".conversation-thread")?.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -3506,23 +3523,62 @@ function closeConversationDrawer() {
   document.body.classList.remove("conversation-drawer-open");
 }
 
-function openMediaLightbox(url) {
+function mediaLightboxOptions(button) {
+  return {
+    urls: parseMediaLightboxGroup(button?.dataset?.mediaLightboxGroup),
+    index: Number(button?.dataset?.mediaLightboxIndex || 0),
+  };
+}
+
+function parseMediaLightboxGroup(value) {
+  if (!value) return [];
+  try {
+    const payload = JSON.parse(value);
+    if (!Array.isArray(payload)) return [];
+    return payload.map(safeExternalUrl).filter(Boolean);
+  } catch (error) {
+    return [];
+  }
+}
+
+function openMediaLightbox(url, options = {}) {
   const safeUrl = safeExternalUrl(url);
   if (!safeUrl) return;
   closeMediaLightbox();
+  const group = Array.isArray(options.urls) && options.urls.length ? options.urls : [safeUrl];
+  let currentIndex = Number.isFinite(options.index) ? options.index : group.indexOf(safeUrl);
+  if (currentIndex < 0 || currentIndex >= group.length) currentIndex = Math.max(0, group.indexOf(safeUrl));
+  if (currentIndex < 0) currentIndex = 0;
+  const hasMultiple = group.length > 1;
   const node = document.createElement("div");
   node.className = "media-lightbox";
   node.innerHTML = `
     <button type="button" class="media-lightbox-close" aria-label="关闭大图">×</button>
-    <img src="${escapeHtml(safeUrl)}" alt="" />
+    ${hasMultiple ? `<button type="button" class="media-lightbox-nav prev" data-media-lightbox-prev aria-label="上一张图片">&lt;</button>` : ""}
+    <figure class="media-lightbox-content">
+      <img src="${escapeHtml(group[currentIndex] || safeUrl)}" alt="" />
+      ${hasMultiple ? `<figcaption class="media-lightbox-count">${escapeHtml(String(currentIndex + 1))} / ${escapeHtml(String(group.length))}</figcaption>` : ""}
+    </figure>
+    ${hasMultiple ? `<button type="button" class="media-lightbox-nav next" data-media-lightbox-next aria-label="下一张图片">&gt;</button>` : ""}
   `;
+  const showImage = (nextIndex) => {
+    currentIndex = (nextIndex + group.length) % group.length;
+    const img = node.querySelector("img");
+    const count = node.querySelector(".media-lightbox-count");
+    if (img) img.src = group[currentIndex];
+    if (count) count.textContent = `${currentIndex + 1} / ${group.length}`;
+  };
   node.addEventListener("click", (event) => {
     if (event.target === node || event.target.closest(".media-lightbox-close")) closeMediaLightbox();
+    if (event.target.closest("[data-media-lightbox-prev]")) showImage(currentIndex - 1);
+    if (event.target.closest("[data-media-lightbox-next]")) showImage(currentIndex + 1);
   });
   document.body.appendChild(node);
   document.body.classList.add("lightbox-open");
   const onKeydown = (event) => {
     if (event.key === "Escape") closeMediaLightbox();
+    if (hasMultiple && event.key === "ArrowLeft") showImage(currentIndex - 1);
+    if (hasMultiple && event.key === "ArrowRight") showImage(currentIndex + 1);
   };
   node._onKeydown = onKeydown;
   window.addEventListener("keydown", onKeydown);
