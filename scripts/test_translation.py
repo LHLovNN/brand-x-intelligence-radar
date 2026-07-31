@@ -59,6 +59,14 @@ class AlwaysFailingJoyBuilderTranslationService(JoyBuilderTranslationService):
         raise TranslationRequestError("simulated single-item timeout", timeout=True)
 
 
+class NonChineseTranslationService(TranslationService):
+    provider_name = "non_chinese_test_provider"
+    configured = True
+
+    def translate_batch(self, items: list[dict[str, str]]) -> dict[str, str]:
+        return {item["id"]: item["text"] for item in items}
+
+
 def test_sample_dictionary_translation() -> None:
     posts = [
         {
@@ -214,6 +222,21 @@ def test_missing_translation_config_falls_back_to_original() -> None:
     assert posts[0]["translation_zh"] == posts[0]["clean_text"]
 
 
+def test_non_chinese_provider_output_is_not_accepted() -> None:
+    posts = [
+        {
+            "post_id": "bad-provider-output",
+            "language": "en",
+            "clean_text": "Joybuy refund is still pending.",
+        }
+    ]
+    report = apply_translations(posts, NonChineseTranslationService())
+    assert report["missing_count"] == 1
+    assert posts[0]["translation_status"] == "error"
+    assert posts[0]["translation_zh"] == posts[0]["clean_text"]
+    assert "non-Chinese" in posts[0]["translation_error"]
+
+
 def test_default_real_provider_without_company_key_uses_noop_translation() -> None:
     original_provider = os.environ.pop("TRANSLATION_PROVIDER", None)
     original_key = os.environ.pop("JDCLOUD_GPT_API_KEY", None)
@@ -237,5 +260,6 @@ if __name__ == "__main__":
     test_joybuilder_timeout_splits_batch_and_keeps_successful_translations()
     test_joybuilder_single_item_failure_falls_back_to_original()
     test_missing_translation_config_falls_back_to_original()
+    test_non_chinese_provider_output_is_not_accepted()
     test_default_real_provider_without_company_key_uses_noop_translation()
     print("Translation tests passed.")

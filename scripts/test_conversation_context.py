@@ -9,6 +9,7 @@ sys.path.insert(0, str(ROOT))
 from src.pipeline.conversation_context import (
     attach_conversation_contexts,
     build_context_for_post,
+    context_item,
     prepare_context_rows,
     should_fetch_context,
 )
@@ -72,6 +73,18 @@ def main() -> None:
         os.environ.pop("CONVERSATION_CONTEXT_MODEL_SUMMARY", None)
     assert local_summary_context["summary_status"] == "fallback", "model summary should be skippable for bounded backfills"
     assert len(local_summary_context["summary_zh"]) <= 200, "local context summary should stay under 200 chars"
+
+    fallback_item = context_item(
+        post(
+            88,
+            language="en",
+            clean_text="This English context reply was not translated by the provider.",
+            translation_zh="This English context reply was not translated by the provider.",
+            translation_status="error",
+        )
+    )
+    assert "该上下文帖" in fallback_item["translation_zh"], "context fallback should be Chinese"
+    assert fallback_item["translation_status"] == "fallback_summary"
 
     class ConversationContextSource:
         def __init__(self, rows):

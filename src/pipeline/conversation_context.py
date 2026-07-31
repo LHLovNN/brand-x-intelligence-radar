@@ -9,7 +9,7 @@ import urllib.error
 import urllib.request
 from typing import Any
 
-from src.pipeline.translation import TranslationService, apply_translations, response_output_text
+from src.pipeline.translation import CHINESE_RE, TranslationService, apply_translations, needs_translation, response_output_text
 
 
 CONTEXT_BEFORE_LIMIT = 20
@@ -430,14 +430,15 @@ def context_item(post: dict[str, Any]) -> dict[str, Any]:
         "bookmarks": post.get("bookmark_count"),
         "views": post.get("view_count"),
     }
+    translation_zh, translation_status = context_translation_fields(post)
     return {
         "post_id": post.get("post_id"),
         "url": post.get("url", ""),
         "created_at": post.get("created_at"),
         "text": decoded_text(post.get("clean_text") or post.get("text") or ""),
         "original_text": decoded_text(post.get("text") or ""),
-        "translation_zh": decoded_text(post.get("translation_zh") or post.get("clean_text") or post.get("text") or ""),
-        "translation_status": post.get("translation_status", "unknown"),
+        "translation_zh": translation_zh,
+        "translation_status": translation_status,
         "author_name": author.get("name") or post.get("author_name") or post.get("author_handle"),
         "author_handle": author.get("handle") or post.get("author_handle"),
         "author_avatar_url": author.get("avatar_url") or post.get("author_avatar_url"),
@@ -451,6 +452,31 @@ def context_item(post: dict[str, Any]) -> dict[str, Any]:
         "media": context_media_items(post),
         "metrics": metrics,
     }
+
+
+def context_translation_fields(post: dict[str, Any]) -> tuple[str, str]:
+    text = decoded_text(post.get("clean_text") or post.get("text") or "")
+    original_text = decoded_text(post.get("text") or "")
+    supplied = decoded_text(post.get("translation_zh") or "")
+    probe = {
+        "language": post.get("language") or "",
+        "clean_text": text or original_text,
+        "text": original_text,
+    }
+    if supplied and (not needs_translation(probe) or CHINESE_RE.search(supplied)):
+        return supplied, str(post.get("translation_status") or "unknown")
+    if not needs_translation(probe):
+        return text or original_text, "source_chinese"
+    return fallback_context_translation(text or original_text), "fallback_summary"
+
+
+def fallback_context_translation(text: str) -> str:
+    compact = re.sub(r"\s+", " ", decoded_text(text)).strip()
+    if not compact:
+        return "该上下文帖没有可翻译文本。"
+    if len(compact) <= 80:
+        return f"该上下文帖为非中文简短内容：{compact}"
+    return f"该上下文帖为非中文长内容，自动翻译暂不可用；请切换原文查看完整内容。原文开头：{compact[:120]}"
 
 
 def decoded_text(value: Any) -> str:

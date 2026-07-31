@@ -263,9 +263,13 @@ def apply_translations(posts: list[dict[str, Any]], service: TranslationService)
     for item in pending:
         post = posts[int(item["id"])]
         translated = translations.get(item["id"], "").strip()
-        if translated:
+        if translated and CHINESE_RE.search(translated):
             post["translation_zh"] = translated
             post["translation_status"] = "sample_dictionary" if service.provider_name == "sample_dictionary" else "translated"
+        elif translated:
+            post["translation_zh"] = item["text"]
+            post["translation_status"] = "error"
+            post["translation_error"] = "Translation provider returned non-Chinese output."
         else:
             post["translation_zh"] = item["text"]
             post["translation_status"] = "error" if error_message else "missing"
