@@ -15,6 +15,7 @@ JAPANESE_KANA_RE = re.compile(r"[\u3040-\u30ff]")
 HANGUL_RE = re.compile(r"[\uac00-\ud7af]")
 TEXT_SIGNAL_RE = re.compile(r"[\w\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]", re.UNICODE)
 ZH_LANGUAGES = {"zh", "zh-cn", "zh-hans", "zh-tw", "zh-hant", "cn"}
+SEGMENT_ID_SEPARATOR = "::segment::"
 
 
 class TranslationNotConfigured(RuntimeError):
@@ -77,16 +78,57 @@ class JoyBuilderTranslationService(TranslationService):
         self.max_chars_per_batch = positive_int_env("JDBUILDER_TRANSLATION_MAX_CHARS", max_chars_per_batch)
         self.errors: list[str] = []
         self.last_error = ""
+        self._strict_translation_attempt = False
 
     def translate_batch(self, items: list[dict[str, str]]) -> dict[str, str]:
         self.errors = []
         self.last_error = ""
-        result: dict[str, str] = {}
-        for chunk in self._split_items(items):
+        expanded_items, segments_by_item = self._expand_long_items(items)
+        expanded_result: dict[str, str] = {}
+        for chunk in self._split_items(expanded_items):
             try:
-                result.update(self._translate_chunk_with_recovery(chunk))
+                expanded_result.update(self._translate_chunk_with_recovery(chunk))
             except Exception as error:
                 self._record_error(error)
+        return self._merge_segmented_translations(items, expanded_result, segments_by_item)
+
+    def _expand_long_items(self, items: list[dict[str, str]]) -> tuple[list[dict[str, str]], dict[str, list[str]]]:
+        expanded: list[dict[str, str]] = []
+        segments_by_item: dict[str, list[str]] = {}
+        for item in items:
+            item_id = item["id"]
+            segments = split_translation_text(item.get("text", ""), self.max_chars_per_batch)
+            if len(segments) <= 1:
+                expanded.append(item)
+                continue
+            segment_ids: list[str] = []
+            for index, segment in enumerate(segments):
+                segment_id = f"{item_id}{SEGMENT_ID_SEPARATOR}{index}"
+                expanded.append({**item, "id": segment_id, "text": segment})
+                segment_ids.append(segment_id)
+            segments_by_item[item_id] = segment_ids
+        return expanded, segments_by_item
+
+    def _merge_segmented_translations(
+        self,
+        original_items: list[dict[str, str]],
+        expanded_result: dict[str, str],
+        segments_by_item: dict[str, list[str]],
+    ) -> dict[str, str]:
+        result: dict[str, str] = {}
+        for item in original_items:
+            item_id = item["id"]
+            segment_ids = segments_by_item.get(item_id)
+            if not segment_ids:
+                if item_id in expanded_result:
+                    result[item_id] = expanded_result[item_id]
+                continue
+            translated_segments = [expanded_result.get(segment_id, "").strip() for segment_id in segment_ids]
+            if all(translated_segments):
+                result[item_id] = "\n\n".join(translated_segments)
+            else:
+                missing = [segment_id for segment_id, value in zip(segment_ids, translated_segments) if not value]
+                self._record_error(TranslationRequestError(f"Long translation missing segments for {item_id}: {', '.join(missing[:3])}"))
         return result
 
     def _split_items(self, items: list[dict[str, str]]) -> list[list[dict[str, str]]]:
@@ -110,6 +152,9 @@ class JoyBuilderTranslationService(TranslationService):
             return self._translate_chunk_with_retries(items)
         except TranslationRequestError as error:
             if len(items) <= 1:
+                recovered = self._recover_single_item_by_splitting(items[0], error)
+                if recovered:
+                    return recovered
                 raise
             midpoint = max(1, len(items) // 2)
             translations: dict[str, str] = {}
@@ -123,9 +168,33 @@ class JoyBuilderTranslationService(TranslationService):
                 return translations
             raise error
 
+    def _recover_single_item_by_splitting(self, item: dict[str, str], error: TranslationRequestError) -> dict[str, str]:
+        if not error.retriable:
+            return {}
+        text = item.get("text", "")
+        if len(text) <= 400:
+            return {}
+        retry_limit = max(400, len(text) // 2)
+        segments = split_translation_text(text, retry_limit)
+        if len(segments) <= 1:
+            return {}
+        segment_ids = []
+        expanded = []
+        for index, segment in enumerate(segments):
+            segment_id = f"{item['id']}{SEGMENT_ID_SEPARATOR}retry{index}"
+            expanded.append({**item, "id": segment_id, "text": segment})
+            segment_ids.append(segment_id)
+        translations = self._translate_chunk_with_recovery(expanded)
+        translated_segments = [translations.get(segment_id, "").strip() for segment_id in segment_ids]
+        if all(translated_segments):
+            self._record_error(error)
+            return {item["id"]: "\n\n".join(translated_segments)}
+        return {}
+
     def _translate_chunk_with_retries(self, items: list[dict[str, str]]) -> dict[str, str]:
         last_error: TranslationRequestError | None = None
         for attempt in range(self.retry_attempts + 1):
+            self._strict_translation_attempt = attempt > 0
             try:
                 return self._translate_chunk(items)
             except TranslationRequestError as error:
@@ -135,6 +204,8 @@ class JoyBuilderTranslationService(TranslationService):
                 if attempt >= self.retry_attempts or not error.retriable:
                     break
                 time.sleep(min(2**attempt, 4))
+            finally:
+                self._strict_translation_attempt = False
         if last_error:
             raise last_error
         return {}
@@ -151,6 +222,12 @@ class JoyBuilderTranslationService(TranslationService):
             "不要总结，不要省略事实，不要添加分析。保留品牌名、@账号、话题标签、URL、数字、emoji 和专有名词。"
             "只返回 JSON 数组，每一项必须是 {\"id\":\"...\",\"translation_zh\":\"...\"}。"
         )
+        if self._strict_translation_attempt:
+            system_prompt += (
+                " 重要：translation_zh 必须包含简体中文字符，绝不能原样返回英文或其他非中文原文。"
+                "如果某些品牌名、人名、股票代码或专有名词不需要翻译，也要用中文句子说明原文含义。"
+                "如果文本很长，请完整逐段翻译，不要摘要。"
+            )
         input_payload = json.dumps(
             [
                 {
@@ -208,7 +285,25 @@ class JoyBuilderTranslationService(TranslationService):
             translation = str(record.get("translation_zh", "")).strip()
             if item_id and translation:
                 translations[item_id] = translation
+        self._validate_chunk_translations(items, translations)
         return translations
+
+    def _validate_chunk_translations(self, items: list[dict[str, str]], translations: dict[str, str]) -> None:
+        invalid_ids = []
+        for item in items:
+            item_id = item["id"]
+            translation = translations.get(item_id, "").strip()
+            if not translation:
+                invalid_ids.append(item_id)
+                continue
+            probe = {"language": item.get("language", "und"), "clean_text": item.get("text", "")}
+            if needs_translation(probe) and not CHINESE_RE.search(translation):
+                invalid_ids.append(item_id)
+        if invalid_ids:
+            raise TranslationRequestError(
+                f"JoyBuilder translation missing or non-Chinese output for ids: {', '.join(invalid_ids[:5])}",
+                retriable=True,
+            )
 
 
 def build_translation_service(source_provider: str) -> TranslationService:
@@ -288,6 +383,36 @@ def positive_int_env(name: str, fallback: int, minimum: int = 1) -> int:
     except ValueError:
         return max(minimum, fallback)
     return max(minimum, value)
+
+
+def split_translation_text(text: str, max_chars: int) -> list[str]:
+    value = str(text or "").strip()
+    if not value:
+        return [""]
+    limit = max(1, max_chars)
+    if len(value) <= limit:
+        return [value]
+
+    segments: list[str] = []
+    start = 0
+    while start < len(value):
+        end = min(len(value), start + limit)
+        if end < len(value):
+            end = best_translation_split(value, start, end, limit)
+        segment = value[start:end].strip()
+        if segment:
+            segments.append(segment)
+        start = end
+    return segments or [value[:limit]]
+
+
+def best_translation_split(text: str, start: int, hard_end: int, limit: int) -> int:
+    min_end = start + max(1, limit // 2)
+    for boundary in ("\n\n", "\n", ". ", "。", "！", "？", "; ", "；", ", ", "，", " "):
+        index = text.rfind(boundary, min_end, hard_end)
+        if index > start:
+            return index + len(boundary)
+    return hard_end
 
 
 def needs_translation(post: dict[str, Any]) -> bool:
