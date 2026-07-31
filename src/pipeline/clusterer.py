@@ -1,4 +1,5 @@
 from collections import defaultdict
+import re
 from typing import Any
 
 
@@ -7,7 +8,17 @@ def _combined_text(post: dict[str, Any]) -> str:
 
 
 def _has_any(text: str, terms: list[str]) -> bool:
-    return any(term in text for term in terms)
+    for term in terms:
+        normalized = term.lower().strip()
+        if not normalized:
+            continue
+        if re.fullmatch(r"[a-z0-9]+(?:\s+[a-z0-9]+)*", normalized):
+            if re.search(rf"(?<![a-z0-9]){re.escape(normalized)}(?![a-z0-9])", text):
+                return True
+            continue
+        if normalized in text:
+            return True
+    return False
 
 
 def _has_commerce_risk_context(text: str) -> bool:

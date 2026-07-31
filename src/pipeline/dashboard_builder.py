@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from src.pipeline.competitor_radar import build_competitor_radar
+from src.pipeline.conversation_context import context_translation_fields
 from src.utils.io import write_json
 from src.utils.time import BEIJING, beijing_label, now_utc, to_iso
 
@@ -331,6 +332,26 @@ def build_executive_summary(clusters: list[dict[str, Any]], competitor: dict[str
     }
 
 
+def public_conversation_context(post: dict[str, Any]) -> dict[str, Any]:
+    context = post.get("conversation_context")
+    if not isinstance(context, dict):
+        return {}
+    cleaned = {**context}
+    posts = context.get("posts") or []
+    if isinstance(posts, list):
+        cleaned_posts = []
+        for item in posts:
+            if not isinstance(item, dict):
+                continue
+            cleaned_item = {**item}
+            translation_zh, translation_status = context_translation_fields(cleaned_item)
+            cleaned_item["translation_zh"] = translation_zh
+            cleaned_item["translation_status"] = translation_status
+            cleaned_posts.append(cleaned_item)
+        cleaned["posts"] = cleaned_posts
+    return cleaned
+
+
 def build_effective_feed_items(posts: list[dict[str, Any]], clusters: list[dict[str, Any]]) -> list[dict[str, Any]]:
     cluster_by_post: dict[str, dict[str, Any]] = {}
     for cluster in clusters:
@@ -380,7 +401,7 @@ def effective_feed_item(post: dict[str, Any], cluster: dict[str, Any] | None = N
         "reply_to_handle": post.get("reply_to_handle", ""),
         "quoted_post_id": post.get("quoted_post_id", ""),
         "conversation_id": post.get("conversation_id", ""),
-        "conversation_context": post.get("conversation_context", {}),
+        "conversation_context": public_conversation_context(post),
         "language": post.get("language", "und"),
         "media": media_items(post),
         "metrics": post.get("metrics", {}),
@@ -487,7 +508,7 @@ def featured_item_for_cluster(cluster: dict[str, Any]) -> dict[str, Any] | None:
         "reply_to_handle": post.get("reply_to_handle", ""),
         "quoted_post_id": post.get("quoted_post_id", ""),
         "conversation_id": post.get("conversation_id", ""),
-        "conversation_context": post.get("conversation_context", {}),
+        "conversation_context": public_conversation_context(post),
         "created_at": post.get("created_at") or cluster.get("first_seen_at"),
         "language": post.get("language", "und"),
         "title": cluster["title"],
@@ -539,7 +560,7 @@ def featured_item_for_competitor_post(post: dict[str, Any]) -> dict[str, Any] | 
         "reply_to_handle": post.get("reply_to_handle", ""),
         "quoted_post_id": post.get("quoted_post_id", ""),
         "conversation_id": post.get("conversation_id", ""),
-        "conversation_context": post.get("conversation_context", {}),
+        "conversation_context": public_conversation_context(post),
         "created_at": post.get("created_at"),
         "language": post.get("language", "und"),
         "title": title,
@@ -1047,7 +1068,7 @@ def lead_post_summary(post: dict[str, Any]) -> dict[str, Any]:
         "reply_to_handle": post.get("reply_to_handle", ""),
         "quoted_post_id": post.get("quoted_post_id", ""),
         "conversation_id": post.get("conversation_id", ""),
-        "conversation_context": post.get("conversation_context", {}),
+        "conversation_context": public_conversation_context(post),
         "language": post.get("language", "und"),
         "text": post.get("text") or post.get("clean_text") or "",
         "clean_text": post.get("clean_text") or post.get("text") or "",

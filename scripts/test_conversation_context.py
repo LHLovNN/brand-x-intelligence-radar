@@ -13,6 +13,7 @@ from src.pipeline.conversation_context import (
     prepare_context_rows,
     should_fetch_context,
 )
+from src.pipeline.dashboard_builder import public_conversation_context
 
 
 def post(index: int, **overrides):
@@ -97,6 +98,23 @@ def main() -> None:
     )
     assert "该上下文帖" in fallback_item["translation_zh"], "context fallback should be Chinese"
     assert fallback_item["translation_status"] == "fallback_summary"
+
+    public_context = public_conversation_context(
+        {
+            "conversation_context": {
+                "posts": [
+                    {
+                        "post_id": "name-only",
+                        "language": "en",
+                        "text": "@aneefahaliyu38 Aneefa 😀",
+                        "translation_zh": "@aneefahaliyu38 Aneefa 😀",
+                        "translation_status": "translated",
+                    }
+                ]
+            }
+        }
+    )
+    assert "该上下文帖" in public_context["posts"][0]["translation_zh"], "public context output should sanitize cached non-Chinese translations"
 
     class ConversationContextSource:
         def __init__(self, rows):
