@@ -35,6 +35,18 @@ def main() -> None:
     assert should_fetch_context(anchor, 0), "followers >= 1000 should trigger context when reply-shaped"
     assert should_fetch_context(post(1, conversation_id="other", post_id="1", text="plain text"), 60), "conversation_id != post_id with score >= 60 should trigger"
     assert not should_fetch_context(post(2, conversation_id="2", text="plain text", author_followers=999), 59), "low-value root-shaped post should not trigger"
+    assert not should_fetch_context(
+        post(3, brand="temu", metrics={"views": 499}, author_followers=1000),
+        80,
+    ), "competitor context should require at least 500 views"
+    assert should_fetch_context(
+        post(4, brand="temu", metrics={"views": 500}),
+        80,
+    ), "competitor context should be allowed once the 500-view threshold is met"
+    assert should_fetch_context(
+        post(5, brand="joybuy", metrics={"views": 100}, author_followers=1000),
+        0,
+    ), "primary context should not be gated by the competitor view threshold"
 
     rows = [post(index) for index in range(50)]
     rows.insert(25, anchor)

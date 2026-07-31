@@ -2077,19 +2077,28 @@ select {
 
 .featured-media-grid img,
 .featured-media-grid video,
-.media-video-shell,
 .media-image-button img {
   width: 100%;
-  aspect-ratio: 16 / 9;
   border: 1px solid var(--line-soft);
   border-radius: 8px;
   background: #101820;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.media-image-button img {
+  display: block;
+  height: auto;
+  aspect-ratio: var(--media-aspect-ratio, auto);
 }
 
 .media-video-shell {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  aspect-ratio: var(--media-aspect-ratio, 16 / 9);
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+  background: #101820;
 }
 
 .media-video,

@@ -1157,12 +1157,13 @@ function mediaNode(item, owner = {}, options = {}) {
   const imageUrl = imageMediaUrl(item);
   if (isVideoMedia(item)) {
     const originalUrl = tweetVideoOpenUrl(owner, item, options.mediaIndex) || bestVideoUrl(item);
-    if (!originalUrl) return imageUrl ? imageMediaNode(imageUrl, options) : "";
+    if (!originalUrl) return imageUrl ? imageMediaNode(imageUrl, { ...options, aspectRatio: mediaAspectRatio(item) }) : "";
+    const aspectStyle = mediaAspectStyle(item);
     const posterNode = imageUrl
       ? `<img class="media-video-thumb" src="${escapeHtml(imageUrl)}" alt="" loading="lazy" />`
       : `<span class="media-video-thumb fallback" aria-hidden="true"></span>`;
     return `
-      <div class="media-video-shell">
+      <div class="media-video-shell"${aspectStyle}>
         <a class="media-video-link" href="${escapeHtml(originalUrl)}" target="_blank" rel="noreferrer" aria-label="在 X 播放视频">
           ${posterNode}
           <span class="media-play-button" aria-hidden="true"><span></span></span>
@@ -1170,7 +1171,7 @@ function mediaNode(item, owner = {}, options = {}) {
       </div>
     `;
   }
-  return imageUrl ? imageMediaNode(imageUrl, options) : "";
+  return imageUrl ? imageMediaNode(imageUrl, { ...options, aspectRatio: mediaAspectRatio(item) }) : "";
 }
 
 function imageMediaUrl(item) {
@@ -1186,6 +1187,28 @@ function imageMediaUrls(items = []) {
     if (url && !urls.includes(url)) urls.push(url);
   });
   return urls;
+}
+
+function mediaAspectRatio(item) {
+  const candidates = [
+    item?.video_info?.aspect_ratio,
+    item?.videoInfo?.aspectRatio,
+    item?.original_info && [item.original_info.width, item.original_info.height],
+    item?.originalInfo && [item.originalInfo.width, item.originalInfo.height],
+    item?.sizes?.large && [item.sizes.large.w || item.sizes.large.width, item.sizes.large.h || item.sizes.large.height],
+  ];
+  for (const candidate of candidates) {
+    if (!Array.isArray(candidate) || candidate.length < 2) continue;
+    const width = Number(candidate[0]);
+    const height = Number(candidate[1]);
+    if (width > 0 && height > 0) return `${width} / ${height}`;
+  }
+  return "";
+}
+
+function mediaAspectStyle(item) {
+  const ratio = mediaAspectRatio(item);
+  return ratio ? ` style="--media-aspect-ratio: ${escapeHtml(ratio)}"` : "";
 }
 
 function isVideoMedia(item) {
@@ -1265,8 +1288,9 @@ function imageMediaNode(url, options = {}) {
   if (!safeUrl) return "";
   const lightboxUrls = Array.isArray(options.lightboxUrls) && options.lightboxUrls.length ? options.lightboxUrls : [safeUrl];
   const lightboxIndex = Math.max(0, lightboxUrls.indexOf(safeUrl));
+  const aspectStyle = options.aspectRatio ? ` style="--media-aspect-ratio: ${escapeHtml(options.aspectRatio)}"` : "";
   return `
-    <button type="button" class="media-image-button" data-media-lightbox="${escapeHtml(safeUrl)}" data-media-lightbox-group="${escapeHtml(JSON.stringify(lightboxUrls))}" data-media-lightbox-index="${escapeHtml(String(lightboxIndex))}" aria-label="查看大图">
+    <button type="button" class="media-image-button"${aspectStyle} data-media-lightbox="${escapeHtml(safeUrl)}" data-media-lightbox-group="${escapeHtml(JSON.stringify(lightboxUrls))}" data-media-lightbox-index="${escapeHtml(String(lightboxIndex))}" aria-label="查看大图">
       <img src="${escapeHtml(safeUrl)}" alt="" loading="lazy" />
     </button>
   `;

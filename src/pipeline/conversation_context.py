@@ -16,6 +16,7 @@ CONTEXT_BEFORE_LIMIT = 20
 CONTEXT_AFTER_LIMIT = 20
 CONTEXT_SCORE_THRESHOLD = 60
 CONTEXT_FOLLOWER_THRESHOLD = 1000
+COMPETITOR_CONTEXT_MIN_VIEWS = 500
 CONTEXT_FETCH_LIMIT = 120
 CONTEXT_TRANSLATION_TIMEOUT_SECONDS = 30
 CONTEXT_SUMMARY_TIMEOUT_SECONDS = 20
@@ -151,11 +152,26 @@ def should_fetch_context(post: dict[str, Any], score: int) -> bool:
     post_id = str(post.get("post_id") or "")
     if not conversation_id:
         return False
+    if is_competitor_post(post) and context_views(post) < COMPETITOR_CONTEXT_MIN_VIEWS:
+        return False
     has_reply_shape = conversation_id != post_id or bool(leading_mention(post))
     if not has_reply_shape:
         return False
     followers = context_followers(post)
     return score >= CONTEXT_SCORE_THRESHOLD or followers >= CONTEXT_FOLLOWER_THRESHOLD
+
+
+def is_competitor_post(post: dict[str, Any]) -> bool:
+    return str(post.get("brand") or "").strip().lower() in {"temu", "competitor"}
+
+
+def context_views(post: dict[str, Any]) -> int:
+    metrics = post.get("metrics") or {}
+    value = metrics.get("views", metrics.get("total_views", post.get("view_count", post.get("views", 0))))
+    try:
+        return int(value or 0)
+    except (TypeError, ValueError):
+        return 0
 
 
 def context_followers(post: dict[str, Any]) -> int:
