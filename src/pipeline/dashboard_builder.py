@@ -174,6 +174,7 @@ def build_dashboard_data(
     for path, payload in daily_history_files(target).items():
         data_bundle[path] = payload
     write_data_bundle(target.parent / "dashboard-data-bundle.js", data_bundle)
+    refresh_index_asset_versions(target.parent / "index.html", asset_cache_token(report_date, overview["generated_at"]))
     return public_overview
 
 
@@ -314,6 +315,25 @@ def write_data_bundle(path: Path, data: dict[str, Any]) -> None:
         file.write("window.__DASHBOARD_DATA__ = ")
         file.write(payload.replace("</", "<\\/"))
         file.write(";\n")
+
+
+def asset_cache_token(report_date: str, generated_at: str) -> str:
+    date_part = re.sub(r"\D", "", report_date)
+    generated_part = re.sub(r"[^0-9TZ]", "", generated_at)
+    return f"{date_part}-{generated_part}"
+
+
+def refresh_index_asset_versions(path: Path, token: str) -> None:
+    if not path.exists():
+        return
+    html = path.read_text(encoding="utf-8")
+    updated = re.sub(
+        r'((?:\./)?(?:assets/styles\.css|dashboard-data-bundle\.js|assets/app\.js)\?v=)[^"]+',
+        rf"\g<1>{token}",
+        html,
+    )
+    if updated != html:
+        path.write_text(updated, encoding="utf-8")
 
 
 def build_executive_summary(clusters: list[dict[str, Any]], competitor: dict[str, Any]) -> dict[str, str]:

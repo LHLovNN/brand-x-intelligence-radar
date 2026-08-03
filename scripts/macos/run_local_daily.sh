@@ -47,6 +47,7 @@ ensure_no_local_source_changes() {
   # Daily automation owns dashboard artifacts. Top-level docs are project
   # collateral and should not block the monitoring run when left in progress.
   if ! git diff --quiet -- . \
+    ':!public/index.html' \
     ':!public/dashboard-data/*.json' \
     ':!public/dashboard-data/daily/*.json' \
     ':!public/dashboard-data-bundle.js' \
@@ -57,7 +58,7 @@ ensure_no_local_source_changes() {
 
   untracked="$(
     git ls-files --others --exclude-standard \
-      | grep -vE '^(public/dashboard-data/[^/]+\.json|public/dashboard-data/daily/[^/]+\.json|public/dashboard-data-bundle\.js|docs/[^/]+\.(md|html))$' \
+      | grep -vE '^(public/index\.html|public/dashboard-data/[^/]+\.json|public/dashboard-data/daily/[^/]+\.json|public/dashboard-data-bundle\.js|docs/[^/]+\.(md|html))$' \
       || true
   )"
   if [[ -n "$untracked" ]]; then
@@ -150,7 +151,7 @@ log "Verifying generated dashboard data."
 ensure_real_dashboard_data
 
 log "Staging public dashboard artifacts only."
-git add public/dashboard-data/*.json public/dashboard-data/daily/*.json public/dashboard-data-bundle.js
+git add public/index.html public/dashboard-data/*.json public/dashboard-data/daily/*.json public/dashboard-data-bundle.js
 
 if git diff --cached --quiet; then
   log "No dashboard data changes to commit."
