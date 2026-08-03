@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Brand X Intelligence Radar 产品白皮书笔记幻灯片</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=IBM+Plex+Mono:wght@300;400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a2332;
+  --ink-rgb: 26,35,50;
+  --paper: #faf9f5;
+  --paper-rgb: 250,249,245;
+  --accent: #2c5fb8;
+  --accent-rgb: 44,95,184;
+  --muted: #6b7180;
+  --serif-zh: "Noto Serif SC", "Source Serif 4", serif;
+  --sans-zh: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --mono: "IBM Plex Mono", monospace;
+  --w-quote: min(100%, 48rem);
+  --w-statement: min(100%, 56rem);
+  --w-note: min(100%, 64rem);
+  --w-default: min(100%, 76rem);
+  --w-wide: min(100%, 92rem);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans-zh);
+  text-wrap: pretty;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, p, li, blockquote, cite { text-wrap: pretty; }
+#deck {
+  position: fixed;
+  inset: 0;
+  width: 10000vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform .85s cubic-bezier(.77,0,.175,1);
+  z-index: 10;
+  will-change: transform;
+}
+.slide {
+  width: 100vw;
+  height: 100vh;
+  flex: 0 0 100vw;
+  position: relative;
+  padding: clamp(2rem, 5vw, 5.5rem) clamp(2rem, 6vw, 6.5rem) clamp(1.5rem, 3vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.slide.dark { background: var(--ink); color: var(--paper); }
+.slide.light { background: var(--paper); color: var(--ink); }
+.slide.bare .chrome { display: none; }
+.slide.bare .foot { opacity: .35; }
+.slide-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slide-body.bottom { justify-content: flex-end; padding-bottom: clamp(2rem, 6vh, 4.5rem); }
+.display-zh {
+  font-family: var(--serif-zh);
+  font-weight: 900;
+  font-size: clamp(3rem, 7vw, 7rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+.h1-zh {
+  font-family: var(--serif-zh);
+  font-weight: 700;
+  font-size: clamp(2rem, 4.6vw, 4.2rem);
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+.h2-zh {
+  font-family: var(--serif-zh);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2.6rem);
+  line-height: 1.28;
+}
+.lead-zh {
+  font-family: var(--serif-zh);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.5;
+}
+.body-zh {
+  font-family: var(--sans-zh);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 1.55vw, 1.75rem);
+  line-height: 1.55;
+}
+.kicker {
+  font-family: var(--mono);
+  font-size: clamp(.8rem, .9vw, 1rem);
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  opacity: .5;
+  margin-bottom: 1vh;
+}
+.meta {
+  font-family: var(--mono);
+  font-size: clamp(.75rem, .8vw, .9rem);
+  letter-spacing: .08em;
+  opacity: .5;
+}
+.chrome {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: clamp(.75rem, .8vw, .9rem);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .45;
+  margin-bottom: 2vh;
+}
+.foot {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: clamp(.75rem, .8vw, .9rem);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .4;
+  margin-top: auto;
+  padding-top: 2vh;
+}
+.w-quote { width: var(--w-quote); margin-left: auto; margin-right: auto; }
+.w-statement { width: var(--w-statement); margin-left: auto; margin-right: auto; }
+.w-note { width: var(--w-note); margin-left: auto; margin-right: auto; }
+.w-default { width: var(--w-default); margin-left: auto; margin-right: auto; }
+.w-wide { width: var(--w-wide); margin-left: auto; margin-right: auto; }
+.note-stack {
+  width: var(--w-default);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(2rem, 4vh, 3.6rem);
+}
+.section-title {
+  max-width: 11em;
+  margin: 0 auto;
+  text-align: center;
+}
+.grid-2-6-6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 3vw, 3rem);
+  flex: 1;
+  min-height: 0;
+}
+.grid-2-7-5 {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: clamp(1rem, 3vw, 3rem);
+  flex: 1;
+  min-height: 0;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: clamp(.8rem, 2vw, 2rem);
+  min-height: 0;
+}
+.callout {
+  font-family: var(--serif-zh);
+  font-weight: 400;
+  font-size: clamp(2rem, 3.5vw, 3.6rem);
+  line-height: 1.45;
+  border-left: 3px solid var(--accent);
+  padding-left: clamp(1rem, 2vw, 1.75rem);
+  max-width: 14em;
+}
+.callout cite {
+  display: block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(.8rem, 1vw, 1rem);
+  margin-top: 1.8vh;
+  opacity: .6;
+  font-family: var(--mono);
+}
+.guest-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.guest-mark::before {
+  content: "";
+  display: block;
+  width: clamp(2.4rem, 4em, 4.8rem);
+  height: 1px;
+  background: currentColor;
+  opacity: .35;
+  margin-bottom: clamp(1.4rem, 3vh, 2.4rem);
+}
+.callout-mark {
+  border-left: none;
+  padding-left: 0;
+  padding-top: clamp(1.6rem, 3vh, 2.4rem);
+  position: relative;
+}
+.callout-mark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(.5rem, .75vw, .85rem);
+  height: clamp(.5rem, .75vw, .85rem);
+  background: var(--accent);
+  opacity: .7;
+}
+.timeline-row { position: relative; }
+.timeline-row::before {
+  content: "";
+  position: absolute;
+  top: clamp(.85rem, 1.6vh, 1.4rem);
+  left: 6%;
+  right: 6%;
+  height: 1px;
+  background: rgba(var(--ink-rgb), .1);
+  z-index: 0;
+}
+.slide.dark .timeline-row::before { background: rgba(var(--paper-rgb), .1); }
+.timeline-row.thick::before { height: 1.5px; opacity: .8; }
+.timeline-node {
+  position: relative;
+  z-index: 1;
+}
+.timeline-node .meta {
+  padding-right: clamp(.5rem, 1vw, 1rem);
+  display: inline-block;
+}
+.slide.light .timeline-node .meta { background: var(--paper); }
+.slide.dark .timeline-node .meta { background: var(--ink); }
+.summary-num {
+  font-family: var(--serif-zh);
+  font-size: clamp(3.2rem, 7vw, 6.4rem);
+  font-weight: 600;
+  color: var(--accent);
+  opacity: .85;
+  line-height: .95;
+  letter-spacing: 0;
+}
+.stat-num {
+  font-family: var(--serif-zh);
+  font-weight: 800;
+  font-size: clamp(5rem, 13vw, 12rem);
+  line-height: 1;
+  color: var(--accent);
+}
+.table-wrap {
+  width: var(--w-wide);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.4rem, 3.5vh, 2.8rem);
+}
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 clamp(.45rem, 1vh, .8rem);
+  font-family: var(--sans-zh);
+  font-size: clamp(1.08rem, 1.22vw, 1.42rem);
+  line-height: 1.45;
+}
+.data-table th,
+.data-table td {
+  padding: clamp(.8rem, 1.35vw, 1.25rem) clamp(.9rem, 1.6vw, 1.45rem);
+  text-align: center;
+  vertical-align: middle;
+}
+.data-table th {
+  font-family: var(--mono);
+  font-size: clamp(.78rem, .82vw, .95rem);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), .08);
+}
+.data-table td { background: rgba(var(--ink-rgb), .045); }
+.slide.dark .data-table td { background: rgba(var(--paper-rgb), .075); }
+.data-table.keyed td:first-child,
+.data-table.keyed th:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+.data-table.left td,
+.data-table.left th { text-align: left; }
+.data-table.compact th,
+.data-table.compact td {
+  padding-top: clamp(.58rem, .9vw, .82rem);
+  padding-bottom: clamp(.58rem, .9vw, .82rem);
+}
+.evidence-list {
+  width: 100%;
+  border-top: 1px solid rgba(var(--paper-rgb), .14);
+}
+.evidence-row {
+  display: grid;
+  grid-template-columns: minmax(7em, .34fr) 1fr minmax(4.5em, .18fr);
+  gap: clamp(1rem, 2.5vw, 2.4rem);
+  align-items: center;
+  padding: clamp(1rem, 2.4vh, 1.8rem) 0;
+  border-bottom: 1px solid rgba(var(--paper-rgb), .14);
+}
+.evidence-row strong {
+  font-family: var(--serif-zh);
+  font-size: clamp(1.7rem, 2.2vw, 2.4rem);
+  line-height: 1.12;
+  font-weight: 700;
+}
+.evidence-row p {
+  font-family: var(--sans-zh);
+  font-size: clamp(1.18rem, 1.45vw, 1.65rem);
+  line-height: 1.45;
+  color: rgba(var(--paper-rgb), .78);
+}
+.evidence-row span {
+  font-family: var(--mono);
+  font-size: clamp(.72rem, .75vw, .86rem);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(var(--paper-rgb), .45);
+  text-align: left;
+}
+.soft-note { color: rgba(var(--ink-rgb), .58); }
+.slide.dark .soft-note { color: rgba(var(--paper-rgb), .62); }
+#nav {
+  position: fixed;
+  left: 50%;
+  bottom: 2.2vh;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  gap: 9px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+#nav .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+#nav .dot.active {
+  background: rgba(255,255,255,.95);
+  width: 20px;
+  border-radius: 999px;
+}
+.anim-item {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.slide.active .anim-item { opacity: 1; transform: translateY(0); }
+.slide.active .anim-item:nth-child(1) { transition-delay: .05s; }
+.slide.active .anim-item:nth-child(2) { transition-delay: .15s; }
+.slide.active .anim-item:nth-child(3) { transition-delay: .25s; }
+.slide.active .anim-item:nth-child(4) { transition-delay: .35s; }
+.slide.active .anim-item:nth-child(5) { transition-delay: .45s; }
+.slide.active .anim-item:nth-child(n+6) { transition-delay: .55s; }
+</style>
+</head>
+<body>
+<div id="deck">
+
+<section class="slide dark bare active" data-theme="dark" data-screen-label="Cover" data-source="标题与版本" style="text-align:center;align-items:center">
+  <div class="slide-body" style="align-items:center">
+    <div class="w-statement" style="display:flex;flex-direction:column;align-items:center;gap:clamp(1.4rem,3vh,2.4rem)">
+      <div class="kicker anim-item" style="color:var(--accent);opacity:1">PUBLIC WHITEPAPER NOTE</div>
+      <h1 class="display-zh anim-item" style="max-width:9.5em">Brand X Intelligence Radar</h1>
+      <p class="lead-zh anim-item" style="max-width:24em;opacity:.62">MVP 0.1，公开脱敏版，面向品牌公开舆情监测和每日情报归档</p>
+    </div>
+  </div>
+  <div class="foot" style="width:100%">
+    <div>docs/PRODUCT_WHITEPAPER.md</div>
+    <div>01 / 25</div>
+  </div>
+</section>
+
+<section class="slide light" data-theme="light" data-screen-label="Questions" data-source="1. 摘要，三个日常问题">
+  <div class="chrome"><div>摘要 · 三个日常问题</div><div>02 / 25</div></div>
+  <div class="slide-body">
+    <div class="note-stack">
+      <h2 class="h1-zh anim-item section-title">白皮书先把产品压到三个问题里</h2>
+      <div class="grid-3">
+        <div class="anim-item"><div class="meta">01</div><p class="body-zh" style="margin-top:1vh">今天哪些舆情最值得优先看</p></div>
+        <div class="anim-item"><div class="meta">02</div><p class="body-zh" style="margin-top:1vh">每条舆情为什么重要，证据来自哪里</p></div>
+        <div class="anim-item"><div class="meta">03</div><p class="body-zh" style="margin-top:1vh">主品牌相对于样例竞品的讨论热度和风险语境有什么变化</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 1. 摘要</div><div>02 / 25</div></div>
+</section>
+
+<section class="slide dark" data-theme="dark" data-screen-label="Problem" data-source="2. 背景与问题，高噪声、弱结构、跨语言、扩散快">
+  <div class="chrome"><div>背景 · 问题压力</div><div>03 / 25</div></div>
+  <div class="slide-body">
+    <div class="note-stack">
+      <h2 class="h1-zh anim-item" style="max-width:13em">公开社媒的问题不是缺内容，而是内容没有进入工作结构</h2>
+      <div class="grid-3">
+        <div class="anim-item"><div class="meta" style="color:var(--accent);opacity:1">噪声</div><p class="body-zh" style="margin-top:1vh">用户投诉、正向体验、竞品对照、渠道信息和行业背景混在一起。</p></div>
+        <div class="anim-item"><div class="meta" style="color:var(--accent);opacity:1">语言</div><p class="body-zh" style="margin-top:1vh">非中文内容要先翻译再判断，影响晨会、日报和跨团队同步。</p></div>
+        <div class="anim-item"><div class="meta" style="color:var(--accent);opacity:1">证据</div><p class="body-zh" style="margin-top:1vh">结论如果不能回到原帖、作者和互动指标，就难以支持行动。</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 2. 背景与问题</div><div>03 / 25</div></div>
+</section>
+
+<section class="slide light bare" data-theme="light" data-screen-label="Statement" data-source="2. 背景与问题，产品目标">
+  <div class="slide-body" style="align-items:flex-start">
+    <div class="w-statement">
+      <div class="kicker anim-item" style="margin-bottom:clamp(1.6rem,4vh,3rem)">PRODUCT TARGET</div>
+      <h2 class="display-zh anim-item" style="font-size:clamp(3.2rem,8vw,7.6rem);max-width:11em">把看见信息升级为形成可执行情报</h2>
+    </div>
+  </div>
+  <div class="foot" style="width:100%"><div>白皮书 2. 背景与问题</div><div>04 / 25</div></div>
+</section>
+
+<section class="slide light" data-theme="light" data-screen-label="Principles" data-source="3. 产品定位，五个优先">
+  <div class="chrome"><div>定位 · 五个优先</div><div>05 / 25</div></div>
+  <div class="slide-body">
+    <div class="w-wide">
+      <h2 class="h1-zh anim-item" style="text-align:center;max-width:13em;margin:0 auto clamp(2rem,5vh,4rem)">产品定位不是监测更多，而是读得更准</h2>
+      <div class="timeline-row thick" style="display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(.8rem,1.8vw,1.6rem)">
+        <div class="timeline-node anim-item"><div class="meta">情报</div><p class="body-zh" style="margin-top:1vh">先呈现值得行动或复盘的焦点。</p></div>
+        <div class="timeline-node anim-item"><div class="meta">证据</div><p class="body-zh" style="margin-top:1vh">保留来源、作者、指标、入口和上下文。</p></div>
+        <div class="timeline-node anim-item"><div class="meta">中文</div><p class="body-zh" style="margin-top:1vh">默认中文译文或中文原帖。</p></div>
+        <div class="timeline-node anim-item"><div class="meta">解释</div><p class="body-zh" style="margin-top:1vh">评分、标签和建议动作需要被业务方理解。</p></div>
+        <div class="timeline-node anim-item"><div class="meta">归档</div><p class="body-zh" style="margin-top:1vh">日报按日期沉淀，支持回看和复盘。</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 3. 产品定位</div><div>05 / 25</div></div>
+</section>
+
+<section class="slide dark" data-theme="dark" data-screen-label="Scenario" data-source="4. 用户与使用场景">
+  <div class="chrome"><div>用户 · 使用场景</div><div>06 / 25</div></div>
+  <div class="grid-2-6-6" style="align-items:center">
+    <div class="anim-item">
+      <div class="kicker">WORKFLOW</div>
+      <h2 class="h1-zh" style="max-width:9em;margin-bottom:clamp(1rem,3vh,2rem)">目标用户被组织在同一条日常链路里</h2>
+      <p class="body-zh" style="max-width:18em;opacity:.7">管理层、公关、市场、客服、履约、产品和运营，在同一份日报中看见不同动作。</p>
+    </div>
+    <div class="anim-item" style="padding-left:clamp(1rem,3vw,3rem)">
+      <div class="evidence-list">
+        <div class="evidence-row"><strong>晨会巡检</strong><p>查看今日最高优先级内容、风险级别和建议动作。</p><span>START</span></div>
+        <div class="evidence-row"><strong>原帖核查</strong><p>进入原帖证据，查看作者、正文、互动指标、媒体和上下文。</p><span>VERIFY</span></div>
+        <div class="evidence-row"><strong>历史复盘</strong><p>按日期回看日报，判断问题是否重复出现或逐渐升温。</p><span>REVIEW</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 4. 用户与使用场景</div><div>06 / 25</div></div>
+</section>
+
+<section class="slide light" data-theme="light" data-screen-label="Information Architecture" data-source="5. 产品界面与信息架构">
+  <div class="chrome"><div>信息架构 · 四个页面</div><div>07 / 25</div></div>
+  <div class="slide-body">
+    <div class="w-wide">
+      <h2 class="h1-zh anim-item" style="text-align:center;max-width:13em;margin:0 auto clamp(2rem,5vh,4rem)">四个页面对应四个工作问题</h2>
+      <div class="timeline-row thick" style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1rem,2vw,2rem)">
+        <div class="timeline-node anim-item"><div class="meta" style="color:var(--accent);opacity:1">舆情焦点</div><p class="body-zh" style="margin-top:1vh">今天最该看什么。</p></div>
+        <div class="timeline-node anim-item"><div class="meta" style="color:var(--accent);opacity:1">全部舆情</div><p class="body-zh" style="margin-top:1vh">今天还发生了什么。</p></div>
+        <div class="timeline-node anim-item"><div class="meta" style="color:var(--accent);opacity:1">舆情日报</div><p class="body-zh" style="margin-top:1vh">如何对上或对外汇报。</p></div>
+        <div class="timeline-node anim-item"><div class="meta" style="color:var(--accent);opacity:1">设置</div><p class="body-zh" style="margin-top:1vh">数据是否可信，分数如何理解。</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 5. 产品界面与信息架构</div><div>07 / 25</div></div>
+</section>
+
+<section class="slide light" data-theme="light" data-screen-label="Focus Page" data-source="5.1 舆情焦点">
+  <div class="chrome"><div>页面 · 舆情焦点</div><div>08 / 25</div></div>
+  <div class="slide-body">
+    <div class="table-wrap">
+      <h2 class="h1-zh anim-item" style="text-align:center;max-width:10em;margin:0 auto">第一屏只回答今天最该看什么</h2>
+      <table class="data-table keyed compact left anim-item">
+        <tbody>
+          <tr><td>来源身份</td><td>作者、公开来源类型、粉丝量和发布时间</td></tr>
+          <tr><td>中文正文</td><td>优先中文译文或中文原帖，支持切换原文</td></tr>
+          <tr><td>入选原因</td><td>解释为什么进入焦点，而不是只显示排序结果</td></tr>
+          <tr><td>建议动作</td><td>持续监测、人工核查、公关回应或高层同步</td></tr>
+        </tbody>
+      </table>
+      <p class="body-zh anim-item soft-note" style="text-align:center;max-width:28em;margin:0 auto">页面按传播风险、品牌相关度、业务价值和未来潜力筛出重点内容。</p>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 5.1 舆情焦点</div><div>08 / 25</div></div>
+</section>
+
+<section class="slide dark" data-theme="dark" data-screen-label="Pages" data-source="5.2 全部舆情与 5.3 舆情日报">
+  <div class="chrome"><div>页面 · 流与日报</div><div>09 / 25</div></div>
+  <div class="grid-2-6-6" style="align-items:center">
+    <div class="anim-item">
+      <div class="kicker">FULL STREAM</div>
+      <h2 class="h2-zh" style="margin-bottom:clamp(1rem,2vh,2rem)">全部舆情保留更多有效内容</h2>
+      <p class="body-zh" style="max-width:16em;opacity:.72">适合扫描同一天的主品牌与竞品讨论，避免焦点页遗漏业务方关心但暂未达到高优先级的内容。</p>
+    </div>
+    <div class="anim-item">
+      <div class="kicker" style="color:var(--accent);opacity:1">DAILY REPORT</div>
+      <h2 class="h2-zh" style="margin-bottom:clamp(1rem,2vh,2rem)">舆情日报把焦点变成可同步材料</h2>
+      <p class="body-zh" style="max-width:16em;opacity:.72">日报按日期归档，包含摘要、关键指标、主品牌焦点、样例竞品基线和历史列表。</p>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 5.2 与 5.3</div><div>09 / 25</div></div>
+</section>
+
+<section class="slide light" data-theme="light" data-screen-label="Settings" data-source="5.4 设置">
+  <div class="chrome"><div>页面 · 设置</div><div>10 / 25</div></div>
+  <div class="slide-body">
+    <div class="note-stack">
+      <h2 class="h1-zh anim-item" style="max-width:13em">设置页不是配置入口，而是可信度说明页</h2>
+      <div class="grid-3">
+        <div class="anim-item"><div class="meta">状态</div><p class="body-zh" style="margin-top:1vh">样例模式或正常采集状态，避免用户误解日报完整性。</p></div>
+        <div class="anim-item"><div class="meta">漏斗</div><p class="body-zh" style="margin-top:1vh">原始采集、有效内容、主品牌与竞品候选及有效数量。</p></div>
+        <div class="anim-item"><div class="meta">方法</div><p class="body-zh" style="margin-top:1vh">中文处理覆盖、IPS 与 CSI 定义、运行警告。</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 5.4 设置</div><div>10 / 25</div></div>
+</section>
+
+<section class="slide dark" data-theme="dark" data-screen-label="Capability" data-source="6.1 可配置品牌监测">
+  <div class="chrome"><div>能力 · 配置结构</div><div>11 / 25</div></div>
+  <div class="slide-body">
+    <div class="note-stack">
+      <h2 class="h1-zh anim-item" style="max-width:13em">核心能力从主品牌加样例竞品的结构开始</h2>
+      <div class="grid-3">
+        <div class="anim-item"><div class="meta" style="color:var(--accent);opacity:1">词表</div><p class="body-zh" style="margin-top:1vh">品牌词、别名、多语言表达、高风险词和机会词。</p></div>
+        <div class="anim-item"><div class="meta" style="color:var(--accent);opacity:1">上下文</div><p class="body-zh" style="margin-top:1vh">易混淆词、相关性上下文、垃圾内容和无关内容过滤规则。</p></div>
+        <div class="anim-item"><div class="meta" style="color:var(--accent);opacity:1">规模</div><p class="body-zh" style="margin-top:1vh">每日采集规模和运行保护阈值，让 MVP 可控运行。</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 6.1 可配置品牌监测</div><div>11 / 25</div></div>
+</section>
+
+<section class="slide light bare" data-theme="light" data-screen-label="Filtering" data-source="6.2 质量过滤与误匹配控制">
+  <div class="slide-body" style="align-items:center;text-align:center">
+    <div class="w-quote guest-mark">
+      <div class="kicker anim-item">QUALITY FILTER</div>
+      <h2 class="h1-zh anim-item" style="max-width:12em">同一个词在购物售后语境和金融投资语境中可能含义不同</h2>
+      <p class="body-zh anim-item" style="max-width:22em;margin:clamp(1.6rem,3.5vh,2.6rem) auto 0;opacity:.62">白皮书用退货退款相关讨论和投资回报相关讨论说明，过滤逻辑必须读上下文。</p>
+    </div>
+  </div>
+  <div class="foot" style="width:100%"><div>白皮书 6.2 质量过滤与误匹配控制</div><div>12 / 25</div></div>
+</section>
+
+<section class="slide light" data-theme="light" data-screen-label="Chinese First" data-source="6.3 中文优先阅读">
+  <div class="chrome"><div>能力 · 中文优先</div><div>13 / 25</div></div>
+  <div class="slide-body">
+    <div class="note-stack">
+      <h2 class="h1-zh anim-item section-title">中文优先不是替用户改写事实</h2>
+      <div class="grid-3">
+        <div class="anim-item"><div class="meta">忠实</div><p class="body-zh" style="margin-top:1vh">不改写事实，不替用户补充判断。</p></div>
+        <div class="anim-item"><div class="meta">可回退</div><p class="body-zh" style="margin-top:1vh">翻译缺失时展示原文，并在状态中提示。</p></div>
+        <div class="anim-item"><div class="meta">可验证</div><p class="body-zh" style="margin-top:1vh">保留原文入口，便于人工核查。</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 6.3 中文优先阅读</div><div>13 / 25</div></div>
+</section>
+
+<section class="slide dark" data-theme="dark" data-screen-label="Evidence" data-source="6.5 证据链组织">
+  <div class="chrome"><div>能力 · 证据链</div><div>14 / 25</div></div>
+  <div class="grid-2-6-6" style="align-items:center">
+    <div class="anim-item">
+      <div class="kicker">EVIDENCE CHAIN</div>
+      <h2 class="h1-zh" style="max-width:10em;margin-bottom:clamp(1rem,3vh,2rem)">证据链把系统判断拉回原始证据</h2>
+      <p class="body-zh" style="max-width:18em;opacity:.7">它降低误判和过度解读风险，让团队能从结论回到来源层。</p>
+    </div>
+    <div class="anim-item" style="padding-left:clamp(1rem,3vw,3rem)">
+      <div class="evidence-list">
+        <div class="evidence-row"><strong>热源</strong><p>最早或最具代表性的起点内容。</p><span>ORIGIN</span></div>
+        <div class="evidence-row"><strong>扩散源</strong><p>高粉账号或引用较多的扩散节点。</p><span>SPREAD</span></div>
+        <div class="evidence-row"><strong>当事人</strong><p>疑似用户亲历或投诉表达。</p><span>USER</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 6.5 证据链组织</div><div>14 / 25</div></div>
+</section>
+
+<section class="slide dark bare" data-theme="dark" data-screen-label="Competitor Baseline" data-source="6.6 竞品基线">
+  <div class="slide-body" style="align-items:center;text-align:center">
+    <div class="w-quote guest-mark">
+      <div class="kicker anim-item" style="margin-bottom:clamp(1rem,2vh,1.6rem)">COMPETITOR BASELINE</div>
+      <h2 class="h1-zh anim-item" style="max-width:12em">样例竞品模块不是完整竞品分析</h2>
+      <p class="body-zh anim-item" style="max-width:22em;margin:clamp(1.6rem,3.5vh,2.6rem) auto 0;opacity:.62">它只提供外部讨论参照，帮助主品牌声量不要被孤立解读。</p>
+    </div>
+  </div>
+  <div class="foot" style="width:100%"><div>白皮书 6.6 竞品基线</div><div>15 / 25</div></div>
+</section>
+
+<section class="slide light" data-theme="light" data-screen-label="IPS Table" data-source="7.1 IPS，七个维度加权">
+  <div class="chrome"><div>评分 · IPS</div><div>16 / 25</div></div>
+  <div class="slide-body">
+    <div class="table-wrap">
+      <h2 class="h1-zh anim-item" style="text-align:center;max-width:11em;margin:0 auto">IPS 是主品牌舆情综合优先级分</h2>
+      <table class="data-table keyed compact anim-item">
+        <thead>
+          <tr><th>维度</th><th>权重</th><th>白皮书里的含义</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>品牌相关度</td><td>20%</td><td>是否明确指向主品牌、别名或多语言关键词</td></tr>
+          <tr><td>风险/机会强度</td><td>18%</td><td>投诉风险、传播机会或普通提及</td></tr>
+          <tr><td>当前影响力</td><td>16%</td><td>互动量、浏览量和作者影响力</td></tr>
+          <tr><td>未来发酵潜力</td><td>15%</td><td>引用、账号影响力、相似内容密度和扩散空间</td></tr>
+          <tr><td>可信度</td><td>13%</td><td>多帖佐证、上下文证据和证据完整性</td></tr>
+          <tr><td>业务影响面</td><td>10%</td><td>对支付、履约、售后、信任和安全等链路的影响</td></tr>
+          <tr><td>处置紧迫性</td><td>8%</td><td>是否需要快速同步、核查或准备回应</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 7.1 IPS</div><div>16 / 25</div></div>
+</section>
+
+<section class="slide light" data-theme="light" data-screen-label="Risk Levels" data-source="7.2 风险等级，7.3 CSI，7.4 建议动作">
+  <div class="chrome"><div>评分 · 等级与动作</div><div>17 / 25</div></div>
+  <div class="slide-body">
+    <div class="table-wrap">
+      <h2 class="h1-zh anim-item" style="text-align:center;max-width:11em;margin:0 auto">风险等级是工作优先级，不是事实裁定</h2>
+      <table class="data-table keyed compact anim-item">
+        <tbody>
+          <tr><td>紧急</td><td>88 及以上，立即复盘或高层同步</td></tr>
+          <tr><td>高风险</td><td>78 到 87，人工核查或公关准备</td></tr>
+          <tr><td>中风险</td><td>58 到 77，进入重点观察</td></tr>
+          <tr><td>建议动作</td><td>核查、回应、同步、观察或借势传播</td></tr>
+        </tbody>
+      </table>
+      <p class="body-zh anim-item soft-note" style="text-align:center;max-width:28em;margin:0 auto">CSI 更偏观察价值，不与 IPS 直接比较，也不代表竞品风险严重程度。</p>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 7.2 至 7.4</div><div>17 / 25</div></div>
+</section>
+
+<section class="slide dark" data-theme="dark" data-screen-label="Data Flow" data-source="8. 数据与系统流程">
+  <div class="chrome"><div>系统 · 数据流程</div><div>18 / 25</div></div>
+  <div class="slide-body">
+    <div class="w-wide">
+      <h2 class="h1-zh anim-item" style="text-align:center;max-width:13em;margin:0 auto clamp(2rem,5vh,4rem)">数据流程从公开内容一路走到静态仪表盘</h2>
+      <div class="timeline-row thick" style="display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(.8rem,1.6vw,1.6rem)">
+        <div class="timeline-node anim-item"><div class="meta" style="color:var(--accent);opacity:1">采集</div><p class="body-zh" style="margin-top:1vh">每日窗口和运行保护。</p></div>
+        <div class="timeline-node anim-item"><div class="meta" style="color:var(--accent);opacity:1">归一</div><p class="body-zh" style="margin-top:1vh">正文、作者、时间、指标和品牌候选。</p></div>
+        <div class="timeline-node anim-item"><div class="meta" style="color:var(--accent);opacity:1">中文</div><p class="body-zh" style="margin-top:1vh">译文、中文原帖和原文回退。</p></div>
+        <div class="timeline-node anim-item"><div class="meta" style="color:var(--accent);opacity:1">判断</div><p class="body-zh" style="margin-top:1vh">主题聚类、IPS、CSI 和证据链。</p></div>
+        <div class="timeline-node anim-item"><div class="meta" style="color:var(--accent);opacity:1">交付</div><p class="body-zh" style="margin-top:1vh">日报、历史索引和静态看板。</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 8. 数据与系统流程</div><div>18 / 25</div></div>
+</section>
+
+<section class="slide light" data-theme="light" data-screen-label="Trust" data-source="9. 产品可信度设计">
+  <div class="chrome"><div>可信度 · 三层分离</div><div>19 / 25</div></div>
+  <div class="slide-body">
+    <div class="note-stack">
+      <h2 class="h1-zh anim-item section-title">可信度来自状态透明和判断分层</h2>
+      <div class="grid-3">
+        <div class="anim-item"><div class="meta">原始事实</div><p class="body-zh" style="margin-top:1vh">公开正文、作者、时间、互动指标和链接。</p></div>
+        <div class="anim-item"><div class="meta">系统加工</div><p class="body-zh" style="margin-top:1vh">中文译文、摘要、主题、标签、聚类和分数。</p></div>
+        <div class="anim-item"><div class="meta">行动建议</div><p class="body-zh" style="margin-top:1vh">核查、回应、同步、观察或借势传播。</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 9. 产品可信度设计</div><div>19 / 25</div></div>
+</section>
+
+<section class="slide dark bare" data-theme="dark" data-screen-label="Boundary" data-source="10. 适用边界">
+  <div class="slide-body bottom" style="align-items:flex-start">
+    <div class="w-statement">
+      <div class="kicker anim-item" style="color:var(--accent);opacity:1;margin-bottom:clamp(1.4rem,3vh,2.4rem)">BOUNDARY</div>
+      <h2 class="h1-zh anim-item" style="max-width:13em">这不是全量监听系统，也不是自动化危机处置系统</h2>
+    </div>
+  </div>
+  <div class="foot" style="width:100%"><div>白皮书 10. 适用边界</div><div>20 / 25</div></div>
+</section>
+
+<section class="slide light" data-theme="light" data-screen-label="Boundaries" data-source="10. 适用边界，六个边界">
+  <div class="chrome"><div>边界 · 六个提醒</div><div>21 / 25</div></div>
+  <div class="slide-body">
+    <div class="table-wrap">
+      <h2 class="h1-zh anim-item" style="text-align:center;max-width:11em;margin:0 auto">明确边界是为了防止 MVP 被用错</h2>
+      <table class="data-table keyed compact anim-item">
+        <tbody>
+          <tr><td>数据覆盖</td><td>只覆盖已配置来源和采集窗口内的公开内容</td></tr>
+          <tr><td>语义判断</td><td>主题、情绪、风险等级和动作是辅助判断</td></tr>
+          <tr><td>翻译</td><td>中文译文提升阅读效率，重要表达仍需结合原文确认</td></tr>
+          <tr><td>竞品</td><td>样例竞品基线提供背景参照，不构成完整竞品研究</td></tr>
+          <tr><td>实时性</td><td>当前以日报和归档为核心，不承诺秒级实时预警</td></tr>
+          <tr><td>外部验证</td><td>支持和反证结构已预留，完整核验仍需后续增强</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 10. 适用边界</div><div>21 / 25</div></div>
+</section>
+
+<section class="slide light" data-theme="light" data-screen-label="Metrics" data-source="11. 衡量指标">
+  <div class="chrome"><div>衡量 · MVP 指标</div><div>22 / 25</div></div>
+  <div class="slide-body">
+    <div class="table-wrap">
+      <h2 class="h1-zh anim-item" style="text-align:center;max-width:12em;margin:0 auto">产品是否有效，不只看采集数量</h2>
+      <table class="data-table keyed compact anim-item">
+        <thead>
+          <tr><th>指标</th><th>白皮书里的含义</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>有效内容率</td><td>有效内容除以原始采集内容，衡量过滤质量</td></tr>
+          <tr><td>焦点命中率</td><td>焦点内容中被业务方认可为值得关注的比例</td></tr>
+          <tr><td>误报率</td><td>被人工判断为无关、误匹配或不应进入汇报的比例</td></tr>
+          <tr><td>中文可读率</td><td>可直接中文阅读的内容占比</td></tr>
+          <tr><td>核查闭环率</td><td>高风险内容中完成原帖核查和责任团队判断的比例</td></tr>
+          <tr><td>日报使用率</td><td>管理层或业务团队实际打开、引用、转发日报的频率</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 11. 衡量指标</div><div>22 / 25</div></div>
+</section>
+
+<section class="slide light" data-theme="light" data-screen-label="Roadmap" data-source="12. 路线图">
+  <div class="chrome"><div>路线图 · 近期到长期</div><div>23 / 25</div></div>
+  <div class="slide-body">
+    <div class="w-wide">
+      <h2 class="h1-zh anim-item" style="text-align:center;max-width:13em;margin:0 auto clamp(2rem,5vh,4rem)">路线图从页面质量走向团队闭环</h2>
+      <div class="timeline-row thick" style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,2rem)">
+        <div class="timeline-node anim-item"><div class="meta" style="color:var(--accent);opacity:1">近期</div><p class="body-zh" style="margin-top:1vh">来源卡片、媒体展示、中文阅读和质量漏斗解释。</p></div>
+        <div class="timeline-node anim-item"><div class="meta" style="color:var(--accent);opacity:1">中期</div><p class="body-zh" style="margin-top:1vh">延迟发酵跟踪、外部支持反证、团队标注和处置工作流。</p></div>
+        <div class="timeline-node anim-item"><div class="meta" style="color:var(--accent);opacity:1">长期</div><p class="body-zh" style="margin-top:1vh">从日报型雷达演进为品牌情报操作台。</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 12. 路线图</div><div>23 / 25</div></div>
+</section>
+
+<section class="slide dark" data-theme="dark" data-screen-label="Summary" data-source="13. 结语与全篇核心判断">
+  <div class="chrome"><div>核心总结</div><div>24 / 25</div></div>
+  <div class="slide-body">
+    <div class="w-default" style="display:flex;flex-direction:column;gap:clamp(2rem,5vh,3.5rem)">
+      <div class="anim-item" style="display:grid;grid-template-columns:auto 1fr;gap:clamp(1.5rem,3vw,3rem);align-items:start">
+        <div class="summary-num">01</div>
+        <p class="body-zh">产品不是把公开社媒内容搬到看板里，而是把公开内容、传播指标、品牌相关度、风险机会判断和建议动作组织成一套可复盘工作流。</p>
+      </div>
+      <div class="anim-item" style="display:grid;grid-template-columns:auto 1fr;gap:clamp(1.5rem,3vw,3rem);align-items:start">
+        <div class="summary-num">02</div>
+        <p class="body-zh">MVP 先稳定日常发现、快速判断、证据复盘和日报归档，再扩展延迟发酵、外部核验和团队协同。</p>
+      </div>
+      <div class="anim-item" style="display:grid;grid-template-columns:auto 1fr;gap:clamp(1.5rem,3vw,3rem);align-items:start">
+        <div class="summary-num">03</div>
+        <p class="body-zh">可信度设计贯穿数据状态、质量漏斗、中文处理、评分解释、证据链和边界说明，而不是只靠一个最终分数。</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div>白皮书 13. 结语</div><div>24 / 25</div></div>
+</section>
+
+<section class="slide dark bare" data-theme="dark" data-screen-label="Closing" data-source="13. 结语，最后一句工作目标">
+  <div class="slide-body" style="align-items:center;text-align:center">
+    <div class="w-statement">
+      <div class="kicker anim-item" style="color:var(--accent);opacity:1">CLOSING NOTE</div>
+      <h2 class="h1-zh anim-item" style="max-width:12em;margin:clamp(1rem,3vh,2rem) auto 0">每天稳定回答最重要的品牌舆情是什么，为什么重要，证据在哪里，下一步谁来处理</h2>
+      <p class="body-zh anim-item" style="max-width:24em;margin:clamp(1.8rem,4vh,3rem) auto 0;opacity:.62">这时产品就从监测工具进入品牌管理基础设施的范畴。</p>
+    </div>
+  </div>
+  <div class="foot" style="width:100%"><div>Brand X Intelligence Radar</div><div>25 / 25</div></div>
+</section>
+
+</div>
+<div id="nav"></div>
+<script>
+(function(){
+  const deck = document.getElementById('deck');
+  const slides = Array.from(deck.querySelectorAll('.slide'));
+  const total = slides.length;
+  let current = 0;
+  let isTransitioning = false;
+  const nav = document.getElementById('nav');
+  function renderNav() {
+    nav.innerHTML = '';
+    slides.forEach((s, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'dot' + (i === current ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.onclick = () => goTo(i);
+      nav.appendChild(dot);
+    });
+    const theme = slides[current].dataset.theme;
+    nav.style.setProperty('background', theme === 'light' ? 'rgba(0,0,0,.12)' : 'rgba(255,255,255,.15)');
+    Array.from(nav.querySelectorAll('.dot')).forEach((d, i) => {
+      d.style.background = i === current
+        ? (theme === 'light' ? 'rgba(0,0,0,.7)' : 'rgba(255,255,255,.95)')
+        : (theme === 'light' ? 'rgba(0,0,0,.18)' : 'rgba(255,255,255,.3)');
+    });
+  }
+  function goTo(idx) {
+    if (idx < 0 || idx >= total || idx === current) return;
+    isTransitioning = true;
+    current = idx;
+    deck.style.transform = 'translateX(-' + (current * 100) + 'vw)';
+    slides.forEach(s => s.classList.remove('active'));
+    setTimeout(() => {
+      slides[current].classList.add('active');
+      isTransitioning = false;
+      renderNav();
+      saveProgress();
+    }, 900);
+  }
+  document.addEventListener('keydown', e => {
+    if (isTransitioning) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); goTo(current + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); goTo(current - 1); }
+  });
+  let wheelTimeout = null;
+  document.addEventListener('wheel', e => {
+    if (isTransitioning || wheelTimeout) return;
+    wheelTimeout = setTimeout(() => wheelTimeout = null, 800);
+    if (e.deltaY > 30) goTo(current + 1);
+    if (e.deltaY < -30) goTo(current - 1);
+  }, { passive: true });
+  let touchStartX = 0;
+  document.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', e => {
+    if (isTransitioning) return;
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (diff > 50) goTo(current + 1);
+    if (diff < -50) goTo(current - 1);
+  }, { passive: true });
+  const STORAGE_KEY = 'brand-x-whitepaper-note-slides-progress';
+  function saveProgress() {
+    try { localStorage.setItem(STORAGE_KEY, current); } catch(e) {}
+  }
+  function loadProgress() {
+    try {
+      const p = parseInt(localStorage.getItem(STORAGE_KEY), 10);
+      if (!isNaN(p) && p >= 0 && p < total) {
+        current = p;
+        deck.style.transform = 'translateX(-' + (current * 100) + 'vw)';
+      }
+    } catch(e) {}
+  }
+  loadProgress();
+  slides.forEach(s => s.classList.remove('active'));
+  slides[current].classList.add('active');
+  renderNav();
+})();
+</script>
+</body>
+</html>

@@ -43,16 +43,20 @@ require_local_secret() {
 
 ensure_no_local_source_changes() {
   local untracked
+  # Daily automation owns dashboard artifacts. Top-level docs are project
+  # collateral and should not block the monitoring run when left in progress.
   if ! git diff --quiet -- . \
     ':!public/dashboard-data/*.json' \
     ':!public/dashboard-data/daily/*.json' \
-    ':!public/dashboard-data-bundle.js'; then
+    ':!public/dashboard-data-bundle.js' \
+    ':!docs/*.md' \
+    ':!docs/*.html'; then
     fail "Local non-dashboard source changes exist. Commit or stash them before the scheduled run."
   fi
 
   untracked="$(
     git ls-files --others --exclude-standard \
-      | grep -vE '^(public/dashboard-data/[^/]+\.json|public/dashboard-data/daily/[^/]+\.json|public/dashboard-data-bundle\.js)$' \
+      | grep -vE '^(public/dashboard-data/[^/]+\.json|public/dashboard-data/daily/[^/]+\.json|public/dashboard-data-bundle\.js|docs/[^/]+\.(md|html))$' \
       || true
   )"
   if [[ -n "$untracked" ]]; then
