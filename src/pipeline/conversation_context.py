@@ -103,6 +103,11 @@ def fetch_context_rows(
     window_start: str,
     window_end: str,
 ) -> list[dict[str, Any]]:
+    post_id = str(post.get("post_id") or "")
+    if post_id and hasattr(x_source, "thread_context_posts"):
+        rows = x_source.thread_context_posts(post_id, window_start, window_end, limit=CONTEXT_FETCH_LIMIT)
+        if has_context_row_neighbor(post, rows):
+            return rows
     return x_source.conversation_posts(conversation_id, window_start, window_end, limit=CONTEXT_FETCH_LIMIT)
 
 

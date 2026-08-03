@@ -117,6 +117,54 @@ class TwitterApiIoAdapter(XSourceBase):
         query = f"conversation_id:{conversation_id}"
         return self.search_posts(query, start_time, end_time, limit, query_type="Latest", budget_scope="context")
 
+    def thread_context_posts(
+        self,
+        post_id: str,
+        start_time: str,
+        end_time: str,
+        limit: int = 120,
+    ) -> list[dict[str, Any]]:
+        if not post_id or limit <= 0:
+            return []
+        end = self._parse_input_time(end_time)
+        posts: list[dict[str, Any]] = []
+        seen_ids: set[str] = set()
+        seen_cursors: set[str] = set()
+        cursor: str | None = None
+        pages = 0
+
+        while len(posts) < limit and pages < self.max_pages_per_query:
+            if cursor:
+                if cursor in seen_cursors:
+                    break
+                seen_cursors.add(cursor)
+            params = {"tweetId": post_id}
+            if cursor:
+                params["cursor"] = cursor
+            payload = self._get_json("/twitter/tweet/thread_context", params, budget_scope="context")
+            pages += 1
+            rows = self._extract_tweets(payload)
+            if not rows:
+                break
+            for row in rows:
+                post = self._map_tweet(row, f"thread_context:{post_id}", query_type="Latest")
+                if self._is_after_end(post, end):
+                    continue
+                mapped_id = post["post_id"]
+                if mapped_id in seen_ids:
+                    continue
+                seen_ids.add(mapped_id)
+                posts.append(post)
+                if len(posts) >= limit:
+                    break
+            cursor = self._extract_next_cursor(payload)
+            has_next = bool(payload.get("has_next_page") or payload.get("hasNextPage"))
+            if not cursor or not has_next:
+                break
+            time.sleep(self.request_pause_seconds)
+
+        return posts
+
     def _get_json(self, path: str, params: dict[str, str], budget_scope: str = "search") -> dict[str, Any]:
         query_string = urllib.parse.urlencode(params)
         request = urllib.request.Request(
@@ -212,6 +260,15 @@ class TwitterApiIoAdapter(XSourceBase):
             return from_iso(value)
         except ValueError:
             return None
+
+    def _is_after_end(self, post: dict[str, Any], end: datetime | None) -> bool:
+        if not end:
+            return False
+        try:
+            created = from_iso(str(post.get("created_at") or ""))
+        except ValueError:
+            return False
+        return created > end
 
     def _extract_tweets(self, payload: dict[str, Any]) -> list[dict[str, Any]]:
         for key in ("tweets", "data", "items", "results"):

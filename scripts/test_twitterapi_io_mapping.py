@@ -141,6 +141,57 @@ def main() -> None:
     assert context_not_main_capped.requests_used == 0, "conversation context should not consume search budget"
     assert context_not_main_capped.context_requests_used == 1
 
+    thread_capture = CaptureAdapter()
+    thread_payloads = [
+        {
+            "tweets": [
+                {
+                    **sample,
+                    "id": "1899999999999999998",
+                    "createdAt": "Thu Jul 16 23:59:00 +0000 2026",
+                    "text": "Parent context before the collected reply.",
+                }
+            ],
+            "has_next_page": True,
+            "next_cursor": "cursor-2",
+        },
+        {
+            "tweets": [
+                {
+                    **sample,
+                    "id": "1900000000000000002",
+                    "createdAt": "Fri Jul 17 00:30:00 +0000 2026",
+                    "text": "Future context outside the report window.",
+                },
+                {
+                    **sample,
+                    "id": "1900000000000000001",
+                    "createdAt": "Thu Jul 16 23:59:30 +0000 2026",
+                    "text": "Collected reply.",
+                },
+            ],
+            "has_next_page": False,
+        },
+    ]
+
+    def thread_get_json(path, params, budget_scope="search"):
+        thread_capture._reserve_request_budget(budget_scope)
+        thread_capture.requests.append({"path": path, "params": params, "budget_scope": budget_scope})
+        return thread_payloads.pop(0)
+
+    thread_capture._get_json = thread_get_json
+    thread_rows = thread_capture.thread_context_posts(
+        "1900000000000000001",
+        "2026-07-16T00:00:00Z",
+        "2026-07-17T00:00:00Z",
+        limit=10,
+    )
+    assert [row["post_id"] for row in thread_rows] == ["1899999999999999998", "1900000000000000001"]
+    assert thread_capture.requests[0]["path"] == "/twitter/tweet/thread_context"
+    assert thread_capture.requests[0]["params"]["tweetId"] == "1900000000000000001"
+    assert thread_capture.requests[1]["params"]["cursor"] == "cursor-2"
+    assert all(request["budget_scope"] == "context" for request in thread_capture.requests)
+
     capped = TwitterApiIoAdapter(api_key="test-key", max_requests_per_run=0)
     try:
         capped.search_posts("joybuy", "2026-07-16T00:00:00Z", "2026-07-17T00:00:00Z", 1)

@@ -139,6 +139,56 @@ def main() -> None:
     assert status["attached"] == 1, "multi-post conversation context should be attached"
     assert len(target["conversation_context"]["posts"]) == 3
 
+    class ThreadContextSource(ConversationContextSource):
+        def __init__(self, thread_rows, fallback_rows):
+            super().__init__(fallback_rows)
+            self.thread_rows = thread_rows
+            self.thread_calls = []
+
+        def thread_context_posts(self, post_id, start_time, end_time, limit=120):
+            self.thread_calls.append(post_id)
+            return self.thread_rows
+
+    thread_target = post(20, post_id="thread-anchor", author_followers=1000, is_relevant=True)
+    thread_source = ThreadContextSource(
+        [
+            post(18, post_id="thread-parent", created_at="2026-07-28T23:59:00Z", text="parent before report window"),
+            thread_target,
+            post(21, post_id="thread-after"),
+        ],
+        [thread_target],
+    )
+    thread_status = attach_conversation_contexts(
+        [thread_target],
+        [{"score": {"ips": 0}, "post_ids": ["thread-anchor"]}],
+        thread_source,
+        None,
+        "2026-07-29T00:00:00Z",
+        "2026-07-30T00:00:00Z",
+    )
+    assert thread_source.thread_calls == ["thread-anchor"], "thread context should be fetched by collected post id"
+    assert thread_source.conversation_calls == [], "conversation search should not be used when thread context has neighbors"
+    assert thread_status["attached"] == 1
+    assert [item["post_id"] for item in thread_target["conversation_context"]["posts"]] == [
+        "thread-parent",
+        "thread-anchor",
+        "thread-after",
+    ]
+
+    fallback_target = post(30, post_id="fallback-anchor", author_followers=1000, is_relevant=True)
+    fallback_source = ThreadContextSource([fallback_target], [post(29, post_id="fallback-parent"), fallback_target])
+    fallback_status = attach_conversation_contexts(
+        [fallback_target],
+        [{"score": {"ips": 0}, "post_ids": ["fallback-anchor"]}],
+        fallback_source,
+        None,
+        "2026-07-29T00:00:00Z",
+        "2026-07-30T00:00:00Z",
+    )
+    assert fallback_source.thread_calls == ["fallback-anchor"]
+    assert fallback_source.conversation_calls == ["conversation-1"], "conversation search should backstop sparse thread context"
+    assert fallback_status["attached"] == 1
+
     solo = post(12, post_id="solo", author_followers=1000, is_relevant=True)
     solo["conversation_context"] = {"posts": [{"post_id": "solo"}]}
     solo_source = ConversationContextSource([solo])
