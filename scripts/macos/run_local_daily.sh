@@ -8,6 +8,7 @@ LOG_DIR="$ROOT/data/logs/macos"
 LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-daily.lock"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 RESUME_FROM_CHECKPOINT="${BRAND_RADAR_RESUME_FROM_CHECKPOINT:-0}"
+ATTACH_CONTEXT_FROM_PROVIDER="${BRAND_RADAR_ATTACH_CONTEXT_FROM_PROVIDER:-0}"
 REPORT_DATE="${BRAND_RADAR_REPORT_DATE:-}"
 
 mkdir -p "$LOG_DIR"
@@ -89,6 +90,9 @@ run_daily() {
   local args=()
   if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
     args+=(--resume-from-checkpoint)
+    if [[ "$ATTACH_CONTEXT_FROM_PROVIDER" == "1" ]]; then
+      args+=(--attach-context-from-provider)
+    fi
   elif [[ -n "$REPORT_DATE" ]]; then
     args+=(--report-date "$REPORT_DATE")
   fi
@@ -111,6 +115,9 @@ log "Starting ${BRAND_RADAR_DISPLAY_NAME} local daily run."
 if [[ "$RESUME_FROM_CHECKPOINT" == "1" && -n "$REPORT_DATE" ]]; then
   fail "BRAND_RADAR_RESUME_FROM_CHECKPOINT and BRAND_RADAR_REPORT_DATE cannot be used together."
 fi
+if [[ "$ATTACH_CONTEXT_FROM_PROVIDER" == "1" && "$RESUME_FROM_CHECKPOINT" != "1" ]]; then
+  fail "BRAND_RADAR_ATTACH_CONTEXT_FROM_PROVIDER requires BRAND_RADAR_RESUME_FROM_CHECKPOINT."
+fi
 ensure_no_local_source_changes
 
 log "Syncing repository."
@@ -131,7 +138,12 @@ export TWITTERAPI_IO_KEY
 export JDCLOUD_GPT_API_KEY
 
 if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
-  log "Resuming daily dashboard generation from local checkpoint without calling X."
+  if [[ "$ATTACH_CONTEXT_FROM_PROVIDER" == "1" ]]; then
+    TWITTERAPI_IO_KEY="$(require_local_secret TWITTERAPI_IO_KEY "source connector credential")"
+    log "Resuming daily dashboard generation from local checkpoint and fetching eligible conversation context only."
+  else
+    log "Resuming daily dashboard generation from local checkpoint without calling X."
+  fi
 else
   if [[ -n "$REPORT_DATE" ]]; then
     log "Generating historical dashboard data for report date $REPORT_DATE."
@@ -156,7 +168,17 @@ git add public/index.html public/dashboard-data/*.json public/dashboard-data/dai
 if git diff --cached --quiet; then
   log "No dashboard data changes to commit."
 else
-  git commit -m "Archive local daily dashboard data ${REPORT_DATE:-$(date '+%Y-%m-%d')}"
+  COMMIT_REPORT_DATE="${REPORT_DATE:-$("$PYTHON_BIN" - <<'PY'
+import json
+from pathlib import Path
+
+try:
+    print(json.loads(Path("public/dashboard-data/daily/latest.json").read_text(encoding="utf-8")).get("date") or "")
+except Exception:
+    print("")
+PY
+)}"
+  git commit -m "Archive local daily dashboard data ${COMMIT_REPORT_DATE:-$(date '+%Y-%m-%d')}"
   git push
 fi
 
