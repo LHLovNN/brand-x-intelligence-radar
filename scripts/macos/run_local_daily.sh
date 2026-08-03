@@ -8,6 +8,7 @@ LOG_DIR="$ROOT/data/logs/macos"
 LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-daily.lock"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 RESUME_FROM_CHECKPOINT="${BRAND_RADAR_RESUME_FROM_CHECKPOINT:-0}"
+REPORT_DATE="${BRAND_RADAR_REPORT_DATE:-}"
 
 mkdir -p "$LOG_DIR"
 
@@ -84,16 +85,17 @@ PY
 }
 
 run_daily() {
+  local args=()
+  if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
+    args+=(--resume-from-checkpoint)
+  elif [[ -n "$REPORT_DATE" ]]; then
+    args+=(--report-date "$REPORT_DATE")
+  fi
+
   if command -v caffeinate >/dev/null 2>&1; then
-    if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
-      caffeinate -dimsu "$PYTHON_BIN" scripts/run_daily.py --resume-from-checkpoint
-    else
-      caffeinate -dimsu "$PYTHON_BIN" scripts/run_daily.py
-    fi
-  elif [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
-    "$PYTHON_BIN" scripts/run_daily.py --resume-from-checkpoint
+    caffeinate -dimsu "$PYTHON_BIN" scripts/run_daily.py "${args[@]}"
   else
-    "$PYTHON_BIN" scripts/run_daily.py
+    "$PYTHON_BIN" scripts/run_daily.py "${args[@]}"
   fi
 }
 
@@ -105,6 +107,9 @@ command -v security >/dev/null 2>&1 || fail "macOS security command is not avail
 command -v "$PYTHON_BIN" >/dev/null 2>&1 || fail "$PYTHON_BIN is not available."
 
 log "Starting ${BRAND_RADAR_DISPLAY_NAME} local daily run."
+if [[ "$RESUME_FROM_CHECKPOINT" == "1" && -n "$REPORT_DATE" ]]; then
+  fail "BRAND_RADAR_RESUME_FROM_CHECKPOINT and BRAND_RADAR_REPORT_DATE cannot be used together."
+fi
 ensure_no_local_source_changes
 
 log "Syncing repository."
@@ -127,6 +132,9 @@ export JDCLOUD_GPT_API_KEY
 if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
   log "Resuming daily dashboard generation from local checkpoint without calling X."
 else
+  if [[ -n "$REPORT_DATE" ]]; then
+    log "Generating historical dashboard data for report date $REPORT_DATE."
+  fi
   TWITTERAPI_IO_KEY="$(require_local_secret TWITTERAPI_IO_KEY "source connector credential")"
 fi
 JDCLOUD_GPT_API_KEY="$(require_local_secret JDCLOUD_GPT_API_KEY "language processing credential")"
@@ -147,7 +155,7 @@ git add public/dashboard-data/*.json public/dashboard-data/daily/*.json public/d
 if git diff --cached --quiet; then
   log "No dashboard data changes to commit."
 else
-  git commit -m "Archive local daily dashboard data $(date '+%Y-%m-%d')"
+  git commit -m "Archive local daily dashboard data ${REPORT_DATE:-$(date '+%Y-%m-%d')}"
   git push
 fi
 

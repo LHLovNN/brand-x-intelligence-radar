@@ -8,6 +8,7 @@ LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-daily-preview.lock"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 RESUME_FROM_CHECKPOINT="${BRAND_RADAR_RESUME_FROM_CHECKPOINT:-0}"
 ATTACH_CONTEXT_FROM_PROVIDER="${BRAND_RADAR_ATTACH_CONTEXT_FROM_PROVIDER:-0}"
+REPORT_DATE="${BRAND_RADAR_REPORT_DATE:-}"
 
 log() {
   printf '[%s] %s\n' "$(date '+%Y-%m-%d %H:%M:%S %Z')" "$*"
@@ -63,6 +64,8 @@ run_daily() {
     if [[ "$ATTACH_CONTEXT_FROM_PROVIDER" == "1" ]]; then
       args+=(--attach-context-from-provider)
     fi
+  elif [[ -n "$REPORT_DATE" ]]; then
+    args+=(--report-date "$REPORT_DATE")
   fi
   if command -v caffeinate >/dev/null 2>&1; then
     caffeinate -dimsu "$PYTHON_BIN" scripts/run_daily.py "${args[@]}"
@@ -79,6 +82,9 @@ command -v "$PYTHON_BIN" >/dev/null 2>&1 || fail "$PYTHON_BIN is not available."
 
 log "Starting ${BRAND_RADAR_DISPLAY_NAME} real daily preview run."
 log "This preview will not run git pull, git commit, or git push."
+if [[ "$RESUME_FROM_CHECKPOINT" == "1" && -n "$REPORT_DATE" ]]; then
+  fail "BRAND_RADAR_RESUME_FROM_CHECKPOINT and BRAND_RADAR_REPORT_DATE cannot be used together."
+fi
 
 export X_SOURCE_PROVIDER="${X_SOURCE_PROVIDER:-twitterapi_io}"
 export X_DAILY_LIMIT="${X_DAILY_LIMIT:-240}"
@@ -102,6 +108,9 @@ if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
     log "Resuming daily dashboard generation from local checkpoint without calling X."
   fi
 else
+  if [[ -n "$REPORT_DATE" ]]; then
+    log "Generating historical dashboard data preview for report date $REPORT_DATE."
+  fi
   TWITTERAPI_IO_KEY="$(require_local_secret TWITTERAPI_IO_KEY "source connector credential")"
 fi
 JDCLOUD_GPT_API_KEY="$(require_local_secret JDCLOUD_GPT_API_KEY "language processing credential")"

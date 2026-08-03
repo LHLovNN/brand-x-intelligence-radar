@@ -27,25 +27,51 @@ from src.pipeline.translation import (
 )
 from src.utils.config import load_project_json
 from src.utils.io import read_json, write_json, write_jsonl
-from src.utils.time import BEIJING, beijing_daily_window, beijing_label, from_iso, now_utc, to_iso
+from src.utils.time import (
+    BEIJING,
+    beijing_daily_window,
+    beijing_label,
+    beijing_report_date_window,
+    from_iso,
+    now_utc,
+    to_iso,
+)
 
 
 CHECKPOINT_PATH = ROOT / "data" / "checkpoints" / "daily" / "latest.json"
 
 
+def report_date_arg(value: str) -> str:
+    try:
+        beijing_report_date_window(value)
+    except ValueError as error:
+        raise argparse.ArgumentTypeError(str(error)) from error
+    return value
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate Brand X Intelligence Radar daily dashboard data.")
-    parser.add_argument(
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument(
         "--resume-from-checkpoint",
         action="store_true",
         help="Resume from the latest local collection checkpoint without calling the X provider.",
+    )
+    mode.add_argument(
+        "--report-date",
+        type=report_date_arg,
+        metavar="YYYY-MM-DD",
+        help="Generate a historical daily report ending at 08:00 BJT on this date.",
     )
     parser.add_argument(
         "--attach-context-from-provider",
         action="store_true",
         help="When resuming from checkpoint, fetch only eligible conversation context without rerunning collection.",
     )
-    return parser.parse_args()
+    args = parser.parse_args()
+    if args.attach_context_from_provider and not args.resume_from_checkpoint:
+        parser.error("--attach-context-from-provider requires --resume-from-checkpoint")
+    return args
 
 
 def selected_provider(source_config: dict[str, Any]) -> str:
@@ -308,7 +334,10 @@ def main() -> None:
     keyword_config = load_project_json("keywords.local.json")
     scoring_config = load_project_json("scoring.json")
     source_config = load_project_json("sources.local.json")
-    start, end = beijing_daily_window(now_utc())
+    if args.report_date:
+        start, end = beijing_report_date_window(args.report_date)
+    else:
+        start, end = beijing_daily_window(now_utc())
     today = end.astimezone(BEIJING).strftime("%Y-%m-%d")
     window_label = f"{beijing_label(start)} - {beijing_label(end)}"
     x_source = None
