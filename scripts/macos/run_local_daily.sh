@@ -86,6 +86,25 @@ if source.get("raw_posts_collected", 0) <= 0:
 PY
 }
 
+commit_with_repo_identity() {
+  local message="$1"
+  local author_name
+  local author_email
+  local committer_name
+  local committer_email
+
+  author_name="$(git config user.name || git log -1 --format=%an)"
+  author_email="$(git config user.email || git log -1 --format=%ae)"
+  committer_name="${GIT_COMMITTER_NAME:-$author_name}"
+  committer_email="${GIT_COMMITTER_EMAIL:-$author_email}"
+
+  GIT_AUTHOR_NAME="${GIT_AUTHOR_NAME:-$author_name}" \
+    GIT_AUTHOR_EMAIL="${GIT_AUTHOR_EMAIL:-$author_email}" \
+    GIT_COMMITTER_NAME="$committer_name" \
+    GIT_COMMITTER_EMAIL="$committer_email" \
+    git commit -m "$message"
+}
+
 run_daily() {
   local args=()
   if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
@@ -186,7 +205,7 @@ except Exception:
     print("")
 PY
 )}"
-  git commit -m "Archive local daily dashboard data ${COMMIT_REPORT_DATE:-$(date '+%Y-%m-%d')}"
+  commit_with_repo_identity "Archive local daily dashboard data ${COMMIT_REPORT_DATE:-$(date '+%Y-%m-%d')}"
   git push
 fi
 
