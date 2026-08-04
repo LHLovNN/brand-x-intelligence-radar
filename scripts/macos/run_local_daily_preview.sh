@@ -68,9 +68,17 @@ run_daily() {
     args+=(--report-date "$REPORT_DATE")
   fi
   if command -v caffeinate >/dev/null 2>&1; then
-    caffeinate -dimsu "$PYTHON_BIN" scripts/run_daily.py "${args[@]}"
+    if [[ ${#args[@]} -gt 0 ]]; then
+      caffeinate -dimsu "$PYTHON_BIN" scripts/run_daily.py "${args[@]}"
+    else
+      caffeinate -dimsu "$PYTHON_BIN" scripts/run_daily.py
+    fi
   else
-    "$PYTHON_BIN" scripts/run_daily.py "${args[@]}"
+    if [[ ${#args[@]} -gt 0 ]]; then
+      "$PYTHON_BIN" scripts/run_daily.py "${args[@]}"
+    else
+      "$PYTHON_BIN" scripts/run_daily.py
+    fi
   fi
 }
 
