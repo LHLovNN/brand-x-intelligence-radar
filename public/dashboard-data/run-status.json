@@ -1,21 +1,22 @@
 {
   "status": "ok",
-  "generated_at": "2026-08-10T00:04:27Z",
-  "window_start": "2026-08-09T00:00:00Z",
-  "window_end": "2026-08-10T00:00:00Z",
-  "window_label": "2026-08-09 08:00 BJT - 2026-08-10 08:00 BJT",
-  "raw_posts": 52,
-  "normalized_posts": 52,
+  "generated_at": "2026-08-11T00:06:18Z",
+  "window_start": "2026-08-10T00:00:00Z",
+  "window_end": "2026-08-11T00:00:00Z",
+  "window_label": "2026-08-10 08:00 BJT - 2026-08-11 08:00 BJT",
+  "raw_posts": 94,
+  "normalized_posts": 94,
   "primary_signals": 4,
   "collection_status": {
-    "status": "partial",
+    "status": "complete",
     "warnings": [
-      "Collection stopped early after reaching a protective runtime threshold."
+      "部分对话上下文暂未补齐；主帖和已取得的上下文仍会展示。"
     ],
     "translation": {
       "configured": true,
       "counts": {
-        "translated": 52
+        "translated": 92,
+        "source_chinese": 2
       },
       "missing_count": 0,
       "fallback_original_count": 0
@@ -25,9 +26,9 @@
     "effective_intelligence": 4,
     "high_risk": 0,
     "needs_review": 0,
-    "primary_volume": 10,
-    "primary_candidate_volume": 12,
-    "competitor_volume": 35,
+    "primary_volume": 20,
+    "primary_candidate_volume": 21,
+    "competitor_volume": 63,
     "negative_share": 0
   }
 }
