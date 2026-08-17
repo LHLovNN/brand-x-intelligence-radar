@@ -50,6 +50,23 @@ function buildDataMap() {
       map[`dashboard-data/daily/${file}`] = JSON.parse(fs.readFileSync(path.join(dailyDir, file), "utf8"));
     }
   }
+  const platformDir = path.join(publicDir, "dashboard-data", "platform-trends", "xiaohongshu");
+  if (fs.existsSync(platformDir)) {
+    for (const file of ["latest.json", "index.json"]) {
+      const filePath = path.join(platformDir, file);
+      if (fs.existsSync(filePath)) {
+        map[`dashboard-data/platform-trends/xiaohongshu/${file}`] = JSON.parse(fs.readFileSync(filePath, "utf8"));
+      }
+    }
+    const platformDailyDir = path.join(platformDir, "daily");
+    if (fs.existsSync(platformDailyDir)) {
+      for (const file of fs.readdirSync(platformDailyDir)) {
+        if (file.endsWith(".json")) {
+          map[`dashboard-data/platform-trends/xiaohongshu/daily/${file}`] = JSON.parse(fs.readFileSync(path.join(platformDailyDir, file), "utf8"));
+        }
+      }
+    }
+  }
   return map;
 }
 
@@ -68,11 +85,28 @@ function shellHtml() {
             <div class="brand-subtitle">Intelligence Radar</div>
           </div>
         </div>
-        <nav class="nav-list">
-          <a href="#/" data-route="overview">舆情焦点</a>
-          <a href="#/all" data-route="all">全部舆情</a>
-          <a href="#/daily" data-route="daily">舆情日报</a>
-          <a href="#/settings" data-route="settings">设置</a>
+        <nav class="nav-list" aria-label="产品导航">
+          <div class="nav-group" data-nav-group="monitor">
+            <button class="nav-group-toggle" type="button" data-nav-toggle="monitor" aria-expanded="true">
+              <span class="nav-group-label">舆情监控</span>
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="nav-children">
+              <a href="#/" data-route="overview"><span class="nav-item-dot" aria-hidden="true"></span><span>舆情焦点</span></a>
+              <a href="#/all" data-route="all"><span class="nav-item-dot" aria-hidden="true"></span><span>全部舆情</span></a>
+              <a href="#/daily" data-route="daily"><span class="nav-item-dot" aria-hidden="true"></span><span>舆情日报</span></a>
+              <a href="#/settings" data-route="settings"><span class="nav-item-dot" aria-hidden="true"></span><span>设置</span></a>
+            </div>
+          </div>
+          <div class="nav-group" data-nav-group="platform">
+            <button class="nav-group-toggle" type="button" data-nav-toggle="platform" aria-expanded="true">
+              <span class="nav-group-label">平台流变</span>
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="nav-children">
+              <a href="#/platform/xiaohongshu" data-route="xiaohongshu"><span class="nav-item-dot" aria-hidden="true"></span><span>小红书</span></a>
+            </div>
+          </div>
         </nav>
       </aside>
       <main class="main-panel">
@@ -141,6 +175,11 @@ async function main() {
   await page.waitForSelector(".settings-layout", { timeout: 5000 });
   await page.waitForSelector(".settings-card", { timeout: 5000 });
   await page.screenshot({ path: path.join(outDir, "settings.png"), fullPage: true });
+
+  await page.click('a[href="#/platform/xiaohongshu"]');
+  await page.waitForSelector(".platform-feed", { timeout: 5000 });
+  await page.waitForSelector('[data-nav-group="platform"].contains-active', { timeout: 5000 });
+  await page.screenshot({ path: path.join(outDir, "xiaohongshu.png"), fullPage: true });
 
   await page.click('a[href="#/daily"]');
   await page.waitForSelector(".daily-story-card", { timeout: 5000 });
