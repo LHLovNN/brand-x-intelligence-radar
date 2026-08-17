@@ -34,6 +34,41 @@ function readDataBundle() {
   return JSON.parse(text.slice(prefix.length).replace(/;$/, ""));
 }
 
+function emptyPlatformTrendPayload() {
+  return {
+    platform: "xiaohongshu",
+    display_name: "小红书",
+    topic_label: "小红书增长方法",
+    date: "",
+    generated_at: "",
+    generated_at_label: "",
+    window_label: "",
+    items: [],
+    collection_status: {
+      status: "empty",
+      warnings: [],
+      accepted_count: 0,
+      candidates_inspected: 0,
+      max_items: 20,
+      max_candidates: 200,
+    },
+    summary: {
+      accepted: 0,
+      candidates_inspected: 0,
+      max_items: 20,
+      max_candidates: 200,
+    },
+  };
+}
+
+function emptyPlatformTrendIndex() {
+  return {
+    latest_date: "",
+    generated_at: "",
+    items: [],
+  };
+}
+
 function buildDataMap() {
   const bundled = readDataBundle();
   const map = {
@@ -67,6 +102,8 @@ function buildDataMap() {
       }
     }
   }
+  map["dashboard-data/platform-trends/xiaohongshu/latest.json"] ||= emptyPlatformTrendPayload();
+  map["dashboard-data/platform-trends/xiaohongshu/index.json"] ||= emptyPlatformTrendIndex();
   return map;
 }
 
