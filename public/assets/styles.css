@@ -97,33 +97,101 @@ select {
 
 .nav-list {
   display: grid;
-  gap: 18px;
+  gap: 14px;
 }
 
 .nav-group {
   display: grid;
-  gap: 6px;
+  gap: 4px;
 }
 
-.nav-group-title {
-  padding: 0 10px 2px;
+.nav-group-toggle {
+  display: flex;
+  width: 100%;
+  min-height: 32px;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
   color: var(--muted);
-  font-size: 11px;
+  cursor: pointer;
+  padding: 5px 8px;
+  text-align: left;
+}
+
+.nav-group-label {
+  font-size: 12px;
   font-weight: 700;
 }
 
+.nav-chevron {
+  width: 7px;
+  height: 7px;
+  margin-right: 2px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.16s ease;
+}
+
+.nav-group-toggle:hover,
+.nav-group.contains-active .nav-group-toggle {
+  background: #f7f8fa;
+  color: var(--text);
+}
+
+.nav-group.is-collapsed .nav-chevron {
+  transform: rotate(-45deg);
+}
+
+.nav-children {
+  display: grid;
+  gap: 2px;
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: 1px solid var(--line-soft);
+}
+
+.nav-group.is-collapsed .nav-children {
+  display: none;
+}
+
 .nav-list a {
-  padding: 8px 10px;
+  position: relative;
+  display: flex;
+  min-height: 32px;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
   border-radius: 6px;
   color: var(--muted);
   font-size: 13px;
+  font-weight: 500;
   text-decoration: none;
+}
+
+.nav-item-dot {
+  width: 5px;
+  height: 5px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: #c7ced6;
 }
 
 .nav-list a.active,
 .nav-list a:hover {
-  background: var(--panel-strong);
+  background: #f6f8fb;
   color: var(--text);
+}
+
+.nav-list a.active {
+  box-shadow: inset 2px 0 0 var(--blue);
+  font-weight: 650;
+}
+
+.nav-list a.active .nav-item-dot {
+  background: var(--blue);
 }
 
 .platform-feed {
@@ -3345,11 +3413,20 @@ body.lightbox-open {
   }
 
   .nav-list {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 10px;
+  }
+
+  .nav-group {
+    min-width: 0;
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    padding: 6px;
   }
 
   .nav-list a {
-    text-align: center;
+    min-height: 30px;
   }
 
   .metric-grid {
@@ -3445,7 +3522,11 @@ body.lightbox-open {
   }
 
   .nav-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .nav-group {
+    padding: 4px;
   }
 
   .metric-grid {

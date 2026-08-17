@@ -16,6 +16,7 @@ const state = {
   allExpandedDates: new Set(),
   featuredFilter: "all",
   featuredExpandedDates: new Set(),
+  navCollapsedGroups: new Set(),
   lastRouteKey: "",
   conversationContexts: new Map(),
 };
@@ -109,6 +110,7 @@ async function init() {
   state.xiaohongshuArchive = await loadPlatformTrendArchive("xiaohongshu");
   if (!state.xiaohongshuArchive.length && state.xiaohongshu?.date) state.xiaohongshuArchive = [state.xiaohongshu];
   state.platformExpandedDates = new Set(state.xiaohongshuArchive.slice(0, DEFAULT_TIMELINE_EXPANDED_DAYS).map((daily) => daily.date).filter(Boolean));
+  bindNavigation();
   window.addEventListener("hashchange", render);
   render();
 }
@@ -202,6 +204,7 @@ function render() {
   document.querySelectorAll(".nav-list a").forEach((link) => {
     link.classList.toggle("active", link.dataset.route === current.name);
   });
+  syncNavigationState(current.name);
 
   const content = document.getElementById("content");
   closeConversationDrawer();
@@ -215,6 +218,30 @@ function render() {
   state.lastRouteKey = routeKey;
   bindPageEvents();
   hydrateXVideoEmbeds();
+}
+
+function bindNavigation() {
+  document.querySelectorAll("[data-nav-toggle]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const group = button.dataset.navToggle;
+      if (!group) return;
+      if (state.navCollapsedGroups.has(group)) state.navCollapsedGroups.delete(group);
+      else state.navCollapsedGroups.add(group);
+      syncNavigationState(route().name);
+    });
+  });
+}
+
+function syncNavigationState(currentRoute) {
+  document.querySelectorAll("[data-nav-group]").forEach((group) => {
+    const groupName = group.dataset.navGroup || "";
+    const hasActiveRoute = [...group.querySelectorAll("[data-route]")].some((link) => link.dataset.route === currentRoute);
+    const collapsed = state.navCollapsedGroups.has(groupName);
+    group.classList.toggle("contains-active", hasActiveRoute);
+    group.classList.toggle("is-collapsed", collapsed);
+    const toggle = group.querySelector("[data-nav-toggle]");
+    if (toggle) toggle.setAttribute("aria-expanded", String(!collapsed));
+  });
 }
 
 function resetMainScroll(content) {

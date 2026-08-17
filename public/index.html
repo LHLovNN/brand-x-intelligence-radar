@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brand X Intelligence Radar</title>
-    <link rel="stylesheet" href="./assets/styles.css?v=20260817-platform-trends" />
+    <link rel="stylesheet" href="./assets/styles.css?v=20260817-nav-tree" />
   </head>
   <body>
     <div id="app" class="app-shell">
@@ -16,17 +16,27 @@
             <div class="brand-subtitle">Intelligence Radar</div>
           </div>
         </div>
-        <nav class="nav-list">
-          <div class="nav-group">
-            <div class="nav-group-title">舆情监控</div>
-            <a href="#/" data-route="overview">舆情焦点</a>
-            <a href="#/all" data-route="all">全部舆情</a>
-            <a href="#/daily" data-route="daily">舆情日报</a>
-            <a href="#/settings" data-route="settings">设置</a>
+        <nav class="nav-list" aria-label="产品导航">
+          <div class="nav-group" data-nav-group="monitor">
+            <button class="nav-group-toggle" type="button" data-nav-toggle="monitor" aria-expanded="true">
+              <span class="nav-group-label">舆情监控</span>
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="nav-children">
+              <a href="#/" data-route="overview"><span class="nav-item-dot" aria-hidden="true"></span><span>舆情焦点</span></a>
+              <a href="#/all" data-route="all"><span class="nav-item-dot" aria-hidden="true"></span><span>全部舆情</span></a>
+              <a href="#/daily" data-route="daily"><span class="nav-item-dot" aria-hidden="true"></span><span>舆情日报</span></a>
+              <a href="#/settings" data-route="settings"><span class="nav-item-dot" aria-hidden="true"></span><span>设置</span></a>
+            </div>
           </div>
-          <div class="nav-group">
-            <div class="nav-group-title">平台流变</div>
-            <a href="#/platform/xiaohongshu" data-route="xiaohongshu">小红书</a>
+          <div class="nav-group" data-nav-group="platform">
+            <button class="nav-group-toggle" type="button" data-nav-toggle="platform" aria-expanded="true">
+              <span class="nav-group-label">平台流变</span>
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="nav-children">
+              <a href="#/platform/xiaohongshu" data-route="xiaohongshu"><span class="nav-item-dot" aria-hidden="true"></span><span>小红书</span></a>
+            </div>
           </div>
         </nav>
       </aside>
@@ -44,7 +54,7 @@
         <section id="content" class="content-area" aria-live="polite"></section>
       </main>
     </div>
-    <script src="./dashboard-data-bundle.js?v=20260817-platform-trends"></script>
-    <script src="./assets/app.js?v=20260817-platform-trends"></script>
+    <script src="./dashboard-data-bundle.js?v=20260817-nav-tree"></script>
+    <script src="./assets/app.js?v=20260817-nav-tree"></script>
   </body>
 </html>
