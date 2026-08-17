@@ -49,14 +49,20 @@ function emptyPlatformTrendPayload() {
       warnings: [],
       accepted_count: 0,
       candidates_inspected: 0,
+      metric_filtered: 0,
       max_items: 20,
       max_candidates: 200,
+      min_views: 500,
+      min_likes: 10,
     },
     summary: {
       accepted: 0,
       candidates_inspected: 0,
+      metric_filtered: 0,
       max_items: 20,
       max_candidates: 200,
+      min_views: 500,
+      min_likes: 10,
     },
   };
 }

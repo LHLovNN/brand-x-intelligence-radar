@@ -43,9 +43,11 @@
         "coupon code",
         "promo code"
       ],
+      "min_views_per_item": 500,
+      "min_likes_per_item": 10,
       "max_items_per_day": 20,
       "max_candidates_per_day": 200,
-      "max_source_requests_per_run": 8
+      "max_source_requests_per_run": 12
     }
   }
 }

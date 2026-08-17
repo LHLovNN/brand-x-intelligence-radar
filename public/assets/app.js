@@ -158,14 +158,20 @@ function emptyPlatformTrendPayload() {
       warnings: [],
       accepted_count: 0,
       candidates_inspected: 0,
+      metric_filtered: 0,
       max_items: 20,
       max_candidates: 200,
+      min_views: 500,
+      min_likes: 10,
     },
     summary: {
       accepted: 0,
       candidates_inspected: 0,
+      metric_filtered: 0,
       max_items: 20,
       max_candidates: 200,
+      min_views: 500,
+      min_likes: 10,
     },
   };
 }
@@ -481,6 +487,7 @@ function xiaohongshuPage() {
       <span>排序 发布时间倒序</span>
       <span>每日上限 ${escapeHtml(String(latest.collection_status?.max_items || 20))}</span>
       <span>候选上限 ${escapeHtml(String(latest.collection_status?.max_candidates || 200))}</span>
+      <span>门槛 浏览≥${escapeHtml(String(latest.collection_status?.min_views ?? 500))} · 赞≥${escapeHtml(String(latest.collection_status?.min_likes ?? 10))}</span>
       <span>${escapeHtml(latest.window_label || "过去 24 小时")}</span>
     </div>
     ${platformWarnings(latest)}

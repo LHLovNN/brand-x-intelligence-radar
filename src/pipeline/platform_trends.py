@@ -21,6 +21,8 @@ PLATFORM_KEY = "xiaohongshu"
 DEFAULT_MAX_ITEMS = 20
 DEFAULT_MAX_CANDIDATES = 200
 DEFAULT_MAX_REQUESTS = 8
+DEFAULT_MIN_VIEWS = 500
+DEFAULT_MIN_LIKES = 10
 PLATFORM_DATA_ROOT = Path("platform-trends")
 
 
@@ -103,6 +105,39 @@ NOISE_TERMS = [
     "promo code",
 ]
 
+HARD_NOISE_TERMS = [
+    "@abuincrease",
+    "@pichai666",
+    "51平台",
+    "删帖",
+    "删除微信公众号文章",
+    "删除微博",
+    "删除推特",
+    "负面信息",
+    "负面内容",
+    "清除负面",
+    "消除差评",
+    "差评处理",
+    "账号解封",
+    "微信解封",
+    "电报号解封",
+    "封号处理",
+    "封禁解除",
+    "店铺封禁",
+    "视频下架",
+    "笔记下架",
+    "商品屏蔽",
+    "代举报",
+    "投诉链接",
+    "聊天记录查询",
+    "酒店入住记录",
+    "手机定位",
+    "定位追踪",
+    "老牌服务商",
+    "老字号服务",
+    "专业品牌客服",
+]
+
 STRUCTURE_SIGNALS = [
     "how to",
     "step",
@@ -164,12 +199,17 @@ def collect_platform_trends(
         "BRAND_RADAR_PLATFORM_MAX_CANDIDATES",
         int(platform.get("max_candidates_per_day") or DEFAULT_MAX_CANDIDATES),
     )
+    min_views = optional_int_env("BRAND_RADAR_PLATFORM_MIN_VIEWS", int(platform.get("min_views_per_item") or DEFAULT_MIN_VIEWS))
+    min_likes = optional_int_env("BRAND_RADAR_PLATFORM_MIN_LIKES", int(platform.get("min_likes_per_item") or DEFAULT_MIN_LIKES))
     max_items = max(1, max_items or DEFAULT_MAX_ITEMS)
     max_candidates = max(max_items, max_candidates or DEFAULT_MAX_CANDIDATES)
+    min_views = max(0, min_views or 0)
+    min_likes = max(0, min_likes or 0)
 
     selected: list[dict[str, Any]] = []
     seen: set[str] = set()
     candidates_seen = 0
+    metric_filtered = 0
     warnings: list[str] = []
     query_stats: list[dict[str, Any]] = []
 
@@ -188,6 +228,7 @@ def collect_platform_trends(
 
         accepted_for_query = 0
         inspected_for_query = 0
+        metric_filtered_for_query = 0
         for row in rows:
             post_id = str(row.get("post_id") or row.get("url") or "")
             if not post_id or post_id in seen:
@@ -195,6 +236,12 @@ def collect_platform_trends(
             seen.add(post_id)
             candidates_seen += 1
             inspected_for_query += 1
+            if not passes_platform_metric_gate(row, min_views, min_likes):
+                metric_filtered += 1
+                metric_filtered_for_query += 1
+                if candidates_seen >= max_candidates:
+                    break
+                continue
             item = normalize_platform_post(row, platform)
             decision = score_platform_post(item, platform)
             if decision["accepted"]:
@@ -208,6 +255,8 @@ def collect_platform_trends(
                 "query_label": query_label(query),
                 "fetched": len(rows),
                 "inspected": inspected_for_query,
+                "metric_filtered": metric_filtered_for_query,
+                "metric_eligible": inspected_for_query - metric_filtered_for_query,
                 "accepted": accepted_for_query,
             }
         )
@@ -215,7 +264,16 @@ def collect_platform_trends(
     selected.sort(key=lambda item: str(item.get("created_at") or ""), reverse=True)
     translation_status = apply_translations(selected, translation_service)
     context_status = attach_platform_context(selected, x_source, translation_service, start, end)
-    status = collection_status(selected, candidates_seen, max_items, max_candidates, warnings)
+    status = collection_status(
+        selected,
+        candidates_seen,
+        max_items,
+        max_candidates,
+        warnings,
+        min_views=min_views,
+        min_likes=min_likes,
+        metric_filtered=metric_filtered,
+    )
 
     payload = {
         "platform": PLATFORM_KEY,
@@ -234,8 +292,11 @@ def collect_platform_trends(
         "summary": {
             "accepted": len(selected),
             "candidates_inspected": candidates_seen,
+            "metric_filtered": metric_filtered,
             "max_items": max_items,
             "max_candidates": max_candidates,
+            "min_views": min_views,
+            "min_likes": min_likes,
         },
     }
     write_platform_payload(Path(output_dir), payload)
@@ -243,6 +304,7 @@ def collect_platform_trends(
         "status": status["status"],
         "accepted": len(selected),
         "candidates_inspected": candidates_seen,
+        "metric_filtered": metric_filtered,
         "warnings": warnings[:5],
         "provider": provider,
         "request_stats": platform_request_stats(x_source),
@@ -325,6 +387,27 @@ def normalize_platform_post(post: dict[str, Any], platform: dict[str, Any]) -> d
     }
 
 
+def passes_platform_metric_gate(post: dict[str, Any], min_views: int, min_likes: int) -> bool:
+    views = raw_metric(post, "views", "view_count", "total_views")
+    likes = raw_metric(post, "likes", "like_count")
+    return views >= min_views and likes >= min_likes
+
+
+def raw_metric(post: dict[str, Any], *keys: str) -> int:
+    metrics = post.get("metrics") or post.get("post_metrics") or {}
+    for key in keys:
+        value = post.get(key)
+        if value is None:
+            value = metrics.get(key)
+        if value is None:
+            continue
+        try:
+            return int(value or 0)
+        except (TypeError, ValueError):
+            continue
+    return 0
+
+
 def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[str, Any]:
     text = combined_text(item)
     lower = text.lower()
@@ -334,6 +417,8 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
     alias_hits = matched_terms(lower, aliases)
     intent_hits = matched_terms(lower, intent_terms)
     if not alias_hits or not intent_hits:
+        return {"accepted": False, "item": {}}
+    if matched_terms(lower, HARD_NOISE_TERMS):
         return {"accepted": False, "item": {}}
     if matched_terms(lower, exclude_terms) and not strong_method_signal(lower):
         return {"accepted": False, "item": {}}
@@ -387,6 +472,9 @@ def collection_status(
     max_items: int,
     max_candidates: int,
     warnings: list[str],
+    min_views: int = DEFAULT_MIN_VIEWS,
+    min_likes: int = DEFAULT_MIN_LIKES,
+    metric_filtered: int = 0,
 ) -> dict[str, Any]:
     status = "complete"
     if len(items) >= max_items:
@@ -403,8 +491,11 @@ def collection_status(
         "warnings": warnings[:5],
         "accepted_count": len(items),
         "candidates_inspected": candidates_seen,
+        "metric_filtered": metric_filtered,
         "max_items": max_items,
         "max_candidates": max_candidates,
+        "min_views": min_views,
+        "min_likes": min_likes,
     }
 
 

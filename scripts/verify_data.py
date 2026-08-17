@@ -79,7 +79,10 @@ def verify_platform_trends() -> None:
     latest = load(latest_path)
     index = load(index_path)
     items = latest.get("items") or []
-    max_items = latest.get("collection_status", {}).get("max_items", 20)
+    collection_status = latest.get("collection_status", {})
+    max_items = collection_status.get("max_items", 20)
+    min_views = int(collection_status.get("min_views", 500) or 0)
+    min_likes = int(collection_status.get("min_likes", 10) or 0)
     assert_true(len(items) <= max_items, "platform trends should not exceed daily max items")
     times = [str(item.get("created_at") or "") for item in items]
     assert_true(times == sorted(times, reverse=True), "platform trends should be sorted by publish time desc")
@@ -87,6 +90,9 @@ def verify_platform_trends() -> None:
     if items:
         for item in items:
             assert_true(item.get("translation_zh"), "platform trend item should include Chinese display text")
+            metrics = item.get("post_metrics") or item.get("metrics") or {}
+            assert_true(int(metrics.get("views") or 0) >= min_views, "platform trend item should meet min views")
+            assert_true(int(metrics.get("likes") or 0) >= min_likes, "platform trend item should meet min likes")
         verify_conversation_contexts(latest, "platform-trends/xiaohongshu/latest")
 
 
