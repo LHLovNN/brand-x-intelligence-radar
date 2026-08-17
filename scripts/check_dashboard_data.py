@@ -18,6 +18,11 @@ REQUIRED = [
     ROOT / "public" / "dashboard-data" / "run-status.json",
 ]
 
+OPTIONAL = [
+    ROOT / "public" / "dashboard-data" / "platform-trends" / "xiaohongshu" / "latest.json",
+    ROOT / "public" / "dashboard-data" / "platform-trends" / "xiaohongshu" / "index.json",
+]
+
 
 def main() -> None:
     missing = [str(path.relative_to(ROOT)) for path in REQUIRED if not path.exists()]
@@ -26,6 +31,9 @@ def main() -> None:
         for item in missing:
             print(f"- {item}")
         sys.exit(1)
+    optional_present = [path for path in OPTIONAL if path.exists()]
+    if optional_present:
+        print(f"Optional platform trend files present: {len(optional_present)}/{len(OPTIONAL)}")
     print("Dashboard files are present.")
 
 

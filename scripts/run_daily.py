@@ -19,6 +19,7 @@ from src.pipeline.dashboard_builder import build_dashboard_data, public_collecti
 from src.pipeline.evidence_chain import attach_evidence_chains
 from src.pipeline.fermentation import update_fermentation
 from src.pipeline.normalizer import normalize_posts
+from src.pipeline.platform_trends import collect_platform_trends, platform_trends_enabled
 from src.pipeline.query_builder import build_x_search_queries
 from src.pipeline.scoring import score_clusters
 from src.pipeline.translation import (
@@ -414,6 +415,27 @@ def main() -> None:
         window_label=window_label,
         collection_status=collection_status,
     )
+    platform_trend_status = None
+    if platform_trends_enabled() and not args.resume_from_checkpoint:
+        try:
+            platform_source = get_x_source(provider)
+            platform_trend_status = collect_platform_trends(
+                platform_source,
+                translation_service,
+                provider,
+                start,
+                end,
+                today,
+                window_label,
+                str(ROOT / "public" / "dashboard-data"),
+            )
+        except Exception as error:
+            platform_trend_status = {
+                "status": "partial",
+                "accepted": 0,
+                "candidates_inspected": 0,
+                "warnings": [f"Platform trend collection failed: {str(error)[:180]}"],
+            }
     run_log = {
         "status": "ok",
         "generated_at": to_iso(now_utc()),
@@ -426,6 +448,7 @@ def main() -> None:
         "joybuy_clusters": len(joybuy_clusters),
         "collection_status": collection_status,
         "translation_status": translation_status,
+        "platform_trends": platform_trend_status,
         "dashboard_metrics": overview["metrics"],
     }
     public_run_log = {
@@ -438,6 +461,12 @@ def main() -> None:
         "normalized_posts": run_log["normalized_posts"],
         "primary_signals": run_log["joybuy_clusters"],
         "collection_status": public_collection_status_payload(collection_status),
+        "platform_trends": {
+            "status": platform_trend_status.get("status"),
+            "accepted": platform_trend_status.get("accepted"),
+            "candidates_inspected": platform_trend_status.get("candidates_inspected"),
+            "warnings": platform_trend_status.get("warnings", []),
+        } if platform_trend_status else None,
         "dashboard_metrics": overview["metrics"],
     }
     write_json(str(ROOT / "public" / "dashboard-data" / "run-status.json"), public_run_log)
@@ -449,6 +478,12 @@ def main() -> None:
     print(f"Translation missing: {translation_status.get('missing_count', 0)}")
     if collection_status.get("warnings"):
         print(f"Collection warnings: {len(collection_status['warnings'])}")
+    if platform_trend_status:
+        print(
+            "Platform trends: "
+            f"{platform_trend_status.get('accepted', 0)} accepted / "
+            f"{platform_trend_status.get('candidates_inspected', 0)} candidates"
+        )
 
 
 if __name__ == "__main__":

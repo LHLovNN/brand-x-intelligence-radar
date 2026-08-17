@@ -51,6 +51,7 @@ ensure_no_local_source_changes() {
     ':!public/index.html' \
     ':!public/dashboard-data/*.json' \
     ':!public/dashboard-data/daily/*.json' \
+    ':!public/dashboard-data/platform-trends/**' \
     ':!public/dashboard-data-bundle.js' \
     ':!docs/*.md' \
     ':!docs/*.html'; then
@@ -59,7 +60,7 @@ ensure_no_local_source_changes() {
 
   untracked="$(
     git ls-files --others --exclude-standard \
-      | grep -vE '^(public/index\.html|public/dashboard-data/[^/]+\.json|public/dashboard-data/daily/[^/]+\.json|public/dashboard-data-bundle\.js|docs/[^/]+\.(md|html))$' \
+      | grep -vE '^(public/index\.html|public/dashboard-data/[^/]+\.json|public/dashboard-data/daily/[^/]+\.json|public/dashboard-data/platform-trends/.+\.json|public/dashboard-data-bundle\.js|docs/[^/]+\.(md|html))$' \
       || true
   )"
   if [[ -n "$untracked" ]]; then
@@ -191,6 +192,9 @@ ensure_real_dashboard_data
 
 log "Staging public dashboard artifacts only."
 git add public/index.html public/dashboard-data/*.json public/dashboard-data/daily/*.json public/dashboard-data-bundle.js
+if [[ -d public/dashboard-data/platform-trends ]]; then
+  git add public/dashboard-data/platform-trends
+fi
 
 if git diff --cached --quiet; then
   log "No dashboard data changes to commit."

@@ -6,6 +6,10 @@ const state = {
   selectedDaily: null,
   competitor: null,
   sourceStatus: null,
+  xiaohongshu: null,
+  xiaohongshuIndex: null,
+  xiaohongshuArchive: [],
+  platformExpandedDates: new Set(),
   allBrandFilter: "all",
   allTypeFilter: "all",
   allSearchQuery: "",
@@ -25,6 +29,7 @@ const routeTitles = {
   all: "全部舆情",
   daily: "舆情日报",
   settings: "设置",
+  xiaohongshu: "小红书",
 };
 
 async function loadJson(path) {
@@ -40,6 +45,14 @@ async function loadJson(path) {
     throw new Error(`Failed to load ${path}`);
   }
   return normalizeRuntimePayload(await response.json());
+}
+
+async function loadJsonOptional(path, fallback) {
+  try {
+    return await loadJson(path);
+  } catch (error) {
+    return fallback;
+  }
 }
 
 function normalizeRuntimePayload(value) {
@@ -91,6 +104,11 @@ async function init() {
   state.selectedDaily = state.daily;
   state.competitor = await loadJson("./dashboard-data/competitor.json");
   state.sourceStatus = await loadJson("./dashboard-data/source-status.json");
+  state.xiaohongshu = await loadJsonOptional("./dashboard-data/platform-trends/xiaohongshu/latest.json", emptyPlatformTrendPayload());
+  state.xiaohongshuIndex = await loadJsonOptional("./dashboard-data/platform-trends/xiaohongshu/index.json", emptyPlatformTrendIndex());
+  state.xiaohongshuArchive = await loadPlatformTrendArchive("xiaohongshu");
+  if (!state.xiaohongshuArchive.length && state.xiaohongshu?.date) state.xiaohongshuArchive = [state.xiaohongshu];
+  state.platformExpandedDates = new Set(state.xiaohongshuArchive.slice(0, DEFAULT_TIMELINE_EXPANDED_DAYS).map((daily) => daily.date).filter(Boolean));
   window.addEventListener("hashchange", render);
   render();
 }
@@ -109,9 +127,59 @@ async function loadDailyArchive() {
   return records.filter(Boolean).sort((a, b) => String(b.date).localeCompare(String(a.date)));
 }
 
+async function loadPlatformTrendArchive(platformKey) {
+  const items = state.xiaohongshuIndex?.items || [];
+  const records = await Promise.all(
+    items.map(async (item) => {
+      try {
+        return await loadJson(`./dashboard-data/platform-trends/${platformKey}/daily/${item.date}.json`);
+      } catch (error) {
+        return null;
+      }
+    })
+  );
+  return records.filter(Boolean).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+}
+
+function emptyPlatformTrendPayload() {
+  return {
+    platform: "xiaohongshu",
+    display_name: "小红书",
+    topic_label: "小红书增长方法",
+    date: "",
+    generated_at: "",
+    generated_at_label: "",
+    window_label: "",
+    items: [],
+    collection_status: {
+      status: "empty",
+      warnings: [],
+      accepted_count: 0,
+      candidates_inspected: 0,
+      max_items: 20,
+      max_candidates: 200,
+    },
+    summary: {
+      accepted: 0,
+      candidates_inspected: 0,
+      max_items: 20,
+      max_candidates: 200,
+    },
+  };
+}
+
+function emptyPlatformTrendIndex() {
+  return {
+    latest_date: "",
+    generated_at: "",
+    items: [],
+  };
+}
+
 function route() {
   const hash = window.location.hash || "#/";
   const parts = hash.replace(/^#\/?/, "").split("/").filter(Boolean);
+  if (parts[0] === "platform" && parts[1] === "xiaohongshu") return { name: "xiaohongshu" };
   if (parts[0] === "intel") return { name: "overview" };
   if (parts[0] === "fermentation") return { name: "overview" };
   if (parts[0] === "source-status") return { name: "settings" };
@@ -124,7 +192,9 @@ function render() {
   const routeKey = current.name;
   const shouldResetScroll = state.lastRouteKey && state.lastRouteKey !== routeKey;
   document.getElementById("page-title").textContent = routeTitles[current.name] || "舆情焦点";
-  document.getElementById("generated-at").textContent = state.overview.generated_at_label;
+  document.getElementById("generated-at").textContent = current.name === "xiaohongshu"
+    ? (state.xiaohongshu?.generated_at_label || state.overview.generated_at_label)
+    : state.overview.generated_at_label;
   const health = document.getElementById("health-pill");
   const sampleMode = isSampleMode();
   health.textContent = sampleMode ? "Sample data" : state.overview.health === "normal" ? "Data healthy" : state.overview.health;
@@ -139,6 +209,7 @@ function render() {
   if (current.name === "all") content.innerHTML = allIntelligencePage();
   else if (current.name === "daily") content.innerHTML = dailyPage();
   else if (current.name === "settings") content.innerHTML = settingsPage();
+  else if (current.name === "xiaohongshu") content.innerHTML = xiaohongshuPage();
   else content.innerHTML = overviewPage();
   if (shouldResetScroll) resetMainScroll(content);
   state.lastRouteKey = routeKey;
@@ -360,6 +431,129 @@ function featuredTimelineCard(item) {
       </article>
     </div>
   `;
+}
+
+function xiaohongshuPage() {
+  const archive = state.xiaohongshuArchive.length ? state.xiaohongshuArchive : [];
+  const latest = archive[0] || state.xiaohongshu || emptyPlatformTrendPayload();
+  const allItems = archive.flatMap((daily) => daily.items || []);
+  const latestItems = latest.items || [];
+  const summary = latest.summary || {};
+  return `
+    ${pageHero({
+      eyebrow: "平台流变",
+      title: "小红书",
+      subtitle: `${latest.date ? formatDateLong(latest.date) : "等待首次采集"} · X 上关于小红书养号、起号、流量和变现的方法论内容`,
+      stats: [
+        [latestItems.length, "今日收录"],
+        [allItems.length, "归档内容"],
+        [summary.candidates_inspected || 0, "候选检查"],
+      ],
+    })}
+    <div class="featured-status-row">
+      <span>排序 发布时间倒序</span>
+      <span>每日上限 ${escapeHtml(String(latest.collection_status?.max_items || 20))}</span>
+      <span>候选上限 ${escapeHtml(String(latest.collection_status?.max_candidates || 200))}</span>
+      <span>${escapeHtml(latest.window_label || "过去 24 小时")}</span>
+    </div>
+    ${platformWarnings(latest)}
+    <section class="featured-feed platform-feed">
+      ${archive.length ? archive.map(platformDateGroup).join("") : empty("暂无小红书平台流变数据。下一次日报生成后会自动写入这里。")}
+    </section>
+  `;
+}
+
+function platformWarnings(daily) {
+  const warnings = daily?.collection_status?.warnings || [];
+  if (!warnings.length) return "";
+  return `
+    <section class="sample-data-notice">
+      <strong>采集提示</strong>
+      <span>${escapeHtml(warnings.join("；"))}</span>
+    </section>
+  `;
+}
+
+function platformDateGroup(daily) {
+  const open = state.platformExpandedDates.has(daily.date);
+  const items = [...(daily.items || [])].sort(comparePlatformItems);
+  return `
+    <article class="featured-date-group">
+      ${timelineDateButton(daily.date, `${items.length} 条黄金内容`, open, "platform")}
+      ${open ? platformTimeline(daily, items) : ""}
+    </article>
+  `;
+}
+
+function platformTimeline(daily, items) {
+  if (!items.length) return `<div class="featured-empty">该日暂无符合收录条件的小红书黄金内容。</div>`;
+  return `
+    <div class="publish-timeline all-timeline">
+      ${items.map(platformTimelineCard).join("")}
+    </div>
+  `;
+}
+
+function platformTimelineCard(item) {
+  const body = firstSourceText(item.translation_zh, item.original_text, item.text, item.summary_zh);
+  return `
+    <div class="publish-item all-feed-item">
+      <div class="publish-time">${escapeHtml(formatEventTime(item.created_at || item.time))}</div>
+      <div class="publish-line"><span></span></div>
+      <article class="opinion-card all-card ${scoreClass(item)}">
+        <div class="all-card-top">
+          <div class="source-identity">
+            ${avatarNode(item)}
+            <div>
+              <div class="source-line">
+                ${authorNameNode(item, item.author_name || item.source_name || "X Source")}
+                ${item.author_handle ? `<em>@${escapeHtml(item.author_handle)}</em>` : ""}
+                ${sourceBadge(item.badge || "小红书", "focus")}
+                <strong class="source-badge platform">黄金内容</strong>
+              </div>
+              <div class="source-subline">${escapeHtml(item.source_type || "平台流变")}${item.author_followers ? ` · ${escapeHtml(formatCompactNumber(item.author_followers))} followers` : ""}</div>
+            </div>
+          </div>
+          <div class="all-score" aria-label="黄金内容评分 ${escapeHtml(String(item.quality_score ?? item.score_value ?? "n/a"))}">
+            <span>${escapeHtml(String(item.quality_score ?? item.score_value ?? "n/a"))}</span>
+            <em>GQS</em>
+          </div>
+        </div>
+        <div class="all-card-body">
+          ${postTextWithInlineLanguageToggle(item, body, "all-card-text", "platform")}
+          ${contextRelationNode(item)}
+          ${mediaGridNode(item.media, item)}
+          <div class="metric-inline card-metrics">
+            ${metricInline("赞", item.post_metrics?.likes ?? item.metrics?.likes)}
+            ${metricInline("评", item.post_metrics?.replies ?? item.metrics?.replies)}
+            ${metricInline("转", item.post_metrics?.reposts ?? item.metrics?.reposts)}
+            ${metricInline("引", item.post_metrics?.quotes ?? item.metrics?.quotes)}
+            ${metricInline("收藏", item.post_metrics?.bookmarks ?? item.metrics?.bookmarks)}
+            ${metricInline("浏览", item.post_metrics?.views ?? item.metrics?.views)}
+          </div>
+        </div>
+        <div class="tag-row">${(item.tags || []).slice(0, 8).map((tag) => `<span class="plain-tag">#${escapeHtml(tag)}</span>`).join("")}</div>
+        ${platformReasonLine(item)}
+        ${item.reusable_takeaway ? `<div class="reason-line compact">可复用动作：${escapeHtml(item.reusable_takeaway)}</div>` : ""}
+        <div class="all-card-bottom">
+          ${cardFootnote("平台流变内容", item)}
+          <div class="button-row">
+            ${cardExternalAction(item.external_href || item.url, item)}
+          </div>
+        </div>
+      </article>
+    </div>
+  `;
+}
+
+function platformReasonLine(item) {
+  const reason = String(item?.selected_reason || item?.reason || "").trim();
+  if (!reason) return "";
+  return `<div class="reason-line compact">收录原因：${escapeHtml(reason)}</div>`;
+}
+
+function comparePlatformItems(a, b) {
+  return String(b.created_at || b.time || "").localeCompare(String(a.created_at || a.time || ""));
 }
 
 function featuredItemsForDaily(daily, applyFilter = true) {
@@ -1651,7 +1845,7 @@ function allDateGroup(group) {
 }
 
 function timelineDateButton(date, countLabel, open, scope) {
-  const attr = scope === "all" ? "data-all-date" : "data-featured-date";
+  const attr = scope === "all" ? "data-all-date" : scope === "platform" ? "data-platform-date" : "data-featured-date";
   return `
     <button class="timeline-date-button" type="button" ${attr}="${escapeHtml(date)}">
       <span>${escapeHtml(formatDateShort(date))}</span>
@@ -3406,6 +3600,15 @@ function bindPageEvents(detail = null) {
       const date = button.dataset.allDate;
       if (state.allExpandedDates.has(date)) state.allExpandedDates.delete(date);
       else state.allExpandedDates.add(date);
+      render();
+    });
+  });
+
+  document.querySelectorAll("[data-platform-date]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const date = button.dataset.platformDate;
+      if (state.platformExpandedDates.has(date)) state.platformExpandedDates.delete(date);
+      else state.platformExpandedDates.add(date);
       render();
     });
   });

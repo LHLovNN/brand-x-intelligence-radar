@@ -1,0 +1,51 @@
+{
+  "timezone": "Asia/Shanghai",
+  "platforms": {
+    "xiaohongshu": {
+      "display_name": "小红书",
+      "topic_label": "小红书增长方法",
+      "aliases": [
+        "小红书",
+        "xiaohongshu",
+        "rednote",
+        "xhs"
+      ],
+      "intent_terms": [
+        "养号",
+        "起号",
+        "涨粉",
+        "爆文",
+        "笔记",
+        "变现",
+        "引流",
+        "私域",
+        "商单",
+        "带货",
+        "店铺",
+        "内容定位",
+        "流量",
+        "账号运营",
+        "growth",
+        "monetization",
+        "creator",
+        "traffic",
+        "algorithm",
+        "case study",
+        "playbook",
+        "strategy"
+      ],
+      "exclude_terms": [
+        "tiktok refugee",
+        "privacy concern",
+        "spy app",
+        "ccp",
+        "ban",
+        "coupon code",
+        "promo code"
+      ],
+      "max_items_per_day": 20,
+      "max_candidates_per_day": 200,
+      "max_source_requests_per_run": 8
+    }
+  }
+}

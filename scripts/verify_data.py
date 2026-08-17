@@ -69,6 +69,27 @@ def verify_conversation_contexts(payload, label: str) -> None:
                 )
 
 
+def verify_platform_trends() -> None:
+    latest_path = DATA / "platform-trends" / "xiaohongshu" / "latest.json"
+    index_path = DATA / "platform-trends" / "xiaohongshu" / "index.json"
+    if not latest_path.exists() and not index_path.exists():
+        return
+    assert_true(latest_path.exists(), "platform trends latest should exist when index exists")
+    assert_true(index_path.exists(), "platform trends index should exist when latest exists")
+    latest = load(latest_path)
+    index = load(index_path)
+    items = latest.get("items") or []
+    max_items = latest.get("collection_status", {}).get("max_items", 20)
+    assert_true(len(items) <= max_items, "platform trends should not exceed daily max items")
+    times = [str(item.get("created_at") or "") for item in items]
+    assert_true(times == sorted(times, reverse=True), "platform trends should be sorted by publish time desc")
+    assert_true(index.get("latest_date") == latest.get("date"), "platform trends latest date mismatch")
+    if items:
+        for item in items:
+            assert_true(item.get("translation_zh"), "platform trend item should include Chinese display text")
+        verify_conversation_contexts(latest, "platform-trends/xiaohongshu/latest")
+
+
 def main() -> None:
     latest = load(DATA / "latest.json")
     daily = load(DATA / "daily" / "latest.json")
@@ -101,6 +122,7 @@ def main() -> None:
         archive_path = DATA / "daily" / f"{item['date']}.json"
         if archive_path.exists():
             verify_conversation_contexts(load(archive_path), f"daily/{item['date']}")
+    verify_platform_trends()
 
     tracked = [cluster for cluster in clusters if cluster.get("tracking_eligible")]
     assert_true(len(fermentation["items"]) == len(tracked), "fermentation tracked count mismatch")

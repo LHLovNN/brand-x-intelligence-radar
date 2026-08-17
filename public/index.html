@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brand X Intelligence Radar</title>
-    <link rel="stylesheet" href="./assets/styles.css?v=20260817-20260817T000502Z" />
+    <link rel="stylesheet" href="./assets/styles.css?v=20260817-platform-trends" />
   </head>
   <body>
     <div id="app" class="app-shell">
@@ -17,10 +17,17 @@
           </div>
         </div>
         <nav class="nav-list">
-          <a href="#/" data-route="overview">舆情焦点</a>
-          <a href="#/all" data-route="all">全部舆情</a>
-          <a href="#/daily" data-route="daily">舆情日报</a>
-          <a href="#/settings" data-route="settings">设置</a>
+          <div class="nav-group">
+            <div class="nav-group-title">舆情监控</div>
+            <a href="#/" data-route="overview">舆情焦点</a>
+            <a href="#/all" data-route="all">全部舆情</a>
+            <a href="#/daily" data-route="daily">舆情日报</a>
+            <a href="#/settings" data-route="settings">设置</a>
+          </div>
+          <div class="nav-group">
+            <div class="nav-group-title">平台流变</div>
+            <a href="#/platform/xiaohongshu" data-route="xiaohongshu">小红书</a>
+          </div>
         </nav>
       </aside>
       <main class="main-panel">
@@ -37,7 +44,7 @@
         <section id="content" class="content-area" aria-live="polite"></section>
       </main>
     </div>
-    <script src="./dashboard-data-bundle.js?v=20260817-20260817T000502Z"></script>
-    <script src="./assets/app.js?v=20260817-20260817T000502Z"></script>
+    <script src="./dashboard-data-bundle.js?v=20260817-platform-trends"></script>
+    <script src="./assets/app.js?v=20260817-platform-trends"></script>
   </body>
 </html>

@@ -30,12 +30,13 @@ def attach_conversation_contexts(
     translation_service: TranslationService | None,
     window_start: str,
     window_end: str,
+    allow_anchor_threads: bool = False,
 ) -> dict[str, Any]:
     if not x_source or not can_fetch_context(x_source):
         return {"attempted": 0, "attached": 0, "warnings": []}
 
     score_by_post = cluster_score_by_post(clusters)
-    targets = context_targets(posts, score_by_post)
+    targets = context_targets(posts, score_by_post, allow_anchor_threads=allow_anchor_threads)
     target_ids = configured_target_post_ids()
     if target_ids:
         targets = [post for post in targets if str(post.get("post_id") or "") in target_ids]
@@ -135,14 +136,14 @@ def cluster_score_by_post(clusters: list[dict[str, Any]]) -> dict[str, int]:
     return scores
 
 
-def context_targets(posts: list[dict[str, Any]], score_by_post: dict[str, int]) -> list[dict[str, Any]]:
+def context_targets(posts: list[dict[str, Any]], score_by_post: dict[str, int], allow_anchor_threads: bool = False) -> list[dict[str, Any]]:
     targets = []
     seen: set[str] = set()
     for post in posts:
         if not post.get("is_relevant"):
             continue
         score = score_by_post.get(str(post.get("post_id")), competitor_context_score(post))
-        if not should_fetch_context(post, score):
+        if not should_fetch_context(post, score, allow_anchor_threads=allow_anchor_threads):
             continue
         key = str(post.get("post_id") or "")
         if not key or key in seen:
@@ -152,14 +153,14 @@ def context_targets(posts: list[dict[str, Any]], score_by_post: dict[str, int]) 
     return [post for _, _, _, post in sorted(targets, key=lambda item: (item[0], item[1], item[2]), reverse=True)]
 
 
-def should_fetch_context(post: dict[str, Any], score: int) -> bool:
+def should_fetch_context(post: dict[str, Any], score: int, allow_anchor_threads: bool = False) -> bool:
     conversation_id = str(post.get("conversation_id") or "")
     post_id = str(post.get("post_id") or "")
     if not conversation_id:
         return False
     if is_competitor_post(post) and context_views(post) < COMPETITOR_CONTEXT_MIN_VIEWS:
         return False
-    has_reply_shape = conversation_id != post_id or bool(leading_mention(post))
+    has_reply_shape = allow_anchor_threads or conversation_id != post_id or bool(leading_mention(post))
     if not has_reply_shape:
         return False
     followers = context_followers(post)
