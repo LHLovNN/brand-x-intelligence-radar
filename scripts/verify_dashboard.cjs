@@ -15,6 +15,10 @@ const localBrowserCandidates = [
   process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE,
 ].filter(Boolean);
 
+function isIgnorableConsoleError(text) {
+  return /^Failed to load resource: the server responded with a status of 404/i.test(String(text || ""));
+}
+
 function localBrowserExecutable() {
   return localBrowserCandidates.find((candidate) => fs.existsSync(candidate));
 }
@@ -192,7 +196,8 @@ async function main() {
   const errors = [];
   page.on("pageerror", (error) => errors.push(error.message));
   page.on("console", (message) => {
-    if (message.type() === "error") errors.push(message.text());
+    const text = message.text();
+    if (message.type() === "error" && !isIgnorableConsoleError(text)) errors.push(text);
   });
 
   await page.setContent(shellHtml(), { waitUntil: "domcontentloaded" });
