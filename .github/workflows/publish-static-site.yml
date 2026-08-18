@@ -21,11 +21,12 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -47,12 +48,26 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Install Playwright browser
+      - name: Install Playwright package
+        timeout-minutes: 3
         run: |
           npm install --no-save --no-package-lock playwright
-          npx playwright install --with-deps chromium
+
+      - name: Resolve browser for QA
+        timeout-minutes: 5
+        run: |
+          if command -v google-chrome-stable >/dev/null 2>&1; then
+            echo "PLAYWRIGHT_CHROMIUM_EXECUTABLE=$(command -v google-chrome-stable)" >> "$GITHUB_ENV"
+          elif command -v google-chrome >/dev/null 2>&1; then
+            echo "PLAYWRIGHT_CHROMIUM_EXECUTABLE=$(command -v google-chrome)" >> "$GITHUB_ENV"
+          elif command -v chromium-browser >/dev/null 2>&1; then
+            echo "PLAYWRIGHT_CHROMIUM_EXECUTABLE=$(command -v chromium-browser)" >> "$GITHUB_ENV"
+          else
+            npx playwright install chromium
+          fi
 
       - name: Browser QA
+        timeout-minutes: 5
         run: node scripts/verify_dashboard.cjs
 
       - name: Upload browser QA artifacts
