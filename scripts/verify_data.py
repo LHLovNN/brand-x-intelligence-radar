@@ -18,6 +18,15 @@ LOW_QUALITY_CONTEXT_PROFILE_RE = re.compile(
     r"找炮友|约炮|曰炮|入驻.{0,12}炮平台|真人认证.{0,30}隐私|附近的可加v|小号已禁言",
     re.IGNORECASE,
 )
+PLATFORM_ALLOWED_TAGS = {
+    "账号冷启动",
+    "爆文与内容结构",
+    "流量机制",
+    "变现",
+    "私域引流",
+    "案例复盘",
+    "小红书方法论",
+}
 
 
 def load(path: Path):
@@ -135,6 +144,13 @@ def verify_platform_trends() -> None:
         verify_no_contextual_duplicate_items(items, "platform-trends/xiaohongshu/latest")
         for item in items:
             assert_true(item.get("translation_zh"), "platform trend item should include Chinese display text")
+            assert_true(
+                str(item.get("topic") or "") in PLATFORM_ALLOWED_TAGS,
+                f"platform trend topic should use controlled taxonomy: {item.get('topic')}",
+            )
+            tags = [str(tag or "") for tag in item.get("tags") or []]
+            unexpected_tags = [tag for tag in tags if tag not in PLATFORM_ALLOWED_TAGS]
+            assert_true(not unexpected_tags, f"platform trend tags should use controlled taxonomy: {unexpected_tags}")
             metrics = item.get("post_metrics") or item.get("metrics") or {}
             assert_true(int(metrics.get("views") or 0) >= min_views, "platform trend item should meet min views")
             assert_true(int(metrics.get("likes") or 0) >= min_likes, "platform trend item should meet min likes")

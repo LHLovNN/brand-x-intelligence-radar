@@ -63,8 +63,9 @@ TOPIC_TERMS = {
         "distribution",
         "reach",
     ],
-    "变现路径": [
+    "变现": [
         "变现",
+        "变现路径",
         "商单",
         "带货",
         "店铺",
@@ -95,6 +96,36 @@ TOPIC_TERMS = {
         "experiment",
         "results",
     ],
+}
+
+PLATFORM_TAG_ALIASES = {
+    "养号": "账号冷启动",
+    "起号": "账号冷启动",
+    "冷启动": "账号冷启动",
+    "涨粉": "账号冷启动",
+    "爆文": "爆文与内容结构",
+    "笔记": "爆文与内容结构",
+    "选题": "爆文与内容结构",
+    "标题": "爆文与内容结构",
+    "封面": "爆文与内容结构",
+    "内容定位": "爆文与内容结构",
+    "流量": "流量机制",
+    "算法": "流量机制",
+    "推荐": "流量机制",
+    "曝光": "流量机制",
+    "变现路径": "变现",
+    "商单": "变现",
+    "带货": "变现",
+    "店铺": "变现",
+    "电商": "变现",
+    "引流": "私域引流",
+    "私域": "私域引流",
+    "社群": "私域引流",
+    "微信": "私域引流",
+    "案例": "案例复盘",
+    "复盘": "案例复盘",
+    "拆解": "案例复盘",
+    "实操": "案例复盘",
 }
 
 NOISE_TERMS = [
@@ -459,7 +490,7 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
             "quality_label": "黄金内容",
             "selected_reason": selection_reason(topic, structure_score, metric_score),
             "reusable_takeaway": reusable_takeaway(topic),
-            "tags": unique_tags([topic, *intent_hits[:5]]),
+            "tags": platform_item_tags(topic, topics),
         },
     }
 
@@ -737,11 +768,25 @@ def reusable_takeaway(topic: str) -> str:
         "账号冷启动": "关注账号启动阶段的定位、互动和初始内容节奏。",
         "爆文与内容结构": "提炼选题、标题、封面、正文结构中的可复用写法。",
         "流量机制": "观察作者对推荐、曝光和互动反馈机制的判断。",
-        "变现路径": "记录从内容到商单、带货、店铺或服务成交的闭环。",
+        "变现": "记录从内容到商单、带货、店铺或服务成交的闭环。",
         "私域引流": "关注从小红书内容到社群、私域或线索承接的路径。",
         "案例复盘": "优先提取案例前提、动作、结果和可迁移限制。",
     }
     return mapping.get(topic, "提炼可迁移的小红书运营动作。")
+
+
+def platform_item_tags(topic: str, topics: list[str]) -> list[str]:
+    tags = unique_tags([canonical_platform_tag(value) for value in [topic, *topics]])
+    return tags or ["小红书方法论"]
+
+
+def canonical_platform_tag(value: str) -> str:
+    tag = re.sub(r"\s+", "_", str(value or "").strip())
+    if not tag:
+        return ""
+    if tag in TOPIC_TERMS:
+        return tag
+    return PLATFORM_TAG_ALIASES.get(tag, "")
 
 
 def unique_tags(values: list[str]) -> list[str]:
