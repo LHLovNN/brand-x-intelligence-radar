@@ -10,7 +10,14 @@ CHINESE_RE = re.compile(r"[\u3400-\u9fff]")
 URL_RE = re.compile(r"https?://\S+|t\.co/\S+", re.IGNORECASE)
 MENTION_RE = re.compile(r"@[A-Za-z0-9_]{1,20}")
 TEXT_SIGNAL_RE = re.compile(r"[A-Za-z0-9\u3400-\u9fff]")
-LOW_QUALITY_CONTEXT_RE = re.compile(r"应该没人比我玩[的得]开了吧|我[福肤]不黑不信你看|比她好看的没她骚比她骚的没她好看", re.IGNORECASE)
+LOW_QUALITY_CONTEXT_RE = re.compile(
+    r"应该没人比我玩[的得]开了吧|我[福肤]不黑不信你看|比(?:我|你|他|她|ta)好看的没(?:我|你|他|她|ta)骚.{0,20}比(?:我|你|他|她|ta)骚的没(?:我|你|他|她|ta)好看|只入身体.{0,20}不入生活",
+    re.IGNORECASE,
+)
+LOW_QUALITY_CONTEXT_PROFILE_RE = re.compile(
+    r"找炮友|约炮|曰炮|入驻.{0,12}炮平台|真人认证.{0,30}隐私|附近的可加v|小号已禁言",
+    re.IGNORECASE,
+)
 
 
 def load(path: Path):
@@ -63,7 +70,13 @@ def verify_conversation_contexts(payload, label: str) -> None:
             translation = str(post.get("translation_zh") or "")
             post_id = post.get("post_id") or "unknown"
             compact = re.sub(r"\s+", "", f"{text} {translation}")
+            profile = " ".join(str(post.get(key) or "") for key in ("author_name", "author_handle", "author_bio"))
+            compact_profile = re.sub(r"\s+", "", profile)
             assert_true(not LOW_QUALITY_CONTEXT_RE.search(compact), f"{label}:{anchor}:{post_id} context contains low-quality vulgar noise")
+            assert_true(
+                not LOW_QUALITY_CONTEXT_PROFILE_RE.search(compact_profile),
+                f"{label}:{anchor}:{post_id} context contains low-quality adult spam profile",
+            )
             assert_true(translation.strip(), f"{label}:{anchor}:{post_id} missing context translation")
             if needs_context_translation(text):
                 assert_true(

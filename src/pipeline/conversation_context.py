@@ -24,7 +24,11 @@ CONTEXT_SUMMARY_CHAR_LIMIT = 200
 LOW_QUALITY_CONTEXT_PATTERNS = [
     re.compile(r"应该没人比我玩[的得]开了吧", re.IGNORECASE),
     re.compile(r"我[福肤]不黑不信你看", re.IGNORECASE),
-    re.compile(r"比她好看的没她骚比她骚的没她好看", re.IGNORECASE),
+    re.compile(r"比(?:我|你|他|她|ta)好看的没(?:我|你|他|她|ta)骚.{0,20}比(?:我|你|他|她|ta)骚的没(?:我|你|他|她|ta)好看", re.IGNORECASE),
+    re.compile(r"只入身体.{0,20}不入生活", re.IGNORECASE),
+]
+LOW_QUALITY_CONTEXT_PROFILE_PATTERNS = [
+    re.compile(r"找炮友|约炮|曰炮|入驻.{0,12}炮平台|真人认证.{0,30}隐私|附近的可加v|小号已禁言", re.IGNORECASE),
 ]
 
 
@@ -331,7 +335,15 @@ def is_low_quality_context_row(row: dict[str, Any]) -> bool:
         if value
     )
     compact = re.sub(r"\s+", "", text)
-    return any(pattern.search(compact) for pattern in LOW_QUALITY_CONTEXT_PATTERNS)
+    if any(pattern.search(compact) for pattern in LOW_QUALITY_CONTEXT_PATTERNS):
+        return True
+    profile = " ".join(
+        decoded_text(value)
+        for value in (row.get("author_name"), row.get("author_handle"), row.get("author_bio"))
+        if value
+    )
+    compact_profile = re.sub(r"\s+", "", profile)
+    return any(pattern.search(compact_profile) for pattern in LOW_QUALITY_CONTEXT_PROFILE_PATTERNS)
 
 
 def build_context_for_post(
