@@ -9,9 +9,13 @@ from pathlib import Path
 from typing import Any
 
 from src.adapters.x_source_base import ProviderBudgetExceeded
-from src.pipeline.conversation_context import attach_conversation_contexts
+from src.pipeline.conversation_context import (
+    attach_conversation_contexts,
+    dedupe_contextual_items_keep_earliest,
+    dedupe_conversation_items_keep_earliest,
+)
 from src.pipeline.dashboard_builder import write_data_bundle
-from src.pipeline.translation import apply_translations
+from src.pipeline.translation import apply_translations, translation_report
 from src.utils.config import load_project_json
 from src.utils.io import read_json, write_json
 from src.utils.time import beijing_label, now_utc, to_iso
@@ -210,6 +214,7 @@ def collect_platform_trends(
     seen: set[str] = set()
     candidates_seen = 0
     metric_filtered = 0
+    conversation_deduped = 0
     warnings: list[str] = []
     query_stats: list[dict[str, Any]] = []
 
@@ -247,6 +252,8 @@ def collect_platform_trends(
             if decision["accepted"]:
                 item.update(decision["item"])
                 selected.append(item)
+                selected, removed_duplicates = dedupe_conversation_items_keep_earliest(selected)
+                conversation_deduped += removed_duplicates
                 accepted_for_query += 1
             if len(selected) >= max_items or candidates_seen >= max_candidates:
                 break
@@ -264,6 +271,13 @@ def collect_platform_trends(
     selected.sort(key=lambda item: str(item.get("created_at") or ""), reverse=True)
     translation_status = apply_translations(selected, translation_service)
     context_status = attach_platform_context(selected, x_source, translation_service, start, end)
+    selected, context_deduped = dedupe_contextual_items_keep_earliest(selected)
+    if context_deduped:
+        conversation_deduped += context_deduped
+        context_status["deduped_after_context"] = context_deduped
+        refresh_context_status_for_items(context_status, selected)
+        selected.sort(key=lambda item: str(item.get("created_at") or ""), reverse=True)
+        translation_status = translation_report(selected, getattr(translation_service, "provider_name", "none"))
     status = collection_status(
         selected,
         candidates_seen,
@@ -273,6 +287,7 @@ def collect_platform_trends(
         min_views=min_views,
         min_likes=min_likes,
         metric_filtered=metric_filtered,
+        conversation_deduped=conversation_deduped,
     )
 
     payload = {
@@ -293,6 +308,7 @@ def collect_platform_trends(
             "accepted": len(selected),
             "candidates_inspected": candidates_seen,
             "metric_filtered": metric_filtered,
+            "conversation_deduped": conversation_deduped,
             "max_items": max_items,
             "max_candidates": max_candidates,
             "min_views": min_views,
@@ -305,6 +321,7 @@ def collect_platform_trends(
         "accepted": len(selected),
         "candidates_inspected": candidates_seen,
         "metric_filtered": metric_filtered,
+        "conversation_deduped": conversation_deduped,
         "warnings": warnings[:5],
         "provider": provider,
         "request_stats": platform_request_stats(x_source),
@@ -466,6 +483,14 @@ def attach_platform_context(items: list[dict[str, Any]], x_source: Any, translat
     )
 
 
+def refresh_context_status_for_items(context_status: dict[str, Any], items: list[dict[str, Any]]) -> None:
+    attached = sum(1 for item in items if isinstance(item.get("conversation_context"), dict) and item["conversation_context"].get("posts"))
+    attempted = int(context_status.get("attempted") or len(items))
+    deduped = int(context_status.get("deduped_after_context") or 0)
+    context_status["attached"] = attached
+    context_status["unresolved"] = max(0, attempted - deduped - attached)
+
+
 def collection_status(
     items: list[dict[str, Any]],
     candidates_seen: int,
@@ -475,6 +500,7 @@ def collection_status(
     min_views: int = DEFAULT_MIN_VIEWS,
     min_likes: int = DEFAULT_MIN_LIKES,
     metric_filtered: int = 0,
+    conversation_deduped: int = 0,
 ) -> dict[str, Any]:
     status = "complete"
     if len(items) >= max_items:
@@ -492,6 +518,7 @@ def collection_status(
         "accepted_count": len(items),
         "candidates_inspected": candidates_seen,
         "metric_filtered": metric_filtered,
+        "conversation_deduped": conversation_deduped,
         "max_items": max_items,
         "max_candidates": max_candidates,
         "min_views": min_views,

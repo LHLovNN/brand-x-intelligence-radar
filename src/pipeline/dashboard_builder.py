@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from src.pipeline.competitor_radar import build_competitor_radar
-from src.pipeline.conversation_context import context_translation_fields
+from src.pipeline.conversation_context import context_translation_fields, dedupe_contextual_items_keep_earliest
 from src.utils.io import write_json
 from src.utils.time import BEIJING, beijing_label, now_utc, to_iso
 
@@ -448,7 +448,8 @@ def build_featured_items(joybuy_clusters: list[dict[str, Any]], competitor: dict
     items = [featured_item_for_cluster(cluster) for cluster in joybuy_clusters if is_featured_cluster(cluster)]
     items = [item for item in items if item]
     items.extend(featured_item_for_competitor_post(post) for post in competitor.get("top_posts", []) if is_featured_competitor_post(post))
-    return finalize_featured_items([item for item in items if item])
+    items, _ = dedupe_contextual_items_keep_earliest([item for item in items if item])
+    return finalize_featured_items(items)
 
 
 def finalize_featured_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:

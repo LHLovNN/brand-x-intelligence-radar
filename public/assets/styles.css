@@ -2995,6 +2995,48 @@ body.lightbox-open {
   line-height: 1.25;
 }
 
+.platform-tag-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.platform-tag-filter {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  min-height: 30px;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 5px 10px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.platform-tag-filter:hover,
+.platform-tag-filter.active {
+  border-color: rgba(36, 101, 156, 0.32);
+  background: #f3f8fc;
+  color: var(--blue);
+}
+
+.platform-tag-filter em {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: rgba(36, 101, 156, 0.1);
+  color: inherit;
+  font-style: normal;
+  font-weight: 650;
+}
+
 .detail-lead,
 .detail-paragraph {
   color: var(--text);

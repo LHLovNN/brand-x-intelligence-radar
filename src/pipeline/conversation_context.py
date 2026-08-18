@@ -21,6 +21,11 @@ CONTEXT_FETCH_LIMIT = 120
 CONTEXT_TRANSLATION_TIMEOUT_SECONDS = 30
 CONTEXT_SUMMARY_TIMEOUT_SECONDS = 20
 CONTEXT_SUMMARY_CHAR_LIMIT = 200
+LOW_QUALITY_CONTEXT_PATTERNS = [
+    re.compile(r"应该没人比我玩[的得]开了吧", re.IGNORECASE),
+    re.compile(r"我[福肤]不黑不信你看", re.IGNORECASE),
+    re.compile(r"比她好看的没她骚比她骚的没她好看", re.IGNORECASE),
+]
 
 
 def attach_conversation_contexts(
@@ -51,6 +56,7 @@ def attach_conversation_contexts(
     warnings: list[str] = []
     attached = 0
     unresolved = 0
+    filtered_noise = 0
     summary_counts: dict[str, int] = {}
     for post in targets:
         conversation_id = str(post.get("conversation_id") or "")
@@ -63,7 +69,9 @@ def attach_conversation_contexts(
                 warnings.append(f"conversation {conversation_id} context fetch failed: {str(error)[:180]}")
                 fetched_by_conversation[conversation_id] = []
             else:
-                fetched_by_conversation[conversation_id] = prepare_context_rows(rows, translation_service)
+                context_rows, removed = filter_context_noise(rows)
+                filtered_noise += removed
+                fetched_by_conversation[conversation_id] = prepare_context_rows(context_rows, translation_service)
         rows = fetched_by_conversation[conversation_id]
         if not has_context_row_neighbor(post, rows):
             post.pop("conversation_context", None)
@@ -88,6 +96,7 @@ def attach_conversation_contexts(
         "eligible": eligible,
         "attached": attached,
         "unresolved": unresolved,
+        "filtered_noise": filtered_noise,
         "summary": summary_counts,
         "warnings": warnings[:5],
     }
@@ -151,6 +160,90 @@ def context_targets(posts: list[dict[str, Any]], score_by_post: dict[str, int], 
         seen.add(key)
         targets.append((score, context_followers(post), str(post.get("created_at") or ""), post))
     return [post for _, _, _, post in sorted(targets, key=lambda item: (item[0], item[1], item[2]), reverse=True)]
+
+
+def dedupe_conversation_items_keep_earliest(items: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], int]:
+    """Keep one collected entry per X conversation, preferring the earliest post."""
+    selected: list[dict[str, Any]] = []
+    index_by_key: dict[str, int] = {}
+    removed = 0
+    for item in items:
+        key = conversation_dedupe_key(item)
+        if not key:
+            selected.append(item)
+            continue
+        existing_index = index_by_key.get(key)
+        if existing_index is None:
+            index_by_key[key] = len(selected)
+            selected.append(item)
+            continue
+        removed += 1
+        if is_earlier_conversation_item(item, selected[existing_index]):
+            selected[existing_index] = item
+    return selected, removed
+
+
+def dedupe_contextual_items_keep_earliest(items: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], int]:
+    """Keep one collected entry when items belong to overlapping context windows."""
+    groups: list[dict[str, Any]] = []
+    for item in items:
+        ids = contextual_dedupe_ids(item)
+        if not ids:
+            groups.append({"ids": set(), "items": [item]})
+            continue
+        matching_indexes = [index for index, group in enumerate(groups) if group["ids"] and ids & group["ids"]]
+        if not matching_indexes:
+            groups.append({"ids": ids, "items": [item]})
+            continue
+        first_index = matching_indexes[0]
+        groups[first_index]["ids"].update(ids)
+        groups[first_index]["items"].append(item)
+        for index in reversed(matching_indexes[1:]):
+            groups[first_index]["ids"].update(groups[index]["ids"])
+            groups[first_index]["items"].extend(groups[index]["items"])
+            groups.pop(index)
+
+    kept = [earliest_contextual_item(group["items"]) for group in groups]
+    return kept, max(0, len(items) - len(kept))
+
+
+def contextual_dedupe_ids(item: dict[str, Any]) -> set[str]:
+    ids: set[str] = set()
+    conversation_id = str(item.get("conversation_id") or "").strip()
+    if conversation_id:
+        ids.add(f"conversation:{conversation_id}")
+    post_id = str(item.get("post_id") or "").strip()
+    if post_id:
+        ids.add(f"post:{post_id}")
+    context = item.get("conversation_context") or {}
+    if isinstance(context, dict):
+        for post in context.get("posts") or []:
+            if not isinstance(post, dict):
+                continue
+            context_post_id = str(post.get("post_id") or "").strip()
+            if context_post_id:
+                ids.add(f"post:{context_post_id}")
+    return ids
+
+
+def earliest_contextual_item(items: list[dict[str, Any]]) -> dict[str, Any]:
+    return sorted(items, key=lambda item: (str(item.get("created_at") or item.get("time") or ""), -int(item.get("quality_score") or item.get("score_value") or 0)))[0]
+
+
+def conversation_dedupe_key(item: dict[str, Any]) -> str:
+    conversation_id = str(item.get("conversation_id") or "").strip()
+    post_id = str(item.get("post_id") or "").strip()
+    return conversation_id if conversation_id and conversation_id != post_id else ""
+
+
+def is_earlier_conversation_item(candidate: dict[str, Any], current: dict[str, Any]) -> bool:
+    candidate_time = str(candidate.get("created_at") or candidate.get("time") or "")
+    current_time = str(current.get("created_at") or current.get("time") or "")
+    if candidate_time and current_time and candidate_time != current_time:
+        return candidate_time < current_time
+    return int(candidate.get("quality_score") or candidate.get("score_value") or 0) > int(
+        current.get("quality_score") or current.get("score_value") or 0
+    )
 
 
 def should_fetch_context(post: dict[str, Any], score: int, allow_anchor_threads: bool = False) -> bool:
@@ -218,6 +311,27 @@ def prepare_context_rows(rows: list[dict[str, Any]], translation_service: Transl
         }
         prepared.append(item)
     return sorted(prepared, key=lambda item: str(item.get("created_at") or ""))
+
+
+def filter_context_noise(rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], int]:
+    filtered = []
+    removed = 0
+    for row in rows:
+        if is_low_quality_context_row(row):
+            removed += 1
+            continue
+        filtered.append(row)
+    return filtered, removed
+
+
+def is_low_quality_context_row(row: dict[str, Any]) -> bool:
+    text = " ".join(
+        decoded_text(value)
+        for value in (row.get("translation_zh"), row.get("clean_text"), row.get("text"))
+        if value
+    )
+    compact = re.sub(r"\s+", "", text)
+    return any(pattern.search(compact) for pattern in LOW_QUALITY_CONTEXT_PATTERNS)
 
 
 def build_context_for_post(

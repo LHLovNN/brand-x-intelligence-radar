@@ -10,6 +10,7 @@ CHINESE_RE = re.compile(r"[\u3400-\u9fff]")
 URL_RE = re.compile(r"https?://\S+|t\.co/\S+", re.IGNORECASE)
 MENTION_RE = re.compile(r"@[A-Za-z0-9_]{1,20}")
 TEXT_SIGNAL_RE = re.compile(r"[A-Za-z0-9\u3400-\u9fff]")
+LOW_QUALITY_CONTEXT_RE = re.compile(r"应该没人比我玩[的得]开了吧|我[福肤]不黑不信你看|比她好看的没她骚比她骚的没她好看", re.IGNORECASE)
 
 
 def load(path: Path):
@@ -61,12 +62,42 @@ def verify_conversation_contexts(payload, label: str) -> None:
             text = str(post.get("text") or post.get("original_text") or "")
             translation = str(post.get("translation_zh") or "")
             post_id = post.get("post_id") or "unknown"
+            compact = re.sub(r"\s+", "", f"{text} {translation}")
+            assert_true(not LOW_QUALITY_CONTEXT_RE.search(compact), f"{label}:{anchor}:{post_id} context contains low-quality vulgar noise")
             assert_true(translation.strip(), f"{label}:{anchor}:{post_id} missing context translation")
             if needs_context_translation(text):
                 assert_true(
                     bool(CHINESE_RE.search(translation)),
                     f"{label}:{anchor}:{post_id} context translation should be Chinese",
                 )
+
+
+def contextual_ids(item):
+    ids = set()
+    conversation_id = str(item.get("conversation_id") or "").strip()
+    if conversation_id:
+        ids.add(f"conversation:{conversation_id}")
+    post_id = str(item.get("post_id") or item.get("id") or "").strip()
+    if post_id:
+        ids.add(f"post:{post_id}")
+    context = item.get("conversation_context")
+    if isinstance(context, dict):
+        for post in context.get("posts") or []:
+            if isinstance(post, dict) and post.get("post_id"):
+                ids.add(f"post:{post['post_id']}")
+    return ids
+
+
+def verify_no_contextual_duplicate_items(items, label: str) -> None:
+    groups = []
+    for item in items or []:
+        ids = contextual_ids(item)
+        if not ids:
+            continue
+        for group in groups:
+            if ids & group["ids"]:
+                fail(f"{label}: duplicate collected items share the same context window")
+        groups.append({"ids": ids})
 
 
 def verify_platform_trends() -> None:
@@ -88,6 +119,7 @@ def verify_platform_trends() -> None:
     assert_true(times == sorted(times, reverse=True), "platform trends should be sorted by publish time desc")
     assert_true(index.get("latest_date") == latest.get("date"), "platform trends latest date mismatch")
     if items:
+        verify_no_contextual_duplicate_items(items, "platform-trends/xiaohongshu/latest")
         for item in items:
             assert_true(item.get("translation_zh"), "platform trend item should include Chinese display text")
             metrics = item.get("post_metrics") or item.get("metrics") or {}
@@ -124,6 +156,8 @@ def main() -> None:
     verify_conversation_contexts(latest, "latest")
     verify_conversation_contexts(daily, "daily/latest")
     verify_conversation_contexts(competitor, "competitor")
+    verify_no_contextual_duplicate_items(latest.get("featured_items") or [], "latest featured_items")
+    verify_no_contextual_duplicate_items(daily.get("featured_items") or [], "daily latest featured_items")
     for item in daily_index["items"]:
         archive_path = DATA / "daily" / f"{item['date']}.json"
         if archive_path.exists():

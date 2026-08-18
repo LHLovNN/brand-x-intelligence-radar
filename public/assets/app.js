@@ -10,6 +10,7 @@ const state = {
   xiaohongshuIndex: null,
   xiaohongshuArchive: [],
   platformExpandedDates: new Set(),
+  platformTagFilter: "",
   allBrandFilter: "all",
   allTypeFilter: "all",
   allSearchQuery: "",
@@ -472,6 +473,8 @@ function xiaohongshuPage() {
   const allItems = archive.flatMap((daily) => daily.items || []);
   const latestItems = latest.items || [];
   const summary = latest.summary || {};
+  const tagStats = platformTagStats(archive);
+  const filteredArchive = platformFilteredArchive(archive);
   return `
     ${pageHero({
       eyebrow: "平台流变",
@@ -490,11 +493,76 @@ function xiaohongshuPage() {
       <span>门槛 浏览≥${escapeHtml(String(latest.collection_status?.min_views ?? 500))} · 赞≥${escapeHtml(String(latest.collection_status?.min_likes ?? 10))}</span>
       <span>${escapeHtml(latest.window_label || "过去 24 小时")}</span>
     </div>
+    ${platformTagFilterBar(tagStats, allItems.length)}
     ${platformWarnings(latest)}
     <section class="featured-feed platform-feed">
-      ${archive.length ? archive.map(platformDateGroup).join("") : empty("暂无小红书平台流变数据。下一次日报生成后会自动写入这里。")}
+      ${filteredArchive.length ? filteredArchive.map(platformDateGroup).join("") : empty("没有匹配当前标签的收录内容。")}
     </section>
   `;
+}
+
+function platformFilteredArchive(archive) {
+  const activeTag = String(state.platformTagFilter || "").trim();
+  if (!activeTag) return archive;
+  return archive
+    .map((daily) => ({
+      ...daily,
+      items: (daily.items || []).filter((item) => platformItemHasTag(item, activeTag)),
+    }))
+    .filter((daily) => (daily.items || []).length);
+}
+
+function platformTagStats(archive) {
+  const counts = new Map();
+  archive.forEach((daily) => {
+    (daily.items || []).forEach((item) => {
+      new Set(platformItemTags(item)).forEach((tag) => {
+        counts.set(tag, (counts.get(tag) || 0) + 1);
+      });
+    });
+  });
+  return [...counts.entries()]
+    .map(([label, count]) => ({ label, count }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, "zh-Hans-CN"));
+}
+
+function platformItemTags(item) {
+  return (item.tags || []).map((tag) => String(tag || "").trim()).filter(Boolean);
+}
+
+function platformItemHasTag(item, tag) {
+  return platformItemTags(item).includes(tag);
+}
+
+function platformTagFilterBar(tagStats, total) {
+  if (!tagStats.length) return "";
+  const activeTag = String(state.platformTagFilter || "");
+  const buttons = [
+    `<button type="button" class="platform-tag-filter${activeTag ? "" : " active"}" data-platform-tag-filter="">
+      <span>全部</span><em>${escapeHtml(String(total))}</em>
+    </button>`,
+    ...tagStats.map((tag) => `
+      <button type="button" class="platform-tag-filter${activeTag === tag.label ? " active" : ""}" data-platform-tag-filter="${escapeHtml(tag.label)}">
+        <span>#${escapeHtml(tag.label)}</span><em>${escapeHtml(String(tag.count))}</em>
+      </button>
+    `),
+  ];
+  return `<div class="platform-tag-filter-row" aria-label="小红书内容标签筛选">${buttons.join("")}</div>`;
+}
+
+function syncPlatformExpandedDatesForFilter() {
+  const activeTag = String(state.platformTagFilter || "").trim();
+  if (!activeTag) {
+    state.platformExpandedDates = new Set(state.xiaohongshuArchive.slice(0, DEFAULT_TIMELINE_EXPANDED_DAYS).map((daily) => daily.date).filter(Boolean));
+    return;
+  }
+  state.platformExpandedDates = new Set(
+    state.xiaohongshuArchive
+      .filter((daily) => (daily.items || []).some((item) => platformItemHasTag(item, activeTag)))
+      .slice(0, DEFAULT_TIMELINE_EXPANDED_DAYS)
+      .map((daily) => daily.date)
+      .filter(Boolean)
+  );
 }
 
 function platformWarnings(daily) {
@@ -530,6 +598,7 @@ function platformTimeline(daily, items) {
 
 function platformTimelineCard(item) {
   const body = firstSourceText(item.translation_zh, item.original_text, item.text, item.summary_zh);
+  const followerLine = item.author_followers ? `${escapeHtml(formatCompactNumber(item.author_followers))} followers` : "";
   return `
     <div class="publish-item all-feed-item">
       <div class="publish-time">${escapeHtml(formatEventTime(item.created_at || item.time))}</div>
@@ -542,10 +611,8 @@ function platformTimelineCard(item) {
               <div class="source-line">
                 ${authorNameNode(item, item.author_name || item.source_name || "X Source")}
                 ${item.author_handle ? `<em>@${escapeHtml(item.author_handle)}</em>` : ""}
-                ${sourceBadge(item.badge || "小红书", "focus")}
-                <strong class="source-badge platform">黄金内容</strong>
               </div>
-              <div class="source-subline">${escapeHtml(item.source_type || "平台流变")}${item.author_followers ? ` · ${escapeHtml(formatCompactNumber(item.author_followers))} followers` : ""}</div>
+              ${followerLine ? `<div class="source-subline">${followerLine}</div>` : ""}
             </div>
           </div>
           <div class="all-score" aria-label="黄金内容评分 ${escapeHtml(String(item.quality_score ?? item.score_value ?? "n/a"))}">
@@ -567,10 +634,7 @@ function platformTimelineCard(item) {
           </div>
         </div>
         <div class="tag-row">${(item.tags || []).slice(0, 8).map((tag) => `<span class="plain-tag">#${escapeHtml(tag)}</span>`).join("")}</div>
-        ${platformReasonLine(item)}
-        ${item.reusable_takeaway ? `<div class="reason-line compact">可复用动作：${escapeHtml(item.reusable_takeaway)}</div>` : ""}
         <div class="all-card-bottom">
-          ${cardFootnote("平台流变内容", item)}
           <div class="button-row">
             ${cardExternalAction(item.external_href || item.url, item)}
           </div>
@@ -578,12 +642,6 @@ function platformTimelineCard(item) {
       </article>
     </div>
   `;
-}
-
-function platformReasonLine(item) {
-  const reason = String(item?.selected_reason || item?.reason || "").trim();
-  if (!reason) return "";
-  return `<div class="reason-line compact">收录原因：${escapeHtml(reason)}</div>`;
 }
 
 function comparePlatformItems(a, b) {
@@ -3643,6 +3701,14 @@ function bindPageEvents(detail = null) {
       const date = button.dataset.platformDate;
       if (state.platformExpandedDates.has(date)) state.platformExpandedDates.delete(date);
       else state.platformExpandedDates.add(date);
+      render();
+    });
+  });
+
+  document.querySelectorAll("[data-platform-tag-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.platformTagFilter = button.dataset.platformTagFilter || "";
+      syncPlatformExpandedDatesForFilter();
       render();
     });
   });

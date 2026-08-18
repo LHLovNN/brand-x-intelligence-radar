@@ -10,6 +10,9 @@ from src.pipeline.conversation_context import (
     attach_conversation_contexts,
     build_context_for_post,
     context_item,
+    dedupe_contextual_items_keep_earliest,
+    dedupe_conversation_items_keep_earliest,
+    filter_context_noise,
     prepare_context_rows,
     should_fetch_context,
 )
@@ -48,6 +51,41 @@ def main() -> None:
         post(5, brand="joybuy", metrics={"views": 100}, author_followers=1000),
         0,
     ), "primary context should not be gated by the competitor view threshold"
+
+    deduped, removed = dedupe_conversation_items_keep_earliest(
+        [
+            post(8, post_id="later", conversation_id="thread-1", created_at="2026-07-29T00:08:00Z"),
+            post(7, post_id="earlier", conversation_id="thread-1", created_at="2026-07-29T00:07:00Z"),
+            post(9, post_id="standalone", conversation_id="standalone", created_at="2026-07-29T00:09:00Z"),
+        ]
+    )
+    assert removed == 1, "duplicate conversation entries should be counted"
+    assert [item["post_id"] for item in deduped] == ["earlier", "standalone"], "same conversation should keep the earliest collected post"
+
+    contextual_deduped, contextual_removed = dedupe_contextual_items_keep_earliest(
+        [
+            {
+                **post(8, post_id="later-root", conversation_id="later-root", created_at="2026-07-29T00:08:00Z"),
+                "conversation_context": {"posts": [{"post_id": "earlier-root"}, {"post_id": "later-root"}]},
+            },
+            {
+                **post(7, post_id="earlier-root", conversation_id="earlier-root", created_at="2026-07-29T00:07:00Z"),
+                "conversation_context": {"posts": [{"post_id": "earlier-root"}]},
+            },
+        ]
+    )
+    assert contextual_removed == 1, "overlapping context windows should be deduped"
+    assert [item["post_id"] for item in contextual_deduped] == ["earlier-root"], "overlapping context should keep the earliest post"
+
+    clean_rows, filtered_noise = filter_context_noise(
+        [
+            post(6, text="@source 这个拆解角度挺有意思"),
+            post(7, text="@source 应该没人比我玩的开了吧😃😖我福不黑不信你看"),
+            post(8, text="@source 比她好看的没她骚比她骚的没她好看@spam"),
+        ]
+    )
+    assert filtered_noise == 2, "obvious low-quality vulgar context replies should be filtered"
+    assert [item["post_id"] for item in clean_rows] == ["6"], "normal context replies should stay visible"
 
     rows = [post(index) for index in range(50)]
     rows.insert(25, anchor)
