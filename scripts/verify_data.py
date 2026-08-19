@@ -18,6 +18,11 @@ LOW_QUALITY_CONTEXT_PROFILE_RE = re.compile(
     r"找炮友|约炮|曰炮|入驻.{0,12}炮平台|真人认证.{0,30}隐私|附近的可加v|小号已禁言",
     re.IGNORECASE,
 )
+LOW_QUALITY_TG_DIGEST_RE = re.compile(
+    r"打飞机|撸管|约炮|找炮友|炮友|曰炮|解决性欲|性欲成本|全民打飞机|只入身体.{0,30}不入生活",
+    re.IGNORECASE,
+)
+LOW_SIGNAL_TG_STATUS_RE = re.compile(r"(?:挂了|又挂|崩了|炸了|宕机|不能用|用不了|不可用|打不开)", re.IGNORECASE)
 PLATFORM_ALLOWED_TAGS = {
     "账号冷启动",
     "爆文与内容结构",
@@ -182,6 +187,36 @@ def verify_diting_digests() -> None:
             assert_true(section.get("title"), f"diting digest section title missing for {kind}:{latest_date}")
             for item in section.get("items") or []:
                 assert_true(item.get("title") or item.get("summary"), f"diting digest item text missing for {kind}:{latest_date}")
+                if kind == "tg":
+                    verify_tg_digest_item_quality(item, f"{kind}:{latest_date}")
+
+    for detail_path in (DATA / "dt-digests" / "daily" / "tg").glob("*.json"):
+        detail = load(detail_path)
+        for section in detail.get("sections") or []:
+            for item in section.get("items") or []:
+                verify_tg_digest_item_quality(item, f"tg:{detail.get('date') or detail_path.stem}")
+
+
+def verify_tg_digest_item_quality(item, label: str) -> None:
+    text_parts = [
+        str(item.get("title") or ""),
+        str(item.get("summary") or ""),
+        str(item.get("source") or ""),
+        str(item.get("channel") or ""),
+    ]
+    for link in item.get("links") or []:
+        if isinstance(link, dict):
+            text_parts.append(str(link.get("label") or ""))
+    compact = re.sub(r"\s+", "", " ".join(text_parts))
+    assert_true(not LOW_QUALITY_TG_DIGEST_RE.search(compact), f"diting digest contains low-quality TG item for {label}")
+
+    title = str(item.get("title") or "").strip()
+    summary = str(item.get("summary") or "").strip()
+    title_signal_len = len(re.findall(r"[A-Za-z0-9\u3400-\u9fff]", re.sub(r"https?://\S+", "", title)))
+    assert_true(
+        bool(summary) or title_signal_len > 18 or not LOW_SIGNAL_TG_STATUS_RE.search(title),
+        f"diting digest contains low-signal TG status chatter for {label}",
+    )
 
 
 def main() -> None:

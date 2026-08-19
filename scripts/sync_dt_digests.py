@@ -40,6 +40,20 @@ SENSITIVE_TEXT_PATTERNS = [
     re.compile(r"Bearer\s+[A-Za-z0-9._-]{24,}", re.IGNORECASE),
     re.compile(r"(?i)(api[_-]?key|secret|token|password)\s*[:=]\s*[\"']?[A-Za-z0-9_./+=-]{24,}"),
 ]
+TG_LOW_VALUE_ADULT_PATTERNS = [
+    re.compile(r"打飞机|撸管|约炮|找炮友|炮友|曰炮", re.IGNORECASE),
+    re.compile(r"解决性欲|性欲成本|全民打飞机", re.IGNORECASE),
+    re.compile(r"只入身体.{0,30}不入生活", re.IGNORECASE),
+]
+TG_SHORT_STATUS_CHATTER_RE = re.compile(
+    r"(?:挂了|又挂|崩了|炸了|宕机|不能用|用不了|不可用|打不开)",
+    re.IGNORECASE,
+)
+TG_SHORT_CHATTER_RE = re.compile(r"什么情况|真的假的|咋回事|有人知道|笑死|离谱|绷不住", re.IGNORECASE)
+TG_FILTER_REASON_LABELS = {
+    "low_value_adult": "低俗成人向低价值内容",
+    "short_status_chatter": "无摘要短状态闲聊",
+}
 
 
 def main() -> None:
@@ -65,6 +79,11 @@ def main() -> None:
         daily = build_daily_detail(entry, base_url, source_dir, generated_at)
         daily_path = target / "daily" / entry["kind"] / f"{entry['date']}.json"
         write_json(str(daily_path), daily)
+        entry["item_count"] = daily["item_count"]
+        if daily.get("filtered_count"):
+            entry["original_item_count"] = daily["original_item_count"]
+            entry["filtered_count"] = daily["filtered_count"]
+            entry["filter_summary"] = daily["filter_summary"]
         entry["detail_path"] = f"dashboard-data/dt-digests/daily/{entry['kind']}/{entry['date']}.json"
         entry["detail_available"] = True
 
@@ -172,7 +191,8 @@ def build_daily_detail(entry: dict[str, Any], base_url: str, source_dir: Path | 
     parser = DigestPageParser(entry["kind"])
     parser.feed(html_text)
     parser.finish_open_blocks()
-    sections = parser.sections
+    original_item_count = sum(len(section.get("items") or []) for section in parser.sections)
+    sections, filter_summary = filter_digest_sections(entry["kind"], parser.sections)
     item_count = sum(len(section.get("items") or []) for section in sections)
     section_count = len(sections)
     return sanitize_payload({
@@ -181,13 +201,91 @@ def build_daily_detail(entry: dict[str, Any], base_url: str, source_dir: Path | 
         "date": entry["date"],
         "file": entry["file"],
         "title": parser.hero_title or KIND_LABELS[entry["kind"]],
-        "hero_date": parser.hero_date,
+        "hero_date": update_hero_item_count(parser.hero_date, item_count),
         "source_url": entry["source_url"],
         "synced_at": generated_at,
+        "original_item_count": original_item_count,
+        "filtered_count": max(0, original_item_count - item_count),
+        "filter_summary": filter_summary,
         "item_count": item_count,
         "section_count": section_count,
         "sections": sections,
     })
+
+
+def filter_digest_sections(kind: str, sections: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    if kind != "tg":
+        return sections, []
+
+    reason_counts: dict[str, int] = {}
+    filtered_sections: list[dict[str, Any]] = []
+    for section in sections:
+        kept_items = []
+        for item in section.get("items") or []:
+            reason = tg_item_filter_reason(item)
+            if reason:
+                reason_counts[reason] = reason_counts.get(reason, 0) + 1
+                continue
+            kept_items.append(item)
+        if kept_items:
+            filtered_sections.append({
+                **section,
+                "count_label": f"{len(kept_items)} 条",
+                "items": kept_items,
+            })
+
+    summary = [
+        {
+            "reason": reason,
+            "label": TG_FILTER_REASON_LABELS[reason],
+            "count": reason_counts[reason],
+        }
+        for reason in TG_FILTER_REASON_LABELS
+        if reason_counts.get(reason)
+    ]
+    return filtered_sections, summary
+
+
+def tg_item_filter_reason(item: dict[str, Any]) -> str | None:
+    full_text = compact_text(" ".join(digest_item_text_parts(item)))
+    compact_full_text = re.sub(r"\s+", "", full_text)
+    if any(pattern.search(compact_full_text) for pattern in TG_LOW_VALUE_ADULT_PATTERNS):
+        return "low_value_adult"
+
+    title = compact_text(str(item.get("title") or ""))
+    summary = compact_text(str(item.get("summary") or ""))
+    title_signal_length = signal_char_count(title)
+    if not summary and title_signal_length <= 18 and TG_SHORT_STATUS_CHATTER_RE.search(title):
+        return "short_status_chatter"
+    if not summary and title_signal_length <= 12 and (
+        title.rstrip().endswith(("?", "？")) or TG_SHORT_CHATTER_RE.search(title)
+    ):
+        return "short_status_chatter"
+    return None
+
+
+def digest_item_text_parts(item: dict[str, Any]) -> list[str]:
+    parts = [
+        str(item.get("title") or ""),
+        str(item.get("summary") or ""),
+        str(item.get("source") or ""),
+        str(item.get("channel") or ""),
+    ]
+    for link in item.get("links") or []:
+        if isinstance(link, dict):
+            parts.append(str(link.get("label") or ""))
+    return parts
+
+
+def signal_char_count(value: str) -> int:
+    without_urls = re.sub(r"https?://\S+", "", value or "", flags=re.IGNORECASE)
+    return len(re.findall(r"[A-Za-z0-9\u3400-\u9fff]", without_urls))
+
+
+def update_hero_item_count(hero_date: str, item_count: int) -> str:
+    if not hero_date:
+        return hero_date
+    return re.sub(r"\d+\s*条内容", f"{item_count} 条内容", hero_date)
 
 
 class DigestPageParser(HTMLParser):
