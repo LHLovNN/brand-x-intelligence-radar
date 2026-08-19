@@ -79,6 +79,20 @@ function emptyPlatformTrendIndex() {
   };
 }
 
+function emptyDitingDigestIndex() {
+  return {
+    generated_at: "",
+    generated_at_label: "",
+    source: "codew1028/dt",
+    source_base_url: "https://codew1028.github.io/dt",
+    detail_days: 0,
+    latest: { ai: "", tg: "" },
+    latest_date: "",
+    counts: { ai: 0, tg: 0 },
+    items: [],
+  };
+}
+
 function buildDataMap() {
   const bundled = readDataBundle();
   const map = {
@@ -114,6 +128,26 @@ function buildDataMap() {
   }
   map["dashboard-data/platform-trends/xiaohongshu/latest.json"] ||= emptyPlatformTrendPayload();
   map["dashboard-data/platform-trends/xiaohongshu/index.json"] ||= emptyPlatformTrendIndex();
+  const dtDir = path.join(publicDir, "dashboard-data", "dt-digests");
+  if (fs.existsSync(dtDir)) {
+    const indexPath = path.join(dtDir, "index.json");
+    if (fs.existsSync(indexPath)) {
+      map["dashboard-data/dt-digests/index.json"] = JSON.parse(fs.readFileSync(indexPath, "utf8"));
+    }
+    const dtDailyDir = path.join(dtDir, "daily");
+    if (fs.existsSync(dtDailyDir)) {
+      for (const kind of fs.readdirSync(dtDailyDir)) {
+        const kindDir = path.join(dtDailyDir, kind);
+        if (!fs.statSync(kindDir).isDirectory()) continue;
+        for (const file of fs.readdirSync(kindDir)) {
+          if (file.endsWith(".json")) {
+            map[`dashboard-data/dt-digests/daily/${kind}/${file}`] = JSON.parse(fs.readFileSync(path.join(kindDir, file), "utf8"));
+          }
+        }
+      }
+    }
+  }
+  map["dashboard-data/dt-digests/index.json"] ||= emptyDitingDigestIndex();
   return map;
 }
 
@@ -135,7 +169,7 @@ function shellHtml() {
         <nav class="nav-list" aria-label="产品导航">
           <div class="nav-group" data-nav-group="monitor">
             <button class="nav-group-toggle" type="button" data-nav-toggle="monitor" aria-expanded="true">
-              <span class="nav-group-label">舆情监控</span>
+              <span class="nav-group-label">品牌-舆情监控</span>
               <span class="nav-chevron" aria-hidden="true"></span>
             </button>
             <div class="nav-children">
@@ -147,11 +181,13 @@ function shellHtml() {
           </div>
           <div class="nav-group" data-nav-group="platform">
             <button class="nav-group-toggle" type="button" data-nav-toggle="platform" aria-expanded="true">
-              <span class="nav-group-label">平台流变</span>
+              <span class="nav-group-label">谛听-情报库</span>
               <span class="nav-chevron" aria-hidden="true"></span>
             </button>
             <div class="nav-children">
               <a href="#/platform/xiaohongshu" data-route="xiaohongshu"><span class="nav-item-dot" aria-hidden="true"></span><span>小红书</span></a>
+              <a href="#/diting/ai-daily" data-route="aiDaily"><span class="nav-item-dot" aria-hidden="true"></span><span>AI日报</span></a>
+              <a href="#/diting/tg-daily" data-route="tgDaily"><span class="nav-item-dot" aria-hidden="true"></span><span>TG日报</span></a>
             </div>
           </div>
         </nav>
@@ -228,6 +264,18 @@ async function main() {
   await page.waitForSelector(".platform-feed", { timeout: 5000 });
   await page.waitForSelector('[data-nav-group="platform"].contains-active', { timeout: 5000 });
   await page.screenshot({ path: path.join(outDir, "xiaohongshu.png"), fullPage: true });
+
+  await page.click('a[href="#/diting/ai-daily"]');
+  await page.waitForSelector(".diting-digest-feed", { timeout: 5000 });
+  await page.waitForSelector(".diting-card", { timeout: 5000 });
+  await page.waitForSelector('[data-route="aiDaily"].active', { timeout: 5000 });
+  await page.screenshot({ path: path.join(outDir, "ai-daily.png"), fullPage: true });
+
+  await page.click('a[href="#/diting/tg-daily"]');
+  await page.waitForSelector(".diting-digest-feed", { timeout: 5000 });
+  await page.waitForSelector(".diting-card", { timeout: 5000 });
+  await page.waitForSelector('[data-route="tgDaily"].active', { timeout: 5000 });
+  await page.screenshot({ path: path.join(outDir, "tg-daily.png"), fullPage: true });
 
   await page.click('a[href="#/daily"]');
   await page.waitForSelector(".daily-story-card", { timeout: 5000 });

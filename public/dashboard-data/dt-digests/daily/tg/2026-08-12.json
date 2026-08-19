@@ -1,0 +1,1309 @@
+{
+  "kind": "tg",
+  "kind_label": "TG 日报",
+  "date": "2026-08-12",
+  "file": "2026-08-12-tg-digest.html",
+  "title": "TG 频道日报",
+  "hero_date": "2026年08月12日 · 星期三 · 8 个频道 · 48 条内容",
+  "source_url": "https://codew1028.github.io/dt/2026-08-12-tg-digest.html",
+  "synced_at": "2026-08-19T02:21:07Z",
+  "item_count": 48,
+  "section_count": 1,
+  "sections": [
+    {
+      "title": "TG 频道精选",
+      "count_label": "48 条",
+      "items": [
+        {
+          "title": "现在我很多复杂一点的任务都是 Fable 5 写方案，Codex 去执行，Fable 5 验收，相对来说可以做出比较靠谱的方案，以及兼顾性价比。具体是这么做的：",
+          "summary": "Fable 5 的产出是技术方案文档（图1） 一方面文档方便批注修改，另一方面文档方便其他 Agent 快速上手 文档确认后在当前先 /compact 一次 这一步不是必要的，但是有好处，因为后续还要在同一会去验证，/compact 压缩后，节约后续的上下文空间，之所以讨论方案就马上发送 /compact，因为这时候 Prompt Caching 还在，成本低，后面缓存过期了 compact 要贵一点。 把文档交给 Codex （GPT-5.6 Sol xhigh）去执行（图2） 如果任务明显比较复杂，我一般会加上 /goal，这样中间就不需要反复去 continue，一次性把任务完成 Codex 完成后让 Fable 验证（图3） 直接告诉 Fable 其他 Agent 已经实施了，让它确认有没有遗漏，或者方向有无偏离。 如果有些遗漏之类的，把 Fable 的反馈发回给 Codex（图4），不需要新开会，在同一个 Codex 会，Codex 会根据反馈继续完善。 如果用 Opus 5 替代 GPT 5.6 也可以，做法上可以跟上面一样新开会，用文档传递上下文。 也可以直接让 Fable 5 开 SubAgent 并指定用 Opus 5 模型，并且要求在 SubAgent 完成任务后验证。 但是我执行下来 Opus 5 不如 GPT 5.6 Sol 稳定，也不如 GPT 5.6 Token 耐用，所以宁愿麻烦一点。",
+          "channel": "@openclaw1024",
+          "time": "00:44",
+          "url": "https://t.me/openclaw1024/1218",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1218",
+              "label": "现在我很多复杂一点的任务都是 Fable 5 写方案，Codex 去执行，Fable 5 验收，相对来说可以做出比较靠谱的方案，以及兼顾性价比。具体是这么做的： Fable 5 的产出是技术方案文档（图1） 一方面文档方便批注修改，另一方面文档方便其他 Agent 快速上手 文档确认后在当前先 /compact 一次 这一步不是必要的，但是有好处，因为后续还要在同一会去验证，/compact 压缩后，节约后续的上下文空间，之所以讨论方案就马上发送 /compact，因为这时候 Prompt Caching 还在，成本低，后面缓存过期了 compact 要贵一点。 把文档交给 Codex （GPT-5.6 Sol xhigh）去执行（图2） 如果任务明显比较复杂，我一般会加上 /goal，这样中间就不需要反复去 continue，一次性把任务完成 Codex 完成后让 Fable 验证（图3） 直接告诉 Fable 其他 Agent 已经实施了，让它确认有没有遗漏，或者方向有无偏离。 如果有些遗漏之类的，把 Fable 的反馈发回给 Codex（图4），不需要新开会，在同一个 Codex 会，Codex 会根据反馈继续完善。 如果用 Opus 5 替代 GPT 5.6 也可以，做法上可以跟上面一样新开会，用文档传递上下文。 也可以直接让 Fable 5 开 SubAgent 并指定用 Opus 5 模型，并且要求在 SubAgent 完成任务后验证。 但是我执行下来 Opus 5 不如 GPT 5.6 Sol 稳定，也不如 GPT 5.6 Token 耐用，所以宁愿麻烦一点。"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1218",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/openclaw1024",
+              "label": "Hermes/OpenClaw"
+            },
+            {
+              "href": "https://t.me/aigc1024",
+              "label": "AI探索"
+            }
+          ]
+        },
+        {
+          "title": "🍏 **分析师称苹果全玻璃 iPhone 设计或已取消**",
+          "summary": "Jefferies 分析师 Edison Lee 将苹果股票评级下调至「跑输大盘」，理由是全玻璃 iPhone 设计可能已终止。供应链检查显示该项目因良率过低而停止开发，原计划 2027 年 9 月推出以纪念 iPhone 问世 20 周年。 该机型预计混合零售价约 2060 美元，高于此前所有机型均价。苹果原本计划将全玻璃特性拓展至未来的 Pro 和 Pro Max 系列以提升售价和利润率。目前尚不清楚是整个设计被搁置还是仅部分特性取消。Lee 同时指出苹果 AI 策略及 iPhone 19 Pro 元件成本上涨是进一步下调评级的理由。 9To5Mac",
+          "channel": "@zaihuapd",
+          "time": "00:53",
+          "url": "https://t.me/zaihuapd/43100",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43100",
+              "label": "🍏 **分析师称苹果全玻璃 iPhone 设计或已取消** Jefferies 分析师 Edison Lee 将苹果股票评级下调至「跑输大盘」，理由是全玻璃 iPhone 设计可能已终止。供应链检查显示该项目因良率过低而停止开发，原计划 2027 年 9 月推出以纪念 iPhone 问世 20 周年。 该机型预计混合零售价约 2060 美元，高于此前所有机型均价。苹果原本计划将全玻璃特性拓展至未来的 Pro 和 Pro Max 系列以提升售价和利润率。目前尚不清楚是整个设计被搁置还是仅部分特性取消。Lee 同时指出苹果 AI 策略及 iPhone 19 Pro 元件成本上涨是进一步下调评级的理由。"
+            },
+            {
+              "href": "https://9to5mac.com/2026/08/10/next-years-iphone-redesign-with-all-glass-look-might-be-canceled-report/",
+              "label": "9To5Mac"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43100",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "📢好消息：",
+          "summary": "Claude Code 桌面版现在支持 iOS 模拟器 直接和苹果官方模拟器底座对接 不抢占屏幕：模拟器画面直接内嵌在 Claude 软件旁边，AI 在后台自己操作，完全不影响你用电脑做别的事。 支持人机协作：AI 跑测试的同时，你随时可以自己去上手点按、滑屏或按快捷键，操作是实时同步的 启动方式：直接说“把 App 打包并在模拟器里运行，检查一下注册流程”。系统就会自动打开右侧的 iOS 模拟器面板。 多窗口支持：每个独立会（Session）拥有独立的模拟器，互不打扰；单个会最多可同时开 4 个模拟器。 手势与快捷键：用鼠标拖拽实现点击/滑动，支持快捷键（如 Cmd+Shift+H 回主界面，Cmd+R 录屏，Cmd+S 截图保存到桌面）。 画质调节：如果电脑卡顿，可以降低画面帧率（FPS）、分辨率或切换编码格式。",
+          "channel": "@aigc1024",
+          "time": "01:36",
+          "url": "https://t.me/aigc1024/23038",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23038",
+              "label": "📢好消息： Claude Code 桌面版现在支持 iOS 模拟器 直接和苹果官方模拟器底座对接 不抢占屏幕：模拟器画面直接内嵌在 Claude 软件旁边，AI 在后台自己操作，完全不影响你用电脑做别的事。 支持人机协作：AI 跑测试的同时，你随时可以自己去上手点按、滑屏或按快捷键，操作是实时同步的 启动方式：直接说“把 App 打包并在模拟器里运行，检查一下注册流程”。系统就会自动打开右侧的 iOS 模拟器面板。 多窗口支持：每个独立会（Session）拥有独立的模拟器，互不打扰；单个会最多可同时开 4 个模拟器。 手势与快捷键：用鼠标拖拽实现点击/滑动，支持快捷键（如 Cmd+Shift+H 回主界面，Cmd+R 录屏，Cmd+S 截图保存到桌面）。 画质调节：如果电脑卡顿，可以降低画面帧率（FPS）、分辨率或切换编码格式。"
+            },
+            {
+              "href": "https://t.me/aigc1024/23038",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/aigc1024",
+              "label": "AI探索"
+            },
+            {
+              "href": "https://t.me/openclaw1024",
+              "label": "Hermes/OpenClaw"
+            },
+            {
+              "href": "https://t.me/meiriyishu",
+              "label": "优质资源"
+            },
+            {
+              "href": "https://t.me/chunse1024/8467",
+              "label": "优质信息"
+            }
+          ]
+        },
+        {
+          "title": "李飞飞：使用AI的最高原则",
+          "summary": "不要用工具做蠢事 要永远思考“我为什么要用AI”和“我该怎么用它”。 不要因为AI而变懒 AI可以快速给你答案，但不能代替真正的学习和思考。 正确用法是：用AI帮你提出更好的问、理清思路，而不是直接抄答案。 不要用AI做坏事 AIGC的一切",
+          "channel": "@inside1024",
+          "time": "04:56",
+          "url": "https://t.me/inside1024/83057",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83057",
+              "label": "李飞飞：使用AI的最高原则 不要用工具做蠢事 要永远思考“我为什么要用AI”和“我该怎么用它”。 不要因为AI而变懒 AI可以快速给你答案，但不能代替真正的学习和思考。 正确用法是：用AI帮你提出更好的问、理清思路，而不是直接抄答案。 不要用AI做坏事 AIGC的一切"
+            },
+            {
+              "href": "https://t.me/inside1024/83057",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "刚发现一个超实用的玩法：",
+          "summary": "在 Codex 里直接跑 Opencode DeepSeek V4 Flash 替代 Opus 5，价格只要四分之一 每月 $10 就能拿到 1 万次请求，还附带 Kimi K3 和 Qwen 3.5 Max 安装步骤极简： 安装 codex-router 填入 Opencode Go API key 直接用 建议先收藏 https://x.com/Av1dlive/status/2085002328420032819",
+          "channel": "@openclaw1024",
+          "time": "06:40",
+          "url": "https://t.me/openclaw1024/1223",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1223",
+              "label": "刚发现一个超实用的玩法： 在 Codex 里直接跑 Opencode DeepSeek V4 Flash 替代 Opus 5，价格只要四分之一 每月 $10 就能拿到 1 万次请求，还附带 Kimi K3 和 Qwen 3.5 Max 安装步骤极简： 安装 codex-router 填入 Opencode Go API key 直接用 建议先收藏 https://x.com/Av1dlive/status/2085002328420032819"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1223",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/openclaw1024",
+              "label": "Hermes/OpenClaw"
+            },
+            {
+              "href": "https://t.me/aigc1024",
+              "label": "AI探索"
+            }
+          ]
+        },
+        {
+          "title": "年收入2.5亿美金的富翁告诉你，要让正确的人上车，一切都始于正确的人，然后融资和好的合作伙伴。创业非常困难，除非你有钱，银行不会借钱给你，因为私募和战略投资已经垄断了这个行业。",
+          "summary": "副业赚钱探索",
+          "channel": "@inside1024",
+          "time": "06:41",
+          "url": "https://t.me/inside1024/83058",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83058",
+              "label": "年收入2.5亿美金的富翁告诉你，要让正确的人上车，一切都始于正确的人，然后融资和好的合作伙伴。创业非常困难，除非你有钱，银行不会借钱给你，因为私募和战略投资已经垄断了这个行业。 副业赚钱探索"
+            },
+            {
+              "href": "https://t.me/inside1024/83058",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "其实没必要追求什么GPT5.6,Fable5,Kimi K3",
+          "summary": "难道你没意识到 这世界上很多人的大脑也都只是一个2B的小模型啊 没外部知识，缺少深度思考，输出质量堪忧 指令简单的时候他理解不了，指令复杂了又记不住出幻觉 上下文窗口极小，说了就忘 多任务无法并发处理 有的还用不明白工具 但其实也一点儿没耽误生活 不是吗",
+          "channel": "@aigc1024",
+          "time": "07:11",
+          "url": "https://t.me/aigc1024/23040",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23040",
+              "label": "其实没必要追求什么GPT5.6,Fable5,Kimi K3 难道你没意识到 这世界上很多人的大脑也都只是一个2B的小模型啊 没外部知识，缺少深度思考，输出质量堪忧 指令简单的时候他理解不了，指令复杂了又记不住出幻觉 上下文窗口极小，说了就忘 多任务无法并发处理 有的还用不明白工具 但其实也一点儿没耽误生活 不是吗"
+            },
+            {
+              "href": "https://t.me/aigc1024/23040",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "**OpenAI 为 ChatGPT Business 推出 Premium 高级席位**",
+          "summary": "OpenAI 于 2026 年 8 月 10 日宣布为 ChatGPT Business 推出 Premium 高级席位。Premium 席位提供 5 倍于标准席位的使用量，并取消 5 小时使用限制，支持在同一工作空间内与标准席位混合搭配。该席位月付定价为 125 美元/用户，年付则为 100 美元/用户；标准席位维持 25 美元/月或年付 20 美元不变。 作为限时优惠，前 10,000 名符合条件的工作区所有者若在 8 月 20 日前加入等待名单，每新增一个 Premium 席位可获得价值 100 美元的工作区积分，最高累计 500 美元。部分提前注册的客户还将获得抢先体验资格。 OpenAI 另外，Codex 重置啦。",
+          "channel": "@zaihuapd",
+          "time": "08:04",
+          "url": "https://t.me/zaihuapd/43102",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43102",
+              "label": "**OpenAI 为 ChatGPT Business 推出 Premium 高级席位** OpenAI 于 2026 年 8 月 10 日宣布为 ChatGPT Business 推出 Premium 高级席位。Premium 席位提供 5 倍于标准席位的使用量，并取消 5 小时使用限制，支持在同一工作空间内与标准席位混合搭配。该席位月付定价为 125 美元/用户，年付则为 100 美元/用户；标准席位维持 25 美元/月或年付 20 美元不变。 作为限时优惠，前 10,000 名符合条件的工作区所有者若在 8 月 20 日前加入等待名单，每新增一个 Premium 席位可获得价值 100 美元的工作区积分，最高累计 500 美元。部分提前注册的客户还将获得抢先体验资格。"
+            },
+            {
+              "href": "https://openai.com/index/premium-seats-chatgpt-business/",
+              "label": "OpenAI 另外，Codex 重置啦。"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43102",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "很突然，学会了很多牛叉的技能！！",
+          "summary": "半夜一个人，一手抱着娃，另一只手冲奶粉、喂奶、等娃拉了给他洗屁股、再换尿不湿。 此时此刻，抱着娃一边哄睡，一边让Codex干活，有个方案明天ddl了，Codex必须加班干！",
+          "channel": "@openclaw1024",
+          "time": "08:31",
+          "url": "https://t.me/openclaw1024/1225",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1225",
+              "label": "很突然，学会了很多牛叉的技能！！ 半夜一个人，一手抱着娃，另一只手冲奶粉、喂奶、等娃拉了给他洗屁股、再换尿不湿。 此时此刻，抱着娃一边哄睡，一边让Codex干活，有个方案明天ddl了，Codex必须加班干！"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1225",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/openclaw1024",
+              "label": "Hermes/OpenClaw"
+            },
+            {
+              "href": "https://t.me/aigc1024",
+              "label": "AI探索"
+            }
+          ]
+        },
+        {
+          "title": "🤖 **OpenAI 推出 GPT-Daybreak 安全项目，已发现 Chrome V8 高危漏洞**",
+          "summary": "OpenAI 宣布推出 GPT-Daybreak 项目的两个访问层级：Daybreak Blue 提供 GPT-5.6 Sol 等通用前沿模型，面向漏洞发现、恶意软件分析等防御性安全任务；Daybreak Red 则提供专门训练的 GPT-5.6-Cyber 模型，用于漏洞研究与漏洞利用验证。在内部测试中，GPT-5.6-Cyber 对高级网络安全请求的完成率达 95.0%，而 GPT-5.6 Sol 仅为 1.5%。 在实际应用中，GPT-5.6-Cyber 已在 Chrome 的 V8 引擎中发现两个未知漏洞，其中 CVE-2026-15903 为高危漏洞，Google 已修复。此外，该模型还在一个流行移动操作系统中发现至少 5 个漏洞、一个数据库中发现 3 个关键漏洞，以及某操作系统内核中超过 400 个可导致提权的漏洞。OpenAI 表示将通过身份验证、账户监控、硬件安全密钥（2026 年 9 月 1 日起强制）等措施控制访问风险。 OpenAI",
+          "channel": "@zaihuapd",
+          "time": "08:34",
+          "url": "https://t.me/zaihuapd/43103",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43103",
+              "label": "🤖 **OpenAI 推出 GPT-Daybreak 安全项目，已发现 Chrome V8 高危漏洞** OpenAI 宣布推出 GPT-Daybreak 项目的两个访问层级：Daybreak Blue 提供 GPT-5.6 Sol 等通用前沿模型，面向漏洞发现、恶意软件分析等防御性安全任务；Daybreak Red 则提供专门训练的 GPT-5.6-Cyber 模型，用于漏洞研究与漏洞利用验证。在内部测试中，GPT-5.6-Cyber 对高级网络安全请求的完成率达 95.0%，而 GPT-5.6 Sol 仅为 1.5%。 在实际应用中，GPT-5.6-Cyber 已在 Chrome 的 V8 引擎中发现两个未知漏洞，其中 CVE-2026-15903 为高危漏洞，Google 已修复。此外，该模型还在一个流行移动操作系统中发现至少 5 个漏洞、一个数据库中发现 3 个关键漏洞，以及某操作系统内核中超过 400 个可导致提权的漏洞。OpenAI 表示将通过身份验证、账户监控、硬件安全密钥（2026 年 9 月 1 日起强制）等措施控制访问风险。"
+            },
+            {
+              "href": "https://openai.com/index/accelerating-defenders-with-gpt-daybreak-legacy/",
+              "label": "OpenAI"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43103",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "我了个骚刚，把杜蕾斯黄金期的「双层语义」文案方法拆成一套可复用的规则，让 Claude 照着写文案、出海报。",
+          "summary": "这是 Claude Code 用的一个 Skill，把杜蕾斯 2011 到 2017 年使用的文案方法做成了可复用的流程。 仓库整理了 8 个文案公式，从谐音、数字双关，到最难的「反向克制」：所有人都等着你耍花活的时候不耍。视觉部分从 260 张原图里拆出来，包括主体判断树、六套配色、排版规矩，还有字体选型和商用授权红线。 https://github.com/crawfordxx/xiaoma-durex-copywriter",
+          "channel": "@aigc1024",
+          "time": "09:12",
+          "url": "https://t.me/aigc1024/23044",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23044",
+              "label": "我了个骚刚，把杜蕾斯黄金期的「双层语义」文案方法拆成一套可复用的规则，让 Claude 照着写文案、出海报。 这是 Claude Code 用的一个 Skill，把杜蕾斯 2011 到 2017 年使用的文案方法做成了可复用的流程。 仓库整理了 8 个文案公式，从谐音、数字双关，到最难的「反向克制」：所有人都等着你耍花活的时候不耍。视觉部分从 260 张原图里拆出来，包括主体判断树、六套配色、排版规矩，还有字体选型和商用授权红线。 https://github.com/crawfordxx/xiaoma-durex-copywriter"
+            },
+            {
+              "href": "https://t.me/aigc1024/23044",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/aigc1024",
+              "label": "AI探索"
+            },
+            {
+              "href": "https://t.me/openclaw1024",
+              "label": "Hermes/OpenClaw"
+            },
+            {
+              "href": "https://t.me/meiriyishu",
+              "label": "优质资源"
+            },
+            {
+              "href": "https://t.me/chunse1024/8467",
+              "label": "优质信息"
+            }
+          ]
+        },
+        {
+          "title": "5、从成本和好用程度的推荐顺序:",
+          "summary": "新西兰 Skinny > 英国 giffgaff >香港 Club Sim > 美国 Ultra Mobile 从成本考虑，最合适的是新西兰 Skinny、giffgaff。 如果偶尔需要使用漫游流量，可选香港Club sim预付卡。 目前都可以从淘宝购买，如果从官方买的会很慢，而且可能发不到你手里。",
+          "channel": "@yunying23",
+          "time": "09:17",
+          "url": "https://t.me/yunying23/11150",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/11150",
+              "label": "5、从成本和好用程度的推荐顺序: 新西兰 Skinny > 英国 giffgaff >香港 Club Sim > 美国 Ultra Mobile 从成本考虑，最合适的是新西兰 Skinny、giffgaff。 如果偶尔需要使用漫游流量，可选香港Club sim预付卡。 目前都可以从淘宝购买，如果从官方买的会很慢，而且可能发不到你手里。"
+            },
+            {
+              "href": "https://t.me/yunying23/11150",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/yunying23",
+              "label": "出海赚美金"
+            },
+            {
+              "href": "https://t.me/meiriyishu",
+              "label": "优质资源"
+            },
+            {
+              "href": "https://t.me/chunse1024/8467",
+              "label": "优质信息"
+            },
+            {
+              "href": "https://t.me/inside1024",
+              "label": "内幕消息"
+            }
+          ]
+        },
+        {
+          "title": "🤖 **ChatGPT 上线餐厅预订功能，GPT-5.6 模型同步更新**",
+          "summary": "ChatGPT 现已支持餐厅预订功能，用户可直接在对话中查找可用餐位。该功能集成 OpenTable、Resy 和 Yelp，用户只需说明用餐时间、地点、人数及偏好（如菜系、预算、氛围等），即可在回复中直接看到可预订时段，确认后即可完成预订。该功能面向所有 ChatGPT 套餐用户，覆盖网页、移动端和桌面端。其中 OpenTable 支持全球预订，Resy 限美国，Yelp 限美国和加拿大。 此外，ChatGPT 本周还推送了 GPT-5.6 模型更新。Plus 和 Pro 用户可使用 GPT-5.6 Sol，回答更可靠、更聚焦，并可调节模型思考程度；Free 和 Go 用户将默认使用 GPT-5.6 Luna，下周起还将获得无限制文本聊天和新的 Think 按钮。 OpenAI Help Center",
+          "channel": "@zaihuapd",
+          "time": "09:19",
+          "url": "https://t.me/zaihuapd/43104",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43104",
+              "label": "🤖 **ChatGPT 上线餐厅预订功能，GPT-5.6 模型同步更新** ChatGPT 现已支持餐厅预订功能，用户可直接在对话中查找可用餐位。该功能集成 OpenTable、Resy 和 Yelp，用户只需说明用餐时间、地点、人数及偏好（如菜系、预算、氛围等），即可在回复中直接看到可预订时段，确认后即可完成预订。该功能面向所有 ChatGPT 套餐用户，覆盖网页、移动端和桌面端。其中 OpenTable 支持全球预订，Resy 限美国，Yelp 限美国和加拿大。 此外，ChatGPT 本周还推送了 GPT-5.6 模型更新。Plus 和 Pro 用户可使用 GPT-5.6 Sol，回答更可靠、更聚焦，并可调节模型思考程度；Free 和 Go 用户将默认使用 GPT-5.6 Luna，下周起还将获得无限制文本聊天和新的 Think 按钮。"
+            },
+            {
+              "href": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+              "label": "OpenAI Help Center"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43104",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "🤖 **Claude 将黎曼 zeta 函数零点下界提升至 67.2%**",
+          "summary": "Anthropic 披露，一个未发布的 Claude 研究版本在尝试黎曼猜想时，虽未能解决这一百年难题，却意外将黎曼 zeta 函数零点在临界线上的比例下界从 41.6% 提升至 67.2%。 该成果借鉴了 Baluyot、Goldston 等数学家的近期研究。Claude 在 Claude Code 中耗费 3100 万输出 token，协调约 60 个子代理运行数千次数值检验。Anthropic 两位数学家与外部专家 Brian Conrey、Dan Goldston 已审查验证，Claude 还生成了可形式化验证的 Lean 证明。 AnthropicAI",
+          "channel": "@zaihuapd",
+          "time": "09:32",
+          "url": "https://t.me/zaihuapd/43105",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43105",
+              "label": "🤖 **Claude 将黎曼 zeta 函数零点下界提升至 67.2%** Anthropic 披露，一个未发布的 Claude 研究版本在尝试黎曼猜想时，虽未能解决这一百年难题，却意外将黎曼 zeta 函数零点在临界线上的比例下界从 41.6% 提升至 67.2%。 该成果借鉴了 Baluyot、Goldston 等数学家的近期研究。Claude 在 Claude Code 中耗费 3100 万输出 token，协调约 60 个子代理运行数千次数值检验。Anthropic 两位数学家与外部专家 Brian Conrey、Dan Goldston 已审查验证，Claude 还生成了可形式化验证的 Lean 证明。"
+            },
+            {
+              "href": "https://www.anthropic.com/research/riemann-zeta",
+              "label": "AnthropicAI"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43105",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "🍏 **苹果研发照片来源验证技术，帮助确认图片是否由 iPhone 拍摄**",
+          "summary": "苹果正在开发一种用于验证照片来源的新技术，旨在证明一张图片是否真实由 iPhone 相机拍摄。该功能可能通过相机硬件、系统签名和加密认证机制生成可验证信息，以帮助用户识别经过 AI 生成或篡改的图像。随着生成式 AI 让伪造照片越来越容易，苹果希望通过设备级认证提高照片真实性。不过，该技术目前仍处于研发阶段，具体发布时间和实现方式尚未公布。 9To5Mac",
+          "channel": "@zaihuapd",
+          "time": "09:53",
+          "url": "https://t.me/zaihuapd/43106",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43106",
+              "label": "🍏 **苹果研发照片来源验证技术，帮助确认图片是否由 iPhone 拍摄** 苹果正在开发一种用于验证照片来源的新技术，旨在证明一张图片是否真实由 iPhone 相机拍摄。该功能可能通过相机硬件、系统签名和加密认证机制生成可验证信息，以帮助用户识别经过 AI 生成或篡改的图像。随着生成式 AI 让伪造照片越来越容易，苹果希望通过设备级认证提高照片真实性。不过，该技术目前仍处于研发阶段，具体发布时间和实现方式尚未公布。"
+            },
+            {
+              "href": "https://9to5mac.com/2026/08/10/apple-is-working-on-a-way-to-authenticate-that-a-photo-came-from-an-iphone-camera/",
+              "label": "9To5Mac"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43106",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "**千问 App 推出付费版，办公助理会员最高包年费 1499 元**",
+          "summary": "8 月 10 日，阿里旗下千问 App 推出办公助理专业会员及视频生成收费方案，成为继豆包之后国内第二款探索付费服务的头部 AI 应用。与豆包专业版将办公与视频打包收费不同，千问将二者分开计费。 办公助理会员分高级、精英、旗舰三档，高级会员连续包月价为 19 元，连续包年价为 200 元；精英会员连续包月价为 49 元，连续包年价为 568 元；旗舰会员连续包月价为 128 元，连续包年价为 1499 元。 视频生成额度的收费对应 5 个档位，分别是 26 元 10 个额度、116 元 50 个额度、228 元 100 个额度、438 元 200 个额度、968 元 500 个额度。用户每天有 10 个免费额度。 智东西",
+          "channel": "@zaihuapd",
+          "time": "10:11",
+          "url": "https://t.me/zaihuapd/43107",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43107",
+              "label": "**千问 App 推出付费版，办公助理会员最高包年费 1499 元** 8 月 10 日，阿里旗下千问 App 推出办公助理专业会员及视频生成收费方案，成为继豆包之后国内第二款探索付费服务的头部 AI 应用。与豆包专业版将办公与视频打包收费不同，千问将二者分开计费。 办公助理会员分高级、精英、旗舰三档，高级会员连续包月价为 19 元，连续包年价为 200 元；精英会员连续包月价为 49 元，连续包年价为 568 元；旗舰会员连续包月价为 128 元，连续包年价为 1499 元。 视频生成额度的收费对应 5 个档位，分别是 26 元 10 个额度、116 元 50 个额度、228 元 100 个额度、438 元 200 个额度、968 元 500 个额度。用户每天有 10 个免费额度。"
+            },
+            {
+              "href": "https://m.zhidx.com/p/583665.html",
+              "label": "智东西"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43107",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "做餐饮出海的朋友，一定要重点关注Beli这个平台。",
+          "summary": "从宏观的流量端来说，一个常年霸榜前50的APP，流量绝对不小。 从微观的个人观察来说，美国00后基本上是人手一个账号。 而且因为主打的是好友之间的餐饮评分+社交，只要你的产品过硬，很容易直接在这个平台上一夜之间就火出圈。 更重要的是，因为这个平台还没开始商业化，更没人做什么付费种草帖，可以说是餐饮行业营销最好的流量洼地了。 即使你的营销预算再有限，铺个几百条帖子也花不了多少钱。 甚至你完全有可能不花一分钱，就能找到Beli的头部博主，免费来你的店里做个探店。 等到Beli被人看上了，完成收购了，也开始大规模做用户增长了。你这些早就沉淀在平台里的优质内容，就成了最值钱的流量资产。 加上社交这个赛道自带强信任和高转化，到时候单靠自然流量就能把你喂得饱饱的。 搞流量这件事情，就跟赌场一样。筹码越少，我们越应该提早下重注。 自媒体/出海经验/赚美金/运营技巧",
+          "channel": "@inside1024",
+          "time": "10:12",
+          "url": "https://t.me/inside1024/83068",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83068",
+              "label": "做餐饮出海的朋友，一定要重点关注Beli这个平台。 从宏观的流量端来说，一个常年霸榜前50的APP，流量绝对不小。 从微观的个人观察来说，美国00后基本上是人手一个账号。 而且因为主打的是好友之间的餐饮评分+社交，只要你的产品过硬，很容易直接在这个平台上一夜之间就火出圈。 更重要的是，因为这个平台还没开始商业化，更没人做什么付费种草帖，可以说是餐饮行业营销最好的流量洼地了。 即使你的营销预算再有限，铺个几百条帖子也花不了多少钱。 甚至你完全有可能不花一分钱，就能找到Beli的头部博主，免费来你的店里做个探店。 等到Beli被人看上了，完成收购了，也开始大规模做用户增长了。你这些早就沉淀在平台里的优质内容，就成了最值钱的流量资产。 加上社交这个赛道自带强信任和高转化，到时候单靠自然流量就能把你喂得饱饱的。 搞流量这件事情，就跟赌场一样。筹码越少，我们越应该提早下重注。 自媒体/出海经验/赚美金/运营技巧"
+            },
+            {
+              "href": "https://t.me/inside1024/83068",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 内部认为，3个月内Agent 会迎来一次新的使用范式。随着模型能力提升，单机运行很快触及瓶颈，未来一个 Agent 可能长期在线，同时处理大量任务，一台电脑已经难以支撑。",
+          "summary": "下一阶段需要云端大规模推理、多机协作、更完善的工具生态和长期记忆系统。 本质上，Agent 正从电脑里的一个程序，演变成一套持续运行的智能基础设施。",
+          "channel": "@openclaw1024",
+          "time": "10:17",
+          "url": "https://t.me/openclaw1024/1226",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1226",
+              "label": "OpenAI 内部认为，3个月内Agent 会迎来一次新的使用范式。随着模型能力提升，单机运行很快触及瓶颈，未来一个 Agent 可能长期在线，同时处理大量任务，一台电脑已经难以支撑。 下一阶段需要云端大规模推理、多机协作、更完善的工具生态和长期记忆系统。 本质上，Agent 正从电脑里的一个程序，演变成一套持续运行的智能基础设施。"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1226",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/openclaw1024",
+              "label": "Hermes/OpenClaw"
+            },
+            {
+              "href": "https://t.me/aigc1024",
+              "label": "AI探索"
+            }
+          ]
+        },
+        {
+          "title": "Stanford CS329A 这门 Self-Improving AI Agents 公开课，把 test-time compute、verifier、工具调用、代码、记忆、多步规划和 agentic evaluation 放进了同一套课程里。",
+          "summary": "我感觉这比零散追框架名词更适合补体系。做 Agent 很容易只盯 demo 和工具名，但这门课一直在讲模型怎么从反馈、验证和失败轨迹里继续变好，这个视角挺值得看。 相关链接：https://cs329a.stanford.edu/",
+          "channel": "@aigc1024",
+          "time": "10:26",
+          "url": "https://t.me/aigc1024/23046",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23046",
+              "label": "Stanford CS329A 这门 Self-Improving AI Agents 公开课，把 test-time compute、verifier、工具调用、代码、记忆、多步规划和 agentic evaluation 放进了同一套课程里。 我感觉这比零散追框架名词更适合补体系。做 Agent 很容易只盯 demo 和工具名，但这门课一直在讲模型怎么从反馈、验证和失败轨迹里继续变好，这个视角挺值得看。 相关链接：https://cs329a.stanford.edu/"
+            },
+            {
+              "href": "https://t.me/aigc1024/23046",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "AI奇幻田园赛道，详细涨粉变现教程拆解",
+          "summary": "https://pan.quark.cn/s/58a74514c01a ————",
+          "channel": "@meiriyishu",
+          "time": "10:55",
+          "url": "https://t.me/meiriyishu/1650",
+          "links": [
+            {
+              "href": "https://t.me/meiriyishu/1650",
+              "label": "AI奇幻田园赛道，详细涨粉变现教程拆解 https://pan.quark.cn/s/58a74514c01a ————"
+            },
+            {
+              "href": "https://t.me/meiriyishu/1650",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/meiriyishu",
+              "label": "优质资源"
+            },
+            {
+              "href": "https://t.me/chunse1024/8467",
+              "label": "优质内容"
+            },
+            {
+              "href": "https://t.me/inside1024",
+              "label": "内幕消息"
+            }
+          ]
+        },
+        {
+          "title": "🤖 **Anthropic 将为 Claude 内容加入 AI 标记**",
+          "summary": "Anthropic 已签署欧盟《人工智能法案》第 50(2)条关于 AI 生成内容透明度的行为准则。2026 年 8 月 2 日及以后在欧盟发布的新 Claude 模型，将从上线起为生成文本嵌入机器可读水印，并在支持的文件中加入数字签名来源元数据；相关标记适用于 Claude 的 API、Claude、Claude Code、Claude Cowork 和 Claude Tag 等产品，覆盖全球使用场景。 文本水印不可见，支持的文件将采用 C2PA 来源标准。Anthropic 正在为 2026 年 8 月 2 日前发布的旧模型补充标记功能，并计划发布检测技术细节。检测到标记只能说明内容可能经过 Claude 处理，未检测到标记也不能证明内容不是由 AI 生成或处理。 Claude Help Center",
+          "channel": "@zaihuapd",
+          "time": "11:06",
+          "url": "https://t.me/zaihuapd/43108",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43108",
+              "label": "🤖 **Anthropic 将为 Claude 内容加入 AI 标记** Anthropic 已签署欧盟《人工智能法案》第 50(2)条关于 AI 生成内容透明度的行为准则。2026 年 8 月 2 日及以后在欧盟发布的新 Claude 模型，将从上线起为生成文本嵌入机器可读水印，并在支持的文件中加入数字签名来源元数据；相关标记适用于 Claude 的 API、Claude、Claude Code、Claude Cowork 和 Claude Tag 等产品，覆盖全球使用场景。 文本水印不可见，支持的文件将采用 C2PA 来源标准。Anthropic 正在为 2026 年 8 月 2 日前发布的旧模型补充标记功能，并计划发布检测技术细节。检测到标记只能说明内容可能经过 Claude 处理，未检测到标记也不能证明内容不是由 AI 生成或处理。"
+            },
+            {
+              "href": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+              "label": "Claude Help Center"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43108",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "在 Mac 上本地运行的 AI 会议笔记和写作工具，转录、摘要、写作全走 Apple Silicon，数据不出本机。",
+          "summary": "Bitwize 出品的 macOS 原生应用，把实时录音转文字、说人分离、会议纪要和写作编辑器都集成在一个本地 App 里。AI 推理用 MLX 框架，跑在 Apple Silicon 上，默认不联网，数据用 AES-256-GCM 加密存本地。 https://github.com/bitwize-ai/Logue",
+          "channel": "@aigc1024",
+          "time": "11:16",
+          "url": "https://t.me/aigc1024/23047",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23047",
+              "label": "在 Mac 上本地运行的 AI 会议笔记和写作工具，转录、摘要、写作全走 Apple Silicon，数据不出本机。 Bitwize 出品的 macOS 原生应用，把实时录音转文字、说人分离、会议纪要和写作编辑器都集成在一个本地 App 里。AI 推理用 MLX 框架，跑在 Apple Silicon 上，默认不联网，数据用 AES-256-GCM 加密存本地。 https://github.com/bitwize-ai/Logue"
+            },
+            {
+              "href": "https://t.me/aigc1024/23047",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/aigc1024",
+              "label": "AI探索"
+            },
+            {
+              "href": "https://t.me/openclaw1024",
+              "label": "Hermes/OpenClaw"
+            },
+            {
+              "href": "https://t.me/meiriyishu",
+              "label": "优质资源"
+            },
+            {
+              "href": "https://t.me/chunse1024/8467",
+              "label": "优质信息"
+            }
+          ]
+        },
+        {
+          "title": "**Anthropic 宣布 Claude Sonnet 5 优惠定价永久生效**",
+          "summary": "Anthropic 于 8 月 10 日宣布，Claude Sonnet 5 的优惠定价将永久生效。该模型今年 6 月上线时，输入价格定为每百万 token 2 美元、输出每百万 token 10 美元，原计划优惠持续至 8 月 31 日，之后恢复标准价每百万 token 3 美元输入 / 15 美元输出。现在原定 9 月 1 日的涨价计划已取消，优惠价格保持不变。 Claude(@claudeai) | AnthropicAI",
+          "channel": "@zaihuapd",
+          "time": "11:39",
+          "url": "https://t.me/zaihuapd/43109",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43109",
+              "label": "**Anthropic 宣布 Claude Sonnet 5 优惠定价永久生效** Anthropic 于 8 月 10 日宣布，Claude Sonnet 5 的优惠定价将永久生效。该模型今年 6 月上线时，输入价格定为每百万 token 2 美元、输出每百万 token 10 美元，原计划优惠持续至 8 月 31 日，之后恢复标准价每百万 token 3 美元输入 / 15 美元输出。现在原定 9 月 1 日的涨价计划已取消，优惠价格保持不变。"
+            },
+            {
+              "href": "https://x.com/claudeai/status/2086891169217122586",
+              "label": "Claude(@claudeai) |"
+            },
+            {
+              "href": "https://www.anthropic.com/news/claude-sonnet-5",
+              "label": "AnthropicAI"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43109",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "公众号流量主剧评赛道，从选到全流程拆解",
+          "channel": "@text1024",
+          "time": "11:43",
+          "url": "https://t.me/text1024/24299",
+          "links": [
+            {
+              "href": "https://t.me/text1024/24299",
+              "label": "公众号流量主剧评赛道，从选到全流程拆解"
+            },
+            {
+              "href": "https://t.me/text1024/24299",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/text1024",
+              "label": "副业搞钱"
+            },
+            {
+              "href": "https://t.me/yunying23",
+              "label": "出海赚美金"
+            },
+            {
+              "href": "https://t.me/inside1024",
+              "label": "内幕消息"
+            },
+            {
+              "href": "https://t.me/chunse1024",
+              "label": "优质内容"
+            }
+          ]
+        },
+        {
+          "title": "✨ Zuck ：未来属于每一个人",
+          "summary": "这篇充满代表去中心化哲学的重磅好文，不仅有着代表着 Meta 理性乐观的开源精神，还提出大量真知灼见；对于安全和智能边界，甚至超越不少自诩以 AGI 为使命的团队。因为没有什么技术，比赋权个体的力量更有意义。 🔢 部分要点： ·超级智能最大的贡献，不是自动化，而是发明。 ·每个人都会有一个真正懂你的个人 Agent，24/7 代表你工作。 ·这个时代的决定性问是：谁能获得超级智能，我们又把它用向哪里？ ·没有任何定律规定，AI 的自动化速度一定会超过人的能力增长。 ·安全的基础，是权力平衡。不存在一个唯一而仁慈的超级智能。",
+          "channel": "@aigc1024",
+          "time": "12:22",
+          "url": "https://t.me/aigc1024/23048",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23048",
+              "label": "✨ Zuck ：未来属于每一个人 这篇充满代表去中心化哲学的重磅好文，不仅有着代表着 Meta 理性乐观的开源精神，还提出大量真知灼见；对于安全和智能边界，甚至超越不少自诩以 AGI 为使命的团队。因为没有什么技术，比赋权个体的力量更有意义。 🔢 部分要点： ·超级智能最大的贡献，不是自动化，而是发明。 ·每个人都会有一个真正懂你的个人 Agent，24/7 代表你工作。 ·这个时代的决定性问是：谁能获得超级智能，我们又把它用向哪里？ ·没有任何定律规定，AI 的自动化速度一定会超过人的能力增长。 ·安全的基础，是权力平衡。不存在一个唯一而仁慈的超级智能。"
+            },
+            {
+              "href": "https://t.me/aigc1024/23048",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "🤖 **iOS 27 Beta 5 为 Apple 智能预备好**",
+          "summary": "iOS 27 beta 5 被发现已预埋中国版 Apple 智能的相关说明。苹果强调该功能为保护隐私而设计，为遵守中国法律法规，将采用本地公司提供的安全机制，用户请求全部在设备端处理，不会发送给苹果或安全机制提供商。 根据法律要求，苹果会收集匿名的安全结果并以聚合形式共享，安全机制也将自动下载更新。这意味着 Apple 智能在中国的落地已进入适配阶段。 **苹果内部代码文案： 机器翻译，请以正式版文案为准：** AI_PRIVACY_FOOTER_TEXT_CHINA Apple 智能以隐私保护为设计出发点。为遵守法律法规，在中国大陆，Apple 智能会使用由当地公司提供的安全机制。你的请求会在设备端处理，不会发送给 Apple 或安全机制提供商。按照法律要求，Apple 将收集经过匿名化处理的安全结果，并以汇总形式共享。安全机制会自动下载和更新。[关于 Apple 智能与隐私…] ( https://ai.privacy ) APPLE_INTELLIGENCE_DISABLEMENT_ALERT_BUTTON 关闭 Apple 智能 APPLE_INTELLIGENCE_DISABLEMENT_ALERT_TITLE 确定要关闭 Apple 智能吗？ APPLE_INTELLIGENCE_ENABLEMENT_ROW_TITLE 打开 Apple 智能 原始代码： AI_PRIVACY_FOOTER_TEXT_CHINA ‹string>Apple Intelligence is built for privacy. To comply with laws and regulations, Apple Intelligence in China uses a safety mechanism provided by a local company. Your requests are processed on-device and not sent to Apple or the safety mechanism provider. As required by law, Apple will collect anonymized safety results and share them in aggregate. The safety mechanism will download and update automatically. [About Apple Intelligence & Privacy...] ( https://ai.privacy )",
+          "channel": "@zaihuapd",
+          "time": "12:49",
+          "url": "https://t.me/zaihuapd/43111",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43111",
+              "label": "🤖 **iOS 27 Beta 5 为 Apple 智能预备好** iOS 27 beta 5 被发现已预埋中国版 Apple 智能的相关说明。苹果强调该功能为保护隐私而设计，为遵守中国法律法规，将采用本地公司提供的安全机制，用户请求全部在设备端处理，不会发送给苹果或安全机制提供商。 根据法律要求，苹果会收集匿名的安全结果并以聚合形式共享，安全机制也将自动下载更新。这意味着 Apple 智能在中国的落地已进入适配阶段。 **苹果内部代码文案： 机器翻译，请以正式版文案为准：** AI_PRIVACY_FOOTER_TEXT_CHINA Apple 智能以隐私保护为设计出发点。为遵守法律法规，在中国大陆，Apple 智能会使用由当地公司提供的安全机制。你的请求会在设备端处理，不会发送给 Apple 或安全机制提供商。按照法律要求，Apple 将收集经过匿名化处理的安全结果，并以汇总形式共享。安全机制会自动下载和更新。[关于 Apple 智能与隐私…] ("
+            },
+            {
+              "href": "https://ai.privacy/",
+              "label": "https://ai.privacy ) APPLE_INTELLIGENCE_DISABLEMENT_ALERT_BUTTON 关闭 Apple 智能 APPLE_INTELLIGENCE_DISABLEMENT_ALERT_TITLE 确定要关闭 Apple 智能吗？ APPLE_INTELLIGENCE_ENABLEMENT_ROW_TITLE 打开 Apple 智能 原始代码： AI_PRIVACY_FOOTER_TEXT_CHINA ‹string>Apple Intelligence is built for privacy. To comply with laws and regulations, Apple Intelligence in China uses a safety mechanism provided by a local company. Your requests are processed on-device and not sent to Apple or the safety mechanism provider. As required by law, Apple will collect anonymized safety results and share them in aggregate. The safety mechanism will download and update automatically. [About Apple Intelligence & Privacy...] ("
+            },
+            {
+              "href": "https://ai.privacy/",
+              "label": "https://ai.privacy ) ‹key>APPLE_INTELLIGENCE_DISABLEMENT_ALERT_BUTTON Turn Off Apple Intelligence APPLE_INTELLIGENCE_DISABLEMENT_ALERT_TITLE ‹string>Turn off Apple Intelligence? APPLE_INTELLIGENCE_ENABLEMENT_ROW_TITLE ‹string>Turn On Apple Intelligence"
+            },
+            {
+              "href": "https://x.com/aaronp613/status/2086998697758351766",
+              "label": "Aaron"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43111",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "我见过最全的副业避坑指南，",
+          "summary": "如果早看到他，能帮你省十万学费。 频道导航👇",
+          "channel": "@inside1024",
+          "time": "14:01",
+          "url": "https://t.me/inside1024/83076",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83076",
+              "label": "我见过最全的副业避坑指南， 如果早看到他，能帮你省十万学费。 频道导航👇"
+            },
+            {
+              "href": "https://t.me/inside1024/83076",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "这两天被刷屏的Mirasim，",
+          "summary": "是哪个无良团队搞出了的无耻玩意！ 简直没有任何底线！虚假宣传！流氓软件！！ 我今天早上安装的，还兴致勃勃分享了这个羊毛， 确实送了“所谓的会员”，但是tmd根本没有额度可用， 自家的会员都用不了，还有啥指望！ 还阴梭梭的用我Codex的额度！！ 然后一看，好家伙！简直劣迹斑斑！！ 已经下载的朋友们，赶紧卸载，卸干净！ 然后把这个软件、这个团队永远拉黑！",
+          "channel": "@openclaw1024",
+          "time": "14:22",
+          "url": "https://t.me/openclaw1024/1227",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1227",
+              "label": "这两天被刷屏的Mirasim， 是哪个无良团队搞出了的无耻玩意！ 简直没有任何底线！虚假宣传！流氓软件！！ 我今天早上安装的，还兴致勃勃分享了这个羊毛， 确实送了“所谓的会员”，但是tmd根本没有额度可用， 自家的会员都用不了，还有啥指望！ 还阴梭梭的用我Codex的额度！！ 然后一看，好家伙！简直劣迹斑斑！！ 已经下载的朋友们，赶紧卸载，卸干净！ 然后把这个软件、这个团队永远拉黑！"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1227",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/openclaw1024",
+              "label": "Hermes/OpenClaw"
+            },
+            {
+              "href": "https://t.me/aigc1024",
+              "label": "AI探索"
+            }
+          ]
+        },
+        {
+          "title": "很多人误以为经济学是在教你“怎么赚钱”，其实它真正关心的是你如何做选择。",
+          "summary": "《经济学的思维方式》一句就把核心讲透： 当选择不可兼得时，你放弃了什么，才是关键。 作者用极其清晰的方式解释稀缺、成本、激励这些概念，反复强调一个事实： 任何决策都有代价，任何政策都有取舍，从来不存在免费的午餐。 这本书最难得的是，把抽象理论拉回现实生活： 买房、教育、医疗、税收，甚至日常消费，都能用这套思维拆解。",
+          "channel": "@inside1024",
+          "time": "14:22",
+          "url": "https://t.me/inside1024/83078",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83078",
+              "label": "很多人误以为经济学是在教你“怎么赚钱”，其实它真正关心的是你如何做选择。 《经济学的思维方式》一句就把核心讲透： 当选择不可兼得时，你放弃了什么，才是关键。 作者用极其清晰的方式解释稀缺、成本、激励这些概念，反复强调一个事实： 任何决策都有代价，任何政策都有取舍，从来不存在免费的午餐。 这本书最难得的是，把抽象理论拉回现实生活： 买房、教育、医疗、税收，甚至日常消费，都能用这套思维拆解。"
+            },
+            {
+              "href": "https://t.me/inside1024/83078",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/inside1024",
+              "label": "内幕消息"
+            },
+            {
+              "href": "https://t.me/meiriyishu",
+              "label": "优质资源"
+            },
+            {
+              "href": "https://t.me/chunse1024/8467",
+              "label": "优质信息"
+            }
+          ]
+        },
+        {
+          "title": "我不知道有没有人了解过站群这种模式。其实这套运营方案早在一二十年前，就已经有很多人在实操和布局了。一套完整的站群管理系统，能够同时管控几十个网站，甚至多达上百个站点，之后再配合优化做好SEO排名引流。接着在各个网站上投放广告、接入广告变现渠道，依靠广告流量来赚取收益，说实这套模式就算放到当下互联网环境里，依旧是特别靠谱、可落地性很强的赚钱方案。只不过想要做起来，必须投入足够的时间和精力踏踏实实去执行运营。只要用心把站群运营做好做稳定，每个月收入过万美金完全不是空想，反而概率非常大，运营得好甚至还能收获更高的收益。至于大家都担心的网站内容来源问，如今人工智能技术发展得特别成熟完善，完全可以借助AI工具批量生成、搭建内容，轻松解决站群长期更新内容的难。",
+          "channel": "@yunying23",
+          "time": "14:25",
+          "url": "https://t.me/yunying23/11152",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/11152",
+              "label": "我不知道有没有人了解过站群这种模式。其实这套运营方案早在一二十年前，就已经有很多人在实操和布局了。一套完整的站群管理系统，能够同时管控几十个网站，甚至多达上百个站点，之后再配合优化做好SEO排名引流。接着在各个网站上投放广告、接入广告变现渠道，依靠广告流量来赚取收益，说实这套模式就算放到当下互联网环境里，依旧是特别靠谱、可落地性很强的赚钱方案。只不过想要做起来，必须投入足够的时间和精力踏踏实实去执行运营。只要用心把站群运营做好做稳定，每个月收入过万美金完全不是空想，反而概率非常大，运营得好甚至还能收获更高的收益。至于大家都担心的网站内容来源问，如今人工智能技术发展得特别成熟完善，完全可以借助AI工具批量生成、搭建内容，轻松解决站群长期更新内容的难。"
+            },
+            {
+              "href": "https://t.me/yunying23/11152",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/yunying23",
+              "label": "出海赚美金"
+            },
+            {
+              "href": "https://t.me/meiriyishu",
+              "label": "优质资源"
+            },
+            {
+              "href": "https://t.me/chunse1024/8467",
+              "label": "优质信息"
+            },
+            {
+              "href": "https://t.me/inside1024",
+              "label": "内幕消息"
+            }
+          ]
+        },
+        {
+          "title": "《捞偏门》：揭秘快速赚钱项目与灰色产业链内幕",
+          "summary": "整理了各种快速赚钱方法与新兴项目，书中不仅揭开了灰色产业链的内幕，也提醒读者防范骗局，避免被割韭菜。",
+          "channel": "@chunse1024",
+          "time": "15:06",
+          "url": "https://t.me/chunse1024/11185",
+          "links": [
+            {
+              "href": "https://t.me/chunse1024/11185",
+              "label": "《捞偏门》：揭秘快速赚钱项目与灰色产业链内幕 整理了各种快速赚钱方法与新兴项目，书中不仅揭开了灰色产业链的内幕，也提醒读者防范骗局，避免被割韭菜。"
+            },
+            {
+              "href": "https://t.me/chunse1024/11185",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/chunse1024",
+              "label": "优质「内容」"
+            },
+            {
+              "href": "https://t.me/meiriyishu",
+              "label": "优质「资源」"
+            },
+            {
+              "href": "https://t.me/inside1024",
+              "label": "你不知道的内幕消息🌳"
+            }
+          ]
+        },
+        {
+          "title": "一个人，也能组建一支 7×24 小时在线的 AI 团队。",
+          "summary": "LobeHub 正在从 AI 聊天工具，升级成一套开源的 Agent 协作平台，目前 GitHub 已拿下 80.6k Star。 你可以创建不同分工的 Agent，让系统根据任务自动组队、并行执行和互相完善结果；还支持定时任务、项目空间、长期记忆，以及多模型统一调度。 它更像一个 AI 团队操作系统：你负责目标和决策，Agent 负责研究、写作、开发与交付，还能随使用不断积累对你的理解。 支持 Docker 私有部署。想把零散的 AI 工具，真正变成一套长期工作的执行系统，可以试试",
+          "channel": "@aigc1024",
+          "time": "15:18",
+          "url": "https://t.me/aigc1024/23058",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23058",
+              "label": "一个人，也能组建一支 7×24 小时在线的 AI 团队。 LobeHub 正在从 AI 聊天工具，升级成一套开源的 Agent 协作平台，目前 GitHub 已拿下 80.6k Star。 你可以创建不同分工的 Agent，让系统根据任务自动组队、并行执行和互相完善结果；还支持定时任务、项目空间、长期记忆，以及多模型统一调度。 它更像一个 AI 团队操作系统：你负责目标和决策，Agent 负责研究、写作、开发与交付，还能随使用不断积累对你的理解。 支持 Docker 私有部署。想把零散的 AI 工具，真正变成一套长期工作的执行系统，可以试试"
+            },
+            {
+              "href": "https://t.me/aigc1024/23058",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/aigc1024",
+              "label": "AI探索"
+            },
+            {
+              "href": "https://t.me/openclaw1024",
+              "label": "Hermes/OpenClaw"
+            },
+            {
+              "href": "https://t.me/meiriyishu",
+              "label": "优质资源"
+            },
+            {
+              "href": "https://t.me/chunse1024/8467",
+              "label": "优质信息"
+            }
+          ]
+        },
+        {
+          "title": "**全球第二大外包半导体封装测试厂商 Amkor 据称考虑出售中国业务股份，估值或达 15 亿美元",
+          "summary": "** 知情人士透露，半导体封测服务商 Amkor Technology 正考虑出售其中国业务的部分股份，估值可能在 10 亿至 15 亿美元之间。总部位于亚利桑那州坦佩的 Amkor 已聘请顾问协助剥离该部门并试探初步意向，公司可能保留少数股权。Amkor 代表对此拒绝置评。 Amkor 加入了一众重新审视在华业务的跨国公司行列。SK 海力士上周据称正为重庆工厂寻求投资者，Abercrombie & Fitch 也在考虑中国业务选项，此前通用磨坊、星巴克和 Oatly 已采取类似行动。Amkor 于 2001 年在上海设立封装厂，今年 7 月刚宣布与英伟达达成 15 亿美元多年协议，共同开发下一代 AI 半导体封装技术。 Bloomberg",
+          "channel": "@zaihuapd",
+          "time": "15:21",
+          "url": "https://t.me/zaihuapd/43113",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43113",
+              "label": "**全球第二大外包半导体封装测试厂商 Amkor 据称考虑出售中国业务股份，估值或达 15 亿美元 ** 知情人士透露，半导体封测服务商 Amkor Technology 正考虑出售其中国业务的部分股份，估值可能在 10 亿至 15 亿美元之间。总部位于亚利桑那州坦佩的 Amkor 已聘请顾问协助剥离该部门并试探初步意向，公司可能保留少数股权。Amkor 代表对此拒绝置评。 Amkor 加入了一众重新审视在华业务的跨国公司行列。SK 海力士上周据称正为重庆工厂寻求投资者，Abercrombie & Fitch 也在考虑中国业务选项，此前通用磨坊、星巴克和 Oatly 已采取类似行动。Amkor 于 2001 年在上海设立封装厂，今年 7 月刚宣布与英伟达达成 15 亿美元多年协议，共同开发下一代 AI 半导体封装技术。"
+            },
+            {
+              "href": "https://www.bloomberg.com/news/articles/2026-08-11/amkor-is-said-to-explore-stake-sale-in-1-5-billion-china-unit",
+              "label": "Bloomberg"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43113",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "继续发一则和国内 model researcher 交流的 memo。今天和某模型厂的一位 post-train researcher 聊了聊。Ta 对「国内在 Pre-training 上更有优势、Post-training 相对落后」这件事，补充了一个视角：",
+          "summary": "国内基本已经「会做」Pre-training 了，但 Post-training 可能还处在一个比较混沌的阶段。 一个核心原因是，两者的 reward 清晰程度很不一样。 Pre-training 的反馈很明确，比如可能就是在单位时间内，把 Next Token Loss 降得越低越好，同时尽可能降低训练成本。 Post-training 要解决的，则是怎么让模型在下游应用中表现得更好。但怎么定义和评估这个「更好」，以及怎么确认模型是真的变强了、而不是在 hacking 某个指标，都非常 tricky。 此外，Pre-training 的创新也更容易被外界看到。 模型架构没有那么强的机密性，一开源大家就能看到，也可以写成 Paper、拿去做 PR。但一家模型公司的数据是怎么清洗的、具体用了什么训练 Recipe，通常不会拿出来讲。 再加上众所周知的缺卡问，而模型的绝对能力又是模型厂的生死线，大家自然会把更多资源投入反馈更明确、也更容易获得声量的 Pre-training。 Post-training 因此陷入了一个有点尴尬的循环：因为混沌，所以拿不到足够多的资源；又因为资源不够，这种混沌迟迟无法被解决。 除了这个，我们还聊到了几个挺有意思的点： 1/ 「大厂最终一定会赢」是一种偷懒的推论。 模型竞争不是比身价。拥有更多钱、卡和人，不等于一定能训出最好的模型。 在这位 researcher 看来，真正起决定性作用的，可能是组织里到底有多少人发自内心想把模型训好，以及组织摩擦会不会消耗掉这些人的热情。（没有说加入创业公司的人会更有梦想的意思。） 2/ Agent 确实已经在替代 AI Lab 里的一部分工作。（所以我们最近和一些 researchers 交流，感觉有些人确实已经有失业焦虑了。） 拿 Infra 举例，现在可以直接告诉 Agent：「每秒只能输出 50 个 Token，请优化到 60 个」，然后让它自己检查 Kernel 和整条链路。 所以一些 Infra 工程师开始自己给自己找事干，比如跑去研究算法、理解训练需求。 （从这里再往外延伸一步：如果说 AI Coding 模糊了产品、研发和设计之间的边界，那么 AI for AI / RSI 似乎也在逐渐模糊数据、算法和 Infra 之间的边界。 3/ Model Research 本身，可能就是最 Science 的 AI for Science。 我们还探讨了两个没有答案的问，也列在这里吧，欢迎有想法的朋友分享你的见解～ Q1/ 怎么让模型拥有时间概念？ 这个之所以会是个问，是因为如果模型不交卷，它就可以一直保持「我没错」的状态。反正模型不老不死，所以从它自己的视角看，磨洋工可能并不是什么坏事。（GPT-5.6 一直写测试，是不是就是深刻践行了这一点啊 doge.jpg) 就像《葬送的芙莉莲》里，对于一个能活几千年的精灵来说，花十年寻找一枚戒指完全合理。 但我们这些凡胎肉体，根本等不起…（除非 AI 医疗让人类永生哈哈 Q2/ OpenAI 是怎么持续相信 RL 这个方向，并最终把 o1 做出来的？ 我们好奇的不是具体的 Recipe，而是背后的组织问。 想起之前请清华大学叉院的助理教授 录过一期播客，他在节目里提到，OpenAI 很早就在做 RL，但之前做了很久都没有得到结果。 那么，在一个方向连续失败很多年以后，他们的团队为什么还能继续相信它，招到人、说服老板、拿到资源，然后真的把事情做出来呢🤔 这个问可能需要更了解 OpenAI 的朋友来回答了。 最后，其实跟很多 researchers 交流，尤其是问他们觉得哪家模型更有希望时，大家最后都会强调组织文化。 在一个快速变化、资源永远不够的行业里，怎么把人和算力分给那些还没有答案的创新，以及愿意等这些创新多久，可能和技术判断本身一样重要吧。",
+          "channel": "@aigc1024",
+          "time": "17:12",
+          "url": "https://t.me/aigc1024/23060",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23060",
+              "label": "继续发一则和国内 model researcher 交流的 memo。今天和某模型厂的一位 post-train researcher 聊了聊。Ta 对「国内在 Pre-training 上更有优势、Post-training 相对落后」这件事，补充了一个视角： 国内基本已经「会做」Pre-training 了，但 Post-training 可能还处在一个比较混沌的阶段。 一个核心原因是，两者的 reward 清晰程度很不一样。 Pre-training 的反馈很明确，比如可能就是在单位时间内，把 Next Token Loss 降得越低越好，同时尽可能降低训练成本。 Post-training 要解决的，则是怎么让模型在下游应用中表现得更好。但怎么定义和评估这个「更好」，以及怎么确认模型是真的变强了、而不是在 hacking 某个指标，都非常 tricky。 此外，Pre-training 的创新也更容易被外界看到。 模型架构没有那么强的机密性，一开源大家就能看到，也可以写成 Paper、拿去做 PR。但一家模型公司的数据是怎么清洗的、具体用了什么训练 Recipe，通常不会拿出来讲。 再加上众所周知的缺卡问，而模型的绝对能力又是模型厂的生死线，大家自然会把更多资源投入反馈更明确、也更容易获得声量的 Pre-training。 Post-training 因此陷入了一个有点尴尬的循环：因为混沌，所以拿不到足够多的资源；又因为资源不够，这种混沌迟迟无法被解决。 除了这个，我们还聊到了几个挺有意思的点： 1/ 「大厂最终一定会赢」是一种偷懒的推论。 模型竞争不是比身价。拥有更多钱、卡和人，不等于一定能训出最好的模型。 在这位 researcher 看来，真正起决定性作用的，可能是组织里到底有多少人发自内心想把模型训好，以及组织摩擦会不会消耗掉这些人的热情。（没有说加入创业公司的人会更有梦想的意思。） 2/ Agent 确实已经在替代 AI Lab 里的一部分工作。（所以我们最近和一些 researchers 交流，感觉有些人确实已经有失业焦虑了。） 拿 Infra 举例，现在可以直接告诉 Agent：「每秒只能输出 50 个 Token，请优化到 60 个」，然后让它自己检查 Kernel 和整条链路。 所以一些 Infra 工程师开始自己给自己找事干，比如跑去研究算法、理解训练需求。 （从这里再往外延伸一步：如果说 AI Coding 模糊了产品、研发和设计之间的边界，那么 AI for AI / RSI 似乎也在逐渐模糊数据、算法和 Infra 之间的边界。 3/ Model Research 本身，可能就是最 Science 的 AI for Science。 我们还探讨了两个没有答案的问，也列在这里吧，欢迎有想法的朋友分享你的见解～ Q1/ 怎么让模型拥有时间概念？ 这个之所以会是个问，是因为如果模型不交卷，它就可以一直保持「我没错」的状态。反正模型不老不死，所以从它自己的视角看，磨洋工可能并不是什么坏事。（GPT-5.6 一直写测试，是不是就是深刻践行了这一点啊 doge.jpg) 就像《葬送的芙莉莲》里，对于一个能活几千年的精灵来说，花十年寻找一枚戒指完全合理。 但我们这些凡胎肉体，根本等不起…（除非 AI 医疗让人类永生哈哈 Q2/ OpenAI 是怎么持续相信 RL 这个方向，并最终把 o1 做出来的？ 我们好奇的不是具体的 Recipe，而是背后的组织问。 想起之前请清华大学叉院的助理教授 录过一期播客，他在节目里提到，OpenAI 很早就在做 RL，但之前做了很久都没有得到结果。 那么，在一个方向连续失败很多年以后，他们的团队为什么还能继续相信它，招到人、说服老板、拿到资源，然后真的把事情做出来呢🤔 这个问可能需要更了解 OpenAI 的朋友来回答了。 最后，其实跟很多 researchers 交流，尤其是问他们觉得哪家模型更有希望时，大家最后都会强调组织文化。 在一个快速变化、资源永远不够的行业里，怎么把人和算力分给那些还没有答案的创新，以及愿意等这些创新多久，可能和技术判断本身一样重要吧。"
+            },
+            {
+              "href": "https://t.me/aigc1024/23060",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "卧槽，这哥们去霍霍 Codex 了吗？",
+          "channel": "@openclaw1024",
+          "time": "17:15",
+          "url": "https://t.me/openclaw1024/1228",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1228",
+              "label": "卧槽，这哥们去霍霍 Codex 了吗？"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1228",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "ColaMD v1.8.1 已发布，macOS / Windows / Linux 均可下载：",
+          "summary": "换了全新的 macOS 应用图标 新增源码模式，在所见即所得和原始 Markdown 之间切换 新增 HTML 导出功能 新增 VS Code 集成，可在 VS Code 中将当前文件直接打开到 ColaMD 本地图片拖入编辑器后渲染正常，保存时自动恢复为相对路径，支持 Windows 路径、空格、Unicode 和带括号文件名 修复了 HTML 标签中的绝对路径也会被写回源文件的问 修复了代码块复制、Windows 本地图片显示、VS Code 未保存内容提示等若干社区反馈的细节问 欢迎体验，感谢 Star ⭐ https://colamd.com/ 转发 : Markdown 已经成为 AI 时代写作、记录、文档和协作的事实标准。但很多人的电脑上依然没有一个免费、好看、好用的 Markdown 阅读器/编辑器。 为此我开发了 ColaMD，一款开源、免费、轻量、优雅的 Markdown 编辑器 它首先是一款简单、专注、好用的 Markdown 编辑器：所见即所得、主切换、富文本复制、智能换行、PDF 导出，并支持 macOS、Windows 和 Linux。 同时，ColaMD 也是一款对 AI Agent 友好的编辑器。当 Claude Code、Codex、Cola 或其他 Agent 修改正在打开的 .md 文件时，ColaMD 会实时同步改动。不需要关闭文件、重新打开，也不需要手动刷新。 上线几个月以来，收到了大家社区热情的反馈，感谢社区提交 Issue、Pull Request，以及参与测试、反馈和讨论的每一位朋友。ColaMD 还在继续成长，欢迎下载体验，也欢迎告诉我们你希望它变成什么样。 我们的目标很明确：把 ColaMD 做成最好用的免费 Markdown 编辑器，也让它成为 AI 时代 Markdown 工作流的一块可靠基础设施。 感谢大家，如果觉得有用，可以给我们一个⭐ Star 支持。 https://github.com/marswaveai/ColaMD",
+          "channel": "@aigc1024",
+          "time": "17:21",
+          "url": "https://t.me/aigc1024/23061",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23061",
+              "label": "ColaMD v1.8.1 已发布，macOS / Windows / Linux 均可下载： 换了全新的 macOS 应用图标 新增源码模式，在所见即所得和原始 Markdown 之间切换 新增 HTML 导出功能 新增 VS Code 集成，可在 VS Code 中将当前文件直接打开到 ColaMD 本地图片拖入编辑器后渲染正常，保存时自动恢复为相对路径，支持 Windows 路径、空格、Unicode 和带括号文件名 修复了 HTML 标签中的绝对路径也会被写回源文件的问 修复了代码块复制、Windows 本地图片显示、VS Code 未保存内容提示等若干社区反馈的细节问 欢迎体验，感谢 Star ⭐ https://colamd.com/ 转发 : Markdown 已经成为 AI 时代写作、记录、文档和协作的事实标准。但很多人的电脑上依然没有一个免费、好看、好用的 Markdown 阅读器/编辑器。 为此我开发了 ColaMD，一款开源、免费、轻量、优雅的 Markdown 编辑器 它首先是一款简单、专注、好用的 Markdown 编辑器：所见即所得、主切换、富文本复制、智能换行、PDF 导出，并支持 macOS、Windows 和 Linux。 同时，ColaMD 也是一款对 AI Agent 友好的编辑器。当 Claude Code、Codex、Cola 或其他 Agent 修改正在打开的 .md 文件时，ColaMD 会实时同步改动。不需要关闭文件、重新打开，也不需要手动刷新。 上线几个月以来，收到了大家社区热情的反馈，感谢社区提交 Issue、Pull Request，以及参与测试、反馈和讨论的每一位朋友。ColaMD 还在继续成长，欢迎下载体验，也欢迎告诉我们你希望它变成什么样。 我们的目标很明确：把 ColaMD 做成最好用的免费 Markdown 编辑器，也让它成为 AI 时代 Markdown 工作流的一块可靠基础设施。 感谢大家，如果觉得有用，可以给我们一个⭐ Star 支持。 https://github.com/marswaveai/ColaMD"
+            },
+            {
+              "href": "https://t.me/aigc1024/23061",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "文章一眼 AI 写的？试试这句提示词。",
+          "summary": "把文章丢给 AI，加一句： “帮我重写这段文字，保留原意，但写得更像真人。减少过度工整的句式和机械分段，允许少量口语化和不规则表达，长短句自然交替。删掉空、套和重复总结，让文字更自然、更有个人表达感。” 比一句“降低 AI 味”好用得多。",
+          "channel": "@aigc1024",
+          "time": "17:31",
+          "url": "https://t.me/aigc1024/23064",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23064",
+              "label": "文章一眼 AI 写的？试试这句提示词。 把文章丢给 AI，加一句： “帮我重写这段文字，保留原意，但写得更像真人。减少过度工整的句式和机械分段，允许少量口语化和不规则表达，长短句自然交替。删掉空、套和重复总结，让文字更自然、更有个人表达感。” 比一句“降低 AI 味”好用得多。"
+            },
+            {
+              "href": "https://t.me/aigc1024/23064",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "Claude Code 宕机了",
+          "summary": "529 Overloaded...",
+          "channel": "@aigc1024",
+          "time": "17:39",
+          "url": "https://t.me/aigc1024/23065",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23065",
+              "label": "Claude Code 宕机了 529 Overloaded..."
+            },
+            {
+              "href": "https://t.me/aigc1024/23065",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "拆解一个视频号带货玩法，一张图片配上口播文案，加点动态效果，内容可以讲一些历史故事，视频号中老年用户居多，对这种内容天然感兴趣，带货相关图书转化效果还不错。",
+          "summary": "这种号做起来很简单，基本不需要什么剪辑能力，视频发布出去纯靠自然流，一开始没流量也很正常，要持续去更新，还是比较适合新手入门试试的。",
+          "channel": "@yunying23",
+          "time": "18:19",
+          "url": "https://t.me/yunying23/11153",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/11153",
+              "label": "拆解一个视频号带货玩法，一张图片配上口播文案，加点动态效果，内容可以讲一些历史故事，视频号中老年用户居多，对这种内容天然感兴趣，带货相关图书转化效果还不错。 这种号做起来很简单，基本不需要什么剪辑能力，视频发布出去纯靠自然流，一开始没流量也很正常，要持续去更新，还是比较适合新手入门试试的。"
+            },
+            {
+              "href": "https://t.me/yunying23/11153",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/yunying23",
+              "label": "出海赚美金"
+            },
+            {
+              "href": "https://t.me/meiriyishu",
+              "label": "优质资源"
+            },
+            {
+              "href": "https://t.me/chunse1024/8467",
+              "label": "优质信息"
+            },
+            {
+              "href": "https://t.me/inside1024",
+              "label": "内幕消息"
+            }
+          ]
+        },
+        {
+          "title": "**字节跳动新成立AI数据与安全部门，与Seed、Flow、抖音等部门平行**",
+          "summary": "36氪从多个独立信源处获悉，字节跳动近期成立了一个新的一级部门——AI数据与安全，与Seed、Flow、抖音等部门平行，负责人为王赢磊（Adam Wang）。这是继2023年底成立Seed和Flow两个AI一级部门后，字节围绕AI业务成立的又一个一级部门。负责人王赢磊此前为TikTok平台责任负责人和TikTok直播负责人。 36Kr | 智能涌现",
+          "channel": "@zaihuapd",
+          "time": "19:25",
+          "url": "https://t.me/zaihuapd/43118",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43118",
+              "label": "**字节跳动新成立AI数据与安全部门，与Seed、Flow、抖音等部门平行** 36氪从多个独立信源处获悉，字节跳动近期成立了一个新的一级部门——AI数据与安全，与Seed、Flow、抖音等部门平行，负责人为王赢磊（Adam Wang）。这是继2023年底成立Seed和Flow两个AI一级部门后，字节围绕AI业务成立的又一个一级部门。负责人王赢磊此前为TikTok平台责任负责人和TikTok直播负责人。"
+            },
+            {
+              "href": "https://36kr.com/newsflashes/3934989813710209",
+              "label": "36Kr |"
+            },
+            {
+              "href": "https://mp.weixin.qq.com/s/gNQWQQoHc_cWG3GIoGR_pw",
+              "label": "智能涌现"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43118",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "📱 **红米 K100 Pro Max 售价￥4499 起**",
+          "summary": "REDMI 正式发布 K100 系列手机，率先推出 K100 Pro 与 K100 Pro Max 两款机型。全系搭载第五代骁龙 8 至尊版与 AI 独显芯片 D2，配备 185 Hz 刷新率、全 RGB 无损排列的超窄边直屏，局部峰值亮度达 4500nit，支持 3D 超声波指纹识别。影像方面全系采用 2 亿像素主摄，续航方面支持 100W 有线与 50W 无线快充，提供赤霞珠红配色。 K100 Pro 采用 6.59 英寸直屏，内置 8500 mAh 电池，提供独占配色“流萤追光”；K100 Pro Max 升级为 6.9 英寸直屏与 9070 mAh 电池，支持 27W 有线反充。Pro Max 还独享 5000 万像素 5 倍潜望长焦镜头、含独立低音炮的 Bose 2.1 声道立体声系统，以及一体化金属 DECO 与悬浮灯环外观设计。 K100 Pro 12+256 ￥3999 12+512 ￥4599 16+256 ￥4399 16+512 ￥4999 K100 Pro Max 12+256 ￥4499 12+512 ￥5099 16+256 ￥4899 16+512 ￥5499 16+1 TB ￥5999（限量 2 万台） 首销优惠 300 元，另国补 500 元 红米手机( 1 , 2 )",
+          "channel": "@zaihuapd",
+          "time": "19:40",
+          "url": "https://t.me/zaihuapd/43119",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43119",
+              "label": "📱 **红米 K100 Pro Max 售价￥4499 起** REDMI 正式发布 K100 系列手机，率先推出 K100 Pro 与 K100 Pro Max 两款机型。全系搭载第五代骁龙 8 至尊版与 AI 独显芯片 D2，配备 185 Hz 刷新率、全 RGB 无损排列的超窄边直屏，局部峰值亮度达 4500nit，支持 3D 超声波指纹识别。影像方面全系采用 2 亿像素主摄，续航方面支持 100W 有线与 50W 无线快充，提供赤霞珠红配色。 K100 Pro 采用 6.59 英寸直屏，内置 8500 mAh 电池，提供独占配色“流萤追光”；K100 Pro Max 升级为 6.9 英寸直屏与 9070 mAh 电池，支持 27W 有线反充。Pro Max 还独享 5000 万像素 5 倍潜望长焦镜头、含独立低音炮的 Bose 2.1 声道立体声系统，以及一体化金属 DECO 与悬浮灯环外观设计。 K100 Pro 12+256 ￥3999 12+512 ￥4599 16+256 ￥4399 16+512 ￥4999 K100 Pro Max 12+256 ￥4499 12+512 ￥5099 16+256 ￥4899 16+512 ￥5499 16+1 TB ￥5999（限量 2 万台） 首销优惠 300 元，另国补 500 元 红米手机("
+            },
+            {
+              "href": "https://weibo.com/3021514657/RcVz4eK0d",
+              "label": "1 ,"
+            },
+            {
+              "href": "https://weibo.com/3021514657/RcVAgauh6",
+              "label": "2 )"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43119",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "Anthropic 宣布将黎曼猜想里 ζ 函数临界线上的零点比例的已知下界从 41.6% 提高到了 67.2% 这事充份说明",
+          "summary": "AI 目前主要确实还是在摘低垂果实 人类由于笨和懒错过的低垂果实还真tm多",
+          "channel": "@aigc1024",
+          "time": "20:11",
+          "url": "https://t.me/aigc1024/23066",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23066",
+              "label": "Anthropic 宣布将黎曼猜想里 ζ 函数临界线上的零点比例的已知下界从 41.6% 提高到了 67.2% 这事充份说明 AI 目前主要确实还是在摘低垂果实 人类由于笨和懒错过的低垂果实还真tm多"
+            },
+            {
+              "href": "https://t.me/aigc1024/23066",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "**Manus 宣布脱离 Meta 恢复独立，部分用户数据将被清除**",
+          "summary": "AI 助手 Manus 宣布将从 Meta 剥离、恢复独立公司运营。受此影响，部分用户在 2025 年 12 月 29 日（Meta 收购当日）及之后生成的数据，将于 2026 年 8 月 23 日 8:00 至 24 日（新加坡时间）被删除。受影响用户可在 8 月 23 日 7:59 前通过备份工具导出数据，并于 8 月 25 日 8:00 起恢复访问。 Manus 表示，此举是与 Meta 分离过程中为遵守特定司法管辖区监管要求的必要步骤。备份期间受影响付费用户不会被收费，恢复后还将提供回归奖励。不受影响的用户可正常使用，无需任何操作。 Manus",
+          "channel": "@zaihuapd",
+          "time": "22:14",
+          "url": "https://t.me/zaihuapd/43122",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43122",
+              "label": "**Manus 宣布脱离 Meta 恢复独立，部分用户数据将被清除** AI 助手 Manus 宣布将从 Meta 剥离、恢复独立公司运营。受此影响，部分用户在 2025 年 12 月 29 日（Meta 收购当日）及之后生成的数据，将于 2026 年 8 月 23 日 8:00 至 24 日（新加坡时间）被删除。受影响用户可在 8 月 23 日 7:59 前通过备份工具导出数据，并于 8 月 25 日 8:00 起恢复访问。 Manus 表示，此举是与 Meta 分离过程中为遵守特定司法管辖区监管要求的必要步骤。备份期间受影响付费用户不会被收费，恢复后还将提供回归奖励。不受影响的用户可正常使用，无需任何操作。"
+            },
+            {
+              "href": "https://manus.im/zh-tw/blog/a-note-to-our-users",
+              "label": "Manus"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43122",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        },
+        {
+          "title": "《静态住宅 IP 教程 · 第二篇》",
+          "summary": "——Clash Verge（最新版）链式代理设置指南 上一篇我们讲了手机端 Shadowrocket 如何设置“静态住宅 IP”。 这篇来讲 电脑端 Clash Verge 的配置方法：同样简单、同样稳、同样适合养号。 很多人用 Clash 却不知道： 最稳的做法，是链式代理：先机场，再住宅 IP。 出口走住宅，既安全又不跳 IP。 以下是完整教程👇 ⸻ 🍥 第 1 步：把你的住宅 IP 添加到节点里 你在购买住宅 IP 后，会拿到： •IP •端口 •用户名 •密码 打开 Clash Verge 最新版 → 左侧点击 “代理” 在节点区域里手动添加（或导入）你的： Residential-IP（Socks5 或 HTTPS） 写入后，它会出现在你的节点列表中。 ⸻ 右上角找到： 「链式代理」按钮（Chain Proxy）」 → 开启 这是关键！ 链式代理的逻辑是： 先连机场节点 → 再通过住宅节点 → 再出去访问网络 看到的出口 IP = 住宅 IP 机场只是用于传输加速。 ⸻ 🧩 第 3 步：配置节点顺序 在右侧的“代理链配置”里： 1️⃣ 先点击一个你的 机场节点（如 新加坡 / 香港） 它会出现在列表里，显示为第 1 个。 2️⃣ 再点击你刚写入的 Residential-IP 它会出现在列表里，显示为第 2 个。 顺序必须是： ① 机场节点 → ② 住宅节点 （顺序错了会无法连通） 如图中所示。 ⸻ ▶️ 第 4 步：点击连接，等待片刻 点击“连接”。 ⚠️ 注意： 住宅 IP 延迟比机场高一些，所以： 👉 它会慢几秒连上 👉 状态变绿表示成功 👉 访问 Google / X 测试是否正常 连上后，你现在的电脑已经在： ✔ 出口使用住宅 IP ✔ 稳定不跳 IP ✔ 适配养号 & 安全操作 非常稳。 ⸻ 📌 使用技巧 & 注意点 链式代理保证稳定性（最重要） 单独用住宅 IP = 延迟高、容易断 链式代理 = 稳定加速 + 出口纯净 住宅 IP 不适合日常高速任务 它更适合： •养号 •稳定登陆 •不跳 IP 的使用场景 撸毛 / 大流量操作建议继续用机场。 节点顺序不能反 顺序必须是： 机场 → 住宅 不是住宅 → 机场！",
+          "channel": "@yunying23",
+          "time": "22:16",
+          "url": "https://t.me/yunying23/11155",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/11155",
+              "label": "《静态住宅 IP 教程 · 第二篇》 ——Clash Verge（最新版）链式代理设置指南 上一篇我们讲了手机端 Shadowrocket 如何设置“静态住宅 IP”。 这篇来讲 电脑端 Clash Verge 的配置方法：同样简单、同样稳、同样适合养号。 很多人用 Clash 却不知道： 最稳的做法，是链式代理：先机场，再住宅 IP。 出口走住宅，既安全又不跳 IP。 以下是完整教程👇 ⸻ 🍥 第 1 步：把你的住宅 IP 添加到节点里 你在购买住宅 IP 后，会拿到： •IP •端口 •用户名 •密码 打开 Clash Verge 最新版 → 左侧点击 “代理” 在节点区域里手动添加（或导入）你的： Residential-IP（Socks5 或 HTTPS） 写入后，它会出现在你的节点列表中。 ⸻ 右上角找到： 「链式代理」按钮（Chain Proxy）」 → 开启 这是关键！ 链式代理的逻辑是： 先连机场节点 → 再通过住宅节点 → 再出去访问网络 看到的出口 IP = 住宅 IP 机场只是用于传输加速。 ⸻ 🧩 第 3 步：配置节点顺序 在右侧的“代理链配置”里： 1️⃣ 先点击一个你的 机场节点（如 新加坡 / 香港） 它会出现在列表里，显示为第 1 个。 2️⃣ 再点击你刚写入的 Residential-IP 它会出现在列表里，显示为第 2 个。 顺序必须是： ① 机场节点 → ② 住宅节点 （顺序错了会无法连通） 如图中所示。 ⸻ ▶️ 第 4 步：点击连接，等待片刻 点击“连接”。 ⚠️ 注意： 住宅 IP 延迟比机场高一些，所以： 👉 它会慢几秒连上 👉 状态变绿表示成功 👉 访问 Google / X 测试是否正常 连上后，你现在的电脑已经在： ✔ 出口使用住宅 IP ✔ 稳定不跳 IP ✔ 适配养号 & 安全操作 非常稳。 ⸻ 📌 使用技巧 & 注意点 链式代理保证稳定性（最重要） 单独用住宅 IP = 延迟高、容易断 链式代理 = 稳定加速 + 出口纯净 住宅 IP 不适合日常高速任务 它更适合： •养号 •稳定登陆 •不跳 IP 的使用场景 撸毛 / 大流量操作建议继续用机场。 节点顺序不能反 顺序必须是： 机场 → 住宅 不是住宅 → 机场！"
+            },
+            {
+              "href": "https://t.me/yunying23/11155",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/yunying23",
+              "label": "出海赚美金"
+            }
+          ]
+        },
+        {
+          "title": "我觉得像视频转录剪辑这样的 App 应该是被 Agent 调用的，App 主要是用来确认结果和微调的。",
+          "summary": "所以我在设计的时候，砍掉了内置的 Harness，只保留了复制 prompt，然后去 Agent 操作。另外最新版本提供了网页界面，这样可以在 Agent 内置浏览器内打开，直接从对或者网页标记二次编辑。 我坚信未来 Agent 才是入口，要做什么事是先打开 Agent 而不是打开 App。",
+          "channel": "@openclaw1024",
+          "time": "22:45",
+          "url": "https://t.me/openclaw1024/1230",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1230",
+              "label": "我觉得像视频转录剪辑这样的 App 应该是被 Agent 调用的，App 主要是用来确认结果和微调的。 所以我在设计的时候，砍掉了内置的 Harness，只保留了复制 prompt，然后去 Agent 操作。另外最新版本提供了网页界面，这样可以在 Agent 内置浏览器内打开，直接从对或者网页标记二次编辑。 我坚信未来 Agent 才是入口，要做什么事是先打开 Agent 而不是打开 App。"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1230",
+              "label": "查看原文"
+            },
+            {
+              "href": "https://t.me/openclaw1024",
+              "label": "Hermes/OpenClaw"
+            },
+            {
+              "href": "https://t.me/aigc1024",
+              "label": "AI探索"
+            }
+          ]
+        },
+        {
+          "title": "推荐瑞·达利欧最新一期深度访谈，信息量巨大。",
+          "summary": "这期节目刚上线不到两周，播放量已经破400万。 当然，这期访谈能火，很大一部分原因还是瑞·达利欧本人。 他是全球最大的对冲基金之一的桥水基金创始人，累计给投资者赚了大约530亿美元。 但真正让达利欧出名的，是2008年那场全球金融危机。 当时标普500暴跌将近40%的时候，大量投资机构损失惨重，他的基金反而赚了9.5%。更早之前，他就警告过度借贷可能引发系统性危机。 也正因为这样，当他在这次访谈里说，AI已经出现了经典的泡沫特征，很多人的第一反应不是反驳，是想知道他究竟看到了什么。 但整场访谈听下来，我觉得最重要的，是他全程反复提到的一条线索： AI正在改变财富的流向。 1 访谈一开始，主持人问达利欧，我们是不是正处在一个AI泡沫里？ 达利欧没有急着给出一个涨跌判断，而是先讲了20世纪20年代的故事。 那是一个技术爆发的年代，汽车开始普及，普通家庭第一次用上电灯和冰箱，广播与飞机也进入大众视野。 所有人都知道，这些技术会改变未来。 后来也确实改变了，可这并没有阻止1929年的崩盘。 同样的事情也发生在互联网时代。 互联网不是骗局，今天几乎所有人的生活都建立在它之上，但一家企业代表未来，不等于它在任何价格上都值得购买。 这句放到今天仍然成立：AI是真的，AI泡沫也可以是真的，技术不断进步，与市场过度兴奋并不矛盾。 很多人看到AI越来越强，就觉得AI公司的估值一定会继续上涨。可技术回答的是它能做什么，价格回答的是人们已经为这件事付了多少钱。 达利欧在这里提到了一个特别关键的区别：财富不是钱。 一家AI公司融资5000万元，市场却给了它10亿元估值。创始人因此拥有了巨额财富，但那主要是股份的账面价格。只有卖出股份，财富才会真正变成可以支付账单的钱。 市场好的时候，人们可以拿股份抵押，借来的钱又会推高资产价格。 等到利率上升，或者投资人突然需要现金，过程就会反过来。大家开始卖资产，价格下跌，抵押物随之缩水，原本看起来很坚固的财富会迅速消失。 泡沫真正危险的地方，不是有人在屏幕上亏了一笔钱，是资产价格下跌后，公司开始削减成本。 一个人少花的钱，会变成另一家公司的收入缺口。市场里的恐慌，最后会落到普通人的岗位上。 2 但这场访谈最关键的部分，是达利欧谈到了另一个问。 AI创造的财富，到底会流向哪里？ 首先我们要认清一个现实：技术创造出来的钱，肯定不会自动平均落到每个人手里。 AI",
+          "channel": "@inside1024",
+          "time": "23:31",
+          "url": "https://t.me/inside1024/83098",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83098",
+              "label": "推荐瑞·达利欧最新一期深度访谈，信息量巨大。 这期节目刚上线不到两周，播放量已经破400万。 当然，这期访谈能火，很大一部分原因还是瑞·达利欧本人。 他是全球最大的对冲基金之一的桥水基金创始人，累计给投资者赚了大约530亿美元。 但真正让达利欧出名的，是2008年那场全球金融危机。 当时标普500暴跌将近40%的时候，大量投资机构损失惨重，他的基金反而赚了9.5%。更早之前，他就警告过度借贷可能引发系统性危机。 也正因为这样，当他在这次访谈里说，AI已经出现了经典的泡沫特征，很多人的第一反应不是反驳，是想知道他究竟看到了什么。 但整场访谈听下来，我觉得最重要的，是他全程反复提到的一条线索： AI正在改变财富的流向。 1 访谈一开始，主持人问达利欧，我们是不是正处在一个AI泡沫里？ 达利欧没有急着给出一个涨跌判断，而是先讲了20世纪20年代的故事。 那是一个技术爆发的年代，汽车开始普及，普通家庭第一次用上电灯和冰箱，广播与飞机也进入大众视野。 所有人都知道，这些技术会改变未来。 后来也确实改变了，可这并没有阻止1929年的崩盘。 同样的事情也发生在互联网时代。 互联网不是骗局，今天几乎所有人的生活都建立在它之上，但一家企业代表未来，不等于它在任何价格上都值得购买。 这句放到今天仍然成立：AI是真的，AI泡沫也可以是真的，技术不断进步，与市场过度兴奋并不矛盾。 很多人看到AI越来越强，就觉得AI公司的估值一定会继续上涨。可技术回答的是它能做什么，价格回答的是人们已经为这件事付了多少钱。 达利欧在这里提到了一个特别关键的区别：财富不是钱。 一家AI公司融资5000万元，市场却给了它10亿元估值。创始人因此拥有了巨额财富，但那主要是股份的账面价格。只有卖出股份，财富才会真正变成可以支付账单的钱。 市场好的时候，人们可以拿股份抵押，借来的钱又会推高资产价格。 等到利率上升，或者投资人突然需要现金，过程就会反过来。大家开始卖资产，价格下跌，抵押物随之缩水，原本看起来很坚固的财富会迅速消失。 泡沫真正危险的地方，不是有人在屏幕上亏了一笔钱，是资产价格下跌后，公司开始削减成本。 一个人少花的钱，会变成另一家公司的收入缺口。市场里的恐慌，最后会落到普通人的岗位上。 2 但这场访谈最关键的部分，是达利欧谈到了另一个问。 AI创造的财富，到底会流向哪里？ 首先我们要认清一个现实：技术创造出来的钱，肯定不会自动平均落到每个人手里。 AI"
+            },
+            {
+              "href": "https://t.me/inside1024/83098",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "可以让整个社会更富，却也可能让一部分人的收入变得更不稳定。",
+          "summary": "问不是AI会不会创造财富，它当然会。 真正的问是，这些新增的财富最后会属于谁？ 在瑞·达利欧看来，AI创造的财富，会更容易流向资本家。他的解释如下。 工业革命以来，机器一直在沿着人的身体向上替代。 最早替代的是体力，拖拉机代替农民在土地上劳作，流水线接管了大量重复动作。 现在，这条线已经来到了大脑，AI开始处理写作、分析和部分推理工作。 以前一家企业赚到100元，需要拿出很大一部分支付工资。现在，同样的业务可以由更少的人配合AI完成。 企业收入没有减少，人工成本却可能下降。省下来的部分不会凭空消失，它更可能进入利润，最后流向持有公司股份的人。 这才是AI时代真正重要的财富变化。 它不一定表现为所有人突然失业，更常见的情况是，一个行业仍然在增长，身处其中的普通人却没有明显变富。 生产率提高了，工资只增加一点，资产价格却涨得更快。 一个人会使用生产工具，与拥有生产工具带来的收益，是两码事。 一个人用AI把一天的工作压缩到四小时，如果公司因此减少招聘，那么省下的成本首先属于公司。除非这个人能借此进入更高价值的岗位，或者拥有一部分业务成果，否则他只是帮助组织变得更有效率。 所以AI时代的差距，可能不只发生在会用AI的人和不会用AI的人之间。 更大的差距，会出现在参与分配的人和只领取固定工资的人之间。 3 主持人接着问，如果一个年轻人没有多少存款，也没有可以投资的资产，他该怎么办？ 达利欧回答，你唯一的资产就是自己。 一个人的收入，不只取决于他会什么，还取决于市场愿意为这种能力付多少钱。 同样是开车，网约车司机和为高净值客户服务的专职司机，出售的是相近的技能，价格却完全不同。 同样擅长沟通，在低利润行业处理日常协调，与在高价值交易中参与关键谈判，得到的回报也不会一样。 技能的价值从来不是固定的，而是由所处的场景决定。 这不意味着每个人都要创业，而是需要想办法让收入逐渐靠近成果，不是永远只按投入的时间定价。 你可以进入更需要判断的岗位，也可以积累可复用的作品。只要你对最终成果拥有更强的议价权，AI带来的效率才更可能成为你的收益。 4 对谈最后又回到了一个很实际的问：既然泡沫可能破裂，现在应该做什么？ 达利欧的答案是，不要试图预测那个精确的时点。 与其把未来押在一次判断上，不如让自己在判断错误后依然能够生活。 其实整场访谈里，达利欧谈分散投资，表面上说的是股票、现金和黄金，背后其实是同一个词：选择权。 有一笔能覆盖生活的应急资金，你就不必在市场最低点卖出资产。拥有可以迁移的能力，公司裁员时，你也不至于只能等待。 选择权无法让人躲过所有周期，但它能减少被迫做决定的次数。 AI时代也是一样。当机器开始参与脑力劳动，单纯出售时间会越来越被动。 未来最稳妥的位置，未必是离AI最远的地方，而是让AI提高你的产出，同时让自己保留对一部分成果的所有权。 很推荐大家有时间可以看下这期访谈。我觉得瑞·达利欧很厉害的地方在于，他总在追问同一件事：一个变化发生以后，钱会从哪里来，又会流到哪里去？ 重点不是结论，是他的思考问的方式。",
+          "channel": "@inside1024",
+          "time": "23:31",
+          "url": "https://t.me/inside1024/83099",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83099",
+              "label": "可以让整个社会更富，却也可能让一部分人的收入变得更不稳定。 问不是AI会不会创造财富，它当然会。 真正的问是，这些新增的财富最后会属于谁？ 在瑞·达利欧看来，AI创造的财富，会更容易流向资本家。他的解释如下。 工业革命以来，机器一直在沿着人的身体向上替代。 最早替代的是体力，拖拉机代替农民在土地上劳作，流水线接管了大量重复动作。 现在，这条线已经来到了大脑，AI开始处理写作、分析和部分推理工作。 以前一家企业赚到100元，需要拿出很大一部分支付工资。现在，同样的业务可以由更少的人配合AI完成。 企业收入没有减少，人工成本却可能下降。省下来的部分不会凭空消失，它更可能进入利润，最后流向持有公司股份的人。 这才是AI时代真正重要的财富变化。 它不一定表现为所有人突然失业，更常见的情况是，一个行业仍然在增长，身处其中的普通人却没有明显变富。 生产率提高了，工资只增加一点，资产价格却涨得更快。 一个人会使用生产工具，与拥有生产工具带来的收益，是两码事。 一个人用AI把一天的工作压缩到四小时，如果公司因此减少招聘，那么省下的成本首先属于公司。除非这个人能借此进入更高价值的岗位，或者拥有一部分业务成果，否则他只是帮助组织变得更有效率。 所以AI时代的差距，可能不只发生在会用AI的人和不会用AI的人之间。 更大的差距，会出现在参与分配的人和只领取固定工资的人之间。 3 主持人接着问，如果一个年轻人没有多少存款，也没有可以投资的资产，他该怎么办？ 达利欧回答，你唯一的资产就是自己。 一个人的收入，不只取决于他会什么，还取决于市场愿意为这种能力付多少钱。 同样是开车，网约车司机和为高净值客户服务的专职司机，出售的是相近的技能，价格却完全不同。 同样擅长沟通，在低利润行业处理日常协调，与在高价值交易中参与关键谈判，得到的回报也不会一样。 技能的价值从来不是固定的，而是由所处的场景决定。 这不意味着每个人都要创业，而是需要想办法让收入逐渐靠近成果，不是永远只按投入的时间定价。 你可以进入更需要判断的岗位，也可以积累可复用的作品。只要你对最终成果拥有更强的议价权，AI带来的效率才更可能成为你的收益。 4 对谈最后又回到了一个很实际的问：既然泡沫可能破裂，现在应该做什么？ 达利欧的答案是，不要试图预测那个精确的时点。 与其把未来押在一次判断上，不如让自己在判断错误后依然能够生活。 其实整场访谈里，达利欧谈分散投资，表面上说的是股票、现金和黄金，背后其实是同一个词：选择权。 有一笔能覆盖生活的应急资金，你就不必在市场最低点卖出资产。拥有可以迁移的能力，公司裁员时，你也不至于只能等待。 选择权无法让人躲过所有周期，但它能减少被迫做决定的次数。 AI时代也是一样。当机器开始参与脑力劳动，单纯出售时间会越来越被动。 未来最稳妥的位置，未必是离AI最远的地方，而是让AI提高你的产出，同时让自己保留对一部分成果的所有权。 很推荐大家有时间可以看下这期访谈。我觉得瑞·达利欧很厉害的地方在于，他总在追问同一件事：一个变化发生以后，钱会从哪里来，又会流到哪里去？ 重点不是结论，是他的思考问的方式。"
+            },
+            {
+              "href": "https://t.me/inside1024/83099",
+              "label": "查看原文"
+            }
+          ]
+        },
+        {
+          "title": "**iOS 27 为 2TB 及以上 iCloud+ 用户新增家庭 App AI 功能**",
+          "summary": "iOS 27 将为订阅 2TB 及以上 iCloud+ 计划的用户带来三项 Apple Intelligence 家庭 App 功能：HomeKit 安防视频生成描述、摄像头片段搜索，以及自动展示值得注意的片段。 测试者发现，8TB 存储可支持最多 15 个摄像头的视频摘要，升级至最高 12TB 计划可能获得更高限额。部分 iCloud+ 计划还会提升图像生成等其他 AI 功能的每日使用上限。苹果称这些功能依赖强大的服务器模型，因此仅限付费用户，具体限额预计在 9 月 iOS 27 正式版发布时公布。 MacRumors",
+          "channel": "@zaihuapd",
+          "time": "23:43",
+          "url": "https://t.me/zaihuapd/43124",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43124",
+              "label": "**iOS 27 为 2TB 及以上 iCloud+ 用户新增家庭 App AI 功能** iOS 27 将为订阅 2TB 及以上 iCloud+ 计划的用户带来三项 Apple Intelligence 家庭 App 功能：HomeKit 安防视频生成描述、摄像头片段搜索，以及自动展示值得注意的片段。 测试者发现，8TB 存储可支持最多 15 个摄像头的视频摘要，升级至最高 12TB 计划可能获得更高限额。部分 iCloud+ 计划还会提升图像生成等其他 AI 功能的每日使用上限。苹果称这些功能依赖强大的服务器模型，因此仅限付费用户，具体限额预计在 9 月 iOS 27 正式版发布时公布。"
+            },
+            {
+              "href": "https://www.macrumors.com/2026/08/11/new-ios-27-icloud-plus-perks/",
+              "label": "MacRumors"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43124",
+              "label": "查看原文"
+            },
+            {
+              "href": "http://t.me/ZaiHuaPd",
+              "label": "在花频道"
+            },
+            {
+              "href": "https://t.me/zaihuachat",
+              "label": "茶馆水群"
+            },
+            {
+              "href": "http://t.me/ZaiHuabot",
+              "label": "投稿通道"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

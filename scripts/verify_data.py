@@ -157,6 +157,33 @@ def verify_platform_trends() -> None:
         verify_conversation_contexts(latest, "platform-trends/xiaohongshu/latest")
 
 
+def verify_diting_digests() -> None:
+    index_path = DATA / "dt-digests" / "index.json"
+    if not index_path.exists():
+        return
+    index = load(index_path)
+    assert_true(index.get("source") == "codew1028/dt", "diting digest source should be codew1028/dt")
+    assert_true(str(index.get("source_base_url") or "").startswith("https://codew1028.github.io/dt"), "diting digest source URL mismatch")
+    items = index.get("items") or []
+    assert_true(items, "diting digest index should include archive items")
+    for kind in ("ai", "tg"):
+        latest_date = (index.get("latest") or {}).get(kind)
+        assert_true(latest_date, f"diting digest latest date missing for {kind}")
+        assert_true((index.get("counts") or {}).get(kind, 0) > 0, f"diting digest count missing for {kind}")
+        detail_path = DATA / "dt-digests" / "daily" / kind / f"{latest_date}.json"
+        assert_true(detail_path.exists(), f"diting digest latest detail missing for {kind}:{latest_date}")
+        detail = load(detail_path)
+        assert_true(detail.get("date") == latest_date, f"diting digest detail date mismatch for {kind}")
+        sections = detail.get("sections") or []
+        item_count = sum(len(section.get("items") or []) for section in sections)
+        assert_true(item_count == detail.get("item_count"), f"diting digest item count mismatch for {kind}:{latest_date}")
+        assert_true(item_count > 0, f"diting digest latest detail should not be empty for {kind}:{latest_date}")
+        for section in sections:
+            assert_true(section.get("title"), f"diting digest section title missing for {kind}:{latest_date}")
+            for item in section.get("items") or []:
+                assert_true(item.get("title") or item.get("summary"), f"diting digest item text missing for {kind}:{latest_date}")
+
+
 def main() -> None:
     latest = load(DATA / "latest.json")
     daily = load(DATA / "daily" / "latest.json")
@@ -192,6 +219,7 @@ def main() -> None:
         if archive_path.exists():
             verify_conversation_contexts(load(archive_path), f"daily/{item['date']}")
     verify_platform_trends()
+    verify_diting_digests()
 
     tracked = [cluster for cluster in clusters if cluster.get("tracking_eligible")]
     assert_true(len(fermentation["items"]) == len(tracked), "fermentation tracked count mismatch")

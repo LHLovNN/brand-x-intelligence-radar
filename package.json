@@ -21,6 +21,10 @@
     "local:daily:install": "bash scripts/macos/install_daily_launchd.sh",
     "local:daily:uninstall": "bash scripts/macos/uninstall_daily_launchd.sh",
     "local:daily:status": "bash scripts/macos/daily_status.sh",
+    "local:diting:sync": "bash scripts/macos/run_diting_digest_sync.sh",
+    "local:diting:install": "bash scripts/macos/install_diting_launchd.sh",
+    "local:diting:uninstall": "bash scripts/macos/uninstall_diting_launchd.sh",
+    "diting:sync": "python3 scripts/sync_dt_digests.py",
     "serve": "python3 -m http.server 4173 --directory public"
   }
 }

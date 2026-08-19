@@ -9,6 +9,15 @@ const state = {
   xiaohongshu: null,
   xiaohongshuIndex: null,
   xiaohongshuArchive: [],
+  dtDigestIndex: null,
+  dtDigests: {
+    ai: [],
+    tg: [],
+  },
+  dtDigestFilters: {
+    ai: { date: "", section: "all", source: "all", query: "" },
+    tg: { date: "", section: "all", source: "all", query: "" },
+  },
   platformExpandedDates: new Set(),
   platformTagFilter: "",
   allBrandFilter: "all",
@@ -32,6 +41,29 @@ const routeTitles = {
   daily: "舆情日报",
   settings: "设置",
   xiaohongshu: "小红书",
+  aiDaily: "AI日报",
+  tgDaily: "TG日报",
+};
+
+const DT_DIGEST_KIND_CONFIG = {
+  ai: {
+    routeName: "aiDaily",
+    slug: "ai-daily",
+    title: "AI日报",
+    label: "AI 日报",
+    eyebrow: "谛听-情报库",
+    sourceLabel: "来源",
+    emptyText: "还没有同步到 AI 日报内容。",
+  },
+  tg: {
+    routeName: "tgDaily",
+    slug: "tg-daily",
+    title: "TG日报",
+    label: "TG 日报",
+    eyebrow: "谛听-情报库",
+    sourceLabel: "频道",
+    emptyText: "还没有同步到 TG 日报内容。",
+  },
 };
 
 async function loadJson(path) {
@@ -111,6 +143,14 @@ async function init() {
   state.xiaohongshuArchive = await loadPlatformTrendArchive("xiaohongshu");
   if (!state.xiaohongshuArchive.length && state.xiaohongshu?.date) state.xiaohongshuArchive = [state.xiaohongshu];
   state.platformExpandedDates = new Set(state.xiaohongshuArchive.slice(0, DEFAULT_TIMELINE_EXPANDED_DAYS).map((daily) => daily.date).filter(Boolean));
+  state.dtDigestIndex = await loadJsonOptional("./dashboard-data/dt-digests/index.json", emptyDitingDigestIndex());
+  state.dtDigests.ai = await loadInitialDitingDigest("ai");
+  state.dtDigests.tg = await loadInitialDitingDigest("tg");
+  Object.keys(DT_DIGEST_KIND_CONFIG).forEach((kind) => {
+    if (!state.dtDigestFilters[kind].date) {
+      state.dtDigestFilters[kind].date = state.dtDigests[kind]?.[0]?.date || state.dtDigestIndex?.latest?.[kind] || "";
+    }
+  });
   bindNavigation();
   window.addEventListener("hashchange", render);
   render();
@@ -142,6 +182,35 @@ async function loadPlatformTrendArchive(platformKey) {
     })
   );
   return records.filter(Boolean).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+}
+
+async function loadInitialDitingDigest(kind) {
+  const items = (state.dtDigestIndex?.items || [])
+    .filter((item) => item.kind === kind && item.detail_available)
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const latest = items[0];
+  if (!latest) return [];
+  const record = await loadDitingDigestDetail(latest);
+  return record ? [record] : [];
+}
+
+async function loadDitingDigestDetail(entry) {
+  if (!entry) return null;
+  const detailPath = entry.detail_path || `dashboard-data/dt-digests/daily/${entry.kind}/${entry.date}.json`;
+  try {
+    return await loadJson(`./${detailPath}`);
+  } catch (error) {
+    return null;
+  }
+}
+
+async function ensureDitingDigestDetail(kind, date) {
+  const details = state.dtDigests[kind] || [];
+  if (details.some((daily) => daily.date === date)) return;
+  const entry = ditingDigestEntries(kind).find((item) => item.date === date);
+  const detail = await loadDitingDigestDetail(entry);
+  if (!detail) return;
+  state.dtDigests[kind] = [...details, detail].sort((a, b) => String(b.date).localeCompare(String(a.date)));
 }
 
 function emptyPlatformTrendPayload() {
@@ -185,10 +254,26 @@ function emptyPlatformTrendIndex() {
   };
 }
 
+function emptyDitingDigestIndex() {
+  return {
+    generated_at: "",
+    generated_at_label: "",
+    source: "codew1028/dt",
+    source_base_url: "https://codew1028.github.io/dt",
+    detail_days: 0,
+    latest: { ai: "", tg: "" },
+    latest_date: "",
+    counts: { ai: 0, tg: 0 },
+    items: [],
+  };
+}
+
 function route() {
   const hash = window.location.hash || "#/";
   const parts = hash.replace(/^#\/?/, "").split("/").filter(Boolean);
   if (parts[0] === "platform" && parts[1] === "xiaohongshu") return { name: "xiaohongshu" };
+  if (parts[0] === "diting" && parts[1] === "ai-daily") return { name: "aiDaily" };
+  if (parts[0] === "diting" && parts[1] === "tg-daily") return { name: "tgDaily" };
   if (parts[0] === "intel") return { name: "overview" };
   if (parts[0] === "fermentation") return { name: "overview" };
   if (parts[0] === "source-status") return { name: "settings" };
@@ -201,9 +286,7 @@ function render() {
   const routeKey = current.name;
   const shouldResetScroll = state.lastRouteKey && state.lastRouteKey !== routeKey;
   document.getElementById("page-title").textContent = routeTitles[current.name] || "舆情焦点";
-  document.getElementById("generated-at").textContent = current.name === "xiaohongshu"
-    ? (state.xiaohongshu?.generated_at_label || state.overview.generated_at_label)
-    : state.overview.generated_at_label;
+  document.getElementById("generated-at").textContent = generatedAtLabelForRoute(current.name);
   const health = document.getElementById("health-pill");
   const sampleMode = isSampleMode();
   health.textContent = sampleMode ? "Sample data" : state.overview.health === "normal" ? "Data healthy" : state.overview.health;
@@ -220,11 +303,21 @@ function render() {
   else if (current.name === "daily") content.innerHTML = dailyPage();
   else if (current.name === "settings") content.innerHTML = settingsPage();
   else if (current.name === "xiaohongshu") content.innerHTML = xiaohongshuPage();
+  else if (current.name === "aiDaily") content.innerHTML = ditingDigestPage("ai");
+  else if (current.name === "tgDaily") content.innerHTML = ditingDigestPage("tg");
   else content.innerHTML = overviewPage();
   if (shouldResetScroll) resetMainScroll(content);
   state.lastRouteKey = routeKey;
   bindPageEvents();
   hydrateXVideoEmbeds();
+}
+
+function generatedAtLabelForRoute(routeName) {
+  if (routeName === "xiaohongshu") return state.xiaohongshu?.generated_at_label || state.overview.generated_at_label;
+  if (routeName === "aiDaily" || routeName === "tgDaily") {
+    return state.dtDigestIndex?.generated_at_label || state.overview.generated_at_label;
+  }
+  return state.overview.generated_at_label;
 }
 
 function bindNavigation() {
@@ -477,7 +570,7 @@ function xiaohongshuPage() {
   const filteredArchive = platformFilteredArchive(archive);
   return `
     ${pageHero({
-      eyebrow: "平台流变",
+      eyebrow: "谛听-情报库",
       title: "小红书",
       subtitle: `${latest.date ? formatDateLong(latest.date) : "等待首次采集"} · X 上关于小红书养号、起号、流量和变现的方法论内容`,
       stats: [
@@ -648,6 +741,233 @@ function platformTimelineCard(item) {
       </article>
     </div>
   `;
+}
+
+function ditingDigestPage(kind) {
+  const config = DT_DIGEST_KIND_CONFIG[kind];
+  const entries = ditingDigestEntries(kind);
+  const loadedDetails = state.dtDigests[kind] || [];
+  const filters = state.dtDigestFilters[kind] || { date: "", section: "all", source: "all", query: "" };
+  const selectedEntry = entries.find((daily) => daily.date === filters.date) || entries[0] || null;
+  const selected = loadedDetails.find((daily) => daily.date === filters.date)
+    || loadedDetails.find((daily) => selectedEntry && daily.date === selectedEntry.date)
+    || emptyDitingDigestPayload(kind, selectedEntry);
+  if (!filters.date && selected.date) filters.date = selected.date;
+  const allItems = flattenDitingDigestItems(selected);
+  const filteredSections = ditingFilteredSections(selected, config, filters);
+  const filteredCount = filteredSections.reduce((sum, section) => sum + section.items.length, 0);
+  const sectionOptions = ditingSectionOptions(selected);
+  const sourceOptions = ditingSourceOptions(allItems, config);
+  const latestDate = state.dtDigestIndex?.latest?.[kind] || selected.date;
+  return `
+    ${pageHero({
+      eyebrow: config.eyebrow,
+      title: config.title,
+      subtitle: `${selected.date ? formatDateLong(selected.date) : "等待首次同步"} · ${config.label}归档`,
+      stats: [
+        [selected.item_count || allItems.length, "当日条目"],
+        [selected.section_count || sectionOptions.length, kind === "ai" ? "板块" : "频道组"],
+        [entries.length, "可读日期"],
+        [latestDate || "--", "最新日期"],
+      ],
+    })}
+    <section class="diting-toolbar" aria-label="${escapeHtml(config.title)}筛选">
+      <div class="diting-toolbar-head">
+        <div>
+          <strong>${escapeHtml(selected.title || config.label)}</strong>
+          <span>${escapeHtml(selected.hero_date || `${selected.date || "未同步"} · ${allItems.length} 条内容`)}</span>
+        </div>
+        ${selected.source_url ? `<a class="text-button primary" href="${escapeHtml(selected.source_url)}" target="_blank" rel="noreferrer">查看当日日报</a>` : ""}
+      </div>
+      ${ditingDateRail(kind, entries, selected.date, loadedDetails)}
+      <div class="diting-filter-row">
+        <label>
+          <span>板块</span>
+          <select data-dt-section-filter="${escapeHtml(kind)}">
+            <option value="all"${filters.section === "all" ? " selected" : ""}>全部板块</option>
+            ${sectionOptions.map((section) => `<option value="${escapeHtml(section)}"${filters.section === section ? " selected" : ""}>${escapeHtml(section)}</option>`).join("")}
+          </select>
+        </label>
+        <label>
+          <span>${escapeHtml(config.sourceLabel)}</span>
+          <select data-dt-source-filter="${escapeHtml(kind)}">
+            <option value="all"${filters.source === "all" ? " selected" : ""}>全部${escapeHtml(config.sourceLabel)}</option>
+            ${sourceOptions.map((source) => `<option value="${escapeHtml(source)}"${filters.source === source ? " selected" : ""}>${escapeHtml(source)}</option>`).join("")}
+          </select>
+        </label>
+        <form class="diting-search-form" data-dt-search-form="${escapeHtml(kind)}">
+          <label>
+            <span>搜索</span>
+            <input type="search" value="${escapeHtml(filters.query)}" placeholder="搜标题、正文、来源…" data-dt-search-input="${escapeHtml(kind)}" />
+          </label>
+          <button class="text-button" type="submit">搜索</button>
+          ${(filters.section !== "all" || filters.source !== "all" || filters.query)
+            ? `<button class="text-button" type="button" data-dt-clear-filter="${escapeHtml(kind)}">清空</button>`
+            : ""}
+        </form>
+      </div>
+      <div class="diting-result-line">
+        <span>${escapeHtml(String(filteredCount))} / ${escapeHtml(String(allItems.length))} 条</span>
+        <span>${escapeHtml(state.dtDigestIndex?.generated_at_label || "")}</span>
+      </div>
+    </section>
+    <section class="diting-digest-feed">
+      ${filteredSections.length ? filteredSections.map((section) => ditingSectionBlock(section, config)).join("") : empty(config.emptyText)}
+    </section>
+  `;
+}
+
+function emptyDitingDigestPayload(kind, entry = null) {
+  return {
+    kind,
+    kind_label: DT_DIGEST_KIND_CONFIG[kind]?.label || "日报",
+    date: entry?.date || "",
+    title: DT_DIGEST_KIND_CONFIG[kind]?.label || "日报",
+    hero_date: entry?.date ? `${entry.date} · ${entry.item_count || 0} 条内容` : "",
+    source_url: entry?.source_url || "",
+    item_count: entry?.item_count || 0,
+    section_count: entry?.section_count || 0,
+    sections: [],
+  };
+}
+
+function ditingDigestEntries(kind) {
+  return (state.dtDigestIndex?.items || [])
+    .filter((item) => item.kind === kind && item.detail_available)
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)));
+}
+
+function flattenDitingDigestItems(digest) {
+  return (digest.sections || []).flatMap((section) =>
+    (section.items || []).map((item) => ({
+      ...item,
+      section_title: section.title || "日报内容",
+    }))
+  );
+}
+
+function ditingFilteredSections(digest, config, filters) {
+  return (digest.sections || [])
+    .map((section) => {
+      const sectionTitle = section.title || "日报内容";
+      const items = (section.items || [])
+        .map((item) => ({ ...item, section_title: sectionTitle }))
+        .filter((item) => ditingItemMatchesFilters(item, config, filters));
+      return { ...section, title: sectionTitle, items };
+    })
+    .filter((section) => section.items.length);
+}
+
+function ditingItemMatchesFilters(item, config, filters) {
+  const section = item.section_title || "";
+  const source = ditingItemSource(item, config);
+  const query = String(filters.query || "").trim().toLowerCase();
+  if (filters.section !== "all" && section !== filters.section) return false;
+  if (filters.source !== "all" && source !== filters.source) return false;
+  if (!query) return true;
+  const haystack = [
+    item.title,
+    item.summary,
+    item.source,
+    item.channel,
+    item.time,
+    section,
+    ...(item.links || []).map((link) => link.label || link.href || ""),
+  ]
+    .join(" ")
+    .toLowerCase();
+  return haystack.includes(query);
+}
+
+function ditingSectionOptions(digest) {
+  return [...new Set((digest.sections || []).map((section) => String(section.title || "日报内容").trim()).filter(Boolean))];
+}
+
+function ditingSourceOptions(items, config) {
+  return [...new Set(items.map((item) => ditingItemSource(item, config)).filter(Boolean))]
+    .sort((a, b) => a.localeCompare(b, "zh-Hans-CN"));
+}
+
+function ditingDateRail(kind, entries, selectedDate, loadedDetails = []) {
+  if (!entries.length) return "";
+  return `
+    <div class="diting-date-rail" aria-label="选择日报日期">
+      ${entries.map((entry) => {
+        const detail = loadedDetails.find((daily) => daily.date === entry.date);
+        const count = detail?.item_count ?? entry.item_count ?? 0;
+        return `
+        <button type="button" class="diting-date-chip${entry.date === selectedDate ? " active" : ""}" data-dt-date="${escapeHtml(entry.date)}" data-dt-kind="${escapeHtml(kind)}">
+          <strong>${escapeHtml(formatDateShort(entry.date))}</strong>
+          <span>${escapeHtml(String(count))} 条</span>
+        </button>
+      `;
+      }).join("")}
+    </div>
+  `;
+}
+
+function ditingSectionBlock(section, config) {
+  return `
+    <article class="diting-section-block">
+      <div class="diting-section-head">
+        <div>
+          <h2>${escapeHtml(section.title || "日报内容")}</h2>
+          <span>${escapeHtml(section.count_label || `${section.items.length} 条`)}</span>
+        </div>
+        <strong>${escapeHtml(String(section.items.length))}</strong>
+      </div>
+      <div class="diting-card-list">
+        ${section.items.map((item) => ditingDigestCard(item, config)).join("")}
+      </div>
+    </article>
+  `;
+}
+
+function ditingDigestCard(item, config) {
+  const source = ditingItemSource(item, config);
+  const title = compactDisplayText(item.title || item.summary || "未命名条目");
+  const url = safeExternalUrl(item.url || "");
+  const summary = compactDisplayText(item.summary || "");
+  const links = ditingUsefulLinks(item, url);
+  return `
+    <article class="diting-card">
+      <div class="diting-card-meta">
+        ${item.section_title ? `<span>${escapeHtml(item.section_title)}</span>` : ""}
+        ${source ? `<span>${escapeHtml(source)}</span>` : ""}
+        ${item.time ? `<span>${escapeHtml(item.time)}</span>` : ""}
+      </div>
+      <h3>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>` : escapeHtml(title)}</h3>
+      ${summary ? `<p>${escapeHtml(summary)}</p>` : ""}
+      ${links.length ? `<div class="diting-link-row">${links.map((link) => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`).join("")}</div>` : ""}
+    </article>
+  `;
+}
+
+function ditingItemSource(item, config) {
+  if (config.routeName === "tgDaily") return compactDisplayText(item.channel || item.source || "");
+  return compactDisplayText(item.source || item.channel || "");
+}
+
+function ditingUsefulLinks(item, primaryUrl) {
+  const links = [];
+  if (primaryUrl) links.push({ href: primaryUrl, label: "打开原文" });
+  (item.links || []).forEach((link) => {
+    const href = safeExternalUrl(link.href || "");
+    const label = compactDisplayText(link.label || "");
+    if (!href || href === primaryUrl) return;
+    if (label.length > 40 && !/^查看|^原文|^来源/.test(label)) return;
+    links.push({ href, label: label || "相关链接" });
+  });
+  const seen = new Set();
+  return links.filter((link) => {
+    if (seen.has(link.href)) return false;
+    seen.add(link.href);
+    return true;
+  }).slice(0, 5);
+}
+
+function compactDisplayText(value) {
+  return String(value || "").replace(/\s+/g, " ").trim();
 }
 
 function comparePlatformItems(a, b) {
@@ -3715,6 +4035,57 @@ function bindPageEvents(detail = null) {
     button.addEventListener("click", () => {
       state.platformTagFilter = button.dataset.platformTagFilter || "";
       syncPlatformExpandedDatesForFilter();
+      render();
+    });
+  });
+
+  document.querySelectorAll("[data-dt-date]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const kind = button.dataset.dtKind;
+      if (!state.dtDigestFilters[kind]) return;
+      state.dtDigestFilters[kind].date = button.dataset.dtDate || "";
+      state.dtDigestFilters[kind].section = "all";
+      state.dtDigestFilters[kind].source = "all";
+      await ensureDitingDigestDetail(kind, state.dtDigestFilters[kind].date);
+      render();
+    });
+  });
+
+  document.querySelectorAll("[data-dt-section-filter]").forEach((select) => {
+    select.addEventListener("change", () => {
+      const kind = select.dataset.dtSectionFilter;
+      if (!state.dtDigestFilters[kind]) return;
+      state.dtDigestFilters[kind].section = select.value || "all";
+      render();
+    });
+  });
+
+  document.querySelectorAll("[data-dt-source-filter]").forEach((select) => {
+    select.addEventListener("change", () => {
+      const kind = select.dataset.dtSourceFilter;
+      if (!state.dtDigestFilters[kind]) return;
+      state.dtDigestFilters[kind].source = select.value || "all";
+      render();
+    });
+  });
+
+  document.querySelectorAll("[data-dt-search-form]").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const kind = form.dataset.dtSearchForm;
+      if (!state.dtDigestFilters[kind]) return;
+      state.dtDigestFilters[kind].query = document.querySelector(`[data-dt-search-input="${cssAttributeValue(kind)}"]`)?.value || "";
+      render();
+    });
+  });
+
+  document.querySelectorAll("[data-dt-clear-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const kind = button.dataset.dtClearFilter;
+      if (!state.dtDigestFilters[kind]) return;
+      state.dtDigestFilters[kind].section = "all";
+      state.dtDigestFilters[kind].source = "all";
+      state.dtDigestFilters[kind].query = "";
       render();
     });
   });

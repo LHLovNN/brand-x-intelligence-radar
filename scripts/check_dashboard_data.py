@@ -21,6 +21,7 @@ REQUIRED = [
 OPTIONAL = [
     ROOT / "public" / "dashboard-data" / "platform-trends" / "xiaohongshu" / "latest.json",
     ROOT / "public" / "dashboard-data" / "platform-trends" / "xiaohongshu" / "index.json",
+    ROOT / "public" / "dashboard-data" / "dt-digests" / "index.json",
 ]
 
 

@@ -3082,6 +3082,232 @@ body.lightbox-open {
   font-weight: 650;
 }
 
+.diting-toolbar {
+  display: grid;
+  gap: 12px;
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+}
+
+.diting-toolbar-head {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.diting-toolbar-head > div {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.diting-toolbar-head strong {
+  font-size: 15px;
+}
+
+.diting-toolbar-head span,
+.diting-result-line {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.diting-date-rail {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: thin;
+}
+
+.diting-date-chip {
+  display: grid;
+  flex: 0 0 auto;
+  min-width: 76px;
+  gap: 1px;
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+  background: #fafbfc;
+  padding: 7px 9px;
+  color: var(--muted);
+  text-align: left;
+  cursor: pointer;
+}
+
+.diting-date-chip strong {
+  color: var(--text);
+  font-size: 13px;
+}
+
+.diting-date-chip span {
+  font-size: 12px;
+}
+
+.diting-date-chip:hover,
+.diting-date-chip.active {
+  border-color: rgba(46, 109, 246, 0.32);
+  background: #f3f7ff;
+  color: var(--blue);
+}
+
+.diting-filter-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.7fr) minmax(170px, 0.85fr) minmax(260px, 1.4fr);
+  gap: 10px;
+  align-items: end;
+}
+
+.diting-filter-row label {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.diting-filter-row select,
+.diting-filter-row input {
+  min-width: 0;
+  min-height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+  padding: 6px 10px;
+  font: inherit;
+}
+
+.diting-search-form {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) auto auto;
+  gap: 8px;
+  align-items: end;
+  min-width: 0;
+}
+
+.diting-result-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--line-soft);
+  padding-top: 9px;
+}
+
+.diting-digest-feed {
+  display: grid;
+  gap: 14px;
+}
+
+.diting-section-block {
+  display: grid;
+  gap: 10px;
+}
+
+.diting-section-head {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line-soft);
+  padding-top: 4px;
+  padding-bottom: 8px;
+}
+
+.diting-section-head > div {
+  display: grid;
+  gap: 2px;
+}
+
+.diting-section-head h2 {
+  font-size: 16px;
+}
+
+.diting-section-head span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.diting-section-head strong {
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.diting-card-list {
+  display: grid;
+  gap: 8px;
+}
+
+.diting-card {
+  display: grid;
+  gap: 8px;
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 13px 15px;
+  box-shadow: var(--shadow);
+}
+
+.diting-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.diting-card-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  border-radius: 999px;
+  background: #f2f4f7;
+  padding: 2px 8px;
+}
+
+.diting-card h3 {
+  font-size: 15px;
+  line-height: 1.48;
+}
+
+.diting-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.diting-card h3 a:hover {
+  color: var(--blue);
+}
+
+.diting-card p {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.diting-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.diting-link-row a {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.diting-link-row a:hover {
+  text-decoration: underline;
+}
+
 .detail-lead,
 .detail-paragraph {
   color: var(--text);
@@ -3578,6 +3804,11 @@ body.lightbox-open {
     grid-template-columns: 1fr;
   }
 
+  .diting-filter-row,
+  .diting-search-form {
+    grid-template-columns: 1fr;
+  }
+
   .readtop {
     display: grid;
   }
@@ -3658,6 +3889,10 @@ body.lightbox-open {
   }
 
   .page-hero {
+    display: grid;
+  }
+
+  .diting-toolbar-head {
     display: grid;
   }
 
