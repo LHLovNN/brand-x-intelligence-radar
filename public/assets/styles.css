@@ -2291,7 +2291,7 @@ select {
   border: 0;
   border-radius: 0;
   aspect-ratio: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .media-video-thumb.fallback {
@@ -3344,6 +3344,16 @@ body.lightbox-open {
   color: var(--text);
   font-size: 14px;
   line-height: 1.72;
+}
+
+.diting-card .featured-media-grid {
+  margin-top: 2px;
+}
+
+.diting-card .media-video-shell.playable video {
+  border: 0;
+  border-radius: 0;
+  background: #101820;
 }
 
 .diting-link-row {

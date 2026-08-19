@@ -988,6 +988,7 @@ function ditingDigestCard(item, config) {
   const url = safeExternalUrl(item.url || "");
   const summary = compactDisplayText(item.summary || "");
   const links = ditingUsefulLinks(item, url);
+  const media = mediaGridNode(ditingMediaItems(item), item);
   return `
     <article class="diting-card">
       <div class="diting-card-meta">
@@ -997,9 +998,19 @@ function ditingDigestCard(item, config) {
       </div>
       <h3>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>` : escapeHtml(title)}</h3>
       ${summary ? `<p>${escapeHtml(summary)}</p>` : ""}
+      ${media}
       ${links.length ? `<div class="diting-link-row">${links.map((link) => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`).join("")}</div>` : ""}
     </article>
   `;
+}
+
+function ditingMediaItems(item) {
+  return (item.media || []).filter((media) => {
+    if (!media || typeof media !== "object") return false;
+    if (String(media.publish_status || "").toLowerCase() === "failed") return false;
+    if (isVideoMedia(media)) return Boolean(videoPosterUrl(media) || bestVideoUrl(media) || safeExternalUrl(media.fallback_url || media.fallbackUrl || ""));
+    return Boolean(imageMediaUrl(media));
+  });
 }
 
 function ditingItemSource(item, config) {
@@ -1855,29 +1866,45 @@ function mediaNode(item, owner = {}, options = {}) {
     const safeUrl = safeExternalUrl(item);
     return safeUrl ? imageMediaNode(safeUrl, options) : "";
   }
-  const imageUrl = imageMediaUrl(item);
   if (isVideoMedia(item)) {
-    const originalUrl = tweetVideoOpenUrl(owner, item, options.mediaIndex) || bestVideoUrl(item);
-    if (!originalUrl) return imageUrl ? imageMediaNode(imageUrl, { ...options, aspectRatio: mediaAspectRatio(item) }) : "";
+    const posterUrl = videoPosterUrl(item) || imagePreviewMediaUrl(item);
+    const videoUrl = bestVideoUrl(item);
+    const fallbackUrl = tweetVideoOpenUrl(owner, item, options.mediaIndex)
+      || safeExternalUrl(item.fallback_url || item.fallbackUrl || "")
+      || tweetOpenUrl(owner, item);
+    if (videoUrl && !parseTweetUrl(videoUrl)) return htmlVideoNode(videoUrl, posterUrl, item);
+    const originalUrl = fallbackUrl || videoUrl;
+    if (!originalUrl) return posterUrl ? imageMediaNode(posterUrl, { ...options, aspectRatio: mediaAspectRatio(item) }) : "";
     const aspectStyle = mediaAspectStyle(item);
-    const posterNode = imageUrl
-      ? `<img class="media-video-thumb" src="${escapeHtml(imageUrl)}" alt="" loading="lazy" />`
+    const posterNode = posterUrl
+      ? `<img class="media-video-thumb" src="${escapeHtml(posterUrl)}" alt="" loading="lazy" />`
       : `<span class="media-video-thumb fallback" aria-hidden="true"></span>`;
     return `
       <div class="media-video-shell"${aspectStyle}>
-        <a class="media-video-link" href="${escapeHtml(originalUrl)}" target="_blank" rel="noreferrer" aria-label="在 X 播放视频">
+        <a class="media-video-link" href="${escapeHtml(originalUrl)}" target="_blank" rel="noreferrer" aria-label="打开视频">
           ${posterNode}
           <span class="media-play-button" aria-hidden="true"><span></span></span>
         </a>
       </div>
     `;
   }
-  return imageUrl ? imageMediaNode(imageUrl, { ...options, aspectRatio: mediaAspectRatio(item) }) : "";
+  const imageUrl = imageMediaUrl(item);
+  const previewUrl = imagePreviewMediaUrl(item) || imageUrl;
+  return imageUrl ? imageMediaNode(imageUrl, { ...options, previewUrl, aspectRatio: mediaAspectRatio(item) }) : "";
 }
 
 function imageMediaUrl(item) {
   if (typeof item === "string") return safeExternalUrl(item);
   return safeExternalUrl(item?.media_url_https || item?.media_url || item?.preview_image_url || item?.previewImageUrl || item?.url || "");
+}
+
+function imagePreviewMediaUrl(item) {
+  if (typeof item === "string") return safeExternalUrl(item);
+  return safeExternalUrl(item?.thumb_url || item?.thumbUrl || item?.thumbnail_url || item?.thumbnailUrl || item?.preview_image_url || item?.previewImageUrl || "");
+}
+
+function videoPosterUrl(item) {
+  return safeExternalUrl(item?.poster_url || item?.posterUrl || item?.preview_image_url || item?.previewImageUrl || item?.thumb_url || item?.thumbUrl || "");
 }
 
 function imageMediaUrls(items = []) {
@@ -1894,6 +1921,7 @@ function mediaAspectRatio(item) {
   const candidates = [
     item?.video_info?.aspect_ratio,
     item?.videoInfo?.aspectRatio,
+    [item?.width, item?.height],
     item?.original_info && [item.original_info.width, item.original_info.height],
     item?.originalInfo && [item.originalInfo.width, item.originalInfo.height],
     item?.sizes?.large && [item.sizes.large.w || item.sizes.large.width, item.sizes.large.h || item.sizes.large.height],
@@ -1987,22 +2015,39 @@ function parseTweetUrl(url) {
 function imageMediaNode(url, options = {}) {
   const safeUrl = safeExternalUrl(url);
   if (!safeUrl) return "";
+  const previewUrl = safeExternalUrl(options.previewUrl || "") || safeUrl;
   const lightboxUrls = Array.isArray(options.lightboxUrls) && options.lightboxUrls.length ? options.lightboxUrls : [safeUrl];
   const lightboxIndex = Math.max(0, lightboxUrls.indexOf(safeUrl));
   const aspectStyle = options.aspectRatio ? ` style="--media-aspect-ratio: ${escapeHtml(options.aspectRatio)}"` : "";
   return `
     <button type="button" class="media-image-button"${aspectStyle} data-media-lightbox="${escapeHtml(safeUrl)}" data-media-lightbox-group="${escapeHtml(JSON.stringify(lightboxUrls))}" data-media-lightbox-index="${escapeHtml(String(lightboxIndex))}" aria-label="查看大图">
-      <img src="${escapeHtml(safeUrl)}" alt="" loading="lazy" />
+      <img src="${escapeHtml(previewUrl)}" alt="" loading="lazy" />
     </button>
   `;
 }
 
 function bestVideoUrl(item) {
+  const direct = safeExternalUrl(item?.url || item?.media_url || item?.mediaUrl || "");
+  if (direct && /\.mp4(?:[?#].*)?$/i.test(new URL(direct).pathname)) return direct;
   const variants = item?.video_info?.variants || item?.videoInfo?.variants || [];
   const mp4 = variants
     .filter((variant) => String(variant?.content_type || variant?.contentType || "").includes("mp4") && safeExternalUrl(variant?.url || ""))
     .sort((a, b) => Number(b.bitrate || 0) - Number(a.bitrate || 0));
   return safeExternalUrl(mp4[0]?.url || "");
+}
+
+function htmlVideoNode(videoUrl, posterUrl, item = {}) {
+  const safeVideoUrl = safeExternalUrl(videoUrl);
+  if (!safeVideoUrl) return "";
+  const safePosterUrl = safeExternalUrl(posterUrl || "");
+  const aspectStyle = mediaAspectStyle(item);
+  return `
+    <div class="media-video-shell playable"${aspectStyle}>
+      <video class="media-video" controls preload="metadata"${safePosterUrl ? ` poster="${escapeHtml(safePosterUrl)}"` : ""}>
+        <source src="${escapeHtml(safeVideoUrl)}" type="video/mp4" />
+      </video>
+    </div>
+  `;
 }
 
 function hydrateXVideoEmbeds() {

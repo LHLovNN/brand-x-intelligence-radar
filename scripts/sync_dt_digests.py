@@ -6,6 +6,8 @@ import hashlib
 import html
 import json
 import re
+import urllib.error
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from html.parser import HTMLParser
@@ -26,6 +28,7 @@ from src.utils.io import write_json
 DEFAULT_BASE_URL = "https://codew1028.github.io/dt"
 DEFAULT_DETAIL_DAYS = 60
 DEFAULT_BUNDLE_DETAIL_DAYS = 7
+STRUCTURED_TG_JSON_START_DATE = "2026-08-19"
 KIND_LABELS = {
     "ai": "AI 日报",
     "tg": "TG 日报",
@@ -78,6 +81,7 @@ def main() -> None:
     for entry in detail_entries:
         daily = build_daily_detail(entry, base_url, source_dir, generated_at)
         daily_path = target / "daily" / entry["kind"] / f"{entry['date']}.json"
+        daily = preserve_existing_detail_if_unchanged(daily_path, daily)
         write_json(str(daily_path), daily)
         entry["item_count"] = daily["item_count"]
         if daily.get("filtered_count"):
@@ -125,8 +129,17 @@ def fetch_text(url: str) -> str:
 
 def read_page(filename: str, base_url: str, source_dir: Path | None) -> str:
     if source_dir:
-        return (source_dir / filename).read_text(encoding="utf-8")
+        return (source_dir / safe_relative_path(filename)).read_text(encoding="utf-8")
+    if re.match(r"^https?://", filename, flags=re.IGNORECASE):
+        return fetch_text(filename)
     return fetch_text(f"{base_url}/{urllib.request.pathname2url(filename)}")
+
+
+def read_optional_page(filename: str, base_url: str, source_dir: Path | None) -> str | None:
+    try:
+        return read_page(filename, base_url, source_dir)
+    except (FileNotFoundError, OSError, urllib.error.URLError, urllib.error.HTTPError, ValueError):
+        return None
 
 
 def digest_entries(search_index: list[dict[str, Any]], base_url: str) -> list[dict[str, Any]]:
@@ -150,9 +163,37 @@ def digest_entries(search_index: list[dict[str, Any]], base_url: str) -> list[di
             "item_count": item_count,
             "section_count": section_count,
         }
+        json_url = str(item.get("json_url") or "").strip()
+        if kind == "tg" and (item.get("has_json") or json_url):
+            entry["has_json"] = True
+            entry["json_url"] = safe_relative_path(json_url or inferred_tg_json_filename(filename))
         entries.append(entry)
     entries.sort(key=lambda value: (value["date"], value["kind"]), reverse=True)
     return entries
+
+
+def preserve_existing_detail_if_unchanged(path: Path, daily: dict[str, Any]) -> dict[str, Any]:
+    if not path.exists():
+        return daily
+    try:
+        previous = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return daily
+    if detail_without_sync_time(previous) == detail_without_sync_time(daily):
+        return previous
+    return daily
+
+
+def detail_without_sync_time(payload: Any) -> Any:
+    if isinstance(payload, dict):
+        return {
+            key: detail_without_sync_time(value)
+            for key, value in payload.items()
+            if key != "synced_at"
+        }
+    if isinstance(payload, list):
+        return [detail_without_sync_time(value) for value in payload]
+    return payload
 
 
 def digest_kind_and_date(filename: str) -> tuple[str, str] | tuple[None, None]:
@@ -191,11 +232,17 @@ def build_daily_detail(entry: dict[str, Any], base_url: str, source_dir: Path | 
     parser = DigestPageParser(entry["kind"])
     parser.feed(html_text)
     parser.finish_open_blocks()
-    original_item_count = sum(len(section.get("items") or []) for section in parser.sections)
-    sections, filter_summary = filter_digest_sections(entry["kind"], parser.sections)
+    sections = parser.sections
+    structured_payload = load_structured_tg_payload(entry, base_url, source_dir) if entry["kind"] == "tg" else None
+    if structured_payload:
+        sections = merge_structured_tg_media(sections, structured_payload, base_url)
+        if not sections:
+            sections = structured_tg_sections(structured_payload, base_url)
+    original_item_count = sum(len(section.get("items") or []) for section in sections)
+    sections, filter_summary = filter_digest_sections(entry["kind"], sections)
     item_count = sum(len(section.get("items") or []) for section in sections)
     section_count = len(sections)
-    return sanitize_payload({
+    payload = {
         "kind": entry["kind"],
         "kind_label": KIND_LABELS[entry["kind"]],
         "date": entry["date"],
@@ -210,7 +257,228 @@ def build_daily_detail(entry: dict[str, Any], base_url: str, source_dir: Path | 
         "item_count": item_count,
         "section_count": section_count,
         "sections": sections,
-    })
+    }
+    if structured_payload:
+        payload["has_json"] = True
+        payload["json_url"] = entry.get("json_url") or inferred_tg_json_filename(entry["file"])
+        if structured_payload.get("media_summary"):
+            payload["source_media_summary"] = structured_payload["media_summary"]
+        payload["media_summary"] = digest_media_summary(sections)
+    return sanitize_payload(payload)
+
+
+def load_structured_tg_payload(entry: dict[str, Any], base_url: str, source_dir: Path | None) -> dict[str, Any] | None:
+    json_filename = structured_tg_json_filename(entry)
+    if not json_filename:
+        return None
+    text = read_optional_page(json_filename, base_url, source_dir)
+    if not text:
+        return None
+    try:
+        payload = json.loads(text)
+    except json.JSONDecodeError:
+        return None
+    if not isinstance(payload, dict) or payload.get("kind") != "tg":
+        return None
+    return payload
+
+
+def structured_tg_json_filename(entry: dict[str, Any]) -> str:
+    explicit = str(entry.get("json_url") or "").strip()
+    if explicit:
+        return safe_relative_path(explicit)
+    if entry.get("kind") != "tg":
+        return ""
+    if entry.get("has_json") or str(entry.get("date") or "") >= STRUCTURED_TG_JSON_START_DATE:
+        return inferred_tg_json_filename(str(entry.get("file") or ""))
+    return ""
+
+
+def inferred_tg_json_filename(filename: str) -> str:
+    return re.sub(r"\.html$", ".json", filename or "")
+
+
+def merge_structured_tg_media(
+    sections: list[dict[str, Any]],
+    structured_payload: dict[str, Any],
+    base_url: str,
+) -> list[dict[str, Any]]:
+    media_lookup = structured_tg_media_lookup(structured_payload, base_url)
+    if not media_lookup:
+        return sections
+    merged_sections: list[dict[str, Any]] = []
+    for section in sections:
+        merged_items = []
+        for item in section.get("items") or []:
+            match = first_structured_match(item, media_lookup)
+            if match:
+                media = match.get("media") or []
+                if media:
+                    item = {**item, "media": media}
+                for key in ("id", "message_id"):
+                    if match.get(key) and not item.get(key):
+                        item[key] = match[key]
+            merged_items.append(item)
+        merged_sections.append({**section, "items": merged_items})
+    return merged_sections
+
+
+def structured_tg_media_lookup(structured_payload: dict[str, Any], base_url: str) -> dict[str, dict[str, Any]]:
+    lookup: dict[str, dict[str, Any]] = {}
+    for section in structured_payload.get("sections") or []:
+        if not isinstance(section, dict):
+            continue
+        for item in section.get("items") or []:
+            if not isinstance(item, dict):
+                continue
+            normalized = structured_tg_item(item, base_url)
+            for key in structured_tg_item_keys(normalized):
+                lookup.setdefault(key, normalized)
+    return lookup
+
+
+def first_structured_match(item: dict[str, Any], lookup: dict[str, dict[str, Any]]) -> dict[str, Any] | None:
+    for key in structured_tg_item_keys(item):
+        if key in lookup:
+            return lookup[key]
+    return None
+
+
+def structured_tg_item_keys(item: dict[str, Any]) -> list[str]:
+    keys = []
+    item_id = compact_text(str(item.get("id") or ""))
+    if item_id:
+        keys.append(f"id:{item_id}")
+    url = normalized_tg_url(str(item.get("url") or ""))
+    if url:
+        keys.append(f"url:{url}")
+    message_id = compact_text(str(item.get("message_id") or ""))
+    channel = compact_text(str(item.get("channel") or "")).lstrip("@")
+    if channel and message_id:
+        keys.append(f"id:{channel}-{message_id}")
+    return keys
+
+
+def normalized_tg_url(value: str) -> str:
+    url = clean_url(value)
+    if not url:
+        return ""
+    return url.rstrip("/")
+
+
+def structured_tg_sections(structured_payload: dict[str, Any], base_url: str) -> list[dict[str, Any]]:
+    sections = []
+    for section in structured_payload.get("sections") or []:
+        if not isinstance(section, dict):
+            continue
+        items = [
+            structured_tg_item(item, base_url)
+            for item in section.get("items") or []
+            if isinstance(item, dict)
+        ]
+        items = [item for item in items if item.get("title") or item.get("summary")]
+        if items:
+            sections.append({
+                "title": compact_text(str(section.get("title") or "TG 频道精选")),
+                "count_label": compact_text(str(section.get("count_label") or f"{len(items)} 条")),
+                "items": items,
+            })
+    return sections
+
+
+def structured_tg_item(item: dict[str, Any], base_url: str) -> dict[str, Any]:
+    url = clean_url(str(item.get("url") or ""))
+    result = {
+        "id": compact_text(str(item.get("id") or "")),
+        "title": compact_text(str(item.get("title") or "")),
+        "summary": compact_text(str(item.get("summary") or "")),
+        "channel": compact_text(str(item.get("channel") or "")),
+        "time": compact_text(str(item.get("time") or "")),
+        "url": url,
+        "message_id": compact_text(str(item.get("message_id") or "")),
+        "media": normalize_tg_media_items(item.get("media") or [], base_url, url),
+        "links": [{"href": url, "label": "查看原文"}] if url else [],
+    }
+    return {key: value for key, value in result.items() if value not in ("", [], None)}
+
+
+def normalize_tg_media_items(media_items: Any, base_url: str, fallback_url: str) -> list[dict[str, Any]]:
+    if not isinstance(media_items, list):
+        return []
+    normalized = []
+    for media in media_items:
+        if not isinstance(media, dict):
+            continue
+        media_type = compact_text(str(media.get("type") or "image")).lower()
+        item: dict[str, Any] = {
+            "type": "video" if media_type in {"video", "gif", "animation"} else "image",
+            "publish_status": compact_text(str(media.get("publish_status") or "")),
+        }
+        for key in ("url", "thumb_url", "poster_url", "fallback_url"):
+            value = compact_text(str(media.get(key) or ""))
+            if value:
+                item[key] = resolve_dt_asset_url(value, base_url)
+        if item["type"] == "video" and not item.get("fallback_url") and fallback_url:
+            item["fallback_url"] = fallback_url
+        for key in ("width", "height", "duration", "size_bytes"):
+            value = media.get(key)
+            if isinstance(value, (int, float)) and value >= 0:
+                item[key] = value
+        if "has_audio" in media:
+            item["has_audio"] = bool(media.get("has_audio"))
+        error = compact_text(str(media.get("error") or ""))
+        if error:
+            item["error"] = error
+        normalized.append(item)
+    return normalized
+
+
+def resolve_dt_asset_url(value: str, base_url: str) -> str:
+    raw = compact_text(value)
+    if not raw or raw.startswith("data:"):
+        return ""
+    if re.match(r"^https?://", raw, flags=re.IGNORECASE):
+        return raw
+    relative = safe_relative_path(raw)
+    return urllib.parse.urljoin(f"{base_url.rstrip('/')}/", relative)
+
+
+def safe_relative_path(value: str) -> str:
+    raw = str(value or "").strip().replace("\\", "/")
+    if not raw:
+        return ""
+    if re.match(r"^[a-z][a-z0-9+.-]*:", raw, flags=re.IGNORECASE):
+        raise ValueError(f"Absolute URL is not a relative path: {raw}")
+    parts = [part for part in raw.lstrip("/").split("/") if part not in ("", ".")]
+    if any(part == ".." for part in parts):
+        raise ValueError(f"Unsafe relative path: {raw}")
+    return "/".join(parts)
+
+
+def digest_media_summary(sections: list[dict[str, Any]]) -> dict[str, int]:
+    summary = {
+        "image_count": 0,
+        "video_count": 0,
+        "published_video_count": 0,
+        "poster_only_video_count": 0,
+        "failed_count": 0,
+    }
+    for section in sections:
+        for item in section.get("items") or []:
+            for media in item.get("media") or []:
+                media_type = str(media.get("type") or "").lower()
+                status = str(media.get("publish_status") or "").lower()
+                if status == "failed":
+                    summary["failed_count"] += 1
+                if media_type == "video":
+                    summary["video_count"] += 1
+                    if status == "published":
+                        summary["published_video_count"] += 1
+                    elif status == "poster_only":
+                        summary["poster_only_video_count"] += 1
+                elif media_type == "image":
+                    summary["image_count"] += 1
+    return summary
 
 
 def filter_digest_sections(kind: str, sections: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
