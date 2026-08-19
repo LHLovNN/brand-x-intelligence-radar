@@ -86,9 +86,12 @@ def main() -> None:
             post(10, text="@source Cringe 只入身体🍬👑不入生活。", author_name="张可欣找炮友点主页", author_bio="真人认证隐私保护，附近的可加V"),
             post(11, text="@source 我果然太涩了🍂🙃有人想锐评一下我的福嘛"),
             post(12, text="@source 比我好看的没👆我骚比我骚的没我好看"),
+            post(13, text="@source sao货ye没人比她sao❣️@spam 6q"),
+            post(14, text="@source 30+果然太涩了ah 我真顶不住 @spam 8v"),
+            post(15, text="@source 刷了半天的X cl就她的主页能打✈️了@spam 2x"),
         ]
     )
-    assert filtered_noise == 6, "obvious low-quality vulgar context replies should be filtered"
+    assert filtered_noise == 9, "obvious low-quality vulgar context replies should be filtered"
     assert [item["post_id"] for item in clean_rows] == ["6"], "normal context replies should stay visible"
 
     rows = [post(index) for index in range(50)]
