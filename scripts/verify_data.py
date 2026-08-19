@@ -11,7 +11,7 @@ URL_RE = re.compile(r"https?://\S+|t\.co/\S+", re.IGNORECASE)
 MENTION_RE = re.compile(r"@[A-Za-z0-9_]{1,20}")
 TEXT_SIGNAL_RE = re.compile(r"[A-Za-z0-9\u3400-\u9fff]")
 LOW_QUALITY_CONTEXT_RE = re.compile(
-    r"应该没人比我玩[的得]开了吧|我[福肤]不黑不信你看|比(?:我|你|他|她|ta)好看的没(?:我|你|他|她|ta)骚.{0,20}比(?:我|你|他|她|ta)骚的没(?:我|你|他|她|ta)好看|只入身体.{0,20}不入生活",
+    r"应该没人比我玩[的得]开了吧|我[福肤]不黑不信你看|比(?:我|你|他|她|ta)好看的没(?:我|你|他|她|ta)骚.{0,20}比(?:我|你|他|她|ta)骚的没(?:我|你|他|她|ta)好看|比(?:我|你|他|她|ta)好看的没.{0,8}骚.{0,24}比(?:我|你|他|她|ta)骚的没.{0,8}好看|只入身体.{0,20}不入生活|我果然太[涩色瑟]了.{0,16}有人想锐评一下我的[福肤]嘛",
     re.IGNORECASE,
 )
 LOW_QUALITY_CONTEXT_PROFILE_RE = re.compile(
