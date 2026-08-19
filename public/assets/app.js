@@ -18,6 +18,7 @@ const state = {
     ai: { date: "", section: "all", source: "all", query: "" },
     tg: { date: "", section: "all", source: "all", query: "" },
   },
+  dtDateRailScroll: { ai: 0, tg: 0 },
   platformExpandedDates: new Set(),
   platformTagFilter: "",
   allBrandFilter: "all",
@@ -27,6 +28,7 @@ const state = {
   featuredFilter: "all",
   featuredExpandedDates: new Set(),
   navCollapsedGroups: new Set(),
+  routeScrollPositions: {},
   lastRouteKey: "",
   conversationContexts: new Map(),
 };
@@ -34,6 +36,7 @@ const state = {
 const USE_X_EMBED_FOR_VIDEO = false;
 const X_WIDGET_SCRIPT_URL = "https://platform.twitter.com/widgets.js";
 const DEFAULT_TIMELINE_EXPANDED_DAYS = 3;
+const BACK_TO_TOP_THRESHOLD = 520;
 
 const routeTitles = {
   overview: "舆情焦点",
@@ -152,6 +155,7 @@ async function init() {
     }
   });
   bindNavigation();
+  setupBackToTop();
   window.addEventListener("hashchange", render);
   render();
 }
@@ -284,7 +288,12 @@ function route() {
 function render() {
   const current = route();
   const routeKey = current.name;
-  const shouldResetScroll = state.lastRouteKey && state.lastRouteKey !== routeKey;
+  const previousRouteKey = state.lastRouteKey;
+  const content = document.getElementById("content");
+  if (previousRouteKey && previousRouteKey !== routeKey && content) {
+    state.routeScrollPositions[previousRouteKey] = content.scrollTop || 0;
+  }
+  const shouldRestoreScroll = previousRouteKey && previousRouteKey !== routeKey;
   document.getElementById("page-title").textContent = routeTitles[current.name] || "舆情焦点";
   document.getElementById("generated-at").textContent = generatedAtLabelForRoute(current.name);
   const health = document.getElementById("health-pill");
@@ -296,7 +305,6 @@ function render() {
   });
   syncNavigationState(current.name);
 
-  const content = document.getElementById("content");
   closeConversationDrawer();
   state.conversationContexts = new Map();
   if (current.name === "all") content.innerHTML = allIntelligencePage();
@@ -306,9 +314,11 @@ function render() {
   else if (current.name === "aiDaily") content.innerHTML = ditingDigestPage("ai");
   else if (current.name === "tgDaily") content.innerHTML = ditingDigestPage("tg");
   else content.innerHTML = overviewPage();
-  if (shouldResetScroll) resetMainScroll(content);
+  if (shouldRestoreScroll) restoreMainScroll(content, routeKey);
   state.lastRouteKey = routeKey;
   bindPageEvents();
+  restoreDitingDateRailScroll();
+  updateBackToTopVisibility();
   hydrateXVideoEmbeds();
 }
 
@@ -347,6 +357,42 @@ function syncNavigationState(currentRoute) {
 function resetMainScroll(content) {
   if (content) content.scrollTop = 0;
   window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  updateBackToTopVisibility();
+}
+
+function restoreMainScroll(content, routeKey) {
+  if (!content) return;
+  const target = Number(state.routeScrollPositions[routeKey] || 0);
+  content.scrollTo({ top: Math.max(0, target), left: 0, behavior: "auto" });
+  requestAnimationFrame(() => {
+    content.scrollTo({ top: Math.max(0, target), left: 0, behavior: "auto" });
+    updateBackToTopVisibility();
+  });
+}
+
+function setupBackToTop() {
+  const content = document.getElementById("content");
+  const button = document.getElementById("back-to-top");
+  if (!content || !button) return;
+  content.addEventListener("scroll", () => {
+    state.routeScrollPositions[route().name] = content.scrollTop || 0;
+    updateBackToTopVisibility();
+  }, { passive: true });
+  button.addEventListener("click", () => {
+    content.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  });
+}
+
+function updateBackToTopVisibility() {
+  const content = document.getElementById("content");
+  const button = document.getElementById("back-to-top");
+  if (!content || !button) return;
+  const current = route();
+  const visible =
+    current.name !== "settings" &&
+    !document.body.classList.contains("conversation-drawer-open") &&
+    content.scrollTop > BACK_TO_TOP_THRESHOLD;
+  button.classList.toggle("visible", visible);
 }
 
 function overviewPage() {
@@ -759,6 +805,10 @@ function ditingDigestPage(kind) {
   const sectionOptions = ditingSectionOptions(selected);
   const sourceOptions = ditingSourceOptions(allItems, config);
   const latestDate = state.dtDigestIndex?.latest?.[kind] || selected.date;
+  const todayDate = dashboardTodayDate();
+  const todayEntry = entries.find((entry) => entry.date === todayDate);
+  const structuralFilters = kind !== "tg";
+  const secondaryStat = kind === "tg" ? sourceOptions.length : selected.section_count || sectionOptions.length;
   return `
     ${pageHero({
       eyebrow: config.eyebrow,
@@ -766,7 +816,7 @@ function ditingDigestPage(kind) {
       subtitle: `${selected.date ? formatDateLong(selected.date) : "等待首次同步"} · ${config.label}归档`,
       stats: [
         [selected.item_count || allItems.length, "当日条目"],
-        [selected.section_count || sectionOptions.length, kind === "ai" ? "板块" : "频道组"],
+        [secondaryStat, kind === "ai" ? "板块" : "频道"],
         [entries.length, "可读日期"],
         [latestDate || "--", "最新日期"],
       ],
@@ -777,24 +827,33 @@ function ditingDigestPage(kind) {
           <strong>${escapeHtml(selected.title || config.label)}</strong>
           <span>${escapeHtml(selected.hero_date || `${selected.date || "未同步"} · ${allItems.length} 条内容`)}</span>
         </div>
-        ${selected.source_url ? `<a class="text-button primary" href="${escapeHtml(selected.source_url)}" target="_blank" rel="noreferrer">查看当日日报</a>` : ""}
+        <button
+          class="text-button primary${todayEntry ? "" : " disabled"}"
+          type="button"
+          data-dt-today="${escapeHtml(kind)}"
+          data-dt-today-date="${escapeHtml(todayDate)}"
+          ${todayEntry ? "" : "disabled"}
+          title="${todayEntry ? "切换到系统当前日期的站内日报" : "今日日报尚未同步"}"
+        >查看今日日报</button>
       </div>
       ${ditingDateRail(kind, entries, selected.date, loadedDetails)}
-      <div class="diting-filter-row">
-        <label>
-          <span>板块</span>
-          <select data-dt-section-filter="${escapeHtml(kind)}">
-            <option value="all"${filters.section === "all" ? " selected" : ""}>全部板块</option>
-            ${sectionOptions.map((section) => `<option value="${escapeHtml(section)}"${filters.section === section ? " selected" : ""}>${escapeHtml(section)}</option>`).join("")}
-          </select>
-        </label>
-        <label>
-          <span>${escapeHtml(config.sourceLabel)}</span>
-          <select data-dt-source-filter="${escapeHtml(kind)}">
-            <option value="all"${filters.source === "all" ? " selected" : ""}>全部${escapeHtml(config.sourceLabel)}</option>
-            ${sourceOptions.map((source) => `<option value="${escapeHtml(source)}"${filters.source === source ? " selected" : ""}>${escapeHtml(source)}</option>`).join("")}
-          </select>
-        </label>
+      <div class="diting-filter-row${structuralFilters ? "" : " search-only"}">
+        ${structuralFilters ? `
+          <label>
+            <span>板块</span>
+            <select data-dt-section-filter="${escapeHtml(kind)}">
+              <option value="all"${filters.section === "all" ? " selected" : ""}>全部板块</option>
+              ${sectionOptions.map((section) => `<option value="${escapeHtml(section)}"${filters.section === section ? " selected" : ""}>${escapeHtml(section)}</option>`).join("")}
+            </select>
+          </label>
+          <label>
+            <span>${escapeHtml(config.sourceLabel)}</span>
+            <select data-dt-source-filter="${escapeHtml(kind)}">
+              <option value="all"${filters.source === "all" ? " selected" : ""}>全部${escapeHtml(config.sourceLabel)}</option>
+              ${sourceOptions.map((source) => `<option value="${escapeHtml(source)}"${filters.source === source ? " selected" : ""}>${escapeHtml(source)}</option>`).join("")}
+            </select>
+          </label>
+        ` : ""}
         <form class="diting-search-form" data-dt-search-form="${escapeHtml(kind)}">
           <label>
             <span>搜索</span>
@@ -891,7 +950,7 @@ function ditingSourceOptions(items, config) {
 function ditingDateRail(kind, entries, selectedDate, loadedDetails = []) {
   if (!entries.length) return "";
   return `
-    <div class="diting-date-rail" aria-label="选择日报日期">
+    <div class="diting-date-rail" data-dt-date-rail="${escapeHtml(kind)}" aria-label="选择日报日期">
       ${entries.map((entry) => {
         const detail = loadedDetails.find((daily) => daily.date === entry.date);
         const count = detail?.item_count ?? entry.item_count ?? 0;
@@ -968,6 +1027,36 @@ function ditingUsefulLinks(item, primaryUrl) {
 
 function compactDisplayText(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function dashboardTodayDate() {
+  try {
+    const parts = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Asia/Shanghai",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).formatToParts(new Date());
+    const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+    return `${values.year}-${values.month}-${values.day}`;
+  } catch (error) {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  }
+}
+
+function restoreDitingDateRailScroll() {
+  document.querySelectorAll("[data-dt-date-rail]").forEach((rail) => {
+    const kind = rail.dataset.dtDateRail;
+    const target = state.dtDateRailScroll[kind] || 0;
+    rail.scrollLeft = target;
+    requestAnimationFrame(() => {
+      rail.scrollLeft = target;
+    });
+  });
 }
 
 function comparePlatformItems(a, b) {
@@ -4043,10 +4132,33 @@ function bindPageEvents(detail = null) {
     button.addEventListener("click", async () => {
       const kind = button.dataset.dtKind;
       if (!state.dtDigestFilters[kind]) return;
+      const rail = button.closest("[data-dt-date-rail]");
+      if (rail) state.dtDateRailScroll[kind] = rail.scrollLeft || 0;
       state.dtDigestFilters[kind].date = button.dataset.dtDate || "";
       state.dtDigestFilters[kind].section = "all";
       state.dtDigestFilters[kind].source = "all";
       await ensureDitingDigestDetail(kind, state.dtDigestFilters[kind].date);
+      render();
+    });
+  });
+
+  document.querySelectorAll("[data-dt-date-rail]").forEach((rail) => {
+    rail.addEventListener("scroll", () => {
+      const kind = rail.dataset.dtDateRail;
+      if (state.dtDateRailScroll[kind] != null) state.dtDateRailScroll[kind] = rail.scrollLeft || 0;
+    }, { passive: true });
+  });
+
+  document.querySelectorAll("[data-dt-today]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const kind = button.dataset.dtToday;
+      const today = button.dataset.dtTodayDate || dashboardTodayDate();
+      if (!state.dtDigestFilters[kind] || button.disabled) return;
+      state.dtDigestFilters[kind].date = today;
+      state.dtDigestFilters[kind].section = "all";
+      state.dtDigestFilters[kind].source = "all";
+      state.dtDateRailScroll[kind] = 0;
+      await ensureDitingDigestDetail(kind, today);
       render();
     });
   });
@@ -4165,6 +4277,7 @@ function openConversationDrawer(contextId) {
   window.addEventListener("keydown", onKeydown);
   document.body.appendChild(node);
   document.body.classList.add("conversation-drawer-open");
+  updateBackToTopVisibility();
   requestAnimationFrame(() => {
     centerConversationAnchor(node);
   });
@@ -4225,6 +4338,7 @@ function closeConversationDrawer() {
   if (node._onKeydown) window.removeEventListener("keydown", node._onKeydown);
   node.remove();
   document.body.classList.remove("conversation-drawer-open");
+  updateBackToTopVisibility();
 }
 
 function mediaLightboxOptions(button) {
