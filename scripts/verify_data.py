@@ -79,13 +79,24 @@ def verify_conversation_contexts(payload, label: str) -> None:
         assert_true(len(posts) > 1, f"{label}:{anchor} conversation context should include neighboring posts")
         summary = str(context.get("summary_zh") or "")
         assert_true(len(summary) <= 200, f"{label}:{anchor} conversation context summary exceeds 200 chars")
+        root_anchor_handle = ""
+        obj_post_id = str(obj.get("post_id") or "")
+        obj_conversation_id = str(obj.get("conversation_id") or "")
+        if obj_post_id and obj_conversation_id == obj_post_id:
+            root_anchor_handle = str(obj.get("author_handle") or "").strip().lstrip("@").lower()
         for post in posts:
             text = str(post.get("text") or post.get("original_text") or "")
             translation = str(post.get("translation_zh") or "")
             post_id = post.get("post_id") or "unknown"
+            post_handle = str(post.get("author_handle") or "").strip().lstrip("@").lower()
             compact = re.sub(r"\s+", "", f"{text} {translation}")
             profile = " ".join(str(post.get(key) or "") for key in ("author_name", "author_handle", "author_bio"))
             compact_profile = re.sub(r"\s+", "", profile)
+            if root_anchor_handle and str(post_id) != obj_post_id and post_handle != root_anchor_handle:
+                assert_true(
+                    text.strip().lower().startswith(f"@{root_anchor_handle}"),
+                    f"{label}:{anchor}:{post_id} root context contains unrelated non-reply post",
+                )
             assert_true(not LOW_QUALITY_CONTEXT_RE.search(compact), f"{label}:{anchor}:{post_id} context contains low-quality vulgar noise")
             assert_true(
                 not LOW_QUALITY_CONTEXT_PROFILE_RE.search(compact_profile),

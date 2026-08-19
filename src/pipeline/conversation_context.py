@@ -121,7 +121,10 @@ def fetch_context_rows(
 ) -> list[dict[str, Any]]:
     post_id = str(post.get("post_id") or "")
     if post_id and hasattr(x_source, "thread_context_posts"):
-        rows = x_source.thread_context_posts(post_id, window_start, window_end, limit=CONTEXT_FETCH_LIMIT)
+        rows = filter_thread_context_rows(
+            post,
+            x_source.thread_context_posts(post_id, window_start, window_end, limit=CONTEXT_FETCH_LIMIT),
+        )
         if has_context_row_neighbor(post, rows):
             return rows
     return x_source.conversation_posts(conversation_id, window_start, window_end, limit=CONTEXT_FETCH_LIMIT)
@@ -140,6 +143,42 @@ def has_context_row_neighbor(anchor: dict[str, Any], rows: list[dict[str, Any]])
         if row_id and row_id != anchor_id:
             return True
     return False
+
+
+def filter_thread_context_rows(anchor: dict[str, Any], rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [row for row in rows if is_thread_context_row(anchor, row)]
+
+
+def is_thread_context_row(anchor: dict[str, Any], row: dict[str, Any]) -> bool:
+    anchor_id = str(anchor.get("post_id") or "").strip()
+    row_id = str(row.get("post_id") or row.get("url") or "").strip()
+    if not anchor_id or not row_id:
+        return False
+    if row_id == anchor_id:
+        return True
+
+    anchor_conversation_id = str(anchor.get("conversation_id") or "").strip()
+    row_conversation_id = str(row.get("conversation_id") or "").strip()
+    if anchor_conversation_id and (row_conversation_id == anchor_conversation_id or row_id == anchor_conversation_id):
+        return True
+
+    anchor_reply_to = str(anchor.get("reply_to_post_id") or anchor.get("in_reply_to_status_id") or "").strip()
+    row_reply_to = str(row.get("reply_to_post_id") or row.get("in_reply_to_status_id") or "").strip()
+    if row_reply_to == anchor_id or (anchor_reply_to and row_id == anchor_reply_to):
+        return True
+
+    anchor_handle = str(anchor.get("author_handle") or anchor.get("author", {}).get("handle") or "").strip().lstrip("@").lower()
+    row_reply_handle = str(row.get("reply_to_handle") or row.get("in_reply_to_screen_name") or "").strip().lstrip("@").lower()
+    if anchor_handle and row_reply_handle == anchor_handle:
+        return True
+
+    mentioned_handle = leading_mention(row).lower()
+    if anchor_handle and mentioned_handle == anchor_handle:
+        return True
+
+    anchor_mentioned_handle = leading_mention(anchor).lower()
+    row_handle = str(row.get("author_handle") or row.get("author", {}).get("handle") or "").strip().lstrip("@").lower()
+    return bool(anchor_mentioned_handle and row_handle == anchor_mentioned_handle)
 
 
 def cluster_score_by_post(clusters: list[dict[str, Any]]) -> dict[str, int]:

@@ -194,9 +194,10 @@ def main() -> None:
     thread_target = post(20, post_id="thread-anchor", author_followers=1000, is_relevant=True)
     thread_source = ThreadContextSource(
         [
+            post(17, post_id="unrelated-video", conversation_id="", author_handle="random_user", text="unrelated viral video"),
             post(18, post_id="thread-parent", created_at="2026-07-28T23:59:00Z", text="parent before report window"),
             thread_target,
-            post(21, post_id="thread-after"),
+            post(21, post_id="thread-after", conversation_id="", text="@user20 direct reply without conversation id"),
         ],
         [thread_target],
     )
@@ -218,7 +219,13 @@ def main() -> None:
     ]
 
     fallback_target = post(30, post_id="fallback-anchor", author_followers=1000, is_relevant=True)
-    fallback_source = ThreadContextSource([fallback_target], [post(29, post_id="fallback-parent"), fallback_target])
+    fallback_source = ThreadContextSource(
+        [
+            post(28, post_id="unrelated-thread-row", conversation_id="", author_handle="random_user", text="not this thread"),
+            fallback_target,
+        ],
+        [post(29, post_id="fallback-parent"), fallback_target],
+    )
     fallback_status = attach_conversation_contexts(
         [fallback_target],
         [{"score": {"ips": 0}, "post_ids": ["fallback-anchor"]}],
