@@ -921,6 +921,7 @@ function ditingItemMatchesFilters(item, config, filters) {
     item.summary,
     item.source,
     item.channel,
+    item.channel_name,
     item.time,
     section,
     ...(item.links || []).map((link) => link.label || link.href || ""),
@@ -976,6 +977,7 @@ function ditingSectionBlock(section, config) {
 
 function ditingDigestCard(item, config) {
   const source = ditingItemSource(item, config);
+  const tgChannelName = config.routeName === "tgDaily" ? compactDisplayText(item.channel_name || item.channelName || "") : "";
   const title = compactDisplayText(item.title || item.summary || "未命名条目");
   const url = safeExternalUrl(item.url || "");
   const summary = compactDisplayText(item.summary || "");
@@ -989,6 +991,7 @@ function ditingDigestCard(item, config) {
         ${showSectionMeta && item.section_title ? `<span>${escapeHtml(item.section_title)}</span>` : ""}
         ${showSourceMeta && source ? `<span>${escapeHtml(source)}</span>` : ""}
         ${item.time ? `<span>${escapeHtml(item.time)}</span>` : ""}
+        ${tgChannelName ? `<span>${escapeHtml(tgChannelName)}</span>` : ""}
       </div>
       <h3>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>` : escapeHtml(title)}</h3>
       ${summary ? `<p>${escapeHtml(summary)}</p>` : ""}
@@ -1008,7 +1011,7 @@ function ditingMediaItems(item) {
 }
 
 function ditingItemSource(item, config) {
-  if (config.routeName === "tgDaily") return compactDisplayText(item.channel || item.source || "");
+  if (config.routeName === "tgDaily") return compactDisplayText(item.channel_name || item.channelName || item.channel || item.source || "");
   return compactDisplayText(item.source || item.channel || "");
 }
 

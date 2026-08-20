@@ -324,6 +324,9 @@ def merge_structured_tg_media(
                 for key in ("id", "message_id"):
                     if match.get(key) and not item.get(key):
                         item[key] = match[key]
+                for key in ("channel_name", "channel_url"):
+                    if match.get(key):
+                        item[key] = match[key]
             merged_items.append(item)
         merged_sections.append({**section, "items": merged_items})
     return merged_sections
@@ -399,6 +402,8 @@ def structured_tg_item(item: dict[str, Any], base_url: str) -> dict[str, Any]:
         "title": compact_text(strip_tg_channel_recommendations(str(item.get("title") or ""))),
         "summary": compact_text(strip_tg_channel_recommendations(str(item.get("summary") or ""))),
         "channel": compact_text(str(item.get("channel") or "")),
+        "channel_name": compact_text(str(item.get("channel_name") or "")),
+        "channel_url": clean_url(str(item.get("channel_url") or "")),
         "time": compact_text(str(item.get("time") or "")),
         "url": url,
         "message_id": compact_text(str(item.get("message_id") or "")),
