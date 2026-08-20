@@ -57,6 +57,12 @@ TG_FILTER_REASON_LABELS = {
     "low_value_adult": "低俗成人向低价值内容",
     "short_status_chatter": "无摘要短状态闲聊",
 }
+TG_MARKDOWN_CHANNEL_LINK = r"\[[^\]\n]{1,40}\]\(https?://t\.me/[^)\s]+\)"
+TG_MARKDOWN_CHANNEL_RECOMMENDATION_TAIL_RE = re.compile(
+    rf"(?:\s*(?:[|｜]\s*)?{TG_MARKDOWN_CHANNEL_LINK}){{2,}}\s*$",
+    re.IGNORECASE,
+)
+TG_STANDALONE_SEPARATOR_RE = re.compile(r"^\s*[-—_]{2,}\s*$")
 
 
 def main() -> None:
@@ -390,8 +396,8 @@ def structured_tg_item(item: dict[str, Any], base_url: str) -> dict[str, Any]:
     url = clean_url(str(item.get("url") or ""))
     result = {
         "id": compact_text(str(item.get("id") or "")),
-        "title": compact_text(str(item.get("title") or "")),
-        "summary": compact_text(str(item.get("summary") or "")),
+        "title": compact_text(strip_tg_channel_recommendations(str(item.get("title") or ""))),
+        "summary": compact_text(strip_tg_channel_recommendations(str(item.get("summary") or ""))),
         "channel": compact_text(str(item.get("channel") or "")),
         "time": compact_text(str(item.get("time") or "")),
         "url": url,
@@ -567,6 +573,7 @@ class DigestPageParser(HTMLParser):
         self.current_section: dict[str, Any] | None = None
         self.current_card: dict[str, Any] | None = None
         self.card_links: list[dict[str, str]] = []
+        self.current_link: dict[str, str] | None = None
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attrs_dict = {key: value or "" for key, value in attrs}
@@ -598,7 +605,10 @@ class DigestPageParser(HTMLParser):
             if href:
                 if self.has_class("card-title") and not self.current_card.get("url"):
                     self.current_card["url"] = clean_url(href)
-                self.card_links.append({"href": clean_url(href), "label": ""})
+                if self.kind == "tg" and self.has_class("channel-links"):
+                    return
+                self.current_link = {"href": clean_url(href), "label": ""}
+                self.card_links.append(self.current_link)
 
     def handle_endtag(self, tag: str) -> None:
         if not self.stack:
@@ -612,8 +622,10 @@ class DigestPageParser(HTMLParser):
         if frame is None:
             return
         classes = frame.get("classes", set())
-        if tag == "a" and self.card_links and not self.card_links[-1]["label"]:
-            self.card_links.pop()
+        if tag == "a" and self.current_link is not None:
+            if not self.current_link.get("label") and self.current_link in self.card_links:
+                self.card_links.remove(self.current_link)
+            self.current_link = None
         elif tag == "div" and "card" in classes and self.current_card is not None and self.current_section is not None:
             self.finish_current_card()
         elif tag == "div" and "section" in classes and self.current_section is not None:
@@ -623,8 +635,8 @@ class DigestPageParser(HTMLParser):
         text = html.unescape(data or "")
         if not text.strip():
             return
-        if self.card_links:
-            self.card_links[-1]["label"] = compact_text(f"{self.card_links[-1].get('label', '')} {text}")
+        if self.current_link is not None:
+            self.current_link["label"] = compact_text(f"{self.current_link.get('label', '')} {text}")
         if self.has_class("hero-title"):
             self.hero_title = compact_text(f"{self.hero_title} {text}")
         elif self.has_class("hero-date"):
@@ -673,6 +685,7 @@ class DigestPageParser(HTMLParser):
             self.current_section["items"].append(self.current_card)
         self.current_card = None
         self.card_links = []
+        self.current_link = None
 
     def finish_current_section(self) -> None:
         if self.current_section is None:
@@ -703,6 +716,19 @@ def dedupe_links(links: list[dict[str, str]]) -> list[dict[str, str]]:
 
 def compact_text(value: str) -> str:
     return re.sub(r"\s+", " ", value or "").strip()
+
+
+def strip_tg_channel_recommendations(value: str) -> str:
+    text = str(value or "").strip()
+    if not text:
+        return ""
+    text = TG_MARKDOWN_CHANNEL_RECOMMENDATION_TAIL_RE.sub("", text).rstrip()
+    lines = text.splitlines()
+    while lines and not lines[-1].strip():
+        lines.pop()
+    if lines and TG_STANDALONE_SEPARATOR_RE.fullmatch(lines[-1]):
+        lines.pop()
+    return "\n".join(lines).strip()
 
 
 def sha256_text(value: str) -> str:

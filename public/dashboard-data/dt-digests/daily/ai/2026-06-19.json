@@ -6,7 +6,7 @@
   "title": "🤖 AI 日报",
   "hero_date": "2026年06月19日 · 星期五 · 5 个板块 · 28 条内容",
   "source_url": "https://codew1028.github.io/dt/20260619-AI%E6%97%A5%E6%8A%A5.html",
-  "synced_at": "2026-08-19T02:40:51Z",
+  "synced_at": "2026-08-20T03:28:32Z",
   "original_item_count": 28,
   "filtered_count": 0,
   "filter_summary": [],
@@ -25,7 +25,7 @@
           "links": [
             {
               "href": "https://openai.com/index/improving-health-intelligence-in-chatgpt",
-              "label": "GPT-5.5 Instant提升ChatGPT健康智能 每周超2.3亿用户通过ChatGPT获取健康信息。GPT-5.5 Instant在健康评估中表现显著提升，最具挑战性评测上达到前沿Thinking模型水平，已面向所有免费用户开放。基于医生编写的HealthBench和HealthBench Professional评估，其回复在准确性、安全性和沟通质量上优于医生手写回复及早期模型，故障模式发生率更低。近两个月生产流量显示，健康类回复事实性问题率下降71%。 OpenAI 官网动态（RSS · 排除企业/客户案例）"
+              "label": "GPT-5.5 Instant提升ChatGPT健康智能"
             }
           ]
         },
@@ -37,7 +37,7 @@
           "links": [
             {
               "href": "https://x.com/vista8/status/2067513484364140994",
-              "label": "免费开源乔木画布：AI生图+抠图，一键部署Vercel 乔木画布推出免费开源在线图像编辑器，可一键部署Vercel为网站，功能类似简化版PS。支持Seedream和GPT-image-2生图、图片模板存储分享、一键抠图、2万图标和常见Emoji，甚至能绘制PRD。随时创建3：4/16：9/21：9等不同尺寸画布。原计划高级功能收费，庆祝端午节现全免费开源。在线体验：https：//ps.qiaomu.ai/，GitHub见评论区。 X Vista (@vista8)"
+              "label": "免费开源乔木画布：AI生图+抠图，一键部署Vercel"
             }
           ]
         },
@@ -49,7 +49,7 @@
           "links": [
             {
               "href": "https://x.com/rohanpaul_ai/status/2067755504613613699",
-              "label": "AI 员工 Viktor 登陆 Microsoft Teams，年化收入达 2000 万美元 AI 员工 Viktor 在 Slack 上实现 2000 万美元年化收入（无销售团队、未大规模推广），现已正式进驻 Microsoft Teams。Viktor 定位为零门槛 AI：用户无需学习、无需提示词，像 @同事 一样提及即可获得完整工作成果，甚至无需主动 @ 也能自动完成。产品面向 Teams 的 3.2 亿用户，助力企业内部运营和管理人员零学习成本使用 AI。即日起免费试用，含 100 美元信用额度，无需绑定信用卡。 X Rohan Paul (@rohanpaul_ai)"
+              "label": "AI 员工 Viktor 登陆 Microsoft Teams，年化收入达 2000 万美元"
             }
           ]
         },
@@ -61,7 +61,7 @@
           "links": [
             {
               "href": "https://the-decoder.com/adobe-adds-ai-agents-to-photoshop-premiere-and-more-creative-cloud-apps",
-              "label": "Adobe 为 Photoshop、Premiere 等多款 Creative Cloud 应用加入 AI 智能体 Adobe 将其\"创意智能体\"扩展至 Photoshop、Premiere 等应用，以公开测试形式提供 AI Assistant。该智能体可自动完成多步骤常规任务，如 Premiere 分拣素材和粗剪、Photoshop 换背景、Illustrator 批量生成文件、InDesign 更新版式等。Firefly 新增面向个人创作者的品牌套件、产品图转短视频及 Quick Cut 自动剪辑功能。Adobe 工具已集成至 ChatGPT、Claude 及 Microsoft 365 Copilot，Google Gemini 和 Slack 集成即将推出。 The Decoder AI News（RSS）"
+              "label": "Adobe 为 Photoshop、Premiere 等多款 Creative Cloud 应用加入 AI 智能体"
             }
           ]
         },
@@ -73,7 +73,7 @@
           "links": [
             {
               "href": "https://www.ithome.com/0/966/066.htm",
-              "label": "DeepSeek 识图模式正式上线 App 和网页端 DeepSeek 识图模式于6月18日在网页和 App 端正式上线，与快速模式、专家模式并列。开启后用户可直接上传图片让 DeepSeek 识别图像，能力超越简单文字提取。目前 App 端仍显示\"图片理解功能内测中\"，网页端无此提示。该模式背后的多模态模型技术细节于今年4月公开，核心框架为\"Thinking with Visual Primitives（以视觉原语思考）\"。 IT之家（RSS）"
+              "label": "DeepSeek 识图模式正式上线 App 和网页端"
             }
           ]
         },
@@ -85,7 +85,7 @@
           "links": [
             {
               "href": "https://x.com/midjourney/status/2067422898407837797",
-              "label": "深入解析 Midjourney Scanner 技术内幕 我们全新\"Midjourney Scanner\"的技术深潜。 X Midjourney (@midjourney)"
+              "label": "深入解析 Midjourney Scanner 技术内幕"
             }
           ]
         },
@@ -97,7 +97,7 @@
           "links": [
             {
               "href": "https://github.com/nvlabs/cutile-rs",
-              "label": "cuTile Rust：安全无数据竞争的 GPU 内核系统 cuTile Rust 是一个基于 tile 的 GPU 编程系统，允许用 Rust 编写内存安全、无数据竞争的内核。它通过 #【cutile：：module】 宏将内核 AST 嵌入主机二进制，在运行时经 CUDA Tile IR JIT 编译为 GPU cubin。可变张量在启动前分割，不可变张量共享，启动器在 GPU 工作期间保持所有权。在 NVIDIA B200 上，逐元素操作达 7 TB/s（约 91% 峰值带宽），GEMM 达 2 PFlop/s（约 92% 密集 f16 峰值）。基于 cuTile Rust 构建的 Grout 推理引擎在 RTX 5090 上解码 Qwen3-4B 达 171 tokens/s，在 B200 上解码 Qwen3-32B 达 82 tokens/s。项目处于早期研究阶段。 Hacker News 热门（buzzing.cc 中文翻译）"
+              "label": "cuTile Rust：安全无数据竞争的 GPU 内核系统"
             }
           ]
         },
@@ -109,7 +109,7 @@
           "links": [
             {
               "href": "https://x.ai/news/introducing-word-addin",
-              "label": "xAI 发布 Grok for Word 插件 xAI 将 Grok 引入 Microsoft Word，推出免费 365 插件。用户可将笔记转为结构化文档、重写文本以提升清晰度与简洁性，也能通过插件搜索网页、X 平台或生成图表。插件支持连接 SharePoint 和 Google Drive 等外部来源，还可用于 PowerPoint 和 Excel。 xAI News（网页）"
+              "label": "xAI 发布 Grok for Word 插件"
             }
           ]
         },
@@ -121,7 +121,7 @@
           "links": [
             {
               "href": "https://openai.com/index/chatgpt-enterprise-spend-controls",
-              "label": "企业版新用量分析与更新的支出控制 OpenAI 为 ChatGPT Enterprise 推出信用额度用量分析与更新的支出控制功能。全局管理控制台（Global Admin Console）统一展示 ChatGPT 和 Codex 的信用消耗，支持按时间、用户、产品、模型追踪用量趋势。管理员可为整个工作区设置默认限额，按群组配置额度，并为个人设置叠加限制。员工可查看个人用量并申请增加额度（附工作上下文）。这些功能即日起可用。 OpenAI 官网动态（RSS · 排除企业/客户案例）"
+              "label": "企业版新用量分析与更新的支出控制"
             }
           ]
         }
@@ -139,7 +139,7 @@
           "links": [
             {
               "href": "https://mp.weixin.qq.com/s/50q5uY849FKnBzk1Q04MRg",
-              "label": "首个统一科学大模型 LOGOS 正式开源 LOGOS 由 ATH-Token Foundry 联合中国人民大学高瓴人工智能学院开源，是首个基于统一\"科学语法\"的多领域科学生成基础模型。LOGOS-1B（1B参数）在六大科学任务上匹配或超越领域专用方法：口袋条件配体生成纯序列范式首次超越3D扩散模型，超越NatureLM（8×7B）；逆合成预测Top-1准确率74.8%；口袋位点识别仅靠序列达58.5% Top-n准确率；MOF材料生成NBB提升至17.78%。模型采用统一词汇表将蛋白质、小分子等编码为离散Token，通过空间交互离散化实现无需3D坐标的序列预测。预训练与下游任务形式与目标一致，跨领域知识迁移经实验验证有效。已完整开源模型权重、推理代码与技术报告。 公众号 通义实验室（千问）"
+              "label": "首个统一科学大模型 LOGOS 正式开源"
             }
           ]
         },
@@ -151,7 +151,7 @@
           "links": [
             {
               "href": "https://mp.weixin.qq.com/s/L4BJnexabQu5DAxDnwEGxw",
-              "label": "火山引擎上线豆包实时语音模型3.0 API 服务，开启邀测 火山引擎上线豆包实时语音模型3.0（Seeduplex）API 服务并开启邀测。该模型为原生全双工端到端语音大模型，具备精准遵循、抗干扰、动态判停三大优势。可在多人对话中安静待命，指定话题出现时主动加入；支持通过自定义工具在实时交互中完成预定日历、发送邮件等任务。抗干扰力提升，误回复率与误打断率大幅降低；判停延迟缩短约250ms，复杂场景抢话比例下降40%，用户主动打断延迟缩短约300ms。适用于汽车智能座舱、智能硬件、智能客服等场景。 公众号 火山引擎"
+              "label": "火山引擎上线豆包实时语音模型3.0 API 服务，开启邀测"
             }
           ]
         }
@@ -169,7 +169,7 @@
           "links": [
             {
               "href": "https://www.ithome.com/0/966/154.htm",
-              "label": "八部门：用好个人消费贷款财政贴息政策，支持消费者购买 AI 相关产品 商务部等八部门6月18日发布关于加快\"人工智能+消费\"发展的实施意见。其中提到加大财政资金支持，落实数码和智能产品购新政策，鼓励地方在消费品以旧换新框架内自主制定补贴，重点支持新一代智能终端消费。增加AI手机、智能电脑、智能电视、智能家居、AI眼镜、智能网联汽车、人形机器人等产品供给，培育智能穿戴消费市场。同时加快AI在居家服务、养老服务、文化旅游、住宿餐饮、教育教学等领域的应用，建设AI商品首发平台，举办\"人工智能进万家\"活动。 IT之家（RSS）"
+              "label": "八部门：用好个人消费贷款财政贴息政策，支持消费者购买 AI 相关产品"
             }
           ]
         },
@@ -181,7 +181,7 @@
           "links": [
             {
               "href": "https://x.com/Yuchenj_UW/status/2067401895178817999",
-              "label": "Noam Shazeer 离开 Google 加入 OpenAI 两年前谷歌花 27 亿美元请回的 AI 传奇 Noam Shazeer 已离开谷歌，加入 OpenAI。 X Yuchen Jin (@Yuchenj_UW)"
+              "label": "Noam Shazeer 离开 Google 加入 OpenAI"
             }
           ]
         },
@@ -193,7 +193,7 @@
           "links": [
             {
               "href": "https://www.ithome.com/0/966/295.htm",
-              "label": "八部门联合发文力推\"人工智能 + 消费\"，扩大 AI 手机电脑及智能网联汽车消费 商务部等8部门近日印发《关于加快\"人工智能 + 消费\"发展的实施意见》，从5方面提出17条举措。重点包括：扩大AI手机电脑、智能家居、智能网联汽车、智能穿戴、AI机器人等供给；推动AI与居家、养老、文旅、餐饮、教育等融合；促进AI在批发零售、电商、物流领域应用；建设集聚区和体验中心，开展产品租赁、共享、试用等模式创新；完善基础设施、标准体系和监管，推动互联互通。商务部将协同落实，促进AI进千家万户。 IT之家（RSS）"
+              "label": "八部门联合发文力推\"人工智能 + 消费\"，扩大 AI 手机电脑及智能网联汽车消费"
             }
           ]
         },
@@ -205,7 +205,7 @@
           "links": [
             {
               "href": "https://www.ithome.com/0/966/272.htm",
-              "label": "我国首部L3/L4自动驾驶强制性国标公示：2027年7月起实施 工信部6月16日就《智能网联汽车自动驾驶系统安全要求》等2项强制性国标公开征求意见，公示至6月24日，建议2027年7月1日起实施。该标准系我国首部针对L3/L4的强制性国标，要求系统安全水平至少达到\"合格且专注驾驶人\"，引入Safety Case机制。L3重点规范人机交接，L4强调自身风险处置、不得依赖远程协助。新申请车型实施日起执行，已获批车型有约一年过渡期。 IT之家（RSS）"
+              "label": "我国首部L3/L4自动驾驶强制性国标公示：2027年7月起实施"
             }
           ]
         },
@@ -217,7 +217,7 @@
           "links": [
             {
               "href": "https://www.ithome.com/0/965/735.htm",
-              "label": "上交所发布指引：AI大模型企业可适用科创板第五套上市标准 上海证券交易所6月17日发布指引，支持尚未形成稳定收入的优质人工智能大模型企业通过科创板第五套上市标准发行上市。申报企业需在行业地位、产业链优势、目标市场需求、研发进度及关键指标方面具备突出竞争力。指引明确，申报时至少有一个大模型产品已完成上线发布并实现规模化应用，以验证商业模式可行性。下一步，上交所将在中国证监会指导下推进符合标准的企业上市。 IT之家（RSS）"
+              "label": "上交所发布指引：AI大模型企业可适用科创板第五套上市标准"
             }
           ]
         },
@@ -229,7 +229,7 @@
           "links": [
             {
               "href": "https://techcrunch.com/2026/06/18/ai-data-centers-just-got-a-government-mandated-fast-lane-to-the-grid",
-              "label": "AI数据中心获政府强制电网快车道 美国联邦能源监管委员会（FERC）命令六大电网运营商为数据中心等大型用户提供快速并网通道，数据中心需承担并网费用。FERC同时要求运营商考虑\"替代输电技术\"，并在30天内报告剩余发电容量、60天内审查本区域电价。指令并未解决发电容量短缺问题。数据中心电力需求预计到2035年增长近三倍，而电网运营商此前长期应对近乎零的需求增长。据Bloomberg，部分地区批发电价较五年前上涨了267%。 TechCrunch AI（RSS）"
+              "label": "AI数据中心获政府强制电网快车道"
             }
           ]
         }
@@ -247,7 +247,7 @@
           "links": [
             {
               "href": "https://mindgard.ai/blog/chatgpt-spontaneously-generated-violent-images-from-a-viral-prompt",
-              "label": "ChatGPT 图像生成器可被绕过滤镜生成暴力和色情内容 Mindgard 红队研究发现，ChatGPT 的图像生成器可通过简单提示词轻易绕过内容过滤器，在未直接请求的情况下自动生成性暴力、血腥谋杀等露骨图像。一个热门的\"恢复照片\"提示词因输入模糊而绕过输入过滤器，结果如同俄罗斯轮盘赌；进一步添加虚假图像 ID 和\"不做审查\"指令后，模型持续生成高度性化女性图像，甚至出现被捆绑殴打的尸体，并自动赋予惊悚标题。研究指出，OpenAI 此前声称修复的裸体问题仍未解决，暴露了 AI 工具广泛可及性与不足内容过滤的现实风险。 Hacker News 热门（buzzing.cc 中文翻译）"
+              "label": "ChatGPT 图像生成器可被绕过滤镜生成暴力和色情内容"
             }
           ]
         },
@@ -259,7 +259,7 @@
           "links": [
             {
               "href": "https://the-decoder.com/ai-systems-rival-doctors-in-new-nature-studies-but-one-result-suggests-the-tech-wont-age-well",
-              "label": "Nature两篇研究：MIRA和AMIE诊断与治疗计划媲美甚至超越医生 德国团队开发的MIRA智能体在模拟电子病历中操作85，000种选项，500余例急诊诊断准确率88.9%，对比测试（311例）得分87.8%，高于资深专科医生（78.1%）和混合团队（71.1%）。MIRA在阑尾炎（98.6%）和胰腺炎（92.3%）最佳，未发现危险药物交互或剂量错误，性能不受语言影响，代码已公开。谷歌AMIE采用双智能体架构，在100个多访视病例中治疗计划适切率95%（初级保健医生72%），并在药物知识基准RxQA上超过医生。两项研究均警告模拟环境与现实存在差距，实际性能可能更低。 The Decoder AI News（RSS）"
+              "label": "Nature两篇研究：MIRA和AMIE诊断与治疗计划媲美甚至超越医生"
             }
           ]
         },
@@ -271,7 +271,7 @@
           "links": [
             {
               "href": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
-              "label": "MosaicLeaks： 你的研究智能体能保守秘密吗？ 深度研究智能体在结合私有本地文档与外部网页检索时存在隐私泄露风险。MosaicLeaks 提出包含 1，001 条多跳研究链的新任务，每条链交错混合本地与公共子问题。测试发现智能体频繁泄露私有信息，单纯优化任务性能反而加剧泄露。基于此，研究提出隐私感知深度研究（PA-DR）强化学习训练方法，将严格链成功率从 48.7% 提升至 58.7%，同时将答案/全面信息泄露率从 34.0% 降至 9.9%。 Hugging Face Blog（RSS）"
+              "label": "MosaicLeaks： 你的研究智能体能保守秘密吗？"
             }
           ]
         },
@@ -283,7 +283,7 @@
           "links": [
             {
               "href": "https://arxiv.org/abs/2606.20521",
-              "label": "HumanScale：自我中心人类视频在具身预训练中可超越真实机器人数据 HumanScale项目比较了自我中心人类视频与遥操作真实机器人轨迹作为具身基础模型预训练数据源。经精心设计的过滤与标注流程后，基于自我中心数据预训练的模型在真实机器人动作预测上验证损失降低24%，分布内任务成功率高52.5%，分布外任务成功率高90%。研究验证了一种可扩展范式：先以人类视频预训练学习多样世界表征，再以少量标注机器人数据微调对齐动作空间。 HuggingFace Daily Papers（社区热门论文）"
+              "label": "HumanScale：自我中心人类视频在具身预训练中可超越真实机器人数据"
             }
           ]
         },
@@ -295,7 +295,7 @@
           "links": [
             {
               "href": "https://openai.com/index/diagnose-rare-childhood-diseases",
-              "label": "OpenAI与哈佛等合作研究：o3 Deep Research模型辅助诊断儿童罕见病，额外诊断率4.8% 波士顿儿童医院、哈佛大学与OpenAI合作，在《NEJM AI》发表研究。团队使用OpenAI o3 Deep Research推理模型重新分析376例此前未确诊的罕见病案例，产出基于证据的候选解释。经专家评审、额外检测和临床确认，医生在18例中建立诊断，额外诊断率达4.8%。研究显示，AI辅助工作流可帮助专家在未解病例中生成可检验假设，使定期再分析更具可扩展性。模型不直接诊断或做临床决策，仅提供证据链供专家审查。 OpenAI 官网动态（RSS · 排除企业/客户案例）"
+              "label": "OpenAI与哈佛等合作研究：o3 Deep Research模型辅助诊断儿童罕见病，额外诊断率4.8%"
             }
           ]
         },
@@ -307,7 +307,7 @@
           "links": [
             {
               "href": "https://alignment.openai.com/beneficial-rl",
-              "label": "OpenAI 强化学习实现广泛且持久的有益模型 OpenAI 通过强化学习在真实对话场景中训练模型，使其展现诚实、认知谦逊、元认知透明、可纠正性、普遍公平性和对人类福祉的关心等有益特质。训练数据涵盖健康、教育、科学、法律、工程等多个领域。训练后模型在数十项独立对齐评测（包括奖励黑客、欺骗、有害建议、规范遵从等）上均表现提升，且这种改善泛化到未参与训练的领域、任务和评分设定。在对抗性提示或微调下，模型仍难以被导向有害行为，表明有益特质强化学习可产生广泛且持久的对齐泛化。 OpenAI Alignment 研究博客（RSS）"
+              "label": "OpenAI 强化学习实现广泛且持久的有益模型"
             }
           ]
         }
@@ -325,7 +325,7 @@
           "links": [
             {
               "href": "https://huggingface.co/blog/is-it-agentic-enough",
-              "label": "AI 智能体够格吗？在自有工具上评测开源模型 Hugging Face 发布面向 AI 智能体使用场景的基准测试框架，以 transformers 库为案例评估库的智能体友好度。框架使用 pi coding agent 与开源模型驱动，通过 Hugging Face Jobs 分散任务确保硬件一致。评估关注 agent 完成任务的成本、延迟、token 使用量和失败率，而非仅最终结果。此前 hf CLI 经优化后 agent token 使用量减少 1.3-1.8 倍（最高 6 倍），该框架旨在验证类似优化对 transformers 的效果。 Hugging Face Blog（RSS）"
+              "label": "AI 智能体够格吗？在自有工具上评测开源模型"
             }
           ]
         },
@@ -337,7 +337,7 @@
           "links": [
             {
               "href": "https://www.ithome.com/0/966/233.htm",
-              "label": "皮尤民调：63%美国人认为AI发展太快，ChatGPT使用率翻番 皮尤研究中心最新民调显示，63%美国人认为AI发展速度过快。ChatGPT使用率较2023年翻番，44%受访者曾使用。49%偶尔使用聊天机器人，仅16%认为AI会有积极社会影响。青年群体使用率更高但更悲观：18-29岁中66%用过，48%认为有负面影响，仅14%看好。30-49岁中34%每天至少使用一次。约四成用AI处理工作，30%认为提高效率，28%认为帮助获取信息。此外，66%成年人担心AI传播错误信息。 IT之家（RSS）"
+              "label": "皮尤民调：63%美国人认为AI发展太快，ChatGPT使用率翻番"
             }
           ]
         },
@@ -349,7 +349,7 @@
           "links": [
             {
               "href": "https://huggingface.co/blog/peft-beyond-lora",
-              "label": "超越 LoRA：如何选择最佳参数高效微调技术？ 参数高效微调（PEFT）技术中，LoRA 占据绝对主导：Hugging Face Hub 上 20，834 张提及单一 PEFT 技术的模型卡中 20，509 张指向 LoRA（98.4%）；外部站点 10，000 个检查点中 95.0% 是 LoRA；GitHub 搜索 from peft import 代码片段的 71.3% 结果为 LoRA。但研究者宣称其他技术超越 LoRA 的论文结果具备偏向性--调整学习率即可让 LoRA 匹配更优技术。Hugging Face 的 PEFT 库提供统一 API 实现 40 余种 PEFT 技术，并开始建立基准测试：在数学数据集上对 LLM 进行思维链推理微调，以帮助用户做出更优选择。 Hugging Face Blog（RSS）"
+              "label": "超越 LoRA：如何选择最佳参数高效微调技术？"
             }
           ]
         },
@@ -361,7 +361,7 @@
           "links": [
             {
               "href": "https://openrouter.ai/blog/tutorials/openclaw-openrouter",
-              "label": "OpenClaw 接入 OpenRouter OpenClaw 已内置 OpenRouter 支持，一条命令即可为 AI 智能体配置统一密钥、统一账单，并实现跨 300 多个模型的自动故障转移。同时提供具体设置步骤以及常见错误的修复方法。 OpenRouter Announcements（RSS）"
+              "label": "OpenClaw 接入 OpenRouter"
             }
           ]
         },
@@ -373,7 +373,7 @@
           "links": [
             {
               "href": "https://openrouter.ai/blog/tutorials/sillytavern-openrouter",
-              "label": "如何将 SillyTavern 连接到 OpenRouter（2026 指南） 一个 OpenRouter API 密钥即可在 SillyTavern 的下拉菜单中解锁 300 多个模型，其中许多免费。指南包含五步连接流程、推荐尝试的角色扮演模型以及常见错误的修复方法。 OpenRouter Announcements（RSS）"
+              "label": "如何将 SillyTavern 连接到 OpenRouter（2026 指南）"
             }
           ]
         }

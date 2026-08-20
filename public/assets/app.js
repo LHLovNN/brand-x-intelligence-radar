@@ -979,7 +979,7 @@ function ditingDigestCard(item, config) {
   const title = compactDisplayText(item.title || item.summary || "未命名条目");
   const url = safeExternalUrl(item.url || "");
   const summary = compactDisplayText(item.summary || "");
-  const links = ditingUsefulLinks(item, url);
+  const links = ditingUsefulLinks(item, url, config);
   const media = mediaGridNode(ditingMediaItems(item), item);
   return `
     <article class="diting-card">
@@ -1010,13 +1010,32 @@ function ditingItemSource(item, config) {
   return compactDisplayText(item.source || item.channel || "");
 }
 
-function ditingUsefulLinks(item, primaryUrl) {
+const DITING_TG_RECOMMENDATION_LABELS = new Set([
+  "AI探索",
+  "AI探索站",
+  "Hermes/OpenClaw",
+  "优质资源",
+  "优质信息",
+  "优质内容",
+  "优质「资源」",
+  "优质「内容」",
+  "出海赚美金",
+  "内幕消息",
+  "你不知道的内幕消息🌳",
+  "副业搞钱",
+  "在花频道",
+  "茶馆水群",
+  "投稿通道",
+]);
+
+function ditingUsefulLinks(item, primaryUrl, config) {
   const links = [];
   if (primaryUrl) links.push({ href: primaryUrl, label: "打开原文" });
   (item.links || []).forEach((link) => {
     const href = safeExternalUrl(link.href || "");
     const label = compactDisplayText(link.label || "");
     if (!href || href === primaryUrl) return;
+    if (config?.routeName === "tgDaily" && isDitingTgRecommendationLink(href, label)) return;
     if (label.length > 40 && !/^查看|^原文|^来源/.test(label)) return;
     links.push({ href, label: label || "相关链接" });
   });
@@ -1026,6 +1045,14 @@ function ditingUsefulLinks(item, primaryUrl) {
     seen.add(link.href);
     return true;
   }).slice(0, 5);
+}
+
+function isDitingTgRecommendationLink(href, label) {
+  if (!label || /^查看|^原文|^来源/.test(label)) return false;
+  const normalizedHref = String(href || "").replace(/\/+$/, "");
+  if (!/^https?:\/\/t\.me\//i.test(normalizedHref)) return false;
+  if (DITING_TG_RECOMMENDATION_LABELS.has(label)) return true;
+  return /^https?:\/\/t\.me\/[^/?#]+$/i.test(normalizedHref) && label.length <= 16;
 }
 
 function compactDisplayText(value) {
