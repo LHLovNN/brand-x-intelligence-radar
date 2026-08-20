@@ -391,40 +391,6 @@ h3 {
   white-space: nowrap;
 }
 
-.platform-rule-panel {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 14px;
-  align-items: center;
-  border-left: 3px solid #d7e3ee;
-  background: rgba(246, 248, 251, 0.62);
-  padding: 8px 12px;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.45;
-}
-
-.platform-rule-panel strong {
-  color: var(--text);
-  font-size: 12px;
-}
-
-.platform-rule-panel span {
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.platform-rule-panel span + span::before {
-  content: "";
-  display: inline-block;
-  width: 3px;
-  height: 3px;
-  margin-right: 14px;
-  border-radius: 999px;
-  background: #b7c3cf;
-}
-
 .sample-data-notice {
   display: flex;
   flex-wrap: wrap;
