@@ -981,11 +981,13 @@ function ditingDigestCard(item, config) {
   const summary = compactDisplayText(item.summary || "");
   const links = ditingUsefulLinks(item, url, config);
   const media = mediaGridNode(ditingMediaItems(item), item);
+  const showSectionMeta = config.routeName !== "tgDaily";
+  const showSourceMeta = config.routeName !== "tgDaily";
   return `
     <article class="diting-card">
       <div class="diting-card-meta">
-        ${item.section_title ? `<span>${escapeHtml(item.section_title)}</span>` : ""}
-        ${source ? `<span>${escapeHtml(source)}</span>` : ""}
+        ${showSectionMeta && item.section_title ? `<span>${escapeHtml(item.section_title)}</span>` : ""}
+        ${showSourceMeta && source ? `<span>${escapeHtml(source)}</span>` : ""}
         ${item.time ? `<span>${escapeHtml(item.time)}</span>` : ""}
       </div>
       <h3>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>` : escapeHtml(title)}</h3>
@@ -1030,7 +1032,7 @@ const DITING_TG_RECOMMENDATION_LABELS = new Set([
 
 function ditingUsefulLinks(item, primaryUrl, config) {
   const links = [];
-  if (primaryUrl) links.push({ href: primaryUrl, label: "打开原文" });
+  if (primaryUrl && config?.routeName !== "tgDaily") links.push({ href: primaryUrl, label: "打开原文" });
   (item.links || []).forEach((link) => {
     const href = safeExternalUrl(link.href || "");
     const label = compactDisplayText(link.label || "");
