@@ -2008,7 +2008,13 @@ function mediaGridNode(media = [], owner = {}) {
     if (node) nodes.push(node);
   });
   if (xVideoEmbed) nodes.push(xVideoEmbed);
-  return nodes.length ? `<div class="featured-media-grid${xVideoEmbed ? " has-x-embed" : ""}">${nodes.join("")}</div>` : "";
+  const classNames = [
+    "featured-media-grid",
+    hasVideo ? "has-video" : "",
+    nodes.length === 1 ? "single-media" : "",
+    xVideoEmbed ? "has-x-embed" : "",
+  ].filter(Boolean).join(" ");
+  return nodes.length ? `<div class="${classNames}">${nodes.join("")}</div>` : "";
 }
 
 function mediaNode(item, owner = {}, options = {}) {
@@ -2193,7 +2199,7 @@ function htmlVideoNode(videoUrl, posterUrl, item = {}) {
   const aspectStyle = mediaAspectStyle(item);
   return `
     <div class="media-video-shell playable"${aspectStyle}>
-      <video class="media-video" controls preload="metadata"${safePosterUrl ? ` poster="${escapeHtml(safePosterUrl)}"` : ""}>
+      <video class="media-video" controls playsinline preload="metadata"${safePosterUrl ? ` poster="${escapeHtml(safePosterUrl)}"` : ""}>
         <source src="${escapeHtml(safeVideoUrl)}" type="video/mp4" />
       </video>
     </div>
@@ -4629,18 +4635,80 @@ function openMediaLightbox(url, options = {}) {
     <button type="button" class="media-lightbox-close" aria-label="关闭大图">×</button>
     ${hasMultiple ? `<button type="button" class="media-lightbox-nav prev" data-media-lightbox-prev aria-label="上一张图片"><span class="media-lightbox-chevron" aria-hidden="true"></span></button>` : ""}
     <figure class="media-lightbox-content">
-      <img src="${escapeHtml(group[currentIndex] || safeUrl)}" alt="" />
+      <img class="media-lightbox-image" src="${escapeHtml(group[currentIndex] || safeUrl)}" alt="" draggable="false" />
       ${hasMultiple ? `<figcaption class="media-lightbox-count">${escapeHtml(String(currentIndex + 1))} / ${escapeHtml(String(group.length))}</figcaption>` : ""}
     </figure>
     ${hasMultiple ? `<button type="button" class="media-lightbox-nav next" data-media-lightbox-next aria-label="下一张图片"><span class="media-lightbox-chevron" aria-hidden="true"></span></button>` : ""}
   `;
+  const img = node.querySelector(".media-lightbox-image");
+  const zoom = { scale: 1, x: 0, y: 0, dragging: false, startX: 0, startY: 0, originX: 0, originY: 0 };
+  const clampPan = () => {
+    if (!img || zoom.scale <= 1) {
+      zoom.x = 0;
+      zoom.y = 0;
+      return;
+    }
+    const maxX = Math.max(0, ((img.offsetWidth || 0) * zoom.scale - window.innerWidth + 80) / 2);
+    const maxY = Math.max(0, ((img.offsetHeight || 0) * zoom.scale - window.innerHeight + 80) / 2);
+    zoom.x = Math.max(-maxX, Math.min(maxX, zoom.x));
+    zoom.y = Math.max(-maxY, Math.min(maxY, zoom.y));
+  };
+  const applyZoom = () => {
+    if (!img) return;
+    clampPan();
+    node.classList.toggle("is-zoomed", zoom.scale > 1.01);
+    img.style.transform = `translate3d(${zoom.x}px, ${zoom.y}px, 0) scale(${zoom.scale})`;
+  };
+  const resetZoom = () => {
+    zoom.scale = 1;
+    zoom.x = 0;
+    zoom.y = 0;
+    zoom.dragging = false;
+    applyZoom();
+  };
   const showImage = (nextIndex) => {
     currentIndex = (nextIndex + group.length) % group.length;
-    const img = node.querySelector("img");
     const count = node.querySelector(".media-lightbox-count");
     if (img) img.src = group[currentIndex];
     if (count) count.textContent = `${currentIndex + 1} / ${group.length}`;
+    resetZoom();
   };
+  node.addEventListener("wheel", (event) => {
+    if (event.target.closest(".media-lightbox-close, .media-lightbox-nav")) return;
+    if (!event.target.closest(".media-lightbox-content")) return;
+    event.preventDefault();
+    const delta = event.deltaY < 0 ? 1.12 : 0.88;
+    zoom.scale = Math.max(1, Math.min(5, zoom.scale * delta));
+    if (zoom.scale === 1) {
+      zoom.x = 0;
+      zoom.y = 0;
+    }
+    applyZoom();
+  }, { passive: false });
+  if (img) {
+    img.addEventListener("pointerdown", (event) => {
+      if (zoom.scale <= 1.01) return;
+      zoom.dragging = true;
+      zoom.startX = event.clientX;
+      zoom.startY = event.clientY;
+      zoom.originX = zoom.x;
+      zoom.originY = zoom.y;
+      img.setPointerCapture?.(event.pointerId);
+    });
+    img.addEventListener("pointermove", (event) => {
+      if (!zoom.dragging) return;
+      zoom.x = zoom.originX + event.clientX - zoom.startX;
+      zoom.y = zoom.originY + event.clientY - zoom.startY;
+      applyZoom();
+    });
+    img.addEventListener("pointerup", () => {
+      zoom.dragging = false;
+    });
+    img.addEventListener("pointercancel", () => {
+      zoom.dragging = false;
+    });
+    img.addEventListener("dblclick", resetZoom);
+  }
   node.addEventListener("click", (event) => {
     if (event.target === node || event.target.closest(".media-lightbox-close")) closeMediaLightbox();
     if (event.target.closest("[data-media-lightbox-prev]")) showImage(currentIndex - 1);
@@ -4652,6 +4720,7 @@ function openMediaLightbox(url, options = {}) {
     if (event.key === "Escape") closeMediaLightbox();
     if (hasMultiple && event.key === "ArrowLeft") showImage(currentIndex - 1);
     if (hasMultiple && event.key === "ArrowRight") showImage(currentIndex + 1);
+    if (event.key === "0") resetZoom();
   };
   node._onKeydown = onKeydown;
   window.addEventListener("keydown", onKeydown);
