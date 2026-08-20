@@ -1,19 +1,49 @@
 {
-  "generated_at": "2026-08-19T10:17:33Z",
-  "generated_at_label": "2026-08-19 18:17 BJT",
+  "generated_at": "2026-08-20T00:30:10Z",
+  "generated_at_label": "2026-08-20 08:30 BJT",
   "source": "codew1028/dt",
   "source_base_url": "https://codew1028.github.io/dt",
   "detail_days": 60,
   "latest": {
-    "ai": "2026-08-19",
-    "tg": "2026-08-19"
+    "ai": "2026-08-20",
+    "tg": "2026-08-20"
   },
-  "latest_date": "2026-08-19",
+  "latest_date": "2026-08-20",
   "counts": {
-    "ai": 98,
-    "tg": 105
+    "ai": 99,
+    "tg": 106
   },
   "items": [
+    {
+      "kind": "tg",
+      "kind_label": "TG 日报",
+      "date": "2026-08-20",
+      "file": "2026-08-20-tg-digest.html",
+      "title": "TG 日报",
+      "source_url": "https://codew1028.github.io/dt/2026-08-20-tg-digest.html",
+      "search_text_hash": "ec4e2aa681b7e8ac",
+      "body_preview": "TG 频道日报 VOL.20260820 TG 频道日报 2026年08月20日 · 星期四 · 7 个频道 · 37 条内容 37 条内容 7 个频道 01 TG 频道精选 37 条 @inside1024 00:16 最近注意到一个新现象，就是 youtube 上会推荐很多和哲学，心理学相关的频道，其内容基本都是由 ai 生成，不管是声音，图片, 还是文字内容。 但制作质量相当高，很多内容很有深度。而且估计因为全是 ai 工具生成，产出也很高，一个频道每天都会上传一个，甚",
+      "item_count": 37,
+      "section_count": 7,
+      "has_json": true,
+      "json_url": "2026-08-20-tg-digest.json",
+      "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-20.json",
+      "detail_available": true
+    },
+    {
+      "kind": "ai",
+      "kind_label": "AI 日报",
+      "date": "2026-08-20",
+      "file": "20260820-AI日报.html",
+      "title": "AI 日报",
+      "source_url": "https://codew1028.github.io/dt/20260820-AI%E6%97%A5%E6%8A%A5.html",
+      "search_text_hash": "22a0be459d45160b",
+      "body_preview": "🤖 AI 日报 VOL.20260820 🤖 AI 日报 2026年08月20日 · 星期四 · 5 个板块 · 14 条内容 14 条内容 5 个板块 01 模型发布/更新 1 条 Liquid AI 发布 LFM2.5 系列 QAD Q4_0 量化检查点，恢复 97% 精度损失 Liquid AI 发布基于量化感知蒸馏（QAD）训练的 LFM2.5-230M、350M、1.2B-Instruct 和 2.6B 四款 Q4_0 GGUF 检查点，在保持原生 Q4_0 内存与",
+      "item_count": 14,
+      "section_count": 5,
+      "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-20.json",
+      "detail_available": true
+    },
     {
       "kind": "tg",
       "kind_label": "TG 日报",
