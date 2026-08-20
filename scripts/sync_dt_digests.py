@@ -57,6 +57,13 @@ TG_FILTER_REASON_LABELS = {
     "low_value_adult": "低俗成人向低价值内容",
     "short_status_chatter": "无摘要短状态闲聊",
 }
+TG_REPLY_BLOCK_PATTERNS = [
+    re.compile(r"打飞机|撸管|约炮|找炮友|炮友|裸聊|色情网|成人视频|情色|援交|招嫖|嫖娼|外围", re.IGNORECASE),
+    re.compile(r"加(?:微信|薇|v|qq)|私聊.{0,12}(?:资源|福利|群)|点击.{0,10}(?:领取|下载)|博彩|网赌|现金网|返佣", re.IGNORECASE),
+    re.compile(r"傻逼|脑残|滚蛋|去死|死全家", re.IGNORECASE),
+    re.compile(r"买枪|卖枪|毒品|冰毒|K粉|代办身份证|洗钱", re.IGNORECASE),
+]
+TG_REPLY_LOW_SIGNAL_RE = re.compile(r"^(哈+|哈哈哈+|笑死|666+|顶|蹲|mark|收藏|学习了|\+1|牛+|牛逼|nb|ok|好)$", re.IGNORECASE)
 TG_MARKDOWN_CHANNEL_LINK = r"\[[^\]\n]{1,40}\]\(https?://t\.me/[^)\s]+\)"
 TG_MARKDOWN_CHANNEL_RECOMMENDATION_TAIL_RE = re.compile(
     rf"(?:\s*(?:[|｜]\s*)?{TG_MARKDOWN_CHANNEL_LINK}){{2,}}\s*$",
@@ -327,6 +334,11 @@ def merge_structured_tg_media(
                 for key in ("channel_name", "channel_url"):
                     if match.get(key):
                         item[key] = match[key]
+                for key in ("reply_count", "replies_fetched", "replies_visible", "replies_filtered"):
+                    if key in match:
+                        item[key] = match[key]
+                if "replies" in match:
+                    item["replies"] = match.get("replies") or []
             merged_items.append(item)
         merged_sections.append({**section, "items": merged_items})
     return merged_sections
@@ -397,6 +409,8 @@ def structured_tg_sections(structured_payload: dict[str, Any], base_url: str) ->
 
 def structured_tg_item(item: dict[str, Any], base_url: str) -> dict[str, Any]:
     url = clean_url(str(item.get("url") or ""))
+    replies = normalize_tg_replies(item.get("replies") or [], base_url, url)
+    visible_replies = filter_tg_replies(replies)
     result = {
         "id": compact_text(str(item.get("id") or "")),
         "title": compact_text(strip_tg_channel_recommendations(str(item.get("title") or ""))),
@@ -410,7 +424,59 @@ def structured_tg_item(item: dict[str, Any], base_url: str) -> dict[str, Any]:
         "media": normalize_tg_media_items(item.get("media") or [], base_url, url),
         "links": [{"href": url, "label": "查看原文"}] if url else [],
     }
+    if "reply_count" in item:
+        result["reply_count"] = nonnegative_int(item.get("reply_count"))
+    if "replies_fetched" in item:
+        result["replies_fetched"] = nonnegative_int(item.get("replies_fetched"))
+    if "replies" in item:
+        result["replies"] = visible_replies
+        result["replies_visible"] = len(visible_replies)
+        result["replies_filtered"] = max(0, len(replies) - len(visible_replies))
     return {key: value for key, value in result.items() if value not in ("", [], None)}
+
+
+def normalize_tg_replies(replies: Any, base_url: str, fallback_url: str) -> list[dict[str, Any]]:
+    if not isinstance(replies, list):
+        return []
+    normalized: list[dict[str, Any]] = []
+    for reply in replies:
+        if not isinstance(reply, dict):
+            continue
+        media = normalize_tg_media_items(reply.get("media") or [], base_url, fallback_url)
+        item: dict[str, Any] = {
+            "id": compact_text(str(reply.get("id") or "")),
+            "text": compact_text(strip_tg_channel_recommendations(str(reply.get("text") or ""))),
+            "time": compact_text(str(reply.get("time") or "")),
+            "sender_name": compact_text(str(reply.get("sender_name") or "")),
+            "media": media,
+        }
+        sender_id = reply.get("sender_id")
+        if isinstance(sender_id, (int, float)) or (isinstance(sender_id, str) and sender_id.strip()):
+            item["sender_id"] = sender_id
+        normalized.append({key: value for key, value in item.items() if value not in ("", [], None)})
+    return normalized
+
+
+def filter_tg_replies(replies: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [reply for reply in replies if not tg_reply_filter_reason(reply)]
+
+
+def tg_reply_filter_reason(reply: dict[str, Any]) -> str | None:
+    text = compact_text(str(reply.get("text") or ""))
+    sender = compact_text(str(reply.get("sender_name") or ""))
+    media = reply.get("media") or []
+    if not text and not media:
+        return "empty"
+    compact = re.sub(r"\s+", "", f"{sender} {text}")
+    if any(pattern.search(compact) for pattern in TG_REPLY_BLOCK_PATTERNS):
+        return "blocked"
+    if not media:
+        signal_len = signal_char_count(text)
+        if signal_len <= 1:
+            return "low_signal"
+        if signal_len <= 8 and TG_REPLY_LOW_SIGNAL_RE.search(compact):
+            return "low_signal"
+    return None
 
 
 def normalize_tg_media_items(media_items: Any, base_url: str, fallback_url: str) -> list[dict[str, Any]]:
@@ -721,6 +787,13 @@ def dedupe_links(links: list[dict[str, str]]) -> list[dict[str, str]]:
 
 def compact_text(value: str) -> str:
     return re.sub(r"\s+", " ", value or "").strip()
+
+
+def nonnegative_int(value: Any) -> int:
+    try:
+        return max(0, int(value or 0))
+    except (TypeError, ValueError):
+        return 0
 
 
 def strip_tg_channel_recommendations(value: str) -> str:

@@ -31,12 +31,20 @@ const state = {
   routeScrollPositions: {},
   lastRouteKey: "",
   conversationContexts: new Map(),
+  ditingCommentThreads: new Map(),
 };
 
 const USE_X_EMBED_FOR_VIDEO = false;
 const X_WIDGET_SCRIPT_URL = "https://platform.twitter.com/widgets.js";
 const DEFAULT_TIMELINE_EXPANDED_DAYS = 3;
 const BACK_TO_TOP_THRESHOLD = 520;
+const TG_COMMENT_BLOCK_PATTERNS = [
+  /打飞机|撸管|约炮|找炮友|炮友|裸聊|色情网|成人视频|情色|援交|招嫖|嫖娼|外围/i,
+  /加(?:微信|薇|v|qq)|私聊.{0,12}(?:资源|福利|群)|点击.{0,10}(?:领取|下载)|博彩|网赌|现金网|返佣/i,
+  /傻逼|脑残|滚蛋|去死|死全家/i,
+  /买枪|卖枪|毒品|冰毒|K粉|代办身份证|洗钱/i,
+];
+const TG_COMMENT_LOW_SIGNAL_RE = /^(哈+|哈哈哈+|笑死|666+|顶|蹲|mark|收藏|学习了|\+1|牛+|牛逼|nb|ok|好)$/i;
 
 const routeTitles = {
   overview: "舆情焦点",
@@ -307,6 +315,7 @@ function render() {
 
   closeConversationDrawer();
   state.conversationContexts = new Map();
+  state.ditingCommentThreads = new Map();
   if (current.name === "all") content.innerHTML = allIntelligencePage();
   else if (current.name === "daily") content.innerHTML = dailyPage();
   else if (current.name === "settings") content.innerHTML = settingsPage();
@@ -988,6 +997,7 @@ function ditingDigestCard(item, config) {
     : [];
   const footerLinks = config.routeName === "tgDaily" ? [] : links;
   const media = mediaGridNode(ditingMediaItems(item), item);
+  const commentAction = ditingCommentActionNode(item, config);
   const showSectionMeta = config.routeName !== "tgDaily";
   const showSourceMeta = config.routeName !== "tgDaily";
   return `
@@ -1002,18 +1012,86 @@ function ditingDigestCard(item, config) {
       ${summary ? `<p>${linkedSummary.html}</p>` : ""}
       ${inlineLinks.length ? `<div class="diting-link-row">${inlineLinks.map((link) => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`).join("")}</div>` : ""}
       ${media}
+      ${commentAction}
       ${footerLinks.length ? `<div class="diting-link-row">${footerLinks.map((link) => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`).join("")}</div>` : ""}
     </article>
   `;
 }
 
 function ditingMediaItems(item) {
-  return (item.media || []).filter((media) => {
+  return validDitingMediaItems(item.media || []);
+}
+
+function validDitingMediaItems(mediaItems = []) {
+  return (Array.isArray(mediaItems) ? mediaItems : []).filter((media) => {
     if (!media || typeof media !== "object") return false;
     if (String(media.publish_status || "").toLowerCase() === "failed") return false;
     if (isVideoMedia(media)) return Boolean(videoPosterUrl(media) || bestVideoUrl(media) || safeExternalUrl(media.fallback_url || media.fallbackUrl || ""));
     return Boolean(imageMediaUrl(media));
   });
+}
+
+function ditingCommentActionNode(item, config) {
+  if (config.routeName !== "tgDaily") return "";
+  const replies = visibleDitingReplies(item);
+  if (replies.length) {
+    const threadId = ditingCommentThreadId(item);
+    state.ditingCommentThreads.set(threadId, { item, replies });
+    return `
+      <div class="diting-comment-action">
+        <button type="button" class="diting-comment-link" data-diting-comments="${escapeHtml(threadId)}">评论(${escapeHtml(String(replies.length))})</button>
+      </div>
+    `;
+  }
+  const replyCount = Number(item.reply_count ?? item.replyCount ?? 0);
+  const repliesFetched = Number(item.replies_fetched ?? item.repliesFetched ?? 0);
+  if (replyCount > 0 && repliesFetched === 0 && ("reply_count" in item || "replyCount" in item)) {
+    return `<div class="diting-comment-action"><span class="diting-comment-unavailable">评论加载失败</span></div>`;
+  }
+  return "";
+}
+
+function visibleDitingReplies(item) {
+  const replies = Array.isArray(item?.replies) ? item.replies : [];
+  return replies
+    .map(normalizedDitingReply)
+    .filter((reply) => reply && !ditingReplyFilterReason(reply));
+}
+
+function normalizedDitingReply(reply) {
+  if (!reply || typeof reply !== "object") return null;
+  const media = validDitingMediaItems(reply.media || []);
+  return {
+    id: compactDisplayText(reply.id || ""),
+    text: compactDisplayText(reply.text || ""),
+    time: compactDisplayText(reply.time || ""),
+    senderName: compactDisplayText(reply.sender_name || reply.senderName || ""),
+    media,
+  };
+}
+
+function ditingReplyFilterReason(reply) {
+  const text = compactDisplayText(reply?.text || "");
+  const sender = compactDisplayText(reply?.senderName || "");
+  const media = Array.isArray(reply?.media) ? reply.media : [];
+  if (!text && !media.length) return "empty";
+  const compact = `${sender}${text}`.replace(/\s+/g, "");
+  if (TG_COMMENT_BLOCK_PATTERNS.some((pattern) => pattern.test(compact))) return "blocked";
+  if (!media.length) {
+    const signalLength = signalCharCount(text);
+    if (signalLength <= 1) return "low-signal";
+    if (signalLength <= 8 && TG_COMMENT_LOW_SIGNAL_RE.test(compact)) return "low-signal";
+  }
+  return "";
+}
+
+function signalCharCount(value) {
+  return (String(value || "").replace(/https?:\/\/\S+/gi, "").match(/[A-Za-z0-9\u3400-\u9fff]/g) || []).length;
+}
+
+function ditingCommentThreadId(item) {
+  const seed = item?.id || item?.message_id || item?.messageId || item?.url || Math.random().toString(36).slice(2);
+  return `diting-comments-${String(seed).replace(/[^a-zA-Z0-9_-]/g, "-").slice(0, 80)}`;
 }
 
 function ditingItemSource(item, config) {
@@ -4351,6 +4429,66 @@ function bindPageEvents(detail = null) {
     button.addEventListener("click", () => openConversationDrawer(button.dataset.conversationContext));
   });
 
+  document.querySelectorAll("[data-diting-comments]").forEach((button) => {
+    button.addEventListener("click", () => openDitingCommentDrawer(button.dataset.ditingComments));
+  });
+
+}
+
+function openDitingCommentDrawer(threadId) {
+  const record = state.ditingCommentThreads.get(threadId);
+  if (!record?.replies?.length) return;
+  closeConversationDrawer();
+  const { item, replies } = record;
+  const channelName = compactDisplayText(item.channel_name || item.channelName || item.channel || "TG频道");
+  const itemTime = compactDisplayText(item.time || "");
+  const node = document.createElement("div");
+  node.className = "conversation-drawer-shell";
+  node.innerHTML = `
+    <aside class="conversation-drawer diting-comment-drawer" role="dialog" aria-modal="true">
+      <div class="conversation-drawer-tools">
+        <div class="diting-comment-drawer-title">
+          <strong>评论区</strong>
+          <span>${escapeHtml([itemTime, channelName].filter(Boolean).join(" · "))}</span>
+        </div>
+        <button type="button" class="conversation-drawer-close" aria-label="关闭评论">×</button>
+      </div>
+      <div class="diting-comment-thread">
+        <div class="diting-comment-count">评论 ${escapeHtml(String(replies.length))} 条</div>
+        ${replies.map((reply) => ditingCommentNode(reply, item)).join("")}
+      </div>
+    </aside>
+  `;
+  node.addEventListener("click", (event) => {
+    if (event.target === node || event.target.closest(".conversation-drawer-close")) closeConversationDrawer();
+    const mediaButton = event.target.closest("[data-media-lightbox]");
+    if (mediaButton) openMediaLightbox(mediaButton.dataset.mediaLightbox, mediaLightboxOptions(mediaButton));
+  });
+  const onKeydown = (event) => {
+    if (event.key === "Escape") closeConversationDrawer();
+  };
+  node._onKeydown = onKeydown;
+  window.addEventListener("keydown", onKeydown);
+  document.body.appendChild(node);
+  document.body.classList.add("conversation-drawer-open");
+  updateBackToTopVisibility();
+}
+
+function ditingCommentNode(reply, owner) {
+  const name = compactDisplayText(reply.senderName || "匿名用户") || "匿名用户";
+  const time = compactDisplayText(reply.time || "");
+  const text = compactDisplayText(reply.text || "");
+  const media = mediaGridNode(validDitingMediaItems(reply.media || []), owner);
+  return `
+    <article class="diting-comment-item">
+      <div class="diting-comment-meta">
+        <strong>${escapeHtml(name)}</strong>
+        ${time ? `<span>${escapeHtml(time)}</span>` : ""}
+      </div>
+      ${text ? `<p>${escapeHtml(text)}</p>` : ""}
+      ${media}
+    </article>
+  `;
 }
 
 function openConversationDrawer(contextId) {
