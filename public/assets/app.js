@@ -991,7 +991,7 @@ function ditingDigestCard(item, config) {
   const showSectionMeta = config.routeName !== "tgDaily";
   const showSourceMeta = config.routeName !== "tgDaily";
   return `
-    <article class="diting-card">
+    <article class="diting-card${config.routeName === "tgDaily" ? " tg-digest-card" : ""}">
       <div class="diting-card-meta">
         ${showSectionMeta && item.section_title ? `<span>${escapeHtml(item.section_title)}</span>` : ""}
         ${showSourceMeta && source ? `<span>${escapeHtml(source)}</span>` : ""}

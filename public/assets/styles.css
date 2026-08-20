@@ -3312,6 +3312,16 @@ body.lightbox-open {
   line-height: 1.72;
 }
 
+.tg-digest-card p a {
+  color: var(--blue);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.tg-digest-card p a:hover {
+  text-decoration: underline;
+}
+
 .diting-card .featured-media-grid {
   margin-top: 2px;
 }
