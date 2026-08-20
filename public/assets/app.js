@@ -982,6 +982,11 @@ function ditingDigestCard(item, config) {
   const url = safeExternalUrl(item.url || "");
   const summary = compactDisplayText(item.summary || "");
   const links = ditingUsefulLinks(item, url, config);
+  const linkedSummary = ditingSummaryHtml(summary, links, config);
+  const inlineLinks = config.routeName === "tgDaily"
+    ? links.filter((link) => !linkedSummary.matchedHrefs.has(link.href))
+    : [];
+  const footerLinks = config.routeName === "tgDaily" ? [] : links;
   const media = mediaGridNode(ditingMediaItems(item), item);
   const showSectionMeta = config.routeName !== "tgDaily";
   const showSourceMeta = config.routeName !== "tgDaily";
@@ -994,9 +999,10 @@ function ditingDigestCard(item, config) {
         ${tgChannelName ? `<span>${escapeHtml(tgChannelName)}</span>` : ""}
       </div>
       <h3>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>` : escapeHtml(title)}</h3>
-      ${summary ? `<p>${escapeHtml(summary)}</p>` : ""}
+      ${summary ? `<p>${linkedSummary.html}</p>` : ""}
+      ${inlineLinks.length ? `<div class="diting-link-row">${inlineLinks.map((link) => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`).join("")}</div>` : ""}
       ${media}
-      ${links.length ? `<div class="diting-link-row">${links.map((link) => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`).join("")}</div>` : ""}
+      ${footerLinks.length ? `<div class="diting-link-row">${footerLinks.map((link) => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`).join("")}</div>` : ""}
     </article>
   `;
 }
@@ -1040,6 +1046,7 @@ function ditingUsefulLinks(item, primaryUrl, config) {
     const href = safeExternalUrl(link.href || "");
     const label = compactDisplayText(link.label || "");
     if (!href || href === primaryUrl) return;
+    if (config?.routeName === "tgDaily" && /^查看|^原文|^来源/.test(label)) return;
     if (config?.routeName === "tgDaily" && isDitingTgRecommendationLink(href, label)) return;
     if (label.length > 40 && !/^查看|^原文|^来源/.test(label)) return;
     links.push({ href, label: label || "相关链接" });
@@ -1050,6 +1057,47 @@ function ditingUsefulLinks(item, primaryUrl, config) {
     seen.add(link.href);
     return true;
   }).slice(0, 5);
+}
+
+function ditingSummaryHtml(summary, links, config) {
+  const text = compactDisplayText(summary || "");
+  const matchedHrefs = new Set();
+  if (!text) return { html: "", matchedHrefs };
+  if (config?.routeName !== "tgDaily" || !links.length) {
+    return { html: escapeHtml(text), matchedHrefs };
+  }
+  const ranges = [];
+  const candidates = links
+    .map((link) => ({
+      href: safeExternalUrl(link.href || ""),
+      label: compactDisplayText(link.label || ""),
+    }))
+    .filter((link) => link.href && link.label && link.label.length <= 40)
+    .sort((a, b) => b.label.length - a.label.length);
+  candidates.forEach((link) => {
+    let start = text.indexOf(link.label);
+    while (start !== -1) {
+      const end = start + link.label.length;
+      const overlaps = ranges.some((range) => start < range.end && end > range.start);
+      if (!overlaps) {
+        ranges.push({ start, end, href: link.href });
+        matchedHrefs.add(link.href);
+        break;
+      }
+      start = text.indexOf(link.label, start + 1);
+    }
+  });
+  if (!ranges.length) return { html: escapeHtml(text), matchedHrefs };
+  ranges.sort((a, b) => a.start - b.start);
+  let cursor = 0;
+  let html = "";
+  ranges.forEach((range) => {
+    html += escapeHtml(text.slice(cursor, range.start));
+    html += `<a href="${escapeHtml(range.href)}" target="_blank" rel="noreferrer">${escapeHtml(text.slice(range.start, range.end))}</a>`;
+    cursor = range.end;
+  });
+  html += escapeHtml(text.slice(cursor));
+  return { html, matchedHrefs };
 }
 
 function isDitingTgRecommendationLink(href, label) {
