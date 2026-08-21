@@ -1,108 +1,229 @@
 {
   "brand": "competitor",
-  "volume": 65,
+  "volume": 75,
   "sentiment": {
-    "negative": 4,
-    "neutral": 58,
-    "positive": 3
+    "negative": 36,
+    "neutral": 39,
+    "positive": 0
   },
   "top_terms": [
     {
-      "term": "delivery",
-      "count": 4
+      "term": "fake",
+      "count": 31
     },
     {
       "term": "good",
-      "count": 3
+      "count": 30
+    },
+    {
+      "term": "delivery",
+      "count": 2
     },
     {
       "term": "refund",
       "count": 2
     },
     {
-      "term": "fake",
-      "count": 2
+      "term": "missing",
+      "count": 1
     },
     {
       "term": "slow",
       "count": 1
     },
     {
-      "term": "arrived",
+      "term": "fast",
       "count": 1
     },
     {
-      "term": "customer service",
+      "term": "scam",
       "count": 1
     }
   ],
   "top_posts": [
     {
-      "post_id": "2089934219468308540",
-      "url": "https://x.com/Molayoo_/status/2089934219468308540",
-      "text": "I just placed an order on Temu for the first time.\n\nJesus, take the wheel😭🤲🏾",
-      "original_text": "I just placed an order on Temu for the first time.\n\nJesus, take the wheel😭🤲🏾",
+      "post_id": "2090369059644678543",
+      "url": "https://x.com/e_emmrex/status/2090369059644678543",
+      "text": "Car way i order from Temu done land 😂😂",
+      "original_text": "Car way i order from Temu done land 😂😂 https://t.co/0s7Z1gt2mv",
       "links": [],
-      "translation_zh": "我刚刚第一次在 Temu 下单了。\n\n耶稣，接管方向盘吧😭🤲🏾",
+      "translation_zh": "我在 Temu 上订的车已经到了 😂😂",
       "translation_status": "translated",
       "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
-      "author_name": "Àshàké(not Ololade)❤️",
-      "author_handle": "Molayoo_",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/1961672463378448384/hGd72333_normal.jpg",
-      "author_followers": 11632,
-      "author_following": 2844,
+      "author_name": "🎀Emmrex 🎀",
+      "author_handle": "e_emmrex",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2057113023836233728/qPDTyB9y_normal.jpg",
+      "author_followers": 12395,
+      "author_following": 8106,
       "author_bio": null,
-      "author_location": "Wetin happen?",
-      "author_joined_at": "2019-05-08T16:46:59Z",
+      "author_location": "lost boy Apartment ",
+      "author_joined_at": "2022-02-05T02:45:20Z",
       "author_verified": false,
-      "created_at": "2026-08-19T04:35:21Z",
+      "created_at": "2026-08-20T09:23:15Z",
       "reply_to_post_id": null,
       "reply_to_handle": null,
       "quoted_post_id": null,
-      "conversation_id": "2089934219468308540",
+      "conversation_id": "2090369059644678543",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "additional_media_info": {
+            "monetizable": false
+          },
+          "allow_download_status": {
+            "allow_download": true
+          },
+          "display_url": "pic.x.com/0s7Z1gt2mv",
+          "expanded_url": "https://x.com/e_emmrex/status/2090369059644678543/video/1",
+          "ext_master_playlist_only": [],
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "ext_playlists": [],
+          "id_str": "2090368922801336320",
+          "indices": [
+            39,
+            62
+          ],
+          "media_key": "13_2090368922801336320",
+          "media_results": {
+            "id": "QXBpTWVkaWFSZXN1bHRzOgwABAoAAR0Ce3XFFvAAAAA=",
+            "result": {
+              "__typename": "ApiMedia",
+              "id": "QXBpTWVkaWE6DAAECgABHQJ7dcUW8AAAAA==",
+              "media_key": "13_2090368922801336320"
+            }
+          },
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2090368922801336320/img/bheRx7PQTR6A98Pm.jpg",
+          "original_info": {
+            "focus_rects": [],
+            "height": 1728,
+            "width": 1320
+          },
+          "sizes": {
+            "large": {
+              "h": 1728,
+              "w": 1320
+            }
+          },
+          "type": "video",
+          "url": "https://t.co/0s7Z1gt2mv",
+          "video_info": {
+            "aspect_ratio": [
+              55,
+              72
+            ],
+            "duration_millis": 14301,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video.twimg.com/amplify_video/2090368922801336320/pl/GzhMbdBBAhHyXwcF.m3u8?tag=29"
+              },
+              {
+                "bitrate": 632000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2090368922801336320/vid/avc1/320x418/4bLpCsgqRgC33HD4.mp4?tag=29"
+              },
+              {
+                "bitrate": 950000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2090368922801336320/vid/avc1/480x628/WGiijpH2DKGU-38-.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2090368922801336320/vid/avc1/720x942/sMY7uGUVkEP69z-L.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2090368922801336320/vid/avc1/1320x1728/wJWPLS38g1hSdNdX.mp4?tag=29"
+              }
+            ]
+          }
+        }
+      ],
+      "metrics": {
+        "likes": 108,
+        "reposts": 73,
+        "replies": 45,
+        "quotes": 3,
+        "bookmarks": 6,
+        "views": 1402
+      },
+      "sentiment": "neutral",
+      "matched_terms": []
+    },
+    {
+      "post_id": "2090411556039274605",
+      "url": "https://x.com/Raynerdtech/status/2090411556039274605",
+      "text": "I ordered 6 items from Temu but wasn’t satisfied with one, so I requested a return through the app.\n\nThey refunded me but said there’s no need to return the item 😭\n\nWhy?? Now I’m feeling bad.\n\nCome and take your stuff please @shoptemu 😭",
+      "original_text": "I ordered 6 items from Temu but wasn’t satisfied with one, so I requested a return through the app.\n\nThey refunded me but said there’s no need to return the item 😭\n\nWhy?? Now I’m feeling bad.\n\nCome and take your stuff please @shoptemu 😭",
+      "links": [],
+      "translation_zh": "我从 Temu 订了 6 件商品，但对其中一件不满意，所以我通过 app 申请了退货。\n\n他们给我退款了，但说不需要退回那件商品 😭\n\n为什么？？现在我感觉很内疚。\n\n请来把你们的东西拿走吧 @shoptemu 😭",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+      "author_name": "Ray 👨🏽‍💻 website & app developer",
+      "author_handle": "Raynerdtech",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2010384152491626497/FYuSYnBR_normal.jpg",
+      "author_followers": 4034,
+      "author_following": 2098,
+      "author_bio": null,
+      "author_location": "Workspace",
+      "author_joined_at": "2020-10-11T10:33:32Z",
+      "author_verified": false,
+      "created_at": "2026-08-20T12:12:07Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2090411556039274605",
       "conversation_context": {},
       "language": "en",
       "media": [],
       "metrics": {
-        "likes": 80,
-        "reposts": 7,
-        "replies": 28,
-        "quotes": 0,
-        "bookmarks": 2,
-        "views": 1940
+        "likes": 68,
+        "reposts": 0,
+        "replies": 20,
+        "quotes": 2,
+        "bookmarks": 0,
+        "views": 4175
       },
-      "sentiment": "neutral",
-      "matched_terms": []
+      "sentiment": "negative",
+      "matched_terms": [
+        "refund",
+        "return"
+      ]
     },
     {
-      "post_id": "2090071480218296339",
-      "url": "https://x.com/ttakibr/status/2090071480218296339",
-      "text": "🚨 Before you place your next Temu order... DO THIS!\n\nSearch these codes in the Temu app one at a time:\n\n🔎 acw434452\n🔎 ald408438\n🔎 acr837069",
-      "original_text": "🚨 Before you place your next Temu order... DO THIS!\n\nSearch these codes in the Temu app one at a time:\n\n🔎 acw434452\n🔎 ald408438\n🔎 acr837069 https://t.co/UY0VmFEon9",
+      "post_id": "2090370024397537593",
+      "url": "https://x.com/DetroitEminaj/status/2090370024397537593",
+      "text": "When you order on TEMU",
+      "original_text": "When you order on TEMU https://t.co/aD8hBG2EE4",
       "links": [],
-      "translation_zh": "🚨 在你下下一笔 Temu 订单之前……先这样做！\n\n在 Temu App 中逐个搜索这些代码：\n\n🔎 acw434452\n🔎 ald408438\n🔎 acr837069",
+      "translation_zh": "当你在 TEMU 上下单时",
       "translation_status": "translated",
       "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
-      "author_name": "Lena",
-      "author_handle": "ttakibr",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/1969791291023052800/eCXFh_Zg_normal.jpg",
-      "author_followers": 6274,
-      "author_following": 4152,
+      "author_name": "£MINAJ🇯🇲🇺🇲",
+      "author_handle": "DetroitEminaj",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1978524960260825088/G-q_kCCu_normal.jpg",
+      "author_followers": 35698,
+      "author_following": 19707,
       "author_bio": null,
-      "author_location": null,
-      "author_joined_at": "2024-03-23T23:39:39Z",
+      "author_location": "Detroit, MI",
+      "author_joined_at": "2022-10-02T19:58:34Z",
       "author_verified": false,
-      "created_at": "2026-08-19T13:40:47Z",
+      "created_at": "2026-08-20T09:27:05Z",
       "reply_to_post_id": null,
       "reply_to_handle": null,
       "quoted_post_id": null,
-      "conversation_id": "2090071480218296339",
+      "conversation_id": "2090370024397537593",
       "conversation_context": {},
       "language": "en",
       "media": [
         {
-          "display_url": "pic.x.com/UY0VmFEon9",
-          "expanded_url": "https://x.com/ttakibr/status/2090071480218296339/photo/1",
+          "display_url": "pic.x.com/aD8hBG2EE4",
+          "expanded_url": "https://x.com/DetroitEminaj/status/2090370024397537593/photo/1",
           "ext_master_playlist_only": [],
           "ext_media_availability": {
             "status": "Available"
@@ -116,107 +237,183 @@
               "faces": []
             }
           },
-          "id_str": "2090071474191167488",
+          "id_str": "2090370012108230656",
           "indices": [
-            140,
-            163
+            23,
+            46
           ],
-          "media_key": "3_2090071474191167488",
+          "media_key": "3_2090370012108230656",
           "media_results": {
-            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR0BbO6eV3AACgACHQFs8AWWIBMAAA==",
+            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR0CfHNk1xAACgACHQJ8dkFXATkAAA==",
             "result": {
               "__typename": "ApiMedia",
-              "id": "QXBpTWVkaWE6DAABCgABHQFs7p5XcAAKAAIdAWzwBZYgEwAA",
-              "media_key": "3_2090071474191167488"
+              "id": "QXBpTWVkaWE6DAABCgABHQJ8c2TXEAAKAAIdAnx2QVcBOQAA",
+              "media_key": "3_2090370012108230656"
             }
           },
-          "media_url_https": "https://pbs.twimg.com/media/HQFs7p5XcAAQ6ov.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HQJ8c2TXEAA8krC.jpg",
           "original_info": {
             "focus_rects": [
               {
-                "h": 392,
-                "w": 700,
+                "h": 412,
+                "w": 736,
                 "x": 0,
-                "y": 372
-              },
-              {
-                "h": 700,
-                "w": 700,
-                "x": 0,
-                "y": 218
-              },
-              {
-                "h": 798,
-                "w": 700,
-                "x": 0,
-                "y": 169
-              },
-              {
-                "h": 1200,
-                "w": 600,
-                "x": 29,
                 "y": 0
               },
               {
-                "h": 1200,
-                "w": 700,
+                "h": 736,
+                "w": 736,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 839,
+                "w": 736,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 1104,
+                "w": 552,
+                "x": 82,
+                "y": 0
+              },
+              {
+                "h": 1104,
+                "w": 736,
                 "x": 0,
                 "y": 0
               }
             ],
-            "height": 1200,
-            "width": 700
+            "height": 1104,
+            "width": 736
           },
           "sizes": {
             "large": {
-              "h": 1200,
-              "w": 700
+              "h": 1104,
+              "w": 736
             }
           },
           "type": "photo",
-          "url": "https://t.co/UY0VmFEon9"
+          "url": "https://t.co/aD8hBG2EE4"
+        },
+        {
+          "display_url": "pic.x.com/aD8hBG2EE4",
+          "expanded_url": "https://x.com/DetroitEminaj/status/2090370024397537593/photo/1",
+          "ext_master_playlist_only": [],
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "ext_playlists": [],
+          "features": {
+            "large": {
+              "faces": []
+            },
+            "orig": {
+              "faces": []
+            }
+          },
+          "id_str": "2090370017925779456",
+          "indices": [
+            23,
+            46
+          ],
+          "media_key": "3_2090370017925779456",
+          "media_results": {
+            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR0CfHS/l9AACgACHQJ8dkFXATkAAA==",
+            "result": {
+              "__typename": "ApiMedia",
+              "id": "QXBpTWVkaWE6DAABCgABHQJ8dL+X0AAKAAIdAnx2QVcBOQAA",
+              "media_key": "3_2090370017925779456"
+            }
+          },
+          "media_url_https": "https://pbs.twimg.com/media/HQJ8dL-X0AAXDNQ.jpg",
+          "original_info": {
+            "focus_rects": [
+              {
+                "h": 412,
+                "w": 736,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 736,
+                "w": 736,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 737,
+                "w": 646,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 737,
+                "w": 369,
+                "x": 128,
+                "y": 0
+              },
+              {
+                "h": 737,
+                "w": 736,
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "height": 737,
+            "width": 736
+          },
+          "sizes": {
+            "large": {
+              "h": 737,
+              "w": 736
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/aD8hBG2EE4"
         }
       ],
       "metrics": {
-        "likes": 34,
-        "reposts": 30,
-        "replies": 1,
+        "likes": 84,
+        "reposts": 2,
+        "replies": 4,
         "quotes": 0,
-        "bookmarks": 1,
-        "views": 503
+        "bookmarks": 3,
+        "views": 1806
       },
       "sentiment": "neutral",
       "matched_terms": []
     },
     {
-      "post_id": "2090113220681900361",
-      "url": "https://x.com/ahmed114718/status/2090113220681900361",
-      "text": "👐🧖‍♀️🍃🧷 \nTemu Cupom de 30% desconto + Frete grátis ++\n\n🔎(Digite na barra de pesquisa do app): ALi342708 \n\n💡Temu está com várias promoções de lançamento (assim como Shopee, Amazon,Shein e Aliexpress no passado)👍",
-      "original_text": "👐🧖‍♀️🍃🧷  \nTemu Cupom de 30% desconto + Frete grátis ++\n\n🔎(Digite na barra de pesquisa do app): ALi342708 \n\n💡Temu está com várias promoções de lançamento (assim como Shopee, Amazon,Shein e Aliexpress no passado)👍 https://t.co/f9hMiJQ7b7",
+      "post_id": "2090427887845298326",
+      "url": "https://x.com/cgrt6833/status/2090427887845298326",
+      "text": "🥭🙍⏱🎤 pfybvto \\\nTemu Cupom de 30% desconto + Frete grátis ++\\\n\\\n🔎(Digite na barra de pesquisa do app): acw064667\\\n\\\n💡Temu está com várias promoções de lançamento (assim como Shopee, Amazon,Shein e Aliexpress no passado)",
+      "original_text": "🥭🙍⏱🎤 pfybvto  \\\nTemu Cupom de 30% desconto + Frete grátis ++\\\n\\\n🔎(Digite na barra de pesquisa do app): acw064667\\\n\\\n💡Temu está com várias promoções de lançamento (assim como Shopee, Amazon,Shein e Aliexpress no passado) https://t.co/rD6RDuttrx",
       "links": [],
-      "translation_zh": "👐🧖‍♀️🍃🧷 \nTemu 30% 折扣优惠券 + 免费送货 ++\n\n🔎（在应用的搜索栏输入）：ALi342708 \n\n💡Temu 正在进行多项上线促销（就像过去的 Shopee、Amazon、Shein 和 Aliexpress 一样）👍",
+      "translation_zh": "🥭🙍⏱🎤 pfybvto \nTemu 30% 折扣优惠券 + 免费送货 ++\n\n🔎（在 app 的搜索栏中输入）：acw064667\n\n💡Temu 正在推出多项上线促销活动（就像过去的 Shopee、Amazon、Shein 和 Aliexpress 一样）",
       "translation_status": "translated",
       "summary_zh": "用户讨论价格、优惠或正向购物体验。",
-      "author_name": "♥️ 테무 쿠폰 코드",
-      "author_handle": "ahmed114718",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/2001627027376320512/nDRLcfcP_normal.jpg",
-      "author_followers": 49,
-      "author_following": 80,
+      "author_name": "...............",
+      "author_handle": "cgrt6833",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/769169932877701120/HYmVCP31_normal.jpg",
+      "author_followers": 36,
+      "author_following": 85,
       "author_bio": null,
-      "author_location": null,
-      "author_joined_at": "2025-12-18T12:13:47Z",
+      "author_location": "المملكة العربية السعودية",
+      "author_joined_at": "2016-04-11T20:13:59Z",
       "author_verified": false,
-      "created_at": "2026-08-19T16:26:38Z",
+      "created_at": "2026-08-20T13:17:01Z",
       "reply_to_post_id": null,
       "reply_to_handle": null,
       "quoted_post_id": null,
-      "conversation_id": "2090113220681900361",
+      "conversation_id": "2090427887845298326",
       "conversation_context": {},
       "language": "pt",
       "media": [
         {
-          "display_url": "pic.x.com/f9hMiJQ7b7",
-          "expanded_url": "https://x.com/ahmed114718/status/2090113220681900361/photo/1",
+          "display_url": "pic.x.com/rD6RDuttrx",
+          "expanded_url": "https://x.com/cgrt6833/status/2090427887845298326/photo/1",
           "ext_master_playlist_only": [],
           "ext_media_availability": {
             "status": "Available"
@@ -230,21 +427,249 @@
               "faces": []
             }
           },
-          "id_str": "2090113205343313920",
+          "id_str": "2090427821352988673",
+          "indices": [
+            220,
+            243
+          ],
+          "media_key": "3_2090427821352988673",
+          "media_results": {
+            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR0CsQcoVrABCgACHQKxFqOW0JYAAA==",
+            "result": {
+              "__typename": "ApiMedia",
+              "id": "QXBpTWVkaWE6DAABCgABHQKxByhWsAEKAAIdArEWo5bQlgAA",
+              "media_key": "3_2090427821352988673"
+            }
+          },
+          "media_url_https": "https://pbs.twimg.com/media/HQKxByhWsAEwYQ6.jpg",
+          "original_info": {
+            "focus_rects": [
+              {
+                "h": 430,
+                "w": 768,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 768,
+                "w": 768,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 876,
+                "w": 768,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 1360,
+                "w": 680,
+                "x": 44,
+                "y": 0
+              },
+              {
+                "h": 1360,
+                "w": 768,
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "height": 1360,
+            "width": 768
+          },
+          "sizes": {
+            "large": {
+              "h": 1360,
+              "w": 768
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/rD6RDuttrx"
+        }
+      ],
+      "metrics": {
+        "likes": 8,
+        "reposts": 8,
+        "replies": 11,
+        "quotes": 7,
+        "bookmarks": 0,
+        "views": 118
+      },
+      "sentiment": "neutral",
+      "matched_terms": []
+    },
+    {
+      "post_id": "2090426762178048497",
+      "url": "https://x.com/dfgftyggrdfx/status/2090426762178048497",
+      "text": "👐🧖‍♀️🍃🧷 \nTemu Cupom de 30% desconto + Frete grátis ++\n\n🔎(Digite na barra de pesquisa do app): ALi342708 \n\n💡Temu está com várias promoções de lançamento (assim como Shopee, Amazon,Shein e Aliexpress no passado)👍",
+      "original_text": "👐🧖‍♀️🍃🧷  \nTemu Cupom de 30% desconto + Frete grátis ++\n\n🔎(Digite na barra de pesquisa do app): ALi342708 \n\n💡Temu está com várias promoções de lançamento (assim como Shopee, Amazon,Shein e Aliexpress no passado)👍 https://t.co/kBnroWfFvw",
+      "links": [],
+      "translation_zh": "👐🧖‍♀️🍃🧷 \nTemu 30% 折扣优惠券 + 免费运费 ++\n\n🔎（在应用的搜索栏中输入）：ALi342708 \n\n💡Temu 正在进行多项上线促销活动（就像过去的 Shopee、Amazon、Shein 和 Aliexpress 一样）👍",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论价格、优惠或正向购物体验。",
+      "author_name": "Kayan",
+      "author_handle": "dfgftyggrdfx",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/781164668027015168/_MO6uO4M_normal.jpg",
+      "author_followers": 34,
+      "author_following": 58,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2016-09-27T19:00:36Z",
+      "author_verified": false,
+      "created_at": "2026-08-20T13:12:33Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2090426762178048497",
+      "conversation_context": {},
+      "language": "pt",
+      "media": [
+        {
+          "display_url": "pic.x.com/kBnroWfFvw",
+          "expanded_url": "https://x.com/dfgftyggrdfx/status/2090426762178048497/photo/1",
+          "ext_master_playlist_only": [],
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "ext_playlists": [],
+          "features": {
+            "large": {
+              "faces": []
+            },
+            "orig": {
+              "faces": []
+            }
+          },
+          "id_str": "2090426753097306112",
           "indices": [
             212,
             235
           ],
-          "media_key": "3_2090113205343313920",
+          "media_key": "3_2090426753097306112",
           "media_results": {
-            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR0BkuLo12AACgACHQGS5nsXoUkAAA==",
+            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR0CsA5vVpAACgACHQKwEIyXsfEAAA==",
             "result": {
               "__typename": "ApiMedia",
-              "id": "QXBpTWVkaWE6DAABCgABHQGS4ujXYAAKAAIdAZLmexehSQAA",
-              "media_key": "3_2090113205343313920"
+              "id": "QXBpTWVkaWE6DAABCgABHQKwDm9WkAAKAAIdArAQjJex8QAA",
+              "media_key": "3_2090426753097306112"
             }
           },
-          "media_url_https": "https://pbs.twimg.com/media/HQGS4ujXYAAfft5.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HQKwDm9WkAACUnl.jpg",
+          "original_info": {
+            "focus_rects": [
+              {
+                "h": 430,
+                "w": 768,
+                "x": 0,
+                "y": 22
+              },
+              {
+                "h": 768,
+                "w": 768,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 876,
+                "w": 768,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 1360,
+                "w": 680,
+                "x": 44,
+                "y": 0
+              },
+              {
+                "h": 1360,
+                "w": 768,
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "height": 1360,
+            "width": 768
+          },
+          "sizes": {
+            "large": {
+              "h": 1360,
+              "w": 768
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/kBnroWfFvw"
+        }
+      ],
+      "metrics": {
+        "likes": 9,
+        "reposts": 9,
+        "replies": 11,
+        "quotes": 2,
+        "bookmarks": 0,
+        "views": 86
+      },
+      "sentiment": "neutral",
+      "matched_terms": []
+    },
+    {
+      "post_id": "2090348766700138595",
+      "url": "https://x.com/dksoisisko/status/2090348766700138595",
+      "text": "👐🧖‍♀️🍃🧷 \nTemu Cupom de 30% desconto + Frete grátis ++\n\n🔎(Digite na barra de pesquisa do app): ALi342708 \n\n💡Temu está com várias promoções de lançamento (assim como Shopee, Amazon,Shein e Aliexpress no passado)👍",
+      "original_text": "👐🧖‍♀️🍃🧷  \nTemu Cupom de 30% desconto + Frete grátis ++\n\n🔎(Digite na barra de pesquisa do app): ALi342708 \n\n💡Temu está com várias promoções de lançamento (assim como Shopee, Amazon,Shein e Aliexpress no passado)👍 https://t.co/pLpZkOT17v",
+      "links": [],
+      "translation_zh": "👐🧖‍♀️🍃🧷 \nTemu 30% 折扣优惠券 + 免费送货 ++\n\n🔎（在 app 的搜索栏输入）：ALi342708 \n\n💡Temu 正在进行多项上线促销（就像过去的 Shopee、Amazon、Shein 和 Aliexpress 一样）👍",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论价格、优惠或正向购物体验。",
+      "author_name": "tola",
+      "author_handle": "dksoisisko",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2022654998312599552/-uuE7tVO_normal.jpg",
+      "author_followers": 26,
+      "author_following": 63,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2016-05-05T02:56:03Z",
+      "author_verified": false,
+      "created_at": "2026-08-20T08:02:37Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2090348766700138595",
+      "conversation_context": {},
+      "language": "pt",
+      "media": [
+        {
+          "display_url": "pic.x.com/pLpZkOT17v",
+          "expanded_url": "https://x.com/dksoisisko/status/2090348766700138595/photo/1",
+          "ext_master_playlist_only": [],
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "ext_playlists": [],
+          "features": {
+            "large": {
+              "faces": []
+            },
+            "orig": {
+              "faces": []
+            }
+          },
+          "id_str": "2090348755992084481",
+          "indices": [
+            212,
+            235
+          ],
+          "media_key": "3_2090348755992084481",
+          "media_results": {
+            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR0CaR5RloABCgACHQJpIM/WcGMAAA==",
+            "result": {
+              "__typename": "ApiMedia",
+              "id": "QXBpTWVkaWE6DAABCgABHQJpHlGWgAEKAAIdAmkgz9ZwYwAA",
+              "media_key": "3_2090348755992084481"
+            }
+          },
+          "media_url_https": "https://pbs.twimg.com/media/HQJpHlGWgAEjzYX.jpg",
           "original_info": {
             "focus_rects": [
               {
@@ -264,6 +689,194 @@
                 "w": 768,
                 "x": 0,
                 "y": 342
+              },
+              {
+                "h": 1360,
+                "w": 680,
+                "x": 33,
+                "y": 0
+              },
+              {
+                "h": 1360,
+                "w": 768,
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "height": 1360,
+            "width": 768
+          },
+          "sizes": {
+            "large": {
+              "h": 1360,
+              "w": 768
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/pLpZkOT17v"
+        }
+      ],
+      "metrics": {
+        "likes": 8,
+        "reposts": 8,
+        "replies": 8,
+        "quotes": 2,
+        "bookmarks": 0,
+        "views": 84
+      },
+      "sentiment": "neutral",
+      "matched_terms": []
+    },
+    {
+      "post_id": "2090415270863024464",
+      "url": "https://x.com/ossynoya/status/2090415270863024464",
+      "text": "How do people even order from this Temu. I want to try but everything they confusing 😂😂",
+      "original_text": "How do people even order from this Temu. I want to try but everything they confusing 😂😂",
+      "links": [],
+      "translation_zh": "大家到底是怎么从这个 Temu 下单的。我想试试，但所有东西都让人困惑 😂😂",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Ossy Vincent",
+      "author_handle": "ossynoya",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1666433208274042883/eBtzxsAe_normal.jpg",
+      "author_followers": 36749,
+      "author_following": 4416,
+      "author_bio": null,
+      "author_location": "West Africa ",
+      "author_joined_at": "2021-04-01T17:37:06Z",
+      "author_verified": false,
+      "created_at": "2026-08-20T12:26:53Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2090415270863024464",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 13,
+        "reposts": 0,
+        "replies": 9,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 1717
+      },
+      "sentiment": "neutral",
+      "matched_terms": []
+    },
+    {
+      "post_id": "2090380246528782578",
+      "url": "https://x.com/__bouge__/status/2090380246528782578",
+      "text": "can I order mirror on Temu?",
+      "original_text": "can I order mirror on Temu?",
+      "links": [],
+      "translation_zh": "我可以在 Temu 上订购镜子吗？",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "bouge",
+      "author_handle": "__bouge__",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2071323714444984320/5i-zwiSV_normal.jpg",
+      "author_followers": 1199,
+      "author_following": 401,
+      "author_bio": null,
+      "author_location": "Web 66",
+      "author_joined_at": "2017-11-05T12:42:36Z",
+      "author_verified": false,
+      "created_at": "2026-08-20T10:07:42Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2090380246528782578",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 6,
+        "reposts": 1,
+        "replies": 9,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 809
+      },
+      "sentiment": "neutral",
+      "matched_terms": []
+    },
+    {
+      "post_id": "2090561042002624984",
+      "url": "https://x.com/dksoisisko/status/2090561042002624984",
+      "text": "Código de descuenta en la app de TEMU\n\nConseguí ahora tu cupón del 30% de descuento + regalos gratis + envío gratis en todos los productos de Temu.\n\nUsá el código: ALi342708 \nTemu Cupón 🙂😊",
+      "original_text": "Código de descuenta en la app de TEMU\n\nConseguí ahora tu cupón del 30% de descuento + regalos gratis + envío gratis en todos los productos de Temu.\n\nUsá el código: ALi342708 \nTemu Cupón 🙂😊 https://t.co/F8UtQbwxfa",
+      "links": [],
+      "translation_zh": "TEMU app 里的折扣码\n\n现在获取你的 30% 折扣优惠券 + 免费礼品 + Temu 所有产品免运费。\n\n使用代码：ALi342708 \nTemu 优惠券 🙂😊",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "tola",
+      "author_handle": "dksoisisko",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2022654998312599552/-uuE7tVO_normal.jpg",
+      "author_followers": 26,
+      "author_following": 63,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2016-05-05T02:56:03Z",
+      "author_verified": false,
+      "created_at": "2026-08-20T22:06:07Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2090561042002624984",
+      "conversation_context": {},
+      "language": "es",
+      "media": [
+        {
+          "display_url": "pic.x.com/F8UtQbwxfa",
+          "expanded_url": "https://x.com/dksoisisko/status/2090561042002624984/photo/1",
+          "ext_master_playlist_only": [],
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "ext_playlists": [],
+          "features": {
+            "large": {
+              "faces": []
+            },
+            "orig": {
+              "faces": []
+            }
+          },
+          "id_str": "2090561031848226816",
+          "indices": [
+            189,
+            212
+          ],
+          "media_key": "3_2090561031848226816",
+          "media_results": {
+            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR0DKi6klnAACgACHQMqMQHWQdgAAA==",
+            "result": {
+              "__typename": "ApiMedia",
+              "id": "QXBpTWVkaWE6DAABCgABHQMqLqSWcAAKAAIdAyoxAdZB2AAA",
+              "media_key": "3_2090561031848226816"
+            }
+          },
+          "media_url_https": "https://pbs.twimg.com/media/HQMqLqSWcAAZZyG.jpg",
+          "original_info": {
+            "focus_rects": [
+              {
+                "h": 430,
+                "w": 768,
+                "x": 0,
+                "y": 837
+              },
+              {
+                "h": 768,
+                "w": 768,
+                "x": 0,
+                "y": 592
+              },
+              {
+                "h": 876,
+                "w": 768,
+                "x": 0,
+                "y": 484
               },
               {
                 "h": 1360,
@@ -288,180 +901,29 @@
             }
           },
           "type": "photo",
-          "url": "https://t.co/f9hMiJQ7b7"
+          "url": "https://t.co/F8UtQbwxfa"
         }
       ],
       "metrics": {
-        "likes": 9,
-        "reposts": 9,
-        "replies": 10,
-        "quotes": 5,
-        "bookmarks": 0,
-        "views": 127
-      },
-      "sentiment": "neutral",
-      "matched_terms": []
-    },
-    {
-      "post_id": "2090150434249785355",
-      "url": "https://x.com/liltitsebun/status/2090150434249785355",
-      "text": "hi guys,\nI’m adunola and I can shop any item on the surface of this earth be it clothes shoes jewelry household items, You name it .\nI’m also a shein and temu personal shopper.\nYou can shop any amount with no shipping fee or additional fees and it would be delivered directly.",
-      "original_text": "hi guys,\nI’m adunola and I can shop any item on the surface of this earth be it clothes shoes jewelry household items, You name it .\nI’m also a shein and temu personal shopper.\nYou can shop any amount with no shipping fee or additional fees and it would be delivered directly.",
-      "links": [],
-      "translation_zh": "嗨，大家好，\n我是 adunola，我可以代购地球表面上的任何商品，无论是衣服、鞋子、珠宝还是家居用品，你想要什么都可以。\n我也是 shein 和 temu 的个人代购。\n你可以购买任意金额的商品，没有运费或额外费用，并且会直接送达。",
-      "translation_status": "translated",
-      "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
-      "author_name": "adunola 🍒",
-      "author_handle": "liltitsebun",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/2025372680082395136/lP6RQl9r_normal.jpg",
-      "author_followers": 983,
-      "author_following": 168,
-      "author_bio": null,
-      "author_location": null,
-      "author_joined_at": "2025-12-06T19:42:42Z",
-      "author_verified": false,
-      "created_at": "2026-08-19T18:54:31Z",
-      "reply_to_post_id": null,
-      "reply_to_handle": null,
-      "quoted_post_id": null,
-      "conversation_id": "2090150434249785355",
-      "conversation_context": {},
-      "language": "en",
-      "media": [],
-      "metrics": {
-        "likes": 15,
-        "reposts": 9,
-        "replies": 1,
+        "likes": 3,
+        "reposts": 3,
+        "replies": 6,
         "quotes": 0,
-        "bookmarks": 2,
-        "views": 454
+        "bookmarks": 0,
+        "views": 16
       },
       "sentiment": "neutral",
       "matched_terms": []
     },
     {
-      "post_id": "2090168856409190883",
-      "url": "https://x.com/mck_11_11/status/2090168856409190883",
-      "text": "@Temu @FedEx\nYour support only seems to help when someone leaves a picture of the delivery.\nMy last order was marked delivered by FedEx, but they left zero delivery proof and I still haven’t received the package.\nTrying to contact FedEx has been the absolute worst experience — their AI can’t understand basic human speech and can’t even process a simple tracking number.\nPlease look into this.",
-      "original_text": "@Temu @FedEx\nYour support only seems to help when someone leaves a picture of the delivery.\nMy last order was marked delivered by FedEx, but they left zero delivery proof and I still haven’t received the package.\nTrying to contact FedEx has been the absolute worst experience — their AI can’t understand basic human speech and can’t even process a simple tracking number.\nPlease look into this.",
+      "post_id": "2090366017948291345",
+      "url": "https://x.com/C_onect/status/2090366017948291345",
+      "text": "🐹🕹🦷🍡 \n\n📢📢💰Cupom de Desconto Temu \n\n💸%30 + Frete grátis \n\n🔍(Baixe o app e digite o código na barra de busca em até 24 horas para ativar)\n\n 👉acw064667\n\n 😉Mais barato que a SHEIN\n\n ധഈഡവഐടഇ",
+      "original_text": "🐹🕹🦷🍡  \n\n📢📢💰Cupom de Desconto Temu \n\n💸%30 +  Frete grátis \n\n🔍(Baixe o app e digite o código na barra de busca em até 24 horas para ativar)\n\n 👉acw064667\n\n 😉Mais barato que a SHEIN\n\n ധഈഡവഐടഇ https://t.co/5X9EBNby70",
       "links": [],
-      "translation_zh": "@Temu @FedEx\n你们的客服似乎只有在有人留下配送照片时才会帮忙。\n我的上一单被FedEx标记为已送达，但他们没有留下任何配送证明，而我到现在还没收到包裹。\n试图联系FedEx简直是最糟糕的体验——他们的AI听不懂基本的人类语言，甚至连一个简单的追踪号码都处理不了。\n请调查一下这件事。",
-      "translation_status": "translated",
-      "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
-      "author_name": "MCK",
-      "author_handle": "mck_11_11",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/2037305325347598336/8LnpvTJ6_normal.jpg",
-      "author_followers": 3321,
-      "author_following": 2254,
-      "author_bio": null,
-      "author_location": "USA",
-      "author_joined_at": "2009-11-30T09:31:31Z",
-      "author_verified": false,
-      "created_at": "2026-08-19T20:07:43Z",
-      "reply_to_post_id": null,
-      "reply_to_handle": null,
-      "quoted_post_id": null,
-      "conversation_id": "2090168856409190883",
-      "conversation_context": {},
-      "language": "en",
-      "media": [],
-      "metrics": {
-        "likes": 7,
-        "reposts": 5,
-        "replies": 9,
-        "quotes": 1,
-        "bookmarks": 0,
-        "views": 155
-      },
-      "sentiment": "neutral",
-      "matched_terms": [
-        "delivery",
-        "tracking"
-      ]
-    },
-    {
-      "post_id": "2090110105580716496",
-      "url": "https://x.com/Judith_Moru/status/2090110105580716496",
-      "text": "I'm now a Temu addict!! \n\nGot another package from Temu today and I'm so in love!!! \n\nI particularly love the red dress I ordered(first time getting a dress from Temu coz I've been so skeptical).. \n\nThat dress???? Loveee itttt!!!",
-      "original_text": "I'm now a Temu addict!! \n\nGot another package from Temu today and I'm so in love!!! \n\nI particularly love the red dress I ordered(first time getting a dress from Temu coz I've been so skeptical).. \n\nThat dress???? Loveee itttt!!!",
-      "links": [],
-      "translation_zh": "我现在成了 Temu 上瘾者！！\n\n今天又收到了一个 Temu 包裹，我太爱了！！！\n\n我特别喜欢我订的那条红裙子（第一次从 Temu 买裙子，因为我一直很怀疑）..\n\n那条裙子？？？？爱死了！！！",
+      "translation_zh": "🐹🕹🦷🍡 \n\n📢📢💰Temu 折扣优惠券 \n\n💸30% + 免运费 \n\n🔍（下载 app，并在 24 小时内在搜索栏输入代码以激活）\n\n 👉acw064667\n\n 😉比 SHEIN 更便宜\n\n ധഈഡവഐടഇ",
       "translation_status": "translated",
       "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
-      "author_name": "The Cooking Medic🩺",
-      "author_handle": "Judith_Moru",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/2051941035345932288/HRyh4wuf_normal.jpg",
-      "author_followers": 716,
-      "author_following": 247,
-      "author_bio": null,
-      "author_location": "Nigeria",
-      "author_joined_at": "2023-10-20T07:57:45Z",
-      "author_verified": false,
-      "created_at": "2026-08-19T16:14:16Z",
-      "reply_to_post_id": null,
-      "reply_to_handle": null,
-      "quoted_post_id": null,
-      "conversation_id": "2090110105580716496",
-      "conversation_context": {},
-      "language": "en",
-      "media": [],
-      "metrics": {
-        "likes": 9,
-        "reposts": 0,
-        "replies": 4,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 224
-      },
-      "sentiment": "neutral",
-      "matched_terms": []
-    },
-    {
-      "post_id": "2090028754965832041",
-      "url": "https://x.com/ayomidedaddyj/status/2090028754965832041",
-      "text": "First order from temu let’s see if they will dissapoint me",
-      "original_text": "First order from temu let’s see if they will dissapoint me",
-      "links": [],
-      "translation_zh": "第一次从 temu 下单，看看他们会不会让我失望",
-      "translation_status": "translated",
-      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
-      "author_name": "Daddyj Onimotor🚘",
-      "author_handle": "ayomidedaddyj",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/1970252856293732352/Fski9D7r_normal.jpg",
-      "author_followers": 1102,
-      "author_following": 675,
-      "author_bio": null,
-      "author_location": null,
-      "author_joined_at": "2025-08-25T19:00:08Z",
-      "author_verified": false,
-      "created_at": "2026-08-19T10:51:00Z",
-      "reply_to_post_id": null,
-      "reply_to_handle": null,
-      "quoted_post_id": null,
-      "conversation_id": "2090028754965832041",
-      "conversation_context": {},
-      "language": "en",
-      "media": [],
-      "metrics": {
-        "likes": 9,
-        "reposts": 1,
-        "replies": 3,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 348
-      },
-      "sentiment": "neutral",
-      "matched_terms": []
-    },
-    {
-      "post_id": "2090191270107058597",
-      "url": "https://x.com/C_onect/status/2090191270107058597",
-      "text": "🦦🏹📰🚡 \n\nCupom de R$600\n\n Cupom de 30% desconto (digite na barra de pesquisa do app): \n\n➡️ acw064667\n\nTemu está com várias promoções de lançamento (assim como, no passado)\n\n ಖಞಝಡಉಯ",
-      "original_text": "🦦🏹📰🚡  \n\nCupom de R$600\n\n Cupom de 30% desconto (digite na barra de pesquisa do app): \n\n➡️ acw064667\n\nTemu está com várias promoções de lançamento (assim como, no passado)\n\n ಖಞಝಡಉಯ https://t.co/O9JHpJavrI",
-      "links": [],
-      "translation_zh": "🦦🏹📰🚡 \n\nR$600 优惠券\n\n 30% 折扣优惠券（在 app 的搜索栏输入）：\n\n➡️ acw064667\n\nTemu 正在进行多项上线促销（就像过去一样）\n\n ಖಞಝಡಉಯ",
-      "translation_status": "translated",
-      "summary_zh": "用户讨论价格、优惠或正向购物体验。",
       "author_name": "@Connect",
       "author_handle": "C_onect",
       "author_avatar_url": "https://pbs.twimg.com/profile_images/2308222510/bx7epoy4ktkov6n7ttqn_normal.jpeg",
@@ -471,17 +933,17 @@
       "author_location": null,
       "author_joined_at": "2012-06-14T18:00:36Z",
       "author_verified": false,
-      "created_at": "2026-08-19T21:36:47Z",
+      "created_at": "2026-08-20T09:11:10Z",
       "reply_to_post_id": null,
       "reply_to_handle": null,
       "quoted_post_id": null,
-      "conversation_id": "2090191270107058597",
+      "conversation_id": "2090366017948291345",
       "conversation_context": {},
       "language": "pt",
       "media": [
         {
-          "display_url": "pic.x.com/O9JHpJavrI",
-          "expanded_url": "https://x.com/C_onect/status/2090191270107058597/video/1",
+          "display_url": "pic.x.com/5X9EBNby70",
+          "expanded_url": "https://x.com/C_onect/status/2090366017948291345/video/1",
           "ext_master_playlist_only": [],
           "ext_media_availability": {
             "status": "Available"
@@ -489,48 +951,34 @@
           "ext_playlists": [],
           "features": {
             "large": {
-              "faces": [
-                {
-                  "h": 102,
-                  "w": 102,
-                  "x": 594,
-                  "y": 364
-                }
-              ]
+              "faces": []
             },
             "orig": {
-              "faces": [
-                {
-                  "h": 102,
-                  "w": 102,
-                  "x": 594,
-                  "y": 364
-                }
-              ]
+              "faces": []
             }
           },
-          "id_str": "2090191234317029376",
+          "id_str": "2090365980631506944",
           "indices": [
-            180,
-            203
+            188,
+            211
           ],
-          "media_key": "3_2090191234317029376",
+          "media_key": "3_2090365980631506944",
           "media_results": {
-            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR0B2dpyGhAACgACHQHZ4sdakaUAAA==",
+            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR0CeMi+GiAACgACHQJ40W5bEREAAA==",
             "result": {
               "__typename": "ApiMedia",
-              "id": "QXBpTWVkaWE6DAABCgABHQHZ2nIaEAAKAAIdAdnix1qRpQAA",
-              "media_key": "3_2090191234317029376"
+              "id": "QXBpTWVkaWE6DAABCgABHQJ4yL4aIAAKAAIdAnjRblsREQAA",
+              "media_key": "3_2090365980631506944"
             }
           },
-          "media_url_https": "https://pbs.twimg.com/media/HQHZ2nIaEAAfTko.png",
+          "media_url_https": "https://pbs.twimg.com/media/HQJ4yL4aIAA-85B.png",
           "original_info": {
             "focus_rects": [
               {
                 "h": 398,
                 "w": 710,
                 "x": 0,
-                "y": 0
+                "y": 102
               },
               {
                 "h": 710,
@@ -541,13 +989,13 @@
               {
                 "h": 710,
                 "w": 623,
-                "x": 0,
+                "x": 87,
                 "y": 0
               },
               {
                 "h": 710,
                 "w": 355,
-                "x": 0,
+                "x": 302,
                 "y": 0
               },
               {
@@ -567,34 +1015,34 @@
             }
           },
           "type": "photo",
-          "url": "https://t.co/O9JHpJavrI"
+          "url": "https://t.co/5X9EBNby70"
         },
         {
           "additional_media_info": {
             "monetizable": false
           },
-          "display_url": "pic.x.com/O9JHpJavrI",
-          "expanded_url": "https://x.com/C_onect/status/2090191270107058597/video/1",
+          "display_url": "pic.x.com/5X9EBNby70",
+          "expanded_url": "https://x.com/C_onect/status/2090366017948291345/video/1",
           "ext_master_playlist_only": [],
           "ext_media_availability": {
             "status": "Available"
           },
           "ext_playlists": [],
-          "id_str": "2090191252704907264",
+          "id_str": "2090365999816265728",
           "indices": [
-            180,
-            203
+            188,
+            211
           ],
-          "media_key": "7_2090191252704907264",
+          "media_key": "7_2090365999816265728",
           "media_results": {
-            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAAR0B2d66GtAACgACHQHZ4sdakaUAAA==",
+            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAAR0CeM01mlAACgACHQJ40W5bEREAAA==",
             "result": {
               "__typename": "ApiMedia",
-              "id": "QXBpTWVkaWE6DAADCgABHQHZ3roa0AAKAAIdAdnix1qRpQAA",
-              "media_key": "7_2090191252704907264"
+              "id": "QXBpTWVkaWE6DAADCgABHQJ4zTWaUAAKAAIdAnjRblsREQAA",
+              "media_key": "7_2090365999816265728"
             }
           },
-          "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/2090191252704907264/pu/img/Uz8Ma8sbZfe9Fubb.jpg",
+          "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/2090365999816265728/pu/img/1X6TiHvfj5_R_dkj.jpg",
           "original_info": {
             "focus_rects": [],
             "height": 710,
@@ -607,204 +1055,47 @@
             }
           },
           "type": "video",
-          "url": "https://t.co/O9JHpJavrI",
+          "url": "https://t.co/5X9EBNby70",
           "video_info": {
             "aspect_ratio": [
               1,
               1
             ],
-            "duration_millis": 5000,
+            "duration_millis": 3916,
             "variants": [
               {
                 "content_type": "application/x-mpegURL",
-                "url": "https://video.twimg.com/ext_tw_video/2090191252704907264/pu/pl/TmnVeXL-ldAfGPx_.m3u8?tag=12"
+                "url": "https://video.twimg.com/ext_tw_video/2090365999816265728/pu/pl/B5_0B_a69iDPgB5N.m3u8?tag=12"
               },
               {
                 "bitrate": 432000,
                 "content_type": "video/mp4",
-                "url": "https://video.twimg.com/ext_tw_video/2090191252704907264/pu/vid/avc1/320x320/dN_cwO12OAntAK9p.mp4?tag=12"
+                "url": "https://video.twimg.com/ext_tw_video/2090365999816265728/pu/vid/avc1/320x320/eNQN2mSzlTWBB9sq.mp4?tag=12"
               },
               {
                 "bitrate": 832000,
                 "content_type": "video/mp4",
-                "url": "https://video.twimg.com/ext_tw_video/2090191252704907264/pu/vid/avc1/540x540/Sed8iRfcuDDJ4J6f.mp4?tag=12"
+                "url": "https://video.twimg.com/ext_tw_video/2090365999816265728/pu/vid/avc1/540x540/6rs01mDc7gjlKv3X.mp4?tag=12"
               },
               {
                 "bitrate": 1280000,
                 "content_type": "video/mp4",
-                "url": "https://video.twimg.com/ext_tw_video/2090191252704907264/pu/vid/avc1/710x710/NCHXNswH4t1qakuA.mp4?tag=12"
+                "url": "https://video.twimg.com/ext_tw_video/2090365999816265728/pu/vid/avc1/710x710/PyZlRGwoX0ryi-PE.mp4?tag=12"
               }
             ]
           }
         }
       ],
       "metrics": {
-        "likes": 5,
-        "reposts": 5,
-        "replies": 2,
+        "likes": 3,
+        "reposts": 6,
+        "replies": 3,
         "quotes": 0,
         "bookmarks": 0,
-        "views": 19
+        "views": 75
       },
       "sentiment": "neutral",
       "matched_terms": []
-    },
-    {
-      "post_id": "2090112874962178434",
-      "url": "https://x.com/abimbola271709/status/2090112874962178434",
-      "text": "Got my order from temu today and I can say it’s 10/10 .\nI love all what I bought and the quality is mad 🥰🥰🥰🥰..\nThank you @shoptemu",
-      "original_text": "Got my order from temu today and I can say it’s 10/10 .\nI love all what I bought and the quality is mad 🥰🥰🥰🥰..\nThank you @shoptemu https://t.co/U38NW3GavH",
-      "links": [],
-      "translation_zh": "今天收到了我从 temu 买的订单，我可以说它是 10/10。\n我喜欢我买的所有东西，质量也太棒了🥰🥰🥰🥰..\n谢谢 @shoptemu",
-      "translation_status": "translated",
-      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
-      "author_name": "Venus Beauty channel 🌸🌸🩷🩷",
-      "author_handle": "abimbola271709",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/2071644647751819264/d76dub8N_normal.jpg",
-      "author_followers": 5596,
-      "author_following": 4853,
-      "author_bio": null,
-      "author_location": "Nigeria",
-      "author_joined_at": "2020-08-07T22:45:50Z",
-      "author_verified": false,
-      "created_at": "2026-08-19T16:25:16Z",
-      "reply_to_post_id": null,
-      "reply_to_handle": null,
-      "quoted_post_id": null,
-      "conversation_id": "2090112874962178434",
-      "conversation_context": {},
-      "language": "en",
-      "media": [
-        {
-          "allow_download_status": {
-            "allow_download": true
-          },
-          "display_url": "pic.x.com/U38NW3GavH",
-          "expanded_url": "https://x.com/abimbola271709/status/2090112874962178434/photo/1",
-          "ext_master_playlist_only": [],
-          "ext_media_availability": {
-            "status": "Available"
-          },
-          "ext_playlists": [],
-          "features": {
-            "large": {
-              "faces": []
-            },
-            "orig": {
-              "faces": []
-            }
-          },
-          "id_str": "2090112862970576896",
-          "indices": [
-            131,
-            154
-          ],
-          "media_key": "3_2090112862970576896",
-          "media_results": {
-            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR0BkpMx1gAACgACHQGSlfyXUYIAAA==",
-            "result": {
-              "__typename": "ApiMedia",
-              "id": "QXBpTWVkaWE6DAABCgABHQGSkzHWAAAKAAIdAZKV/JdRggAA",
-              "media_key": "3_2090112862970576896"
-            }
-          },
-          "media_url_https": "https://pbs.twimg.com/media/HQGSkzHWAAAfU-D.jpg",
-          "original_info": {
-            "focus_rects": [
-              {
-                "h": 430,
-                "w": 768,
-                "x": 0,
-                "y": 0
-              },
-              {
-                "h": 768,
-                "w": 768,
-                "x": 0,
-                "y": 0
-              },
-              {
-                "h": 876,
-                "w": 768,
-                "x": 0,
-                "y": 0
-              },
-              {
-                "h": 1024,
-                "w": 512,
-                "x": 76,
-                "y": 0
-              },
-              {
-                "h": 1024,
-                "w": 768,
-                "x": 0,
-                "y": 0
-              }
-            ],
-            "height": 1024,
-            "width": 768
-          },
-          "sizes": {
-            "large": {
-              "h": 1024,
-              "w": 768
-            }
-          },
-          "type": "photo",
-          "url": "https://t.co/U38NW3GavH"
-        }
-      ],
-      "metrics": {
-        "likes": 7,
-        "reposts": 3,
-        "replies": 1,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 152
-      },
-      "sentiment": "neutral",
-      "matched_terms": []
-    },
-    {
-      "post_id": "2090186098509001206",
-      "url": "https://x.com/EthosReviews/status/2090186098509001206",
-      "text": "@FedExHelp @mck_11_11 @FedEx @Temu\n@mck_11_11’s order was marked delivered by FedEx. No delivery proof was provided. The package has not arrived. Attempts to reach FedEx have been blocked by an AI system unable to process a tracking number.\n\nWe urge you to investigate the delivery scan. We demand that the package is located or a claim is opened. We ask that you confirm the next step to @mck_11_11.\n\nThis case remains under our watch until a reasoned resolution is achieved.\n#EthosIntervention",
-      "original_text": "@FedExHelp @mck_11_11 @FedEx @Temu\n@mck_11_11’s order was marked delivered by FedEx. No delivery proof was provided. The package has not arrived. Attempts to reach FedEx have been blocked by an AI system unable to process a tracking number.\n\nWe urge you to investigate the delivery scan. We demand that the package is located or a claim is opened. We ask that you confirm the next step to @mck_11_11.\n\nThis case remains under our watch until a reasoned resolution is achieved.\n#EthosIntervention",
-      "links": [],
-      "translation_zh": "@FedExHelp @mck_11_11 @FedEx @Temu\n@mck_11_11 的订单被 FedEx 标记为已送达。没有提供送达证明。包裹尚未到达。联系 FedEx 的尝试被一个无法处理追踪号码的 AI 系统阻挡。\n\n我们敦促你们调查这次送达扫描。我们要求找到包裹，或开启索赔。我们请求你们向 @mck_11_11 确认下一步。\n\n在达成有理有据的解决方案之前，此案仍在我们的关注之下。\n#EthosIntervention",
-      "translation_status": "translated",
-      "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
-      "author_name": "Ethos Reviews",
-      "author_handle": "EthosReviews",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/1950449792687173632/DuYuqSWC_normal.jpg",
-      "author_followers": 5217,
-      "author_following": 4326,
-      "author_bio": null,
-      "author_location": null,
-      "author_joined_at": "2025-06-02T18:18:40Z",
-      "author_verified": false,
-      "created_at": "2026-08-19T21:16:14Z",
-      "reply_to_post_id": null,
-      "reply_to_handle": null,
-      "quoted_post_id": null,
-      "conversation_id": "2090168856409190883",
-      "conversation_context": {},
-      "language": "en",
-      "media": [],
-      "metrics": {
-        "likes": 4,
-        "reposts": 0,
-        "replies": 4,
-        "quotes": 2,
-        "bookmarks": 0,
-        "views": 92
-      },
-      "sentiment": "positive",
-      "matched_terms": [
-        "delivery",
-        "tracking"
-      ]
     }
   ],
   "anomalies": [

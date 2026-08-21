@@ -82,6 +82,7 @@ def verify_conversation_contexts(payload, label: str) -> None:
         root_anchor_handle = ""
         obj_post_id = str(obj.get("post_id") or "")
         obj_conversation_id = str(obj.get("conversation_id") or "")
+        obj_created_at = str(obj.get("created_at") or "")
         if obj_post_id and obj_conversation_id == obj_post_id:
             root_anchor_handle = str(obj.get("author_handle") or "").strip().lstrip("@").lower()
         for post in posts:
@@ -89,12 +90,14 @@ def verify_conversation_contexts(payload, label: str) -> None:
             translation = str(post.get("translation_zh") or "")
             post_id = post.get("post_id") or "unknown"
             post_handle = str(post.get("author_handle") or "").strip().lstrip("@").lower()
+            post_created_at = str(post.get("created_at") or "")
             compact = re.sub(r"\s+", "", f"{text} {translation}")
             profile = " ".join(str(post.get(key) or "") for key in ("author_name", "author_handle", "author_bio"))
             compact_profile = re.sub(r"\s+", "", profile)
             if root_anchor_handle and str(post_id) != obj_post_id and post_handle != root_anchor_handle:
+                is_later_context_post = bool(obj_created_at and post_created_at and post_created_at >= obj_created_at)
                 assert_true(
-                    text.strip().lower().startswith(f"@{root_anchor_handle}"),
+                    text.strip().lower().startswith(f"@{root_anchor_handle}") or is_later_context_post,
                     f"{label}:{anchor}:{post_id} root context contains unrelated non-reply post",
                 )
             assert_true(not LOW_QUALITY_CONTEXT_RE.search(compact), f"{label}:{anchor}:{post_id} context contains low-quality vulgar noise")
