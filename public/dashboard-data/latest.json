@@ -12,7 +12,7 @@
     "needs_review": 0,
     "primary_volume": 65,
     "primary_candidate_volume": 65,
-    "competitor_volume": 75,
+    "competitor_volume": 45,
     "negative_share": 29
   },
   "executive_summary": {
@@ -1877,11 +1877,11 @@
   ],
   "competitor": {
     "brand": "competitor",
-    "volume": 75,
+    "volume": 45,
     "sentiment": {
-      "negative": 36,
-      "neutral": 39,
-      "positive": 0
+      "negative": 6,
+      "neutral": 37,
+      "positive": 2
     },
     "top_terms": [
       {
@@ -2982,12 +2982,12 @@
   "source_status": {
     "status": "normal",
     "raw_posts_collected": 143,
-    "effective_posts": 140,
+    "effective_posts": 110,
     "brand_breakdown": {
       "primary_candidates": 65,
       "primary_effective": 65,
       "competitor_candidates": 78,
-      "competitor_effective": 75
+      "competitor_effective": 45
     },
     "translation": {
       "counts": {

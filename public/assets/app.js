@@ -1999,6 +1999,7 @@ function mediaGridNode(media = [], owner = {}) {
   const items = Array.isArray(media) ? media.filter(Boolean) : [];
   if (!items.length) return "";
   const hasVideo = items.some(isVideoMedia);
+  const hasPortraitVideo = items.some(isPortraitVideoMedia);
   const xVideoEmbed = USE_X_EMBED_FOR_VIDEO && !owner?.is_sample && hasVideo ? xVideoEmbedNode(owner, items.find(isVideoMedia)) : "";
   const lightboxUrls = imageMediaUrls(items);
   const nodes = [];
@@ -2011,6 +2012,7 @@ function mediaGridNode(media = [], owner = {}) {
   const classNames = [
     "featured-media-grid",
     hasVideo ? "has-video" : "",
+    hasPortraitVideo ? "has-portrait-video" : "",
     nodes.length === 1 ? "single-media" : "",
     xVideoEmbed ? "has-x-embed" : "",
   ].filter(Boolean).join(" ");
@@ -2025,18 +2027,18 @@ function mediaNode(item, owner = {}, options = {}) {
   if (isVideoMedia(item)) {
     const posterUrl = videoPosterUrl(item) || imagePreviewMediaUrl(item);
     const videoUrl = bestVideoUrl(item);
-    const fallbackUrl = tweetVideoOpenUrl(owner, item, options.mediaIndex)
-      || safeExternalUrl(item.fallback_url || item.fallbackUrl || "")
-      || tweetOpenUrl(owner, item);
-    if (videoUrl && !parseTweetUrl(videoUrl)) return htmlVideoNode(videoUrl, posterUrl, item);
-    const originalUrl = fallbackUrl || videoUrl;
+    const tweetUrl = tweetVideoOpenUrl(owner, item, options.mediaIndex);
+    const fallbackUrl = safeExternalUrl(item.fallback_url || item.fallbackUrl || "") || tweetOpenUrl(owner, item);
+    const originalUrl = tweetUrl || fallbackUrl || videoUrl;
+    if (!parseTweetUrl(tweetUrl) && videoUrl && !parseTweetUrl(videoUrl)) return htmlVideoNode(videoUrl, posterUrl, item);
     if (!originalUrl) return posterUrl ? imageMediaNode(posterUrl, { ...options, aspectRatio: mediaAspectRatio(item) }) : "";
     const aspectStyle = mediaAspectStyle(item);
+    const shellClass = ["media-video-shell", mediaOrientationClass(item)].filter(Boolean).join(" ");
     const posterNode = posterUrl
       ? `<img class="media-video-thumb" src="${escapeHtml(posterUrl)}" alt="" loading="lazy" />`
       : `<span class="media-video-thumb fallback" aria-hidden="true"></span>`;
     return `
-      <div class="media-video-shell"${aspectStyle}>
+      <div class="${shellClass}"${aspectStyle}>
         <a class="media-video-link" href="${escapeHtml(originalUrl)}" target="_blank" rel="noreferrer" aria-label="打开视频">
           ${posterNode}
           <span class="media-play-button" aria-hidden="true"><span></span></span>
@@ -2074,6 +2076,11 @@ function imageMediaUrls(items = []) {
 }
 
 function mediaAspectRatio(item) {
+  const dimensions = mediaAspectDimensions(item);
+  return dimensions ? `${dimensions.width} / ${dimensions.height}` : "";
+}
+
+function mediaAspectDimensions(item) {
   const candidates = [
     item?.video_info?.aspect_ratio,
     item?.videoInfo?.aspectRatio,
@@ -2086,14 +2093,38 @@ function mediaAspectRatio(item) {
     if (!Array.isArray(candidate) || candidate.length < 2) continue;
     const width = Number(candidate[0]);
     const height = Number(candidate[1]);
-    if (width > 0 && height > 0) return `${width} / ${height}`;
+    if (width > 0 && height > 0) return { width, height };
   }
-  return "";
+  return null;
 }
 
-function mediaAspectStyle(item) {
-  const ratio = mediaAspectRatio(item);
-  return ratio ? ` style="--media-aspect-ratio: ${escapeHtml(ratio)}"` : "";
+function mediaAspectStyle(item, options = {}) {
+  const dimensions = mediaAspectDimensions(item);
+  if (!dimensions) return "";
+  const styles = [`--media-aspect-ratio: ${dimensions.width} / ${dimensions.height}`];
+  if (dimensions.height > dimensions.width) {
+    const maxHeight = Number(options.portraitMaxHeight || 300);
+    const minWidth = Number(options.portraitMinWidth || 160);
+    const maxWidth = Number(options.portraitMaxWidth || 340);
+    const portraitWidth = Math.round(Math.max(minWidth, Math.min(maxWidth, maxHeight * (dimensions.width / dimensions.height))));
+    styles.push(`--media-portrait-max-width: ${portraitWidth}px`);
+    styles.push(`--media-portrait-max-height: ${maxHeight}px`);
+  }
+  return ` style="${escapeHtml(styles.join("; "))}"`;
+}
+
+function mediaOrientationClass(item) {
+  const dimensions = mediaAspectDimensions(item);
+  if (!dimensions) return "";
+  if (dimensions.height > dimensions.width) return "is-portrait";
+  if (dimensions.width > dimensions.height) return "is-landscape";
+  return "is-square";
+}
+
+function isPortraitVideoMedia(item) {
+  if (!isVideoMedia(item)) return false;
+  const dimensions = mediaAspectDimensions(item);
+  return Boolean(dimensions && dimensions.height > dimensions.width);
 }
 
 function isVideoMedia(item) {
@@ -2196,9 +2227,10 @@ function htmlVideoNode(videoUrl, posterUrl, item = {}) {
   const safeVideoUrl = safeExternalUrl(videoUrl);
   if (!safeVideoUrl) return "";
   const safePosterUrl = safeExternalUrl(posterUrl || "");
-  const aspectStyle = mediaAspectStyle(item);
+  const aspectStyle = mediaAspectStyle(item, { portraitMaxHeight: 480, portraitMinWidth: 200 });
+  const shellClass = ["media-video-shell", "playable", mediaOrientationClass(item)].filter(Boolean).join(" ");
   return `
-    <div class="media-video-shell playable"${aspectStyle}>
+    <div class="${shellClass}"${aspectStyle}>
       <video class="media-video" controls playsinline preload="metadata"${safePosterUrl ? ` poster="${escapeHtml(safePosterUrl)}"` : ""}>
         <source src="${escapeHtml(safeVideoUrl)}" type="video/mp4" />
       </video>

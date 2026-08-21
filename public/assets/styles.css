@@ -2269,6 +2269,11 @@ select {
   max-width: min(680px, 100%);
 }
 
+.featured-media-grid.has-portrait-video {
+  grid-template-columns: minmax(160px, min(var(--media-portrait-max-width, 360px), 100%));
+  max-width: min(var(--media-portrait-max-width, 360px), 100%);
+}
+
 .featured-media-grid.has-x-embed {
   grid-template-columns: minmax(0, min(560px, 100%));
 }
@@ -2307,10 +2312,17 @@ select {
   position: relative;
   overflow: hidden;
   width: 100%;
+  max-width: 100%;
   aspect-ratio: var(--media-aspect-ratio, 16 / 9);
   border: 1px solid var(--line-soft);
   border-radius: 8px;
   background: #101820;
+}
+
+.media-video-shell.is-portrait {
+  width: min(100%, var(--media-portrait-max-width, 360px));
+  max-height: min(60vh, var(--media-portrait-max-height, 300px));
+  justify-self: start;
 }
 
 .media-video,

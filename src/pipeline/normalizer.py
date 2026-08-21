@@ -75,6 +75,16 @@ FINANCIAL_RETURN_CONTEXT_TERMS = [
     "指数",
 ]
 
+BLOCKED_AUTHOR_HANDLES = {
+    "ctsurvivor17",
+}
+
+SENSITIVE_OFF_TOPIC_PATTERNS = {
+    "political_conspiracy": re.compile(r"\b(?:antifa|maga|qteam|stolenvalor|stoicpredo|team trump|president trump)\b", re.IGNORECASE),
+    "child_exploitation_claims": re.compile(r"\b(?:epstein island|lolita express|child trafficking|trafficked children)\b", re.IGNORECASE),
+    "political_violence_claims": re.compile(r"\b(?:assassination attempts?|terrorist|cultists?)\b", re.IGNORECASE),
+}
+
 
 def _has_any_phrase(text: str, terms: list[str]) -> bool:
     return any(term.lower() in text for term in terms)
@@ -101,6 +111,20 @@ def _expanded_link_text(post: dict[str, Any]) -> str:
 
 def _matching_text(post: dict[str, Any]) -> str:
     return _lower_text(f"{_decode_html_entities(post.get('text'))} {_expanded_link_text(post)}")
+
+
+def _author_handle(post: dict[str, Any]) -> str:
+    return str(post.get("author_handle") or "").strip().lstrip("@").lower()
+
+
+def _policy_noise_terms(post: dict[str, Any], text: str) -> list[str]:
+    reasons: list[str] = []
+    if _author_handle(post) in BLOCKED_AUTHOR_HANDLES:
+        reasons.append("blocked_author")
+    sensitive_hits = [label for label, pattern in SENSITIVE_OFF_TOPIC_PATTERNS.items() if pattern.search(text)]
+    if len(sensitive_hits) >= 2:
+        reasons.append("off_topic_sensitive_thread")
+    return reasons
 
 
 def _readable_url_label(url: str) -> str:
@@ -160,6 +184,8 @@ def normalize_posts(posts: list[dict[str, Any]], keyword_config: dict[str, Any])
         matched_context_required_terms = _contains_any(text, context_required_terms)
         matched_spam_terms = _contains_any(text, spam_terms)
         matched_irrelevant_terms = _contains_any(text, irrelevant_terms)
+        matched_policy_noise_terms = _policy_noise_terms(post, text)
+        matched_irrelevant_terms = [*matched_irrelevant_terms, *matched_policy_noise_terms]
         matched_risk_terms = _filter_contextual_risk_terms(text, _contains_any(text, risk_terms))
         matched_opportunity_terms = _contains_any(text, opportunity_terms)
         brand_ambiguity = bool(matched_ambiguous_terms) and not context_evidence

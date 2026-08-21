@@ -11,14 +11,20 @@ from src.pipeline.clusterer import cluster_posts
 from src.utils.config import load_project_json
 
 
-def post(post_id: str, text: str, brand_candidate: str = "joybuy", links: Optional[list[str]] = None) -> dict:
+def post(
+    post_id: str,
+    text: str,
+    brand_candidate: str = "joybuy",
+    links: Optional[list[str]] = None,
+    author_handle: str = "test",
+) -> dict:
     return {
         "post_id": post_id,
         "url": f"https://x.com/test/status/{post_id}",
         "text": text,
         "author_id": "author-test",
         "author_name": "Test",
-        "author_handle": "test",
+        "author_handle": author_handle,
         "author_followers": 10,
         "author_verified": False,
         "created_at": "2026-07-17T00:00:00Z",
@@ -64,6 +70,8 @@ def main() -> None:
                 "Malam ini pukul 20:00, join the JD.com live streaming. Jangan lupa datang ya.",
             ),
             post("13", "Joybuy app data privacy and security concerns need answers."),
+            post("14", "Temu Team Trump jacket thread about AntiFa and child trafficking allegations.", "temu"),
+            post("15", "Temu discount thread from a blocked off-topic source.", "temu", author_handle="CTSurvivor17"),
         ],
         config,
     )
@@ -87,6 +95,8 @@ def main() -> None:
     assert "Ici >> example.com/joybuy-subscription" in by_id["11"]["clean_text"], "HTML entities should be decoded before public display"
     assert by_id["12"]["is_relevant"], "JD.com livestream fan update should remain relevant"
     assert by_id["13"]["is_relevant"], "real data privacy concerns should remain relevant"
+    assert not by_id["14"]["is_relevant"], "off-topic sensitive political conspiracy threads must be excluded"
+    assert not by_id["15"]["is_relevant"], "blocked off-topic source must be excluded"
     clusters = cluster_posts(rows, "joybuy")
     regulatory = [cluster for cluster in clusters if cluster["topic"] == "regulatory"]
     positive = [cluster for cluster in clusters if cluster["topic"] == "positive_experience"]

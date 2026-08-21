@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-source "$ROOT/scripts/macos/local_env.sh"
+PRIMARY_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+ROOT="$PRIMARY_ROOT"
+source "$PRIMARY_ROOT/scripts/macos/local_env.sh"
 
 LOG_DIR="$ROOT/data/logs/macos"
-LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-diting-digests.lock"
+TMP_BASE="${TMPDIR:-/tmp}"
+TMP_BASE="${TMP_BASE%/}"
+LOCK_DIR="$TMP_BASE/brand-radar-diting-digests.lock"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 DETAIL_DAYS="${BRAND_RADAR_DITING_DETAIL_DAYS:-60}"
+BRANCH="${BRAND_RADAR_DITING_BRANCH:-main}"
+ISOLATED_WORKTREE="${BRAND_RADAR_DITING_ISOLATED_WORKTREE:-1}"
+SYNC_PARENT=""
 
 mkdir -p "$LOG_DIR"
 
@@ -22,6 +28,11 @@ fail() {
 
 cleanup() {
   rmdir "$LOCK_DIR" 2>/dev/null || true
+  if [[ -n "$SYNC_PARENT" && -d "$SYNC_PARENT" ]]; then
+    case "$SYNC_PARENT" in
+      "$TMP_BASE"/brand-radar-diting-sync.*) rm -rf "$SYNC_PARENT" ;;
+    esac
+  fi
 }
 
 if ! mkdir "$LOCK_DIR" 2>/dev/null; then
@@ -49,6 +60,27 @@ ensure_no_local_source_changes() {
     printf '%s\n' "$untracked" >&2
     fail "Untracked non-Diting files exist. Commit, ignore or remove them before the scheduled sync."
   fi
+}
+
+prepare_sync_checkout() {
+  local remote_url
+  if [[ "$ISOLATED_WORKTREE" != "1" ]]; then
+    ROOT="$PRIMARY_ROOT"
+    ensure_no_local_source_changes
+    log "Syncing repository."
+    git pull --ff-only origin "$BRANCH"
+    return
+  fi
+
+  remote_url="$(git -C "$PRIMARY_ROOT" config --get remote.origin.url || true)"
+  if [[ -z "$remote_url" ]]; then
+    fail "Cannot determine origin remote for isolated Diting digest sync."
+  fi
+
+  SYNC_PARENT="$(mktemp -d "$TMP_BASE/brand-radar-diting-sync.XXXXXX")"
+  ROOT="$SYNC_PARENT/repo"
+  log "Preparing isolated clean checkout for Diting digest sync."
+  git clone --quiet --depth 1 --branch "$BRANCH" "$remote_url" "$ROOT"
 }
 
 commit_with_repo_identity() {
@@ -84,17 +116,15 @@ else:
 PY
 }
 
-cd "$ROOT"
+cd "$PRIMARY_ROOT"
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 command -v git >/dev/null 2>&1 || fail "git is not available."
 command -v "$PYTHON_BIN" >/dev/null 2>&1 || fail "$PYTHON_BIN is not available."
 
 log "Starting ${BRAND_RADAR_DISPLAY_NAME} Diting digest sync."
-ensure_no_local_source_changes
-
-log "Syncing repository."
-git pull --ff-only origin main
+prepare_sync_checkout
+cd "$ROOT"
 
 log "Syncing AI/TG digest data from Diting."
 if command -v caffeinate >/dev/null 2>&1; then
