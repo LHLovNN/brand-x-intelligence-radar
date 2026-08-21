@@ -2062,7 +2062,19 @@ function imagePreviewMediaUrl(item) {
 }
 
 function videoPosterUrl(item) {
-  return safeExternalUrl(item?.poster_url || item?.posterUrl || item?.preview_image_url || item?.previewImageUrl || item?.thumb_url || item?.thumbUrl || "");
+  return safeExternalUrl(
+    item?.poster_url
+      || item?.posterUrl
+      || item?.preview_image_url
+      || item?.previewImageUrl
+      || item?.thumb_url
+      || item?.thumbUrl
+      || item?.media_url_https
+      || item?.mediaUrlHttps
+      || item?.media_url
+      || item?.mediaUrl
+      || ""
+  );
 }
 
 function imageMediaUrls(items = []) {
