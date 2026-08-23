@@ -1,19 +1,49 @@
 {
-  "generated_at": "2026-08-22T00:30:08Z",
-  "generated_at_label": "2026-08-22 08:30 BJT",
+  "generated_at": "2026-08-23T00:30:08Z",
+  "generated_at_label": "2026-08-23 08:30 BJT",
   "source": "codew1028/dt",
   "source_base_url": "https://codew1028.github.io/dt",
   "detail_days": 60,
   "latest": {
-    "ai": "2026-08-22",
-    "tg": "2026-08-22"
+    "ai": "2026-08-23",
+    "tg": "2026-08-23"
   },
-  "latest_date": "2026-08-22",
+  "latest_date": "2026-08-23",
   "counts": {
-    "ai": 101,
-    "tg": 108
+    "ai": 102,
+    "tg": 109
   },
   "items": [
+    {
+      "kind": "tg",
+      "kind_label": "TG 日报",
+      "date": "2026-08-23",
+      "file": "2026-08-23-tg-digest.html",
+      "title": "TG 日报",
+      "source_url": "https://codew1028.github.io/dt/2026-08-23-tg-digest.html",
+      "search_text_hash": "c448e96978120f33",
+      "body_preview": "TG 频道日报 VOL.20260823 TG 频道日报 2026年08月23日 · 星期日 · 6 个频道 · 38 条内容 38 条内容 6 个频道 01 TG 频道精选 38 条 @openclaw1024 00:44 Tibo 分享了 Codex 开启 1M 上下文的方法。不过我不是很有动力去修改，感觉当前还挺流畅的，我相信他们已经针对这个上下文调优过，只要压缩得当，上下文短一些性能会更好也更便宜。 具体方法很简单，只要在 ~/.codex/config.toml 中",
+      "item_count": 38,
+      "section_count": 6,
+      "has_json": true,
+      "json_url": "2026-08-23-tg-digest.json",
+      "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-23.json",
+      "detail_available": true
+    },
+    {
+      "kind": "ai",
+      "kind_label": "AI 日报",
+      "date": "2026-08-23",
+      "file": "20260823-AI日报.html",
+      "title": "AI 日报",
+      "source_url": "https://codew1028.github.io/dt/20260823-AI%E6%97%A5%E6%8A%A5.html",
+      "search_text_hash": "6fad179de155a439",
+      "body_preview": "🤖 AI 日报 VOL.20260823 🤖 AI 日报 2026年08月23日 · 星期日 · 1 个板块 · 1 条内容 1 条内容 1 个板块 01 行业动态 1 条 第二届世界人形机器人运动会开幕：2056 台机器人齐聚“冰丝带”，666 支队伍竞技 51 赛项 第二届世界人形机器人运动会今晚在国家速滑馆“冰丝带”开幕，666 支队伍、2056 台机器人参赛，队伍数量较首届增长 138%，机器人数量翻了两番。天工 Ultra 在百米预赛跑出 9.39 秒，打破博尔特 ",
+      "item_count": 1,
+      "section_count": 1,
+      "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-23.json",
+      "detail_available": true
+    },
     {
       "kind": "tg",
       "kind_label": "TG 日报",
