@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+import socket
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from src.adapters import twitterapi_io as twitterapi_module
 from src.adapters.twitterapi_io import ProviderBudgetExceeded, TwitterApiIoAdapter
 
 
@@ -201,6 +203,66 @@ def main() -> None:
         raise AssertionError("expected ProviderBudgetExceeded when request cap is zero")
     assert capped.requests_used == 0
     assert capped.request_budget_exhausted is True
+
+    class FakeResponse:
+        def __init__(self, body: str) -> None:
+            self.body = body
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc, tb):
+            return False
+
+        def read(self):
+            return self.body.encode("utf-8")
+
+    original_urlopen = twitterapi_module.urllib.request.urlopen
+    original_sleep = twitterapi_module.time.sleep
+    try:
+        timeout_calls = []
+        waits = []
+
+        def flaky_urlopen(request, timeout):
+            timeout_calls.append(timeout)
+            if len(timeout_calls) == 1:
+                raise socket.timeout("simulated read timeout")
+            return FakeResponse('{"tweets": []}')
+
+        twitterapi_module.urllib.request.urlopen = flaky_urlopen
+        twitterapi_module.time.sleep = waits.append
+        retrying = TwitterApiIoAdapter(
+            api_key="test-key",
+            max_retries=1,
+            request_pause_seconds=0.01,
+            timeout_seconds=1,
+        )
+        assert retrying.search_posts("joybuy", "2026-07-16T00:00:00Z", "2026-07-17T00:00:00Z", 1) == []
+        assert len(timeout_calls) == 2
+        assert any(wait >= 5.5 for wait in waits), "timeout retry should back off before retrying"
+
+        timeout_calls.clear()
+
+        def always_timeout(request, timeout):
+            timeout_calls.append(timeout)
+            raise socket.timeout("simulated read timeout")
+
+        twitterapi_module.urllib.request.urlopen = always_timeout
+        failing = TwitterApiIoAdapter(
+            api_key="test-key",
+            max_retries=0,
+            request_pause_seconds=0.01,
+            timeout_seconds=1,
+        )
+        try:
+            failing.search_posts("joybuy", "2026-07-16T00:00:00Z", "2026-07-17T00:00:00Z", 1)
+        except RuntimeError as error:
+            assert "timed out" in str(error)
+        else:
+            raise AssertionError("expected timeout to be wrapped as RuntimeError")
+    finally:
+        twitterapi_module.urllib.request.urlopen = original_urlopen
+        twitterapi_module.time.sleep = original_sleep
     print("TwitterAPI.io mapping test passed.")
 
 

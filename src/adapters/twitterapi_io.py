@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import socket
 import sys
 import time
 import urllib.error
@@ -186,16 +187,39 @@ class TwitterApiIoAdapter(XSourceBase):
                 break
             except urllib.error.HTTPError as error:
                 body = error.read().decode("utf-8", errors="replace")
-                if error.code == 429 and attempt < self.max_retries:
-                    wait_seconds = self._retry_after_seconds(error) or max(5.5, self.request_pause_seconds)
+                if error.code in {408, 429, 500, 502, 503, 504} and attempt < self.max_retries:
+                    wait_seconds = self._retry_wait_seconds(error, attempt)
                     print(
-                        f"TwitterAPI.io free-tier rate limit hit; waiting {wait_seconds:.1f}s before retry.",
+                        f"TwitterAPI.io request returned HTTP {error.code}; "
+                        f"waiting {wait_seconds:.1f}s before retry.",
                         file=sys.stderr,
                     )
                     time.sleep(wait_seconds)
                     continue
                 raise RuntimeError(f"TwitterAPI.io request failed with HTTP {error.code}: {body[:300]}") from error
+            except (socket.timeout, TimeoutError) as error:
+                if attempt < self.max_retries:
+                    wait_seconds = self._retry_wait_seconds(None, attempt)
+                    print(
+                        f"TwitterAPI.io request timed out after {self.timeout_seconds}s; "
+                        f"waiting {wait_seconds:.1f}s before retry.",
+                        file=sys.stderr,
+                    )
+                    time.sleep(wait_seconds)
+                    continue
+                raise RuntimeError(
+                    f"TwitterAPI.io request timed out after {self.timeout_seconds}s"
+                ) from error
             except urllib.error.URLError as error:
+                if attempt < self.max_retries:
+                    wait_seconds = self._retry_wait_seconds(None, attempt)
+                    print(
+                        f"TwitterAPI.io request failed: {error.reason}; "
+                        f"waiting {wait_seconds:.1f}s before retry.",
+                        file=sys.stderr,
+                    )
+                    time.sleep(wait_seconds)
+                    continue
                 raise RuntimeError(f"TwitterAPI.io request failed: {error.reason}") from error
 
         try:
@@ -247,6 +271,14 @@ class TwitterApiIoAdapter(XSourceBase):
             return float(value)
         except ValueError:
             return None
+
+    def _retry_wait_seconds(self, error: urllib.error.HTTPError | None, attempt: int) -> float:
+        if error is not None:
+            retry_after = self._retry_after_seconds(error)
+            if retry_after is not None:
+                return retry_after
+        backoff = self.request_pause_seconds * (attempt + 1)
+        return max(5.5, min(30.0, backoff))
 
     def _with_time_window(self, query: str, start_time: str, end_time: str) -> str:
         start = self._parse_input_time(start_time)
