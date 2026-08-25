@@ -24,8 +24,8 @@ CONTEXT_SUMMARY_CHAR_LIMIT = 200
 LOW_QUALITY_CONTEXT_PATTERNS = [
     re.compile(r"应该没人比我玩[的得]开了吧", re.IGNORECASE),
     re.compile(r"我[福肤]不黑不信你看", re.IGNORECASE),
-    re.compile(r"比(?:我|你|他|她|ta)好看的没(?:我|你|他|她|ta)骚.{0,20}比(?:我|你|他|她|ta)骚的没(?:我|你|他|她|ta)好看", re.IGNORECASE),
-    re.compile(r"比(?:我|你|他|她|ta)好看的没.{0,8}骚.{0,24}比(?:我|你|他|她|ta)骚的没.{0,8}好看", re.IGNORECASE),
+    re.compile(r"比(?:我|你|他|她|ta).{0,4}好看的没(?:我|你|他|她|ta).{0,4}骚.{0,20}比(?:我|你|他|她|ta).{0,4}骚的没(?:我|你|他|她|ta).{0,4}好看", re.IGNORECASE),
+    re.compile(r"比(?:我|你|他|她|ta).{0,4}好看的没.{0,10}骚.{0,24}比(?:我|你|他|她|ta).{0,4}骚的没.{0,10}好看", re.IGNORECASE),
     re.compile(r"只入身体.{0,20}不入生活", re.IGNORECASE),
     re.compile(r"我果然太[涩色瑟]了.{0,16}有人想锐评一下我的[福肤]嘛", re.IGNORECASE),
     re.compile(r"sao.{0,8}货.{0,16}没人比(?:她|他|ta)sao", re.IGNORECASE),
@@ -34,7 +34,10 @@ LOW_QUALITY_CONTEXT_PATTERNS = [
     re.compile(r"主页.{0,16}能打(?:✈|飞机)", re.IGNORECASE),
 ]
 LOW_QUALITY_CONTEXT_PROFILE_PATTERNS = [
-    re.compile(r"找炮友|约炮|曰炮|入驻.{0,12}炮平台|真人认证.{0,30}隐私|附近的可加v|小号已禁言", re.IGNORECASE),
+    re.compile(
+        r"找炮友|约炮|约p|曰炮|固炮|入驻.{0,12}(?:炮|约p)平台|真人认证.{0,30}隐私|附近的可加v|小号已禁言|涩播|涩涩|寻欢必备|远程指挥直播控制玩具|同城.{0,8}线下|绿泡泡",
+        re.IGNORECASE,
+    ),
 ]
 
 
