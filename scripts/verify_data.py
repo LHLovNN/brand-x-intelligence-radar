@@ -23,6 +23,10 @@ LOW_QUALITY_TG_DIGEST_RE = re.compile(
     re.IGNORECASE,
 )
 LOW_SIGNAL_TG_STATUS_RE = re.compile(r"(?:挂了|又挂|崩了|炸了|宕机|不能用|用不了|不可用|打不开)", re.IGNORECASE)
+PLATFORM_LOW_VALUE_CONTENT_RE = re.compile(
+    r"约炮|约p|固炮|炮友|涩播|成人交友|约会软件",
+    re.IGNORECASE,
+)
 PLATFORM_ALLOWED_TAGS = {
     "账号冷启动",
     "爆文与内容结构",
@@ -162,6 +166,7 @@ def verify_platform_trends() -> None:
     if items:
         verify_no_contextual_duplicate_items(items, "platform-trends/xiaohongshu/latest")
         for item in items:
+            verify_platform_item_quality(item, "platform-trends/xiaohongshu/latest")
             assert_true(item.get("translation_zh"), "platform trend item should include Chinese display text")
             assert_true(
                 str(item.get("topic") or "") in PLATFORM_ALLOWED_TAGS,
@@ -174,6 +179,20 @@ def verify_platform_trends() -> None:
             assert_true(int(metrics.get("views") or 0) >= min_views, "platform trend item should meet min views")
             assert_true(int(metrics.get("likes") or 0) >= min_likes, "platform trend item should meet min likes")
         verify_conversation_contexts(latest, "platform-trends/xiaohongshu/latest")
+    daily_dir = DATA / "platform-trends" / "xiaohongshu" / "daily"
+    for archive_path in daily_dir.glob("*.json"):
+        archive = load(archive_path)
+        for item in archive.get("items") or []:
+            verify_platform_item_quality(item, f"platform-trends/xiaohongshu/{archive.get('date') or archive_path.stem}")
+
+
+def verify_platform_item_quality(item, label: str) -> None:
+    text = " ".join(
+        str(item.get(key) or "")
+        for key in ("text", "clean_text", "original_text", "translation_zh", "author_name", "author_handle", "author_bio")
+    )
+    compact = re.sub(r"\s+", "", text)
+    assert_true(not PLATFORM_LOW_VALUE_CONTENT_RE.search(compact), f"platform trend contains low-value adult content for {label}")
 
 
 def verify_diting_digests() -> None:

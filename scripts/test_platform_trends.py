@@ -35,6 +35,15 @@ def main() -> None:
     assert "带货" not in tags
     assert "涨粉" not in tags
     assert len(tags) == len(set(tags)), "canonical tags should be deduped"
+
+    adult_noise = {
+        "clean_text": "冷知识：中国约炮平台流量最高：Boss直聘 > 小红书 > 58同城",
+        "links": [],
+        "metrics": {"likes": 17, "views": 1478},
+        "author_followers": 1000,
+    }
+    adult_noise_decision = score_platform_post(adult_noise, platform)
+    assert not adult_noise_decision["accepted"], "low-value adult jokes should not enter platform trend collection"
     print("Platform trend tag tests passed.")
 
 
