@@ -334,6 +334,8 @@ def merge_structured_tg_media(
                 for key in ("channel_name", "channel_url"):
                     if match.get(key):
                         item[key] = match[key]
+                if match.get("summary"):
+                    item["summary"] = match["summary"]
                 for key in ("reply_count", "replies_fetched", "replies_visible", "replies_filtered"):
                     if key in match:
                         item[key] = match[key]
@@ -414,7 +416,7 @@ def structured_tg_item(item: dict[str, Any], base_url: str) -> dict[str, Any]:
     result = {
         "id": compact_text(str(item.get("id") or "")),
         "title": compact_text(strip_tg_channel_recommendations(str(item.get("title") or ""))),
-        "summary": compact_text(strip_tg_channel_recommendations(str(item.get("summary") or ""))),
+        "summary": multiline_text(strip_tg_channel_recommendations(str(item.get("summary") or ""))),
         "channel": compact_text(str(item.get("channel") or "")),
         "channel_name": compact_text(str(item.get("channel_name") or "")),
         "channel_url": clean_url(str(item.get("channel_url") or "")),
@@ -445,7 +447,7 @@ def normalize_tg_replies(replies: Any, base_url: str, fallback_url: str) -> list
         media = normalize_tg_media_items(reply.get("media") or [], base_url, fallback_url)
         item: dict[str, Any] = {
             "id": compact_text(str(reply.get("id") or "")),
-            "text": compact_text(strip_tg_channel_recommendations(str(reply.get("text") or ""))),
+            "text": multiline_text(strip_tg_channel_recommendations(str(reply.get("text") or ""))),
             "time": compact_text(str(reply.get("time") or "")),
             "sender_name": compact_text(str(reply.get("sender_name") or "")),
             "media": media,
@@ -599,11 +601,13 @@ def tg_item_filter_reason(item: dict[str, Any]) -> str | None:
 
     title = compact_text(str(item.get("title") or ""))
     summary = compact_text(str(item.get("summary") or ""))
-    title_signal_length = signal_char_count(title)
-    if not summary and title_signal_length <= 18 and TG_SHORT_STATUS_CHATTER_RE.search(title):
+    summary_adds_signal = bool(summary) and re.sub(r"\s+", "", summary) != re.sub(r"\s+", "", title)
+    short_text = title or summary
+    short_signal_length = signal_char_count(short_text)
+    if not summary_adds_signal and short_signal_length <= 18 and TG_SHORT_STATUS_CHATTER_RE.search(short_text):
         return "short_status_chatter"
-    if not summary and title_signal_length <= 12 and (
-        title.rstrip().endswith(("?", "？")) or TG_SHORT_CHATTER_RE.search(title)
+    if not summary_adds_signal and short_signal_length <= 12 and (
+        short_text.rstrip().endswith(("?", "？")) or TG_SHORT_CHATTER_RE.search(short_text)
     ):
         return "short_status_chatter"
     return None
@@ -787,6 +791,12 @@ def dedupe_links(links: list[dict[str, str]]) -> list[dict[str, str]]:
 
 def compact_text(value: str) -> str:
     return re.sub(r"\s+", " ", value or "").strip()
+
+
+def multiline_text(value: str) -> str:
+    text = str(value or "").replace("\r\n", "\n").replace("\r", "\n")
+    lines = [re.sub(r"[ \t]+", " ", line).strip() for line in text.split("\n")]
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip()
 
 
 def nonnegative_int(value: Any) -> int:

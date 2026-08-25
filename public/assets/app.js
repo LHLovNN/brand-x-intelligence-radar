@@ -989,7 +989,7 @@ function ditingDigestCard(item, config) {
   const tgChannelName = config.routeName === "tgDaily" ? compactDisplayText(item.channel_name || item.channelName || "") : "";
   const title = compactDisplayText(item.title || item.summary || "未命名条目");
   const url = safeExternalUrl(item.url || "");
-  const summary = compactDisplayText(item.summary || "");
+  const summary = config.routeName === "tgDaily" ? multilineDisplayText(item.summary || "") : compactDisplayText(item.summary || "");
   const links = ditingUsefulLinks(item, url, config);
   const linkedSummary = ditingSummaryHtml(summary, links, config);
   const inlineLinks = config.routeName === "tgDaily"
@@ -1063,7 +1063,7 @@ function normalizedDitingReply(reply) {
   const media = validDitingMediaItems(reply.media || []);
   return {
     id: compactDisplayText(reply.id || ""),
-    text: compactDisplayText(reply.text || ""),
+    text: multilineDisplayText(reply.text || ""),
     time: compactDisplayText(reply.time || ""),
     senderName: compactDisplayText(reply.sender_name || reply.senderName || ""),
     media,
@@ -1138,7 +1138,7 @@ function ditingUsefulLinks(item, primaryUrl, config) {
 }
 
 function ditingSummaryHtml(summary, links, config) {
-  const text = compactDisplayText(summary || "");
+  const text = config?.routeName === "tgDaily" ? multilineDisplayText(summary || "") : compactDisplayText(summary || "");
   const matchedHrefs = new Set();
   if (!text) return { html: "", matchedHrefs };
   if (config?.routeName !== "tgDaily" || !links.length) {
@@ -1188,6 +1188,16 @@ function isDitingTgRecommendationLink(href, label) {
 
 function compactDisplayText(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function multilineDisplayText(value) {
+  return String(value || "")
+    .replace(/\r\n?/g, "\n")
+    .split("\n")
+    .map((line) => line.replace(/[ \t]+/g, " ").trim())
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 }
 
 function dashboardTodayDate() {
@@ -4527,7 +4537,7 @@ function openDitingCommentDrawer(threadId) {
 function ditingCommentNode(reply, owner) {
   const name = compactDisplayText(reply.senderName || "匿名用户") || "匿名用户";
   const time = compactDisplayText(reply.time || "");
-  const text = compactDisplayText(reply.text || "");
+  const text = multilineDisplayText(reply.text || "");
   const media = mediaGridNode(validDitingMediaItems(reply.media || []), owner);
   return `
     <article class="diting-comment-item">
