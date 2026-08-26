@@ -32,12 +32,16 @@ const state = {
   lastRouteKey: "",
   conversationContexts: new Map(),
   ditingCommentThreads: new Map(),
+  prefetchedMediaUrls: new Set(),
 };
 
 const USE_X_EMBED_FOR_VIDEO = false;
 const X_WIDGET_SCRIPT_URL = "https://platform.twitter.com/widgets.js";
 const DEFAULT_TIMELINE_EXPANDED_DAYS = 3;
 const BACK_TO_TOP_THRESHOLD = 520;
+const TG_MEDIA_PREFETCH_MAX_IMAGES = 32;
+const TG_MEDIA_PREFETCH_MAX_VIDEOS = 2;
+const TG_MEDIA_PREFETCH_MAX_VIDEO_BYTES = 30 * 1024 * 1024;
 const TG_COMMENT_BLOCK_PATTERNS = [
   /打飞机|撸管|约炮|找炮友|炮友|裸聊|色情网|成人视频|情色|援交|招嫖|嫖娼|外围/i,
   /加(?:微信|薇|v|qq)|私聊.{0,12}(?:资源|福利|群)|点击.{0,10}(?:领取|下载)|博彩|网赌|现金网|返佣/i,
@@ -989,7 +993,7 @@ function ditingDigestCard(item, config) {
   const tgChannelName = config.routeName === "tgDaily" ? compactDisplayText(item.channel_name || item.channelName || "") : "";
   const title = compactDisplayText(item.title || item.summary || "未命名条目");
   const url = safeExternalUrl(item.url || "");
-  const summary = config.routeName === "tgDaily" ? multilineDisplayText(item.summary || "") : compactDisplayText(item.summary || "");
+  const summary = ditingBodySummary(item, title, config);
   const links = ditingUsefulLinks(item, url, config);
   const linkedSummary = ditingSummaryHtml(summary, links, config);
   const inlineLinks = config.routeName === "tgDaily"
@@ -1016,6 +1020,32 @@ function ditingDigestCard(item, config) {
       ${footerLinks.length ? `<div class="diting-link-row">${footerLinks.map((link) => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`).join("")}</div>` : ""}
     </article>
   `;
+}
+
+function ditingBodySummary(item, title, config) {
+  const summary = config.routeName === "tgDaily" ? multilineDisplayText(item.summary || "") : compactDisplayText(item.summary || "");
+  if (config.routeName !== "tgDaily") return summary;
+  return stripRepeatedDitingTitle(title, summary);
+}
+
+function stripRepeatedDitingTitle(title, summary) {
+  const displayTitle = compactDisplayText(title || "");
+  const body = multilineDisplayText(summary || "");
+  if (!displayTitle || !body) return body;
+  const lines = body.split("\n");
+  const firstIndex = lines.findIndex((line) => compactDisplayText(line));
+  if (firstIndex < 0) return body;
+  const firstLine = compactDisplayText(lines[firstIndex]);
+  if (!sameCompactTitleText(firstLine, displayTitle)) return body;
+  lines.splice(firstIndex, 1);
+  return lines.join("\n").replace(/^\n+/, "").trim();
+}
+
+function sameCompactTitleText(a, b) {
+  const normalize = (value) => String(value || "").replace(/\s+/g, "").replace(/[，。,.!?！？:：；;]/g, "").toLowerCase();
+  const left = normalize(a);
+  const right = normalize(b);
+  return Boolean(left && right && left === right);
 }
 
 function ditingMediaItems(item) {
@@ -2251,13 +2281,133 @@ function htmlVideoNode(videoUrl, posterUrl, item = {}) {
   const safePosterUrl = safeExternalUrl(posterUrl || "");
   const aspectStyle = mediaAspectStyle(item, { portraitMaxHeight: 480, portraitMinWidth: 200 });
   const shellClass = ["media-video-shell", "playable", mediaOrientationClass(item)].filter(Boolean).join(" ");
+  const sizeBytes = Number(item?.size_bytes || item?.sizeBytes || 0);
+  const sizeAttr = sizeBytes > 0 ? ` data-media-size-bytes="${escapeHtml(String(sizeBytes))}"` : "";
   return `
     <div class="${shellClass}"${aspectStyle}>
-      <video class="media-video" controls playsinline preload="metadata"${safePosterUrl ? ` poster="${escapeHtml(safePosterUrl)}"` : ""}>
+      <video class="media-video" controls playsinline preload="metadata" data-media-video-src="${escapeHtml(safeVideoUrl)}"${sizeAttr}${safePosterUrl ? ` poster="${escapeHtml(safePosterUrl)}"` : ""}>
         <source src="${escapeHtml(safeVideoUrl)}" type="video/mp4" />
       </video>
     </div>
   `;
+}
+
+function warmDitingMediaAssets(root = document) {
+  const imageButtons = scopedQueryAll(root, ".tg-digest-card [data-media-lightbox], .diting-comment-drawer [data-media-lightbox]");
+  const imageUrls = uniqueMediaUrls(imageButtons.map((button) => button.dataset.mediaLightbox).filter(Boolean));
+  imageButtons.forEach((button) => {
+    const url = safeExternalUrl(button.dataset.mediaLightbox || "");
+    if (!url || button.dataset.mediaWarmBound === "1") return;
+    button.dataset.mediaWarmBound = "1";
+    const warm = () => prefetchImageUrl(url);
+    button.addEventListener("pointerenter", warm, { once: true, passive: true });
+    button.addEventListener("focus", warm, { once: true });
+  });
+
+  scheduleMediaWarmup(() => {
+    imageUrls.slice(0, TG_MEDIA_PREFETCH_MAX_IMAGES).forEach(prefetchImageUrl);
+  });
+
+  const videos = scopedQueryAll(root, ".tg-digest-card video.media-video, .diting-comment-drawer video.media-video");
+  videos.forEach((video) => {
+    if (video.dataset.mediaWarmBound === "1") return;
+    video.dataset.mediaWarmBound = "1";
+    const warm = () => {
+      video.preload = "auto";
+      video.load();
+      prefetchVideoUrl(video.dataset.mediaVideoSrc || video.querySelector("source")?.src || "");
+    };
+    video.addEventListener("pointerenter", warm, { once: true, passive: true });
+    video.addEventListener("focus", warm, { once: true });
+  });
+
+  scheduleMediaWarmup(() => {
+    videos
+      .map((video) => ({
+        url: safeExternalUrl(video.dataset.mediaVideoSrc || video.querySelector("source")?.src || ""),
+        size: Number(video.dataset.mediaSizeBytes || 0),
+      }))
+      .filter((item) => item.url && (!item.size || item.size <= TG_MEDIA_PREFETCH_MAX_VIDEO_BYTES))
+      .slice(0, TG_MEDIA_PREFETCH_MAX_VIDEOS)
+      .forEach((item) => prefetchVideoUrl(item.url));
+  }, 900);
+}
+
+function scopedQueryAll(root, selector) {
+  const scope = root || document;
+  const results = [];
+  if (scope.matches?.(selector)) results.push(scope);
+  scope.querySelectorAll?.(selector).forEach((node) => results.push(node));
+  return results;
+}
+
+function uniqueMediaUrls(urls = []) {
+  const result = [];
+  urls.forEach((url) => {
+    const safeUrl = safeExternalUrl(url || "");
+    if (safeUrl && !result.includes(safeUrl)) result.push(safeUrl);
+  });
+  return result;
+}
+
+function scheduleMediaWarmup(callback, delay = 0) {
+  const run = () => {
+    try {
+      callback();
+    } catch (error) {
+      // Best-effort media warming should never block the dashboard.
+    }
+  };
+  if (delay > 0) {
+    window.setTimeout(() => scheduleMediaWarmup(callback), delay);
+    return;
+  }
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(run, { timeout: 1800 });
+  } else {
+    window.setTimeout(run, 300);
+  }
+}
+
+function prefetchImageUrl(url) {
+  const safeUrl = safeExternalUrl(url || "");
+  if (!safeUrl || state.prefetchedMediaUrls.has(safeUrl)) return;
+  state.prefetchedMediaUrls.add(safeUrl);
+  addMediaOriginHints(safeUrl);
+  const image = new Image();
+  image.decoding = "async";
+  image.loading = "eager";
+  image.src = safeUrl;
+}
+
+function prefetchVideoUrl(url) {
+  const safeUrl = safeExternalUrl(url || "");
+  if (!safeUrl || state.prefetchedMediaUrls.has(safeUrl)) return;
+  state.prefetchedMediaUrls.add(safeUrl);
+  addMediaOriginHints(safeUrl);
+  const link = document.createElement("link");
+  link.rel = "prefetch";
+  link.as = "video";
+  link.href = safeUrl;
+  link.crossOrigin = "anonymous";
+  document.head.appendChild(link);
+}
+
+function addMediaOriginHints(url) {
+  try {
+    const origin = new URL(url).origin;
+    if (!origin || document.querySelector(`link[data-media-origin="${cssAttributeValue(origin)}"]`)) return;
+    ["preconnect", "dns-prefetch"].forEach((rel) => {
+      const link = document.createElement("link");
+      link.rel = rel;
+      link.href = origin;
+      link.dataset.mediaOrigin = origin;
+      if (rel === "preconnect") link.crossOrigin = "anonymous";
+      document.head.appendChild(link);
+    });
+  } catch (error) {
+    // Ignore malformed URLs; safeExternalUrl already filters user-facing use.
+  }
 }
 
 function hydrateXVideoEmbeds() {
@@ -4482,7 +4632,10 @@ function bindPageEvents(detail = null) {
   });
 
   document.querySelectorAll("[data-media-lightbox]").forEach((button) => {
-    button.addEventListener("click", () => openMediaLightbox(button.dataset.mediaLightbox, mediaLightboxOptions(button)));
+    button.addEventListener("click", () => {
+      prefetchImageUrl(button.dataset.mediaLightbox || "");
+      openMediaLightbox(button.dataset.mediaLightbox, mediaLightboxOptions(button));
+    });
   });
 
   document.querySelectorAll("[data-conversation-context]").forEach((button) => {
@@ -4493,6 +4646,7 @@ function bindPageEvents(detail = null) {
     button.addEventListener("click", () => openDitingCommentDrawer(button.dataset.ditingComments));
   });
 
+  warmDitingMediaAssets();
 }
 
 function openDitingCommentDrawer(threadId) {
@@ -4522,7 +4676,10 @@ function openDitingCommentDrawer(threadId) {
   node.addEventListener("click", (event) => {
     if (event.target === node || event.target.closest(".conversation-drawer-close")) closeConversationDrawer();
     const mediaButton = event.target.closest("[data-media-lightbox]");
-    if (mediaButton) openMediaLightbox(mediaButton.dataset.mediaLightbox, mediaLightboxOptions(mediaButton));
+    if (mediaButton) {
+      prefetchImageUrl(mediaButton.dataset.mediaLightbox || "");
+      openMediaLightbox(mediaButton.dataset.mediaLightbox, mediaLightboxOptions(mediaButton));
+    }
   });
   const onKeydown = (event) => {
     if (event.key === "Escape") closeConversationDrawer();
@@ -4531,6 +4688,7 @@ function openDitingCommentDrawer(threadId) {
   window.addEventListener("keydown", onKeydown);
   document.body.appendChild(node);
   document.body.classList.add("conversation-drawer-open");
+  warmDitingMediaAssets(node);
   updateBackToTopVisibility();
 }
 
@@ -4578,7 +4736,10 @@ function openConversationDrawer(contextId) {
   node.addEventListener("click", (event) => {
     if (event.target === node || event.target.closest(".conversation-drawer-close")) closeConversationDrawer();
     const mediaButton = event.target.closest("[data-media-lightbox]");
-    if (mediaButton) openMediaLightbox(mediaButton.dataset.mediaLightbox, mediaLightboxOptions(mediaButton));
+    if (mediaButton) {
+      prefetchImageUrl(mediaButton.dataset.mediaLightbox || "");
+      openMediaLightbox(mediaButton.dataset.mediaLightbox, mediaLightboxOptions(mediaButton));
+    }
     if (event.target.closest("[data-conversation-top]")) {
       node.querySelector(".conversation-thread")?.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -4725,6 +4886,7 @@ function openMediaLightbox(url, options = {}) {
     const count = node.querySelector(".media-lightbox-count");
     if (img) img.src = group[currentIndex];
     if (count) count.textContent = `${currentIndex + 1} / ${group.length}`;
+    prefetchAdjacentLightboxImages(group, currentIndex);
     resetZoom();
   };
   node.addEventListener("wheel", (event) => {
@@ -4770,6 +4932,7 @@ function openMediaLightbox(url, options = {}) {
   });
   document.body.appendChild(node);
   document.body.classList.add("lightbox-open");
+  prefetchAdjacentLightboxImages(group, currentIndex);
   const onKeydown = (event) => {
     if (event.key === "Escape") closeMediaLightbox();
     if (hasMultiple && event.key === "ArrowLeft") showImage(currentIndex - 1);
@@ -4778,6 +4941,14 @@ function openMediaLightbox(url, options = {}) {
   };
   node._onKeydown = onKeydown;
   window.addEventListener("keydown", onKeydown);
+}
+
+function prefetchAdjacentLightboxImages(group, index) {
+  if (!Array.isArray(group) || !group.length) return;
+  [index, index - 1, index + 1].forEach((value) => {
+    const nextIndex = (value + group.length) % group.length;
+    prefetchImageUrl(group[nextIndex]);
+  });
 }
 
 function closeMediaLightbox() {

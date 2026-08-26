@@ -413,10 +413,12 @@ def structured_tg_item(item: dict[str, Any], base_url: str) -> dict[str, Any]:
     url = clean_url(str(item.get("url") or ""))
     replies = normalize_tg_replies(item.get("replies") or [], base_url, url)
     visible_replies = filter_tg_replies(replies)
+    title = compact_text(strip_tg_channel_recommendations(str(item.get("title") or "")))
+    summary = multiline_text(strip_tg_channel_recommendations(str(item.get("summary") or "")))
     result = {
         "id": compact_text(str(item.get("id") or "")),
-        "title": compact_text(strip_tg_channel_recommendations(str(item.get("title") or ""))),
-        "summary": multiline_text(strip_tg_channel_recommendations(str(item.get("summary") or ""))),
+        "title": title,
+        "summary": strip_repeated_tg_title(title, summary),
         "channel": compact_text(str(item.get("channel") or "")),
         "channel_name": compact_text(str(item.get("channel_name") or "")),
         "channel_url": clean_url(str(item.get("channel_url") or "")),
@@ -747,6 +749,11 @@ class DigestPageParser(HTMLParser):
             return
         self.current_card["summary"] = compact_text(self.current_card.get("summary", ""))
         self.current_card["title"] = compact_text(self.current_card.get("title", ""))
+        if self.kind == "tg":
+            self.current_card["summary"] = strip_repeated_tg_title(
+                self.current_card["title"],
+                self.current_card["summary"],
+            )
         self.current_card["source"] = compact_text(self.current_card.get("source", ""))
         if self.card_links:
             self.current_card["links"] = [
@@ -797,6 +804,30 @@ def multiline_text(value: str) -> str:
     text = str(value or "").replace("\r\n", "\n").replace("\r", "\n")
     lines = [re.sub(r"[ \t]+", " ", line).strip() for line in text.split("\n")]
     return re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip()
+
+
+def strip_repeated_tg_title(title: str, summary: str) -> str:
+    clean_title = compact_text(title)
+    body = multiline_text(summary)
+    if not clean_title or not body:
+        return body
+    lines = body.split("\n")
+    first_index = next((index for index, line in enumerate(lines) if compact_text(line)), -1)
+    if first_index < 0:
+        return body
+    if not same_compact_text(lines[first_index], clean_title):
+        return body
+    del lines[first_index]
+    return "\n".join(lines).lstrip("\n").strip()
+
+
+def same_compact_text(left: str, right: str) -> bool:
+    def normalize(value: str) -> str:
+        return re.sub(r"[，。,.!?！？:：；;\s]+", "", value or "").lower()
+
+    lhs = normalize(left)
+    rhs = normalize(right)
+    return bool(lhs and rhs and lhs == rhs)
 
 
 def nonnegative_int(value: Any) -> int:
