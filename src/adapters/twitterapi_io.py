@@ -25,6 +25,7 @@ class TwitterApiIoAdapter(XSourceBase):
         timeout_seconds: int = 20,
         request_pause_seconds: float = 5.2,
         max_pages_per_query: int = 200,
+        max_context_pages_per_query: int = 10,
         max_retries: int = 3,
         max_requests_per_run: int | None = None,
         max_context_requests_per_run: int | None = None,
@@ -35,6 +36,7 @@ class TwitterApiIoAdapter(XSourceBase):
         self.timeout_seconds = timeout_seconds
         self.request_pause_seconds = request_pause_seconds
         self.max_pages_per_query = max_pages_per_query
+        self.max_context_pages_per_query = max_context_pages_per_query
         self.max_retries = max_retries
         self.max_requests_per_run = max_requests_per_run
         self.max_context_requests_per_run = max_context_requests_per_run
@@ -63,8 +65,9 @@ class TwitterApiIoAdapter(XSourceBase):
         seen_cursors: set[str] = set()
         cursor: str | None = None
         pages = 0
+        max_pages = self._max_pages_for_scope(budget_scope)
 
-        while len(posts) < limit and pages < self.max_pages_per_query:
+        while len(posts) < limit and pages < max_pages:
             if cursor:
                 if cursor in seen_cursors:
                     break
@@ -138,8 +141,9 @@ class TwitterApiIoAdapter(XSourceBase):
         seen_cursors: set[str] = set()
         cursor: str | None = None
         pages = 0
+        max_pages = self._max_pages_for_scope("context")
 
-        while len(posts) < limit and pages < self.max_pages_per_query:
+        while len(posts) < limit and pages < max_pages:
             if cursor:
                 if cursor in seen_cursors:
                     break
@@ -175,6 +179,11 @@ class TwitterApiIoAdapter(XSourceBase):
             time.sleep(self.request_pause_seconds)
 
         return posts
+
+    def _max_pages_for_scope(self, budget_scope: str) -> int:
+        if budget_scope == "context":
+            return max(1, int(self.max_context_pages_per_query))
+        return max(1, int(self.max_pages_per_query))
 
     def _get_json(self, path: str, params: dict[str, str], budget_scope: str = "search") -> dict[str, Any]:
         query_string = urllib.parse.urlencode(params)

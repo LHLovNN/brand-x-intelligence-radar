@@ -171,9 +171,11 @@ def main() -> None:
         def __init__(self, rows):
             self.rows = rows
             self.conversation_calls = []
+            self.conversation_limits = []
 
         def conversation_posts(self, conversation_id, start_time, end_time, limit=120):
             self.conversation_calls.append(conversation_id)
+            self.conversation_limits.append(limit)
             return self.rows
 
     target = post(10, post_id="target", author_followers=1000, is_relevant=True)
@@ -187,7 +189,9 @@ def main() -> None:
         "2026-07-30T00:00:00Z",
     )
     assert source.conversation_calls == ["conversation-1"], "context should be fetched by conversation_id"
+    assert source.conversation_limits == [50], "each collected item should request at most 50 context posts by default"
     assert status["attached"] == 1, "multi-post conversation context should be attached"
+    assert status["fetch_limit"] == 50, "status should expose the per-item context fetch cap"
     assert len(target["conversation_context"]["posts"]) == 3
 
     class ThreadContextSource(ConversationContextSource):
@@ -195,9 +199,11 @@ def main() -> None:
             super().__init__(fallback_rows)
             self.thread_rows = thread_rows
             self.thread_calls = []
+            self.thread_limits = []
 
         def thread_context_posts(self, post_id, start_time, end_time, limit=120):
             self.thread_calls.append(post_id)
+            self.thread_limits.append(limit)
             return self.thread_rows
 
     thread_target = post(20, post_id="thread-anchor", author_followers=1000, is_relevant=True)
@@ -219,6 +225,7 @@ def main() -> None:
         "2026-07-30T00:00:00Z",
     )
     assert thread_source.thread_calls == ["thread-anchor"], "thread context should be fetched by collected post id"
+    assert thread_source.thread_limits == [50], "thread context should use the per-item fetch cap"
     assert thread_source.conversation_calls == [], "conversation search should not be used when thread context has neighbors"
     assert thread_status["attached"] == 1
     assert [item["post_id"] for item in thread_target["conversation_context"]["posts"]] == [
@@ -244,8 +251,27 @@ def main() -> None:
         "2026-07-30T00:00:00Z",
     )
     assert fallback_source.thread_calls == ["fallback-anchor"]
+    assert fallback_source.thread_limits == [50]
     assert fallback_source.conversation_calls == ["conversation-1"], "conversation search should backstop sparse thread context"
+    assert fallback_source.conversation_limits == [50], "fallback conversation search should keep the same per-item cap"
     assert fallback_status["attached"] == 1
+
+    env_target = post(40, post_id="env-target", author_followers=1000, is_relevant=True)
+    env_source = ConversationContextSource([post(39), env_target, post(41)])
+    os.environ["CONVERSATION_CONTEXT_FETCH_LIMIT"] = "7"
+    try:
+        env_status = attach_conversation_contexts(
+            [env_target],
+            [{"score": {"ips": 0}, "post_ids": ["env-target"]}],
+            env_source,
+            None,
+            "2026-07-29T00:00:00Z",
+            "2026-07-30T00:00:00Z",
+        )
+    finally:
+        os.environ.pop("CONVERSATION_CONTEXT_FETCH_LIMIT", None)
+    assert env_source.conversation_limits == [7], "env override should still apply per collected item"
+    assert env_status["fetch_limit"] == 7
 
     solo = post(12, post_id="solo", author_followers=1000, is_relevant=True)
     solo["conversation_context"] = {"posts": [{"post_id": "solo"}]}

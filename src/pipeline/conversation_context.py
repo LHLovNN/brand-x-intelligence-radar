@@ -17,7 +17,7 @@ CONTEXT_AFTER_LIMIT = 20
 CONTEXT_SCORE_THRESHOLD = 60
 CONTEXT_FOLLOWER_THRESHOLD = 1000
 COMPETITOR_CONTEXT_MIN_VIEWS = 500
-CONTEXT_FETCH_LIMIT = 120
+CONTEXT_FETCH_LIMIT = 50
 CONTEXT_TRANSLATION_TIMEOUT_SECONDS = 30
 CONTEXT_SUMMARY_TIMEOUT_SECONDS = 20
 CONTEXT_SUMMARY_CHAR_LIMIT = 200
@@ -65,11 +65,13 @@ def attach_conversation_contexts(
     if not targets:
         return {"eligible": eligible, "attempted": 0, "attached": 0, "warnings": []}
 
+    fetch_limit = context_fetch_limit()
     fetched_by_conversation: dict[str, list[dict[str, Any]]] = {}
     warnings: list[str] = []
     attached = 0
     unresolved = 0
     filtered_noise = 0
+    capped_contexts = 0
     summary_counts: dict[str, int] = {}
     for post in targets:
         conversation_id = str(post.get("conversation_id") or "")
@@ -77,11 +79,13 @@ def attach_conversation_contexts(
             continue
         if conversation_id not in fetched_by_conversation:
             try:
-                rows = fetch_context_rows(x_source, post, conversation_id, window_start, window_end)
+                rows = fetch_context_rows(x_source, post, conversation_id, window_start, window_end, fetch_limit)
             except Exception as error:
                 warnings.append(f"conversation {conversation_id} context fetch failed: {str(error)[:180]}")
                 fetched_by_conversation[conversation_id] = []
             else:
+                if len(rows) >= fetch_limit:
+                    capped_contexts += 1
                 context_rows, removed = filter_context_noise(rows)
                 filtered_noise += removed
                 fetched_by_conversation[conversation_id] = prepare_context_rows(context_rows, translation_service)
@@ -103,6 +107,8 @@ def attach_conversation_contexts(
 
     if summary_counts.get("fallback") and can_generate_context_summary(translation_service):
         warnings.append("conversation context summaries fell back to local rules for some posts.")
+    if capped_contexts:
+        warnings.append(f"conversation context capped at {fetch_limit} posts for {capped_contexts} item(s).")
 
     return {
         "attempted": len(targets),
@@ -110,6 +116,7 @@ def attach_conversation_contexts(
         "attached": attached,
         "unresolved": unresolved,
         "filtered_noise": filtered_noise,
+        "fetch_limit": fetch_limit,
         "summary": summary_counts,
         "warnings": warnings[:5],
     }
@@ -125,16 +132,18 @@ def fetch_context_rows(
     conversation_id: str,
     window_start: str,
     window_end: str,
+    limit: int | None = None,
 ) -> list[dict[str, Any]]:
+    fetch_limit = max(1, int(limit or context_fetch_limit()))
     post_id = str(post.get("post_id") or "")
     if post_id and hasattr(x_source, "thread_context_posts"):
         rows = filter_thread_context_rows(
             post,
-            x_source.thread_context_posts(post_id, window_start, window_end, limit=CONTEXT_FETCH_LIMIT),
+            x_source.thread_context_posts(post_id, window_start, window_end, limit=fetch_limit),
         )
         if has_context_row_neighbor(post, rows):
             return rows
-    return x_source.conversation_posts(conversation_id, window_start, window_end, limit=CONTEXT_FETCH_LIMIT)
+    return x_source.conversation_posts(conversation_id, window_start, window_end, limit=fetch_limit)
 
 
 def has_context_neighbor(context: dict[str, Any]) -> bool:
@@ -598,6 +607,10 @@ def positive_int_env(name: str, fallback: int) -> int:
     except ValueError:
         return fallback
     return max(1, value)
+
+
+def context_fetch_limit() -> int:
+    return positive_int_env("CONVERSATION_CONTEXT_FETCH_LIMIT", CONTEXT_FETCH_LIMIT)
 
 
 def optional_positive_int_env(name: str) -> int | None:

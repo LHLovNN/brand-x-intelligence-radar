@@ -48,11 +48,14 @@ def get_x_source(provider: str | None) -> XSourceBase:
         kwargs = {}
         timeout_seconds = optional_positive_int_env("TWITTERAPI_IO_TIMEOUT_SECONDS")
         request_pause_seconds = optional_positive_float_env("TWITTERAPI_IO_REQUEST_PAUSE_SECONDS")
+        max_context_pages = optional_positive_int_env("TWITTERAPI_IO_CONTEXT_MAX_PAGES")
         max_retries = optional_nonnegative_int_env("TWITTERAPI_IO_MAX_RETRIES")
         if timeout_seconds is not None:
             kwargs["timeout_seconds"] = timeout_seconds
         if request_pause_seconds is not None:
             kwargs["request_pause_seconds"] = request_pause_seconds
+        if max_context_pages is not None:
+            kwargs["max_context_pages_per_query"] = max_context_pages
         if max_retries is not None:
             kwargs["max_retries"] = max_retries
         return TwitterApiIoAdapter(api_key=os.getenv("TWITTERAPI_IO_KEY"), **kwargs)

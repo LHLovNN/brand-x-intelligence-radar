@@ -228,6 +228,66 @@ def main() -> None:
     assert [row["text"] for row in partial_rows] == ["Joybuy page 1", "Joybuy page 2"]
     assert partial.request_budget_exhausted is True
 
+    class ScopedPaginationAdapter(TwitterApiIoAdapter):
+        def __init__(self) -> None:
+            super().__init__(
+                api_key="test-key",
+                max_pages_per_query=4,
+                max_context_pages_per_query=2,
+                request_pause_seconds=0,
+            )
+            self.page = 0
+            self.requests = []
+
+        def _get_json(self, path, params, budget_scope="search"):
+            self._reserve_request_budget(budget_scope)
+            self.page += 1
+            self.requests.append({"path": path, "params": params, "budget_scope": budget_scope})
+            return {
+                "tweets": [
+                    {
+                        **sample,
+                        "id": str(1900000000000000200 + self.page),
+                        "createdAt": "Thu Jul 16 23:59:00 +0000 2026",
+                        "text": f"{budget_scope} page {self.page}",
+                    }
+                ],
+                "has_next_page": True,
+                "next_cursor": f"cursor-{self.page + 1}",
+            }
+
+    scoped_search = ScopedPaginationAdapter()
+    scoped_search_rows = scoped_search.search_posts(
+        "joybuy",
+        "2026-07-16T00:00:00Z",
+        "2026-07-17T00:00:00Z",
+        4,
+    )
+    assert len(scoped_search_rows) == 4, "normal search should still use the regular page cap"
+    assert len(scoped_search.requests) == 4
+
+    scoped_context = ScopedPaginationAdapter()
+    scoped_context_rows = scoped_context.conversation_posts(
+        "1899999999999999999",
+        "2026-07-16T00:00:00Z",
+        "2026-07-17T00:00:00Z",
+        limit=5,
+    )
+    assert len(scoped_context_rows) == 2, "conversation context should stop at the context page cap"
+    assert len(scoped_context.requests) == 2
+    assert all(request["budget_scope"] == "context" for request in scoped_context.requests)
+
+    scoped_thread = ScopedPaginationAdapter()
+    scoped_thread_rows = scoped_thread.thread_context_posts(
+        "1900000000000000001",
+        "2026-07-16T00:00:00Z",
+        "2026-07-17T00:00:00Z",
+        limit=5,
+    )
+    assert len(scoped_thread_rows) == 2, "thread context should stop at the context page cap"
+    assert len(scoped_thread.requests) == 2
+    assert all(request["path"] == "/twitter/tweet/thread_context" for request in scoped_thread.requests)
+
     class FakeResponse:
         def __init__(self, body: str) -> None:
             self.body = body
