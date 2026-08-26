@@ -1,19 +1,49 @@
 {
-  "generated_at": "2026-08-25T10:06:23Z",
-  "generated_at_label": "2026-08-25 18:06 BJT",
+  "generated_at": "2026-08-26T00:30:14Z",
+  "generated_at_label": "2026-08-26 08:30 BJT",
   "source": "codew1028/dt",
   "source_base_url": "https://codew1028.github.io/dt",
   "detail_days": 60,
   "latest": {
-    "ai": "2026-08-25",
-    "tg": "2026-08-25"
+    "ai": "2026-08-26",
+    "tg": "2026-08-26"
   },
-  "latest_date": "2026-08-25",
+  "latest_date": "2026-08-26",
   "counts": {
-    "ai": 104,
-    "tg": 111
+    "ai": 105,
+    "tg": 112
   },
   "items": [
+    {
+      "kind": "tg",
+      "kind_label": "TG 日报",
+      "date": "2026-08-26",
+      "file": "2026-08-26-tg-digest.html",
+      "title": "TG 日报",
+      "source_url": "https://codew1028.github.io/dt/2026-08-26-tg-digest.html",
+      "search_text_hash": "1b7909593a6b8f3b",
+      "body_preview": "TG 频道日报 VOL.20260826 TG 频道日报 2026年08月26日 · 星期三 · 7 个频道 · 43 条内容 43 条内容 7 个频道 01 TG 频道精选 43 条 @openclaw1024 00:44 Fable 默认用 high 就够了，然后让它主要负责编排、验收，这样是最经济实惠的。 附提示词： 注意你的主要任务是分析、编排和验证，具体任务尽可能交给 subagent（Opus 或 Sonnet）去执行。自己只做需求澄清、方案拆解、任务分发和结果验",
+      "item_count": 43,
+      "section_count": 7,
+      "has_json": true,
+      "json_url": "2026-08-26-tg-digest.json",
+      "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-26.json",
+      "detail_available": true
+    },
+    {
+      "kind": "ai",
+      "kind_label": "AI 日报",
+      "date": "2026-08-26",
+      "file": "20260826-AI日报.html",
+      "title": "AI 日报",
+      "source_url": "https://codew1028.github.io/dt/20260826-AI%E6%97%A5%E6%8A%A5.html",
+      "search_text_hash": "5fd695ca907b2a3e",
+      "body_preview": "🤖 AI 日报 VOL.20260826 🤖 AI 日报 2026年08月26日 · 星期三 · 5 个板块 · 19 条内容 19 条内容 5 个板块 01 模型发布/更新 1 条 WeatherNext 预测气旋：提前五天预警五级飓风 Google AI 发布 WeatherNext 气旋预测模型，可同时预测风暴路径、强度和规模，比现有系统多提供一整天的预警时间。该模型在 2025 飓风季实战测试中，提前五天预测飓风 Melissa 在牙买加的五级登陆，系美国国家飓风中心",
+      "item_count": 19,
+      "section_count": 5,
+      "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-26.json",
+      "detail_available": true
+    },
     {
       "kind": "tg",
       "kind_label": "TG 日报",

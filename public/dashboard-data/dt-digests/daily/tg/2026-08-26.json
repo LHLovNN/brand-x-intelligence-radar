@@ -1,0 +1,4054 @@
+{
+  "kind": "tg",
+  "kind_label": "TG 日报",
+  "date": "2026-08-26",
+  "file": "2026-08-26-tg-digest.html",
+  "title": "TG 频道日报",
+  "hero_date": "2026年08月26日 · 星期三 · 7 个频道 · 43 条内容",
+  "source_url": "https://codew1028.github.io/dt/2026-08-26-tg-digest.html",
+  "synced_at": "2026-08-26T00:30:14Z",
+  "original_item_count": 43,
+  "filtered_count": 0,
+  "filter_summary": [],
+  "item_count": 43,
+  "section_count": 1,
+  "sections": [
+    {
+      "title": "TG 频道精选",
+      "count_label": "43 条",
+      "items": [
+        {
+          "title": "Fable 默认用 high 就够了，然后让它主要负责编排、验收，这样是最经济实惠的。",
+          "summary": "Fable 默认用 high 就够了，然后让它主要负责编排、验收，这样是最经济实惠的。\n附提示词：\n> 注意你的主要任务是分析、编排和验证，具体任务尽可能交给 subagent（Opus 或 Sonnet）去执行。自己只做需求澄清、方案拆解、任务分发和结果验收，实现类工作（读大量代码、写代码、跑测试、批量修改）一律用 Agent 工具派给 subagent 执行。",
+          "channel": "@openclaw1024",
+          "time": "00:44",
+          "url": "https://t.me/openclaw1024/1275",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1275",
+              "label": "Fable 默认用 high 就够了，然后让它主要负责编排、验收，这样是最经济实惠的。"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1275",
+              "label": "查看原文"
+            }
+          ],
+          "id": "openclaw1024-1275",
+          "message_id": "1275",
+          "channel_name": "Hermes爱马仕&🦞OpenClaw小龙虾",
+          "channel_url": "https://t.me/openclaw1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "把实时新闻从多源抓取、向量索引到 AI 问答和流式分析串成一条完整流水线，解决新闻平台更新滞后、搜索缺上下文、分析不实时的问。",
+          "summary": "把实时新闻从多源抓取、向量索引到 AI 问答和流式分析串成一条完整流水线，解决新闻平台更新滞后、搜索缺上下文、分析不实时的问。\nhttps://github.com/jinit-00/PulseNews-Live-AI-News-Streaming-Platform\n平台跑在 Python 3.11 + FastAPI + React 上，用 Docker 一次起全套服务，支持单机内存模式和 Kafka + Qdrant + Elasticsearch 集群模式两种跑法。数据流走 Apache Kafka，从全球 RSS 源持续收稿，入库前做去重、情感分析和关键词提取，再通过 WebSocket 推到前端，刷新页面才能看到新内容的操作省掉了。",
+          "channel": "@aigc1024",
+          "time": "01:36",
+          "url": "https://t.me/aigc1024/23547",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23547",
+              "label": "把实时新闻从多源抓取、向量索引到 AI 问答和流式分析串成一条完整流水线，解决新闻平台更新滞后、搜索缺上下文、分析不实时的问。"
+            },
+            {
+              "href": "https://t.me/aigc1024/23547",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23547-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23547-1-thumb.webp",
+              "width": 1200,
+              "height": 1013,
+              "size_bytes": 35410
+            }
+          ],
+          "id": "aigc1024-23547",
+          "message_id": "23547",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "格局打开！Higgsfield居然把他们制作的热门AI电影《Zephyr》开源了，所有的提示词和资源都可以任意学习和使用。",
+          "summary": "格局打开！Higgsfield居然把他们制作的热门AI电影《Zephyr》开源了，所有的提示词和资源都可以任意学习和使用。\n我随便看了一下其中的片段，人物的外表、神态、动作、语气、情绪都拿捏地非常到位，绝对值得每一个创作者逐帧学习！",
+          "channel": "@aigc1024",
+          "time": "06:13",
+          "url": "https://t.me/aigc1024/23559",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23559",
+              "label": "格局打开！Higgsfield居然把他们制作的热门AI电影《Zephyr》开源了，所有的提示词和资源都可以任意学习和使用。"
+            },
+            {
+              "href": "https://t.me/aigc1024/23559",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "video",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23559-1.mp4",
+              "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23559-1-poster.webp",
+              "fallback_url": "https://t.me/aigc1024/23559",
+              "width": 0,
+              "height": 0,
+              "duration": 0,
+              "size_bytes": 10001956,
+              "has_audio": true
+            }
+          ],
+          "id": "aigc1024-23559",
+          "message_id": "23559",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "其实挣钱这事",
+          "summary": "其实挣钱这事\n没那么简单\n也没那么难\n哪怕你做对/做好一件事\n这辈子都可以了\n一个朋友自己开发了一款ToB的软件\n持续迭代和优化了5年\n积累了90个用户\n一个用户一个月使用月费 7000\n总共一个月63万\n每天耐心的当客服，迭代软件和享受人生\n\n副业赚钱探索\n@text1024",
+          "channel": "@inside1024",
+          "time": "06:41",
+          "url": "https://t.me/inside1024/83707",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83707",
+              "label": "其实挣钱这事"
+            },
+            {
+              "href": "https://t.me/inside1024/83707",
+              "label": "查看原文"
+            }
+          ],
+          "id": "inside1024-83707",
+          "message_id": "83707",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "这是一个有意思的 Skill，叫 ELI5，意思是就好比你给 5 岁孩子解释这件事，所以要通俗易懂。生成结果是 HTML 页面。",
+          "summary": "这是一个有意思的 Skill，叫 ELI5，意思是就好比你给 5 岁孩子解释这件事，所以要通俗易懂。生成结果是 HTML 页面。\n其实你要是不经常用都没必要去安装这个 Skill，这个 Skill 里面也就是一句提示词而已。\n提示词（https://github.com/anthropics/claude-plugins-community/blob/main/eli5/skills/eli5/SKILL.md）：\n请把我当成对这个一无所知的人，用一个包含大图且文字较少的 HTML 组件来向我解释。",
+          "channel": "@openclaw1024",
+          "time": "07:23",
+          "url": "https://t.me/openclaw1024/1279",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1279",
+              "label": "这是一个有意思的 Skill，叫 ELI5，意思是就好比你给 5 岁孩子解释这件事，所以要通俗易懂。生成结果是 HTML 页面。"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1279",
+              "label": "查看原文"
+            }
+          ],
+          "id": "openclaw1024-1279",
+          "message_id": "1279",
+          "channel_name": "Hermes爱马仕&🦞OpenClaw小龙虾",
+          "channel_url": "https://t.me/openclaw1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "**Cloudflare AI Gateway 推出** 🤖** GPT-5.6 Sol 半价优惠，统一计费用户可享至 9 月 18 日**",
+          "summary": "**Cloudflare AI Gateway 推出** 🤖** GPT-5.6 Sol 半价优惠，统一计费用户可享至 9 月 18 日**\n\nCloudflare AI Gateway 为 GPT-5.6 Sol 提供 50% 折扣，优惠持续至 2026 年 9 月 18 日，无需优惠码。仅限统一计费用户，BYO Key 用户不适用。\n\n促销价为输入每 100 万 tokens 2 美元、输出 10 美元、缓存读取 0.25 美元，分别低于原价 4 美元、20 美元和 0.5 美元。\n\n[Cloudflare](https://developers.cloudflare.com/ai/models/openai/gpt-5.6-sol/)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "channel": "@zaihuapd",
+          "time": "07:58",
+          "url": "https://t.me/zaihuapd/43372",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43372",
+              "label": "**Cloudflare AI Gateway 推出** 🤖** GPT-5.6 Sol 半价优惠，统一计费用户可享至 9 月 18 日**"
+            },
+            {
+              "href": "https://developers.cloudflare.com/ai/models/openai/gpt-5.6-sol/",
+              "label": "Cloudflare"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43372",
+              "label": "查看原文"
+            }
+          ],
+          "id": "zaihuapd-43372",
+          "message_id": "43372",
+          "channel_name": "科技圈🎗在花频道📮",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 16,
+          "replies_fetched": 16,
+          "replies_visible": 14,
+          "replies_filtered": 2,
+          "replies": [
+            {
+              "id": "410825",
+              "text": "这个半价不会是api半价吧，搁这开中转站呢？",
+              "time": "08:00",
+              "sender_name": "Konstantin",
+              "sender_id": 7833918075
+            },
+            {
+              "id": "410826",
+              "text": "这个半价优惠在 OpenRouter 还有 Vercel AI Gateway 上也适用 https://t.me/moelove9020/2033",
+              "time": "08:01",
+              "sender_name": "Jintao Zhang",
+              "sender_id": 470773348
+            },
+            {
+              "id": "410830",
+              "text": "就是 API 半价",
+              "time": "08:01",
+              "sender_name": "Jintao Zhang",
+              "sender_id": 470773348
+            },
+            {
+              "id": "410834",
+              "text": "官方 API 降价，目前说是活动持续到 11 月底，原本 API 价格是 input $5， output $30",
+              "time": "08:02",
+              "sender_name": "Jintao Zhang",
+              "sender_id": 470773348
+            },
+            {
+              "id": "410843",
+              "text": "订阅呢，降降订阅啊",
+              "time": "08:06",
+              "sender_name": "nonono",
+              "sender_id": 1346367947
+            },
+            {
+              "id": "410854",
+              "text": "Azure什么时候降？",
+              "time": "08:11",
+              "sender_name": "Lovely Bee🐝",
+              "sender_id": 401026095
+            },
+            {
+              "id": "410875",
+              "text": "Cloudflare 也有手續費 而且模型還少 不如openrouter",
+              "time": "08:21",
+              "sender_name": "Archangel Raphael",
+              "sender_id": 769742225
+            },
+            {
+              "id": "410914",
+              "text": "订阅用户不如狗",
+              "time": "08:28",
+              "sender_name": "kaws",
+              "sender_id": 410674399
+            },
+            {
+              "id": "410927",
+              "text": "现在AWS 已经跟进降价了，azure 说也会跟，但慢一点",
+              "time": "08:34",
+              "sender_name": "Jintao Zhang",
+              "sender_id": 470773348
+            },
+            {
+              "id": "410966",
+              "text": "为啥这么贵呢,直接开个plus账号,不就可以省嘛? 小花同学,届时一下.",
+              "time": "09:00",
+              "sender_name": "jim kim",
+              "sender_id": 8829965096
+            },
+            {
+              "id": "410970",
+              "text": "我擦擦擦擦擦擦",
+              "time": "09:02",
+              "sender_name": "么佬族大大",
+              "sender_id": 6092152931
+            },
+            {
+              "id": "411005",
+              "text": "新手来请问下各位 搞到api后，一般是在哪里用呢？ opencode代替CC和codex？ 找个什么chatbot代替那两家的网页版？",
+              "time": "09:14",
+              "sender_name": "A K",
+              "sender_id": 6136368479
+            },
+            {
+              "id": "411632",
+              "text": "一切非官方提供的AI产品",
+              "time": "13:35",
+              "sender_name": "Z",
+              "sender_id": 1653290700
+            },
+            {
+              "id": "412709",
+              "text": "只有sol？。。。",
+              "time": "18:46",
+              "sender_name": "oo ll",
+              "sender_id": 5748691864
+            }
+          ]
+        },
+        {
+          "title": "Codex额度最近掉的飞快！！",
+          "summary": "Codex额度最近掉的飞快！！\nTibo正面回应了这个问。\n原罪是很多人使用了Sub2api，将订阅转换成API共享使用，这些被官方的反滥用机制标记了，感觉接下来应该会重点风控！！\n但奇怪的是，我就是老老实实在官方 Codex 里正常用，最近额度消耗速度同样肉眼可见地变快。\n而且并不是个例，大量正常用户也在反馈同样的问。\n可能还有一些问存在，比如风控误判，或者模型 / Agent 工作方式变化导致的整体消耗上涨。",
+          "channel": "@openclaw1024",
+          "time": "08:31",
+          "url": "https://t.me/openclaw1024/1280",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1280",
+              "label": "Codex额度最近掉的飞快！！"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1280",
+              "label": "查看原文"
+            }
+          ],
+          "id": "openclaw1024-1280",
+          "message_id": "1280",
+          "channel_name": "Hermes爱马仕&🦞OpenClaw小龙虾",
+          "channel_url": "https://t.me/openclaw1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "最近做了一个「竞品思考放大器 · 工作流」",
+          "summary": "最近做了一个「竞品思考放大器 · 工作流」\n发出来和大家分享一下 🔍\n（应该蛮稀有的，自己出于工作，迭代了两周）\n🔍产品深度拆解与可视化表达（Product Teardown & Visualization）\n【背景】\n1. 老板经常会发来各种前沿产品。体验之后，我通常会冒出一些零散的判断，但又不想每个产品都写几千字的分析文档；\n2. 完全交给Agent自主分析产品，当下AI边界未到。目前也很难得到真正有价值的结论。\n所以做了这件事 🧠✨\n【核心价值 · Enhance你的思考+把思考可视化】\n我规定了 除产品介绍板块外，所有分析仅针对你自己人为输入的语言\n而是「只基于你的真实体验/观点」，把截图、感受和零散想法进一步梳理、放大，转化成一份清晰、有观点、视觉友好的可视化展示。\n【使用方式】\n安装\n📥 输入：产品体验截图 + 你的真实感受/产品判断\n📤 输出：经过梳理和放大的产品洞察 + 可视化展示\n🧩 这次到底沉淀了什么？\n严格来说，它不是一个Skill，更像是一个被强行封装成 Skill 的个人工作流。\n因为竞品分析没有上限。分析目的不同、产品不同、偏好不同，最终呈现的内容也应该不同。\n（文档的、画布的、3:4图片的、HTML的）\n• AI 应该分析到哪里，哪里交还给人\n• 如何把截图、感受和零散观点组织起来\n• 如何减少空洞、正确但无用的 AI 分析\n理想态 每个人都应该有自己习惯的分析和呈现方式。\n尝试了很多种HTML形式的画布+左右图卡个人感觉效果最好\n仅分享自己的方式出来，欢迎大家体验、改造 🙌\n（Tips：因为不是标准化Skill 稳定性不一定好）\n【AI总结】\n｜这个流程放大的是对产品的判断，再把这些判断，变成一份视觉友好的可视化展示。\n｜Skill是拿来改的，不是拿来用的\n｜可复用的不是每次的分析结论，而是加工、放大和呈现思考的方式。\nhttps://hushed-witness-8cd.notion.site/Product-Teardown-Visualization-3c27db4d2f4580f1bd30dacb9fa5fe0c?source=copy_link\n@aigc1024",
+          "channel": "@aigc1024",
+          "time": "09:02",
+          "url": "https://t.me/aigc1024/23564",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23564",
+              "label": "最近做了一个「竞品思考放大器 · 工作流」"
+            },
+            {
+              "href": "https://t.me/aigc1024/23564",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-23564",
+          "message_id": "23564",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "这个AI 工具让你一个人也能运营百万视频矩阵！",
+          "summary": "这个AI 工具让你一个人也能运营百万视频矩阵！\nY2A-Auto 是一个开源的视频内容自动化分发工具，可以把 YouTube 视频自动处理并发布到 AcFun、B站。\n它不是简单下载器，而是一套完整流水线：\n- 自动监控频道，发现新视频\n- yt-dlp 下载视频、封面和信息\n- AI 语音识别生成字幕\n- 自动翻译、字幕校对、视频转码\n- AI 生成标、简介、标签\n- 内容安全审核后自动上传\n支持 Docker 部署、本地运行，CPU/GPU 加速，还提供 Web 管理后台。\n对于做视频矩阵、海外内容分发、知识搬运的创作者来说，相当于拥有一个 24 小时自动运营团队。",
+          "channel": "@aigc1024",
+          "time": "09:12",
+          "url": "https://t.me/aigc1024/23565",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23565",
+              "label": "这个AI 工具让你一个人也能运营百万视频矩阵！"
+            },
+            {
+              "href": "https://t.me/aigc1024/23565",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "video",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23565-1.mp4",
+              "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23565-1-poster.webp",
+              "fallback_url": "https://t.me/aigc1024/23565",
+              "width": 0,
+              "height": 0,
+              "duration": 0,
+              "size_bytes": 14605486,
+              "has_audio": true
+            }
+          ],
+          "id": "aigc1024-23565",
+          "message_id": "23565",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "潮玩真的是个好副业。",
+          "summary": "潮玩真的是个好副业。\n这家淘宝店铺，单靠蹭Labubu的热度，轻轻松松就做到了月入十万。\n大家还不赶紧抄作业。\n不用担心侵权问，这几个配饰的选品方向，非常适合大家赚笔快钱：\n1. 定制娃衣\n2. 车载娃娃座椅\n3. 手机挂绳\n4. 改娃教程\n5. 仿娃串珠",
+          "channel": "@yunying23",
+          "time": "09:17",
+          "url": "https://t.me/yunying23/11263",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/11263",
+              "label": "潮玩真的是个好副业。"
+            },
+            {
+              "href": "https://t.me/yunying23/11263",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/yunying23-11263-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/yunying23-11263-1-thumb.webp",
+              "width": 1120,
+              "height": 2048,
+              "size_bytes": 320180
+            }
+          ],
+          "id": "yunying23-11263",
+          "message_id": "11263",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "🤖 **ChatGPT Plus 恢复 5 小时使用限制，Pro 订阅暂不受影响**",
+          "summary": "🤖 **ChatGPT Plus 恢复 5 小时使用限制，Pro 订阅暂不受影响**\n\nTibo 表示，将于 8 月 26 日起在 ChatGPT Work 与 Codex 恢复 Plus 账户 5 小时使用限制。此举意在平滑算力负载，同时避免用户一次性耗尽每周额度而产生困惑。\n\n未来几个月，Pro 100 美元和 200 美元订阅不会启用该 5 小时限制。\n\n[Tibo(@thsottiaux)](https://x.com/thsottiaux/status/2092058556707344708)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "channel": "@zaihuapd",
+          "time": "09:49",
+          "url": "https://t.me/zaihuapd/43376",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43376",
+              "label": "🤖 **ChatGPT Plus 恢复 5 小时使用限制，Pro 订阅暂不受影响**"
+            },
+            {
+              "href": "https://x.com/thsottiaux/status/2092058556707344708",
+              "label": "Tibo(@thsottiaux)"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43376",
+              "label": "查看原文"
+            }
+          ],
+          "id": "zaihuapd-43376",
+          "message_id": "43376",
+          "channel_name": "科技圈🎗在花频道📮",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 124,
+          "replies_fetched": 124,
+          "replies_visible": 117,
+          "replies_filtered": 7,
+          "replies": [
+            {
+              "id": "411138",
+              "text": "低端用户",
+              "time": "09:50",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411139",
+              "text": "防沉迷是吧",
+              "time": "09:50",
+              "sender_name": "Just Paper",
+              "sender_id": 955821087
+            },
+            {
+              "id": "411140",
+              "text": "日抛全给我降价😡",
+              "time": "09:50",
+              "sender_name": "JJchao",
+              "sender_id": 8598804644
+            },
+            {
+              "id": "411141",
+              "text": "等级森严",
+              "time": "09:50",
+              "sender_name": "Couleur",
+              "sender_id": 717385637
+            },
+            {
+              "id": "411144",
+              "time": "09:50",
+              "sender_name": "￴",
+              "media": [
+                {
+                  "type": "video",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411144-1.mp4",
+                  "fallback_url": "https://t.me/zaihuapd/43376",
+                  "width": 0,
+                  "height": 0,
+                  "duration": 0,
+                  "size_bytes": 0,
+                  "has_audio": true
+                }
+              ],
+              "sender_id": 5743552109
+            },
+            {
+              "id": "411146",
+              "text": "三十一个日抛什么话😡",
+              "time": "09:51",
+              "sender_name": "JJchao",
+              "sender_id": 8598804644
+            },
+            {
+              "id": "411147",
+              "text": "真该死啊",
+              "time": "09:51",
+              "sender_name": ".ᐣ",
+              "sender_id": 7172243753
+            },
+            {
+              "id": "411149",
+              "text": "说明似得差不多了，可以换别的玩了",
+              "time": "09:52",
+              "sender_name": "克莱恩 NULL",
+              "sender_id": 5460564648
+            },
+            {
+              "id": "411150",
+              "text": "不过plus；那限额",
+              "time": "09:53",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411151",
+              "text": "本来也用不了多久",
+              "time": "09:53",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411152",
+              "text": "给个限制反而好些",
+              "time": "09:53",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411153",
+              "text": "免得你一个session就把周限额用完了",
+              "time": "09:53",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411154",
+              "text": "只要出钱多，想怎么用就怎么用",
+              "time": "09:53",
+              "sender_name": "hsvent",
+              "sender_id": 719809196
+            },
+            {
+              "id": "411155",
+              "text": "~~\"避免用户一次性耗尽每周额度而产生困惑\"~~",
+              "time": "09:53",
+              "sender_name": "stew ba",
+              "sender_id": 7029346644
+            },
+            {
+              "id": "411156",
+              "text": "这是好sir啊",
+              "time": "09:54",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411159",
+              "text": "虽然我是5x，但是我想说cnm tibo",
+              "time": "09:54",
+              "sender_name": "Carry X",
+              "sender_id": 974601671
+            },
+            {
+              "id": "411161",
+              "text": "恢复5小时，tibo何意味？token量会变吗？",
+              "time": "09:56",
+              "sender_name": "huangyan 20",
+              "sender_id": 8022522725
+            },
+            {
+              "id": "411162",
+              "text": "team呢？",
+              "time": "09:56",
+              "sender_name": "华为好 华为美",
+              "sender_id": 5168707827
+            },
+            {
+              "id": "411163",
+              "text": "team算是plus吗",
+              "time": "09:56",
+              "sender_name": "华为好 华为美",
+              "sender_id": 5168707827
+            },
+            {
+              "id": "411164",
+              "text": "我也想知道",
+              "time": "09:56",
+              "sender_name": "nb5p",
+              "sender_id": 546710026
+            },
+            {
+              "id": "411166",
+              "text": "有个问题，claude那边是不是一直我行我素，5小时限额没听过？",
+              "time": "09:57",
+              "sender_name": "nb5p",
+              "sender_id": 546710026
+            },
+            {
+              "id": "411172",
+              "text": "又宣布了？上次不才宣布吗",
+              "time": "10:01",
+              "sender_name": "天 炅",
+              "sender_id": 5338023177
+            },
+            {
+              "id": "411178",
+              "text": "会重置吗",
+              "time": "10:03",
+              "sender_name": "肖总",
+              "sender_id": 267532438
+            },
+            {
+              "id": "411179",
+              "text": "想买Pro了。。。",
+              "time": "10:04",
+              "sender_name": "Chu Yeo",
+              "sender_id": 798080988
+            },
+            {
+              "id": "411181",
+              "text": "本来Plus就不太够用",
+              "time": "10:04",
+              "sender_name": "Chu Yeo",
+              "sender_id": 798080988
+            },
+            {
+              "id": "411183",
+              "text": "现在plus真的变得毫无用处",
+              "time": "10:04",
+              "sender_name": "Chan William",
+              "sender_id": 707663769
+            },
+            {
+              "id": "411184",
+              "text": "plus其实适合只用luna模型",
+              "time": "10:04",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411185",
+              "text": "也够用了",
+              "time": "10:04",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411186",
+              "text": "等级森严",
+              "time": "10:05",
+              "sender_name": "loop wang",
+              "sender_id": 1688223582
+            },
+            {
+              "id": "411187",
+              "text": "140块钱 一周可以用15亿token",
+              "time": "10:05",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411188",
+              "text": "比deepseek不是便宜到家了",
+              "time": "10:05",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411189",
+              "text": "但是有五小时限制就很难了",
+              "time": "10:05",
+              "sender_name": "Chan William",
+              "sender_id": 707663769
+            },
+            {
+              "id": "411191",
+              "text": "是的",
+              "time": "10:05",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411192",
+              "text": "正常用一个月用20亿也是赚的",
+              "time": "10:05",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411193",
+              "text": "用luna 还不如去用套餐更便宜的deepseek",
+              "time": "10:06",
+              "sender_name": "keethebest",
+              "sender_id": 592759119
+            },
+            {
+              "id": "411194",
+              "text": "确实，luna 用一天才耗 15%周限",
+              "time": "10:06",
+              "sender_name": "拉韦洛",
+              "sender_id": 7042643205
+            },
+            {
+              "id": "411196",
+              "text": "毕竟国模140块钱用20亿不敢想",
+              "time": "10:06",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411197",
+              "text": "luna是哪来的破烂，用这种低质量模型我咳嗽",
+              "time": "10:06",
+              "sender_name": "アイリー",
+              "sender_id": 627056971
+            },
+            {
+              "id": "411198",
+              "text": "估计这个用量也碰不太到五小时限额",
+              "time": "10:06",
+              "sender_name": "拉韦洛",
+              "sender_id": 7042643205
+            },
+            {
+              "id": "411199",
+              "text": "luna还行吧 就是有点慢",
+              "time": "10:06",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411202",
+              "text": "套餐luna包比deepseek便宜的",
+              "time": "10:07",
+              "sender_name": "Amphe",
+              "sender_id": 5747127763
+            },
+            {
+              "id": "411203",
+              "text": "时间就是金钱 本来就不聪明 还要等那么久",
+              "time": "10:07",
+              "sender_name": "keethebest",
+              "sender_id": 592759119
+            },
+            {
+              "id": "411204",
+              "text": "luna可以开FAST",
+              "time": "10:07",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411205",
+              "text": "现在我都用fable5 😂😂",
+              "time": "10:07",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "411206",
+              "text": "也无限额压力",
+              "time": "10:07",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411207",
+              "text": "很差，很慢，像回到gpt3时代",
+              "time": "10:07",
+              "sender_name": "アイリー",
+              "sender_id": 627056971
+            },
+            {
+              "id": "411208",
+              "text": "开了也是弱质…",
+              "time": "10:07",
+              "sender_name": "Lolicon竹中 🌸",
+              "sender_id": 258388754
+            },
+            {
+              "id": "411209",
+              "text": "Claude 现在限额好用吗？",
+              "time": "10:07",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411211",
+              "text": "要么选300块的grok",
+              "time": "10:07",
+              "sender_name": "Lolicon竹中 🌸",
+              "sender_id": 258388754
+            },
+            {
+              "id": "411212",
+              "text": "要么换国产",
+              "time": "10:07",
+              "sender_name": "Lolicon竹中 🌸",
+              "sender_id": 258388754
+            },
+            {
+              "id": "411213",
+              "text": "不知道 我只用API 😂😂",
+              "time": "10:07",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "411214",
+              "time": "10:08",
+              "sender_name": "拉韦洛",
+              "media": [
+                {
+                  "type": "image",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411214-1.webp",
+                  "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411214-1-thumb.webp",
+                  "width": 1280,
+                  "height": 1009,
+                  "size_bytes": 55144
+                }
+              ],
+              "sender_id": 7042643205
+            },
+            {
+              "id": "411215",
+              "text": "公司报销吧",
+              "time": "10:08",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411217",
+              "text": "除了慢，可以平替 terra high",
+              "time": "10:08",
+              "sender_name": "拉韦洛",
+              "sender_id": 7042643205
+            },
+            {
+              "id": "411220",
+              "text": "没有工作 😂😂",
+              "time": "10:08",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "411221",
+              "text": "自费用Claude的API？",
+              "time": "10:08",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411223",
+              "text": "这么富？",
+              "time": "10:08",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411225",
+              "text": "吓死了",
+              "time": "10:09",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411228",
+              "text": "这么豪嘛",
+              "time": "10:09",
+              "sender_name": "Chan William",
+              "sender_id": 707663769
+            },
+            {
+              "id": "411229",
+              "text": "luna max跟ds flash一样能打，某些层面比ds好",
+              "time": "10:09",
+              "sender_name": "cc土豆片",
+              "sender_id": 976873704
+            },
+            {
+              "id": "411230",
+              "text": "Plus一周可以用15亿吗？没这么多吧",
+              "time": "10:09",
+              "sender_name": "Chu Yeo",
+              "sender_id": 798080988
+            },
+            {
+              "id": "411233",
+              "time": "10:09",
+              "sender_name": "Ivan Solis",
+              "media": [
+                {
+                  "type": "image",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411233-1.webp",
+                  "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411233-1-thumb.webp",
+                  "width": 907,
+                  "height": 516,
+                  "size_bytes": 19668
+                }
+              ],
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411234",
+              "text": "跑滴滴一个月能赚一万多 你不知道吗? 😂😂",
+              "time": "10:09",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "411235",
+              "text": "我是20X",
+              "time": "10:09",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411236",
+              "text": "这么赚钱你现在才告诉我？",
+              "time": "10:10",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411237",
+              "time": "10:10",
+              "sender_name": "Ivan Solis",
+              "media": [
+                {
+                  "type": "image",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411237-1.webp",
+                  "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411237-1-thumb.webp",
+                  "width": 1031,
+                  "height": 402,
+                  "size_bytes": 19318
+                }
+              ],
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411238",
+              "text": "20X一天平均10亿token",
+              "time": "10:10",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411239",
+              "text": "你跑滴滴一万多一个月，每日工作时间得多少小时",
+              "time": "10:10",
+              "sender_name": "Chan William",
+              "sender_id": 707663769
+            },
+            {
+              "id": "411240",
+              "time": "10:10",
+              "sender_name": "天 炅",
+              "media": [
+                {
+                  "type": "video",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411240-1.mp4",
+                  "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411240-1-poster.webp",
+                  "fallback_url": "https://t.me/zaihuapd/43376",
+                  "width": 0,
+                  "height": 0,
+                  "duration": 0,
+                  "size_bytes": 15747,
+                  "has_audio": true
+                }
+              ],
+              "sender_id": 5338023177
+            },
+            {
+              "id": "411241",
+              "text": "和程序员差不多啊. 12小时😂😂",
+              "time": "10:10",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "411243",
+              "text": "如果会跑的话，这个收入也算正常吧",
+              "time": "10:10",
+              "sender_name": "信长",
+              "sender_id": 8206024839
+            },
+            {
+              "id": "411244",
+              "text": "而且我前几个月用的不是20X",
+              "time": "10:10",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411246",
+              "text": "程序员不都是8小时，周末双休",
+              "time": "10:11",
+              "sender_name": "Chan William",
+              "sender_id": 707663769
+            },
+            {
+              "id": "411251",
+              "text": "你去问问腾讯 字节 和拼多多的是不是8小时和双休. 😂😂",
+              "time": "10:11",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "411252",
+              "text": "好少……",
+              "time": "10:11",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411255",
+              "text": "Plus 难不成是我太焦虑了？",
+              "time": "10:11",
+              "sender_name": "Chu Yeo",
+              "media": [
+                {
+                  "type": "image",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411255-1.webp",
+                  "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411255-1-thumb.webp",
+                  "width": 800,
+                  "height": 328,
+                  "size_bytes": 16354
+                }
+              ],
+              "sender_id": 798080988
+            },
+            {
+              "id": "411256",
+              "text": "你这是哪个平行世界的程序员",
+              "time": "10:11",
+              "sender_name": "アイリー",
+              "sender_id": 627056971
+            },
+            {
+              "id": "411262",
+              "text": "不会有人以为开发真的12小时盯着电脑摸代码吧，有1/3小时专注工作算不错了😅",
+              "time": "10:12",
+              "sender_name": "克莱恩 NULL",
+              "sender_id": 5460564648
+            },
+            {
+              "id": "411265",
+              "text": "银行金融的",
+              "time": "10:12",
+              "sender_name": "Chan William",
+              "sender_id": 707663769
+            },
+            {
+              "id": "411269",
+              "text": "你妈银行内部开发都没这么狠呢",
+              "time": "10:12",
+              "sender_name": "克莱恩 NULL",
+              "sender_id": 5460564648
+            },
+            {
+              "id": "411272",
+              "text": "我应该是本群第一个千亿TOKEN ATM奴",
+              "time": "10:12",
+              "sender_name": "Ivan Solis",
+              "media": [
+                {
+                  "type": "image",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411272-1.webp",
+                  "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411272-1-thumb.webp",
+                  "width": 954,
+                  "height": 521,
+                  "size_bytes": 19920
+                }
+              ],
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411273",
+              "text": "pro 20？",
+              "time": "10:13",
+              "sender_name": "Chan William",
+              "sender_id": 707663769
+            },
+            {
+              "id": "411277",
+              "text": "这面板在哪看的",
+              "time": "10:14",
+              "sender_name": "Ghost Wolf",
+              "sender_id": 245177656
+            },
+            {
+              "id": "411278",
+              "text": "设置-个人资料-热力图",
+              "time": "10:15",
+              "sender_name": "Chu Yeo",
+              "sender_id": 798080988
+            },
+            {
+              "id": "411279",
+              "text": "设置-个人资料",
+              "time": "10:15",
+              "sender_name": "Alpha Water",
+              "sender_id": 8021333019
+            },
+            {
+              "id": "411280",
+              "text": "已知9成以上的工作都是重复造轮子，所以程序员岗位又叫码农，公司叫厂",
+              "time": "10:15",
+              "sender_name": "アイリー",
+              "sender_id": 627056971
+            },
+            {
+              "id": "411282",
+              "text": "luna开1.5X用起来还可以，有时候感觉比terra还好，terra有时会做多余的事情。luna反而相对灵活",
+              "time": "10:15",
+              "sender_name": "snake leung",
+              "sender_id": 441514729
+            },
+            {
+              "id": "411283",
+              "text": "好的 👌谢谢",
+              "time": "10:15",
+              "sender_name": "Ghost Wolf",
+              "sender_id": 245177656
+            },
+            {
+              "id": "411285",
+              "text": "要个蛋的专注，现在基本上所有程序员岗都是猛猛加班",
+              "time": "10:16",
+              "sender_name": "アイリー",
+              "sender_id": 627056971
+            },
+            {
+              "id": "411286",
+              "text": "猛猛擦屁，上线狠狠修bug",
+              "time": "10:16",
+              "sender_name": "Lolicon竹中 🌸",
+              "sender_id": 258388754
+            },
+            {
+              "id": "411287",
+              "text": "他加他的我摸我的不就是了",
+              "time": "10:17",
+              "sender_name": "克莱恩 NULL",
+              "sender_id": 5460564648
+            },
+            {
+              "id": "411288",
+              "text": "直接串流家里电脑猛爽",
+              "time": "10:17",
+              "sender_name": "克莱恩 NULL",
+              "sender_id": 5460564648
+            },
+            {
+              "id": "411290",
+              "text": "48亿 牛逼",
+              "time": "10:17",
+              "sender_name": "Chu Yeo",
+              "sender_id": 798080988
+            },
+            {
+              "id": "411292",
+              "text": "好的🤝谢谢",
+              "time": "10:19",
+              "sender_name": "Ghost Wolf",
+              "sender_id": 245177656
+            },
+            {
+              "id": "411297",
+              "text": "串流摸鱼都来了，放在大厂就准备领离职大礼包",
+              "time": "10:21",
+              "sender_name": "アイリー",
+              "sender_id": 627056971
+            },
+            {
+              "id": "411298",
+              "text": "一天48亿是sol还是luna，如果sol得一天上万美金吧",
+              "time": "10:21",
+              "sender_name": "AGENT",
+              "sender_id": 8198120816
+            },
+            {
+              "id": "411299",
+              "text": "terra",
+              "time": "10:22",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411305",
+              "text": "那Team呢 又成香饽饽了",
+              "time": "10:31",
+              "sender_name": "Maruko",
+              "sender_id": 858383104
+            },
+            {
+              "id": "411307",
+              "text": "想多了，team 肯定是跟坏不跟好的",
+              "time": "10:32",
+              "sender_name": "天 炅",
+              "sender_id": 5338023177
+            },
+            {
+              "id": "411309",
+              "text": "Terra也要9000美金一天以上，只算输入，你公司能给你烧那么多吗",
+              "time": "10:33",
+              "sender_name": "AGENT",
+              "sender_id": 8198120816
+            },
+            {
+              "id": "411310",
+              "text": "亲 codex 的用量是算 credits 不是 api 价格",
+              "time": "10:35",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411319",
+              "text": "公司又不是全价 api 的，都有优惠 😂😂",
+              "time": "10:41",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "411325",
+              "text": "按照他的量估算也得5个账户，有优惠也是很可怕的",
+              "time": "10:42",
+              "sender_name": "AGENT",
+              "sender_id": 8198120816
+            },
+            {
+              "id": "411333",
+              "text": "中转会涨价吗",
+              "time": "10:44",
+              "sender_name": "纸老虎",
+              "sender_id": 7588184773
+            },
+            {
+              "id": "411337",
+              "text": "？你知道超算30块钱可以用比原价还便宜的dsv4f的对吧",
+              "time": "10:45",
+              "sender_name": "旋律",
+              "sender_id": 1325212315
+            },
+            {
+              "id": "411338",
+              "text": "并且比luna更快更聪明",
+              "time": "10:45",
+              "sender_name": "旋律",
+              "sender_id": 1325212315
+            },
+            {
+              "id": "411340",
+              "text": "说实话要是以前的用量也还行，就怕用量没解决然后还加限制",
+              "time": "10:46",
+              "sender_name": "Slind",
+              "sender_id": 8796984347
+            },
+            {
+              "id": "411342",
+              "time": "10:47",
+              "sender_name": "旋律",
+              "media": [
+                {
+                  "type": "image",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411342-1.webp",
+                  "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411342-1-thumb.webp",
+                  "width": 794,
+                  "height": 183,
+                  "size_bytes": 9986
+                }
+              ],
+              "sender_id": 1325212315
+            },
+            {
+              "id": "411343",
+              "text": "超算还是算了，都不一定是真的dsv4f",
+              "time": "10:47",
+              "sender_name": "acry isoprene",
+              "sender_id": 8935286585
+            },
+            {
+              "id": "411350",
+              "text": "知道",
+              "time": "10:53",
+              "sender_name": "Ivan Solis",
+              "sender_id": 5401113044
+            },
+            {
+              "id": "411452",
+              "text": "你干啥了",
+              "time": "11:30",
+              "sender_name": "nonono",
+              "sender_id": 1346367947
+            },
+            {
+              "id": "411572",
+              "text": "卖不了就别卖",
+              "time": "12:37",
+              "sender_name": "mizuki",
+              "sender_id": 1740867676
+            },
+            {
+              "id": "412311",
+              "text": "请问business 也是一样的限制吗",
+              "time": "17:03",
+              "sender_name": "niu a",
+              "sender_id": 5619803513
+            },
+            {
+              "id": "412312",
+              "text": "加入了其他人的team",
+              "time": "17:03",
+              "sender_name": "niu a",
+              "sender_id": 5619803513
+            },
+            {
+              "id": "413299",
+              "text": "小花，批判",
+              "time": "21:18",
+              "sender_name": "maike xie",
+              "sender_id": 7671435904
+            },
+            {
+              "id": "413986",
+              "text": "还是google 300美金香，还可以用gemini3.7",
+              "time": "22:52",
+              "sender_name": "Hooper Wood",
+              "sender_id": 6899368994
+            },
+            {
+              "id": "414208",
+              "text": "这怎么老变来变去的",
+              "time": "00:49",
+              "sender_name": "xiaoyu yang",
+              "sender_id": 5212914022
+            }
+          ]
+        },
+        {
+          "title": "https://github.com/lijigang/ljg-skills",
+          "summary": "https://github.com/lijigang/ljg-skills\n新增一个skill: /ljg-teach\n@aigc1024",
+          "channel": "@aigc1024",
+          "time": "09:56",
+          "url": "https://t.me/aigc1024/23566",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23566",
+              "label": "https://github.com/lijigang/ljg-skills"
+            },
+            {
+              "href": "https://t.me/aigc1024/23566",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23566-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23566-1-thumb.webp",
+              "width": 706,
+              "height": 2048,
+              "size_bytes": 149750
+            }
+          ],
+          "id": "aigc1024-23566",
+          "message_id": "23566",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "体育是美国市场最大的IP，没有之一。",
+          "summary": "体育是美国市场最大的IP，没有之一。\n已经认识好几个靠球星卡闷声发大财的老哥了。\n不过球星卡交易这里的水很深，我们作为外国人不一定把握的住。\n但是这个生态链比我们想象中的大很多。\n如果你实在对这方面不感兴趣，也可以关注下潮玩方向的IP。\n线下的数据很吓人。\n老板们天天忙着收钱，没空教你发财。\n\n自媒体/出海经验/赚美金/运营技巧\n@yunying23",
+          "channel": "@inside1024",
+          "time": "10:12",
+          "url": "https://t.me/inside1024/83717",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83717",
+              "label": "体育是美国市场最大的IP，没有之一。"
+            },
+            {
+              "href": "https://t.me/inside1024/83717",
+              "label": "查看原文"
+            }
+          ],
+          "id": "inside1024-83717",
+          "message_id": "83717",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "WTF！NVIDIA 最近的一篇关于KV Cache的论文，可能把 Agent “模型路由”这件事彻底颠覆了！！",
+          "summary": "WTF！NVIDIA 最近的一篇关于KV Cache的论文，可能把 Agent “模型路由”这件事彻底颠覆了！！\n可自由升降“档位”的模型“变速箱”？？\n以前一个 Agent 跑了几个小时，积累了几万 token 的上下文，这时候如果想切换模型，会遇到一个很现实的问：\n大模型得把前面的上下文重新读一遍。\n这一步叫 prefill。\n上下文越长、模型越大，切换的代价越高。\n但 NVIDIA 研究团队发现了一件很反直觉的事：\n一个模型产生的 KV Cache，居然可以直接“翻译”给另一个模型。\n而且不需要训练复杂的神经网络。\n他们发现，同一家族、KV 结构匹配的不同尺寸模型之间，KV Cache 存在非常明显的线性关系。\n他们直接用 Ridge Regression 做了一个线性映射器。\n简单理解就是：\n14B 模型已经读过的 3 万多个 token，\n不用让 32B 再重新读一遍，直接把 14B 的“工作记忆”转换成 32B 能理解的格式。\n效果有多夸张？\nQwen3 14B → 32B，32,768 token 的上下文：\n重新 Prefill：需要约 7 秒。\n转换 KV Cache：仅用了278 毫秒。\n快了大约 25 倍！！\n而且不只测了一组模型。\n论文测试了 Qwen3、Llama 3.1、Ministral 三个家族共 6 组模型组合。\n其中 4 组通过线性映射后，能够保留目标模型约 73%～98% 的原始任务准确率。\n当然，目前还远远不能理解成：\n“任何两个模型之间都可以互传 KV Cache。”\n论文要求 source 和 target 至少属于 matched-KV pair，也就是 KV head 数量和每个 head 的维度需要匹配，而且 6 组实验里也有两组线性方法明显失败。\n但我觉得，一种新的、完全不同的 Agent 架构。\n现在我们使用 Agent，通常还是：\n一个任务基本绑定一个模型。\n要么一直用小模型省钱，要么一直用大模型保证效果。\n即使有模型路由，大多数也只是：简单任务给小模型，复杂任务给大模型。\n每次调用之前选一次。\n但如果 KV Cache 真正能够低成本跨模型迁移，未来的 Agent 完全可能变成：\n8B 先读资料—8B 调工具—8B 整理文件—发现问开始变难—直接把当前 KV Cache 转给 32B—32B 做复杂推理—解决之后再切回 8B！\n也就是说，模型路由可能从“每",
+          "channel": "@openclaw1024",
+          "time": "10:17",
+          "url": "https://t.me/openclaw1024/1281",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1281",
+              "label": "WTF！NVIDIA 最近的一篇关于KV Cache的论文，可能把 Agent “模型路由”这件事彻底颠覆了！！"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1281",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/openclaw1024-1281-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/openclaw1024-1281-1-thumb.webp",
+              "width": 1003,
+              "height": 1025,
+              "size_bytes": 140238
+            }
+          ],
+          "id": "openclaw1024-1281",
+          "message_id": "1281",
+          "channel_name": "Hermes爱马仕&🦞OpenClaw小龙虾",
+          "channel_url": "https://t.me/openclaw1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "个任务选一个模型”，变成“一个任务执行过程中不断换模型”。",
+          "summary": "个任务选一个模型”，变成“一个任务执行过程中不断换模型”。\n这就很像汽车的自动档，需要爬坡自动切低档，速度快了自动换高档。\n真正困难的任务只占 Agent 工作流的一小部分，为什么整个几个小时都要挂着最贵的模型？\n以后可能根本没必要。\n更进一步说，我觉得这里还藏着一个非常重要的变化：\n模型和 Agent 可能会逐渐解耦。\n今天我们习惯说我们用的是 Claude Code、或者GPT Codex，因为 Agent 的上下文、推理过程、KV Cache，实际上高度依附于当前模型。\n但如果模型之间能够交换工作状态，那么未来真正持续存在的东西可能不再是“模型”，而是：Agent State。\n模型只是 Agent 临时调用的一块算力，今天调用 8B，下一秒调用 70B，再过一分钟切回 14B。\nAgent 本身没有变，它还记得自己读过什么、做过什么、任务进行到了哪里。\n所以这篇论文让我想到一个更大的趋势：\n未来最强的 Agent，未必是绑定最强模型的 Agent，而可能是最会调度模型的 Agent。\n模型会越来越像 CPU。可以升级，可以降级，可以替换，甚至可以热插拔。\n真正值钱的，反而会变成：\n状态、记忆、上下文、工具，以及模型之间的调度能力。\n如果这条路线继续走下去，以后一个 Agent 在完成一次任务的过程中，背后切换几十次模型，\n我们可能根本不会察觉。\n到那个时候，可能不会有人再问“你用的什么模型”，就像不会有人问你用的哪家电厂的电。",
+          "channel": "@openclaw1024",
+          "time": "10:17",
+          "url": "https://t.me/openclaw1024/1282",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1282",
+              "label": "个任务选一个模型”，变成“一个任务执行过程中不断换模型”。"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1282",
+              "label": "查看原文"
+            }
+          ],
+          "id": "openclaw1024-1282",
+          "message_id": "1282",
+          "channel_name": "Hermes爱马仕&🦞OpenClaw小龙虾",
+          "channel_url": "https://t.me/openclaw1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "嗯，AI 聊天超级缝合怪，口号是“把所有 AI 都塞进你的 Mac 里，大力出奇迹”",
+          "summary": "嗯，AI 聊天超级缝合怪，口号是“把所有 AI 都塞进你的 Mac 里，大力出奇迹”\nChorus https://github.com/meltylabs/chorus\n\n私人优质信息收藏夹\nhttps://t.me/chunse1024",
+          "channel": "@inside1024",
+          "time": "10:25",
+          "url": "https://t.me/inside1024/83719",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83719",
+              "label": "嗯，AI 聊天超级缝合怪，口号是“把所有 AI 都塞进你的 Mac 里，大力出奇迹”"
+            },
+            {
+              "href": "https://t.me/inside1024/83719",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/inside1024-83719-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/inside1024-83719-1-thumb.webp",
+              "width": 2048,
+              "height": 1211,
+              "size_bytes": 160990
+            }
+          ],
+          "id": "inside1024-83719",
+          "message_id": "83719",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "哇塞！用了几天 Dayflow AI，终于看清自己的时间都花哪儿去了😂",
+          "summary": "哇塞！用了几天 Dayflow AI，终于看清自己的时间都花哪儿去了😂\n一整天都在干啥，现在一目了然。不用手动开计时，自动把屏幕活动整理成时间线，感觉真不错，而且还可以看一整周的，体验够一周在看看。",
+          "channel": "@aigc1024",
+          "time": "11:16",
+          "url": "https://t.me/aigc1024/23570",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23570",
+              "label": "哇塞！用了几天 Dayflow AI，终于看清自己的时间都花哪儿去了😂"
+            },
+            {
+              "href": "https://t.me/aigc1024/23570",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23570-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23570-1-thumb.webp",
+              "width": 1199,
+              "height": 876,
+              "size_bytes": 59186
+            }
+          ],
+          "id": "aigc1024-23570",
+          "message_id": "23570",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "本周 Skill 推荐：自媒体必备 Skill 合集",
+          "summary": "本周 Skill 推荐：自媒体必备 Skill 合集\n1. Punk-skill\n把文章转成多个社交媒体平台封面，提供极简、拼贴、杂志、科技、建筑等多种风格\nhttp://go.colaskill.com/punk\n2. gzh-design-skill 将Markdown一键转为可直接粘贴进公众号编辑器的精致HTML\nhttp://go.colaskill.com/gzh\n3. baoyu-skill\n宝玉老师的内容创作Skill大合集，包含了各种生图/分发/创作等21个skill。\nhttp://go.colaskill.com/baoyu\n4. gbro-cover-design\n可以生成非常吸睛的人像小红书封面，总共有10种封面模板可以选择。\nhttp://go.colaskill.com/cover\n5. gbro-collage-broll\n将约5秒的口播文稿转换成高级Vox拼贴逐件组装定格质感的视频\nhttps://go.colaskill.com/broll\n@aigc1024",
+          "channel": "@aigc1024",
+          "time": "11:17",
+          "url": "https://t.me/aigc1024/23571",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23571",
+              "label": "本周 Skill 推荐：自媒体必备 Skill 合集"
+            },
+            {
+              "href": "https://t.me/aigc1024/23571",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-23571",
+          "message_id": "23571",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "做网站的人都知道，SEO 就是流量的入口。尤其是做出海和独立开发，如果没搜索引擎流量，网站很难跑起来。",
+          "summary": "做网站的人都知道，SEO 就是流量的入口。尤其是做出海和独立开发，如果没搜索引擎流量，网站很难跑起来。\n我最近发现一个特别实用的工具——AITDK，Chrome 浏览器插件。\n它的特点就三个字：轻、全、免费。装上以后，你随时可以对网页做一个“小体检”，看看标、描述、关键词密度、图片 Alt、内外链、社交卡片、多语言标签等等，全部一目了然。\n装起来很简单\n直接去 Chrome 应用商店搜 AITDK SEO Extension → 一键安装 → 浏览器右上角出现图标。之后访问任何网页，点一下插件，就能弹出分析面板，立刻出结果。\n常用几个功能\nSEO 概览：快速检查标、描述、URL，有没有明显低级错误。\nSERP 预览：模拟 Google 搜索结果，看看你的标会不会被截断。\n关键词密度：帮你避免“写太少”或“堆太多”。\n图片 Alt：一眼看出哪些图没写替代文本，这是很多新手常忽略的点。\n链接分析：内链、外链、dofollow/nofollow 全列出来，方便调整权重。\n多语言跨境网站尤其有用，能确保不同国家的用户跳到正确语言页面。\n为什么推荐\n不用花大钱：不需要几百美金买 Ahrefs、Semrush，那些专业平台做宏观分析，这个插件解决的是“日常微观检查”。\n简单好用：不用学习成本，点一下就知道自己页面的问。\n出海必备：还能看流量分布、社交卡片展示效果，帮你判断市场。\n总结：AITDK 特别适合新手建站和独立开发者。",
+          "channel": "@yunying23",
+          "time": "11:23",
+          "url": "https://t.me/yunying23/11264",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/11264",
+              "label": "做网站的人都知道，SEO 就是流量的入口。尤其是做出海和独立开发，如果没搜索引擎流量，网站很难跑起来。"
+            },
+            {
+              "href": "https://t.me/yunying23/11264",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/yunying23-11264-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/yunying23-11264-1-thumb.webp",
+              "width": 1080,
+              "height": 496,
+              "size_bytes": 36968
+            }
+          ],
+          "id": "yunying23-11264",
+          "message_id": "11264",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "每天半小时，看看外面的世界！！！",
+          "summary": "每天半小时，看看外面的世界！！！\n【沉浸式翻译】无论网页、视频、图片，都能一键翻译，内置14种AI大模型，还能自己指定大模型，甚至本地部署都行。\nBabelDOC能够完美保留排版的翻译效果，值得一遍又一遍的推荐给小伙伴们！\n今日推荐：《Science》科学杂志官方网站\nhttps://www.science.org/content/article/u-s-reneged-aid-commitments-nepal-s-malnourished-children-are-paying-price",
+          "channel": "@chunse1024",
+          "time": "11:43",
+          "url": "https://t.me/chunse1024/11260",
+          "links": [
+            {
+              "href": "https://t.me/chunse1024/11260",
+              "label": "每天半小时，看看外面的世界！！！"
+            },
+            {
+              "href": "https://t.me/chunse1024/11260",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/chunse1024-11260-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/chunse1024-11260-1-thumb.webp",
+              "width": 1250,
+              "height": 1591,
+              "size_bytes": 220732
+            }
+          ],
+          "id": "chunse1024-11260",
+          "message_id": "11260",
+          "channel_name": "优质信息收藏夹",
+          "channel_url": "https://t.me/chunse1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "一个网盘拉新的新玩法，在B站上传擦边视频，然后在这里放上网盘链接。",
+          "summary": "一个网盘拉新的新玩法，在B站上传擦边视频，然后在这里放上网盘链接。\n视频的来源都很多，比如Ins，Tiktok等等，或者直接用AI批量生产。\n这个思路也可以延伸到小红书上，批量生产AI美女图片/视频，然后引流到私域分享写真集之类的。\n好色是人的天性，这类资料的留存率都很高，收益是同类型里最高的。\n相应的资料我已经准备好了，直接发就行👇\nhttps://pan.quark.cn/s/ff4dbaca21d5",
+          "channel": "@text1024",
+          "time": "11:43",
+          "url": "https://t.me/text1024/24358",
+          "links": [
+            {
+              "href": "https://t.me/text1024/24358",
+              "label": "一个网盘拉新的新玩法，在B站上传擦边视频，然后在这里放上网盘链接。"
+            },
+            {
+              "href": "https://t.me/text1024/24358",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/text1024-24358-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/text1024-24358-1-thumb.webp",
+              "width": 2038,
+              "height": 1172,
+              "size_bytes": 195232
+            }
+          ],
+          "id": "text1024-24358",
+          "message_id": "24358",
+          "channel_name": "副业赚钱探索指南",
+          "channel_url": "https://t.me/text1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "📱 **谷歌 Play 商店测试图片搜应用，Ask Play 将支持拍照上传**",
+          "summary": "📱 **谷歌 Play 商店测试图片搜应用，Ask Play 将支持拍照上传**\n\n谷歌 Play 商店 v52.8.55-34 代码显示，Ask Play 对话搜索即将支持从手机相机或图库直接上传图片，用户可上传截图让 AI 识别桌面小组件、应用功能或特定类型应用；也可用图片加文字描述，搜索更细分用途的应用。同时谷歌可能停用「Ask Play about this app」板块，改为横向滚动、常驻显示的快捷问题标签。目前图片附件与新标签尚未上线，属 APK 拆解预测，最终未必发布。\n\n[Android Authority](https://www.androidauthority.com/google-play-store-a[redacted]/)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "channel": "@zaihuapd",
+          "time": "12:56",
+          "url": "https://t.me/zaihuapd/43385",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43385",
+              "label": "📱 **谷歌 Play 商店测试图片搜应用，Ask Play 将支持拍照上传**"
+            },
+            {
+              "href": "https://www.androidauthority.com/google-play-store-a[redacted]/",
+              "label": "Android Authority"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43385",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/zaihuapd-43385-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/zaihuapd-43385-1-thumb.webp",
+              "width": 800,
+              "height": 434,
+              "size_bytes": 54466
+            }
+          ],
+          "id": "zaihuapd-43385",
+          "message_id": "43385",
+          "channel_name": "科技圈🎗在花频道📮",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 19,
+          "replies_fetched": 19,
+          "replies_visible": 16,
+          "replies_filtered": 3,
+          "replies": [
+            {
+              "id": "411589",
+              "text": "Play 商店里面又没有存 APP 运行的实际图片，上哪能搜出来啊•ᴗ•💧",
+              "time": "12:57",
+              "sender_name": "橘春",
+              "sender_id": 6606439416
+            },
+            {
+              "id": "411590",
+              "text": "上传哔咔（",
+              "time": "12:58",
+              "sender_name": "795G25",
+              "sender_id": 540502544
+            },
+            {
+              "id": "411592",
+              "text": "不会要安装Google app用那个智能镜头才能识别吧？",
+              "time": "12:59",
+              "sender_name": "⁢⁠⁢ ⁢⁠⁢⁢⁠⁢ ⁢⁠⁢ ⁢⁠⁢ ⁢⁠⁢",
+              "sender_id": 484645590
+            },
+            {
+              "id": "411595",
+              "text": "这个不是人手一个吗",
+              "time": "12:59",
+              "sender_name": "沫茶",
+              "sender_id": 8615070158
+            },
+            {
+              "id": "411610",
+              "text": "今夕是何年？淘宝京东拼多多？",
+              "time": "13:07",
+              "sender_name": "ʀᵤₒₘᵤ 🌱",
+              "sender_id": 5566171804
+            },
+            {
+              "id": "411614",
+              "text": "网易云那货还不更新搜图找专辑找歌 还天天在那整什么AI歌单",
+              "time": "13:14",
+              "sender_name": "haochide 好吃的",
+              "sender_id": 8688217803
+            },
+            {
+              "id": "411618",
+              "text": "跳转原神",
+              "time": "13:19",
+              "sender_name": "Rick Brown",
+              "sender_id": 1799744739
+            },
+            {
+              "id": "411785",
+              "time": "14:16",
+              "sender_name": "Patricia Banister",
+              "media": [
+                {
+                  "type": "video",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411785-1.mp4",
+                  "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-411785-1-poster.webp",
+                  "fallback_url": "https://t.me/zaihuapd/43385",
+                  "width": 0,
+                  "height": 0,
+                  "duration": 0,
+                  "size_bytes": 43911,
+                  "has_audio": true
+                }
+              ],
+              "sender_id": 8549050744
+            },
+            {
+              "id": "411931",
+              "text": "google app难用死了，chrome还行，我现在都用chrome的智能镜头",
+              "time": "14:45",
+              "sender_name": "Jya An",
+              "sender_id": 5678949152
+            },
+            {
+              "id": "411993",
+              "text": "Google搜图找到应用名然后跳转应用下载页面（我猜的",
+              "time": "15:05",
+              "sender_name": "这什么？失忆群组，发言一下",
+              "sender_id": 1369181433
+            },
+            {
+              "id": "412052",
+              "text": "Ask Play about this app」板块，改为横向滚动 这是什么意思",
+              "time": "15:09",
+              "sender_name": "9527",
+              "sender_id": 5425632505
+            },
+            {
+              "id": "412154",
+              "text": "hey google，下载91破解版",
+              "time": "15:50",
+              "sender_name": "名字取得够长就会有人跟着读",
+              "sender_id": 8540715532
+            },
+            {
+              "id": "412552",
+              "text": "2026谁用play商店？",
+              "time": "18:02",
+              "sender_name": "大魔王",
+              "sender_id": 871092736
+            },
+            {
+              "id": "412600",
+              "text": "你说我 ？",
+              "time": "18:08",
+              "sender_name": "titan",
+              "sender_id": 7719215823
+            },
+            {
+              "id": "412707",
+              "text": "哈哈哈哈，你是用过google的，gemini都还没解耦",
+              "time": "18:43",
+              "sender_name": "￴⸙ꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋPaceMak1r𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯𑲯",
+              "sender_id": 1306280472
+            },
+            {
+              "id": "413775",
+              "text": "所以我用网页版gem",
+              "time": "22:18",
+              "sender_name": "⁢⁠⁢ ⁢⁠⁢⁢⁠⁢ ⁢⁠⁢ ⁢⁠⁢ ⁢⁠⁢",
+              "sender_id": 484645590
+            }
+          ]
+        },
+        {
+          "title": "AI办公疯狂圈地，但种不出庄稼",
+          "summary": "AI办公疯狂圈地，但种不出庄稼\n当下大厂们正在疯狂涌入AI办公赛道，过去半年超过20款桌面端Agent产品问世，6月份国内17款主流桌面端AI原生办公智能体平台月访问量突破了6000万次。\nWorkBuddy月活冲到2000万级别，百度搭子环比增速超过1000%，数字一个比一个漂亮。但如果你觉得这就是AI办公的黄金时代，可能还太早了一些。\n如果你同时打开WorkBuddy、千问办公、百度搭子和豆包工作的桌面端，会发现它们长得越来越像了。资料检索、文档撰写、数据分析、跨应用协作......就像是同一套功能模板换了八张脸，然后被扔进市场互相厮杀。\n只是区别在于WorkBuddy背靠腾讯的社交关系链，百度搭子依赖文库和网盘的知识资产积累，千问办公试图利用钉钉的B端壁垒，豆包工作打通了飞书的生态和企业上下文。看上去各有依托，但当所有人都在抄同一份作业，用户凭什么选你？更尴尬的是大厂们还在互相挖墙脚，当一套产品组合里既有自家的生态、又有竞品的外挂模型，用户黏性靠什么建立？\n产品同质化的本质是这个赛道还处于“占坑”阶段，没人在乎差异化，只在乎能不能先跑马圈地。但圈了地之后呢？地里的庄稼长不出来，圈得再大也只是一片荒地。\n所以大厂们到底在争什么？有一个逻辑虽然没有被摆上台面，但很可能是它们往里砸钱的最真实原因。生产力Agent正在成为大厂们共同押注的下一代办公入口，负责理解目标、调用数据和工具、主导持续推进任务，传统的协同办公软件正在成为辅助新一代入口执行任务的配套设施。\n当一个Agent能理解你的目标、调用所有工具、完成整个工作流，你还会在意自己用的是飞书还是钉钉吗？办公入口一旦被抢占，用户的使用习惯、行为数据、工作流沉淀都会被锁定在Agent层，而不是传统的SaaS层。谁能占领这个入口，谁就有机会成为下一代生产力场景的“操作系统”。入口本身比利润更重要，这句放在AI时代依然成立。大厂们烧的不是钱，是未来十年企业服务赛道的门票。\n但这个逻辑有一个前提是入口本身是有价值的，如果所有人都能建立入口，那入口的价值就会被摊薄。一旦入口本身不再是稀缺资源，烧钱抢入口的整个逻辑就崩塌了。大厂们可能不是没想清楚这一点，但它们没有更好的选择，因为如果自己不占就会被别人占了，这何尝不是一种战略上的无奈？\n大厂们在C端对AI算账困难后，集体抢占离Token商业闭环更近的办公场景。烧了几百亿的C端AI算账算不过来，只能把战场搬到企业端，而办公场景是唯一一个用户愿意为效率持续付费的地方。但真实情况是传统办公软件的用户规模花了十几年才长到今天的量级，AI办公产品用半年时间烧了这么多钱，换来的用户里有多少是真实的、愿意持续付费的？\n更糟糕的是企业内部的情况，麦肯锡的数据显示88%的企业声称已在至少一个业务环节使用了AI，但真正在哪怕一个部门里跑起AI Agent的公司不到10%。IBM的调查发现，只有25%的AI项目达到了预期回报，仅16%成功实现了企业级规模化落地，多数企业的AI从来就没有真的“跑起来”。方案在PPT上很漂亮，立项的时候信心满满，结果落地的时候一地鸡毛。\n毕马威的数据也很诚实，88%的企业已试点Agentic AI，但仅24%实现了投资回报。近半数企业高管因运营成本超过收益而推迟或缩减了AI Agent部署，Gartner预测到2027年将有40%的Agentic AI项目被取消，原因就是价值不清晰、成本失控、治理缺失，这是标准的泡沫剧本。\n先免费烧钱圈用户再涨价收割，这套打法放在互联网时代或许能跑通，但在AI时代可能要打个问号。因为AI办公产品的边际成本远高于传统软件，每一次调用都在真实消耗算力。你圈来的用户越多，烧掉的钱也越多。当免费期结束、账单开始堆积，用户跑得比谁都快。\n绝大多数企业的AI投入至今还没产出任何能看得见摸得着的财务回报，当高管们发现花了不少真金白银、折腾了大半年，结果公司的利润表纹丝不动，当初的许诺就要开始反噬了。\n2026年的AI办公赛道像极了十年前的O2O大战，资本疯狂涌入，产品快速复制，用户被补贴喂大，然后呢？只看见一地鸡毛。大厂们都在赌成为下一代生产力场景的入口，但当一个赛道里所有人都挤在同一个入口，那个入口本身就已经不值钱了。\nAI办公不会消失，但它需要经历一轮残酷的洗牌。洗掉那些只会复制粘贴的产品，洗掉那些烧钱换增长的模式，洗掉那些靠老板焦虑驱动的伪需求。\n当泡沫退去，活下来的可能不是跑得最快的，而是那个真正想清楚了“AI到底在帮谁解决什么问”的。\n但目前来看，大厂们显然还没完全想清楚这个问。\n@aigc1024",
+          "channel": "@aigc1024",
+          "time": "13:56",
+          "url": "https://t.me/aigc1024/23583",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23583",
+              "label": "AI办公疯狂圈地，但种不出庄稼"
+            },
+            {
+              "href": "https://t.me/aigc1024/23583",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-23583",
+          "message_id": "23583",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "Codex什么时候有了Apple Music插件啊！！",
+          "summary": "Codex什么时候有了Apple Music插件啊！！\n这简直深得我心！！\n我让Codex根据对我的画像给我推荐歌单，不得不说，喜好拿捏的贼准！",
+          "channel": "@openclaw1024",
+          "time": "14:22",
+          "url": "https://t.me/openclaw1024/1283",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1283",
+              "label": "Codex什么时候有了Apple Music插件啊！！"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1283",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/openclaw1024-1283-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/openclaw1024-1283-1-thumb.webp",
+              "width": 1199,
+              "height": 830,
+              "size_bytes": 33960
+            }
+          ],
+          "id": "openclaw1024-1283",
+          "message_id": "1283",
+          "channel_name": "Hermes爱马仕&🦞OpenClaw小龙虾",
+          "channel_url": "https://t.me/openclaw1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "你努力赚钱的原因到底是什么？",
+          "summary": "你努力赚钱的原因到底是什么？\n努力赚钱的终极原因，只有四个字：赎回时间。\n不是买房、买车、买包、买安全感，那些都只是副作用。\n真正残酷的真相是：在这个星球上，你一出生就被判了死刑，而且刑期精确到秒。\n你每活一秒，生命就少一秒。而金钱，是人类发明出来的唯一一种可以把“被别人偷走的时间”硬生生赎回来的赎金。\n1. 你现在月入一万，每月被老板偷走160-200个小时你把生命切成一块一块的，换成数字，打到卡里。等你赚到一百万，实际上是被偷走了1万多个小时的生命。努力赚钱的全部意义，就是有一天你可以站在老板面前说：“这1万个小时，我用钱买回来了。”\n2. 你不婚不育，不买房，不生娃这意味着你把别人用来“续命”（传宗接代、买房上岸）的所有筹码，都押在了“自己活得像个人”这一件事上。对你来说，钱不是用来养老、不是用来防父母生病、不是用来给孩子买学区房，钱是用来买“随时可以跟这个操蛋的世界说滚蛋”的底气。\n3. 最残忍的一段你小时候以为努力读书是为了考好大学，考上大学以为努力工作是为了买房结婚，等你26岁突然发现：原来你努力了一辈子，只是为了某一天能站在阳台上抽根烟，看着楼下奔波的人群，然后轻声说一句：“我不用下去了。”\n4. 钱买不到幸福，但能买到“拒绝不幸的权利”生病了可以不排队、可以飞去日本看病；被领导PUA可以直接辞职、可以消失半年；父母逼婚可以带他们出国玩到闭嘴；想谈恋爱就谈、不想谈就一个人开着车跑川藏线；想死的那天，至少可以选一个漂亮的地方，住最好的酒店，吃一顿想吃的饭，而不是在出租屋里因为500块钱房租崩溃。\n5. 最后我努力赚钱的终极原因，是为了在死神来找我要命的那一天，我可以把账户里最后的余额清零，然后笑着对他说：“我这辈子，一秒钟都没有白卖给这个世界。”现在告诉我，你还想不想继续月入一万？还是准备把命豁出去，去换一个“随时可以死得其所”的价格？",
+          "channel": "@inside1024",
+          "time": "14:22",
+          "url": "https://t.me/inside1024/83728",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83728",
+              "label": "你努力赚钱的原因到底是什么？"
+            },
+            {
+              "href": "https://t.me/inside1024/83728",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/inside1024-83728-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/inside1024-83728-1-thumb.webp",
+              "width": 1280,
+              "height": 1920,
+              "size_bytes": 272188
+            }
+          ],
+          "id": "inside1024-83728",
+          "message_id": "83728",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "很多人质疑我为什么那么\"无私\"的分享赚钱干货？",
+          "summary": "很多人质疑我为什么那么\"无私\"的分享赚钱干货？\n到底很简单，真正赚钱的不是方法，而是人。\n知道一个东西能赚钱，从学习领悟，到马上执行，再到根据市场变化快速迭代，每一步都筛掉了百分之九十的人。\n你要是真牛逼，不用我分享一样发大财。\n你要是傻逼，地上有钱你也捡不起来。",
+          "channel": "@yunying23",
+          "time": "14:25",
+          "url": "https://t.me/yunying23/11266",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/11266",
+              "label": "很多人质疑我为什么那么\"无私\"的分享赚钱干货？"
+            },
+            {
+              "href": "https://t.me/yunying23/11266",
+              "label": "查看原文"
+            }
+          ],
+          "id": "yunying23-11266",
+          "message_id": "11266",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "什么是经商头脑",
+          "summary": "什么是经商头脑\n1、商业的本质只有一个:卖东西\n2、世界上只有两种商业模式:卖自己的东西和帮别人卖东西\n3、企业只有两个功能:一个叫创造价值个叫告知价值。前者叫创新，后者叫营销\n4、创业和做生意没有区别:想要赚钱\n最终都需要卖东西。只要在通常语境下，创业更强调自己的模式是创造价值，做生意更强调自己的模式是告知价值\n5、作为一个普通人，当你想要开启一段新事业(尤其是副业)的时候，你更应该从告知价值开始",
+          "channel": "@chunse1024",
+          "time": "15:06",
+          "url": "https://t.me/chunse1024/11264",
+          "links": [
+            {
+              "href": "https://t.me/chunse1024/11264",
+              "label": "什么是经商头脑"
+            },
+            {
+              "href": "https://t.me/chunse1024/11264",
+              "label": "查看原文"
+            }
+          ],
+          "id": "chunse1024-11264",
+          "message_id": "11264",
+          "channel_name": "优质信息收藏夹",
+          "channel_url": "https://t.me/chunse1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "大家平时说 SHEIN 靠“小单快反”，这个说法没错，只说到了工厂端最后几步。其实更像是有一个一直在跑的商品实验系统，需求判断，首单，返单，供应商产能和站内流量被接在一起。",
+          "summary": "大家平时说 SHEIN 靠“小单快反”，这个说法没错，只说到了工厂端最后几步。其实更像是有一个一直在跑的商品实验系统，需求判断，首单，返单，供应商产能和站内流量被接在一起。\n它的全称是 Large-scale Automated Test and Reorder，大规模自动化测试与补单。\n服装行业一直卡在一个很烦的三角里，款式想多，上新想快，库存还要低。三件事单独做都不难，放在一起就开始互相打架。\n一个新款先做 100 到 200 件，上架后实时看购买行为和 customer feedback。表现好，系统下更大的返单，再根据工厂擅长的品类，报价和产能自动匹配供应商，连谁还有闲置产能都要算进去。\n需求强的款最快 5 天补货。商品回到货架以后，系统继续调整 app 和网站里的曝光，新的销售数据再回到下一轮补单。\n单看流程没有多神秘。SHEIN 自己也在招股书里承认，test and reorder 早就有了。麻烦在 Large-scale 和 Automated。\n看了下招股书，SHEIN 2026 年一季度，用户平均每天能看到约 4700 个新增服装款式。\n每天几千个新款同时测试，系统还要持续找 winner，决定补多少，分给哪家工厂（后面接了 7500 家代工厂），再把流量推回去。\nSHEIN 免费给这些供应商提供云端软件，接单，生产，质检和发货都在里面跑，它才能看到工厂的能力，报价，产能和进度，然后自动派单。\n看下来，我觉得 LATR 最容易被低估的地方，是它改变了猜错一次的代价。\nSHEIN 还是要判断趋势，也还是会押错。只是一次先押 100 到 200 件，错了就停，中了再让 7500 家工厂里的合适产能接单，最快 5 天补货，站内流量继续往上加。\n服装生意里，大家都会猜下一季流行什么。SHEIN 花了十几年，把猜错以后怎么办做成了标准化流程。\n\n@inside1024 #内幕消息",
+          "channel": "@inside1024",
+          "time": "15:16",
+          "url": "https://t.me/inside1024/83730",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83730",
+              "label": "大家平时说 SHEIN 靠“小单快反”，这个说法没错，只说到了工厂端最后几步。其实更像是有一个一直在跑的商品实验系统，需求判断，首单，返单，供应商产能和站内流量被接在一起。"
+            },
+            {
+              "href": "https://t.me/inside1024/83730",
+              "label": "查看原文"
+            }
+          ],
+          "id": "inside1024-83730",
+          "message_id": "83730",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "AI 生成的文字复制出来，可能还藏着一堆“看不见的字符”？",
+          "summary": "AI 生成的文字复制出来，可能还藏着一堆“看不见的字符”？\n发现一个在线工具 AI Watermark Remover，专门清理文本里的隐藏 Unicode 字符，比如 零宽字符、双向控制符、Tag 字符等。\n操作也简单：粘贴文本 → 检测隐藏字符 → 一键清理，处理完再复制使用。\n经常用 ChatGPT、Claude 等 AI 写文案，又担心文本里夹杂不可见字符的，可以备一个。\n地址：https://watermarks-remover.aiclear.ai/zh",
+          "channel": "@aigc1024",
+          "time": "15:18",
+          "url": "https://t.me/aigc1024/23586",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23586",
+              "label": "AI 生成的文字复制出来，可能还藏着一堆“看不见的字符”？"
+            },
+            {
+              "href": "https://t.me/aigc1024/23586",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23586-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23586-1-thumb.webp",
+              "width": 1200,
+              "height": 904,
+              "size_bytes": 61406
+            }
+          ],
+          "id": "aigc1024-23586",
+          "message_id": "23586",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "**SpaceX 计划明年将英伟达 Vera Rubin NVL72 送入太空，测试轨道 AI 计算**",
+          "summary": "**SpaceX 计划明年将英伟达 Vera Rubin NVL72 送入太空，测试轨道 AI 计算**\n\nSpaceX 计划在 2027 年把一套英伟达 Vera Rubin NVL72 机架级 AI 系统送入轨道，用于验证太空数据中心相关技术。NVL72 由 72 颗 Rubin GPU 和 36 颗 Vera CPU 组成，整套系统功耗超过 100 千瓦，通常需要复杂的液冷和供电设施。将这类设备部署到太空，还需要解决供电、散热、辐射防护和通信等问题。SpaceX 尚未公布具体发射时间、轨道高度及系统在太空中的供电和冷却方案。\n\n[Theregister](https://www.theregister.com/off-prem/2026/08/25/spacex-claims-it-will-put-a-vera-rubin-nvl72-rack-scale-system-into-orbit-next-year/5292067)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "channel": "@zaihuapd",
+          "time": "16:03",
+          "url": "https://t.me/zaihuapd/43388",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43388",
+              "label": "**SpaceX 计划明年将英伟达 Vera Rubin NVL72 送入太空，测试轨道 AI 计算**"
+            },
+            {
+              "href": "https://www.theregister.com/off-prem/2026/08/25/spacex-claims-it-will-put-a-vera-rubin-nvl72-rack-scale-system-into-orbit-next-year/5292067",
+              "label": "Theregister"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43388",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/zaihuapd-43388-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/zaihuapd-43388-1-thumb.webp",
+              "width": 1200,
+              "height": 683,
+              "size_bytes": 109448
+            }
+          ],
+          "id": "zaihuapd-43388",
+          "message_id": "43388",
+          "channel_name": "科技圈🎗在花频道📮",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 40,
+          "replies_fetched": 40,
+          "replies_visible": 36,
+          "replies_filtered": 4,
+          "replies": [
+            {
+              "id": "412181",
+              "text": "如果真的完美，我估计这是最好的方式",
+              "time": "16:05",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412185",
+              "text": "提上日程了",
+              "time": "16:06",
+              "sender_name": "Hei🇩🇪",
+              "sender_id": 7949125722
+            },
+            {
+              "id": "412186",
+              "text": "大饼",
+              "time": "16:06",
+              "sender_name": "Habsir Von",
+              "sender_id": 7591429692
+            },
+            {
+              "id": "412188",
+              "text": "马斯克股票最近怎么样，好不好？",
+              "time": "16:07",
+              "sender_name": "Jove Z",
+              "sender_id": 1962342300
+            },
+            {
+              "id": "412192",
+              "text": "能可行的话，不得了",
+              "time": "16:09",
+              "sender_name": "Crystone Neo",
+              "sender_id": 78043604
+            },
+            {
+              "id": "412193",
+              "text": "是的，就是看看供电散热通信，以及服务时段是不是稳定",
+              "time": "16:10",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412194",
+              "text": "特斯拉近期股价**偏弱**，从52周高点大幅回撤，8月下旬出现明显下跌。短期承压，但分析师整体仍持乐观态度，主要押注于**自动驾驶Robotaxi**和**人形机器人**的长期愿景。接下来值得重点关注的就是**9月3日的Cybercab发布会**，可能会成为短期股价的重要转折点。",
+              "time": "16:11",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412196",
+              "text": "能把这个解决可不得了",
+              "time": "16:13",
+              "sender_name": "Crystone Neo",
+              "sender_id": 78043604
+            },
+            {
+              "id": "412198",
+              "text": "这个卫星成本太高了，一个几千万刀吧",
+              "time": "16:14",
+              "sender_name": "Crystone Neo",
+              "sender_id": 78043604
+            },
+            {
+              "id": "412199",
+              "text": "哈哈",
+              "time": "16:14",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412200",
+              "text": "想不出来必要性在哪里，只要星链有网，地面运算把结果发到星链节点不是一样的结果",
+              "time": "16:14",
+              "sender_name": "Azure",
+              "sender_id": 5948283929
+            },
+            {
+              "id": "412204",
+              "text": "可以做空了",
+              "time": "16:15",
+              "sender_name": "joey chen",
+              "sender_id": 969611369
+            },
+            {
+              "id": "412205",
+              "text": "666",
+              "time": "16:15",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412212",
+              "text": "🇺🇸太坏😂",
+              "time": "16:18",
+              "sender_name": "Jay Br",
+              "sender_id": 8784114272
+            },
+            {
+              "id": "412216",
+              "text": "利好通信？",
+              "time": "16:22",
+              "sender_name": "Allen",
+              "sender_id": 5720479145
+            },
+            {
+              "id": "412225",
+              "text": "散热好",
+              "time": "16:27",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "412230",
+              "text": "你来真的啊，不是画饼吗",
+              "time": "16:29",
+              "sender_name": "Uu",
+              "sender_id": 1121450906
+            },
+            {
+              "id": "412231",
+              "text": "没看见美国一大批数据中心计划停了吗？",
+              "time": "16:30",
+              "sender_name": "咸鱼 非常",
+              "sender_id": 7860725802
+            },
+            {
+              "id": "412232",
+              "text": "去太空给马老板显卡偷来",
+              "time": "16:32",
+              "sender_name": "yfyckbkb",
+              "sender_id": 6806188181
+            },
+            {
+              "id": "412247",
+              "text": "太空散热好吗？？？",
+              "time": "16:36",
+              "sender_name": "Tt0u1v",
+              "sender_id": 5675490499
+            },
+            {
+              "id": "412248",
+              "text": "所以下午拉液冷是因为这个？",
+              "time": "16:37",
+              "sender_name": "GGwpwayd",
+              "sender_id": 5086844703
+            },
+            {
+              "id": "412257",
+              "text": "用之前提到的太空光伏，钙钛矿供电不延续了么🤣",
+              "time": "16:39",
+              "sender_name": "GGwpwayd",
+              "sender_id": 5086844703
+            },
+            {
+              "id": "412308",
+              "text": "这得花不少钱",
+              "time": "17:02",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412392",
+              "text": "虽然有感觉是把航天 和AI两大最热放到一锅炒 但还是佩服钢铁侠的执行力",
+              "time": "17:27",
+              "sender_name": "纸老虎",
+              "sender_id": 7588184773
+            },
+            {
+              "id": "412428",
+              "text": "这个散热怎么散热，太空只能热辐射散热，我都不知道这得多大的散热板才散的过来",
+              "time": "17:41",
+              "sender_name": "随 缘",
+              "sender_id": 5124775094
+            },
+            {
+              "id": "412442",
+              "text": "太空不是很冷吗",
+              "time": "17:44",
+              "sender_name": "饭特稀是龙卷风偷走了米",
+              "sender_id": 708108468
+            },
+            {
+              "id": "412444",
+              "text": "辐射强",
+              "time": "17:44",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412565",
+              "text": "就是用熱輻射散熱，很大一塊\nhttps://www.spacex.com/spacexai/starmind",
+              "time": "18:03",
+              "sender_name": "Shangwei Tsai",
+              "media": [
+                {
+                  "type": "image",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412565-1.webp",
+                  "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412565-1-thumb.webp",
+                  "width": 800,
+                  "height": 800,
+                  "size_bytes": 4230
+                }
+              ],
+              "sender_id": 869726246
+            },
+            {
+              "id": "412570",
+              "text": "你知道了你就是亿万富翁了都",
+              "time": "18:04",
+              "sender_name": "大魔王",
+              "sender_id": 871092736
+            },
+            {
+              "id": "412664",
+              "text": "散热需要介质传递热量，太空没没得，只能靠热辐射",
+              "time": "18:24",
+              "sender_name": "随 缘",
+              "sender_id": 5124775094
+            },
+            {
+              "id": "412711",
+              "text": "这个项目的性质，跟他把特斯拉车发送到太空大差不差，你别问有什么用，再问就很不礼貌了",
+              "time": "18:48",
+              "sender_name": "飞絮",
+              "sender_id": 8021169340
+            },
+            {
+              "id": "412713",
+              "text": "不对",
+              "time": "18:48",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412714",
+              "text": "测试轨道 AI 计算",
+              "time": "18:49",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412735",
+              "text": "树状图设计者(",
+              "time": "18:56",
+              "sender_name": "Ronald Malcolm",
+              "sender_id": 471770718
+            },
+            {
+              "id": "412999",
+              "text": "牛逼",
+              "time": "19:58",
+              "sender_name": "雨后嫣然",
+              "sender_id": 5257907683
+            },
+            {
+              "id": "413022",
+              "text": "类似城市不住, 带着光伏板去沙漠住",
+              "time": "20:15",
+              "sender_name": "BDT",
+              "sender_id": 7556797853
+            }
+          ]
+        },
+        {
+          "title": "🍏 **新款 Mac mini 或数日内发布，赶在苹果 9 月发布会前**",
+          "summary": "🍏 **新款 Mac mini 或数日内发布，赶在苹果 9 月发布会前**\n\n据彭博社报道，苹果最快可能在未来数日内发布新款 Mac mini，赶在 9 月预期举行的 iPhone 18 Pro 发布会之前，这或将是蒂姆·库克任 CEO 期间的最后一次产品发布。\n\n该产品是近两年来 Mac mini 的首次更新，测试了 M5 和 M6 两代芯片。此前因用户本地运行 AI 应用需求激增，Mac mini 供应链紧张，交付需数周甚至数月。\n\n[9To5Mac](https://9to5mac.com/2026/08/24/report-new-mac-mini-could-launch-before-apples-september-event/) | [Bloomberg](https://www.bloomberg.com/news/articles/2026-08-25/apple-to-launch-new-mac-mini-airpods-5-and-oled-ipad-mini-timing-details)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "channel": "@zaihuapd",
+          "time": "16:34",
+          "url": "https://t.me/zaihuapd/43389",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43389",
+              "label": "🍏 **新款 Mac mini 或数日内发布，赶在苹果 9 月发布会前**"
+            },
+            {
+              "href": "https://9to5mac.com/2026/08/24/report-new-mac-mini-could-launch-before-apples-september-event/",
+              "label": "9To5Mac"
+            },
+            {
+              "href": "https://www.bloomberg.com/news/articles/2026-08-25/apple-to-launch-new-mac-mini-airpods-5-and-oled-ipad-mini-timing-details",
+              "label": "Bloomberg"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43389",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/zaihuapd-43389-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/zaihuapd-43389-1-thumb.webp",
+              "width": 1200,
+              "height": 800,
+              "size_bytes": 28626
+            }
+          ],
+          "id": "zaihuapd-43389",
+          "message_id": "43389",
+          "channel_name": "科技圈🎗在花频道📮",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 118,
+          "replies_fetched": 118,
+          "replies_visible": 111,
+          "replies_filtered": 7,
+          "replies": [
+            {
+              "id": "412237",
+              "text": "买不起",
+              "time": "16:34",
+              "sender_name": "Robert Downey",
+              "sender_id": 7752040580
+            },
+            {
+              "id": "412238",
+              "text": "ipad mini这么好的产品线",
+              "time": "16:34",
+              "sender_name": "joey chen",
+              "sender_id": 969611369
+            },
+            {
+              "id": "412239",
+              "text": "搞个高刷",
+              "time": "16:35",
+              "sender_name": "joey chen",
+              "sender_id": 969611369
+            },
+            {
+              "id": "412240",
+              "text": "涨价",
+              "time": "16:35",
+              "sender_name": "️️ β-H",
+              "sender_id": 657996374
+            },
+            {
+              "id": "412241",
+              "text": "期待新款的iphone App apple tv还有homepod😋",
+              "time": "16:35",
+              "sender_name": "Stewie Griffin",
+              "sender_id": 7234932735
+            },
+            {
+              "id": "412243",
+              "text": "你是真人吗",
+              "time": "16:35",
+              "sender_name": "榕城 公子",
+              "sender_id": 765567999
+            },
+            {
+              "id": "412244",
+              "text": "固态就是金条",
+              "time": "16:35",
+              "sender_name": "qqq qqq",
+              "sender_id": 327604795
+            },
+            {
+              "id": "412245",
+              "text": "不是",
+              "time": "16:35",
+              "sender_name": "耄耋 五号机",
+              "sender_id": 5763978571
+            },
+            {
+              "id": "412250",
+              "text": "别想了，和自家产品打架",
+              "time": "16:37",
+              "sender_name": "Zeze Z",
+              "sender_id": 5365614375
+            },
+            {
+              "id": "412255",
+              "text": "键帽欠爱了",
+              "time": "16:39",
+              "sender_name": "Mr.Cheese",
+              "sender_id": 7400292927
+            },
+            {
+              "id": "412256",
+              "time": "16:39",
+              "sender_name": "耄耋 五号机",
+              "media": [
+                {
+                  "type": "video",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412256-1.mp4",
+                  "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412256-1-poster.webp",
+                  "fallback_url": "https://t.me/zaihuapd/43389",
+                  "width": 0,
+                  "height": 0,
+                  "duration": 0,
+                  "size_bytes": 68953,
+                  "has_audio": true
+                }
+              ],
+              "sender_id": 5763978571
+            },
+            {
+              "id": "412259",
+              "time": "16:40",
+              "sender_name": "Mr.Cheese",
+              "media": [
+                {
+                  "type": "image",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412259-1.webp",
+                  "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412259-1-thumb.webp",
+                  "width": 1280,
+                  "height": 1280,
+                  "size_bytes": 108928
+                }
+              ],
+              "sender_id": 7400292927
+            },
+            {
+              "id": "412261",
+              "text": "好的",
+              "time": "16:41",
+              "sender_name": "榕城 公子",
+              "sender_id": 765567999
+            },
+            {
+              "id": "412263",
+              "text": "你是川普同志吗",
+              "time": "16:42",
+              "sender_name": "X",
+              "sender_id": 8513206920
+            },
+            {
+              "id": "412265",
+              "text": "买macmini 当家庭服务器用",
+              "time": "16:44",
+              "sender_name": "m p",
+              "sender_id": 1341336727
+            },
+            {
+              "id": "412266",
+              "text": "太贵了",
+              "time": "16:47",
+              "sender_name": "Hei🇩🇪",
+              "sender_id": 7949125722
+            },
+            {
+              "id": "412267",
+              "text": "如果价格还是 3000 块钱就买一台",
+              "time": "16:47",
+              "sender_name": "Hei🇩🇪",
+              "sender_id": 7949125722
+            },
+            {
+              "id": "412268",
+              "text": "不仅仅是服务器 还能有媒体引擎 还能日常办公 一台macmini解决的问题可太多了",
+              "time": "16:47",
+              "sender_name": "wu ni'u",
+              "sender_id": 5988387514
+            },
+            {
+              "id": "412269",
+              "text": "之前觉得没用没买",
+              "time": "16:47",
+              "sender_name": "Hei🇩🇪",
+              "sender_id": 7949125722
+            },
+            {
+              "id": "412270",
+              "text": "想买顶配的macmini",
+              "time": "16:47",
+              "sender_name": "wu ni'u",
+              "sender_id": 5988387514
+            },
+            {
+              "id": "412271",
+              "text": "macmini能跑本地模型么",
+              "time": "16:48",
+              "sender_name": "夜场 红领巾",
+              "sender_id": 2131905637
+            },
+            {
+              "id": "412272",
+              "text": "感觉好像不行？",
+              "time": "16:48",
+              "sender_name": "夜场 红领巾",
+              "sender_id": 2131905637
+            },
+            {
+              "id": "412273",
+              "text": "mlx可以",
+              "time": "16:48",
+              "sender_name": "wu ni'u",
+              "sender_id": 5988387514
+            },
+            {
+              "id": "412274",
+              "text": "跑量化模型",
+              "time": "16:48",
+              "sender_name": "wu ni'u",
+              "sender_id": 5988387514
+            },
+            {
+              "id": "412275",
+              "text": "主要瓶颈是内存够不够大",
+              "time": "16:48",
+              "sender_name": "wu ni'u",
+              "sender_id": 5988387514
+            },
+            {
+              "id": "412277",
+              "text": "用来跑被本地AI模型的，都卖爆了",
+              "time": "16:49",
+              "sender_name": "yang ke",
+              "sender_id": 5985798948
+            },
+            {
+              "id": "412280",
+              "text": "够大的话 mlx coreml的速度还挺快的",
+              "time": "16:49",
+              "sender_name": "wu ni'u",
+              "sender_id": 5988387514
+            },
+            {
+              "id": "412282",
+              "text": "今年换iPad和Mac mini",
+              "time": "16:49",
+              "sender_name": "Orion Gu",
+              "sender_id": 8036924716
+            },
+            {
+              "id": "412285",
+              "time": "16:50",
+              "sender_name": "🌌 赤葵 🈷",
+              "media": [
+                {
+                  "type": "video",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412285-1.mp4",
+                  "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412285-1-poster.webp",
+                  "fallback_url": "https://t.me/zaihuapd/43389",
+                  "width": 0,
+                  "height": 0,
+                  "duration": 0,
+                  "size_bytes": 156821,
+                  "has_audio": true
+                }
+              ],
+              "sender_id": 7171316252
+            },
+            {
+              "id": "412290",
+              "text": "mlx感觉其实速度还可以",
+              "time": "16:51",
+              "sender_name": "Dommile",
+              "sender_id": 7103444200
+            },
+            {
+              "id": "412293",
+              "text": "是，虽然库克给我们用了很多年 8G MacBook，过了很多苦日子，可那比没有 m 系列前强多了吗，那没法比，所以现在，还有人骂库克，这我们老百姓，这做人呐得讲良心，不能忘恩负义",
+              "time": "16:53",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "412294",
+              "text": "不是，我想说买基础款的，16G内存能运行啥模型？",
+              "time": "16:53",
+              "sender_name": "A _Ngest🆔",
+              "sender_id": 1143666957
+            },
+            {
+              "id": "412296",
+              "text": "很多模型",
+              "time": "16:54",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "412297",
+              "text": "我跑了qwen3.8 27B",
+              "time": "16:55",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "412298",
+              "text": "4个人用 没问题",
+              "time": "16:55",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "412299",
+              "text": "越狱版有吗？27b的是多大的包",
+              "time": "16:56",
+              "sender_name": "A _Ngest🆔",
+              "sender_id": 1143666957
+            },
+            {
+              "id": "412300",
+              "text": "内存这么贵，不知道得涨价多少",
+              "time": "16:56",
+              "sender_name": "Rammiah X",
+              "sender_id": 782588521
+            },
+            {
+              "id": "412301",
+              "text": "有的",
+              "time": "16:56",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "412302",
+              "text": "@notehahaha 24内存能跑哪个",
+              "time": "16:58",
+              "sender_name": "A _Ngest🆔",
+              "media": [
+                {
+                  "type": "image",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412302-1.webp",
+                  "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412302-1-thumb.webp",
+                  "width": 1650,
+                  "height": 1378,
+                  "size_bytes": 131250
+                }
+              ],
+              "sender_id": 1143666957
+            },
+            {
+              "id": "412303",
+              "text": "先把祖传的非全贴合屏幕下了再说",
+              "time": "16:59",
+              "sender_name": "2L_GiGi",
+              "sender_id": 766809934
+            },
+            {
+              "id": "412305",
+              "text": "24G内存还是显存？",
+              "time": "17:01",
+              "sender_name": "小凡 張",
+              "sender_id": 156216956
+            },
+            {
+              "id": "412306",
+              "text": "Mac24内存啊",
+              "time": "17:01",
+              "sender_name": "A _Ngest🆔",
+              "sender_id": 1143666957
+            },
+            {
+              "id": "412307",
+              "text": "如果是24GB显存，能够面前跑截图上的倒数第5个",
+              "time": "17:02",
+              "sender_name": "小凡 張",
+              "sender_id": 156216956
+            },
+            {
+              "id": "412309",
+              "text": "如果是CPU跑的话，apple又是统一内存，截图上的所有模型理论上全部都能跑",
+              "time": "17:03",
+              "sender_name": "小凡 張",
+              "sender_id": 156216956
+            },
+            {
+              "id": "412310",
+              "text": "库克送给我们最后的礼物",
+              "time": "17:03",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412313",
+              "text": "15.1G的是吗，主要是没有跑过本地，不了解",
+              "time": "17:03",
+              "sender_name": "A _Ngest🆔",
+              "sender_id": 1143666957
+            },
+            {
+              "id": "412314",
+              "text": "能跑Q4，勉强可以跑Q6",
+              "time": "17:04",
+              "sender_name": "Dommile",
+              "sender_id": 7103444200
+            },
+            {
+              "id": "412315",
+              "text": "随便跑",
+              "time": "17:04",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "412317",
+              "text": "16.5GB那个",
+              "time": "17:04",
+              "sender_name": "小凡 張",
+              "sender_id": 156216956
+            },
+            {
+              "id": "412318",
+              "text": "不如买显卡划算。以前便宜内存大能跑现在还是模型小能跑性价比就低了。",
+              "time": "17:04",
+              "sender_name": "牛富人",
+              "sender_id": 6501418175
+            },
+            {
+              "id": "412319",
+              "text": "哦哦，好的",
+              "time": "17:05",
+              "sender_name": "A _Ngest🆔",
+              "sender_id": 1143666957
+            },
+            {
+              "id": "412320",
+              "text": "我觉得不如用4台",
+              "time": "17:05",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412322",
+              "text": "谢谢，了解了",
+              "time": "17:06",
+              "sender_name": "A _Ngest🆔",
+              "sender_id": 1143666957
+            },
+            {
+              "id": "412323",
+              "text": "谢谢",
+              "time": "17:06",
+              "sender_name": "A _Ngest🆔",
+              "sender_id": 1143666957
+            },
+            {
+              "id": "412325",
+              "text": "随便跑会爆内存吧",
+              "time": "17:06",
+              "sender_name": "A _Ngest🆔",
+              "sender_id": 1143666957
+            },
+            {
+              "id": "412326",
+              "text": "一定会爆的",
+              "time": "17:07",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412327",
+              "text": "新用户一年后成冤种 迭代这么快😂",
+              "time": "17:07",
+              "sender_name": "𝚃𝚒𝚖 𝙲𝚘𝚌𝚔",
+              "sender_id": 1537379879
+            },
+            {
+              "id": "412329",
+              "text": "你算Q8激活参数=占用内存就行了",
+              "time": "17:08",
+              "sender_name": "Dommile",
+              "sender_id": 7103444200
+            },
+            {
+              "id": "412332",
+              "text": "4060 Ti 16G 都能跑 tb4+tb3 量化",
+              "time": "17:08",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "412333",
+              "text": "买不起",
+              "time": "17:08",
+              "sender_name": "奥特 怪兽",
+              "sender_id": 452074081
+            },
+            {
+              "id": "412346",
+              "text": "还好我3099 买了个 mac mini m4",
+              "time": "17:11",
+              "sender_name": "陌生人",
+              "sender_id": 1677081586
+            },
+            {
+              "id": "412347",
+              "text": "所以说这周就出吗？",
+              "time": "17:12",
+              "sender_name": "田伯光大侠",
+              "sender_id": 1819433629
+            },
+            {
+              "id": "412348",
+              "text": "好用吗",
+              "time": "17:12",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412353",
+              "text": "贵了",
+              "time": "17:13",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "412357",
+              "text": "没啥区别 一样啊 好不好用 emmm也就那样了 我觉得还行 大部分时候挺流畅 用习惯win 很多习惯不习惯",
+              "time": "17:14",
+              "sender_name": "陌生人",
+              "sender_id": 1677081586
+            },
+            {
+              "id": "412360",
+              "time": "17:14",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "media": [
+                {
+                  "type": "image",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412360-1.webp",
+                  "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412360-1-thumb.webp",
+                  "width": 1264,
+                  "height": 948,
+                  "size_bytes": 59116
+                }
+              ],
+              "sender_id": 1791306977
+            },
+            {
+              "id": "412361",
+              "text": "看看就行了",
+              "time": "17:15",
+              "sender_name": "陌生人",
+              "sender_id": 1677081586
+            },
+            {
+              "id": "412362",
+              "text": "我去年买的 😂😂",
+              "time": "17:15",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "412366",
+              "text": "这个太贵了",
+              "time": "17:16",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412368",
+              "text": "反正我碰不到 更别提 补贴和 优惠",
+              "time": "17:16",
+              "sender_name": "陌生人",
+              "sender_id": 1677081586
+            },
+            {
+              "id": "412370",
+              "text": "你这种 属于少众 买东西没人朝着这个目标买的",
+              "time": "17:16",
+              "sender_name": "陌生人",
+              "sender_id": 1677081586
+            },
+            {
+              "id": "412373",
+              "text": "mini也要16+512了吗",
+              "time": "17:16",
+              "sender_name": "nono",
+              "sender_id": 7470602649
+            },
+            {
+              "id": "412374",
+              "text": "如果都按照这个价格买 怕是一辈子都买不到",
+              "time": "17:17",
+              "sender_name": "陌生人",
+              "sender_id": 1677081586
+            },
+            {
+              "id": "412387",
+              "text": "三千就买，太贵了不买",
+              "time": "17:21",
+              "sender_name": "Junho",
+              "sender_id": 6095444233
+            },
+            {
+              "id": "412389",
+              "text": "起售价大概多少",
+              "time": "17:24",
+              "sender_name": "A 1",
+              "sender_id": 8508674749
+            },
+            {
+              "id": "412395",
+              "text": "今年能买到的性价比最高的电子产品之一。",
+              "time": "17:28",
+              "sender_name": "✨ 𝓝𝓪𝓽𝓱𝓪𝓷𝓲𝓮𝓵 𝓕𝓻𝓮𝓭𝓻𝓲𝓬𝓴 ✨",
+              "sender_id": 5506043207
+            },
+            {
+              "id": "412396",
+              "text": "看小米能不能干赢苹果了",
+              "time": "17:30",
+              "sender_name": "牛富人",
+              "sender_id": 6501418175
+            },
+            {
+              "id": "412398",
+              "text": "估计得*2",
+              "time": "17:32",
+              "sender_name": "kergee chang",
+              "sender_id": 7669978655
+            },
+            {
+              "id": "412399",
+              "text": "当年我的丐板macmini 3000左右买的 香爆了",
+              "time": "17:32",
+              "sender_name": "wu ni'u",
+              "sender_id": 5988387514
+            },
+            {
+              "id": "412400",
+              "text": "可以买顶配 mac一般顶配性价比会好一点",
+              "time": "17:33",
+              "sender_name": "wu ni'u",
+              "sender_id": 5988387514
+            },
+            {
+              "id": "412406",
+              "text": "不算任何补贴得7499",
+              "time": "17:36",
+              "sender_name": "AGENT",
+              "sender_id": 8198120816
+            },
+            {
+              "id": "412410",
+              "text": "实际购买得多少",
+              "time": "17:36",
+              "sender_name": "A 1",
+              "sender_id": 8508674749
+            },
+            {
+              "id": "412412",
+              "text": "刚买的，又是49年入国军嘛",
+              "time": "17:37",
+              "sender_name": "Real Trump",
+              "media": [
+                {
+                  "type": "image",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412412-1.webp",
+                  "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412412-1-thumb.webp",
+                  "width": 262,
+                  "height": 160,
+                  "size_bytes": 2894
+                }
+              ],
+              "sender_id": 364264257
+            },
+            {
+              "id": "412414",
+              "text": "亏了",
+              "time": "17:38",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412415",
+              "text": "拼多多5800左右",
+              "time": "17:38",
+              "sender_name": "AGENT",
+              "sender_id": 8198120816
+            },
+            {
+              "id": "412419",
+              "text": "价格直接参考m4就行，只是没有256版本而已",
+              "time": "17:39",
+              "sender_name": "AGENT",
+              "sender_id": 8198120816
+            },
+            {
+              "id": "412425",
+              "text": "4400我就买",
+              "time": "17:41",
+              "sender_name": "A 1",
+              "sender_id": 8508674749
+            },
+            {
+              "id": "412427",
+              "text": "4444",
+              "time": "17:41",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412440",
+              "text": "千问9b的那个",
+              "time": "17:43",
+              "sender_name": "Stewie Griffin",
+              "sender_id": 7234932735
+            },
+            {
+              "id": "412450",
+              "text": "具体是哪个，指个路😅",
+              "time": "17:46",
+              "sender_name": "A _Ngest🆔",
+              "sender_id": 1143666957
+            },
+            {
+              "id": "412451",
+              "text": "9b模型",
+              "time": "17:46",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412455",
+              "text": "Qwen3.5-9b",
+              "time": "17:48",
+              "sender_name": "Stewie Griffin",
+              "sender_id": 7234932735
+            },
+            {
+              "id": "412459",
+              "text": "基本单体9B以下的都能跑",
+              "time": "17:48",
+              "sender_name": "去年 夏天",
+              "sender_id": 432786959
+            },
+            {
+              "id": "412460",
+              "text": "那感觉很便宜啊，你在哪里买的 我也去买",
+              "time": "17:49",
+              "sender_name": "Mo Chou",
+              "sender_id": 2134966823
+            },
+            {
+              "id": "412463",
+              "text": "集显都能",
+              "time": "17:50",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412471",
+              "text": "猜个价格？",
+              "time": "17:50",
+              "sender_name": "今天喝咖啡了吗？",
+              "sender_id": 6030515729
+            },
+            {
+              "id": "412477",
+              "text": "拼多多随便搜索就有，拼多多官方有认证",
+              "time": "17:51",
+              "sender_name": "AGENT",
+              "sender_id": 8198120816
+            },
+            {
+              "id": "412506",
+              "text": "哥，给个链接呢？",
+              "time": "17:55",
+              "sender_name": "Mo Chou",
+              "sender_id": 2134966823
+            },
+            {
+              "id": "412591",
+              "text": "现在这个行情，怕不是天价",
+              "time": "18:07",
+              "sender_name": "Andy Brisk",
+              "sender_id": 324444087
+            },
+            {
+              "id": "412613",
+              "text": "去年买了8台nimi，可惜都在没涨价前卖了，没挣多少😭",
+              "time": "18:11",
+              "sender_name": "Ynto3p u1eopn8klmxz",
+              "sender_id": 8549541518
+            },
+            {
+              "id": "412621",
+              "text": "咋可能m5m6一起发布，苹果疯了吧",
+              "time": "18:15",
+              "sender_name": "what Styles 🦴",
+              "sender_id": 1035024765
+            },
+            {
+              "id": "412631",
+              "text": "可能是同一个模具",
+              "time": "18:16",
+              "sender_name": "Dommile",
+              "sender_id": 7103444200
+            },
+            {
+              "id": "412634",
+              "text": "放心吧用m5就行，m6会涨价，如果是两纳米",
+              "time": "18:17",
+              "sender_name": "AGENT",
+              "sender_id": 8198120816
+            },
+            {
+              "id": "412635",
+              "text": "今年可以买一堆H卡（显卡），然后卖给chatgpt、claude、deepseek、元宝、千问、豆包、gemini、grok、智谱",
+              "time": "18:17",
+              "sender_name": "titan",
+              "sender_id": 7719215823
+            },
+            {
+              "id": "412636",
+              "text": "感觉可能是m6和m5 pro上Mac mini，m5 max m5 ultra上Mac Studio",
+              "time": "18:18",
+              "sender_name": "what Styles 🦴",
+              "sender_id": 1035024765
+            },
+            {
+              "id": "412639",
+              "text": "应该是这样的了，按照时间m6base也该发了",
+              "time": "18:19",
+              "sender_name": "Dommile",
+              "sender_id": 7103444200
+            },
+            {
+              "id": "412691",
+              "text": "要是直接上m6 series就好了",
+              "time": "18:40",
+              "sender_name": "千反田える",
+              "sender_id": 2083302827
+            },
+            {
+              "id": "412773",
+              "text": "macmini占据着独特的生态位，个人服务器首选",
+              "time": "19:06",
+              "sender_name": "pointer",
+              "sender_id": 8741054628
+            },
+            {
+              "id": "412785",
+              "text": "ap tv呢",
+              "time": "19:07",
+              "sender_name": "K K",
+              "sender_id": 5636513453
+            },
+            {
+              "id": "413338",
+              "text": "上一代 mac mini 火是因为它 3000，如果你卖 5000 的话，那只能看看别的了",
+              "time": "21:27",
+              "sender_name": "Jerry",
+              "sender_id": 6170323942
+            },
+            {
+              "id": "413374",
+              "text": "上周刚3850收的二手macmini4😅",
+              "time": "21:31",
+              "sender_name": "Jonas",
+              "sender_id": 2075264628
+            }
+          ]
+        },
+        {
+          "title": "乌兰察布这种承接的是传统阿里云、AWS这类云计算，还有一堆软件外包和传统公司的企业云，",
+          "summary": "乌兰察布这种承接的是传统阿里云、AWS这类云计算，还有一堆软件外包和传统公司的企业云，\n因为LLM时代大家根本就不在乎inference后网络延时，一个LLM本身first token latency钻出来都要几秒钟时间，距离的延迟已经完全没关系了。\n要知道无数人顶着claude codex和codex的延时天天用，比新疆远多了。",
+          "channel": "@openclaw1024",
+          "time": "17:15",
+          "url": "https://t.me/openclaw1024/1284",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1284",
+              "label": "乌兰察布这种承接的是传统阿里云、AWS这类云计算，还有一堆软件外包和传统公司的企业云，"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1284",
+              "label": "查看原文"
+            }
+          ],
+          "id": "openclaw1024-1284",
+          "message_id": "1284",
+          "channel_name": "Hermes爱马仕&🦞OpenClaw小龙虾",
+          "channel_url": "https://t.me/openclaw1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "炒作继续？",
+          "summary": "炒作继续？\nHugging Face CEO 要求 OpenAI 赔偿 1 亿美元并公开其内部自主代理网络攻击细节\n不少安全专家觉得他在博眼球，认为这纯粹是 OpenAI 程序员自己没把测试沙箱的防火墙配置好，是典型的人为失误，算不上真正意义上的“AI 自主攻击”。\n他没有不直接要现金，而是索要价值 1 亿美元的算力资源，用来给 Hugging Face 社区开发专门针对这种 AI 攻击的防御工具。😅",
+          "channel": "@aigc1024",
+          "time": "17:39",
+          "url": "https://t.me/aigc1024/23587",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23587",
+              "label": "炒作继续？"
+            },
+            {
+              "href": "https://t.me/aigc1024/23587",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-23587",
+          "message_id": "23587",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "如果你想要泛流量，其实很简单。",
+          "summary": "如果你想要泛流量，其实很简单。\n冲着下面这5个选努力就好：\n1.男女对立\n2.贫富差距\n3.中外对比\n4.地图炮\n5.擦边",
+          "channel": "@yunying23",
+          "time": "18:19",
+          "url": "https://t.me/yunying23/11268",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/11268",
+              "label": "如果你想要泛流量，其实很简单。"
+            },
+            {
+              "href": "https://t.me/yunying23/11268",
+              "label": "查看原文"
+            }
+          ],
+          "id": "yunying23-11268",
+          "message_id": "11268",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "太真实了",
+          "summary": "太真实了\nAI 办公的饱和式攻击\n让 KOL 都魔怔了\n转发\n: 昨天教你用workbuddy的AI 博主\n在上周鼓励你用千问办公\n今天又开始告诉你不学豆包工作就会被时代抛弃\n整体看下来其实更应该学的是\n如何做一个不用测评就能发稿子的\nAI 博主\n@aigc1024",
+          "channel": "@aigc1024",
+          "time": "18:21",
+          "url": "https://t.me/aigc1024/23588",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23588",
+              "label": "太真实了"
+            },
+            {
+              "href": "https://t.me/aigc1024/23588",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-23588",
+          "message_id": "23588",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "这就是深圳的速度，深圳的特色与创新！",
+          "summary": "这就是深圳的速度，深圳的特色与创新！\n深圳OpenClaw一人公司爆火，普通人创业迎来新风口！\n最近深圳OpenClaw一人公司彻底火出圈，再次让大家见识到什么叫深圳速度，不少创业者直呼太香，纷纷奔赴深圳开启轻创业之路。\nOpenClaw搭配一人公司的模式，彻底拉低了创业门槛，不用组建团队、不用高额投入，仅凭个人技能就能起步。不管是设计、文案、编程还是运营，都能借助AI智能体完成全流程工作，一个人就能撑起一家公司，轻松实现增收，再也不用为退休后的收入来源发愁。\n深圳为这类创业者提供了超贴心的办公空间，一人一间的办公室大小刚好，不浪费也不局促。同一楼层还有上百位创业者邻居，大家互通有无、共享资源，既能单打独斗搞事业，也能抱团合作谋发展，创业氛围直接拉满。\n在深圳，创业不再是少数人的游戏。政策扶持、资源集聚加上高效的办事效率，让一人公司模式快速落地生根。对于普通人来说，这是低成本实现职业自由的好机会，用自己的手艺赚钱，时间自由、收入可观，难怪越来越多人爱上这种创业方式。\n未来，这种AI+一人公司的模式还会持续走红，深圳也将凭借创新与包容，成为更多普通人创业追梦的热土。\nagent",
+          "channel": "@text1024",
+          "time": "18:26",
+          "url": "https://t.me/text1024/24360",
+          "links": [
+            {
+              "href": "https://t.me/text1024/24360",
+              "label": "这就是深圳的速度，深圳的特色与创新！"
+            },
+            {
+              "href": "https://t.me/text1024/24360",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/text1024-24360-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/text1024-24360-1-thumb.webp",
+              "width": 1280,
+              "height": 1672,
+              "size_bytes": 176494
+            }
+          ],
+          "id": "text1024-24360",
+          "message_id": "24360",
+          "channel_name": "副业赚钱探索指南",
+          "channel_url": "https://t.me/text1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "DeepSeek is hiring!",
+          "summary": "DeepSeek is hiring!\nAgent harness team is hiring!\n欢迎投递，HC多多，base北京～\n邮箱地址：zy.wu\nhttps://app.mokahr.com/su/12xvM6\n@aigc1024",
+          "channel": "@aigc1024",
+          "time": "18:51",
+          "url": "https://t.me/aigc1024/23590",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23590",
+              "label": "DeepSeek is hiring!"
+            },
+            {
+              "href": "https://t.me/aigc1024/23590",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23590-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/aigc1024-23590-1-thumb.webp",
+              "width": 1206,
+              "height": 1203,
+              "size_bytes": 27294
+            }
+          ],
+          "id": "aigc1024-23590",
+          "message_id": "23590",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "谈一点AI落地工作场景的真实感受：",
+          "summary": "谈一点AI落地工作场景的真实感受：\n1. 稳定性是第一前提。业务里不能接受准确率波动，今天80分明天60分的AI，根本没法上线使用。\n2. 别被各类AI教学枷锁困住。不要学完教程再找场景，拿着锤子找钉子。应该从真实业务需求出发，为了解决具体问而去使用AI。现实从来不缺需求，很多只是没有被转化成AI可以处理的形态。\n3. 认清AI的能力边界。搞清楚它能干什么、不能干什么，就不会无脑吹捧，也不会轻易吐槽它“很弱智”。什么事情都指望AI全权搞定，那还不如不用。\n@aigc1024",
+          "channel": "@aigc1024",
+          "time": "19:21",
+          "url": "https://t.me/aigc1024/23593",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23593",
+              "label": "谈一点AI落地工作场景的真实感受："
+            },
+            {
+              "href": "https://t.me/aigc1024/23593",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-23593",
+          "message_id": "23593",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "🤖 **马斯克向 Cursor 员工承认 Grok 落后其他 AI 对手，声称自己“不习惯输”**",
+          "summary": "🤖 **马斯克向 Cursor 员工承认 Grok 落后其他 AI 对手，声称自己“不习惯输”**\n\nSpaceX 以 600 亿美元完成对 Cursor 的收购后，马斯克首次向全员讲话，承认自家 Grok 落后于对手，称“”不习惯输”，要求 Cursor 帮助 SpaceXAI 尽快追上。\n\n马斯克并称赞 Anthropic 正领跑 AI，是一个强劲的竞争者。他认为 AI 最终会强到人类无法控制，所以 SpaceXAI 必须赶在其他公司前面把技术做出来。\n\n[APPSO](https://mp.weixin.qq.com/s/0iJAf9kESldTccBWSDBR8Q) | [The Information](https://www.theinformation.com/articles/cursor-officially-enters-musk-era)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "channel": "@zaihuapd",
+          "time": "19:23",
+          "url": "https://t.me/zaihuapd/43392",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43392",
+              "label": "🤖 **马斯克向 Cursor 员工承认 Grok 落后其他 AI 对手，声称自己“不习惯输”**"
+            },
+            {
+              "href": "https://mp.weixin.qq.com/s/0iJAf9kESldTccBWSDBR8Q",
+              "label": "APPSO"
+            },
+            {
+              "href": "https://www.theinformation.com/articles/cursor-officially-enters-musk-era",
+              "label": "The Information"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43392",
+              "label": "查看原文"
+            }
+          ],
+          "id": "zaihuapd-43392",
+          "message_id": "43392",
+          "channel_name": "科技圈🎗在花频道📮",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 36,
+          "replies_fetched": 36,
+          "replies_visible": 30,
+          "replies_filtered": 6,
+          "replies": [
+            {
+              "id": "412860",
+              "time": "19:24",
+              "sender_name": "Venlacy Lanln",
+              "media": [
+                {
+                  "type": "video",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412860-1.mp4",
+                  "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412860-1-poster.webp",
+                  "fallback_url": "https://t.me/zaihuapd/43392",
+                  "width": 0,
+                  "height": 0,
+                  "duration": 0,
+                  "size_bytes": 159186,
+                  "has_audio": true
+                }
+              ],
+              "sender_id": 8059656340
+            },
+            {
+              "id": "412862",
+              "text": "把不习惯输看成了不习惯偷……",
+              "time": "19:24",
+              "sender_name": "Arquiel",
+              "sender_id": 88730990
+            },
+            {
+              "id": "412864",
+              "text": "虽然这个Anthropic很讨厌。但它确实是领先很多",
+              "time": "19:24",
+              "sender_name": "Florian Von",
+              "sender_id": 8523777480
+            },
+            {
+              "id": "412866",
+              "text": "是的",
+              "time": "19:25",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412867",
+              "text": "先夸对手再扣帽",
+              "time": "19:25",
+              "sender_name": "Qianrf",
+              "sender_id": 8139186745
+            },
+            {
+              "id": "412868",
+              "text": "马斯克也变成“强ai”拥护者了",
+              "time": "19:25",
+              "sender_name": "史㗑嘚𠼦",
+              "sender_id": 8939070656
+            },
+            {
+              "id": "412870",
+              "text": "那你倒是发动钞能力挖过啦,挖过来不算偷",
+              "time": "19:25",
+              "sender_name": "Daoyou ⓧⓤ",
+              "sender_id": 5104265874
+            },
+            {
+              "id": "412872",
+              "text": "“不习惯偷”😂",
+              "time": "19:25",
+              "sender_name": "吱吱",
+              "sender_id": 5577574686
+            },
+            {
+              "id": "412875",
+              "text": "这次你一定要赢",
+              "time": "19:26",
+              "sender_name": "小岳唷",
+              "sender_id": 6193635562
+            },
+            {
+              "id": "412885",
+              "text": "沙师弟",
+              "time": "19:27",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412889",
+              "text": "谷歌没有领先，令人唏嘘，一开始牌打的挺好的，Transformer、TPU",
+              "time": "19:28",
+              "sender_name": "Florian Von",
+              "sender_id": 8523777480
+            },
+            {
+              "id": "412905",
+              "text": "没事，成人领先就行了",
+              "time": "19:29",
+              "sender_name": "偶偶尔放",
+              "sender_id": 6031309400
+            },
+            {
+              "id": "412930",
+              "text": "做黄片遥遥领先就够了（",
+              "time": "19:33",
+              "sender_name": "ARONA",
+              "sender_id": 8580978254
+            },
+            {
+              "id": "412936",
+              "time": "19:34",
+              "sender_name": "姬如千泷",
+              "media": [
+                {
+                  "type": "video",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412936-1.mp4",
+                  "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412936-1-poster.webp",
+                  "fallback_url": "https://t.me/zaihuapd/43392",
+                  "width": 0,
+                  "height": 0,
+                  "duration": 0,
+                  "size_bytes": 322583,
+                  "has_audio": true
+                }
+              ],
+              "sender_id": 1730414260
+            },
+            {
+              "id": "412940",
+              "time": "19:34",
+              "sender_name": "姬如千泷",
+              "media": [
+                {
+                  "type": "video",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412940-1.mp4",
+                  "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-412940-1-poster.webp",
+                  "fallback_url": "https://t.me/zaihuapd/43392",
+                  "width": 0,
+                  "height": 0,
+                  "duration": 0,
+                  "size_bytes": 257373,
+                  "has_audio": true
+                }
+              ],
+              "sender_id": 1730414260
+            },
+            {
+              "id": "412943",
+              "text": "只要开始做片一切都会好起来的",
+              "time": "19:35",
+              "sender_name": "UAID",
+              "sender_id": 7960253235
+            },
+            {
+              "id": "412961",
+              "text": "code AI我自有安排，你只要专心研究涩涩就好了",
+              "time": "19:39",
+              "sender_name": "jihvvbjn",
+              "sender_id": 7416963867
+            },
+            {
+              "id": "412980",
+              "text": "V我500美元，我天天让你赢，马斯克",
+              "time": "19:42",
+              "sender_name": "xiaoku",
+              "sender_id": 1285389139
+            },
+            {
+              "id": "412981",
+              "text": "马斯克什么时候送你免费去火星",
+              "time": "19:42",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "412988",
+              "text": "GROK4.7将会伟大",
+              "time": "19:50",
+              "sender_name": "狗儿子的账号 认准： 𝓗𝓪𝓷𝓪 的 CS 杂谈",
+              "sender_id": 7834239796
+            },
+            {
+              "id": "412989",
+              "text": "cursor技术融合一体",
+              "time": "19:50",
+              "sender_name": "狗儿子的账号 认准： 𝓗𝓪𝓷𝓪 的 CS 杂谈",
+              "sender_id": 7834239796
+            },
+            {
+              "id": "412994",
+              "text": "a 畜有短期上市的计划，拿到员工股就可以变现实现财富自由，就凭这一点，其他大厂没法在薪资待遇方面跟他竞争",
+              "time": "19:54",
+              "sender_name": "飞絮",
+              "sender_id": 8021169340
+            },
+            {
+              "id": "412995",
+              "text": "没事，输有输的赢法",
+              "time": "19:54",
+              "sender_name": "𝑫𝒓. 𝑺𝒌𝒂𝒅𝒊",
+              "sender_id": 5842743832
+            },
+            {
+              "id": "412997",
+              "text": "grok 之前应该也是计划单独上市而不是并入空x 打包上市的，可惜，产品差距太大",
+              "time": "19:55",
+              "sender_name": "飞絮",
+              "sender_id": 8021169340
+            },
+            {
+              "id": "413029",
+              "text": "没事，grok专精色情淫秽内容就行了，这方面是遥遥领先的",
+              "time": "20:21",
+              "sender_name": "天才云雀少女秧秧",
+              "sender_id": 7133898035
+            },
+            {
+              "id": "413030",
+              "text": "看看",
+              "time": "20:21",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "413069",
+              "text": "因为AI模型这些工具大众一用就知道不能营销吗😂",
+              "time": "20:40",
+              "sender_name": "a",
+              "sender_id": 8472792723
+            },
+            {
+              "id": "413077",
+              "text": "畢竟O÷A÷之前都用失控炒作過AI🤓",
+              "time": "20:42",
+              "sender_name": "豆腐消化機",
+              "sender_id": 7242131209
+            },
+            {
+              "id": "413294",
+              "text": "要爆发ai核战了吗😇",
+              "time": "21:18",
+              "sender_name": "Londawn",
+              "sender_id": 1054294247
+            },
+            {
+              "id": "413844",
+              "text": "@grok 生成黑丝美女图片",
+              "time": "22:27",
+              "sender_name": "铁 头娃",
+              "sender_id": 6098710187
+            }
+          ]
+        },
+        {
+          "title": "赚大钱困难，但赚小钱容易",
+          "summary": "赚大钱困难，但赚小钱容易\n\n越是赚不到钱的人越是眼高手低，总想做要干多高大上的项目，要短期赚多少多少钱\n\n事实上就是，好的项目就在眼前把握不住，也看不上，最后钱也没赚到，然后陷入无限的内耗之中\n\n大钱也是由小钱积累起来的，不要想着一夜暴富。坚持做有积累的事情，然后在过程中不断迭代、优化，只要坚持下去总会厚积薄发，这就是“复利”的力量\n\n像非遗手串这个项目，不敢说赚多少多少万的大钱，但是一个月几千块到一万的小钱还是可行的\n一单一百多的利润，一天开个三单，一个月就有一万块了，哪怕每天只出一单，一个月也有三四千，相当于普通人一个月的工资\n\n并且这个项目还是一件有复利的事，经过目前的测试，平台视频会一直跑长尾流量，即使有时候不发视频也能开单，而且还不封号\n\n并且加到私域的客户复购率也很高，正常20-30%的复购率，还可以招募代理，让自己躺赚佣金。\n\n你看，就这样的一个项目，没有你看起来的这么高大上，但是做好了一个月赚几千几万块的大有人在。\n\n所以不要眼高手低，看到能赚钱的东西就立马下场去做，先赚到第一个1块，再放大10倍、百倍，赚到第一个100块、一万块。事实上那些大佬也是这样做的。",
+          "channel": "@inside1024",
+          "time": "20:16",
+          "url": "https://t.me/inside1024/83738",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/83738",
+              "label": "赚大钱困难，但赚小钱容易"
+            },
+            {
+              "href": "https://t.me/inside1024/83738",
+              "label": "查看原文"
+            }
+          ],
+          "id": "inside1024-83738",
+          "message_id": "83738",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "人公司最累的，可能不是写代码，而是写完代码之后还有一堆破事。",
+          "summary": "人公司最累的，可能不是写代码，而是写完代码之后还有一堆破事。\n推荐一个开源项目 OPC Skills，专门给独立开发者的 AI Agent 补齐「运营能力」。\n目前整理了 10 个实用 Skills，能让 Agent 帮你做 SEO、找便宜域名、生成 Logo，还能去 Reddit、X 等平台挖真实用户需求，把产品上线前后的杂活一起包了。\n更方便的是，它兼容 Claude Code、Cursor、Codex 等 16 个主流 Agent 工具。\n非常适合独立开发者和一人公司：你负责做产品，剩下的杂活尽量交给 Agent。\nGitHub：\nhttps://github.com/ReScienceLab/opc-skills",
+          "channel": "@openclaw1024",
+          "time": "21:26",
+          "url": "https://t.me/openclaw1024/1285",
+          "links": [
+            {
+              "href": "https://t.me/openclaw1024/1285",
+              "label": "人公司最累的，可能不是写代码，而是写完代码之后还有一堆破事。"
+            },
+            {
+              "href": "https://t.me/openclaw1024/1285",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/openclaw1024-1285-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/openclaw1024-1285-1-thumb.webp",
+              "width": 1141,
+              "height": 1200,
+              "size_bytes": 147352
+            }
+          ],
+          "id": "openclaw1024-1285",
+          "message_id": "1285",
+          "channel_name": "Hermes爱马仕&🦞OpenClaw小龙虾",
+          "channel_url": "https://t.me/openclaw1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "🤖 **GPT-5.6 Sol 设计 CPU 成功运行《毁灭战士》，从逻辑门搭建完整虚拟计算机**",
+          "summary": "🤖 **GPT-5.6 Sol 设计 CPU 成功运行《毁灭战士》，从逻辑门搭建完整虚拟计算机**\n\nAI 爱好者 Angel 展示 GPT-5.6 Sol 设计的定制 CPU「Codex-R32」，在教育解谜游戏 Turing Complete 的沙盒模式中成功启动并运行经典游戏《毁灭战士》(1993)。整个 CPU 由基础逻辑元件搭建，游戏画面叠加在处理器门级电路的实时脉冲示意图上。\n\n该 CPU 运行的是基于 C 语言的 PureDOOM 移植版，被编译为 RV32IM 机器码直接在仿真硬件上执行。面对网友「下一步跑《孤岛危机》」的调侃，Angel 让 AI 代答：没问题，先给我造一块 GPU、加几 GB 内存，再画张从太空可见的电路图。\n\n[Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-coder-gets-doom-running-on-a-custom-cpu-designed-by-gpt-5-6-sol-game-viewport-is-overlaid-on-a-pulsing-schematic-of-the-cpu-in-turing-completes-sandbox-environment)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "channel": "@zaihuapd",
+          "time": "23:23",
+          "url": "https://t.me/zaihuapd/43400",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/43400",
+              "label": "🤖 **GPT-5.6 Sol 设计 CPU 成功运行《毁灭战士》，从逻辑门搭建完整虚拟计算机**"
+            },
+            {
+              "href": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-coder-gets-doom-running-on-a-custom-cpu-designed-by-gpt-5-6-sol-game-viewport-is-overlaid-on-a-pulsing-schematic-of-the-cpu-in-turing-completes-sandbox-environment",
+              "label": "Tom's Hardware"
+            },
+            {
+              "href": "https://t.me/zaihuapd/43400",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/zaihuapd-43400-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/zaihuapd-43400-1-thumb.webp",
+              "width": 1920,
+              "height": 1080,
+              "size_bytes": 118598
+            }
+          ],
+          "id": "zaihuapd-43400",
+          "message_id": "43400",
+          "channel_name": "科技圈🎗在花频道📮",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 28,
+          "replies_fetched": 28,
+          "replies_visible": 22,
+          "replies_filtered": 6,
+          "replies": [
+            {
+              "id": "414055",
+              "text": "我们图灵完备也是上新闻了",
+              "time": "23:24",
+              "sender_name": "Cabbaken",
+              "sender_id": 1011280410
+            },
+            {
+              "id": "414067",
+              "text": "Ai 开始设计主板，啧啧啧。",
+              "time": "23:26",
+              "sender_name": "Z X",
+              "sender_id": 6532623046
+            },
+            {
+              "id": "414068",
+              "text": "这才是遥遥领先🎁🎁🎁",
+              "time": "23:26",
+              "sender_name": "ℕ𝕖𝕚ℕ𝕖𝕚",
+              "sender_id": 8626154155
+            },
+            {
+              "id": "414069",
+              "text": "想知道花了多少词元",
+              "time": "23:26",
+              "sender_name": "刘 墙东",
+              "sender_id": 328938080
+            },
+            {
+              "id": "414070",
+              "text": "闹麻了 能点奶茶吗? 😂😂",
+              "time": "23:26",
+              "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+              "sender_id": 1791306977
+            },
+            {
+              "id": "414071",
+              "text": "图灵完备可还行",
+              "time": "23:26",
+              "sender_name": "Z",
+              "sender_id": 1653290700
+            },
+            {
+              "id": "414073",
+              "text": "能不能让AI 算算，还给人类留了多少时间",
+              "time": "23:27",
+              "sender_name": "Z X",
+              "sender_id": 6532623046
+            },
+            {
+              "id": "414074",
+              "text": "还词元",
+              "time": "23:28",
+              "sender_name": "紫气东来 （高先生）",
+              "sender_id": 5612131231
+            },
+            {
+              "id": "414075",
+              "text": "我擦",
+              "time": "23:28",
+              "sender_name": "紫气东来 （高先生）",
+              "sender_id": 5612131231
+            },
+            {
+              "id": "414080",
+              "text": "这样下去GPT-10估计能实现可控核聚变了",
+              "time": "23:32",
+              "sender_name": "Harry",
+              "sender_id": 953895093
+            },
+            {
+              "id": "414083",
+              "text": "这个有意思",
+              "time": "23:35",
+              "sender_name": "snake leung",
+              "sender_id": 441514729
+            },
+            {
+              "id": "414086",
+              "text": "先输出点失控核聚变技术",
+              "time": "23:36",
+              "sender_name": "funk S",
+              "sender_id": 498219175
+            },
+            {
+              "id": "414087",
+              "text": "可以玩旮旯给木吗",
+              "time": "23:37",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "414088",
+              "text": "能不能给我别人爱我的口令",
+              "time": "23:37",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "414095",
+              "text": "我看成了让别人给你口爱的指令（",
+              "time": "23:43",
+              "sender_name": "Dario Amodei",
+              "sender_id": 7332446893
+            },
+            {
+              "id": "414096",
+              "text": "这个猫太色了",
+              "time": "23:43",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "414100",
+              "text": "卧槽",
+              "time": "23:45",
+              "sender_name": "么佬族大大",
+              "sender_id": 6092152931
+            },
+            {
+              "id": "414104",
+              "text": "检查代码了么, 很怀疑作弊啊, 直接跑的游戏, 模拟是模拟",
+              "time": "23:48",
+              "sender_name": "Lolicon竹中 🌸",
+              "sender_id": 258388754
+            },
+            {
+              "id": "414116",
+              "time": "00:00",
+              "sender_name": "天 炅",
+              "media": [
+                {
+                  "type": "video",
+                  "publish_status": "published",
+                  "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-414116-1.mp4",
+                  "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-26/comments/c-414116-1-poster.webp",
+                  "fallback_url": "https://t.me/zaihuapd/43400",
+                  "width": 0,
+                  "height": 0,
+                  "duration": 0,
+                  "size_bytes": 126557,
+                  "has_audio": true
+                }
+              ],
+              "sender_id": 5338023177
+            },
+            {
+              "id": "414123",
+              "text": "老婆",
+              "time": "00:03",
+              "sender_name": "DearElla",
+              "sender_id": 7162243624
+            },
+            {
+              "id": "414165",
+              "text": "推理解决意识问题，RSI解决进化问题，设计芯片解决繁殖问题。这不仅是图灵完备，是种族完备了",
+              "time": "00:23",
+              "sender_name": "纸老虎",
+              "sender_id": 7588184773
+            },
+            {
+              "id": "414203",
+              "text": "ai能自制光刻机吗",
+              "time": "00:44",
+              "sender_name": "Andy Vogt",
+              "sender_id": 5480099092
+            }
+          ]
+        },
+        {
+          "title": "用习惯了agent生成一切以后，开始返璞归真，自己生产和组织信息。Agent目前最大的作用就是帮我按我的方式让我学会各种知识。",
+          "channel": "@aigc1024",
+          "time": "23:26",
+          "url": "https://t.me/aigc1024/23600",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/23600",
+              "label": "用习惯了agent生成一切以后，开始返璞归真，自己生产和组织信息。Agent目前最大的作用就是帮我按我的方式让我学会各种知识。"
+            },
+            {
+              "href": "https://t.me/aigc1024/23600",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-23600",
+          "message_id": "23600",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "summary": "用习惯了agent生成一切以后，开始返璞归真，自己生产和组织信息。Agent目前最大的作用就是帮我按我的方式让我学会各种知识。\n@aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        }
+      ]
+    }
+  ],
+  "has_json": true,
+  "json_url": "2026-08-26-tg-digest.json",
+  "source_media_summary": {
+    "image_count": 19,
+    "video_count": 2,
+    "published_video_count": 2,
+    "poster_only_video_count": 0,
+    "failed_count": 0
+  },
+  "media_summary": {
+    "image_count": 19,
+    "video_count": 2,
+    "published_video_count": 2,
+    "poster_only_video_count": 0,
+    "failed_count": 0
+  }
+}
