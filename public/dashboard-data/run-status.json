@@ -1,12 +1,12 @@
 {
   "status": "ok",
-  "generated_at": "2026-08-25T02:25:33Z",
-  "window_start": "2026-08-24T00:00:00Z",
-  "window_end": "2026-08-25T00:00:00Z",
-  "window_label": "2026-08-24 08:00 BJT - 2026-08-25 08:00 BJT",
-  "raw_posts": 96,
-  "normalized_posts": 96,
-  "primary_signals": 8,
+  "generated_at": "2026-08-26T00:10:42Z",
+  "window_start": "2026-08-25T00:00:00Z",
+  "window_end": "2026-08-26T00:00:00Z",
+  "window_label": "2026-08-25 08:00 BJT - 2026-08-26 08:00 BJT",
+  "raw_posts": 82,
+  "normalized_posts": 82,
+  "primary_signals": 6,
   "collection_status": {
     "status": "partial",
     "warnings": [
@@ -15,25 +15,28 @@
     "translation": {
       "configured": true,
       "counts": {
-        "translated": 96
+        "translated": 78,
+        "source_chinese": 4
       },
       "missing_count": 0,
       "fallback_original_count": 0
     }
   },
   "platform_trends": {
-    "status": "complete",
-    "accepted": 15,
-    "candidates_inspected": 199,
-    "warnings": []
+    "status": "partial",
+    "accepted": 0,
+    "candidates_inspected": 0,
+    "warnings": [
+      "TwitterAPI.io request budget exhausted: 12/12 requests used."
+    ]
   },
   "dashboard_metrics": {
-    "effective_intelligence": 8,
+    "effective_intelligence": 6,
     "high_risk": 0,
     "needs_review": 0,
-    "primary_volume": 51,
-    "primary_candidate_volume": 56,
-    "competitor_volume": 32,
-    "negative_share": 38
+    "primary_volume": 37,
+    "primary_candidate_volume": 42,
+    "competitor_volume": 31,
+    "negative_share": 33
   }
 }
