@@ -518,6 +518,8 @@ def normalize_tg_media_items(media_items: Any, base_url: str, fallback_url: str)
             value = media.get(key)
             if isinstance(value, (int, float)) and value >= 0:
                 item[key] = value
+        if is_empty_published_media(item):
+            continue
         if "has_audio" in media:
             item["has_audio"] = bool(media.get("has_audio"))
         error = compact_text(str(media.get("error") or ""))
@@ -525,6 +527,12 @@ def normalize_tg_media_items(media_items: Any, base_url: str, fallback_url: str)
             item["error"] = error
         normalized.append(item)
     return normalized
+
+
+def is_empty_published_media(item: dict[str, Any]) -> bool:
+    status = compact_text(str(item.get("publish_status") or "")).lower()
+    size_bytes = item.get("size_bytes")
+    return status == "published" and item.get("url") and isinstance(size_bytes, (int, float)) and size_bytes <= 0
 
 
 def resolve_dt_asset_url(value: str, base_url: str) -> str:

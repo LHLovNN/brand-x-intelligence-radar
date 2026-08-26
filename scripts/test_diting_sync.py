@@ -80,6 +80,34 @@ def main() -> None:
     assert "Theregister" in structured_tg_link["summary"]
     assert "在花频道" not in structured_tg_link["summary"]
 
+    zero_byte_reply = structured_tg_item({
+        "id": "zaihuapd-43376",
+        "message_id": "43376",
+        "channel": "zaihuapd",
+        "url": "https://t.me/zaihuapd/43376",
+        "title": "评论媒体测试",
+        "summary": "评论媒体测试\n\n正文",
+        "reply_count": 1,
+        "replies_fetched": 1,
+        "replies": [
+            {
+                "id": "411144",
+                "time": "09:50",
+                "sender_name": "匿名",
+                "media": [
+                    {
+                        "type": "video",
+                        "publish_status": "published",
+                        "url": "assets/tg-media/2026-08-26/comments/c-411144-1.mp4",
+                        "size_bytes": 0,
+                    }
+                ],
+            }
+        ],
+    }, "https://codew1028.github.io/dt")
+    assert zero_byte_reply.get("replies_visible") == 0
+    assert not zero_byte_reply.get("replies")
+
     assert tg_item_filter_reason({"title": "Claude 挂了？", "summary": "Claude 挂了？"}) == "short_status_chatter"
     assert tg_item_filter_reason({"title": "Claude 挂了？", "summary": "Claude 恢复计划和替代方案整理如下"}) is None
     print("Diting sync tests passed.")

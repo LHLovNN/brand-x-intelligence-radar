@@ -1052,9 +1052,19 @@ function validDitingMediaItems(mediaItems = []) {
   return (Array.isArray(mediaItems) ? mediaItems : []).filter((media) => {
     if (!media || typeof media !== "object") return false;
     if (String(media.publish_status || "").toLowerCase() === "failed") return false;
+    if (isExplicitEmptyPublishedMedia(media)) return false;
     if (isVideoMedia(media)) return Boolean(videoPosterUrl(media) || bestVideoUrl(media) || safeExternalUrl(media.fallback_url || media.fallbackUrl || ""));
     return Boolean(imageMediaUrl(media));
   });
+}
+
+function isExplicitEmptyPublishedMedia(media = {}) {
+  const status = String(media.publish_status || media.publishStatus || "").toLowerCase();
+  const sizeValue = media.size_bytes ?? media.sizeBytes;
+  const size = Number(sizeValue);
+  const hasExplicitSize = sizeValue !== undefined && sizeValue !== null && String(sizeValue) !== "";
+  const url = safeExternalUrl(media.url || media.media_url || media.mediaUrl || media.media_url_https || media.mediaUrlHttps || "");
+  return status === "published" && hasExplicitSize && Number.isFinite(size) && size <= 0 && Boolean(url);
 }
 
 function ditingCommentActionNode(item, config) {
