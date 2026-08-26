@@ -19,7 +19,7 @@ from src.pipeline.dashboard_builder import build_dashboard_data, public_collecti
 from src.pipeline.evidence_chain import attach_evidence_chains
 from src.pipeline.fermentation import update_fermentation
 from src.pipeline.normalizer import normalize_posts
-from src.pipeline.platform_trends import collect_platform_trends, platform_trends_enabled
+from src.pipeline.platform_trends import collect_platform_trends, platform_trends_enabled, public_platform_warnings
 from src.pipeline.query_builder import build_x_search_queries
 from src.pipeline.scoring import score_clusters
 from src.pipeline.translation import (
@@ -465,7 +465,7 @@ def main() -> None:
             "status": platform_trend_status.get("status"),
             "accepted": platform_trend_status.get("accepted"),
             "candidates_inspected": platform_trend_status.get("candidates_inspected"),
-            "warnings": platform_trend_status.get("warnings", []),
+            "warnings": public_platform_warnings(platform_trend_status.get("warnings", [])),
         } if platform_trend_status else None,
         "dashboard_metrics": overview["metrics"],
     }

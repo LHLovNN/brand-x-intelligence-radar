@@ -204,6 +204,30 @@ def main() -> None:
     assert capped.requests_used == 0
     assert capped.request_budget_exhausted is True
 
+    class PaginatedBudgetAdapter(TwitterApiIoAdapter):
+        def __init__(self) -> None:
+            super().__init__(api_key="test-key", max_requests_per_run=2, request_pause_seconds=0)
+            self.page = 0
+
+        def _get_json(self, path, params, budget_scope="search"):
+            self._reserve_request_budget(budget_scope)
+            self.page += 1
+            return {
+                "tweets": [
+                    {
+                        **sample,
+                        "id": str(1900000000000000100 + self.page),
+                        "text": f"Joybuy page {self.page}",
+                    }
+                ],
+                "next_cursor": f"cursor-{self.page + 1}",
+            }
+
+    partial = PaginatedBudgetAdapter()
+    partial_rows = partial.search_posts("joybuy", "2026-07-16T00:00:00Z", "2026-07-17T00:00:00Z", 5)
+    assert [row["text"] for row in partial_rows] == ["Joybuy page 1", "Joybuy page 2"]
+    assert partial.request_budget_exhausted is True
+
     class FakeResponse:
         def __init__(self, body: str) -> None:
             self.body = body

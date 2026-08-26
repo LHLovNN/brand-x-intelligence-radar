@@ -257,6 +257,7 @@ def collect_platform_trends(
     query_stats: list[dict[str, Any]] = []
 
     for query in build_platform_queries(platform):
+        stop_after_query = False
         if len(selected) >= max_items or candidates_seen >= max_candidates:
             break
         limit = max_candidates - candidates_seen
@@ -305,6 +306,12 @@ def collect_platform_trends(
                 "accepted": accepted_for_query,
             }
         )
+        budget_warning = source_request_budget_warning(x_source)
+        if budget_warning:
+            append_unique_warning(warnings, budget_warning)
+            stop_after_query = True
+        if stop_after_query:
+            break
 
     selected.sort(key=lambda item: str(item.get("created_at") or ""), reverse=True)
     translation_status = apply_translations(selected, translation_service)
@@ -338,7 +345,7 @@ def collect_platform_trends(
         "window_label": window_label,
         "items": public_platform_items(selected),
         "collection_status": {
-            **status,
+            **public_platform_collection_status(status),
             "translation": public_translation_status(translation_status),
             "conversation_context": context_status,
         },
@@ -695,6 +702,42 @@ def platform_request_stats(x_source: Any) -> dict[str, Any]:
         "max_context_requests": getattr(x_source, "max_context_requests_per_run", None),
         "context_request_budget_exhausted": bool(getattr(x_source, "context_request_budget_exhausted", False)),
     }
+
+
+def source_request_budget_warning(x_source: Any) -> str:
+    if not bool(getattr(x_source, "request_budget_exhausted", False)):
+        return ""
+    used = getattr(x_source, "requests_used", None)
+    max_requests = getattr(x_source, "max_requests_per_run", None)
+    if used is not None and max_requests is not None:
+        return f"TwitterAPI.io request budget exhausted: {used}/{max_requests} requests used."
+    return "TwitterAPI.io request budget exhausted."
+
+
+def append_unique_warning(warnings: list[str], warning: str) -> None:
+    if warning and warning not in warnings:
+        warnings.append(warning)
+
+
+def public_platform_collection_status(status: dict[str, Any]) -> dict[str, Any]:
+    return {
+        **status,
+        "warnings": public_platform_warnings(status.get("warnings", [])),
+    }
+
+
+def public_platform_warnings(warnings: list[Any]) -> list[str]:
+    results: list[str] = []
+    for warning in warnings:
+        text = str(warning)
+        lower = text.lower()
+        if "budget" in lower or "request" in lower or "provider" in lower or "twitterapi" in lower:
+            message = "平台流变采集达到本次保护阈值，已保留已取得内容。"
+        else:
+            message = "平台流变采集完成，但存在非关键提醒。"
+        if message not in results:
+            results.append(message)
+    return results[:3]
 
 
 def clean_post_text(post: dict[str, Any]) -> str:

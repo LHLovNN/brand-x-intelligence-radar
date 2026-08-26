@@ -5,7 +5,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.pipeline.platform_trends import canonical_platform_tag, score_platform_post
+from src.pipeline.platform_trends import (
+    canonical_platform_tag,
+    collection_status,
+    public_platform_collection_status,
+    score_platform_post,
+)
 
 
 def main() -> None:
@@ -44,6 +49,18 @@ def main() -> None:
     }
     adult_noise_decision = score_platform_post(adult_noise, platform)
     assert not adult_noise_decision["accepted"], "low-value adult jokes should not enter platform trend collection"
+
+    status = collection_status(
+        [item],
+        candidates_seen=80,
+        max_items=20,
+        max_candidates=200,
+        warnings=["TwitterAPI.io request budget exhausted: 12/12 requests used."],
+    )
+    assert status["status"] == "partial"
+    public_status = public_platform_collection_status(status)
+    assert public_status["warnings"] == ["平台流变采集达到本次保护阈值，已保留已取得内容。"]
+    assert "TwitterAPI.io" not in public_status["warnings"][0]
     print("Platform trend tag tests passed.")
 
 

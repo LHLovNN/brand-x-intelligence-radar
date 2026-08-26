@@ -76,7 +76,12 @@ class TwitterApiIoAdapter(XSourceBase):
             if cursor:
                 params["cursor"] = cursor
 
-            payload = self._get_json("/twitter/tweet/advanced_search", params, budget_scope=budget_scope)
+            try:
+                payload = self._get_json("/twitter/tweet/advanced_search", params, budget_scope=budget_scope)
+            except ProviderBudgetExceeded:
+                if posts:
+                    return posts
+                raise
             pages += 1
             rows = self._extract_tweets(payload)
             if not rows:
@@ -142,7 +147,12 @@ class TwitterApiIoAdapter(XSourceBase):
             params = {"tweetId": post_id}
             if cursor:
                 params["cursor"] = cursor
-            payload = self._get_json("/twitter/tweet/thread_context", params, budget_scope="context")
+            try:
+                payload = self._get_json("/twitter/tweet/thread_context", params, budget_scope="context")
+            except ProviderBudgetExceeded:
+                if posts:
+                    return posts
+                raise
             pages += 1
             rows = self._extract_tweets(payload)
             if not rows:
