@@ -64,12 +64,25 @@ TG_REPLY_BLOCK_PATTERNS = [
     re.compile(r"买枪|卖枪|毒品|冰毒|K粉|代办身份证|洗钱", re.IGNORECASE),
 ]
 TG_REPLY_LOW_SIGNAL_RE = re.compile(r"^(哈+|哈哈哈+|笑死|666+|顶|蹲|mark|收藏|学习了|\+1|牛+|牛逼|nb|ok|好)$", re.IGNORECASE)
-TG_MARKDOWN_CHANNEL_LINK = r"\[[^\]\n]{1,40}\]\(https?://t\.me/[^)\s]+\)"
-TG_MARKDOWN_CHANNEL_RECOMMENDATION_TAIL_RE = re.compile(
-    rf"(?:\s*(?:[|｜]\s*)?{TG_MARKDOWN_CHANNEL_LINK}){{2,}}\s*$",
-    re.IGNORECASE,
-)
+TG_MARKDOWN_LINK_RE = re.compile(r"\[([^\]\n]{1,120})\]\((https?://[^)\s]+)\)", re.IGNORECASE)
 TG_STANDALONE_SEPARATOR_RE = re.compile(r"^\s*[-—_]{2,}\s*$")
+TG_RECOMMENDATION_LABELS = {
+    "AI探索",
+    "AI探索站",
+    "Hermes/OpenClaw",
+    "优质资源",
+    "优质信息",
+    "优质内容",
+    "优质「资源」",
+    "优质「内容」",
+    "出海赚美金",
+    "内幕消息",
+    "你不知道的内幕消息🌳",
+    "副业搞钱",
+    "在花频道",
+    "茶馆水群",
+    "投稿通道",
+}
 
 
 def main() -> None:
@@ -413,8 +426,8 @@ def structured_tg_item(item: dict[str, Any], base_url: str) -> dict[str, Any]:
     url = clean_url(str(item.get("url") or ""))
     replies = normalize_tg_replies(item.get("replies") or [], base_url, url)
     visible_replies = filter_tg_replies(replies)
-    title = compact_text(strip_tg_channel_recommendations(str(item.get("title") or "")))
-    summary = multiline_text(strip_tg_channel_recommendations(str(item.get("summary") or "")))
+    title = compact_text(clean_tg_markdown_links(strip_tg_channel_recommendations(str(item.get("title") or ""))))
+    summary = multiline_text(clean_tg_markdown_links(strip_tg_channel_recommendations(str(item.get("summary") or ""))))
     result = {
         "id": compact_text(str(item.get("id") or "")),
         "title": title,
@@ -449,7 +462,7 @@ def normalize_tg_replies(replies: Any, base_url: str, fallback_url: str) -> list
         media = normalize_tg_media_items(reply.get("media") or [], base_url, fallback_url)
         item: dict[str, Any] = {
             "id": compact_text(str(reply.get("id") or "")),
-            "text": multiline_text(strip_tg_channel_recommendations(str(reply.get("text") or ""))),
+            "text": multiline_text(clean_tg_markdown_links(strip_tg_channel_recommendations(str(reply.get("text") or "")))),
             "time": compact_text(str(reply.get("time") or "")),
             "sender_name": compact_text(str(reply.get("sender_name") or "")),
             "media": media,
@@ -841,13 +854,46 @@ def strip_tg_channel_recommendations(value: str) -> str:
     text = str(value or "").strip()
     if not text:
         return ""
-    text = TG_MARKDOWN_CHANNEL_RECOMMENDATION_TAIL_RE.sub("", text).rstrip()
     lines = text.splitlines()
-    while lines and not lines[-1].strip():
-        lines.pop()
-    if lines and TG_STANDALONE_SEPARATOR_RE.fullmatch(lines[-1]):
-        lines.pop()
+    while lines:
+        while lines and not lines[-1].strip():
+            lines.pop()
+        if not lines:
+            break
+        tail = lines[-1].strip()
+        if TG_STANDALONE_SEPARATOR_RE.fullmatch(tail) or is_tg_channel_recommendation_line(tail):
+            lines.pop()
+            continue
+        break
     return "\n".join(lines).strip()
+
+
+def is_tg_channel_recommendation_line(line: str) -> bool:
+    matches = list(TG_MARKDOWN_LINK_RE.finditer(line or ""))
+    channel_links = [
+        match
+        for match in matches
+        if re.match(r"^https?://t\.me/[^)\s]+$", match.group(2), flags=re.IGNORECASE)
+    ]
+    if len(channel_links) < 2:
+        return False
+    remainder = TG_MARKDOWN_LINK_RE.sub("", line)
+    if re.search(r"[A-Za-z0-9\u3400-\u9fff]", remainder):
+        return False
+    return any(compact_text(match.group(1)) in TG_RECOMMENDATION_LABELS for match in channel_links)
+
+
+def clean_tg_markdown_links(value: str) -> str:
+    def replace_link(match: re.Match[str]) -> str:
+        label = compact_text(match.group(1))
+        href = clean_url(match.group(2))
+        if not href:
+            return ""
+        if re.match(r"^https?://t\.me/[^)\s]+$", href, flags=re.IGNORECASE) and label in TG_RECOMMENDATION_LABELS:
+            return ""
+        return label or href
+
+    return TG_MARKDOWN_LINK_RE.sub(replace_link, str(value or "")).strip()
 
 
 def sha256_text(value: str) -> str:

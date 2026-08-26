@@ -1146,6 +1146,9 @@ const DITING_TG_RECOMMENDATION_LABELS = new Set([
 function ditingUsefulLinks(item, primaryUrl, config) {
   const links = [];
   if (primaryUrl && config?.routeName !== "tgDaily") links.push({ href: primaryUrl, label: "打开原文" });
+  if (config?.routeName === "tgDaily") {
+    extractDitingMarkdownLinks(`${item.title || ""}\n${item.summary || ""}`).forEach((link) => links.push(link));
+  }
   (item.links || []).forEach((link) => {
     const href = safeExternalUrl(link.href || "");
     const label = compactDisplayText(link.label || "");
@@ -1164,7 +1167,7 @@ function ditingUsefulLinks(item, primaryUrl, config) {
 }
 
 function ditingSummaryHtml(summary, links, config) {
-  const text = config?.routeName === "tgDaily" ? multilineDisplayText(summary || "") : compactDisplayText(summary || "");
+  const text = config?.routeName === "tgDaily" ? normalizeDitingTgSummaryText(summary || "") : compactDisplayText(summary || "");
   const matchedHrefs = new Set();
   if (!text) return { html: "", matchedHrefs };
   if (config?.routeName !== "tgDaily" || !links.length) {
@@ -1210,6 +1213,55 @@ function isDitingTgRecommendationLink(href, label) {
   if (!/^https?:\/\/t\.me\//i.test(normalizedHref)) return false;
   if (DITING_TG_RECOMMENDATION_LABELS.has(label)) return true;
   return /^https?:\/\/t\.me\/[^/?#]+$/i.test(normalizedHref) && label.length <= 16;
+}
+
+const DITING_MARKDOWN_LINK_RE = /\[([^\]\n]{1,120})\]\((https?:\/\/[^)\s]+)\)/gi;
+
+function extractDitingMarkdownLinks(value) {
+  const result = [];
+  String(value || "").replace(DITING_MARKDOWN_LINK_RE, (_match, label, href) => {
+    const safeHref = safeExternalUrl(href);
+    const cleanLabel = compactDisplayText(label || "");
+    if (safeHref && cleanLabel && !isDitingTgRecommendationLink(safeHref, cleanLabel)) {
+      result.push({ href: safeHref, label: cleanLabel });
+    }
+    return "";
+  });
+  return result;
+}
+
+function normalizeDitingTgSummaryText(value) {
+  const withoutRecommendations = stripDitingTgChannelRecommendations(value);
+  return multilineDisplayText(withoutRecommendations.replace(DITING_MARKDOWN_LINK_RE, (_match, label, href) => {
+    const safeHref = safeExternalUrl(href);
+    const cleanLabel = compactDisplayText(label || "");
+    if (!safeHref || isDitingTgRecommendationLink(safeHref, cleanLabel)) return "";
+    return cleanLabel || shortUrlLabel(safeHref);
+  }));
+}
+
+function stripDitingTgChannelRecommendations(value) {
+  const lines = String(value || "").replace(/\r\n?/g, "\n").split("\n");
+  while (lines.length) {
+    while (lines.length && !compactDisplayText(lines[lines.length - 1])) lines.pop();
+    if (!lines.length) break;
+    const tail = lines[lines.length - 1].trim();
+    if (/^\s*[-—_]{2,}\s*$/.test(tail) || isDitingTgRecommendationLine(tail)) {
+      lines.pop();
+      continue;
+    }
+    break;
+  }
+  return lines.join("\n").trim();
+}
+
+function isDitingTgRecommendationLine(line) {
+  const matches = [...String(line || "").matchAll(DITING_MARKDOWN_LINK_RE)];
+  const channelLinks = matches.filter((match) => /^https?:\/\/t\.me\/[^)\s]+$/i.test(match[2] || ""));
+  if (channelLinks.length < 2) return false;
+  const remainder = String(line || "").replace(DITING_MARKDOWN_LINK_RE, "");
+  if ((remainder.match(/[A-Za-z0-9\u3400-\u9fff]/g) || []).length) return false;
+  return channelLinks.some((match) => isDitingTgRecommendationLink(match[2], compactDisplayText(match[1] || "")));
 }
 
 function compactDisplayText(value) {

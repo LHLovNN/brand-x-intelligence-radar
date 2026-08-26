@@ -6,7 +6,7 @@
   "title": "TG 频道日报",
   "hero_date": "2026年08月23日 · 星期日 · 6 个频道 · 38 条内容",
   "source_url": "https://codew1028.github.io/dt/2026-08-23-tg-digest.html",
-  "synced_at": "2026-08-25T10:02:06Z",
+  "synced_at": "2026-08-26T09:52:18Z",
   "original_item_count": 38,
   "filtered_count": 0,
   "filter_summary": [],
@@ -316,7 +316,7 @@
         },
         {
           "title": "**任天堂单日下架 400 余个 Switch 模拟器仓库，suyu 一家占 311 个**",
-          "summary": "**任天堂单日下架 400 余个 Switch 模拟器仓库，suyu 一家占 311 个**\n\n任天堂本周同一天向 GitHub 提交 7 份 DMCA 反规避通知，共针对 400 多个 Switch 模拟器仓库及其分支，理由是模拟器使用未经授权的密钥解密游戏、违反 DMCA。\n\n其中针对 suyu 的通知覆盖整个网络共 311 个仓库，已停更的安卓模拟器 Skyline 也有 29 个仓库被清。通知援引 Yuzu 和解案等先例，但两案均未经过庭审实质裁决。\n\n[Torrentfreak](https://torrentfreak.com/nintendo-wipes-out-400-switch-emulator-repos-in-single-day-github-sweep/)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "summary": "**任天堂单日下架 400 余个 Switch 模拟器仓库，suyu 一家占 311 个**\n\n任天堂本周同一天向 GitHub 提交 7 份 DMCA 反规避通知，共针对 400 多个 Switch 模拟器仓库及其分支，理由是模拟器使用未经授权的密钥解密游戏、违反 DMCA。\n\n其中针对 suyu 的通知覆盖整个网络共 311 个仓库，已停更的安卓模拟器 Skyline 也有 29 个仓库被清。通知援引 Yuzu 和解案等先例，但两案均未经过庭审实质裁决。\n\nTorrentfreak",
           "channel": "@zaihuapd",
           "time": "08:28",
           "url": "https://t.me/zaihuapd/43319",
@@ -1309,7 +1309,7 @@
         },
         {
           "title": "🤖 **OpenAI 下调 GPT-5.6 Sol 价格，API 与额度费用降幅超 20%**",
-          "summary": "🤖 **OpenAI 下调 GPT-5.6 Sol 价格，API 与额度费用降幅超 20%**\n\nOpenAI 宣布，未来 3 个月内 GPT-5.6 Sol 模型的 API 与额度（credit）价格将下调超过 20%。官方称此举是在持续提升模型能力的同时改善效率。\n\n[OpenAI(@OpenAI)](https://x.com/OpenAI/status/2090885187634905500)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "summary": "🤖 **OpenAI 下调 GPT-5.6 Sol 价格，API 与额度费用降幅超 20%**\n\nOpenAI 宣布，未来 3 个月内 GPT-5.6 Sol 模型的 API 与额度（credit）价格将下调超过 20%。官方称此举是在持续提升模型能力的同时改善效率。\n\nOpenAI(@OpenAI)",
           "channel": "@zaihuapd",
           "time": "10:38",
           "url": "https://t.me/zaihuapd/43322",
@@ -2111,7 +2111,7 @@
         },
         {
           "title": "这两天借鉴 deepseek-harness ，试着开发了一个极简的桌面 AI 知识库客户端（取名 Easy Seek）。",
-          "summary": "这两天借鉴 deepseek-harness ，试着开发了一个极简的桌面 AI 知识库客户端（取名 Easy Seek）。\n虽然已经有太多同类型的 AI 客户端可以直接用，但是总觉得那些产品太重、太复杂，安装也多有不便。\n所以 ES设计为一个最简单的可以在本地做知识库问答的客户端。不搞 npm、pip 或docker，就是纯 windows exe 安装，连本地向量数据库也是 exe 直接后台拉起。\n整个开发下来还是有很多心得体会：\n首先，克制是很重要的。AI coding 下，功能取舍真的很难，要时不时克制自己想加功能的冲动，特别是想加那种～对技术或开发人员来说顺理成章，但对普通使用者来讲一头雾水的功能选项。\n在保证完整功能的前提下，让界面看起来简洁高效，不需要帮助或者培训也能直接上手使用并且做到顺手，也是很难的一个点。个人体会就是要把自己当成一个小白，当成这个软件的第一个天使用户，自己用得顺手是最起码的。\n还有就是一些基础功能，比如说知识库，想要在本地客户端中很完整地实现，也是有很多细小的技术点需要一一攻克。之前使用 Dify、Ragflow 等知识库产品的经验在这个时候就有了很大的帮助。\n有一说一，现在 DeepSeek Pro 的能力真的很强了，之前这种规模的长程编程任务只能用 Claude 或者 GPT 来实现，现在 DeepSeek Pro 也可以胜任了。美中不足的还是价格略高，涨价之后，还好有缓存命中，到目前为止，软件版本 0.0.2 基本的功能会、agent、知识库功能都具备，绝大多数代码使用 DeepSeek Pro，大约消耗了 165M token，花了 80 块钱左右，马马虎虎，还可以接受。\n@aigc1024",
+          "summary": "虽然已经有太多同类型的 AI 客户端可以直接用，但是总觉得那些产品太重、太复杂，安装也多有不便。\n所以 ES设计为一个最简单的可以在本地做知识库问答的客户端。不搞 npm、pip 或docker，就是纯 windows exe 安装，连本地向量数据库也是 exe 直接后台拉起。\n整个开发下来还是有很多心得体会：\n首先，克制是很重要的。AI coding 下，功能取舍真的很难，要时不时克制自己想加功能的冲动，特别是想加那种～对技术或开发人员来说顺理成章，但对普通使用者来讲一头雾水的功能选项。\n在保证完整功能的前提下，让界面看起来简洁高效，不需要帮助或者培训也能直接上手使用并且做到顺手，也是很难的一个点。个人体会就是要把自己当成一个小白，当成这个软件的第一个天使用户，自己用得顺手是最起码的。\n还有就是一些基础功能，比如说知识库，想要在本地客户端中很完整地实现，也是有很多细小的技术点需要一一攻克。之前使用 Dify、Ragflow 等知识库产品的经验在这个时候就有了很大的帮助。\n有一说一，现在 DeepSeek Pro 的能力真的很强了，之前这种规模的长程编程任务只能用 Claude 或者 GPT 来实现，现在 DeepSeek Pro 也可以胜任了。美中不足的还是价格略高，涨价之后，还好有缓存命中，到目前为止，软件版本 0.0.2 基本的功能会、agent、知识库功能都具备，绝大多数代码使用 DeepSeek Pro，大约消耗了 165M token，花了 80 块钱左右，马马虎虎，还可以接受。\n@aigc1024",
           "channel": "@aigc1024",
           "time": "11:16",
           "url": "https://t.me/aigc1024/23414",
@@ -2233,7 +2233,7 @@
         },
         {
           "title": "**皮尤研究称逾三成网页由 AI 撰写，ChatGPT 后新页面达 35%**",
-          "summary": "**皮尤研究称逾三成网页由 AI 撰写，ChatGPT 后新页面达 35%**\n\n皮尤研究中心一项研究显示，如今超过三分之一的互联网内容由 AI 撰写。该研究分析近 50 万英文网页，发现整体 10% 有明显 AI 痕迹，而 ChatGPT 发布后发布的新页面中这一比例升至 35%。\n\nAI 写作特征也在增多：破折号约翻倍、牛津逗号增 63%、聊天机器人常用词翻倍， .com 网站 AI 痕迹约为 .org 的两倍、 .edu/ .gov 的十倍。研究正值“死互联网理论”担忧升温之际。\n\n[The Independent](https://www.independent.co.uk/tech/ai-webpages-internet-dead-internet-theory-b3037019.html) | [Yahoo! Finance UK](https://uk.finance.yahoo.com/news/more-third-internet-now-being-112608862.html)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "summary": "**皮尤研究称逾三成网页由 AI 撰写，ChatGPT 后新页面达 35%**\n\n皮尤研究中心一项研究显示，如今超过三分之一的互联网内容由 AI 撰写。该研究分析近 50 万英文网页，发现整体 10% 有明显 AI 痕迹，而 ChatGPT 发布后发布的新页面中这一比例升至 35%。\n\nAI 写作特征也在增多：破折号约翻倍、牛津逗号增 63%、聊天机器人常用词翻倍， .com 网站 AI 痕迹约为 .org 的两倍、 .edu/ .gov 的十倍。研究正值“死互联网理论”担忧升温之际。\n\nThe Independent | Yahoo! Finance UK",
           "channel": "@zaihuapd",
           "time": "13:48",
           "url": "https://t.me/zaihuapd/43324",
@@ -2551,7 +2551,7 @@
         },
         {
           "title": "**SemiAnalysis：开源模型加速追赶，每代追平时间减半**",
-          "summary": "**SemiAnalysis：开源模型加速追赶，每代追平时间减半**\n\nSemiAnalysis 将大模型历史分为早期扩展、推理、智能体三个时代，测算发现开源与闭源前沿的能力差距呈周期性变化，且每一代开源模型追平闭源的时间减半。智能体时代追赶最快：Kimi K2.6 用 4.8 个月超越 Opus 4.5，GLM-5.2 用 6 个月超过 GPT-5.2。\n\n文章指出，GLM 5.3、Kimi K3 等开源模型已能胜任许多曾助 Anthropic 获得 650 亿美元以上年化收入的编程与智能体任务，引发模型层商品化的担忧；但基准测试并非全部，Anthropic 的产品化能力仍是其优势。\n\n[SemiAnalysis](https://newsletter.semianalysis.com/p/are-open-models-catching-up)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "summary": "**SemiAnalysis：开源模型加速追赶，每代追平时间减半**\n\nSemiAnalysis 将大模型历史分为早期扩展、推理、智能体三个时代，测算发现开源与闭源前沿的能力差距呈周期性变化，且每一代开源模型追平闭源的时间减半。智能体时代追赶最快：Kimi K2.6 用 4.8 个月超越 Opus 4.5，GLM-5.2 用 6 个月超过 GPT-5.2。\n\n文章指出，GLM 5.3、Kimi K3 等开源模型已能胜任许多曾助 Anthropic 获得 650 亿美元以上年化收入的编程与智能体任务，引发模型层商品化的担忧；但基准测试并非全部，Anthropic 的产品化能力仍是其优势。\n\nSemiAnalysis",
           "channel": "@zaihuapd",
           "time": "16:26",
           "url": "https://t.me/zaihuapd/43325",
@@ -2933,7 +2933,7 @@
         },
         {
           "title": "**Telegram 测试 WEB 代理，真实 HTTPS 连接降低流量识别度**",
-          "summary": "**Telegram 测试 WEB 代理，真实 HTTPS 连接降低流量识别度**\n\nTelegram Desktop 代码中出现实验性 WEB 代理。它通过内置 WebView 建立真实 TLS/HTTPS 连接，并以 WebSocket 封装、转发加密的 MTProxy 流量，使其更接近普通网页访问，增加深度包检测的识别难度。\n\n服务器端仍在开发，Telegram 尚未认可任何实现，目前无法实际体验，正式发布前协议也可能调整。\n\n[Telegram Info](https://t.me/tginfoen/2195)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "summary": "**Telegram 测试 WEB 代理，真实 HTTPS 连接降低流量识别度**\n\nTelegram Desktop 代码中出现实验性 WEB 代理。它通过内置 WebView 建立真实 TLS/HTTPS 连接，并以 WebSocket 封装、转发加密的 MTProxy 流量，使其更接近普通网页访问，增加深度包检测的识别难度。\n\n服务器端仍在开发，Telegram 尚未认可任何实现，目前无法实际体验，正式发布前协议也可能调整。\n\nTelegram Info",
           "channel": "@zaihuapd",
           "time": "18:48",
           "url": "https://t.me/zaihuapd/43326",
@@ -3321,7 +3321,7 @@
         },
         {
           "title": "**苹果裁员 Siri 与 Vision Pro 团队，影响超 200 人聚焦 AI 与新设备**",
-          "summary": "**苹果裁员 Siri 与 Vision Pro 团队，影响超 200 人聚焦 AI 与新设备**\n\n苹果正在 Siri 数字助手和 Vision Pro 头显相关团队裁员，以聚焦新设备与人工智能，共影响 200 多人，其中 Vision Pro 部门约 100 人、Siri 与软件团队约 100 人。\n\n公司基本关停 Vision Pro 游戏团队，缩减沉浸式视频内容团队，并裁撤智能系统体验团队部分岗位；苹果称将增设新岗位，仅影响有限现有岗位。\n\n[Bloomberg](https://www.bloomberg.com/news/articles/2026-08-21/apple-cuts-jobs-in-siri-vision-pro-immersive-video-and-gaming-teams)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "summary": "**苹果裁员 Siri 与 Vision Pro 团队，影响超 200 人聚焦 AI 与新设备**\n\n苹果正在 Siri 数字助手和 Vision Pro 头显相关团队裁员，以聚焦新设备与人工智能，共影响 200 多人，其中 Vision Pro 部门约 100 人、Siri 与软件团队约 100 人。\n\n公司基本关停 Vision Pro 游戏团队，缩减沉浸式视频内容团队，并裁撤智能系统体验团队部分岗位；苹果称将增设新岗位，仅影响有限现有岗位。\n\nBloomberg",
           "channel": "@zaihuapd",
           "time": "20:31",
           "url": "https://t.me/zaihuapd/43328",
@@ -3641,7 +3641,7 @@
         },
         {
           "title": "**美国十余团体敦促 FTC 调查 AI 公司，买书扫描后销毁被指扼杀竞争**",
-          "summary": "**美国十余团体敦促 FTC 调查 AI 公司，买书扫描后销毁被指扼杀竞争**\n\n美国十余家民间团体 8 月 21 日联名致信联邦贸易委员会（FTC），要求调查 AI 公司购买、扫描并销毁实体书以训练模型的行为，认定其是否构成《联邦贸易委员会法》第 5 条下的不公平竞争手段。团体包括 Demand Progress 教育基金、美国消费者联合会等，称这种「囤积并销毁」的做法让市场丧失关键素材，部分珍本可能永久消失。\n\n信件指出，Anthropic 曾耗资数百万美元购书并切除书脊，将扫描页喂给 Claude；谷歌、微软和 OpenAI 也面临类似版权诉讼。团体认为该做法抬高对手成本、构筑护城河，但不主张限制 AI 训练本身。若 FTC 受理，AI 训练数据之争将从版权领域延伸至竞争监管。\n\n[Axios](https://www.axios.com/2026/08/21/ftc-ai-companies-book-destruction-investigate)\n\n🌸 [在花频道](http://t.me/ZaiHuaPd) · [茶馆水群](https://t.me/zaihuachat) · [投稿通道](http://t.me/ZaiHuabot)",
+          "summary": "**美国十余团体敦促 FTC 调查 AI 公司，买书扫描后销毁被指扼杀竞争**\n\n美国十余家民间团体 8 月 21 日联名致信联邦贸易委员会（FTC），要求调查 AI 公司购买、扫描并销毁实体书以训练模型的行为，认定其是否构成《联邦贸易委员会法》第 5 条下的不公平竞争手段。团体包括 Demand Progress 教育基金、美国消费者联合会等，称这种「囤积并销毁」的做法让市场丧失关键素材，部分珍本可能永久消失。\n\n信件指出，Anthropic 曾耗资数百万美元购书并切除书脊，将扫描页喂给 Claude；谷歌、微软和 OpenAI 也面临类似版权诉讼。团体认为该做法抬高对手成本、构筑护城河，但不主张限制 AI 训练本身。若 FTC 受理，AI 训练数据之争将从版权领域延伸至竞争监管。\n\nAxios",
           "channel": "@zaihuapd",
           "time": "23:40",
           "url": "https://t.me/zaihuapd/43331",
