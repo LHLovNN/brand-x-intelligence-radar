@@ -178,6 +178,25 @@ HARD_NOISE_TERMS = [
     "老牌服务商",
     "老字号服务",
     "专业品牌客服",
+    "上市失败",
+    "涉企网络谣言",
+    "行政拘留",
+    "警方披露",
+    "不给我流量",
+    "没招了",
+    "摸鱼真开心",
+    "小游戏功能",
+    "日入 1 元",
+    "金融市场",
+    "bnbchain",
+    "苏丹的游戏",
+    "金属书签",
+    "手账本",
+    "开放权重多模态模型",
+    "tutti",
+    "x创作者收益",
+    "生日快乐",
+    "阴阳怪气",
 ]
 
 STRUCTURE_SIGNALS = [
@@ -487,6 +506,8 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
 
     topics = matched_topics(lower)
     structure_score = method_structure_score(lower)
+    if is_short_reaction_link(item, lower, topics, structure_score):
+        return {"accepted": False, "item": {}}
     metric_score = propagation_score(item)
     topic_score = min(30, len(intent_hits) * 6 + len(topics) * 4)
     score = min(100, 35 + topic_score + structure_score + metric_score)
@@ -784,6 +805,13 @@ def method_structure_score(lower: str) -> int:
     if len(lower) >= 600:
         score += 6
     return min(28, score)
+
+
+def is_short_reaction_link(item: dict[str, Any], lower: str, topics: list[str], structure_score: int) -> bool:
+    text_without_urls = re.sub(r"https?://\S+", "", lower)
+    signal_length = len(re.findall(r"[a-z0-9\u3400-\u9fff]", text_without_urls))
+    has_link = bool(item.get("links")) or bool(re.search(r"https?://\S+", lower))
+    return has_link and signal_length < 40 and structure_score < 10 and len(topics) <= 1
 
 
 def strong_method_signal(lower: str) -> bool:

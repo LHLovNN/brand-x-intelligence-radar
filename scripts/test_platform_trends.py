@@ -50,6 +50,31 @@ def main() -> None:
     adult_noise_decision = score_platform_post(adult_noise, platform)
     assert not adult_noise_decision["accepted"], "low-value adult jokes should not enter platform trend collection"
 
+    short_reaction_link = {
+        "clean_text": "卧槽，小红书变现能力这么强的嘛！！ https://t.co/example",
+        "links": ["https://example.com"],
+        "metrics": {"likes": 61, "views": 43322, "replies": 116},
+        "author_followers": 1000,
+    }
+    short_reaction_decision = score_platform_post(short_reaction_link, platform)
+    assert not short_reaction_decision["accepted"], "short reaction links should not enter platform trend collection"
+
+    platform_news = {
+        "clean_text": "杜撰“小红书上市失败”贴文，被警方行拘。涉企网络谣言案件通报。",
+        "links": [],
+        "metrics": {"likes": 74, "views": 21787, "replies": 16},
+        "author_followers": 1000,
+    }
+    assert not score_platform_post(platform_news, platform)["accepted"], "platform news should not enter method collection"
+
+    off_topic_comparison = {
+        "clean_text": "Tutti 商单收益比做闲鱼和小红书投入产出自由，赶紧来注册加入。",
+        "links": [],
+        "metrics": {"likes": 57, "views": 5543, "replies": 2},
+        "author_followers": 1000,
+    }
+    assert not score_platform_post(off_topic_comparison, platform)["accepted"], "off-topic platform comparisons should not enter collection"
+
     status = collection_status(
         [item],
         candidates_seen=80,

@@ -23,12 +23,10 @@
     }
   },
   "platform_trends": {
-    "status": "partial",
-    "accepted": 0,
-    "candidates_inspected": 0,
-    "warnings": [
-      "TwitterAPI.io request budget exhausted: 12/12 requests used."
-    ]
+    "status": "complete",
+    "accepted": 10,
+    "candidates_inspected": 178,
+    "warnings": []
   },
   "dashboard_metrics": {
     "effective_intelligence": 6,
