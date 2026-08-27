@@ -420,10 +420,30 @@ function requestRouteData(routeName) {
 function routeDataLoadingPage(routeName) {
   const title = routeTitles[routeName] || "数据";
   const error = state.routeDataErrors[routeName];
-  const text = error ? `${title}加载失败：${error}` : `${title}正在加载，稍等一下。`;
+  if (!error) return pageLoadingSkeleton(title);
+  const text = `${title}加载失败：${error}`;
   return `
     <section class="section">
       ${empty(text)}
+    </section>
+  `;
+}
+
+function pageLoadingSkeleton(title = "") {
+  return `
+    <section class="route-loading-screen" role="status" aria-label="${escapeHtml(title ? `${title}正在加载` : "正在加载")}">
+      <div class="loading-hero-skeleton">
+        <div>
+          <span class="loading-line loading-line-xs"></span>
+          <span class="loading-line loading-line-lg"></span>
+        </div>
+        <div class="loading-stat-grid" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      ${timelineLoadingSkeleton()}
     </section>
   `;
 }
@@ -998,8 +1018,7 @@ function platformArchiveItemCount(archive) {
 }
 
 function platformLazyPlaceholder(date) {
-  const text = isPlatformDetailLoading(date) ? "正在加载这一天的小红书内容..." : "点开后加载这一天的小红书内容。";
-  return `<div class="featured-empty">${escapeHtml(text)}</div>`;
+  return timelineLoadingSkeleton("inline", isPlatformDetailLoading(date) ? 2 : 1);
 }
 
 function platformTimeline(daily, items) {
@@ -2947,7 +2966,7 @@ function allIntelligencePage() {
       <div class="section-header">
         <div>
           <h2>信息流</h2>
-          <p class="muted">按日期与发布时间倒序排列。历史日期点开后加载完整内容。</p>
+          <p class="muted">按日期与发布时间倒序排列。展开日期查看完整内容。</p>
         </div>
         <span class="tag">${metrics.filtered} 条</span>
       </div>
@@ -3390,6 +3409,7 @@ function itemMatchesAllFilters(item) {
 
 function dailyPage() {
   const daily = state.selectedDaily || state.daily;
+  if (daily._archive_stub && isDailyDetailLoading(daily.date)) return dailyLoadingPage(daily);
   const metrics = daily.metrics || state.overview.metrics;
   const source = daily.source_status || state.sourceStatus;
   const collection = daily.collection_status || {};
@@ -3434,6 +3454,30 @@ function dailyPage() {
         </nav>
         ${dailyReportSection("01", "主品牌舆情", "Brand Radar", `${brandBreakdown(source, "joybuy_effective", metrics.joybuy_volume)} 条有效内容，${metrics.high_risk || 0} 个高风险。`, "primary-radar", joybuyEvents, "该日暂无主品牌有效舆情")}
         ${dailyReportSection("02", "竞品雷达", "Competitor", `样例竞品有效内容 ${brandBreakdown(source, "temu_effective", metrics.temu_volume)} 条。`, "competitor-radar", competitorEvents, "该日暂无竞品内容", competitorSummary(daily.competitor || state.competitor))}
+      </article>
+    </div>
+  `;
+}
+
+function dailyLoadingPage(daily) {
+  return `
+    <div class="daily-layout daily-loading-layout">
+      ${historyRail()}
+      <article class="daily-report daily-paper daily-loading-paper" role="status" aria-label="${escapeHtml(formatDateLong(daily.date))}日报正在加载">
+        <header class="daily-masthead">
+          <div class="daily-rule"></div>
+          <div class="daily-kicker">
+            <span>VOL.${escapeHtml(String(daily.date || "").replace(/-/g, "."))}</span>
+            <span>BRAND OPINION DAILY</span>
+          </div>
+          <span class="loading-line loading-line-lg"></span>
+          <div class="daily-masthead-stats">
+            <span><strong>${escapeHtml(String(daily.metrics?.joybuy_volume || 0))}</strong><em>主品牌有效</em></span>
+            <span><strong>${escapeHtml(String(daily.metrics?.temu_volume || 0))}</strong><em>竞品基线</em></span>
+            <span><strong>${escapeHtml(String(daily.metrics?.high_risk || 0))}</strong><em>高风险</em></span>
+          </div>
+        </header>
+        ${timelineLoadingSkeleton("", 4)}
       </article>
     </div>
   `;
@@ -4520,7 +4564,13 @@ function brandBreakdown(source, key, fallback = 0) {
 
 async function selectDaily(date) {
   const previousDate = (state.selectedDaily || state.daily)?.date;
-  const record = await ensureDailyArchiveDate(date);
+  const existing = dailyArchiveRecord(date);
+  const loadPromise = ensureDailyArchiveDate(date);
+  if (existing?._archive_stub) {
+    state.selectedDaily = existing;
+    render();
+  }
+  const record = await loadPromise;
   state.selectedDaily = record || state.daily;
   const nextDate = (state.selectedDaily || state.daily)?.date;
   render();
@@ -4556,8 +4606,17 @@ function dailyArchiveAllCount() {
 }
 
 function lazyArchivePlaceholder(date) {
-  const text = isDailyDetailLoading(date) ? "正在加载这一天的完整内容..." : "点开后加载这一天的完整内容。";
-  return `<div class="featured-empty">${escapeHtml(text)}</div>`;
+  return timelineLoadingSkeleton("inline", isDailyDetailLoading(date) ? 2 : 1);
+}
+
+function timelineLoadingSkeleton(mode = "", count = 3) {
+  const cards = Array.from({ length: count }, () => `<div class="loading-card-skeleton"></div>`).join("");
+  return `
+    <div class="timeline-loading-shell ${escapeHtml(mode)}" aria-hidden="true">
+      <span class="loading-line loading-line-md"></span>
+      <div class="loading-card-stack">${cards}</div>
+    </div>
+  `;
 }
 
 function metric(label, value, note) {
