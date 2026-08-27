@@ -36,6 +36,7 @@ PLATFORM_ALLOWED_TAGS = {
     "案例复盘",
     "小红书方法论",
 }
+BUNDLE_MAX_BYTES = 2_000_000
 
 
 def load(path: Path):
@@ -263,6 +264,7 @@ def main() -> None:
     is_real_provider = not is_sample
     bundle_path = ROOT / "public" / "dashboard-data-bundle.js"
     assert_true(bundle_path.exists(), "dashboard-data-bundle.js should exist for file:// preview")
+    verify_lightweight_data_bundle(bundle_path)
 
     clusters = daily.get("clusters", [])
     if is_sample:
@@ -322,6 +324,31 @@ def main() -> None:
     print(f"Primary signals: {len(clusters)}")
     print(f"Tracked: {len(tracked)}")
     print(f"Competitor posts: {competitor['volume']}")
+
+
+def verify_lightweight_data_bundle(bundle_path: Path) -> None:
+    size = bundle_path.stat().st_size
+    assert_true(size <= BUNDLE_MAX_BYTES, f"dashboard-data-bundle.js should stay lightweight, got {size} bytes")
+    text = bundle_path.read_text(encoding="utf-8").strip()
+    prefix = "window.__DASHBOARD_DATA__ = "
+    if text.startswith(prefix):
+        text = text[len(prefix) :]
+    if text.endswith(";"):
+        text = text[:-1]
+    try:
+        bundle = json.loads(text)
+    except json.JSONDecodeError as exc:
+        raise AssertionError(f"dashboard-data-bundle.js should contain valid JSON payload: {exc}") from exc
+    forbidden_patterns = [
+        re.compile(r"^dashboard-data/daily/\d{4}-\d{2}-\d{2}\.json$"),
+        re.compile(r"^dashboard-data/platform-trends/[^/]+/daily/"),
+        re.compile(r"^dashboard-data/dt-digests/daily/"),
+    ]
+    for key in bundle:
+        assert_true(
+            not any(pattern.search(key) for pattern in forbidden_patterns),
+            f"dashboard-data-bundle.js should not inline archive detail payload: {key}",
+        )
 
 
 if __name__ == "__main__":

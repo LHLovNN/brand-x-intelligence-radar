@@ -3,12 +3,17 @@ const state = {
   daily: null,
   dailyIndex: null,
   dailyArchive: [],
+  dailyDetailLoads: new Map(),
   selectedDaily: null,
   competitor: null,
   sourceStatus: null,
   xiaohongshu: null,
   xiaohongshuIndex: null,
   xiaohongshuArchive: [],
+  platformDetailLoads: new Map(),
+  routeDataReady: { xiaohongshu: false, aiDaily: false, tgDaily: false },
+  routeDataLoads: new Map(),
+  routeDataErrors: {},
   dtDigestIndex: null,
   dtDigests: {
     ai: [],
@@ -139,47 +144,135 @@ function aliasNumber(target, oldKey, newKey) {
 }
 
 async function init() {
-  state.overview = await loadJson("./dashboard-data/latest.json");
-  state.daily = await loadJson("./dashboard-data/daily/latest.json");
-  state.dailyIndex = await loadJson("./dashboard-data/daily/index.json");
-  state.dailyArchive = await loadDailyArchive();
-  if (!state.dailyArchive.length) state.dailyArchive = [state.daily];
-  state.featuredExpandedDates = new Set(state.dailyArchive.slice(0, DEFAULT_TIMELINE_EXPANDED_DAYS).map((daily) => daily.date).filter(Boolean));
-  state.allExpandedDates = new Set(state.dailyArchive.slice(0, DEFAULT_TIMELINE_EXPANDED_DAYS).map((daily) => daily.date).filter(Boolean));
+  const [overview, daily, dailyIndex, competitor, sourceStatus] = await Promise.all([
+    loadJson("./dashboard-data/latest.json"),
+    loadJson("./dashboard-data/daily/latest.json"),
+    loadJson("./dashboard-data/daily/index.json"),
+    loadJson("./dashboard-data/competitor.json"),
+    loadJson("./dashboard-data/source-status.json"),
+  ]);
+  state.overview = overview;
+  state.daily = markDailyDetailLoaded(daily);
+  state.dailyIndex = dailyIndex;
+  state.dailyArchive = dailyArchiveFromIndex();
+  state.featuredExpandedDates = defaultDailyOpenDates();
+  state.allExpandedDates = defaultDailyOpenDates();
   state.selectedDaily = state.daily;
-  state.competitor = await loadJson("./dashboard-data/competitor.json");
-  state.sourceStatus = await loadJson("./dashboard-data/source-status.json");
-  state.xiaohongshu = await loadJsonOptional("./dashboard-data/platform-trends/xiaohongshu/latest.json", emptyPlatformTrendPayload());
-  state.xiaohongshuIndex = await loadJsonOptional("./dashboard-data/platform-trends/xiaohongshu/index.json", emptyPlatformTrendIndex());
-  state.xiaohongshuArchive = await loadPlatformTrendArchive("xiaohongshu");
-  if (!state.xiaohongshuArchive.length && state.xiaohongshu?.date) state.xiaohongshuArchive = [state.xiaohongshu];
-  state.platformExpandedDates = new Set(state.xiaohongshuArchive.slice(0, DEFAULT_TIMELINE_EXPANDED_DAYS).map((daily) => daily.date).filter(Boolean));
-  state.dtDigestIndex = await loadJsonOptional("./dashboard-data/dt-digests/index.json", emptyDitingDigestIndex());
-  state.dtDigests.ai = await loadInitialDitingDigest("ai");
-  state.dtDigests.tg = await loadInitialDitingDigest("tg");
-  Object.keys(DT_DIGEST_KIND_CONFIG).forEach((kind) => {
-    if (!state.dtDigestFilters[kind].date) {
-      state.dtDigestFilters[kind].date = state.dtDigests[kind]?.[0]?.date || state.dtDigestIndex?.latest?.[kind] || "";
-    }
-  });
+  state.competitor = competitor;
+  state.sourceStatus = sourceStatus;
+  state.xiaohongshu = emptyPlatformTrendPayload();
+  state.xiaohongshuIndex = emptyPlatformTrendIndex();
+  state.xiaohongshuArchive = [];
+  state.platformExpandedDates = new Set();
+  state.dtDigestIndex = emptyDitingDigestIndex();
   bindNavigation();
   setupBackToTop();
   window.addEventListener("hashchange", render);
   render();
 }
 
-async function loadDailyArchive() {
+function markDailyDetailLoaded(record) {
+  if (!record) return record;
+  return { ...record, _archive_stub: false };
+}
+
+function dailyArchiveFromIndex() {
+  const loaded = new Map();
+  [...(state.dailyArchive || []), state.daily, state.selectedDaily].filter(Boolean).forEach((record) => {
+    if (record.date && !record._archive_stub) loaded.set(record.date, markDailyDetailLoaded(record));
+  });
   const items = state.dailyIndex?.items || [];
-  const records = await Promise.all(
-    items.map(async (item) => {
-      try {
-        return await loadJson(`./dashboard-data/daily/${item.date}.json`);
-      } catch (error) {
-        return null;
-      }
+  const records = items
+    .map((item) => loaded.get(item.date) || dailySummaryRecordFromIndex(item))
+    .filter((record) => record?.date);
+  if (!records.length && state.daily?.date) records.push(markDailyDetailLoaded(state.daily));
+  return records.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+}
+
+function dailySummaryRecordFromIndex(item) {
+  const primaryEffective = Number(item.primary_effective ?? item.joybuy_effective ?? item.cluster_count ?? 0);
+  const competitorEffective = Number(item.competitor_effective ?? item.temu_effective ?? 0);
+  const clusterCount = Number(item.cluster_count ?? primaryEffective ?? 0);
+  return {
+    date: item.date || "",
+    generated_at_label: item.generated_at_label || "",
+    window_label: item.window_label || "",
+    summary_only: true,
+    _archive_stub: true,
+    _featured_count: clusterCount,
+    _all_count: clusterCount + competitorEffective,
+    metrics: {
+      primary_volume: primaryEffective,
+      joybuy_volume: primaryEffective,
+      competitor_volume: competitorEffective,
+      temu_volume: competitorEffective,
+      high_risk: Number(item.high_risk || 0),
+      needs_review: Number(item.needs_review || 0),
+      effective_intelligence: clusterCount,
+    },
+    source_status: {
+      brand_breakdown: {
+        primary_effective: primaryEffective,
+        joybuy_effective: primaryEffective,
+        competitor_effective: competitorEffective,
+        temu_effective: competitorEffective,
+      },
+    },
+    collection_status: { status: item.collection_status || "unknown" },
+    executive_summary: { headline: item.title || "" },
+    clusters: [],
+    featured_items: [],
+    competitor: { volume: competitorEffective },
+  };
+}
+
+function defaultDailyOpenDates() {
+  const latestDate = state.daily?.date || state.dailyIndex?.items?.[0]?.date || "";
+  return latestDate ? new Set([latestDate]) : new Set();
+}
+
+function loadedDailyRecord(date) {
+  return (state.dailyArchive || []).find((daily) => daily.date === date && !daily._archive_stub) || null;
+}
+
+function dailyArchiveRecord(date) {
+  return (state.dailyArchive || []).find((daily) => daily.date === date) || null;
+}
+
+function isDailyDetailLoaded(date) {
+  const record = dailyArchiveRecord(date);
+  return Boolean(record && !record._archive_stub);
+}
+
+function isDailyDetailLoading(date) {
+  return state.dailyDetailLoads.has(date);
+}
+
+function upsertDailyArchiveRecord(record) {
+  if (!record?.date) return;
+  const loaded = markDailyDetailLoaded(record);
+  state.dailyArchive = [
+    loaded,
+    ...(state.dailyArchive || []).filter((daily) => daily.date !== loaded.date),
+  ].sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  if (state.daily?.date === loaded.date) state.daily = loaded;
+  if (state.selectedDaily?.date === loaded.date) state.selectedDaily = loaded;
+}
+
+async function ensureDailyArchiveDate(date) {
+  if (!date || isDailyDetailLoaded(date)) return loadedDailyRecord(date);
+  if (state.dailyDetailLoads.has(date)) return state.dailyDetailLoads.get(date);
+  const promise = loadJson(`./dashboard-data/daily/${date}.json`)
+    .then((record) => {
+      upsertDailyArchiveRecord(record);
+      return loadedDailyRecord(date);
     })
-  );
-  return records.filter(Boolean).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+    .catch(() => null)
+    .finally(() => {
+      state.dailyDetailLoads.delete(date);
+    });
+  state.dailyDetailLoads.set(date, promise);
+  return promise;
 }
 
 async function loadPlatformTrendArchive(platformKey) {
@@ -194,6 +287,145 @@ async function loadPlatformTrendArchive(platformKey) {
     })
   );
   return records.filter(Boolean).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+}
+
+function markPlatformDetailLoaded(record) {
+  if (!record) return record;
+  return { ...record, _archive_stub: false };
+}
+
+function platformTrendArchiveFromIndex() {
+  const loaded = new Map();
+  [...(state.xiaohongshuArchive || []), state.xiaohongshu].filter(Boolean).forEach((record) => {
+    if (record.date && !record._archive_stub) loaded.set(record.date, markPlatformDetailLoaded(record));
+  });
+  const items = state.xiaohongshuIndex?.items || [];
+  const records = items
+    .map((item) => loaded.get(item.date) || platformSummaryRecordFromIndex(item))
+    .filter((record) => record?.date);
+  if (!records.length && state.xiaohongshu?.date) records.push(markPlatformDetailLoaded(state.xiaohongshu));
+  return records.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+}
+
+function platformSummaryRecordFromIndex(item) {
+  return {
+    platform: "xiaohongshu",
+    display_name: "小红书",
+    topic_label: "小红书增长方法",
+    date: item.date || "",
+    generated_at_label: item.generated_at_label || "",
+    window_label: item.window_label || "",
+    items: [],
+    _archive_stub: true,
+    _accepted_count: Number(item.accepted || 0),
+    _tag_counts: item.tag_counts || {},
+    collection_status: {
+      status: item.collection_status || "unknown",
+      warnings: [],
+      accepted_count: Number(item.accepted || 0),
+      candidates_inspected: Number(item.candidates_inspected || 0),
+    },
+    summary: {
+      accepted: Number(item.accepted || 0),
+      candidates_inspected: Number(item.candidates_inspected || 0),
+    },
+  };
+}
+
+function platformRecord(date) {
+  return (state.xiaohongshuArchive || []).find((daily) => daily.date === date) || null;
+}
+
+function isPlatformDetailLoaded(date) {
+  const record = platformRecord(date);
+  return Boolean(record && !record._archive_stub);
+}
+
+function isPlatformDetailLoading(date) {
+  return state.platformDetailLoads.has(date);
+}
+
+function upsertPlatformRecord(record) {
+  if (!record?.date) return;
+  const loaded = markPlatformDetailLoaded(record);
+  state.xiaohongshuArchive = [
+    loaded,
+    ...(state.xiaohongshuArchive || []).filter((daily) => daily.date !== loaded.date),
+  ].sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  if (state.xiaohongshu?.date === loaded.date) state.xiaohongshu = loaded;
+}
+
+async function ensurePlatformTrendDate(platformKey, date) {
+  if (!date || isPlatformDetailLoaded(date)) return platformRecord(date);
+  const key = `${platformKey}:${date}`;
+  if (state.platformDetailLoads.has(key)) return state.platformDetailLoads.get(key);
+  const promise = loadJson(`./dashboard-data/platform-trends/${platformKey}/daily/${date}.json`)
+    .then((record) => {
+      upsertPlatformRecord(record);
+      return platformRecord(date);
+    })
+    .catch(() => null)
+    .finally(() => {
+      state.platformDetailLoads.delete(key);
+    });
+  state.platformDetailLoads.set(key, promise);
+  return promise;
+}
+
+async function loadXiaohongshuData() {
+  if (state.routeDataReady.xiaohongshu) return;
+  const [latest, index] = await Promise.all([
+    loadJsonOptional("./dashboard-data/platform-trends/xiaohongshu/latest.json", emptyPlatformTrendPayload()),
+    loadJsonOptional("./dashboard-data/platform-trends/xiaohongshu/index.json", emptyPlatformTrendIndex()),
+  ]);
+  state.xiaohongshu = markPlatformDetailLoaded(latest);
+  state.xiaohongshuIndex = index;
+  state.xiaohongshuArchive = platformTrendArchiveFromIndex();
+  state.platformExpandedDates = state.xiaohongshu?.date ? new Set([state.xiaohongshu.date]) : new Set();
+  state.routeDataReady.xiaohongshu = true;
+}
+
+async function ensureDitingDigestIndex() {
+  if (state.dtDigestIndex && state.dtDigestIndex.items?.length) return;
+  state.dtDigestIndex = await loadJsonOptional("./dashboard-data/dt-digests/index.json", emptyDitingDigestIndex());
+}
+
+async function loadDitingRouteData(kind) {
+  const routeName = kind === "tg" ? "tgDaily" : "aiDaily";
+  if (state.routeDataReady[routeName]) return;
+  await ensureDitingDigestIndex();
+  if (!state.dtDigestFilters[kind].date) {
+    state.dtDigestFilters[kind].date = state.dtDigestIndex?.latest?.[kind] || ditingDigestEntries(kind)[0]?.date || "";
+  }
+  await ensureDitingDigestDetail(kind, state.dtDigestFilters[kind].date);
+  state.routeDataReady[routeName] = true;
+}
+
+function requestRouteData(routeName) {
+  if (!["xiaohongshu", "aiDaily", "tgDaily"].includes(routeName)) return;
+  if (state.routeDataReady[routeName] || state.routeDataLoads.has(routeName)) return;
+  const promise = (routeName === "xiaohongshu"
+    ? loadXiaohongshuData()
+    : loadDitingRouteData(routeName === "tgDaily" ? "tg" : "ai"))
+    .catch((error) => {
+      state.routeDataErrors[routeName] = error?.message || "数据加载失败";
+    })
+    .finally(() => {
+      state.routeDataLoads.delete(routeName);
+      if (route().name === routeName) render();
+    });
+  state.routeDataLoads.set(routeName, promise);
+}
+
+function routeDataLoadingPage(routeName) {
+  const title = routeTitles[routeName] || "数据";
+  const error = state.routeDataErrors[routeName];
+  const text = error ? `${title}加载失败：${error}` : `${title}正在加载，稍等一下。`;
+  return `
+    <section class="section">
+      ${empty(text)}
+    </section>
+  `;
 }
 
 async function loadInitialDitingDigest(kind) {
@@ -316,6 +548,17 @@ function render() {
   closeConversationDrawer();
   state.conversationContexts = new Map();
   state.ditingCommentThreads = new Map();
+
+  if (!state.routeDataReady[current.name] && ["xiaohongshu", "aiDaily", "tgDaily"].includes(current.name)) {
+    if (!state.routeDataErrors[current.name]) requestRouteData(current.name);
+    content.innerHTML = routeDataLoadingPage(current.name);
+    if (shouldRestoreScroll) restoreMainScroll(content, routeKey);
+    state.lastRouteKey = routeKey;
+    bindPageEvents();
+    updateBackToTopVisibility();
+    return;
+  }
+
   if (current.name === "all") content.innerHTML = allIntelligencePage();
   else if (current.name === "daily") content.innerHTML = dailyPage();
   else if (current.name === "settings") content.innerHTML = settingsPage();
@@ -408,7 +651,7 @@ function overviewPage() {
   const archive = state.dailyArchive.length ? state.dailyArchive : [state.daily];
   const latest = archive[0] || state.daily;
   const latestMetrics = latest.metrics || state.overview.metrics;
-  const allFeaturedCount = archive.reduce((sum, daily) => sum + featuredItemsForDaily(daily, false).length, 0);
+  const allFeaturedCount = dailyArchiveFeaturedCount();
   const latestFeaturedItems = featuredItemsForDaily(latest, false);
   const visibleGroups = featuredVisibleGroups();
   const openDates = featuredOpenDates(visibleGroups);
@@ -482,7 +725,9 @@ function featuredFilterBar() {
 
 function featuredFilterCount(filter) {
   const archive = state.dailyArchive.length ? state.dailyArchive : [state.daily];
+  if (filter === "all") return dailyArchiveFeaturedCount();
   return archive.reduce((sum, daily) => {
+    if (daily._archive_stub) return sum;
     return sum + featuredItemsForDaily(daily, false).filter((item) => itemMatchesFeaturedFilter(item, filter)).length;
   }, 0);
 }
@@ -491,7 +736,7 @@ function featuredVisibleGroups() {
   const archive = state.dailyArchive.length ? state.dailyArchive : [state.daily];
   const groups = archive.map((daily) => ({
     daily,
-    items: featuredItemsForDaily(daily, true),
+    items: daily._archive_stub ? [] : featuredItemsForDaily(daily, true),
   }));
   if (state.featuredFilter === "all") return groups;
   return groups.filter((group) => group.items.length);
@@ -544,10 +789,11 @@ function featuredDateGroup(group, openDates = state.featuredExpandedDates) {
   const daily = group.daily;
   const items = group.items;
   const open = openDates.has(daily.date);
+  const count = daily._archive_stub ? Number(daily._featured_count || 0) : items.length;
   return `
     <article class="featured-date-group">
-      ${timelineDateButton(daily.date, `${items.length} 条焦点`, open, "featured")}
-      ${open ? featuredTimeline(daily, items) : ""}
+      ${timelineDateButton(daily.date, `${count} 条焦点`, open, "featured")}
+      ${open ? (daily._archive_stub ? lazyArchivePlaceholder(daily.date) : featuredTimeline(daily, items)) : ""}
     </article>
   `;
 }
@@ -618,7 +864,7 @@ function featuredTimelineCard(item) {
 function xiaohongshuPage() {
   const archive = state.xiaohongshuArchive.length ? state.xiaohongshuArchive : [];
   const latest = archive[0] || state.xiaohongshu || emptyPlatformTrendPayload();
-  const allItems = archive.flatMap((daily) => daily.items || []);
+  const totalItems = platformArchiveItemCount(archive);
   const latestItems = latest.items || [];
   const summary = latest.summary || {};
   const tagStats = platformTagStats(archive);
@@ -630,11 +876,11 @@ function xiaohongshuPage() {
       subtitle: `${latest.date ? formatDateLong(latest.date) : "等待首次采集"} · X 上关于小红书养号、起号、流量和变现的方法论内容`,
       stats: [
         [latestItems.length, "今日收录"],
-        [allItems.length, "归档内容"],
+        [totalItems, "归档内容"],
         [summary.candidates_inspected || 0, "候选检查"],
       ],
     })}
-    ${platformTagFilterBar(tagStats, allItems.length)}
+    ${platformTagFilterBar(tagStats, totalItems)}
     ${platformWarnings(latest)}
     <section class="featured-feed platform-feed">
       ${filteredArchive.length ? filteredArchive.map(platformDateGroup).join("") : empty("没有匹配当前标签的收录内容。")}
@@ -648,18 +894,22 @@ function platformFilteredArchive(archive) {
   return archive
     .map((daily) => ({
       ...daily,
-      items: (daily.items || []).filter((item) => platformItemHasTag(item, activeTag)),
+      items: daily._archive_stub ? [] : (daily.items || []).filter((item) => platformItemHasTag(item, activeTag)),
     }))
-    .filter((daily) => (daily.items || []).length);
+    .filter((daily) => (daily.items || []).length || (daily._archive_stub && Number(daily._tag_counts?.[activeTag] || 0) > 0));
 }
 
 function platformTagStats(archive) {
   const counts = new Map();
   archive.forEach((daily) => {
-    (daily.items || []).forEach((item) => {
-      new Set(platformItemTags(item)).forEach((tag) => {
-        counts.set(tag, (counts.get(tag) || 0) + 1);
+    if (daily._archive_stub && daily._tag_counts) {
+      Object.entries(daily._tag_counts).forEach(([tag, count]) => {
+        counts.set(tag, (counts.get(tag) || 0) + Number(count || 0));
       });
+      return;
+    }
+    (daily.items || []).forEach((item) => {
+      new Set(platformItemTags(item)).forEach((tag) => counts.set(tag, (counts.get(tag) || 0) + 1));
     });
   });
   return [...counts.entries()]
@@ -699,12 +949,16 @@ function platformTagFilterBar(tagStats, total) {
 function syncPlatformExpandedDatesForFilter() {
   const activeTag = String(state.platformTagFilter || "").trim();
   if (!activeTag) {
-    state.platformExpandedDates = new Set(state.xiaohongshuArchive.slice(0, DEFAULT_TIMELINE_EXPANDED_DAYS).map((daily) => daily.date).filter(Boolean));
+    const latestDate = state.xiaohongshu?.date || state.xiaohongshuArchive[0]?.date || "";
+    state.platformExpandedDates = latestDate ? new Set([latestDate]) : new Set();
     return;
   }
   state.platformExpandedDates = new Set(
     state.xiaohongshuArchive
-      .filter((daily) => (daily.items || []).some((item) => platformItemHasTag(item, activeTag)))
+      .filter((daily) => {
+        if (daily._archive_stub) return Number(daily._tag_counts?.[activeTag] || 0) > 0;
+        return (daily.items || []).some((item) => platformItemHasTag(item, activeTag));
+      })
       .slice(0, DEFAULT_TIMELINE_EXPANDED_DAYS)
       .map((daily) => daily.date)
       .filter(Boolean)
@@ -724,13 +978,28 @@ function platformWarnings(daily) {
 
 function platformDateGroup(daily) {
   const open = state.platformExpandedDates.has(daily.date);
+  const activeTag = String(state.platformTagFilter || "").trim();
+  const itemCount = daily._archive_stub
+    ? Number(activeTag ? daily._tag_counts?.[activeTag] || 0 : daily._accepted_count || 0)
+    : (daily.items || []).length;
   const items = [...(daily.items || [])].sort(comparePlatformItems);
   return `
     <article class="featured-date-group">
-      ${timelineDateButton(daily.date, `${items.length} 条黄金内容`, open, "platform")}
-      ${open ? platformTimeline(daily, items) : ""}
+      ${timelineDateButton(daily.date, `${itemCount} 条黄金内容`, open, "platform")}
+      ${open ? (daily._archive_stub ? platformLazyPlaceholder(daily.date) : platformTimeline(daily, items)) : ""}
     </article>
   `;
+}
+
+function platformArchiveItemCount(archive) {
+  const indexedCount = (state.xiaohongshuIndex?.items || []).reduce((sum, item) => sum + Number(item.accepted || 0), 0);
+  if (indexedCount) return indexedCount;
+  return archive.reduce((sum, daily) => sum + (daily._archive_stub ? Number(daily._accepted_count || 0) : (daily.items || []).length), 0);
+}
+
+function platformLazyPlaceholder(date) {
+  const text = isPlatformDetailLoading(date) ? "正在加载这一天的小红书内容..." : "点开后加载这一天的小红书内容。";
+  return `<div class="featured-empty">${escapeHtml(text)}</div>`;
 }
 
 function platformTimeline(daily, items) {
@@ -2617,15 +2886,21 @@ function allIntelligencePage() {
   const archive = state.dailyArchive.length ? state.dailyArchive : [state.daily];
   const rawGroups = archive.map((daily) => ({
     daily,
-    items: allItemsForDaily(daily),
+    items: daily._archive_stub ? [] : allItemsForDaily(daily),
   }));
   const allItems = rawGroups.flatMap((group) => group.items);
+  const hasActiveFilters = Boolean(
+    state.allBrandFilter !== "all" ||
+    state.allTypeFilter !== "all" ||
+    String(state.allSearchQuery || "").trim()
+  );
   const filteredGroups = rawGroups.map((group) => ({
     daily: group.daily,
     items: group.items.filter(itemMatchesAllFilters).sort(compareEvents),
   }));
   const filteredItems = filteredGroups.flatMap((group) => group.items);
-  const metrics = allPageMetrics(allItems, filteredItems);
+  const visibleGroups = filteredGroups.filter((group) => group.items.length || (!hasActiveFilters && group.daily._archive_stub));
+  const metrics = allPageMetrics(allItems, filteredItems, hasActiveFilters);
   return `
     ${pageHero({
       eyebrow: "舆情雷达",
@@ -2672,11 +2947,11 @@ function allIntelligencePage() {
       <div class="section-header">
         <div>
           <h2>信息流</h2>
-          <p class="muted">按日期与发布时间倒序排列。每条舆情保留明确原帖入口。</p>
+          <p class="muted">按日期与发布时间倒序排列。历史日期点开后加载完整内容。</p>
         </div>
-        <span class="tag">${filteredItems.length} 条</span>
+        <span class="tag">${metrics.filtered} 条</span>
       </div>
-      ${filteredItems.length ? filteredGroups.filter((group) => group.items.length).map(allDateGroup).join("") : empty("暂无匹配舆情，请调整来源、类型或搜索词。")}
+      ${visibleGroups.length ? visibleGroups.map(allDateGroup).join("") : empty("暂无匹配舆情，请调整来源、类型或搜索词。")}
     </section>
   `;
 }
@@ -2689,22 +2964,24 @@ function allSourceFilterButton(value, label) {
   `;
 }
 
-function allPageMetrics(allItems, filteredItems) {
+function allPageMetrics(allItems, filteredItems, hasActiveFilters = false) {
+  const archiveTotal = dailyArchiveAllCount();
   return {
-    total: allItems.length,
-    filtered: filteredItems.length,
+    total: archiveTotal || allItems.length,
+    filtered: hasActiveFilters ? filteredItems.length : (archiveTotal || filteredItems.length),
     risk: filteredItems.filter((item) => item.kind === "risk").length,
-    archiveDays: state.dailyArchive.length || 1,
+    archiveDays: state.dailyIndex?.items?.length || state.dailyArchive.length || 1,
   };
 }
 
 function allDateGroup(group) {
   const open = state.allExpandedDates.has(group.daily.date);
-  const countLabel = group.daily.summary_only ? `${group.items.length} 条摘要` : `${group.items.length} 条`;
+  const count = group.daily._archive_stub ? Number(group.daily._all_count || 0) : group.items.length;
+  const countLabel = group.daily.summary_only && !group.daily._archive_stub ? `${count} 条摘要` : `${count} 条`;
   return `
     <article class="all-date-group">
       ${timelineDateButton(group.daily.date, countLabel, open, "all")}
-      ${open ? allTimeline(group) : ""}
+      ${open ? (group.daily._archive_stub ? lazyArchivePlaceholder(group.daily.date) : allTimeline(group)) : ""}
     </article>
   `;
 }
@@ -4243,11 +4520,8 @@ function brandBreakdown(source, key, fallback = 0) {
 
 async function selectDaily(date) {
   const previousDate = (state.selectedDaily || state.daily)?.date;
-  try {
-    state.selectedDaily = await loadJson(`./dashboard-data/daily/${date}.json`);
-  } catch (error) {
-    state.selectedDaily = state.daily;
-  }
+  const record = await ensureDailyArchiveDate(date);
+  state.selectedDaily = record || state.daily;
   const nextDate = (state.selectedDaily || state.daily)?.date;
   render();
   if (nextDate && nextDate !== previousDate) resetMainScroll(document.getElementById("content"));
@@ -4255,6 +4529,35 @@ async function selectDaily(date) {
 
 function dailyArchiveClusterCount() {
   return (state.dailyIndex?.items || []).reduce((sum, item) => sum + Number(item.cluster_count || 0), 0);
+}
+
+function dailyArchiveFeaturedCount() {
+  const indexed = dailyArchiveClusterCount();
+  if (indexed) return indexed;
+  return (state.dailyArchive.length ? state.dailyArchive : [state.daily]).reduce((sum, daily) => {
+    if (daily._archive_stub) return sum + Number(daily._featured_count || 0);
+    return sum + featuredItemsForDaily(daily, false).length;
+  }, 0);
+}
+
+function dailyArchiveAllCount() {
+  const items = state.dailyIndex?.items || [];
+  if (items.length) {
+    return items.reduce((sum, item) => {
+      const primary = Number(item.cluster_count ?? item.primary_effective ?? item.joybuy_effective ?? 0);
+      const competitor = Number(item.competitor_effective ?? item.temu_effective ?? 0);
+      return sum + primary + competitor;
+    }, 0);
+  }
+  return (state.dailyArchive.length ? state.dailyArchive : [state.daily]).reduce((sum, daily) => {
+    if (daily._archive_stub) return sum + Number(daily._all_count || 0);
+    return sum + allItemsForDaily(daily).length;
+  }, 0);
+}
+
+function lazyArchivePlaceholder(date) {
+  const text = isDailyDetailLoading(date) ? "正在加载这一天的完整内容..." : "点开后加载这一天的完整内容。";
+  return `<div class="featured-empty">${escapeHtml(text)}</div>`;
 }
 
 function metric(label, value, note) {
@@ -4420,11 +4723,19 @@ function empty(text) {
 
 function bindPageEvents(detail = null) {
   document.querySelectorAll("[data-featured-date]").forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
       const date = button.dataset.featuredDate;
+      let loadPromise = null;
       if (state.featuredExpandedDates.has(date)) state.featuredExpandedDates.delete(date);
-      else state.featuredExpandedDates.add(date);
+      else {
+        state.featuredExpandedDates.add(date);
+        loadPromise = ensureDailyArchiveDate(date);
+      }
       render();
+      if (loadPromise) {
+        await loadPromise;
+        render();
+      }
     });
   });
 
@@ -4461,27 +4772,46 @@ function bindPageEvents(detail = null) {
   }
 
   document.querySelectorAll("[data-all-date]").forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
       const date = button.dataset.allDate;
+      let loadPromise = null;
       if (state.allExpandedDates.has(date)) state.allExpandedDates.delete(date);
-      else state.allExpandedDates.add(date);
+      else {
+        state.allExpandedDates.add(date);
+        loadPromise = ensureDailyArchiveDate(date);
+      }
       render();
+      if (loadPromise) {
+        await loadPromise;
+        render();
+      }
     });
   });
 
   document.querySelectorAll("[data-platform-date]").forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
       const date = button.dataset.platformDate;
+      let loadPromise = null;
       if (state.platformExpandedDates.has(date)) state.platformExpandedDates.delete(date);
-      else state.platformExpandedDates.add(date);
+      else {
+        state.platformExpandedDates.add(date);
+        loadPromise = ensurePlatformTrendDate("xiaohongshu", date);
+      }
       render();
+      if (loadPromise) {
+        await loadPromise;
+        render();
+      }
     });
   });
 
   document.querySelectorAll("[data-platform-tag-filter]").forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
       state.platformTagFilter = button.dataset.platformTagFilter || "";
       syncPlatformExpandedDatesForFilter();
+      const loadPromises = [...state.platformExpandedDates].map((date) => ensurePlatformTrendDate("xiaohongshu", date));
+      render();
+      await Promise.all(loadPromises);
       render();
     });
   });

@@ -624,16 +624,31 @@ def platform_index(platform_dir: Path, current: dict[str, Any]) -> dict[str, Any
                 "accepted": len(record.get("items") or []),
                 "candidates_inspected": record.get("summary", {}).get("candidates_inspected", 0),
                 "collection_status": record.get("collection_status", {}).get("status", "unknown"),
+                "tag_counts": platform_tag_counts(record),
             }
             for record in sorted(records.values(), key=lambda item: item.get("date", ""), reverse=True)
         ],
     }
 
 
+def platform_tag_counts(record: dict[str, Any]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for item in record.get("items") or []:
+        for tag in set(item.get("tags") or []):
+            label = str(tag or "").strip()
+            if not label:
+                continue
+            counts[label] = counts.get(label, 0) + 1
+    return dict(sorted(counts.items(), key=lambda pair: (-pair[1], pair[0])))
+
+
 def update_bundle(bundle_path: Path, data_dir: Path) -> None:
     bundle = load_bundle(bundle_path)
     platform_dir = data_dir / PLATFORM_DATA_ROOT / PLATFORM_KEY
-    for path in [platform_dir / "latest.json", platform_dir / "index.json", *sorted((platform_dir / "daily").glob("*.json"))]:
+    for key in list(bundle):
+        if key.startswith(f"dashboard-data/{PLATFORM_DATA_ROOT}/{PLATFORM_KEY}/"):
+            del bundle[key]
+    for path in [platform_dir / "latest.json", platform_dir / "index.json"]:
         if not path.exists():
             continue
         key = f"dashboard-data/{path.relative_to(data_dir).as_posix()}"

@@ -166,13 +166,12 @@ def build_dashboard_data(
     data_bundle = {
         "dashboard-data/latest.json": public_overview,
         "dashboard-data/daily/latest.json": public_daily,
+        "dashboard-data/daily/index.json": json.loads((target / "daily" / "index.json").read_text(encoding="utf-8")),
         "dashboard-data/fermentation.json": public_fermentation,
         "dashboard-data/competitor.json": public_competitor,
         "dashboard-data/source-status.json": public_source,
         "clusters": {},
     }
-    for path, payload in daily_history_files(target).items():
-        data_bundle[path] = payload
     write_data_bundle(target.parent / "dashboard-data-bundle.js", data_bundle)
     refresh_index_asset_versions(target.parent / "index.html", asset_cache_token(report_date, overview["generated_at"]))
     return public_overview

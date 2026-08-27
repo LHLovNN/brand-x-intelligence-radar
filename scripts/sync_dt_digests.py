@@ -958,13 +958,10 @@ def update_data_bundle(output_dir: Path) -> None:
         if key.startswith("dashboard-data/dt-digests/"):
             del bundle[key]
     dt_dir = output_dir / "dt-digests"
-    bundled_detail_paths = bundled_diting_detail_paths(dt_dir / "index.json")
-    candidate_paths = [dt_dir / "index.json", *sorted((dt_dir / "daily").glob("*/*.json"))]
+    candidate_paths = [dt_dir / "index.json"]
     for path in candidate_paths:
         if path.exists():
             key = f"dashboard-data/{path.relative_to(output_dir).as_posix()}"
-            if path.name != "index.json" and key not in bundled_detail_paths:
-                continue
             bundle[key] = json.loads(path.read_text(encoding="utf-8"))
     write_data_bundle(bundle_path, bundle)
 
