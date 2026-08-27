@@ -31,6 +31,8 @@ def main() -> None:
     assert "茶馆水群" not in stripped_tail
     assert "投稿通道" not in stripped_tail
     assert clean_tg_markdown_links(stripped_tail).endswith("Theregister")
+    assert strip_tg_channel_recommendations("正文\n@aigc1024") == "正文"
+    assert strip_tg_channel_recommendations("正文\n\n互联网从业者专属\n@https1024") == "正文"
 
     structured = {
         "kind": "tg",
@@ -79,6 +81,27 @@ def main() -> None:
     assert "https://www.theregister.com" not in structured_tg_link["summary"]
     assert "Theregister" in structured_tg_link["summary"]
     assert "在花频道" not in structured_tg_link["summary"]
+
+    structured_tg_bare_handle = structured_tg_item({
+        "id": "aigc1024-23609",
+        "message_id": "23609",
+        "channel": "aigc1024",
+        "url": "https://t.me/aigc1024/23609",
+        "title": "豆包工作",
+        "summary": "豆包工作\n\n这里领会员 doubao.com/work\n@aigc1024",
+    }, "https://codew1028.github.io/dt")
+    assert "@aigc1024" not in structured_tg_bare_handle["summary"]
+    assert "这里领会员" in structured_tg_bare_handle["summary"]
+
+    structured_tg_promo_handle = structured_tg_item({
+        "id": "inside1024-83758",
+        "message_id": "83758",
+        "channel": "inside1024",
+        "url": "https://t.me/inside1024/83758",
+        "title": "年轻人变专家",
+        "summary": "年轻人变专家\n\n互联网从业者专属\n@https1024",
+    }, "https://codew1028.github.io/dt")
+    assert not structured_tg_promo_handle.get("summary")
 
     zero_byte_reply = structured_tg_item({
         "id": "zaihuapd-43376",

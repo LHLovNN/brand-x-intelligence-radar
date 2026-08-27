@@ -66,6 +66,7 @@ TG_REPLY_BLOCK_PATTERNS = [
 TG_REPLY_LOW_SIGNAL_RE = re.compile(r"^(哈+|哈哈哈+|笑死|666+|顶|蹲|mark|收藏|学习了|\+1|牛+|牛逼|nb|ok|好)$", re.IGNORECASE)
 TG_MARKDOWN_LINK_RE = re.compile(r"\[([^\]\n]{1,120})\]\((https?://[^)\s]+)\)", re.IGNORECASE)
 TG_STANDALONE_SEPARATOR_RE = re.compile(r"^\s*[-—_]{2,}\s*$")
+TG_TRAILING_CHANNEL_HANDLE_RE = re.compile(r"^@[A-Za-z0-9_]{3,32}$")
 TG_RECOMMENDATION_LABELS = {
     "AI探索",
     "AI探索站",
@@ -78,6 +79,7 @@ TG_RECOMMENDATION_LABELS = {
     "出海赚美金",
     "内幕消息",
     "你不知道的内幕消息🌳",
+    "互联网从业者专属",
     "副业搞钱",
     "在花频道",
     "茶馆水群",
@@ -869,7 +871,11 @@ def strip_tg_channel_recommendations(value: str) -> str:
         if not lines:
             break
         tail = lines[-1].strip()
-        if TG_STANDALONE_SEPARATOR_RE.fullmatch(tail) or is_tg_channel_recommendation_line(tail):
+        if (
+            TG_STANDALONE_SEPARATOR_RE.fullmatch(tail)
+            or TG_TRAILING_CHANNEL_HANDLE_RE.fullmatch(tail)
+            or is_tg_channel_recommendation_line(tail)
+        ):
             lines.pop()
             continue
         break
@@ -877,6 +883,8 @@ def strip_tg_channel_recommendations(value: str) -> str:
 
 
 def is_tg_channel_recommendation_line(line: str) -> bool:
+    if compact_text(line) in TG_RECOMMENDATION_LABELS:
+        return True
     matches = list(TG_MARKDOWN_LINK_RE.finditer(line or ""))
     channel_links = [
         match

@@ -23,6 +23,7 @@ LOW_QUALITY_TG_DIGEST_RE = re.compile(
     re.IGNORECASE,
 )
 LOW_SIGNAL_TG_STATUS_RE = re.compile(r"(?:挂了|又挂|崩了|炸了|宕机|不能用|用不了|不可用|打不开)", re.IGNORECASE)
+TRAILING_TG_CHANNEL_HANDLE_RE = re.compile(r"(?m)^@[A-Za-z0-9_]{3,32}\s*$")
 PLATFORM_LOW_VALUE_CONTENT_RE = re.compile(
     r"约炮|约p|固炮|炮友|涩播|成人交友|约会软件",
     re.IGNORECASE,
@@ -246,6 +247,10 @@ def verify_tg_digest_item_quality(item, label: str) -> None:
 
     title = str(item.get("title") or "").strip()
     summary = str(item.get("summary") or "").strip()
+    assert_true(
+        not TRAILING_TG_CHANNEL_HANDLE_RE.search(summary),
+        f"diting digest contains trailing TG channel handle for {label}",
+    )
     title_signal_len = len(re.findall(r"[A-Za-z0-9\u3400-\u9fff]", re.sub(r"https?://\S+", "", title)))
     assert_true(
         bool(summary) or title_signal_len > 18 or not LOW_SIGNAL_TG_STATUS_RE.search(title),

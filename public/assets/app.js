@@ -1435,11 +1435,13 @@ const DITING_TG_RECOMMENDATION_LABELS = new Set([
   "出海赚美金",
   "内幕消息",
   "你不知道的内幕消息🌳",
+  "互联网从业者专属",
   "副业搞钱",
   "在花频道",
   "茶馆水群",
   "投稿通道",
 ]);
+const DITING_TG_TRAILING_CHANNEL_HANDLE_RE = /^@[A-Za-z0-9_]{3,32}$/;
 
 function ditingUsefulLinks(item, primaryUrl, config) {
   const links = [];
@@ -1544,7 +1546,11 @@ function stripDitingTgChannelRecommendations(value) {
     while (lines.length && !compactDisplayText(lines[lines.length - 1])) lines.pop();
     if (!lines.length) break;
     const tail = lines[lines.length - 1].trim();
-    if (/^\s*[-—_]{2,}\s*$/.test(tail) || isDitingTgRecommendationLine(tail)) {
+    if (
+      /^\s*[-—_]{2,}\s*$/.test(tail) ||
+      DITING_TG_TRAILING_CHANNEL_HANDLE_RE.test(compactDisplayText(tail)) ||
+      isDitingTgRecommendationLine(tail)
+    ) {
       lines.pop();
       continue;
     }
@@ -1554,6 +1560,7 @@ function stripDitingTgChannelRecommendations(value) {
 }
 
 function isDitingTgRecommendationLine(line) {
+  if (DITING_TG_RECOMMENDATION_LABELS.has(compactDisplayText(line))) return true;
   const matches = [...String(line || "").matchAll(DITING_MARKDOWN_LINK_RE)];
   const channelLinks = matches.filter((match) => /^https?:\/\/t\.me\/[^)\s]+$/i.test(match[2] || ""));
   if (channelLinks.length < 2) return false;
