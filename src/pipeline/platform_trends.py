@@ -217,6 +217,67 @@ STRUCTURE_SIGNALS = [
     "实操",
 ]
 
+PLATFORM_FOCUS_TERMS = [
+    "养号",
+    "起号",
+    "冷启动",
+    "涨粉",
+    "爆文",
+    "笔记",
+    "选题",
+    "标题",
+    "封面",
+    "内容定位",
+    "账号运营",
+    "运营",
+    "矩阵",
+    "商单",
+    "带货",
+    "店铺",
+    "小店",
+    "电商",
+    "变现",
+    "引流",
+    "私域",
+    "投流",
+    "推荐",
+    "曝光",
+    "算法",
+    "完播",
+    "收藏",
+    "转化",
+    "成交",
+    "获客",
+    "客单价",
+    "营收",
+    "收入",
+    "收益",
+    "售卖",
+    "卖",
+    "服务",
+    "资料",
+    "案例",
+    "玩法",
+    "方法",
+    "教程",
+    "拆解",
+    "复盘",
+    "经验",
+    "策略",
+    "路径",
+    "growth",
+    "grow",
+    "monetization",
+    "creator",
+    "traffic",
+    "algorithm",
+    "commerce",
+    "affiliate",
+    "playbook",
+    "case study",
+    "strategy",
+]
+
 
 def platform_trends_enabled() -> bool:
     raw = str(os.getenv("BRAND_RADAR_PLATFORM_TRENDS") or "1").strip().lower()
@@ -498,6 +559,8 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
     alias_hits = matched_terms(lower, aliases)
     intent_hits = matched_terms(lower, intent_terms)
     if not alias_hits or not intent_hits:
+        return {"accepted": False, "item": {}}
+    if not platform_focus_signal(lower, aliases):
         return {"accepted": False, "item": {}}
     if matched_terms(lower, HARD_NOISE_TERMS):
         return {"accepted": False, "item": {}}
@@ -807,6 +870,18 @@ def matched_topics(lower: str) -> list[str]:
         if matched_terms(lower, [term.lower() for term in terms]):
             topics.append(topic)
     return topics
+
+
+def platform_focus_signal(lower: str, aliases: list[str]) -> bool:
+    alias_pattern = "|".join(re.escape(str(alias).strip().lower()) for alias in aliases if str(alias).strip())
+    focus_pattern = "|".join(re.escape(term.lower()) for term in PLATFORM_FOCUS_TERMS)
+    if not alias_pattern or not focus_pattern:
+        return False
+    patterns = [
+        rf"(?:{alias_pattern})[\s\S]{{0,50}}(?:{focus_pattern})",
+        rf"(?:{focus_pattern})[\s\S]{{0,50}}(?:{alias_pattern})",
+    ]
+    return any(re.search(pattern, lower, re.IGNORECASE) for pattern in patterns)
 
 
 def method_structure_score(lower: str) -> int:

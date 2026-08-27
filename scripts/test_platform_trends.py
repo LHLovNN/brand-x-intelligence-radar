@@ -67,6 +67,14 @@ def main() -> None:
     }
     assert not score_platform_post(platform_news, platform)["accepted"], "platform news should not enter method collection"
 
+    off_topic_namedrop = {
+        "clean_text": "我简单讲讲这个人和特斯拉中国的恩怨：他借着小红书上一个账号的所谓人去楼空来黑特斯拉，最后把FSD相关谣言热点引爆。",
+        "links": [],
+        "metrics": {"likes": 52, "views": 21323, "replies": 22},
+        "author_followers": 1000,
+    }
+    assert not score_platform_post(off_topic_namedrop, platform)["accepted"], "keyword-only namedrops should not enter method collection"
+
     off_topic_comparison = {
         "clean_text": "Tutti 商单收益比做闲鱼和小红书投入产出自由，赶紧来注册加入。",
         "links": [],
