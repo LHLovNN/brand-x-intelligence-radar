@@ -763,10 +763,8 @@ function featuredVisibleGroups() {
 }
 
 function featuredOpenDates(groups) {
-  const dates = groups.map((group) => group.daily.date).filter(Boolean);
-  const currentOpen = dates.filter((date) => state.featuredExpandedDates.has(date));
-  if (currentOpen.length) return new Set(currentOpen);
-  return new Set(dates.slice(0, DEFAULT_TIMELINE_EXPANDED_DAYS));
+  const dates = new Set(groups.map((group) => group.daily.date).filter(Boolean));
+  return new Set([...state.featuredExpandedDates].filter((date) => dates.has(date)));
 }
 
 function syncFeaturedExpandedDatesForFilter() {
