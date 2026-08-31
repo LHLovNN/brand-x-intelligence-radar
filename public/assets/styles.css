@@ -2671,7 +2671,6 @@ select {
   object-fit: contain;
   touch-action: none;
   transform-origin: center;
-  transition: transform 120ms ease;
   user-select: none;
   will-change: transform;
 }

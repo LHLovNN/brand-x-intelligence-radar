@@ -167,6 +167,17 @@ function shellHtml() {
           </div>
         </div>
         <nav class="nav-list" aria-label="产品导航">
+          <div class="nav-group" data-nav-group="platform">
+            <button class="nav-group-toggle" type="button" data-nav-toggle="platform" aria-expanded="true">
+              <span class="nav-group-label">谛听-情报库</span>
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="nav-children">
+              <a href="#/platform/xiaohongshu" data-route="xiaohongshu"><span class="nav-item-dot" aria-hidden="true"></span><span>小红书</span></a>
+              <a href="#/diting/ai-daily" data-route="aiDaily"><span class="nav-item-dot" aria-hidden="true"></span><span>AI日报</span></a>
+              <a href="#/diting/tg-daily" data-route="tgDaily"><span class="nav-item-dot" aria-hidden="true"></span><span>TG日报</span></a>
+            </div>
+          </div>
           <div class="nav-group" data-nav-group="monitor">
             <button class="nav-group-toggle" type="button" data-nav-toggle="monitor" aria-expanded="true">
               <span class="nav-group-label">品牌-舆情监控</span>
@@ -177,17 +188,6 @@ function shellHtml() {
               <a href="#/all" data-route="all"><span class="nav-item-dot" aria-hidden="true"></span><span>全部舆情</span></a>
               <a href="#/daily" data-route="daily"><span class="nav-item-dot" aria-hidden="true"></span><span>舆情日报</span></a>
               <a href="#/settings" data-route="settings"><span class="nav-item-dot" aria-hidden="true"></span><span>设置</span></a>
-            </div>
-          </div>
-          <div class="nav-group" data-nav-group="platform">
-            <button class="nav-group-toggle" type="button" data-nav-toggle="platform" aria-expanded="true">
-              <span class="nav-group-label">谛听-情报库</span>
-              <span class="nav-chevron" aria-hidden="true"></span>
-            </button>
-            <div class="nav-children">
-              <a href="#/platform/xiaohongshu" data-route="xiaohongshu"><span class="nav-item-dot" aria-hidden="true"></span><span>小红书</span></a>
-              <a href="#/diting/ai-daily" data-route="aiDaily"><span class="nav-item-dot" aria-hidden="true"></span><span>AI日报</span></a>
-              <a href="#/diting/tg-daily" data-route="tgDaily"><span class="nav-item-dot" aria-hidden="true"></span><span>TG日报</span></a>
             </div>
           </div>
         </nav>

@@ -5199,28 +5199,89 @@ function openMediaLightbox(url, options = {}) {
     ${hasMultiple ? `<button type="button" class="media-lightbox-nav next" data-media-lightbox-next aria-label="下一张图片"><span class="media-lightbox-chevron" aria-hidden="true"></span></button>` : ""}
   `;
   const img = node.querySelector(".media-lightbox-image");
-  const zoom = { scale: 1, x: 0, y: 0, dragging: false, startX: 0, startY: 0, originX: 0, originY: 0 };
-  const clampPan = () => {
-    if (!img || zoom.scale <= 1) {
-      zoom.x = 0;
-      zoom.y = 0;
+  const zoom = {
+    scale: 1,
+    targetScale: 1,
+    x: 0,
+    y: 0,
+    targetX: 0,
+    targetY: 0,
+    dragging: false,
+    startX: 0,
+    startY: 0,
+    originX: 0,
+    originY: 0,
+    animationFrame: 0,
+  };
+  const clampValue = (value, min, max) => Math.max(min, Math.min(max, value));
+  const clampPanValues = (scale, x, y) => {
+    if (!img || scale <= 1) return { x: 0, y: 0 };
+    const maxX = Math.max(0, ((img.offsetWidth || 0) * scale - window.innerWidth + 80) / 2);
+    const maxY = Math.max(0, ((img.offsetHeight || 0) * scale - window.innerHeight + 80) / 2);
+    return {
+      x: clampValue(x, -maxX, maxX),
+      y: clampValue(y, -maxY, maxY),
+    };
+  };
+  const clampZoomTarget = () => {
+    if (zoom.targetScale <= 1.001) {
+      zoom.targetScale = 1;
+      zoom.targetX = 0;
+      zoom.targetY = 0;
       return;
     }
-    const maxX = Math.max(0, ((img.offsetWidth || 0) * zoom.scale - window.innerWidth + 80) / 2);
-    const maxY = Math.max(0, ((img.offsetHeight || 0) * zoom.scale - window.innerHeight + 80) / 2);
-    zoom.x = Math.max(-maxX, Math.min(maxX, zoom.x));
-    zoom.y = Math.max(-maxY, Math.min(maxY, zoom.y));
+    const clamped = clampPanValues(zoom.targetScale, zoom.targetX, zoom.targetY);
+    zoom.targetX = clamped.x;
+    zoom.targetY = clamped.y;
   };
-  const applyZoom = () => {
+  const renderZoom = () => {
     if (!img) return;
-    clampPan();
-    node.classList.toggle("is-zoomed", zoom.scale > 1.01);
+    const clamped = clampPanValues(zoom.scale, zoom.x, zoom.y);
+    zoom.x = clamped.x;
+    zoom.y = clamped.y;
+    node.classList.toggle("is-zoomed", Math.max(zoom.scale, zoom.targetScale) > 1.01);
     img.style.transform = `translate3d(${zoom.x}px, ${zoom.y}px, 0) scale(${zoom.scale})`;
   };
+  const stopZoomAnimation = () => {
+    if (!zoom.animationFrame) return;
+    window.cancelAnimationFrame(zoom.animationFrame);
+    zoom.animationFrame = 0;
+  };
+  const stepZoomAnimation = () => {
+    const scaleDiff = zoom.targetScale - zoom.scale;
+    const xDiff = zoom.targetX - zoom.x;
+    const yDiff = zoom.targetY - zoom.y;
+    if (Math.abs(scaleDiff) < 0.002 && Math.abs(xDiff) < 0.35 && Math.abs(yDiff) < 0.35) {
+      zoom.scale = zoom.targetScale;
+      zoom.x = zoom.targetX;
+      zoom.y = zoom.targetY;
+      zoom.animationFrame = 0;
+      renderZoom();
+      return;
+    }
+    zoom.scale += scaleDiff * 0.22;
+    zoom.x += xDiff * 0.22;
+    zoom.y += yDiff * 0.22;
+    renderZoom();
+    zoom.animationFrame = window.requestAnimationFrame(stepZoomAnimation);
+  };
+  const applyZoom = (options = {}) => {
+    if (!img) return;
+    clampZoomTarget();
+    if (options.smooth) {
+      if (!zoom.animationFrame) zoom.animationFrame = window.requestAnimationFrame(stepZoomAnimation);
+      return;
+    }
+    stopZoomAnimation();
+    zoom.scale = zoom.targetScale;
+    zoom.x = zoom.targetX;
+    zoom.y = zoom.targetY;
+    renderZoom();
+  };
   const resetZoom = () => {
-    zoom.scale = 1;
-    zoom.x = 0;
-    zoom.y = 0;
+    zoom.targetScale = 1;
+    zoom.targetX = 0;
+    zoom.targetY = 0;
     zoom.dragging = false;
     applyZoom();
   };
@@ -5246,17 +5307,35 @@ function openMediaLightbox(url, options = {}) {
     if (event.target.closest(".media-lightbox-close, .media-lightbox-nav")) return;
     if (!event.target.closest(".media-lightbox-content")) return;
     event.preventDefault();
-    const delta = event.deltaY < 0 ? 1.12 : 0.88;
-    zoom.scale = Math.max(1, Math.min(5, zoom.scale * delta));
-    if (zoom.scale === 1) {
-      zoom.x = 0;
-      zoom.y = 0;
+    const modeMultiplier = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1;
+    const wheelDelta = clampValue(event.deltaY * modeMultiplier, event.ctrlKey ? -48 : -80, event.ctrlKey ? 48 : 80);
+    if (!wheelDelta) return;
+    const previousScale = zoom.targetScale || zoom.scale || 1;
+    const sensitivity = event.ctrlKey ? 0.0032 : 0.0024;
+    const nextScale = clampValue(previousScale * Math.exp(-wheelDelta * sensitivity), 1, 5);
+    const snappedScale = nextScale <= 1.012 ? 1 : nextScale;
+    if (snappedScale === previousScale) return;
+    if (snappedScale <= 1) {
+      zoom.targetX = 0;
+      zoom.targetY = 0;
+    } else {
+      const ratio = snappedScale / Math.max(1, previousScale);
+      const focusX = event.clientX - window.innerWidth / 2;
+      const focusY = event.clientY - window.innerHeight / 2;
+      zoom.targetX = zoom.targetX * ratio + focusX * (1 - ratio);
+      zoom.targetY = zoom.targetY * ratio + focusY * (1 - ratio);
     }
-    applyZoom();
+    zoom.targetScale = snappedScale;
+    applyZoom({ smooth: true });
   }, { passive: false });
   if (img) {
     img.addEventListener("pointerdown", (event) => {
-      if (zoom.scale <= 1.01) return;
+      if (Math.max(zoom.scale, zoom.targetScale) <= 1.01) return;
+      stopZoomAnimation();
+      zoom.scale = zoom.targetScale;
+      zoom.x = zoom.targetX;
+      zoom.y = zoom.targetY;
+      renderZoom();
       zoom.dragging = true;
       zoom.startX = event.clientX;
       zoom.startY = event.clientY;
@@ -5266,8 +5345,8 @@ function openMediaLightbox(url, options = {}) {
     });
     img.addEventListener("pointermove", (event) => {
       if (!zoom.dragging) return;
-      zoom.x = zoom.originX + event.clientX - zoom.startX;
-      zoom.y = zoom.originY + event.clientY - zoom.startY;
+      zoom.targetX = zoom.originX + event.clientX - zoom.startX;
+      zoom.targetY = zoom.originY + event.clientY - zoom.startY;
       applyZoom();
     });
     img.addEventListener("pointerup", () => {
@@ -5293,6 +5372,7 @@ function openMediaLightbox(url, options = {}) {
     if (event.key === "0") resetZoom();
   };
   node._onKeydown = onKeydown;
+  node._cancelLightboxAnimation = stopZoomAnimation;
   window.addEventListener("keydown", onKeydown);
 }
 
@@ -5300,6 +5380,7 @@ function closeMediaLightbox() {
   const node = document.querySelector(".media-lightbox");
   if (!node) return;
   if (node._onKeydown) window.removeEventListener("keydown", node._onKeydown);
+  if (node._cancelLightboxAnimation) node._cancelLightboxAnimation();
   node.remove();
   document.body.classList.remove("lightbox-open");
 }
