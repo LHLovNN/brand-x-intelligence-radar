@@ -162,6 +162,10 @@ def main() -> None:
     assert zero_byte_reply.get("replies_visible") == 0
     assert not zero_byte_reply.get("replies")
 
+    assert tg_item_filter_reason({
+        "title": "最新AI爆剧",
+        "summary": "谁还没冲！景甜被操到失禁喷水装死，骚穴却夹得更紧流水不停……",
+    }) == "low_value_adult"
     assert tg_item_filter_reason({"title": "Claude 挂了？", "summary": "Claude 挂了？"}) == "short_status_chatter"
     assert tg_item_filter_reason({"title": "Claude 挂了？", "summary": "Claude 恢复计划和替代方案整理如下"}) is None
     print("Diting sync tests passed.")

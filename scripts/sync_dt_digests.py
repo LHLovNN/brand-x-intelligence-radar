@@ -47,6 +47,8 @@ TG_LOW_VALUE_ADULT_PATTERNS = [
     re.compile(r"打飞机|撸管|约炮|找炮友|炮友|曰炮", re.IGNORECASE),
     re.compile(r"解决性欲|性欲成本|全民打飞机", re.IGNORECASE),
     re.compile(r"只入身体.{0,30}不入生活", re.IGNORECASE),
+    re.compile(r"(?:被操|操到).{0,40}(?:失禁|喷水|骚穴|流水不停)", re.IGNORECASE),
+    re.compile(r"(?:骚穴|失禁喷水)", re.IGNORECASE),
 ]
 TG_SHORT_STATUS_CHATTER_RE = re.compile(
     r"(?:挂了|又挂|崩了|炸了|宕机|不能用|用不了|不可用|打不开)",
