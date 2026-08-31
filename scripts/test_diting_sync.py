@@ -7,7 +7,10 @@ sys.path.insert(0, str(ROOT))
 
 from scripts.sync_dt_digests import (
     clean_tg_markdown_links,
+    details_to_sync,
+    merge_targeted_digest_entries,
     merge_structured_tg_media,
+    parse_date_filters,
     multiline_text,
     strip_repeated_tg_title,
     strip_tg_channel_recommendations,
@@ -17,6 +20,34 @@ from scripts.sync_dt_digests import (
 
 
 def main() -> None:
+    assert parse_date_filters(["2026-08-30,2026-08-29", "2026-08-30"]) == ["2026-08-30", "2026-08-29"]
+
+    digest_entries = [
+        {"kind": "tg", "date": "2026-08-31", "item_count": 38},
+        {"kind": "ai", "date": "2026-08-31", "item_count": 7},
+        {"kind": "tg", "date": "2026-08-30", "item_count": 55},
+        {"kind": "tg", "date": "2026-08-29", "item_count": 68},
+    ]
+    selected = details_to_sync(digest_entries, 60, ["tg"], ["2026-08-30", "2026-08-29"])
+    assert [entry["date"] for entry in selected] == ["2026-08-30", "2026-08-29"]
+
+    merged_entries = merge_targeted_digest_entries(
+        {
+            "items": [
+                {"kind": "ai", "date": "2026-08-30", "item_count": 6},
+                {"kind": "tg", "date": "2026-08-28", "item_count": 32, "filtered_count": 1},
+            ]
+        },
+        selected,
+    )
+    assert [entry["date"] for entry in merged_entries if entry["kind"] == "tg"] == [
+        "2026-08-30",
+        "2026-08-29",
+        "2026-08-28",
+    ]
+    assert not any(entry["date"] == "2026-08-31" for entry in merged_entries)
+    assert next(entry for entry in merged_entries if entry["date"] == "2026-08-28")["filtered_count"] == 1
+
     raw_summary = "第一段  \n\n第二段\n  第三段"
     assert multiline_text(raw_summary) == "第一段\n\n第二段\n第三段"
     assert strip_repeated_tg_title("第一段", "第一段\n\n第二段") == "第二段"

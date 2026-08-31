@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-31T00:30:13Z",
-  "generated_at_label": "2026-08-31 08:30 BJT",
+  "generated_at": "2026-08-31T02:29:20Z",
+  "generated_at_label": "2026-08-31 10:29 BJT",
   "source": "codew1028/dt",
   "source_base_url": "https://codew1028.github.io/dt",
   "detail_days": 60,
@@ -11,7 +11,7 @@
   "latest_date": "2026-08-31",
   "counts": {
     "ai": 110,
-    "tg": 115
+    "tg": 117
   },
   "items": [
     {
@@ -45,6 +45,25 @@
       "detail_available": true
     },
     {
+      "kind": "tg",
+      "kind_label": "TG 日报",
+      "date": "2026-08-30",
+      "file": "2026-08-30-tg-digest.html",
+      "title": "TG 日报",
+      "source_url": "https://codew1028.github.io/dt/2026-08-30-tg-digest.html",
+      "search_text_hash": "2245a3a122325b8a",
+      "body_preview": "TG 频道日报 VOL.20260830 TG 频道日报 2026年08月30日 · 星期日 · 8 个频道 · 55 条内容 55 条内容 8 个频道 01 TG 频道精选 55 条 @aigc1024 00:05 a16z 刚刚募了 11 亿美元，成立全新的 Machine Age Fund。 重点押注 AI 背后的“物理世界”。 从芯片、内存、网络、存储，到数据中心、电力、散热、机器人和 AI 硬件，全都在投资范围内。 a16z 的判断是，AI 算力需求增长已经开始撞上",
+      "item_count": 55,
+      "section_count": 1,
+      "has_json": true,
+      "json_url": "2026-08-30-tg-digest.json",
+      "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-30.json",
+      "detail_available": true,
+      "original_item_count": 55,
+      "filtered_count": 0,
+      "filter_summary": []
+    },
+    {
       "kind": "ai",
       "kind_label": "AI 日报",
       "date": "2026-08-30",
@@ -57,6 +76,25 @@
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-30.json",
       "detail_available": true
+    },
+    {
+      "kind": "tg",
+      "kind_label": "TG 日报",
+      "date": "2026-08-29",
+      "file": "2026-08-29-tg-digest.html",
+      "title": "TG 日报",
+      "source_url": "https://codew1028.github.io/dt/2026-08-29-tg-digest.html",
+      "search_text_hash": "6c6109a4b552e36c",
+      "body_preview": "TG 频道日报 VOL.20260829 TG 频道日报 2026年08月29日 · 星期六 · 8 个频道 · 68 条内容 68 条内容 8 个频道 01 TG 频道精选 68 条 @inside1024 00:00 **男人好鸡贼，孙写景甜，5000w 压根没给出去，放在段首，看开头我以为这哥们花 5000w 买卵子被诈骗，后面细节写她背上有大纹身塑造不是好女人形象，写她拍电影上亿收入奢侈生活搞群众仇富心理对立起来，写他 150 块钱羽绒服要犹豫狠狠戳中兄弟们心窝子，再",
+      "item_count": 68,
+      "section_count": 1,
+      "has_json": true,
+      "json_url": "2026-08-29-tg-digest.json",
+      "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-29.json",
+      "detail_available": true,
+      "original_item_count": 68,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",

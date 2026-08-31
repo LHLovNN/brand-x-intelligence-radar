@@ -93,6 +93,8 @@ def main() -> None:
     parser.add_argument("--source-dir", default="", help="Optional local dt checkout for tests/backfills.")
     parser.add_argument("--output-dir", default=str(ROOT / "public" / "dashboard-data"), help="Public dashboard data directory.")
     parser.add_argument("--detail-days", type=int, default=DEFAULT_DETAIL_DAYS, help="How many recent days per kind to parse into detail JSON.")
+    parser.add_argument("--kind", action="append", choices=sorted(KIND_LABELS), help="Restrict detail sync to one or more digest kinds.")
+    parser.add_argument("--date", action="append", help="Restrict detail sync to specific YYYY-MM-DD date(s). Repeat or comma-separate values.")
     args = parser.parse_args()
 
     source_dir = Path(args.source_dir).resolve() if args.source_dir else None
@@ -100,12 +102,13 @@ def main() -> None:
     output_dir = Path(args.output_dir)
     target = output_dir / "dt-digests"
     target.mkdir(parents=True, exist_ok=True)
+    requested_dates = parse_date_filters(args.date)
 
     search_index = load_search_index(base_url, source_dir)
     entries = digest_entries(search_index, base_url)
     generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
-    detail_entries = details_to_sync(entries, args.detail_days)
+    detail_entries = details_to_sync(entries, args.detail_days, args.kind, requested_dates)
     for entry in detail_entries:
         daily = build_daily_detail(entry, base_url, source_dir, generated_at)
         daily_path = target / "daily" / entry["kind"] / f"{entry['date']}.json"
@@ -119,6 +122,13 @@ def main() -> None:
         entry["detail_path"] = f"dashboard-data/dt-digests/daily/{entry['kind']}/{entry['date']}.json"
         entry["detail_available"] = True
 
+    if requested_dates:
+        entries = merge_targeted_digest_entries(load_existing_digest_index(target / "index.json"), detail_entries)
+    targeted_keys = {
+        (entry["kind"], entry["date"])
+        for entry in detail_entries
+    } if requested_dates else None
+
     existing_details = {
         path.relative_to(output_dir).as_posix()
         for path in (target / "daily").glob("*/*.json")
@@ -128,6 +138,8 @@ def main() -> None:
         if "detail_path" not in entry and detail_path in existing_details:
             entry["detail_path"] = f"dashboard-data/{detail_path}"
             entry["detail_available"] = True
+        if entry.get("detail_available") and (targeted_keys is None or (entry.get("kind"), entry.get("date")) in targeted_keys):
+            apply_existing_detail_metadata(entry, output_dir / detail_path)
         entry.setdefault("detail_available", False)
 
     index = build_digest_index(entries, generated_at, base_url, args.detail_days)
@@ -200,6 +212,54 @@ def digest_entries(search_index: list[dict[str, Any]], base_url: str) -> list[di
     return entries
 
 
+def parse_date_filters(values: list[str] | None) -> list[str]:
+    dates = []
+    for raw in values or []:
+        for value in str(raw).split(","):
+            date = value.strip()
+            if not date:
+                continue
+            try:
+                datetime.strptime(date, "%Y-%m-%d")
+            except ValueError as exc:
+                raise SystemExit(f"Invalid --date value {date!r}; expected YYYY-MM-DD.") from exc
+            dates.append(date)
+    return sorted(set(dates), reverse=True)
+
+
+def load_existing_digest_index(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def merge_targeted_digest_entries(existing_index: dict[str, Any], updated_entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    update_map = {
+        (entry.get("kind"), entry.get("date")): entry
+        for entry in updated_entries
+    }
+    merged: list[dict[str, Any]] = []
+    seen = set()
+    for item in existing_index.get("items") or []:
+        if not isinstance(item, dict):
+            continue
+        key = (item.get("kind"), item.get("date"))
+        if key in update_map:
+            merged.append({**item, **update_map[key]})
+        else:
+            merged.append(item)
+        seen.add(key)
+    for key, entry in update_map.items():
+        if key not in seen:
+            merged.append(entry)
+    merged.sort(key=lambda value: (str(value.get("date") or ""), str(value.get("kind") or "")), reverse=True)
+    return merged
+
+
 def preserve_existing_detail_if_unchanged(path: Path, daily: dict[str, Any]) -> dict[str, Any]:
     if not path.exists():
         return daily
@@ -210,6 +270,20 @@ def preserve_existing_detail_if_unchanged(path: Path, daily: dict[str, Any]) -> 
     if detail_without_sync_time(previous) == detail_without_sync_time(daily):
         return previous
     return daily
+
+
+def apply_existing_detail_metadata(entry: dict[str, Any], path: Path) -> None:
+    if not path.exists():
+        return
+    try:
+        detail = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return
+    if detail.get("kind") != entry.get("kind") or detail.get("date") != entry.get("date"):
+        return
+    for key in ("item_count", "section_count", "original_item_count", "filtered_count", "filter_summary"):
+        if key in detail:
+            entry[key] = detail[key]
 
 
 def detail_without_sync_time(payload: Any) -> Any:
@@ -235,9 +309,39 @@ def digest_kind_and_date(filename: str) -> tuple[str, str] | tuple[None, None]:
     return None, None
 
 
-def details_to_sync(entries: list[dict[str, Any]], detail_days: int) -> list[dict[str, Any]]:
+def details_to_sync(
+    entries: list[dict[str, Any]],
+    detail_days: int,
+    requested_kinds: list[str] | None = None,
+    requested_dates: list[str] | None = None,
+) -> list[dict[str, Any]]:
+    kind_set = set(requested_kinds or KIND_LABELS)
+    if requested_dates:
+        date_set = set(requested_dates)
+        result = [
+            entry
+            for entry in entries
+            if entry["kind"] in kind_set and entry["date"] in date_set
+        ]
+        if requested_kinds:
+            found = {(entry["kind"], entry["date"]) for entry in result}
+            missing = [
+                f"{kind}:{date}"
+                for date in requested_dates
+                for kind in requested_kinds
+                if (kind, date) not in found
+            ]
+        else:
+            found_dates = {entry["date"] for entry in result}
+            missing = [date for date in requested_dates if date not in found_dates]
+        if missing:
+            raise SystemExit(f"Requested digest(s) not found in Diting search index: {', '.join(missing)}")
+        return result
+
     result = []
     for kind in KIND_LABELS:
+        if kind not in kind_set:
+            continue
         kind_entries = [entry for entry in entries if entry["kind"] == kind]
         result.extend(kind_entries[: max(1, detail_days)])
     return result
