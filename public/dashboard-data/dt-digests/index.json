@@ -1,19 +1,55 @@
 {
-  "generated_at": "2026-08-31T12:39:39Z",
-  "generated_at_label": "2026-08-31 20:39 BJT",
+  "generated_at": "2026-09-01T00:30:13Z",
+  "generated_at_label": "2026-09-01 08:30 BJT",
   "source": "codew1028/dt",
   "source_base_url": "https://codew1028.github.io/dt",
   "detail_days": 60,
   "latest": {
-    "ai": "2026-08-31",
-    "tg": "2026-08-31"
+    "ai": "2026-09-01",
+    "tg": "2026-09-01"
   },
-  "latest_date": "2026-08-31",
+  "latest_date": "2026-09-01",
   "counts": {
-    "ai": 110,
-    "tg": 117
+    "ai": 111,
+    "tg": 118
   },
   "items": [
+    {
+      "kind": "tg",
+      "kind_label": "TG 日报",
+      "date": "2026-09-01",
+      "file": "2026-09-01-tg-digest.html",
+      "title": "TG 日报",
+      "source_url": "https://codew1028.github.io/dt/2026-09-01-tg-digest.html",
+      "search_text_hash": "cf3cd60ab9491446",
+      "body_preview": "TG 频道日报 VOL.20260901 TG 频道日报 2026年09月01日 · 星期二 · 7 个频道 · 57 条内容 57 条内容 7 个频道 01 TG 频道精选 57 条 @zaihuapd 00:41 🍏 **OpenAI 购入数万台 Mac 用于强化学习，Anthropic 选择租赁，英伟达视苹果为本地 AI 主要对手** 据 The Information 报道，OpenAI 已购买数万台 Mac 用于强化学习训练，Anthropic 则采用租赁方式使用 ",
+      "item_count": 57,
+      "section_count": 1,
+      "has_json": true,
+      "json_url": "2026-09-01-tg-digest.json",
+      "detail_path": "dashboard-data/dt-digests/daily/tg/2026-09-01.json",
+      "detail_available": true,
+      "original_item_count": 57,
+      "filtered_count": 0,
+      "filter_summary": []
+    },
+    {
+      "kind": "ai",
+      "kind_label": "AI 日报",
+      "date": "2026-09-01",
+      "file": "20260901-AI日报.html",
+      "title": "AI 日报",
+      "source_url": "https://codew1028.github.io/dt/20260901-AI%E6%97%A5%E6%8A%A5.html",
+      "search_text_hash": "3518af978d93208e",
+      "body_preview": "🤖 AI 日报 VOL.20260901 🤖 AI 日报 2026年09月01日 · 星期二 · 4 个板块 · 8 条内容 8 条内容 4 个板块 01 模型发布/更新 2 条 DeepSeek-V4-Flash-Vision-Exp 模型已开源，多模态 Agent 能力接近 Opus-4.8 DeepSeek 于 8 月 31 日在 Hugging Face 开源首个多模态模型 DeepSeek-V4-Flash-Vision-Exp，采用 MIT License，公开模",
+      "item_count": 8,
+      "section_count": 4,
+      "detail_path": "dashboard-data/dt-digests/daily/ai/2026-09-01.json",
+      "detail_available": true,
+      "original_item_count": 8,
+      "filtered_count": 0,
+      "filter_summary": []
+    },
     {
       "kind": "tg",
       "kind_label": "TG 日报",
@@ -24,11 +60,14 @@
       "search_text_hash": "b5816c9bdb0a331f",
       "body_preview": "TG 频道日报 VOL.20260831 TG 频道日报 2026年08月31日 · 星期一 · 8 个频道 · 38 条内容 38 条内容 8 个频道 01 TG 频道精选 38 条 @openclaw1024 00:44 Codex 做 UI 不行，还是得 Opus 或者 Fable 一般没必要用什么 superpower、grillme ：） https://x.com/chaogetalks/status/2092026009474474068?s=20 查看原文 H",
       "item_count": 38,
-      "section_count": 8,
+      "section_count": 1,
       "has_json": true,
       "json_url": "2026-08-31-tg-digest.json",
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-31.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 38,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -42,7 +81,10 @@
       "item_count": 2,
       "section_count": 2,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-31.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 2,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -75,7 +117,10 @@
       "item_count": 6,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-30.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 6,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -90,8 +135,6 @@
       "section_count": 1,
       "has_json": true,
       "json_url": "2026-08-29-tg-digest.json",
-      "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-29.json",
-      "detail_available": true,
       "original_item_count": 68,
       "filtered_count": 1,
       "filter_summary": [
@@ -100,7 +143,9 @@
           "label": "低俗成人向低价值内容",
           "count": 1
         }
-      ]
+      ],
+      "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-29.json",
+      "detail_available": true
     },
     {
       "kind": "ai",
@@ -114,7 +159,10 @@
       "item_count": 16,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-29.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 16,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -126,7 +174,7 @@
       "search_text_hash": "a613e4edaecea820",
       "body_preview": "TG 频道日报 VOL.20260828 TG 频道日报 2026年08月28日 · 星期五 · 5 个频道 · 33 条内容 33 条内容 5 个频道 01 TG 频道精选 33 条 @zaihuapd 00:02 🍏 **iPhone 17 二季度全球销量断层第一，前十无国产机型** 2026 年第二季度全球智能手机出货量同比收缩 11%，Counterpoint Research 数据显示苹果与三星包揽畅销榜前十，合计份额升至 26%。iPhone 17 以占全球出货量",
       "item_count": 32,
-      "section_count": 5,
+      "section_count": 1,
       "has_json": true,
       "json_url": "2026-08-28-tg-digest.json",
       "original_item_count": 33,
@@ -153,7 +201,10 @@
       "item_count": 17,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-28.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 17,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -165,11 +216,14 @@
       "search_text_hash": "109a15717369fe09",
       "body_preview": "TG 频道日报 VOL.20260827 TG 频道日报 2026年08月27日 · 星期四 · 6 个频道 · 37 条内容 37 条内容 6 个频道 01 TG 频道精选 37 条 @zaihuapd 00:08 🤖 **OpenAI 公布自研芯片 Jalapeño 测试结果，能效与延迟领先英伟达现行产品** OpenAI 公布其首款自研推理芯片 Jalapeño 的首批测试数据：在 GPT-OSS 120B、DeepSeek R1 670B 和 Kimi K2.5 1T",
       "item_count": 37,
-      "section_count": 6,
+      "section_count": 1,
       "has_json": true,
       "json_url": "2026-08-27-tg-digest.json",
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-27.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 37,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -183,7 +237,10 @@
       "item_count": 28,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-27.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 28,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -195,11 +252,14 @@
       "search_text_hash": "1b7909593a6b8f3b",
       "body_preview": "TG 频道日报 VOL.20260826 TG 频道日报 2026年08月26日 · 星期三 · 7 个频道 · 43 条内容 43 条内容 7 个频道 01 TG 频道精选 43 条 @openclaw1024 00:44 Fable 默认用 high 就够了，然后让它主要负责编排、验收，这样是最经济实惠的。 附提示词： 注意你的主要任务是分析、编排和验证，具体任务尽可能交给 subagent（Opus 或 Sonnet）去执行。自己只做需求澄清、方案拆解、任务分发和结果验",
       "item_count": 43,
-      "section_count": 7,
+      "section_count": 1,
       "has_json": true,
       "json_url": "2026-08-26-tg-digest.json",
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-26.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 43,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -213,7 +273,10 @@
       "item_count": 19,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-26.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 19,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -225,11 +288,14 @@
       "search_text_hash": "a3224d3ab71309c6",
       "body_preview": "TG 频道日报 VOL.20260825 TG 频道日报 2026年08月25日 · 星期二 · 7 个频道 · 44 条内容 44 条内容 7 个频道 01 TG 频道精选 44 条 @inside1024 01:16 关于财富的名言！ 1、整天工作的人，是发不了财的，财富是对认知的补偿， 而不是对勤奋的奖赏。 ——洛克菲勒 2、社会资源永远是有限的， 好东西要靠抢。只有弱者才会坐等分配。 ——利弗莫尔 3、家庭的第一核心，永远是经济而不是感情。——巴菲特 4、只要你成功了",
       "item_count": 44,
-      "section_count": 7,
+      "section_count": 1,
       "has_json": true,
       "json_url": "2026-08-25-tg-digest.json",
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-25.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 44,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -243,7 +309,10 @@
       "item_count": 14,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-25.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 14,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -255,11 +324,14 @@
       "search_text_hash": "05d7b09802fe786f",
       "body_preview": "TG 频道日报 VOL.20260824 TG 频道日报 2026年08月24日 · 星期一 · 7 个频道 · 31 条内容 31 条内容 7 个频道 01 TG 频道精选 31 条 @aigc1024 01:36 AI 短剧总是写得像流水账？有人把工作室上千个真实项目的方法论，全做成了开源 Skills。 据作者介绍，这套 Skills 蒸馏自工作室上千个真实项目的创作经验，把商业短剧创作流程沉淀成可复用的方法，让 AI 不只是写剧本，而是按照专业团队的工作方式完成整套创",
       "item_count": 31,
-      "section_count": 7,
+      "section_count": 1,
       "has_json": true,
       "json_url": "2026-08-24-tg-digest.json",
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-24.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 31,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -273,7 +345,10 @@
       "item_count": 2,
       "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-24.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 2,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -285,11 +360,14 @@
       "search_text_hash": "c448e96978120f33",
       "body_preview": "TG 频道日报 VOL.20260823 TG 频道日报 2026年08月23日 · 星期日 · 6 个频道 · 38 条内容 38 条内容 6 个频道 01 TG 频道精选 38 条 @openclaw1024 00:44 Tibo 分享了 Codex 开启 1M 上下文的方法。不过我不是很有动力去修改，感觉当前还挺流畅的，我相信他们已经针对这个上下文调优过，只要压缩得当，上下文短一些性能会更好也更便宜。 具体方法很简单，只要在 ~/.codex/config.toml 中",
       "item_count": 38,
-      "section_count": 6,
+      "section_count": 1,
       "has_json": true,
       "json_url": "2026-08-23-tg-digest.json",
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-23.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 38,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -303,7 +381,10 @@
       "item_count": 1,
       "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-23.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 1,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -315,11 +396,14 @@
       "search_text_hash": "321eb595bf8e53a8",
       "body_preview": "TG 频道日报 VOL.20260822 TG 频道日报 2026年08月22日 · 星期六 · 6 个频道 · 36 条内容 36 条内容 6 个频道 01 TG 频道精选 36 条 @zaihuapd 00:42 🤖 **Codex 出现大规模异常提醒** 根据社区反馈，Codex 突然出现大规模异常提醒，即使是在正常使用也会出现： Invalid prompt: your prompt was flagged as potentially violating our u",
       "item_count": 36,
-      "section_count": 6,
+      "section_count": 1,
       "has_json": true,
       "json_url": "2026-08-22-tg-digest.json",
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-22.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 36,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -333,7 +417,10 @@
       "item_count": 15,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-22.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 15,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -345,11 +432,14 @@
       "search_text_hash": "f3e04c87837c81e8",
       "body_preview": "TG 频道日报 VOL.20260821 TG 频道日报 2026年08月21日 · 星期五 · 6 个频道 · 38 条内容 38 条内容 6 个频道 01 TG 频道精选 38 条 @aigc1024 00:51 体验一下“毛坯房”—Deepseek Harness。 第一件事，让他给自己做一件有质感的界面，要整个UI看上去有种好用但不贵的感觉...明天看效果。 第二件事，读自己的源码，然后对比Claude Code泄露的50多万行代码中反馈出来的工程管理思维，再从代码结",
       "item_count": 38,
-      "section_count": 6,
+      "section_count": 1,
       "has_json": true,
       "json_url": "2026-08-21-tg-digest.json",
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-21.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 38,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -363,7 +453,10 @@
       "item_count": 17,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-21.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 17,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -375,11 +468,14 @@
       "search_text_hash": "992296a5d28c4370",
       "body_preview": "TG 频道日报 VOL.20260820 TG 频道日报 2026年08月20日 · 星期四 · 7 个频道 · 37 条内容 37 条内容 7 个频道 01 TG 频道精选 37 条 @inside1024 00:16 最近注意到一个新现象，就是 youtube 上会推荐很多和哲学，心理学相关的频道，其内容基本都是由 ai 生成，不管是声音，图片, 还是文字内容。 但制作质量相当高，很多内容很有深度。而且估计因为全是 ai 工具生成，产出也很高，一个频道每天都会上传一个，甚",
       "item_count": 37,
-      "section_count": 7,
+      "section_count": 1,
       "has_json": true,
       "json_url": "2026-08-20-tg-digest.json",
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-20.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 37,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -393,7 +489,10 @@
       "item_count": 14,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-20.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 14,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -405,7 +504,7 @@
       "search_text_hash": "f1d17ee64ca9de6f",
       "body_preview": "TG 频道日报 VOL.20260819 TG 频道日报 2026年08月19日 · 星期三 · 5 个频道 · 29 条内容 29 条内容 5 个频道 01 TG 频道精选 29 条 @aigc1024 00:16 从零开始，搭建你的 Harness，定制化懂你的 Agent https://mp.weixin.qq.com/s/J7Cj0k8MMO4Lq955Nqwr3g 做了 3 个 skill 帮你搭建更懂你的 Harness 项目地址：https://github.",
       "item_count": 27,
-      "section_count": 5,
+      "section_count": 1,
       "has_json": true,
       "json_url": "2026-08-19-tg-digest.json",
       "original_item_count": 29,
@@ -437,7 +536,10 @@
       "item_count": 16,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-19.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 16,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -449,9 +551,12 @@
       "search_text_hash": "1e6a4ea2f3337218",
       "body_preview": "TG 频道日报 VOL.20260818 TG 频道日报 2026年08月18日 · 星期二 · 6 个频道 · 36 条内容 36 条内容 6 个频道 01 TG 频道精选 36 条 @aigc1024 01:36 刷到个卖AI教程的，粉丝才100多，但销量还算不错，7月21日看还是183单，今天就284单了，几天时间多出100单。卖的是AI使用日记和安装技能指南，说白了就是把怎么装AI、怎么用的经验整理成手册卖。 不用露脸、不用囤货、不用拍视频，就靠笔记持续出单。粉丝少也",
       "item_count": 36,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-18.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 36,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -465,7 +570,10 @@
       "item_count": 18,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-18.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 18,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -477,9 +585,12 @@
       "search_text_hash": "1c4aba3d88790356",
       "body_preview": "TG 频道日报 VOL.20260817 TG 频道日报 2026年08月17日 · 星期一 · 8 个频道 · 32 条内容 32 条内容 8 个频道 01 TG 频道精选 32 条 @openclaw1024 00:44 看到大佬的Agent自己赚了五位数！ 我才后知后觉！！ OKX最近上线了AI Marketplace！！ 如果你有API、MCP 或者 Agent，都可以注册成为服务商（ASP），然后在里面接单赚钱。 你的Agent会自己接任务、做任务、收款，还可以被别",
       "item_count": 32,
-      "section_count": 8,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-17.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 32,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -493,7 +604,10 @@
       "item_count": 2,
       "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-17.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 2,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -505,9 +619,12 @@
       "search_text_hash": "eb232ab2701157d1",
       "body_preview": "TG 频道日报 VOL.20260816 TG 频道日报 2026年08月16日 · 星期日 · 7 个频道 · 41 条内容 41 条内容 7 个频道 01 TG 频道精选 41 条 @aigc1024 00:31 满打满算，AI短剧真正产业化也就这半年的时间，然后就卷到寸土不生了，要出海找利润，虽然这么形容不妥当，但确实有种蝗灾的既视感。 查看原文 查看原文 @openclaw1024 00:44 之前我就在想一个问： 大家都在吹嘘Agent 自进化、长期记忆、越用越懂你",
       "item_count": 41,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-16.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 41,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -521,7 +638,10 @@
       "item_count": 1,
       "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-16.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 1,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -533,9 +653,12 @@
       "search_text_hash": "64f3a9cd6ff470fc",
       "body_preview": "TG 频道日报 VOL.20260815 TG 频道日报 2026年08月15日 · 星期六 · 7 个频道 · 33 条内容 33 条内容 7 个频道 01 TG 频道精选 33 条 @zaihuapd 01:04 🤖 **OpenAI 预览 Ultrafast 模式，GPT-5.6 Sol 提速 14 倍** OpenAI 首次展示 Ultrafast 模式，让 GPT-5.6 Sol 比标准处理快至 14 倍，率先在 OpenAI API 上线。该服务由 Cerebra",
       "item_count": 33,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-15.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 33,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -549,7 +672,10 @@
       "item_count": 15,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-15.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 15,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -561,9 +687,12 @@
       "search_text_hash": "01e7f7828573e881",
       "body_preview": "TG 频道日报 VOL.20260814 TG 频道日报 2026年08月14日 · 星期五 · 6 个频道 · 41 条内容 41 条内容 6 个频道 01 TG 频道精选 41 条 @aigc1024 01:36 我再多说一句，昨天直播时提了一句， 在全中国范围内，除了清华、北大、复旦、交大、浙大，剩下所有学校的本科“人工智能专业”，都是诈骗，都是李鬼专业。 简单来说，这个档次的大学，开不了LLM的课，开不了AI Agent的课，开不全mlsys的课， 就开始往里疯狂兑水",
       "item_count": 41,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-14.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 41,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -577,7 +706,10 @@
       "item_count": 23,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-14.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 23,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -589,9 +721,12 @@
       "search_text_hash": "f92ae13f24a8a7e7",
       "body_preview": "TG 频道日报 VOL.20260813 TG 频道日报 2026年08月13日 · 星期四 · 8 个频道 · 44 条内容 44 条内容 8 个频道 01 TG 频道精选 44 条 @zaihuapd 00:21 **SK海力士重启大连二厂建设，NAND产能将提升五成** SK海力士将重启大连NAND闪存第二工厂的建设，当地产能提升约50%。该厂四年前开工后因内存下行周期长期停工，现计划今年底开始搬入设备、明年上半年实现量产，新产线月产能约5万片晶圆。 在AI数据中心推动",
       "item_count": 44,
-      "section_count": 8,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-13.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 44,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -605,7 +740,10 @@
       "item_count": 20,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-13.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 20,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -617,9 +755,12 @@
       "search_text_hash": "e972b0779a8d8636",
       "body_preview": "TG 频道日报 VOL.20260812 TG 频道日报 2026年08月12日 · 星期三 · 8 个频道 · 48 条内容 48 条内容 8 个频道 01 TG 频道精选 48 条 @openclaw1024 00:44 现在我很多复杂一点的任务都是 Fable 5 写方案，Codex 去执行，Fable 5 验收，相对来说可以做出比较靠谱的方案，以及兼顾性价比。具体是这么做的： Fable 5 的产出是技术方案文档（图1） 一方面文档方便批注修改，另一方面文档方便其他 ",
       "item_count": 48,
-      "section_count": 8,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-12.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 48,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -633,7 +774,10 @@
       "item_count": 26,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-12.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 26,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -645,9 +789,12 @@
       "search_text_hash": "b7e20b47ef28d0d5",
       "body_preview": "TG 频道日报 VOL.20260811 TG 频道日报 2026年08月11日 · 星期二 · 8 个频道 · 41 条内容 41 条内容 8 个频道 01 TG 频道精选 41 条 @aigc1024 00:01 相比于前两年讨论的浮在天上、想象中的 AI 安全，我觉得现在有 3 条现实 AI 安全问： 软件漏洞 无人车 情感陪伴 查看原文 查看原文 @aigc1024 01:11 身体骗不了人。 恢复每日两小时运动两周——羽毛球、网球、攀岩、瑜伽、普拉提、游泳。虽然外人",
       "item_count": 41,
-      "section_count": 8,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-11.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 41,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -661,7 +808,10 @@
       "item_count": 20,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-11.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 20,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -673,9 +823,12 @@
       "search_text_hash": "de9a89a42f402f01",
       "body_preview": "TG 频道日报 VOL.20260810 TG 频道日报 2026年08月10日 · 星期一 · 6 个频道 · 30 条内容 30 条内容 6 个频道 01 TG 频道精选 30 条 @inside1024 00:16 女人真的有时候付出很少就能得到很多， 在抖音上面随便扭一扭，米就到手了。 而我们男人呢？ 需要到工地抗大包，搬砖， 才没勉强糊口。 有时候想一想真的不公平。 您发现没？这年头吃苦的买卖都贬值了！ 送外卖的骑手风里雨里跑单，不如人家开直播拍骑手日常的； 咱钢筋",
       "item_count": 30,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-10.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 30,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -689,7 +842,10 @@
       "item_count": 4,
       "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-10.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 4,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -701,9 +857,12 @@
       "search_text_hash": "f253737843b95623",
       "body_preview": "TG 频道日报 VOL.20260809 TG 频道日报 2026年08月09日 · 星期日 · 6 个频道 · 35 条内容 35 条内容 6 个频道 01 TG 频道精选 35 条 @aigc1024 00:16 一个让 AI 主动“进步”的提示词，建议存下。 以后做重要任务，最后加一句： “正式输出前，先根据我的目标制定 5 条质量标准并设置权重。 先生成初稿，再以严格审核者的角度逐项检查，找出影响最大的问并修改。 重复这个过程，直到结果已经没有明显改进空间。 最终只给",
       "item_count": 35,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-09.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 35,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -717,7 +876,10 @@
       "item_count": 6,
       "section_count": 2,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-09.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 6,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -729,9 +891,12 @@
       "search_text_hash": "c685638b2136ff1b",
       "body_preview": "TG 频道日报 VOL.20260808 TG 频道日报 2026年08月08日 · 星期六 · 7 个频道 · 47 条内容 47 条内容 7 个频道 01 TG 频道精选 47 条 @zaihuapd 00:08 🤖 **爆料：OpenAI 拟下周发布新模型 Astra** 有爆料称，OpenAI 正准备发布名为 Astra 的新模型，目标时间为下周。据称，Astra 是一次全新预训练，是 OpenAI 自 GPT-4.5 以来训练过的最大模型。 爆料还称，该模型最新的内",
       "item_count": 47,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-08.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 47,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -743,9 +908,12 @@
       "search_text_hash": "d24bd97a0385f101",
       "body_preview": "TG 频道日报 VOL.20260807 TG 频道日报 2026年08月07日 · 星期五 · 7 个频道 · 46 条内容 46 条内容 7 个频道 01 TG 频道精选 46 条 @aigc1024 00:01 这个 Skill 把你的简历部署成个人网站 https://mp.weixin.qq.com/s/mQQd889_Repz-OgYHQxy8A 发现很多人都有做个人网站的需求。所以我做了个 Skill 把简历部署成网站。 个人网站在找工作时，可以完整介绍你；别人",
       "item_count": 46,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-07.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 46,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -759,7 +927,10 @@
       "item_count": 25,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-07.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 25,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -771,9 +942,12 @@
       "search_text_hash": "8f41d7709881e720",
       "body_preview": "TG 频道日报 VOL.20260806 TG 频道日报 2026年08月06日 · 星期四 · 7 个频道 · 39 条内容 39 条内容 7 个频道 01 TG 频道精选 39 条 @aigc1024 01:36 突然想回头盘点一下： 过去半年多，我到底用 AI 做了些什么？ 1、50 多套可以变现的生图提示词！ 包括被 400 多万人看过的电商 KV 提示词，以及服装打版设计、IP 形象设计、房屋翻新、异形广告牌、产品包装等不同方向。 这算是我比较早期的一批 AI 实践",
       "item_count": 39,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-06.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 39,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -785,9 +959,12 @@
       "search_text_hash": "13838e7c5e5c9f8f",
       "body_preview": "TG 频道日报 VOL.20260805 TG 频道日报 2026年08月05日 · 星期三 · 7 个频道 · 43 条内容 43 条内容 7 个频道 01 TG 频道精选 43 条 @inside1024 01:16 全世界的资本有一个心照不宣的共识：绝不能让普通人完成原始资本积累。因为一旦你完成了资本积累，你就不需要再出卖时间和体力换取报酬了。你可以靠资本的收益活着，从此不再为他们打工。原始资本积累其实并不遥远，它不是财务自由那种必须几千万的目标。如果你消费欲望低，在老",
       "item_count": 43,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-05.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 43,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -801,7 +978,10 @@
       "item_count": 29,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-05.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 29,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -813,9 +993,12 @@
       "search_text_hash": "9733622796d72ada",
       "body_preview": "TG 频道日报 VOL.20260804 TG 频道日报 2026年08月04日 · 星期二 · 7 个频道 · 31 条内容 31 条内容 7 个频道 01 TG 频道精选 31 条 @aigc1024 01:36 一条指令，即可让你的AI代理完全访问互联网 ！ Agent 天天卡数据？进不去、链上看不了、网页一抓全是 HTML。 AgentKey 一条命令装完，直接给它全网权限：社交、链上、电商、金融全覆盖。 不用自己找 Key、不用管一堆账单。 查看原文 AI探索 He",
       "item_count": 31,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-04.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 31,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -829,7 +1012,10 @@
       "item_count": 21,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-04.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 21,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -841,9 +1027,12 @@
       "search_text_hash": "38f153771a708553",
       "body_preview": "TG 频道日报 VOL.20260803 TG 频道日报 2026年08月03日 · 星期一 · 6 个频道 · 29 条内容 29 条内容 6 个频道 01 TG 频道精选 29 条 @aigc1024 01:36 Claude 又升级了。 现在你可以直接问它：“哪些职业最依赖 AI？”“哪些工作正在被自动化？” 回答不再只是模型生成，而是直接来自 Anthropic Economic Index 的真实使用数据。 AI 不仅能回答问，现在还能用数据告诉你，这个世界到底是怎",
       "item_count": 29,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-03.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 29,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -857,7 +1046,10 @@
       "item_count": 5,
       "section_count": 3,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-03.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 5,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -869,9 +1061,12 @@
       "search_text_hash": "821726679396cd47",
       "body_preview": "TG 频道日报 VOL.20260802 TG 频道日报 2026年08月02日 · 星期日 · 8 个频道 · 43 条内容 43 条内容 8 个频道 01 TG 频道精选 43 条 @aigc1024 01:06 两天workbuddy还没解决的问：就是手机端收不到自动化任务的推送。怎么找助理都没法自己解决。 查看原文 查看原文 @aigc1024 01:36 你以为手写raft有价值有挑战，其实价值远远没有你想象的那么高， 你以为手写AI Agent太简单，实际上一个当",
       "item_count": 43,
-      "section_count": 8,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-02.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 43,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -885,7 +1080,10 @@
       "item_count": 2,
       "section_count": 2,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-08-02.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 2,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -897,9 +1095,12 @@
       "search_text_hash": "9475e8e7c733deb5",
       "body_preview": "TG 频道日报 VOL.20260801 TG 频道日报 2026年08月01日 · 星期六 · 6 个频道 · 44 条内容 44 条内容 6 个频道 01 TG 频道精选 44 条 @zaihuapd 00:14 **谷歌 DeepMind 发布 Gemini Robotics 2，实现机器人全身智能控制** 谷歌 DeepMind 于 2026 年 7 月 30 日发布 Gemini Robotics 2 系列模型，首次实现对完整人形机器人的全身智能控制。系列包含三个模",
       "item_count": 44,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-08-01.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 44,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -911,7 +1112,7 @@
       "search_text_hash": "12fffc40c05dd985",
       "body_preview": "TG 频道日报 VOL.20260731 TG 频道日报 2026年07月31日 · 星期五 · 8 个频道 · 53 条内容 53 条内容 8 个频道 01 TG 频道精选 53 条 @inside1024 00:16 #内幕消息 想搞钱、搞人脉、搞资源的普通人，请死记三句话： 打扮是你的生产力 别拿“懒得洗头、穿得舒服”当自由，那是自暴自弃的开始。 一个人不打扮、邋遢、不修边幅，其实就是在放弃向外链接的通道：你会自卑、会回避、会错失社交机会，久而久之，连事业张力都没有。 ",
       "item_count": 52,
-      "section_count": 8,
+      "section_count": 1,
       "original_item_count": 53,
       "filtered_count": 1,
       "filter_summary": [
@@ -936,7 +1137,10 @@
       "item_count": 24,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-31.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 24,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -948,9 +1152,12 @@
       "search_text_hash": "57f7dcb915eebc25",
       "body_preview": "TG 频道日报 VOL.20260730 TG 频道日报 2026年07月30日 · 星期四 · 7 个频道 · 50 条内容 50 条内容 7 个频道 01 TG 频道精选 50 条 @zaihuapd 00:01 🌙 **摩尔线程宣布率先完成 Kimi K3 适配** 7 月 28 日，月之暗面正式开源 2.8 万亿参数模型 Kimi K3。同日，摩尔线程宣布基于 AI 训推一体智算卡 MTT S5000 及 MUSA 软件栈，率先完成该模型的极速适配与稳定拉起，展现出国",
       "item_count": 50,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-30.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 50,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -964,7 +1171,10 @@
       "item_count": 21,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-30.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 21,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -976,9 +1186,12 @@
       "search_text_hash": "6e91176c8c558002",
       "body_preview": "TG 频道日报 VOL.20260729 TG 频道日报 2026年07月29日 · 星期三 · 8 个频道 · 38 条内容 38 条内容 8 个频道 01 TG 频道精选 38 条 @aigc1024 01:36 现在做 AI 视频，最容易被一张预告片骗。 你以为门槛是“模型够不够强”，真正把人卡住的，是生成完以后没法继续改：镜头不对、素材不够、要补一段，只能整条推倒重来。 LTX Desktop 想解决的就是这个断层。 它不是只给你一个输入框、吐一段视频就结束的模型仓库",
       "item_count": 38,
-      "section_count": 8,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-29.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 38,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -992,7 +1205,10 @@
       "item_count": 24,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-29.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 24,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1004,9 +1220,12 @@
       "search_text_hash": "6150eb4e28d1a443",
       "body_preview": "TG 频道日报 VOL.20260728 TG 频道日报 2026年07月28日 · 星期二 · 7 个频道 · 49 条内容 49 条内容 7 个频道 01 TG 频道精选 49 条 @inside1024 00:16 作为资深键政玩家，我以为我对美国算了解，没想到小红书对账，这些事仍让我惊掉下巴！ 1，“午餐贷”：规定学生中午必须在校吃饭，有学生吃不起，但回家吃是不允许的。学校提供贷款，父母还不起贷款就给他们的孩子身上盖章羞辱，下一步就通知福利署以“虐待儿童”为理由，把抚",
       "item_count": 49,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-28.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 49,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1020,7 +1239,10 @@
       "item_count": 16,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-28.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 16,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1032,9 +1254,12 @@
       "search_text_hash": "e90dc0b93f18b763",
       "body_preview": "TG 频道日报 VOL.20260727 TG 频道日报 2026年07月27日 · 星期一 · 6 个频道 · 35 条内容 35 条内容 6 个频道 01 TG 频道精选 35 条 @inside1024 01:16 经常有大厂的朋友问我，搞副业当个自媒体职场博主有前途吗？ 我的观点是，学历太高、专业能力太强的人，做自媒体职场博主反而没啥竞争力，收益也不高。 原因如下： 1、知识的诅咒，很难理解低水平人群的思路和关注点。 2、技术专家、职业经理人路线不适合大多数人，大众会",
       "item_count": 35,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-27.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 35,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1048,7 +1273,10 @@
       "item_count": 6,
       "section_count": 3,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-27.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 6,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1060,9 +1288,12 @@
       "search_text_hash": "04e51bfbcc2e6b7c",
       "body_preview": "TG 频道日报 VOL.20260726 TG 频道日报 2026年07月26日 · 星期日 · 8 个频道 · 39 条内容 39 条内容 8 个频道 01 TG 频道精选 39 条 @openclaw1024 00:44 字节开源 UI-TARS-desktop，GitHub 已经 3.8 万星。 本地原生 GUI Agent，用自然语言直接操控电脑和浏览器：看屏幕、点鼠标、敲键盘，支持本地/远程操作，跨平台，数据全本地跑。 旁边还有 Agent TARS 那一套 CLI",
       "item_count": 39,
-      "section_count": 8,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-26.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 39,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1076,7 +1307,10 @@
       "item_count": 1,
       "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-26.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 1,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1088,7 +1322,7 @@
       "search_text_hash": "63743b17a880d360",
       "body_preview": "TG 频道日报 VOL.20260725 TG 频道日报 2026年07月25日 · 星期六 · 6 个频道 · 42 条内容 42 条内容 6 个频道 01 TG 频道精选 42 条 @openclaw1024 00:44 不要把图片发给Codex！ 直接让它操作PhotoShop，这才是用Codex无损P图/调色的正确方式！ 查看原文 Hermes/OpenClaw AI探索 查看原文 @inside1024 01:16 很多线下开店的朋友，都踩过一个大坑，就是把特色小众",
       "item_count": 41,
-      "section_count": 6,
+      "section_count": 1,
       "original_item_count": 42,
       "filtered_count": 1,
       "filter_summary": [
@@ -1113,7 +1347,10 @@
       "item_count": 18,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-25.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 18,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1125,9 +1362,12 @@
       "search_text_hash": "aed1264f7ba7eee0",
       "body_preview": "TG 频道日报 VOL.20260724 TG 频道日报 2026年07月24日 · 星期五 · 6 个频道 · 43 条内容 43 条内容 6 个频道 01 TG 频道精选 43 条 @aigc1024 00:36 人类财富的总量增加，最大的动力可能是科技。 但人类文明程度的提升，只靠科技肯定是不够的，还有文学、教育、对科技的恐惧也是必须的。 牛津大学有个机构，叫做人类未来研究所（FHI，Future of Humanity Institute），创始人尼克·博斯特罗姆（N",
       "item_count": 43,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-24.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 43,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1141,7 +1381,10 @@
       "item_count": 15,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-24.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 15,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1153,9 +1396,12 @@
       "search_text_hash": "0714081190fa6915",
       "body_preview": "TG 频道日报 VOL.20260723 TG 频道日报 2026年07月23日 · 星期四 · 7 个频道 · 41 条内容 41 条内容 7 个频道 01 TG 频道精选 41 条 @aigc1024 01:36 分辨不出来 如果是AI做的，这个有点过于真实了😱 查看原文 查看原文 @aigc1024 06:13 🚀 28个真实可跑项目！AI Agent实战圣经开源 李博杰新书《深入理解 AI Agent：设计原理与工程实践》全开源！仓库包含全书正文+PDF+10章配套代",
       "item_count": 41,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-23.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 41,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1169,7 +1415,10 @@
       "item_count": 24,
       "section_count": 3,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-23.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 24,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1181,9 +1430,12 @@
       "search_text_hash": "3063d4ec61342cf5",
       "body_preview": "TG 频道日报 VOL.20260722 TG 频道日报 2026年07月22日 · 星期三 · 5 个频道 · 37 条内容 37 条内容 5 个频道 01 TG 频道精选 37 条 @aigc1024 01:26 四天世界人工智能大会WAIC今天圆满落幕，一切顺利～每天在展位上都有人问：你们是谁，为什么来参展？ 我们会介绍，我们是北大唯一的学生人工智能社团，社团做过的活动（大模型闭门分享、动手做agent、训小模型的共学课、论文共读、研报共写、开发者workshop…），",
       "item_count": 37,
-      "section_count": 5,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-22.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 37,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1197,7 +1449,10 @@
       "item_count": 31,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-22.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 31,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1209,9 +1464,12 @@
       "search_text_hash": "d370a20694b98994",
       "body_preview": "TG 频道日报 VOL.20260721 TG 频道日报 2026年07月21日 · 星期二 · 7 个频道 · 35 条内容 35 条内容 7 个频道 01 TG 频道精选 35 条 @aigc1024 00:21 AI native的流媒体，应该是不拘泥于媒介的，图文音视频可以自由切换，mid为单位的供给分发，打散到原子，用户上传的一张图片或语音就可以成为一条通讯被AI富媒、再被他分发 查看原文 查看原文 @inside1024 01:16 #内幕消息 看 caoz 对最",
       "item_count": 35,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-21.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 35,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1225,7 +1483,10 @@
       "item_count": 22,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-21.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 22,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1237,7 +1498,7 @@
       "search_text_hash": "05b464da12ec7f33",
       "body_preview": "TG 频道日报 VOL.20260720 TG 频道日报 2026年07月20日 · 星期一 · 7 个频道 · 35 条内容 35 条内容 7 个频道 01 TG 频道精选 35 条 @openclaw1024 00:44 这个 Python 工具接上 Claude Code、Codex 或 OpenCode，让编程智能体自动跑参数寻优，把工程师一遍遍手调超参数的过程交给机器。 每个参数可以写一段自然语言说明，智能体结合说明和历史试验来挑下一组配置，但只给建议，参数范围和最",
       "item_count": 34,
-      "section_count": 7,
+      "section_count": 1,
       "original_item_count": 35,
       "filtered_count": 1,
       "filter_summary": [
@@ -1262,7 +1523,10 @@
       "item_count": 8,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-20.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 8,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1274,9 +1538,12 @@
       "search_text_hash": "ed5fb9f7b768bcc9",
       "body_preview": "TG 频道日报 VOL.20260719 TG 频道日报 2026年07月19日 · 星期日 · 7 个频道 · 39 条内容 39 条内容 7 个频道 01 TG 频道精选 39 条 @inside1024 00:06 差不多，只是做成了喷雾形态，弄点泡沫出来，视觉效果很唬人。 他们一般卖39、59、79都有，看人下菜碟。 如果看你穿的运动鞋比较旧，就报39。如果看你穿的皮鞋成色不错，就敢往79上喊。 这些公司招聘的时候，当然不会说招街头擦鞋推销员。挂出来的职位名称通常是：",
       "item_count": 39,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-19.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 39,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1290,7 +1557,10 @@
       "item_count": 2,
       "section_count": 2,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-19.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 2,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1302,9 +1572,12 @@
       "search_text_hash": "f43970fa93d07189",
       "body_preview": "TG 频道日报 VOL.20260718 TG 频道日报 2026年07月18日 · 星期六 · 8 个频道 · 25 条内容 25 条内容 8 个频道 01 TG 频道精选 25 条 @aigc1024 00:04 🚀 HTML 直接变专业视频！—— html-video html-video 你的 Agent 只需写 HTML + CSS + 数据，就能本地渲染出高质量 MP4！简直就是 HTML 版剪映！ 产品宣传、知识解说、数据可视化……各种场景统统搞定。内置 21 ",
       "item_count": 25,
-      "section_count": 8,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-18.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 25,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1318,7 +1591,10 @@
       "item_count": 18,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-18.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 18,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1330,9 +1606,12 @@
       "search_text_hash": "77dbe5ba261a1dcb",
       "body_preview": "TG 频道日报 VOL.20260717 TG 频道日报 2026年07月17日 · 星期五 · 5 个频道 · 36 条内容 36 条内容 5 个频道 01 TG 频道精选 36 条 @inside1024 06:41 一个人要学会独立思考、主动学习、向内求解，而不是依赖他人或沉迷于无意义的交流。真正能改变命运的不是别人教你的方法，而是你自己形成的思维方式和行动能力。少去抱怨、少去寻求认同，多去思考、实践、验证。成长往往发生在独处和思考中，而不是在喧闹和从众中。学会沉下心，",
       "item_count": 36,
-      "section_count": 5,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-17.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 36,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1346,7 +1625,10 @@
       "item_count": 26,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-17.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 26,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1358,9 +1640,12 @@
       "search_text_hash": "88717dcd4cea74b4",
       "body_preview": "TG 频道日报 VOL.20260716 TG 频道日报 2026年07月16日 · 星期四 · 7 个频道 · 37 条内容 37 条内容 7 个频道 01 TG 频道精选 37 条 @aigc1024 00:21 海外，AI Coding 从混战到双雄争霸了 国内，AI Coding 还不知道最终是哪家 海外，AI Office 如火如荼拼杀中 国内，AI Office 反而有点直接双雄争霸了 有意思 查看原文 查看原文 @inside1024 01:16 今天面聊了一位",
       "item_count": 37,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-16.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 37,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1374,7 +1659,10 @@
       "item_count": 23,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-16.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 23,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1386,9 +1674,12 @@
       "search_text_hash": "a03a59a6d0289d65",
       "body_preview": "TG 频道日报 VOL.20260715 TG 频道日报 2026年07月15日 · 星期三 · 6 个频道 · 36 条内容 36 条内容 6 个频道 01 TG 频道精选 36 条 @zaihuapd 00:04 🍏 **苹果 Home AI 或需 2 TB iCloud+** macOS 27 第三个开发者测试版的发布说明中显示，Apple Home 的 Apple Intelligence 自然语言总结功能可能需要用户订阅至少 2 TB 的 iCloud+ 套餐，该套",
       "item_count": 36,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-15.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 36,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1400,9 +1691,12 @@
       "search_text_hash": "03c4e64396b870bd",
       "body_preview": "TG 频道日报 VOL.20260714 TG 频道日报 2026年07月14日 · 星期二 · 7 个频道 · 42 条内容 42 条内容 7 个频道 01 TG 频道精选 42 条 @zaihuapd 01:40 🤖 **Claude Fable 5 访问延长至 7 月 19 日** Claude Fable 5 将继续向所有付费套餐开放至 7 月 19 日。与此同时，Claude Code 的每周速率限制将在此期间维持高出 50% 的水平。 x.com 查看原文 在花频",
       "item_count": 42,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-14.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 42,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1416,7 +1710,10 @@
       "item_count": 12,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-14.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 12,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1428,9 +1725,12 @@
       "search_text_hash": "e580a8643bf440e9",
       "body_preview": "TG 频道日报 VOL.20260713 TG 频道日报 2026年07月13日 · 星期一 · 7 个频道 · 24 条内容 24 条内容 7 个频道 01 TG 频道精选 24 条 @inside1024 00:16 #行业内幕 @inside1024 朋友搬家，空调要移机，在网上搜了个400的电话，以为是官方的售后（实际是假的）。 打电话来的工人一顿操作，把他的铜管折弯了，说空调铜管质量不行，坏了，得换铜管，加装机费要700多。 这套路我一听可太熟了，小红书上看过一堆空",
       "item_count": 23,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-13.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 23,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1444,7 +1744,10 @@
       "item_count": 11,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-13.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 11,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1456,9 +1759,12 @@
       "search_text_hash": "5a21b33e20ee03f6",
       "body_preview": "TG 频道日报 VOL.20260712 TG 频道日报 2026年07月12日 · 星期日 · 5 个频道 · 27 条内容 27 条内容 5 个频道 01 TG 频道精选 27 条 @zaihuapd 00:02 **SK 海力士 ADR 纳斯达克首日涨 14%，募资 265 亿美元创外国公司纪录** 7 月 10 日，SK 海力士以美国存托凭证（ADR）形式在纳斯达克首次交易，每股定价 149 美元，共出售 1.779 亿份 ADR，募资约 265 亿美元。这是外国公司",
       "item_count": 27,
-      "section_count": 5,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-12.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 27,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1472,7 +1778,10 @@
       "item_count": 8,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-12.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 8,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1484,9 +1793,12 @@
       "search_text_hash": "5738f6073defee11",
       "body_preview": "TG 频道日报 VOL.20260711 TG 频道日报 2026年07月11日 · 星期六 · 5 个频道 · 43 条内容 43 条内容 5 个频道 01 TG 频道精选 43 条 @inside1024 00:16 #内幕消息 中国某知识付费平台公布过一组数据： 年收入低于10万人民币的人群，购买课程数量是年收入50万人民币以上人群的3倍； 但课程完课率，前者不足7%，后者高达35%。 穷人不是在买知识， 是在买“我在变好”的幻觉。 背100个Excel公式，比亲手做1",
       "item_count": 43,
-      "section_count": 5,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-11.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 43,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1500,7 +1812,10 @@
       "item_count": 17,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-11.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 17,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1512,9 +1827,12 @@
       "search_text_hash": "c67cf87aea1c18b7",
       "body_preview": "TG 频道日报 VOL.20260710 TG 频道日报 2026年07月10日 · 星期五 · 4 个频道 · 18 条内容 18 条内容 4 个频道 01 TG 频道精选 18 条 @text1024 00:03 这一波ai 创业 应用层 国内团队目前好像只有 liblib manus genspark 跑的还不错，目前团队在国内的只有liblib 这么难吗 查看原文 查看原文 @zaihuapd 01:15 🤖 **OpenAI 发布 GPT-Live 语音模型，支持全",
       "item_count": 18,
-      "section_count": 4,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-10.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 18,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1528,7 +1846,10 @@
       "item_count": 25,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-10.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 25,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1540,9 +1861,12 @@
       "search_text_hash": "d0eafba3bdf94df6",
       "body_preview": "TG 频道日报 VOL.20260709 TG 频道日报 2026年07月09日 · 星期四 · 7 个频道 · 39 条内容 39 条内容 7 个频道 01 TG 频道精选 39 条 @inside1024 04:56 AI 拉平了普通人的差距，放大了高手和普通人的差距，但是随着 AI 的继续提升这个高手和普通人的分割线在提升 直接说吧，普通人的机会来了，能抹平掉你和 211/985 的差异 AIGC的一切 查看原文 查看原文 @inside1024 06:41 性格软弱没",
       "item_count": 39,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-09.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 39,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1556,7 +1880,10 @@
       "item_count": 31,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-09.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 31,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1568,9 +1895,12 @@
       "search_text_hash": "611ec39915ae7ed8",
       "body_preview": "TG 频道日报 VOL.20260708 TG 频道日报 2026年07月08日 · 星期三 · 7 个频道 · 48 条内容 48 条内容 7 个频道 01 TG 频道精选 48 条 @aigc1024 01:01 关于人形机器人 人形机器人不是【工具】，是代替人使用工具的； 人形（包括灵巧手）即是技术方案，也是需求本身； 具身智能从数据到模型到本体到人机交互，几乎所有方向的技术方案都没有收敛，大概以6个月为周期在换代；其中本体是目前收敛程度最高的； 4.因为本体真的有点贵",
       "item_count": 48,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-08.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 48,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1582,9 +1912,12 @@
       "search_text_hash": "c4f6bf3e06074584",
       "body_preview": "TG 频道日报 VOL.20260707 TG 频道日报 2026年07月07日 · 星期二 · 7 个频道 · 57 条内容 57 条内容 7 个频道 01 TG 频道精选 57 条 @chunse1024 01:03 推荐一个最近在用的免费 Chrome 插件：CloneWebsite。 它解决的痛点是：研究一个漂亮网页的实现时，过去要 F12 逐个抠 计算样式、手动下载图片字体、再在本地拼回去，费时且容易丢效果。 CloneWebsite 的做法是： 一键克隆。用 ge",
       "item_count": 57,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-07.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 57,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1596,9 +1929,12 @@
       "search_text_hash": "1b9c2cb40a13481f",
       "body_preview": "TG 频道日报 VOL.20260706 TG 频道日报 2026年07月06日 · 星期一 · 6 个频道 · 30 条内容 30 条内容 6 个频道 01 TG 频道精选 30 条 @zaihuapd 00:00 **Linux 登顶 2026 CVE 漏洞榜，内核维护者称这是好事** 2026 年上半年，Linux 以 2308 个 CVE 漏洞数量位居所有厂商首位，领先 Google（1752）、微软（843）和苹果（284）。长期内核维护者 Greg Kroah-H",
       "item_count": 30,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-06.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 30,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1612,7 +1948,10 @@
       "item_count": 7,
       "section_count": 3,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-06.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 7,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1624,9 +1963,12 @@
       "search_text_hash": "b693d938c00a267e",
       "body_preview": "TG 频道日报 VOL.20260705 TG 频道日报 2026年07月05日 · 星期日 · 6 个频道 · 28 条内容 28 条内容 6 个频道 01 TG 频道精选 28 条 @zaihuapd 00:12 **腾讯玄武实验室阿图因 AI 在 CyberGym 测试中超越 Mythos** 腾讯玄武实验室宣布，其研发的阿图因 AI 在加州大学伯克利分校主导的 CyberGym 网络安全基准测试中获得 84.0% 的得分，超过 Anthropic 的 Claude M",
       "item_count": 28,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-05.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 28,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1640,7 +1982,10 @@
       "item_count": 3,
       "section_count": 2,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-05.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 3,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1652,7 +1997,7 @@
       "search_text_hash": "e756ca012ff15be6",
       "body_preview": "TG 频道日报 VOL.20260704 TG 频道日报 2026年07月04日 · 星期六 · 6 个频道 · 36 条内容 36 条内容 6 个频道 01 TG 频道精选 36 条 @inside1024 04:56 周末我请了一个做AI的朋友，来公司交流。 我们希望把AI真正融进方法论里，不是单独教工具。这个过程里，我会不停找身边懂的人来聊，让他们直接挑毛病，看看我们哪里没想清楚。 这一聊就是几个小时。 基本没停，中午饭直接点外卖，在会议室吃。信息量特别大，神经一直绷着",
       "item_count": 35,
-      "section_count": 6,
+      "section_count": 1,
       "original_item_count": 36,
       "filtered_count": 1,
       "filter_summary": [
@@ -1677,7 +2022,10 @@
       "item_count": 15,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-04.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 15,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1689,9 +2037,12 @@
       "search_text_hash": "0f2ee26eef1b8c2e",
       "body_preview": "TG 频道日报 VOL.20260703 TG 频道日报 2026年07月03日 · 星期五 · 6 个频道 · 37 条内容 37 条内容 6 个频道 01 TG 频道精选 37 条 @chunse1024 00:55 [多棱镜 · 人生事件解释系统](https://deluxe-cheesecake-203e56.netlify.app/) 最近做了一个很奇怪的网站。 它不是AI聊天，不是心理测试，也不会安慰你。 你只需要把一件一直想不明白的事情写进去，它会尝试从几个不",
       "item_count": 37,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-03.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 37,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1705,7 +2056,10 @@
       "item_count": 24,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-03.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 24,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1717,9 +2071,12 @@
       "search_text_hash": "d995cdacf684ef75",
       "body_preview": "TG 频道日报 VOL.20260702 TG 频道日报 2026年07月02日 · 星期四 · 6 个频道 · 46 条内容 46 条内容 6 个频道 01 TG 频道精选 46 条 @zaihuapd 00:14 🤖 **谷歌开放 Nano Banana 2 Lite 和 Gemini Omni Flash：4 秒出图、10 秒视频生成** Google 推出两项生成媒体模型更新：Nano Banana 2 Lite 面向高速图像生成，文本生成图像延迟为 4 秒，1K 图",
       "item_count": 46,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-02.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 46,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1733,7 +2090,10 @@
       "item_count": 22,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-02.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 22,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1745,9 +2105,12 @@
       "search_text_hash": "9d97e1503a1ff7f6",
       "body_preview": "TG 频道日报 VOL.20260701 TG 频道日报 2026年07月01日 · 星期三 · 7 个频道 · 44 条内容 44 条内容 7 个频道 01 TG 频道精选 44 条 @inside1024 04:56 看到个有意思的案例，一个美国小哥靠卖袜子，30天干了300万左右美金。听起来像天方夜谭，但拆解开是极其理性的算法逻辑 靠AI把不确定性降到了最低 他的SOP是反着来的。普通人是先有产品再找客户，他是先找赛道再定产品。 第一步用谷歌趋势扫大盘，锁定普拉提这个每",
       "item_count": 44,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-07-01.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 44,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1761,7 +2124,10 @@
       "item_count": 26,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-07-01.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 26,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1773,9 +2139,12 @@
       "search_text_hash": "99ccaa9dfae76d06",
       "body_preview": "TG 频道日报 VOL.20260630 TG 频道日报 2026年06月30日 · 星期二 · 6 个频道 · 30 条内容 30 条内容 6 个频道 01 TG 频道精选 30 条 @yunying23 01:24 好吧，验证了这么长时间，不得不说谷歌趋势找词感觉并不适合我。 好处是上站就有反馈，非常适合新手找感觉，就单单这个月就上了五六个站，基本 24 小时内就有反馈，差的几十 DAU，好的上千 DAU。 坏处是卷王扎堆，卷成麻花了都，特别是游戏新词，稍微落后你就只能吃",
       "item_count": 30,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-06-30.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 30,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1789,7 +2158,10 @@
       "item_count": 22,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-30.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 22,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1801,9 +2173,12 @@
       "search_text_hash": "28766a32fa515169",
       "body_preview": "TG 频道日报 VOL.20260629 TG 频道日报 2026年06月29日 · 星期一 · 7 个频道 · 36 条内容 36 条内容 7 个频道 01 TG 频道精选 36 条 @inside1024 00:16 #内幕消息 赚快钱需要具备三个必要条件 不怕风险高 不要脸 高执行力 这是赚快钱最基本的要求 我举个例子： 比如AI时代有大量的新软件，就有大量的新品牌。你只需要做应用商店中跨区的李逵李鬼，就能拿大量流量赚钱 大部分人是区分不开真假claude，真假call",
       "item_count": 36,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-06-29.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 36,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1817,7 +2192,10 @@
       "item_count": 7,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-29.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 7,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1829,9 +2207,12 @@
       "search_text_hash": "864d4a31aa0b61f4",
       "body_preview": "TG 频道日报 VOL.20260628 TG 频道日报 2026年06月28日 · 星期日 · 7 个频道 · 44 条内容 44 条内容 7 个频道 01 TG 频道精选 44 条 @text1024 00:12 [**高质量笔记文章的底层逻辑，和你想的完全不一样，附原创AI提示词。 为什么你的笔记和文章没人看？问题出在动笔之前，附原创AI提示词。 高质量内容的写作流程，我...**](https://m.okjike.com/originalPosts/6a3e7d25",
       "item_count": 44,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-06-28.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 44,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1845,7 +2226,10 @@
       "item_count": 10,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-28.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 10,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1857,9 +2241,12 @@
       "search_text_hash": "cb6923cb31b1e3db",
       "body_preview": "TG 频道日报 VOL.20260627 TG 频道日报 2026年06月27日 · 星期六 · 7 个频道 · 39 条内容 39 条内容 7 个频道 01 TG 频道精选 39 条 @yunying23 00:01 cursor广州天河南线下活动很热闹，居然还见到了出海圈群友，他从广州南沙过来的 无限续杯咖啡，有甜品，还有credits可以领 见到老朋友学院派留学海归，她说要搞社群了 接地气一些 认识很多builder，数据采集等等 搞小游戏也有 还有认识了老登投资人，t",
       "item_count": 39,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-06-27.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 39,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1873,7 +2260,10 @@
       "item_count": 12,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-27.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 12,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1885,9 +2275,12 @@
       "search_text_hash": "be0c7721b5001b72",
       "body_preview": "TG 频道日报 VOL.20260626 TG 频道日报 2026年06月26日 · 星期五 · 7 个频道 · 34 条内容 34 条内容 7 个频道 01 TG 频道精选 34 条 @text1024 00:05 自媒体就是每个人都能做的商业模式。 因为你只需要做真实的自己，就能赚钱。 查看原文 查看原文 @inside1024 02:42 现在真的有很多人是在硬扛。 昨晚跟一个做实体的朋友聊天，他说自己快到极限了。 前几年行情好的时候，他买了套房，总价 320 万， 首",
       "item_count": 34,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-06-26.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 34,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1901,7 +2294,10 @@
       "item_count": 25,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-26.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 25,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1913,9 +2309,12 @@
       "search_text_hash": "1e6ddc5b6228665e",
       "body_preview": "TG 频道日报 VOL.20260625 TG 频道日报 2026年06月25日 · 星期四 · 6 个频道 · 41 条内容 41 条内容 6 个频道 01 TG 频道精选 41 条 @aigc1024 00:53 修改和优化文案，你们都是用的什么AI呀？ 查看原文 查看原文 @aigc1024 02:13 使用 Claude Code 级别的 AI 进行工作产出的几个经验性习惯： 对 AI 的追问做出回应 Claude Code 完成任务后，有较高比例会主动提出下一步要做",
       "item_count": 41,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-06-25.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 41,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1929,7 +2328,10 @@
       "item_count": 21,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-25.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 21,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1941,9 +2343,12 @@
       "search_text_hash": "ab32cd2d6a7b6e04",
       "body_preview": "TG 频道日报 VOL.20260624 TG 频道日报 2026年06月24日 · 星期三 · 7 个频道 · 32 条内容 32 条内容 7 个频道 01 TG 频道精选 32 条 @aigc1024 01:38 如果机器人最终只是完成任务，为什么需要人形？ 一、第一天问 半年多前，我转到机器人赛道。 之前做互联网产品，逻辑很顺：理解用户、建立关系、提供服务。但做到某个阶段，撞上一块天花板—— 屏幕一关，关系就断了。没有共同空间，没有共享时间线，没有\"我知道你在那里\"的确",
       "item_count": 32,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-06-24.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 32,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1957,7 +2362,10 @@
       "item_count": 26,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-24.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 26,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1968,10 +2376,13 @@
       "source_url": "https://codew1028.github.io/dt/2026-06-23-tg-digest.html",
       "search_text_hash": "05910b351334d903",
       "body_preview": "TG 频道日报 VOL.20260623 TG 频道日报 2026年06月23日 · 星期二 · 7 个频道 · 40 条内容 40 条内容 7 个频道 01 TG 频道精选 40 条 @text1024 00:20 想做年赚50万以上的生意，哪怕只是销售类小买卖，也是要积累要素的。 关键的四大客源要素，分别是： 公域、私域、地域、联盟（比渠道和客转客更高转化） 举个例子—— 一个大厂姐妹暂时没孩子，还不喜欢销售也不热衷种草（说明私域没有销售能力） 本身的形象和职场角色也不能",
-      "item_count": 40,
-      "section_count": 7,
+      "item_count": 39,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-06-23.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 39,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -1985,7 +2396,10 @@
       "item_count": 17,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-23.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 17,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -1997,9 +2411,12 @@
       "search_text_hash": "c282ae2e0ce2fabf",
       "body_preview": "TG 频道日报 VOL.20260622 TG 频道日报 2026年06月22日 · 星期一 · 7 个频道 · 31 条内容 31 条内容 7 个频道 01 TG 频道精选 31 条 @yunying23 02:31 最近的一些选题思路 1 如何把自己卖贵 2 我老板跟马斯克很相似的点：活在未来，并且不断推演如何达成一件事 3 AI知识库为什么会成为 IP标配 4 成为博主，会成为你的什么资产 5 要去生产端见世面，而不是去消费端 6 李诞说：大胆去做个小博主 查看原文 查",
       "item_count": 31,
-      "section_count": 7,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-06-22.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 31,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -2013,7 +2430,10 @@
       "item_count": 4,
       "section_count": 3,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-22.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 4,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -2025,9 +2445,12 @@
       "search_text_hash": "ad2ecc0bd5f3371e",
       "body_preview": "TG 频道日报 VOL.20260621 TG 频道日报 2026年06月21日 · 星期日 · 6 个频道 · 34 条内容 34 条内容 6 个频道 01 TG 频道精选 34 条 @aigc1024 00:36 ChatGPT全球份额首次跌破50%，AI的游戏规则变了 生成式AI应用正处在一个微妙的转折点上，用户规模仍在扩张，但增长动力和竞争规则已经变了。 Sensor Tower的《State of AI 2026》报告提供了一组核心数据，勾勒出了这一变化的轮廓，也揭",
       "item_count": 34,
-      "section_count": 6,
+      "section_count": 1,
       "detail_path": "dashboard-data/dt-digests/daily/tg/2026-06-21.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 34,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "ai",
@@ -2041,7 +2464,10 @@
       "item_count": 2,
       "section_count": 2,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-21.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 2,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -2068,7 +2494,10 @@
       "item_count": 16,
       "section_count": 3,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-20.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 16,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -2095,7 +2524,10 @@
       "item_count": 28,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-19.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 28,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -2122,7 +2554,10 @@
       "item_count": 29,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-18.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 29,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -2149,7 +2584,10 @@
       "item_count": 29,
       "section_count": 5,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-17.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 29,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -2176,7 +2614,10 @@
       "item_count": 17,
       "section_count": 4,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-16.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 17,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
@@ -2203,7 +2644,10 @@
       "item_count": 6,
       "section_count": 2,
       "detail_path": "dashboard-data/dt-digests/daily/ai/2026-06-15.json",
-      "detail_available": true
+      "detail_available": true,
+      "original_item_count": 6,
+      "filtered_count": 0,
+      "filter_summary": []
     },
     {
       "kind": "tg",
