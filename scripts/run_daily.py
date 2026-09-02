@@ -176,6 +176,68 @@ def query_limit_for_mode(brand_limit: int, query_count: int, modes: list[dict[st
     return max(1, math.ceil(mode_brand_limit / max(1, query_count)))
 
 
+def allocated_brand_request_limits(max_requests: int | None, brand_limits: dict[str, int]) -> dict[str, int]:
+    if max_requests is None:
+        return {}
+    active = [(brand, int(limit or 0)) for brand, limit in brand_limits.items() if int(limit or 0) > 0]
+    if not active:
+        return {}
+    total_requests = max(0, int(max_requests))
+    allocations = {brand: 0 for brand in brand_limits}
+    if total_requests <= 0:
+        return allocations
+
+    active.sort(key=lambda item: item[1], reverse=True)
+    if total_requests < len(active):
+        for brand, _ in active[:total_requests]:
+            allocations[brand] = 1
+        return allocations
+
+    for brand, _ in active:
+        allocations[brand] = 1
+    remaining = total_requests - len(active)
+    total_weight = sum(weight for _, weight in active) or 1
+    while remaining > 0:
+        brand, _ = max(
+            active,
+            key=lambda item: ((total_requests * item[1] / total_weight) - allocations[item[0]], item[1], item[0]),
+        )
+        allocations[brand] += 1
+        remaining -= 1
+    return allocations
+
+
+def current_search_requests_used(x_source: Any) -> int:
+    try:
+        return int(getattr(x_source, "requests_used", 0) or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def current_brand_count(seen: dict[str, dict[str, Any]], brand_key: str) -> int:
+    return sum(1 for post in seen.values() if post.get("brand_candidate") == brand_key)
+
+
+def search_posts_with_page_cap(
+    x_source: Any,
+    query: str,
+    start: Any,
+    end: Any,
+    limit: int,
+    query_type: str,
+    page_cap: int | None,
+) -> list[dict[str, Any]]:
+    if page_cap is None or not hasattr(x_source, "max_pages_per_query"):
+        return x_source.search_posts(query, to_iso(start), to_iso(end), limit, query_type=query_type)
+
+    previous = getattr(x_source, "max_pages_per_query")
+    x_source.max_pages_per_query = max(1, int(page_cap))
+    try:
+        return x_source.search_posts(query, to_iso(start), to_iso(end), limit, query_type=query_type)
+    finally:
+        x_source.max_pages_per_query = previous
+
+
 def merge_duplicate_collection_context(existing: dict[str, Any], incoming: dict[str, Any]) -> None:
     for query_type in incoming.get("collection_query_types", []):
         existing.setdefault("collection_query_types", [])
@@ -225,6 +287,7 @@ def collect_real_posts(
     warnings: list[str] = []
     stopped_early = False
     search_modes = configured_search_modes(source_config)
+    brand_request_limits = allocated_brand_request_limits(getattr(x_source, "max_requests_per_run", None), brand_limits)
 
     for brand_key in ("joybuy", "temu"):
         if stopped_early:
@@ -233,40 +296,56 @@ def collect_real_posts(
         if brand_limit <= 0:
             continue
         queries = build_x_search_queries(keyword_config, brand_key)
-        for mode in search_modes:
+        query_tasks = [(mode, query) for mode in search_modes for query in queries]
+        brand_request_limit = brand_request_limits.get(brand_key) if brand_request_limits else None
+        brand_request_start = current_search_requests_used(x_source)
+        for task_index, (mode, query) in enumerate(query_tasks):
             if stopped_early:
                 break
+            if brand_request_limit is not None:
+                brand_requests_used = current_search_requests_used(x_source) - brand_request_start
+                brand_requests_remaining = brand_request_limit - brand_requests_used
+                if brand_requests_remaining <= 0:
+                    break
+                remaining_tasks = max(1, len(query_tasks) - task_index)
+                page_cap = max(1, math.ceil(brand_requests_remaining / remaining_tasks))
+                remaining_brand_capacity = max(1, brand_limit - current_brand_count(seen, brand_key))
+                per_query_limit = min(
+                    remaining_brand_capacity,
+                    max(1, math.ceil(remaining_brand_capacity * page_cap / max(1, brand_requests_remaining))),
+                )
+            else:
+                page_cap = None
+                per_query_limit = query_limit_for_mode(brand_limit, len(queries), search_modes, mode)
             query_type = mode["query_type"]
-            per_query_limit = query_limit_for_mode(brand_limit, len(queries), search_modes, mode)
-            for query in queries:
-                try:
-                    posts = x_source.search_posts(query, to_iso(start), to_iso(end), per_query_limit, query_type=query_type)
-                except ProviderBudgetExceeded as error:
-                    warnings.append(str(error))
-                    stopped_early = True
-                    break
-                except RuntimeError as error:
-                    warnings.append(f"Provider collection stopped after error: {str(error)[:240]}")
-                    stopped_early = True
-                    break
-                for post in posts:
-                    enriched = {
-                        **post,
-                        "brand_candidate": brand_key,
-                        "collection_query_type": query_type,
-                        "collection_query_types": [query_type],
-                    }
-                    post_id = enriched["post_id"]
-                    existing = seen.get(post_id)
-                    if existing and existing.get("brand_candidate") == "joybuy":
-                        merge_duplicate_collection_context(existing, enriched)
-                        continue
-                    if existing and brand_key != "joybuy":
-                        merge_duplicate_collection_context(existing, enriched)
-                        continue
-                    if existing:
-                        merge_duplicate_collection_context(enriched, existing)
-                    seen[post_id] = enriched
+            try:
+                posts = search_posts_with_page_cap(x_source, query, start, end, per_query_limit, query_type, page_cap)
+            except ProviderBudgetExceeded as error:
+                warnings.append(str(error))
+                stopped_early = True
+                break
+            except RuntimeError as error:
+                warnings.append(f"Provider collection stopped after error: {str(error)[:240]}")
+                stopped_early = True
+                break
+            for post in posts:
+                enriched = {
+                    **post,
+                    "brand_candidate": brand_key,
+                    "collection_query_type": query_type,
+                    "collection_query_types": [query_type],
+                }
+                post_id = enriched["post_id"]
+                existing = seen.get(post_id)
+                if existing and existing.get("brand_candidate") == "joybuy":
+                    merge_duplicate_collection_context(existing, enriched)
+                    continue
+                if existing and brand_key != "joybuy":
+                    merge_duplicate_collection_context(existing, enriched)
+                    continue
+                if existing:
+                    merge_duplicate_collection_context(enriched, existing)
+                seen[post_id] = enriched
 
     max_total = limit_from_env("X_DAILY_LIMIT", limits["max_posts_per_day"])
     raw_posts = apply_collection_caps(list(seen.values()), brand_limits, max_total)
@@ -279,6 +358,7 @@ def collect_real_posts(
             "max_primary_posts": brand_limits["joybuy"],
             "max_competitor_posts": brand_limits["temu"],
             "max_api_requests": request_stats["max_api_requests"],
+            "brand_request_limits": brand_request_limits,
         },
         "search_modes": search_modes,
         **request_stats,
