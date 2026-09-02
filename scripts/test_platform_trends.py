@@ -19,10 +19,13 @@ def main() -> None:
     assert canonical_platform_tag("带货") == "变现"
     assert canonical_platform_tag("笔记") == "爆文与内容结构"
     assert canonical_platform_tag("涨粉") == "账号冷启动"
+    assert canonical_platform_tag("限流") == "风控对抗"
+    assert canonical_platform_tag("平台规则") == "平台规则"
+    assert canonical_platform_tag("账号矩阵") == "矩阵"
 
     platform = {
         "aliases": ["小红书"],
-        "intent_terms": ["变现", "商单", "带货", "流量", "引流", "涨粉"],
+        "intent_terms": ["变现", "商单", "带货", "流量", "引流", "涨粉", "风控", "平台规则", "账号获取", "矩阵"],
         "exclude_terms": [],
     }
     item = {
@@ -40,6 +43,19 @@ def main() -> None:
     assert "带货" not in tags
     assert "涨粉" not in tags
     assert len(tags) == len(set(tags)), "canonical tags should be deduped"
+
+    risk_control_item = {
+        "clean_text": "小红书账号矩阵起号时，先准备老号和白号池，按平台规则控制发布节奏，避免审核限流。这里是完整风控对抗流程：1. 分层养号；2. 批量测试笔记；3. 复盘违规原因。",
+        "links": [],
+        "metrics": {"likes": 24, "views": 1200},
+        "author_followers": 1800,
+    }
+    risk_control_decision = score_platform_post(risk_control_item, platform)
+    assert risk_control_decision["accepted"], "risk-control and matrix playbooks should enter platform trend collection"
+    risk_tags = risk_control_decision["item"]["tags"]
+    assert "风控对抗" in risk_tags
+    assert "平台规则" in risk_tags
+    assert "矩阵" in risk_tags
 
     adult_noise = {
         "clean_text": "冷知识：中国约炮平台流量最高：Boss直聘 > 小红书 > 58同城",
@@ -86,8 +102,9 @@ def main() -> None:
     status = collection_status(
         [item],
         candidates_seen=80,
-        max_items=20,
-        max_candidates=200,
+        max_items=50,
+        max_candidates=400,
+        min_views=300,
         warnings=["TwitterAPI.io request budget exhausted: 12/12 requests used."],
     )
     assert status["status"] == "partial"

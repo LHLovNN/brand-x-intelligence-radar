@@ -493,18 +493,18 @@ function emptyPlatformTrendPayload() {
       accepted_count: 0,
       candidates_inspected: 0,
       metric_filtered: 0,
-      max_items: 20,
-      max_candidates: 200,
-      min_views: 500,
+      max_items: 50,
+      max_candidates: 400,
+      min_views: 300,
       min_likes: 10,
     },
     summary: {
       accepted: 0,
       candidates_inspected: 0,
       metric_filtered: 0,
-      max_items: 20,
-      max_candidates: 200,
-      min_views: 500,
+      max_items: 50,
+      max_candidates: 400,
+      min_views: 300,
       min_likes: 10,
     },
   };
@@ -891,7 +891,7 @@ function xiaohongshuPage() {
     ${pageHero({
       eyebrow: "谛听-情报库",
       title: "小红书",
-      subtitle: `${latest.date ? formatDateLong(latest.date) : "等待首次采集"} · X 上关于小红书养号、起号、流量和变现的方法论内容`,
+      subtitle: `${latest.date ? formatDateLong(latest.date) : "等待首次采集"} · X 上关于小红书养号、起号、流量、变现、风控和矩阵的方法论内容`,
       stats: [
         [latestItems.length, "今日收录"],
         [totalItems, "归档内容"],

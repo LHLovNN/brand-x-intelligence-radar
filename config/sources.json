@@ -8,10 +8,6 @@
   },
   "social_search_modes": [
     {
-      "query_type": "Latest",
-      "ratio": 1
-    },
-    {
       "query_type": "Top",
       "ratio": 1
     }
@@ -25,10 +21,10 @@
     "status": "documented_not_enabled"
   },
   "limits": {
-    "max_posts_per_day": 60,
-    "max_primary_posts_per_day": 40,
+    "max_posts_per_day": 120,
+    "max_primary_posts_per_day": 100,
     "max_competitor_posts_per_day": 20,
-    "max_source_requests_per_run": 4,
+    "max_source_requests_per_run": 6,
     "max_verification_calls_per_day": 0,
     "max_deep_analysis_calls_per_day": 0
   },
