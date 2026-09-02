@@ -266,6 +266,18 @@ HARD_NOISE_TERMS = [
     "x创作者收益",
     "生日快乐",
     "阴阳怪气",
+    "虐待动物",
+    "虐杀动物",
+    "虐猫",
+    "动物保护组织",
+    "通报执法",
+    "feline guardians",
+    "lady freethinker",
+    "stop animal cruelty",
+    "stop cat torture",
+    "justice for animals",
+    "justiceforanimals",
+    "justiceforwangwang",
 ]
 
 STRUCTURE_SIGNALS = [

@@ -99,6 +99,14 @@ def main() -> None:
     }
     assert not score_platform_post(off_topic_comparison, platform)["accepted"], "off-topic platform comparisons should not enter collection"
 
+    animal_cruelty_report = {
+        "clean_text": "如果你在网络上发现虐待动物的视频，请不要沉默。保存证据后向微博、小红书、QQ、抖音等平台按平台规则举报，再通报执法部门和动物保护组织。STOP ANIMAL CRUELTY.",
+        "links": [],
+        "metrics": {"likes": 116, "views": 1962, "replies": 0},
+        "author_followers": 1000,
+    }
+    assert not score_platform_post(animal_cruelty_report, platform)["accepted"], "animal-cruelty reporting advocacy is not XHS growth methodology"
+
     status = collection_status(
         [item],
         candidates_seen=80,
