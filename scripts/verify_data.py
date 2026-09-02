@@ -2,6 +2,7 @@
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -11,7 +12,7 @@ URL_RE = re.compile(r"https?://\S+|t\.co/\S+", re.IGNORECASE)
 MENTION_RE = re.compile(r"@[A-Za-z0-9_]{1,20}")
 TEXT_SIGNAL_RE = re.compile(r"[A-Za-z0-9\u3400-\u9fff]")
 LOW_QUALITY_CONTEXT_RE = re.compile(
-    r"应该没人比我玩[的得]开了吧|我[福肤]不黑不信你看|比(?:我|你|他|她|ta).{0,4}好看的没(?:我|你|他|她|ta).{0,4}骚.{0,20}比(?:我|你|他|她|ta).{0,4}骚的没(?:我|你|他|她|ta).{0,4}好看|比(?:我|你|他|她|ta).{0,4}好看的没.{0,10}骚.{0,24}比(?:我|你|他|她|ta).{0,4}骚的没.{0,10}好看|只入身体.{0,20}不入生活|我果然太[涩色瑟]了.{0,16}有人想锐评一下我的[福肤]嘛|sao.{0,8}货.{0,16}没人比(?:她|他|ta)sao|(?:\d+\+)?(?:果然)?太[涩色瑟]了.{0,16}我真顶不住|她太[涩色瑟]了.{0,16}我真顶不住|主页.{0,16}能打(?:✈|飞机)",
+    r"应该没人比我玩[的得]开了吧|我[福肤]不黑不信你看|比(?:我|你|他|她|ta).{0,4}好看的没(?:我|你|他|她|ta).{0,4}骚.{0,20}比(?:我|你|他|她|ta).{0,4}骚的没(?:我|你|他|她|ta).{0,4}好看|比(?:我|你|他|她|ta).{0,4}好看的没.{0,10}骚.{0,24}比(?:我|你|他|她|ta).{0,4}骚的没.{0,10}好看|只入身体.{0,20}不入生活|我果然太[涩色瑟]了.{0,16}有人想锐评一下我的[福肤]嘛|sao.{0,8}货.{0,16}没人比(?:她|他|ta)sao|(?:\d+\+)?(?:果然)?太[涩色瑟]了.{0,16}我真顶不住|她太[涩色瑟]了.{0,16}我真顶不住|主页.{0,16}能打(?:✈|飞机)|玩归玩闹归闹.{0,24}给(?:你|妳)?看[福肤].{0,24}不开玩笑",
     re.IGNORECASE,
 )
 LOW_QUALITY_CONTEXT_PROFILE_RE = re.compile(
@@ -53,6 +54,11 @@ def fail(message: str) -> None:
 def assert_true(condition: bool, message: str) -> None:
     if not condition:
         fail(message)
+
+
+def compact_noise_text(text: str) -> str:
+    visible = "".join(char for char in str(text or "") if unicodedata.category(char) != "Cf")
+    return re.sub(r"\s+", "", visible)
 
 
 def walk_objects(value):
@@ -97,9 +103,9 @@ def verify_conversation_contexts(payload, label: str) -> None:
             post_id = post.get("post_id") or "unknown"
             post_handle = str(post.get("author_handle") or "").strip().lstrip("@").lower()
             post_created_at = str(post.get("created_at") or "")
-            compact = re.sub(r"\s+", "", f"{text} {translation}")
+            compact = compact_noise_text(f"{text} {translation}")
             profile = " ".join(str(post.get(key) or "") for key in ("author_name", "author_handle", "author_bio"))
-            compact_profile = re.sub(r"\s+", "", profile)
+            compact_profile = compact_noise_text(profile)
             if root_anchor_handle and str(post_id) != obj_post_id and post_handle != root_anchor_handle:
                 is_later_context_post = bool(obj_created_at and post_created_at and post_created_at >= obj_created_at)
                 assert_true(

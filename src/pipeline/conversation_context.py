@@ -5,6 +5,7 @@ import json
 import os
 import re
 import socket
+import unicodedata
 import urllib.error
 import urllib.request
 from typing import Any
@@ -363,10 +364,10 @@ def prepare_context_rows(rows: list[dict[str, Any]], translation_service: Transl
         if not post_id or post_id in seen:
             continue
         seen.add(post_id)
-        clean_text = decoded_text(row.get("clean_text") or row.get("text") or "")
+        clean_text = strip_media_placeholder_urls(decoded_text(row.get("clean_text") or row.get("text") or ""), row)
         item = {
             **row,
-            "text": decoded_text(row.get("text") or ""),
+            "text": strip_media_placeholder_urls(decoded_text(row.get("text") or ""), row),
             "clean_text": clean_text,
             "translation_zh": row.get("translation_zh") or "",
             "translation_status": row.get("translation_status", "pending"),
@@ -392,7 +393,7 @@ def is_low_quality_context_row(row: dict[str, Any]) -> bool:
         for value in (row.get("translation_zh"), row.get("clean_text"), row.get("text"))
         if value
     )
-    compact = re.sub(r"\s+", "", text)
+    compact = compact_context_noise_text(text)
     if any(pattern.search(compact) for pattern in LOW_QUALITY_CONTEXT_PATTERNS):
         return True
     profile = " ".join(
@@ -400,8 +401,32 @@ def is_low_quality_context_row(row: dict[str, Any]) -> bool:
         for value in (row.get("author_name"), row.get("author_handle"), row.get("author_bio"))
         if value
     )
-    compact_profile = re.sub(r"\s+", "", profile)
+    compact_profile = compact_context_noise_text(profile)
     return any(pattern.search(compact_profile) for pattern in LOW_QUALITY_CONTEXT_PROFILE_PATTERNS)
+
+
+def compact_context_noise_text(text: str) -> str:
+    visible = "".join(char for char in str(text or "") if unicodedata.category(char) != "Cf")
+    return re.sub(r"\s+", "", visible)
+
+
+def strip_media_placeholder_urls(text: str, post: dict[str, Any]) -> str:
+    cleaned = str(text or "")
+    for url in media_placeholder_urls(post):
+        cleaned = re.sub(rf"(?<!\S){re.escape(url)}(?!\S)", "", cleaned)
+    return re.sub(r"[ \t]+", " ", cleaned).strip()
+
+
+def media_placeholder_urls(post: dict[str, Any]) -> list[str]:
+    urls: list[str] = []
+    media = post.get("media") or post.get("extended_entities", {}).get("media") or []
+    for item in media:
+        if not isinstance(item, dict):
+            continue
+        url = str(item.get("url") or "").strip()
+        if url and url not in urls:
+            urls.append(url)
+    return urls
 
 
 def build_context_for_post(

@@ -96,9 +96,10 @@ def main() -> None:
                 author_name="伊伊（离异❤️‍求.满足",
                 author_bio="已入住约p平台，每晚准时涩播，寻固炮必备，同城线下可加绿泡泡",
             ),
+            post(18, text="@source 比‍‍᠎我​好‍看⁠​‌的᠎没⁠​我‌⁠骚😛‌🙄‌比᠎​我​骚⁠⁠的没我᠎​⁠好⁠​看"),
         ]
     )
-    assert filtered_noise == 11, "obvious low-quality vulgar context replies should be filtered"
+    assert filtered_noise == 12, "obvious low-quality vulgar context replies should be filtered"
     assert [item["post_id"] for item in clean_rows] == ["6"], "normal context replies should stay visible"
 
     rows = [post(index) for index in range(50)]
@@ -124,6 +125,19 @@ def main() -> None:
     media_context = build_context_for_post(prepared[0], prepared)
     assert media_context["posts"][0]["text"] == "Ici >> https://t.co/example", "context text should decode HTML entities"
     assert media_context["posts"][0]["media"][0]["media_url_https"] == "https://pbs.twimg.com/media/example.jpg", "context media should be normalized for the dashboard renderer"
+
+    prepared_media_placeholder = prepare_context_rows(
+        [
+            post(
+                100,
+                text="图片用 Image2 等模型生成， https://t.co/yqRoyVQuOY",
+                clean_text="",
+                media=[{"url": "https://t.co/yqRoyVQuOY", "media_url_https": "https://pbs.twimg.com/media/example.jpg", "type": "photo"}],
+            )
+        ],
+        None,
+    )
+    assert prepared_media_placeholder[0]["clean_text"] == "图片用 Image2 等模型生成，", "context media placeholder URLs should be removed"
 
     class ConfiguredSummaryService:
         configured = True

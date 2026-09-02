@@ -7,6 +7,7 @@ sys.path.insert(0, str(ROOT))
 
 from src.pipeline.platform_trends import (
     canonical_platform_tag,
+    clean_post_text,
     collection_status,
     public_platform_collection_status,
     score_platform_post,
@@ -22,6 +23,14 @@ def main() -> None:
     assert canonical_platform_tag("限流") == "风控对抗"
     assert canonical_platform_tag("平台规则") == "平台规则"
     assert canonical_platform_tag("账号矩阵") == "矩阵"
+
+    media_text = clean_post_text(
+        {
+            "text": "图片用 Image2 等模型生成， https://t.co/yqRoyVQuOY",
+            "media": [{"url": "https://t.co/yqRoyVQuOY", "type": "photo"}],
+        }
+    )
+    assert media_text == "图片用 Image2 等模型生成，", "media placeholder URLs should not appear in XHS card text"
 
     platform = {
         "aliases": ["小红书"],

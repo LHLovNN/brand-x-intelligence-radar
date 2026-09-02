@@ -13,6 +13,7 @@ from src.pipeline.conversation_context import (
     attach_conversation_contexts,
     dedupe_contextual_items_keep_earliest,
     dedupe_conversation_items_keep_earliest,
+    strip_media_placeholder_urls,
 )
 from src.pipeline.dashboard_builder import write_data_bundle
 from src.pipeline.translation import apply_translations, translation_report
@@ -943,6 +944,7 @@ def public_platform_warnings(warnings: list[Any]) -> list[str]:
 
 def clean_post_text(post: dict[str, Any]) -> str:
     text = html.unescape(str(post.get("text") or ""))
+    text = strip_media_placeholder_urls(text, post)
     return re.sub(r"[ \t]+", " ", text).strip()
 
 
