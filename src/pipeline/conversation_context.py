@@ -32,6 +32,7 @@ LOW_QUALITY_CONTEXT_PATTERNS = [
     re.compile(r"(?:\d+\+)?(?:果然)?太[涩色瑟]了.{0,16}我真顶不住", re.IGNORECASE),
     re.compile(r"她太[涩色瑟]了.{0,16}我真顶不住", re.IGNORECASE),
     re.compile(r"主页.{0,16}能打(?:✈|飞机)", re.IGNORECASE),
+    re.compile(r"玩归玩闹归闹.{0,24}给(?:你|妳)?看[福肤].{0,24}不开玩笑", re.IGNORECASE),
 ]
 LOW_QUALITY_CONTEXT_PROFILE_PATTERNS = [
     re.compile(
