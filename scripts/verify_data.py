@@ -167,10 +167,11 @@ def verify_platform_trends() -> None:
     index = load(index_path)
     items = latest.get("items") or []
     collection_status = latest.get("collection_status", {})
-    max_items = collection_status.get("max_items", 20)
+    max_items = collection_status.get("max_items")
     min_views = int(collection_status.get("min_views", 500) or 0)
     min_likes = int(collection_status.get("min_likes", 10) or 0)
-    assert_true(len(items) <= max_items, "platform trends should not exceed daily max items")
+    if max_items:
+        assert_true(len(items) <= max_items, "platform trends should not exceed daily max items")
     times = [str(item.get("created_at") or "") for item in items]
     assert_true(times == sorted(times, reverse=True), "platform trends should be sorted by publish time desc")
     assert_true(index.get("latest_date") == latest.get("date"), "platform trends latest date mismatch")

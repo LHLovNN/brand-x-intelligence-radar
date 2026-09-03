@@ -5841,16 +5841,14 @@
     }
   ],
   "collection_status": {
-    "status": "partial",
-    "completion_reason": "candidate_source_exhausted",
-    "warnings": [
-      "平台流变采集达到本次保护阈值，已保留已取得内容。"
-    ],
+    "status": "complete",
+    "completion_reason": "source_request_limit_reached",
+    "warnings": [],
     "accepted_count": 19,
     "candidates_inspected": 236,
     "metric_filtered": 206,
     "conversation_deduped": 0,
-    "max_items": 50,
+    "max_items": null,
     "max_candidates": 400,
     "min_views": 300,
     "min_likes": 10,
@@ -5875,14 +5873,15 @@
       "warnings": [
         "conversation context capped at 50 posts for 1 item(s)."
       ]
-    }
+    },
+    "source_request_limit_reached": true
   },
   "summary": {
     "accepted": 19,
     "candidates_inspected": 236,
     "metric_filtered": 206,
     "conversation_deduped": 0,
-    "max_items": 50,
+    "max_items": null,
     "max_candidates": 400,
     "min_views": 300,
     "min_likes": 10

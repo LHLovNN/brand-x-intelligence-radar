@@ -121,15 +121,29 @@ def main() -> None:
     status = collection_status(
         [item],
         candidates_seen=80,
-        max_items=50,
+        max_items=None,
+        max_candidates=400,
+        min_views=300,
+        warnings=[],
+        source_request_limit_reached=True,
+    )
+    assert status["status"] == "complete"
+    assert status["completion_reason"] == "source_request_limit_reached"
+    public_status = public_platform_collection_status(status)
+    assert public_status["warnings"] == []
+
+    budget_status = collection_status(
+        [item],
+        candidates_seen=80,
+        max_items=None,
         max_candidates=400,
         min_views=300,
         warnings=["TwitterAPI.io request budget exhausted: 12/12 requests used."],
+        source_request_limit_reached=True,
     )
-    assert status["status"] == "partial"
-    public_status = public_platform_collection_status(status)
-    assert public_status["warnings"] == ["平台流变采集达到本次保护阈值，已保留已取得内容。"]
-    assert "TwitterAPI.io" not in public_status["warnings"][0]
+    assert budget_status["status"] == "partial"
+    budget_public_status = public_platform_collection_status(budget_status)
+    assert budget_public_status["warnings"] == [], "planned source request limit should not create a public warning"
 
     split_platform = {
         "aliases": ["小红书", "rednote"],
@@ -145,7 +159,7 @@ def main() -> None:
     assert platform_query_candidate_limit(400, len(queries)) == 200
     assert platform_query_candidate_limit(400, 5) == 80
 
-    zero_status = collection_status([], candidates_seen=0, max_items=50, max_candidates=400, warnings=["Platform trend source returned no candidates for all configured queries."])
+    zero_status = collection_status([], candidates_seen=0, max_items=None, max_candidates=400, warnings=["Platform trend source returned no candidates for all configured queries."])
     zero_public_status = public_platform_collection_status(zero_status)
     assert zero_status["status"] == "partial"
     assert zero_public_status["warnings"] == ["平台流变未从数据源取到候选内容，请检查查询配置或稍后补跑。"]

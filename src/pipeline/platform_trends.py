@@ -23,7 +23,7 @@ from src.utils.time import beijing_label, now_utc, to_iso
 
 
 PLATFORM_KEY = "xiaohongshu"
-DEFAULT_MAX_ITEMS = 50
+DEFAULT_MAX_ITEMS = None
 DEFAULT_MAX_CANDIDATES = 400
 DEFAULT_MAX_REQUESTS = 20
 DEFAULT_MIN_VIEWS = 300
@@ -419,15 +419,18 @@ def collect_platform_trends(
     config = load_platform_config()
     platform = platform_config(config)
     runtime_limits = apply_platform_runtime_limits(x_source, config)
-    max_items = optional_int_env("BRAND_RADAR_PLATFORM_MAX_ITEMS", int(platform.get("max_items_per_day") or DEFAULT_MAX_ITEMS))
     max_candidates = optional_int_env(
         "BRAND_RADAR_PLATFORM_MAX_CANDIDATES",
         int(platform.get("max_candidates_per_day") or DEFAULT_MAX_CANDIDATES),
     )
+    configured_max_items = optional_config_int(platform.get("max_items_per_day"))
+    max_items = optional_int_env("BRAND_RADAR_PLATFORM_MAX_ITEMS", configured_max_items)
     min_views = optional_int_env("BRAND_RADAR_PLATFORM_MIN_VIEWS", int(platform.get("min_views_per_item") or DEFAULT_MIN_VIEWS))
     min_likes = optional_int_env("BRAND_RADAR_PLATFORM_MIN_LIKES", int(platform.get("min_likes_per_item") or DEFAULT_MIN_LIKES))
-    max_items = max(1, max_items or DEFAULT_MAX_ITEMS)
-    max_candidates = max(max_items, max_candidates or DEFAULT_MAX_CANDIDATES)
+    max_items = max(1, max_items) if max_items else None
+    max_candidates = max(1, max_candidates or DEFAULT_MAX_CANDIDATES)
+    item_cap = max_items or max_candidates
+    max_candidates = max(item_cap, max_candidates or DEFAULT_MAX_CANDIDATES)
     min_views = max(0, min_views or 0)
     min_likes = max(0, min_likes or 0)
 
@@ -443,13 +446,14 @@ def collect_platform_trends(
 
     for query in queries:
         stop_after_query = False
-        if len(selected) >= max_items or candidates_seen >= max_candidates:
+        if len(selected) >= item_cap or candidates_seen >= max_candidates or source_request_limit_reached(x_source):
             break
         limit = min(max_candidates - candidates_seen, query_candidate_limit)
         try:
             rows = x_source.search_posts(query, to_iso(start), to_iso(end), limit, query_type="Top")
         except ProviderBudgetExceeded as error:
-            warnings.append(str(error))
+            if not source_request_limit_reached(x_source) or not candidates_seen:
+                warnings.append(str(error))
             break
         except RuntimeError as error:
             warnings.append(f"Platform trend collection stopped after error: {str(error)[:180]}")
@@ -479,7 +483,7 @@ def collect_platform_trends(
                 selected, removed_duplicates = dedupe_conversation_items_keep_earliest(selected)
                 conversation_deduped += removed_duplicates
                 accepted_for_query += 1
-            if len(selected) >= max_items or candidates_seen >= max_candidates:
+            if len(selected) >= item_cap or candidates_seen >= max_candidates:
                 break
         query_stats.append(
             {
@@ -492,9 +496,7 @@ def collect_platform_trends(
                 "accepted": accepted_for_query,
             }
         )
-        budget_warning = source_request_budget_warning(x_source)
-        if budget_warning:
-            append_unique_warning(warnings, budget_warning)
+        if source_request_limit_reached(x_source):
             stop_after_query = True
         if stop_after_query:
             break
@@ -518,6 +520,7 @@ def collect_platform_trends(
         max_items,
         max_candidates,
         warnings,
+        source_request_limit_reached=source_request_limit_reached(x_source),
         min_views=min_views,
         min_likes=min_likes,
         metric_filtered=metric_filtered,
@@ -545,6 +548,7 @@ def collect_platform_trends(
             "conversation_deduped": conversation_deduped,
             "max_items": max_items,
             "max_candidates": max_candidates,
+            "max_source_requests": runtime_limits.get("max_source_requests"),
             "min_views": min_views,
             "min_likes": min_likes,
         },
@@ -738,19 +742,22 @@ def refresh_context_status_for_items(context_status: dict[str, Any], items: list
 def collection_status(
     items: list[dict[str, Any]],
     candidates_seen: int,
-    max_items: int,
+    max_items: int | None,
     max_candidates: int,
     warnings: list[str],
+    source_request_limit_reached: bool = False,
     min_views: int = DEFAULT_MIN_VIEWS,
     min_likes: int = DEFAULT_MIN_LIKES,
     metric_filtered: int = 0,
     conversation_deduped: int = 0,
 ) -> dict[str, Any]:
     status = "complete"
-    if len(items) >= max_items:
+    if max_items and len(items) >= max_items:
         reason = "daily_item_target_reached"
     elif candidates_seen >= max_candidates:
         reason = "candidate_cap_reached"
+    elif source_request_limit_reached:
+        reason = "source_request_limit_reached"
     else:
         reason = "candidate_source_exhausted"
     if warnings:
@@ -765,6 +772,7 @@ def collection_status(
         "conversation_deduped": conversation_deduped,
         "max_items": max_items,
         "max_candidates": max_candidates,
+        "source_request_limit_reached": source_request_limit_reached,
         "min_views": min_views,
         "min_likes": min_likes,
     }
@@ -912,20 +920,21 @@ def platform_request_stats(x_source: Any) -> dict[str, Any]:
         "api_requests_used": getattr(x_source, "requests_used", None),
         "max_api_requests": getattr(x_source, "max_requests_per_run", None),
         "request_budget_exhausted": bool(getattr(x_source, "request_budget_exhausted", False)),
+        "source_request_limit_reached": source_request_limit_reached(x_source),
         "context_requests_used": getattr(x_source, "context_requests_used", None),
         "max_context_requests": getattr(x_source, "max_context_requests_per_run", None),
         "context_request_budget_exhausted": bool(getattr(x_source, "context_request_budget_exhausted", False)),
     }
 
 
-def source_request_budget_warning(x_source: Any) -> str:
-    if not bool(getattr(x_source, "request_budget_exhausted", False)):
-        return ""
-    used = getattr(x_source, "requests_used", None)
+def source_request_limit_reached(x_source: Any) -> bool:
     max_requests = getattr(x_source, "max_requests_per_run", None)
-    if used is not None and max_requests is not None:
-        return f"TwitterAPI.io request budget exhausted: {used}/{max_requests} requests used."
-    return "TwitterAPI.io request budget exhausted."
+    if max_requests is None:
+        return bool(getattr(x_source, "request_budget_exhausted", False))
+    try:
+        return int(getattr(x_source, "requests_used", 0) or 0) >= int(max_requests)
+    except (TypeError, ValueError):
+        return bool(getattr(x_source, "request_budget_exhausted", False))
 
 
 def append_unique_warning(warnings: list[str], warning: str) -> None:
@@ -948,7 +957,7 @@ def public_platform_warnings(warnings: list[Any]) -> list[str]:
         if "no candidates" in lower:
             message = "平台流变未从数据源取到候选内容，请检查查询配置或稍后补跑。"
         elif "budget" in lower or "request" in lower or "provider" in lower or "twitterapi" in lower:
-            message = "平台流变采集达到本次保护阈值，已保留已取得内容。"
+            continue
         else:
             message = "平台流变采集完成，但存在非关键提醒。"
         if message not in results:
@@ -1102,6 +1111,16 @@ def optional_int_env(name: str, fallback: int | None) -> int | None:
     if value < 0:
         return fallback
     return value
+
+
+def optional_config_int(value: Any) -> int | None:
+    if value is None or value == "":
+        return None
+    try:
+        parsed = int(value)
+    except (TypeError, ValueError):
+        return None
+    return parsed if parsed > 0 else None
 
 
 def _or_clause(terms: list[str]) -> str:
