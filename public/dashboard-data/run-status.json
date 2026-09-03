@@ -1,37 +1,40 @@
 {
   "status": "ok",
-  "generated_at": "2026-09-03T00:03:13Z",
+  "generated_at": "2026-09-03T01:49:43Z",
   "window_start": "2026-09-02T00:00:00Z",
   "window_end": "2026-09-03T00:00:00Z",
   "window_label": "2026-09-02 08:00 BJT - 2026-09-03 08:00 BJT",
   "raw_posts": 42,
   "normalized_posts": 42,
-  "primary_signals": 4,
+  "primary_signals": 6,
   "collection_status": {
     "status": "complete",
     "warnings": [],
     "translation": {
       "configured": true,
       "counts": {
-        "translated": 42
+        "translated": 41,
+        "source_chinese": 1
       },
       "missing_count": 0,
       "fallback_original_count": 0
     }
   },
   "platform_trends": {
-    "status": "complete",
-    "accepted": 0,
-    "candidates_inspected": 0,
-    "warnings": []
+    "status": "partial",
+    "accepted": 19,
+    "candidates_inspected": 236,
+    "warnings": [
+      "平台流变采集达到本次保护阈值，已保留已取得内容。"
+    ]
   },
   "dashboard_metrics": {
-    "effective_intelligence": 4,
+    "effective_intelligence": 6,
     "high_risk": 0,
     "needs_review": 0,
     "primary_volume": 25,
-    "primary_candidate_volume": 26,
-    "competitor_volume": 15,
-    "negative_share": 25
+    "primary_candidate_volume": 25,
+    "competitor_volume": 17,
+    "negative_share": 17
   }
 }
