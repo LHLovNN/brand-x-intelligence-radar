@@ -1,19 +1,61 @@
 {
-  "generated_at": "2026-09-02T00:30:13Z",
-  "generated_at_label": "2026-09-02 08:30 BJT",
+  "generated_at": "2026-09-03T00:30:13Z",
+  "generated_at_label": "2026-09-03 08:30 BJT",
   "source": "codew1028/dt",
   "source_base_url": "https://codew1028.github.io/dt",
   "detail_days": 60,
   "latest": {
-    "ai": "2026-09-02",
-    "tg": "2026-09-02"
+    "ai": "2026-09-03",
+    "tg": "2026-09-03"
   },
-  "latest_date": "2026-09-02",
+  "latest_date": "2026-09-03",
   "counts": {
-    "ai": 112,
-    "tg": 119
+    "ai": 113,
+    "tg": 120
   },
   "items": [
+    {
+      "kind": "tg",
+      "kind_label": "TG 日报",
+      "date": "2026-09-03",
+      "file": "2026-09-03-tg-digest.html",
+      "title": "TG 日报",
+      "source_url": "https://codew1028.github.io/dt/2026-09-03-tg-digest.html",
+      "search_text_hash": "e79e2b5db8700adb",
+      "body_preview": "TG 频道日报 VOL.20260903 TG 频道日报 2026年09月03日 · 星期四 · 8 个频道 · 55 条内容 55 条内容 8 个频道 01 TG 频道精选 55 条 @zaihuapd 00:07 🍏 **Apple 新任 CEO John Ternus 开通社交媒体账号** 微博: JohnTernus X (Twitter): @johnternus 与此同时，原 Apple CEO Tim Cook 的简介更改为“Apple Executive Ch",
+      "item_count": 54,
+      "section_count": 1,
+      "has_json": true,
+      "json_url": "2026-09-03-tg-digest.json",
+      "original_item_count": 55,
+      "filtered_count": 1,
+      "filter_summary": [
+        {
+          "reason": "short_status_chatter",
+          "label": "无摘要短状态闲聊",
+          "count": 1
+        }
+      ],
+      "detail_path": "dashboard-data/dt-digests/daily/tg/2026-09-03.json",
+      "detail_available": true
+    },
+    {
+      "kind": "ai",
+      "kind_label": "AI 日报",
+      "date": "2026-09-03",
+      "file": "20260903-AI日报.html",
+      "title": "AI 日报",
+      "source_url": "https://codew1028.github.io/dt/20260903-AI%E6%97%A5%E6%8A%A5.html",
+      "search_text_hash": "32d8073e4e46bf81",
+      "body_preview": "🤖 AI 日报 VOL.20260903 🤖 AI 日报 2026年09月03日 · 星期四 · 4 个板块 · 15 条内容 15 条内容 4 个板块 01 模型发布/更新 3 条 Google DeepMind 发布 Gemini 3.8 Flash 与 3.8 Flash Cyber 两款新模型 Google DeepMind 发布 Gemini 3.8 Flash 与 3.8 Flash Cyber。 Google DeepMind Blog（RSS） Meta 发布",
+      "item_count": 15,
+      "section_count": 4,
+      "detail_path": "dashboard-data/dt-digests/daily/ai/2026-09-03.json",
+      "detail_available": true,
+      "original_item_count": 15,
+      "filtered_count": 0,
+      "filter_summary": []
+    },
     {
       "kind": "tg",
       "kind_label": "TG 日报",
