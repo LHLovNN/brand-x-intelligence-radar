@@ -6,9 +6,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from src.pipeline.platform_trends import (
+    build_platform_queries,
     canonical_platform_tag,
     clean_post_text,
     collection_status,
+    platform_query_candidate_limit,
     public_platform_collection_status,
     score_platform_post,
 )
@@ -128,6 +130,25 @@ def main() -> None:
     public_status = public_platform_collection_status(status)
     assert public_status["warnings"] == ["平台流变采集达到本次保护阈值，已保留已取得内容。"]
     assert "TwitterAPI.io" not in public_status["warnings"][0]
+
+    split_platform = {
+        "aliases": ["小红书", "rednote"],
+        "query_groups": [
+            {"intent_terms": ["养号", "起号", "涨粉"]},
+            {"intent_terms": ["变现", "商单", "带货"]},
+        ],
+        "exclude_terms": ["coupon code"],
+    }
+    queries = build_platform_queries(split_platform)
+    assert len(queries) == 2, "platform trend queries should split into configured topic groups"
+    assert all(len(query) < 180 for query in queries), "split platform trend queries should stay short enough for stable Top search"
+    assert platform_query_candidate_limit(400, len(queries)) == 200
+    assert platform_query_candidate_limit(400, 5) == 80
+
+    zero_status = collection_status([], candidates_seen=0, max_items=50, max_candidates=400, warnings=["Platform trend source returned no candidates for all configured queries."])
+    zero_public_status = public_platform_collection_status(zero_status)
+    assert zero_status["status"] == "partial"
+    assert zero_public_status["warnings"] == ["平台流变未从数据源取到候选内容，请检查查询配置或稍后补跑。"]
     print("Platform trend tag tests passed.")
 
 

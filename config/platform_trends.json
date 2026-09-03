@@ -56,6 +56,86 @@
         "playbook",
         "strategy"
       ],
+      "query_groups": [
+        {
+          "name": "account_growth",
+          "intent_terms": [
+            "养号",
+            "起号",
+            "涨粉",
+            "账号运营",
+            "账号获取",
+            "买号",
+            "租号",
+            "老号",
+            "白号",
+            "growth",
+            "account acquisition",
+            "buy account"
+          ]
+        },
+        {
+          "name": "content_traffic",
+          "intent_terms": [
+            "爆文",
+            "笔记",
+            "内容定位",
+            "流量",
+            "算法",
+            "推荐",
+            "曝光",
+            "creator",
+            "traffic",
+            "algorithm",
+            "strategy"
+          ]
+        },
+        {
+          "name": "monetization",
+          "intent_terms": [
+            "变现",
+            "引流",
+            "私域",
+            "商单",
+            "带货",
+            "店铺",
+            "monetization",
+            "commerce",
+            "affiliate"
+          ]
+        },
+        {
+          "name": "risk_rules_matrix",
+          "intent_terms": [
+            "风控",
+            "风控对抗",
+            "限流",
+            "封号",
+            "违规",
+            "审核",
+            "平台规则",
+            "社区规范",
+            "账号矩阵",
+            "内容矩阵",
+            "矩阵",
+            "risk control",
+            "account safety",
+            "platform policy",
+            "account matrix"
+          ]
+        },
+        {
+          "name": "case_playbook",
+          "intent_terms": [
+            "案例",
+            "复盘",
+            "拆解",
+            "实操",
+            "case study",
+            "playbook"
+          ]
+        }
+      ],
       "exclude_terms": [
         "tiktok refugee",
         "privacy concern",

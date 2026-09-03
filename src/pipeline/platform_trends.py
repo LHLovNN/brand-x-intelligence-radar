@@ -438,12 +438,14 @@ def collect_platform_trends(
     conversation_deduped = 0
     warnings: list[str] = []
     query_stats: list[dict[str, Any]] = []
+    queries = build_platform_queries(platform)
+    query_candidate_limit = platform_query_candidate_limit(max_candidates, len(queries))
 
-    for query in build_platform_queries(platform):
+    for query in queries:
         stop_after_query = False
         if len(selected) >= max_items or candidates_seen >= max_candidates:
             break
-        limit = max_candidates - candidates_seen
+        limit = min(max_candidates - candidates_seen, query_candidate_limit)
         try:
             rows = x_source.search_posts(query, to_iso(start), to_iso(end), limit, query_type="Top")
         except ProviderBudgetExceeded as error:
@@ -482,6 +484,7 @@ def collect_platform_trends(
         query_stats.append(
             {
                 "query_label": query_label(query),
+                "candidate_limit": limit,
                 "fetched": len(rows),
                 "inspected": inspected_for_query,
                 "metric_filtered": metric_filtered_for_query,
@@ -495,6 +498,9 @@ def collect_platform_trends(
             stop_after_query = True
         if stop_after_query:
             break
+
+    if not candidates_seen and query_stats:
+        append_unique_warning(warnings, "Platform trend source returned no candidates for all configured queries.")
 
     selected.sort(key=lambda item: str(item.get("created_at") or ""), reverse=True)
     translation_status = apply_translations(selected, translation_service)
@@ -581,6 +587,12 @@ def build_platform_queries(platform: dict[str, Any]) -> list[str]:
     intents = platform.get("intent_terms") or []
     excludes = platform.get("exclude_terms") or []
     return [f"({_or_clause(aliases)}) ({_or_clause(intents)}) -filter:retweets {_negative_clause(excludes)}".strip()]
+
+
+def platform_query_candidate_limit(max_candidates: int, query_count: int) -> int:
+    if query_count <= 1:
+        return max_candidates
+    return min(max_candidates, max(40, math.ceil(max_candidates / query_count)))
 
 
 def normalize_platform_post(post: dict[str, Any], platform: dict[str, Any]) -> dict[str, Any]:
@@ -933,7 +945,9 @@ def public_platform_warnings(warnings: list[Any]) -> list[str]:
     for warning in warnings:
         text = str(warning)
         lower = text.lower()
-        if "budget" in lower or "request" in lower or "provider" in lower or "twitterapi" in lower:
+        if "no candidates" in lower:
+            message = "平台流变未从数据源取到候选内容，请检查查询配置或稍后补跑。"
+        elif "budget" in lower or "request" in lower or "provider" in lower or "twitterapi" in lower:
             message = "平台流变采集达到本次保护阈值，已保留已取得内容。"
         else:
             message = "平台流变采集完成，但存在非关键提醒。"
