@@ -32,8 +32,15 @@ LOW_QUALITY_CONTEXT_PATTERNS = [
     re.compile(r"sao.{0,8}货.{0,16}没人比(?:她|他|ta)sao", re.IGNORECASE),
     re.compile(r"(?:\d+\+)?(?:果然)?太[涩色瑟]了.{0,16}我真顶不住", re.IGNORECASE),
     re.compile(r"她太[涩色瑟]了.{0,16}我真顶不住", re.IGNORECASE),
-    re.compile(r"主页.{0,16}能打(?:✈|飞机)", re.IGNORECASE),
+    re.compile(r"主页.{0,16}能打(?:✈|🛩️?|飞机)", re.IGNORECASE),
     re.compile(r"玩归玩闹归闹.{0,24}给(?:你|妳)?看[福肤].{0,24}不开玩笑", re.IGNORECASE),
+    re.compile(
+        r"(?:小红书|快手|抖音).{0,12}(?:违规|发不出).{0,24}(?:推特|twitter|x).{0,80}"
+        r"(?:开脱|上供|luo照|裸照|锐评一下不许说我|🐻黑|粉嫩的[福肤])",
+        re.IGNORECASE,
+    ),
+    re.compile(r"(?:开脱|上供).{0,30}(?:luo照|裸照|锐评一下不许说我|🐻黑|粉嫩的[福肤])", re.IGNORECASE),
+    re.compile(r"玩的就是反差.{0,30}身体已经软.{0,30}想被狠狠欺负", re.IGNORECASE),
 ]
 LOW_QUALITY_CONTEXT_PROFILE_PATTERNS = [
     re.compile(

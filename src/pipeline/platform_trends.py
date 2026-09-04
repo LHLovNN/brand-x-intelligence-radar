@@ -221,6 +221,7 @@ HARD_NOISE_TERMS = [
     "涩播",
     "约会软件",
     "成人交友",
+    "小黄书",
     "删帖",
     "删除微信公众号文章",
     "删除微博",
@@ -279,6 +280,16 @@ HARD_NOISE_TERMS = [
     "justice for animals",
     "justiceforanimals",
     "justiceforwangwang",
+]
+
+HARD_NOISE_PATTERNS = [
+    re.compile(
+        r"(?:小红书|快手|抖音).{0,12}(?:违规|发不出).{0,24}(?:推特|twitter|x).{0,80}"
+        r"(?:开脱|上供|luo照|裸照|锐评一下不许说我|🐻黑|粉嫩的[福肤])",
+        re.IGNORECASE,
+    ),
+    re.compile(r"(?:开脱|上供).{0,30}(?:luo照|裸照|锐评一下不许说我|🐻黑|粉嫩的[福肤])", re.IGNORECASE),
+    re.compile(r"玩的就是反差.{0,30}身体已经软.{0,30}想被狠狠欺负", re.IGNORECASE),
 ]
 
 STRUCTURE_SIGNALS = [
@@ -681,7 +692,7 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
         return {"accepted": False, "item": {}}
     if not platform_focus_signal(lower, aliases):
         return {"accepted": False, "item": {}}
-    if matched_terms(lower, HARD_NOISE_TERMS):
+    if matched_terms(lower, HARD_NOISE_TERMS) or is_hard_noise_platform_text(text):
         return {"accepted": False, "item": {}}
     if matched_terms(lower, exclude_terms) and not strong_method_signal(lower):
         return {"accepted": False, "item": {}}
@@ -989,6 +1000,11 @@ def matched_terms(lower: str, terms: list[str]) -> list[str]:
         elif value in lower:
             matches.append(term)
     return matches
+
+
+def is_hard_noise_platform_text(text: str) -> bool:
+    compact = re.sub(r"\s+", "", str(text or "").lower())
+    return any(pattern.search(compact) for pattern in HARD_NOISE_PATTERNS)
 
 
 def matched_topics(lower: str) -> list[str]:

@@ -77,6 +77,24 @@ def main() -> None:
     adult_noise_decision = score_platform_post(adult_noise, platform)
     assert not adult_noise_decision["accepted"], "low-value adult jokes should not enter platform trend collection"
 
+    adult_rule_evasion = {
+        "clean_text": "玩的就是反差，身体已经软成一滩水。小红书两次违规真发不出，只能推特发了，开脱上供 Luo照 锐评一下不许说我黑。",
+        "links": [],
+        "metrics": {"likes": 28, "views": 1800},
+        "author_followers": 1000,
+    }
+    adult_rule_evasion_decision = score_platform_post(adult_rule_evasion, platform)
+    assert not adult_rule_evasion_decision["accepted"], "adult rule-evasion spam should not enter platform trend collection"
+
+    adult_platform_joke = {
+        "clean_text": "小红书是不是拖延审核员工资了，我还以为打开了小黄书。",
+        "links": [],
+        "metrics": {"likes": 32, "views": 2200},
+        "author_followers": 1000,
+    }
+    adult_platform_joke_decision = score_platform_post(adult_platform_joke, platform)
+    assert not adult_platform_joke_decision["accepted"], "adult platform jokes should not enter platform trend collection"
+
     short_reaction_link = {
         "clean_text": "卧槽，小红书变现能力这么强的嘛！！ https://t.co/example",
         "links": ["https://example.com"],
