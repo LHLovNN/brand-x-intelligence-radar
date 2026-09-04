@@ -141,7 +141,8 @@ def main() -> None:
         candidates_seen=80,
         max_items=None,
         max_candidates=400,
-        min_views=300,
+        min_views=100,
+        min_likes=5,
         warnings=[],
         source_request_limit_reached=True,
     )
@@ -155,7 +156,8 @@ def main() -> None:
         candidates_seen=80,
         max_items=None,
         max_candidates=400,
-        min_views=300,
+        min_views=100,
+        min_likes=5,
         warnings=["TwitterAPI.io request budget exhausted: 12/12 requests used."],
         source_request_limit_reached=True,
     )
