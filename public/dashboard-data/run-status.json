@@ -1,40 +1,37 @@
 {
   "status": "ok",
-  "generated_at": "2026-09-03T01:49:43Z",
-  "window_start": "2026-09-02T00:00:00Z",
-  "window_end": "2026-09-03T00:00:00Z",
-  "window_label": "2026-09-02 08:00 BJT - 2026-09-03 08:00 BJT",
-  "raw_posts": 42,
-  "normalized_posts": 42,
-  "primary_signals": 6,
+  "generated_at": "2026-09-04T00:09:13Z",
+  "window_start": "2026-09-03T00:00:00Z",
+  "window_end": "2026-09-04T00:00:00Z",
+  "window_label": "2026-09-03 08:00 BJT - 2026-09-04 08:00 BJT",
+  "raw_posts": 30,
+  "normalized_posts": 30,
+  "primary_signals": 5,
   "collection_status": {
     "status": "complete",
     "warnings": [],
     "translation": {
       "configured": true,
       "counts": {
-        "translated": 41,
-        "source_chinese": 1
+        "translated": 30
       },
       "missing_count": 0,
       "fallback_original_count": 0
     }
   },
   "platform_trends": {
-    "status": "partial",
-    "accepted": 19,
-    "candidates_inspected": 236,
-    "warnings": [
-      "平台流变采集达到本次保护阈值，已保留已取得内容。"
-    ]
+    "status": "complete",
+    "accepted": 16,
+    "candidates_inspected": 225,
+    "warnings": []
   },
   "dashboard_metrics": {
-    "effective_intelligence": 6,
+    "effective_intelligence": 5,
     "high_risk": 0,
     "needs_review": 0,
-    "primary_volume": 25,
-    "primary_candidate_volume": 25,
-    "competitor_volume": 17,
-    "negative_share": 17
+    "primary_volume": 18,
+    "primary_candidate_volume": 21,
+    "competitor_volume": 9,
+    "negative_share": 20
   }
 }
