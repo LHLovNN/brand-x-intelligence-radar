@@ -25,7 +25,7 @@ from src.utils.time import beijing_label, now_utc, to_iso
 PLATFORM_KEY = "xiaohongshu"
 DEFAULT_MAX_ITEMS = None
 DEFAULT_MAX_CANDIDATES = 400
-DEFAULT_MAX_REQUESTS = 20
+DEFAULT_MAX_REQUESTS = 30
 DEFAULT_MIN_VIEWS = 100
 DEFAULT_MIN_LIKES = 5
 PLATFORM_DATA_ROOT = Path("platform-trends")
