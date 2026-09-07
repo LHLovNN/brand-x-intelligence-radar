@@ -3,6 +3,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 source "$ROOT/scripts/macos/local_env.sh"
+source "$ROOT/scripts/macos/publish_helpers.sh"
 
 LOG_DIR="$ROOT/data/logs/macos"
 LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-daily.lock"
@@ -10,8 +11,16 @@ PYTHON_BIN="${PYTHON_BIN:-python3}"
 RESUME_FROM_CHECKPOINT="${BRAND_RADAR_RESUME_FROM_CHECKPOINT:-0}"
 ATTACH_CONTEXT_FROM_PROVIDER="${BRAND_RADAR_ATTACH_CONTEXT_FROM_PROVIDER:-0}"
 REPORT_DATE="${BRAND_RADAR_REPORT_DATE:-}"
+BRANCH="${BRAND_RADAR_BRANCH:-main}"
+RUN_ID="$(date '+%Y%m%d-%H%M%S')"
+RUN_STARTED_EPOCH="$(date '+%s')"
+RUN_STATUS="failed"
+CURRENT_STAGE="startup"
 
 mkdir -p "$LOG_DIR"
+find "$LOG_DIR" -type f -name 'daily-run-*.log' -mtime +30 -delete 2>/dev/null || true
+RUN_LOG="$LOG_DIR/daily-run-$RUN_ID.log"
+exec > >(tee -a "$RUN_LOG") 2>&1
 
 log() {
   printf '[%s] %s\n' "$(date '+%Y-%m-%d %H:%M:%S %Z')" "$*"
@@ -23,7 +32,18 @@ fail() {
 }
 
 cleanup() {
+  local exit_code=$?
+  local finished_epoch
+  local elapsed
+  finished_epoch="$(date '+%s')"
+  elapsed=$((finished_epoch - RUN_STARTED_EPOCH))
+  release_publish_lock
   rmdir "$LOCK_DIR" 2>/dev/null || true
+  if [[ "$exit_code" == "0" ]]; then
+    RUN_STATUS="success"
+  fi
+  printf '{"job":"daily","run_id":"%s","status":"%s","stage":"%s","elapsed_seconds":%s,"log":"%s"}\n' \
+    "$RUN_ID" "$RUN_STATUS" "$CURRENT_STAGE" "$elapsed" "$RUN_LOG"
 }
 
 if ! mkdir "$LOCK_DIR" 2>/dev/null; then
@@ -52,6 +72,7 @@ ensure_no_local_source_changes() {
     ':!public/dashboard-data/*.json' \
     ':!public/dashboard-data/daily/*.json' \
     ':!public/dashboard-data/platform-trends/**' \
+    ':!public/dashboard-data/lazy/conversations/**' \
     ':!public/dashboard-data-bundle.js' \
     ':!docs/*.md' \
     ':!docs/*.html'; then
@@ -60,7 +81,7 @@ ensure_no_local_source_changes() {
 
   untracked="$(
     git ls-files --others --exclude-standard \
-      | grep -vE '^(public/index\.html|public/dashboard-data/[^/]+\.json|public/dashboard-data/daily/[^/]+\.json|public/dashboard-data/platform-trends/.+\.json|public/dashboard-data-bundle\.js|docs/[^/]+\.(md|html))$' \
+      | grep -vE '^(public/index\.html|public/dashboard-data/[^/]+\.json|public/dashboard-data/daily/[^/]+\.json|public/dashboard-data/platform-trends/.+\.json|public/dashboard-data/lazy/conversations/.+\.json|public/dashboard-data-bundle\.js|docs/[^/]+\.(md|html))$' \
       || true
   )"
   if [[ -n "$untracked" ]]; then
@@ -139,7 +160,7 @@ command -v git >/dev/null 2>&1 || fail "git is not available."
 command -v security >/dev/null 2>&1 || fail "macOS security command is not available."
 command -v "$PYTHON_BIN" >/dev/null 2>&1 || fail "$PYTHON_BIN is not available."
 
-log "Starting ${BRAND_RADAR_DISPLAY_NAME} local daily run."
+log "Starting ${BRAND_RADAR_DISPLAY_NAME} local daily run (run_id=$RUN_ID)."
 if [[ "$RESUME_FROM_CHECKPOINT" == "1" && -n "$REPORT_DATE" ]]; then
   fail "BRAND_RADAR_RESUME_FROM_CHECKPOINT and BRAND_RADAR_REPORT_DATE cannot be used together."
 fi
@@ -148,8 +169,9 @@ if [[ "$ATTACH_CONTEXT_FROM_PROVIDER" == "1" && "$RESUME_FROM_CHECKPOINT" != "1"
 fi
 ensure_no_local_source_changes
 
+CURRENT_STAGE="initial_repository_sync"
 log "Syncing repository."
-git pull --ff-only origin main
+git pull --ff-only origin "$BRANCH"
 
 export X_SOURCE_PROVIDER="${X_SOURCE_PROVIDER:-twitterapi_io}"
 export X_DAILY_LIMIT="${X_DAILY_LIMIT:-120}"
@@ -162,6 +184,7 @@ export JDBUILDER_TRANSLATION_TIMEOUT_SECONDS="${JDBUILDER_TRANSLATION_TIMEOUT_SE
 export JDBUILDER_TRANSLATION_BATCH_SIZE="${JDBUILDER_TRANSLATION_BATCH_SIZE:-6}"
 export JDBUILDER_TRANSLATION_RETRIES="${JDBUILDER_TRANSLATION_RETRIES:-1}"
 export JDBUILDER_TRANSLATION_MAX_CHARS="${JDBUILDER_TRANSLATION_MAX_CHARS:-3500}"
+export BRAND_RADAR_DEFER_SHARED_ASSETS=1
 export TWITTERAPI_IO_KEY
 export JDCLOUD_GPT_API_KEY
 
@@ -181,9 +204,11 @@ fi
 JDCLOUD_GPT_API_KEY="$(require_local_secret JDCLOUD_GPT_API_KEY "language processing credential")"
 
 log "Generating real daily dashboard data."
+CURRENT_STAGE="collection_and_generation"
 run_daily
 
 log "Verifying generated dashboard data."
+CURRENT_STAGE="local_verification"
 "$PYTHON_BIN" scripts/security_check.py
 "$PYTHON_BIN" scripts/check_dashboard_data.py
 "$PYTHON_BIN" scripts/verify_data.py
@@ -191,15 +216,16 @@ log "Verifying generated dashboard data."
 ensure_real_dashboard_data
 
 log "Staging public dashboard artifacts only."
-git add public/index.html public/dashboard-data/*.json public/dashboard-data/daily/*.json public/dashboard-data-bundle.js
+CURRENT_STAGE="stage_module_artifacts"
+git add public/dashboard-data/*.json public/dashboard-data/daily/*.json
 if [[ -d public/dashboard-data/platform-trends ]]; then
   git add public/dashboard-data/platform-trends
 fi
+if [[ -d public/dashboard-data/lazy/conversations ]]; then
+  git add public/dashboard-data/lazy/conversations
+fi
 
-if git diff --cached --quiet; then
-  log "No dashboard data changes to commit."
-else
-  COMMIT_REPORT_DATE="${REPORT_DATE:-$("$PYTHON_BIN" - <<'PY'
+COMMIT_REPORT_DATE="${REPORT_DATE:-$("$PYTHON_BIN" - <<'PY'
 import json
 from pathlib import Path
 
@@ -209,8 +235,25 @@ except Exception:
     print("")
 PY
 )}"
+if git diff --cached --quiet; then
+  log "No dashboard data changes to commit."
+else
+  CURRENT_STAGE="commit_module_artifacts"
   commit_with_repo_identity "Archive local daily dashboard data ${COMMIT_REPORT_DATE:-$(date '+%Y-%m-%d')}"
-  git push
 fi
 
+acquire_publish_lock
+publish_committed_changes "$BRANCH" "Refresh shared dashboard assets ${COMMIT_REPORT_DATE:-$(date '+%Y-%m-%d')}"
+release_publish_lock
+
+CURRENT_STAGE="public_verification"
+VERIFY_ARGS=(--brand-date "$COMMIT_REPORT_DATE")
+if [[ "$RESUME_FROM_CHECKPOINT" != "1" ]]; then
+  VERIFY_ARGS+=(--xiaohongshu-date "$COMMIT_REPORT_DATE")
+fi
+"$PYTHON_BIN" scripts/verify_publication.py \
+  --base-url "${BRAND_RADAR_PUBLIC_BASE_URL:-https://lhlovnn.github.io/brand-x-intelligence-radar}" \
+  "${VERIFY_ARGS[@]}"
+
+CURRENT_STAGE="complete"
 log "${BRAND_RADAR_DISPLAY_NAME} local daily run finished."

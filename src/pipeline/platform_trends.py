@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from src.adapters.x_source_base import ProviderBudgetExceeded
+from src.pipeline.content_policy import PLATFORM_HARD_NOISE_TERMS, platform_noise_reason
 from src.pipeline.conversation_context import (
     attach_conversation_contexts,
     dedupe_contextual_items_keep_earliest,
@@ -16,6 +17,7 @@ from src.pipeline.conversation_context import (
     strip_media_placeholder_urls,
 )
 from src.pipeline.dashboard_builder import write_data_bundle
+from src.pipeline.lazy_payloads import shard_json_file
 from src.pipeline.translation import apply_translations, translation_report
 from src.utils.config import load_project_json
 from src.utils.io import read_json, write_json
@@ -29,6 +31,8 @@ DEFAULT_MAX_REQUESTS = 30
 DEFAULT_MIN_VIEWS = 100
 DEFAULT_MIN_LIKES = 5
 PLATFORM_DATA_ROOT = Path("platform-trends")
+PLATFORM_SEMANTIC_CONFIDENCE = 0.65
+PLATFORM_SEMANTIC_TEXT_LIMIT = 3000
 
 
 TOPIC_TERMS = {
@@ -141,6 +145,26 @@ TOPIC_TERMS = {
         "experiment",
         "results",
     ],
+    "逆向与改机": [
+        "小红书逆向",
+        "小红书改机",
+        "逆向工程",
+        "app逆向",
+        "客户端逆向",
+        "协议分析",
+        "抓包",
+        "参数签名",
+        "接口签名",
+        "设备指纹",
+        "设备环境",
+        "设备伪装",
+        "机型伪装",
+        "一机一号",
+        "xiaohongshu reverse engineering",
+        "rednote reverse engineering",
+        "device fingerprint",
+        "device spoofing",
+    ],
 }
 
 PLATFORM_TAG_ALIASES = {
@@ -196,6 +220,20 @@ PLATFORM_TAG_ALIASES = {
     "复盘": "案例复盘",
     "拆解": "案例复盘",
     "实操": "案例复盘",
+    "小红书逆向": "逆向与改机",
+    "小红书改机": "逆向与改机",
+    "逆向工程": "逆向与改机",
+    "app逆向": "逆向与改机",
+    "客户端逆向": "逆向与改机",
+    "协议分析": "逆向与改机",
+    "抓包": "逆向与改机",
+    "参数签名": "逆向与改机",
+    "接口签名": "逆向与改机",
+    "设备指纹": "逆向与改机",
+    "设备环境": "逆向与改机",
+    "设备伪装": "逆向与改机",
+    "机型伪装": "逆向与改机",
+    "一机一号": "逆向与改机",
 }
 
 NOISE_TERMS = [
@@ -208,88 +246,6 @@ NOISE_TERMS = [
     "download rednote",
     "coupon code",
     "promo code",
-]
-
-HARD_NOISE_TERMS = [
-    "@abuincrease",
-    "@pichai666",
-    "51平台",
-    "约炮",
-    "约p",
-    "固炮",
-    "炮友",
-    "涩播",
-    "约会软件",
-    "成人交友",
-    "小黄书",
-    "删帖",
-    "删除微信公众号文章",
-    "删除微博",
-    "删除推特",
-    "负面信息",
-    "负面内容",
-    "清除负面",
-    "消除差评",
-    "差评处理",
-    "账号解封",
-    "微信解封",
-    "电报号解封",
-    "封号处理",
-    "封禁解除",
-    "店铺封禁",
-    "视频下架",
-    "笔记下架",
-    "商品屏蔽",
-    "代举报",
-    "投诉链接",
-    "聊天记录查询",
-    "酒店入住记录",
-    "手机定位",
-    "定位追踪",
-    "老牌服务商",
-    "老字号服务",
-    "专业品牌客服",
-    "上市失败",
-    "涉企网络谣言",
-    "行政拘留",
-    "警方披露",
-    "不给我流量",
-    "没招了",
-    "摸鱼真开心",
-    "小游戏功能",
-    "日入 1 元",
-    "金融市场",
-    "bnbchain",
-    "苏丹的游戏",
-    "金属书签",
-    "手账本",
-    "开放权重多模态模型",
-    "tutti",
-    "x创作者收益",
-    "生日快乐",
-    "阴阳怪气",
-    "虐待动物",
-    "虐杀动物",
-    "虐猫",
-    "动物保护组织",
-    "通报执法",
-    "feline guardians",
-    "lady freethinker",
-    "stop animal cruelty",
-    "stop cat torture",
-    "justice for animals",
-    "justiceforanimals",
-    "justiceforwangwang",
-]
-
-HARD_NOISE_PATTERNS = [
-    re.compile(
-        r"(?:小红书|快手|抖音).{0,12}(?:违规|发不出).{0,24}(?:推特|twitter|x).{0,80}"
-        r"(?:开脱|上供|luo照|裸照|锐评一下不许说我|🐻黑|粉嫩的[福肤])",
-        re.IGNORECASE,
-    ),
-    re.compile(r"(?:开脱|上供).{0,30}(?:luo照|裸照|锐评一下不许说我|🐻黑|粉嫩的[福肤])", re.IGNORECASE),
-    re.compile(r"玩的就是反差.{0,30}身体已经软.{0,30}想被狠狠欺负", re.IGNORECASE),
 ]
 
 STRUCTURE_SIGNALS = [
@@ -390,6 +346,22 @@ PLATFORM_FOCUS_TERMS = [
     "playbook",
     "case study",
     "strategy",
+    "逆向工程",
+    "app逆向",
+    "客户端逆向",
+    "协议分析",
+    "抓包",
+    "参数签名",
+    "接口签名",
+    "改机",
+    "设备指纹",
+    "设备环境",
+    "设备伪装",
+    "机型伪装",
+    "一机一号",
+    "reverse engineering",
+    "device fingerprint",
+    "device spoofing",
 ]
 
 
@@ -516,6 +488,7 @@ def collect_platform_trends(
         append_unique_warning(warnings, "Platform trend source returned no candidates for all configured queries.")
 
     selected.sort(key=lambda item: str(item.get("created_at") or ""), reverse=True)
+    selected, semantic_review = apply_platform_semantic_review(selected, translation_service)
     translation_status = apply_translations(selected, translation_service)
     context_status = attach_platform_context(selected, x_source, translation_service, start, end)
     selected, context_deduped = dedupe_contextual_items_keep_earliest(selected)
@@ -536,6 +509,7 @@ def collect_platform_trends(
         min_likes=min_likes,
         metric_filtered=metric_filtered,
         conversation_deduped=conversation_deduped,
+        semantic_filtered=int(semantic_review.get("rejected_count") or 0),
     )
 
     payload = {
@@ -551,12 +525,14 @@ def collect_platform_trends(
             **public_platform_collection_status(status),
             "translation": public_translation_status(translation_status),
             "conversation_context": context_status,
+            "semantic_review": public_semantic_review_status(semantic_review),
         },
         "summary": {
             "accepted": len(selected),
             "candidates_inspected": candidates_seen,
             "metric_filtered": metric_filtered,
             "conversation_deduped": conversation_deduped,
+            "semantic_filtered": int(semantic_review.get("rejected_count") or 0),
             "max_items": max_items,
             "max_candidates": max_candidates,
             "max_source_requests": runtime_limits.get("max_source_requests"),
@@ -578,6 +554,7 @@ def collect_platform_trends(
         "query_stats": query_stats,
         "translation": translation_status,
         "conversation_context": context_status,
+        "semantic_review": semantic_review,
     }
 
 
@@ -692,7 +669,7 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
         return {"accepted": False, "item": {}}
     if not platform_focus_signal(lower, aliases):
         return {"accepted": False, "item": {}}
-    if matched_terms(lower, HARD_NOISE_TERMS) or is_hard_noise_platform_text(text):
+    if matched_terms(lower, PLATFORM_HARD_NOISE_TERMS) or platform_noise_reason(text):
         return {"accepted": False, "item": {}}
     if matched_terms(lower, exclude_terms) and not strong_method_signal(lower):
         return {"accepted": False, "item": {}}
@@ -720,6 +697,145 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
             "reusable_takeaway": reusable_takeaway(topic),
             "tags": platform_item_tags(topic, topics),
         },
+    }
+
+
+def apply_platform_semantic_review(
+    items: list[dict[str, Any]],
+    review_service: Any,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    if not items:
+        return [], semantic_review_report("not_needed", 0, 0, 0)
+    if not semantic_review_enabled():
+        return items, semantic_review_report("disabled", 0, 0, len(items))
+
+    reviewer = getattr(review_service, "classify_platform_batch", None)
+    decisions: dict[str, dict[str, Any]] = {}
+    if callable(reviewer) and bool(getattr(review_service, "configured", False)):
+        review_input = [
+            {
+                "id": str(item.get("post_id") or index),
+                "language": str(item.get("language") or "und"),
+                "text": semantic_review_text(item.get("clean_text") or item.get("text") or ""),
+            }
+            for index, item in enumerate(items)
+        ]
+        try:
+            decisions = reviewer(review_input) or {}
+        except Exception as error:
+            setattr(review_service, "classification_last_error", str(error)[:300])
+
+    kept: list[dict[str, Any]] = []
+    reviewed_count = 0
+    rejected_count = 0
+    fallback_count = 0
+    rejection_reasons: dict[str, int] = {}
+    for index, item in enumerate(items):
+        item_id = str(item.get("post_id") or index)
+        decision = decisions.get(item_id)
+        if decision:
+            reviewed_count += 1
+            accepted = semantic_decision_accepts(decision)
+            if accepted:
+                domain = str(decision.get("domain") or "")
+                if domain in TOPIC_TERMS:
+                    item["topic"] = domain
+                    item["tags"] = platform_item_tags(domain, [domain, *matched_topics(combined_text(item).lower())])
+                item["semantic_confidence"] = float(decision.get("confidence") or 0)
+                kept.append(item)
+            else:
+                rejected_count += 1
+                reason_code = semantic_rejection_code(decision)
+                rejection_reasons[reason_code] = rejection_reasons.get(reason_code, 0) + 1
+            continue
+
+        fallback_count += 1
+        if strict_platform_relevance(item):
+            kept.append(item)
+        else:
+            rejected_count += 1
+            rejection_reasons["strict_fallback_rejected"] = rejection_reasons.get("strict_fallback_rejected", 0) + 1
+
+    mode = "model" if reviewed_count else "strict_fallback"
+    error = str(getattr(review_service, "classification_last_error", "") or "")[:300]
+    return kept, semantic_review_report(
+        mode,
+        reviewed_count,
+        rejected_count,
+        fallback_count,
+        rejection_reasons,
+        error,
+    )
+
+
+def semantic_review_enabled() -> bool:
+    raw = str(os.getenv("BRAND_RADAR_PLATFORM_SEMANTIC_REVIEW") or "1").strip().lower()
+    return raw not in {"0", "false", "no", "off", "disabled"}
+
+
+def semantic_review_text(value: Any) -> str:
+    text = str(value or "").strip()
+    if len(text) <= PLATFORM_SEMANTIC_TEXT_LIMIT:
+        return text
+    head_size = PLATFORM_SEMANTIC_TEXT_LIMIT - 700
+    return f"{text[:head_size]}\n...[内容过长，已截取中段]...\n{text[-650:]}"
+
+
+def semantic_rejection_code(decision: dict[str, Any]) -> str:
+    if decision.get("low_value") is True:
+        return "low_value"
+    if decision.get("central_subject") is not True:
+        return "not_central_subject"
+    if decision.get("relevant_domain") is not True:
+        return "outside_target_domain"
+    if decision.get("substantive") is not True:
+        return "not_substantive"
+    if float(decision.get("confidence") or 0) < PLATFORM_SEMANTIC_CONFIDENCE:
+        return "low_confidence"
+    return "semantic_rejected"
+
+
+def semantic_decision_accepts(decision: dict[str, Any]) -> bool:
+    return (
+        decision.get("central_subject") is True
+        and decision.get("relevant_domain") is True
+        and decision.get("substantive") is True
+        and decision.get("low_value") is not True
+        and float(decision.get("confidence") or 0) >= PLATFORM_SEMANTIC_CONFIDENCE
+    )
+
+
+def strict_platform_relevance(item: dict[str, Any]) -> bool:
+    lower = combined_text(item).lower()
+    topics = matched_topics(lower)
+    if not topics:
+        return False
+    if "逆向与改机" in topics:
+        return True
+    structure_score = method_structure_score(lower)
+    evidence_pattern = re.compile(
+        r"(?:实测|数据|结果|步骤|教程|方案|策略|复盘|拆解|案例|如何|怎么|为什么|"
+        r"\d+(?:天|周|月|个账号|篇|万|次|%))|(?:how to|case study|playbook|results?|steps?|guide)",
+        re.IGNORECASE,
+    )
+    return structure_score >= 12 or bool(evidence_pattern.search(lower))
+
+
+def semantic_review_report(
+    mode: str,
+    reviewed_count: int,
+    rejected_count: int,
+    fallback_count: int,
+    rejection_reasons: dict[str, int] | None = None,
+    error: str = "",
+) -> dict[str, Any]:
+    return {
+        "mode": mode,
+        "reviewed_count": reviewed_count,
+        "rejected_count": rejected_count,
+        "fallback_count": fallback_count,
+        "rejection_reasons": rejection_reasons or {},
+        "error": error,
     }
 
 
@@ -761,6 +877,7 @@ def collection_status(
     min_likes: int = DEFAULT_MIN_LIKES,
     metric_filtered: int = 0,
     conversation_deduped: int = 0,
+    semantic_filtered: int = 0,
 ) -> dict[str, Any]:
     status = "complete"
     if max_items and len(items) >= max_items:
@@ -781,6 +898,7 @@ def collection_status(
         "candidates_inspected": candidates_seen,
         "metric_filtered": metric_filtered,
         "conversation_deduped": conversation_deduped,
+        "semantic_filtered": semantic_filtered,
         "max_items": max_items,
         "max_candidates": max_candidates,
         "source_request_limit_reached": source_request_limit_reached,
@@ -793,9 +911,12 @@ def write_platform_payload(target: Path, payload: dict[str, Any]) -> None:
     platform_dir = target / PLATFORM_DATA_ROOT / PLATFORM_KEY
     platform_dir.mkdir(parents=True, exist_ok=True)
     write_json(str(platform_dir / "latest.json"), payload)
-    write_json(str(platform_dir / "index.json"), platform_index(platform_dir, payload))
     write_json(str(platform_dir / "daily" / f"{payload['date']}.json"), payload)
-    update_bundle(target.parent / "dashboard-data-bundle.js", target)
+    shard_json_file(platform_dir / "latest.json", target)
+    shard_json_file(platform_dir / "daily" / f"{payload['date']}.json", target)
+    write_json(str(platform_dir / "index.json"), platform_index(platform_dir, payload))
+    if not shared_asset_rebuild_deferred():
+        update_bundle(target.parent / "dashboard-data-bundle.js", target)
 
 
 def platform_index(platform_dir: Path, current: dict[str, Any]) -> dict[str, Any]:
@@ -840,17 +961,11 @@ def platform_tag_counts(record: dict[str, Any]) -> dict[str, int]:
 
 
 def update_bundle(bundle_path: Path, data_dir: Path) -> None:
-    bundle = load_bundle(bundle_path)
-    platform_dir = data_dir / PLATFORM_DATA_ROOT / PLATFORM_KEY
-    for key in list(bundle):
-        if key.startswith(f"dashboard-data/{PLATFORM_DATA_ROOT}/{PLATFORM_KEY}/"):
-            del bundle[key]
-    for path in [platform_dir / "latest.json", platform_dir / "index.json"]:
-        if not path.exists():
-            continue
-        key = f"dashboard-data/{path.relative_to(data_dir).as_posix()}"
-        bundle[key] = read_json(str(path))
-    write_data_bundle(bundle_path, bundle)
+    write_data_bundle(bundle_path, {})
+
+
+def shared_asset_rebuild_deferred() -> bool:
+    return str(os.getenv("BRAND_RADAR_DEFER_SHARED_ASSETS") or "").strip().lower() in {"1", "true", "yes", "on"}
 
 
 def load_bundle(path: Path) -> dict[str, Any]:
@@ -960,6 +1075,16 @@ def public_platform_collection_status(status: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def public_semantic_review_status(status: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "mode": status.get("mode", "unknown"),
+        "reviewed_count": int(status.get("reviewed_count") or 0),
+        "rejected_count": int(status.get("rejected_count") or 0),
+        "fallback_count": int(status.get("fallback_count") or 0),
+        "rejection_reasons": status.get("rejection_reasons") or {},
+    }
+
+
 def public_platform_warnings(warnings: list[Any]) -> list[str]:
     results: list[str] = []
     for warning in warnings:
@@ -1000,11 +1125,6 @@ def matched_terms(lower: str, terms: list[str]) -> list[str]:
         elif value in lower:
             matches.append(term)
     return matches
-
-
-def is_hard_noise_platform_text(text: str) -> bool:
-    compact = re.sub(r"\s+", "", str(text or "").lower())
-    return any(pattern.search(compact) for pattern in HARD_NOISE_PATTERNS)
 
 
 def matched_topics(lower: str) -> list[str]:
@@ -1085,6 +1205,7 @@ def reusable_takeaway(topic: str) -> str:
         "变现": "记录从内容到商单、带货、店铺或服务成交的闭环。",
         "私域引流": "关注从小红书内容到社群、私域或线索承接的路径。",
         "案例复盘": "优先提取案例前提、动作、结果和可迁移限制。",
+        "逆向与改机": "关注客户端逆向、接口签名、设备环境与账号风控之间的技术关系。",
     }
     return mapping.get(topic, "提炼可迁移的小红书运营动作。")
 

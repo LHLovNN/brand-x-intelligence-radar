@@ -3,33 +3,24 @@
 import json
 import re
 import sys
-import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from src.pipeline.content_policy import (
+    context_noise_reason,
+    platform_noise_reason,
+    tg_item_policy_reason,
+    tg_reply_policy_reason,
+)
+
 DATA = ROOT / "public" / "dashboard-data"
 CHINESE_RE = re.compile(r"[\u3400-\u9fff]")
 URL_RE = re.compile(r"https?://\S+|t\.co/\S+", re.IGNORECASE)
 MENTION_RE = re.compile(r"@[A-Za-z0-9_]{1,20}")
 TEXT_SIGNAL_RE = re.compile(r"[A-Za-z0-9\u3400-\u9fff]")
-LOW_QUALITY_CONTEXT_RE = re.compile(
-    r"应该没人比我玩[的得]开了吧|我[福肤]不黑不信你看|比(?:我|你|他|她|ta).{0,4}好看的没(?:我|你|他|她|ta).{0,4}骚.{0,20}比(?:我|你|他|她|ta).{0,4}骚的没(?:我|你|他|她|ta).{0,4}好看|比(?:我|你|他|她|ta).{0,4}好看的没.{0,10}骚.{0,24}比(?:我|你|他|她|ta).{0,4}骚的没.{0,10}好看|只入身体.{0,20}不入生活|我果然太[涩色瑟]了.{0,16}有人想锐评一下我的[福肤]嘛|sao.{0,8}货.{0,16}没人比(?:她|他|ta)sao|(?:\d+\+)?(?:果然)?太[涩色瑟]了.{0,16}我真顶不住|她太[涩色瑟]了.{0,16}我真顶不住|主页.{0,16}能打(?:✈|🛩️?|飞机)|玩归玩闹归闹.{0,24}给(?:你|妳)?看[福肤].{0,24}不开玩笑|(?:小红书|快手|抖音).{0,12}(?:违规|发不出).{0,24}(?:推特|twitter|x).{0,80}(?:开脱|上供|luo照|裸照|锐评一下不许说我|🐻黑|粉嫩的[福肤])|(?:开脱|上供).{0,30}(?:luo照|裸照|锐评一下不许说我|🐻黑|粉嫩的[福肤])|玩的就是反差.{0,30}身体已经软.{0,30}想被狠狠欺负",
-    re.IGNORECASE,
-)
-LOW_QUALITY_CONTEXT_PROFILE_RE = re.compile(
-    r"找炮友|约炮|约p|曰炮|固炮|入驻.{0,12}(?:炮|约p)平台|真人认证.{0,30}隐私|附近的可加v|小号已禁言|涩播|涩涩|寻欢必备|远程指挥直播控制玩具|同城.{0,8}线下|绿泡泡",
-    re.IGNORECASE,
-)
-LOW_QUALITY_TG_DIGEST_RE = re.compile(
-    r"打飞机|撸管|约炮|找炮友|炮友|曰炮|解决性欲|性欲成本|全民打飞机|只入身体.{0,30}不入生活",
-    re.IGNORECASE,
-)
-LOW_SIGNAL_TG_STATUS_RE = re.compile(r"(?:挂了|又挂|崩了|炸了|宕机|不能用|用不了|不可用|打不开)", re.IGNORECASE)
 TRAILING_TG_CHANNEL_HANDLE_RE = re.compile(r"(?m)^@[A-Za-z0-9_]{3,32}\s*$")
-PLATFORM_LOW_VALUE_CONTENT_RE = re.compile(
-    r"约炮|约p|固炮|炮友|涩播|成人交友|约会软件|小黄书|(?:小红书|快手|抖音).{0,12}(?:违规|发不出).{0,24}(?:推特|twitter|x).{0,80}(?:开脱|上供|luo照|裸照|锐评一下不许说我|🐻黑|粉嫩的[福肤])|(?:开脱|上供).{0,30}(?:luo照|裸照|锐评一下不许说我|🐻黑|粉嫩的[福肤])|玩的就是反差.{0,30}身体已经软.{0,30}想被狠狠欺负",
-    re.IGNORECASE,
-)
 PLATFORM_ALLOWED_TAGS = {
     "账号冷启动",
     "爆文与内容结构",
@@ -41,8 +32,9 @@ PLATFORM_ALLOWED_TAGS = {
     "私域引流",
     "案例复盘",
     "小红书方法论",
+    "逆向与改机",
 }
-BUNDLE_MAX_BYTES = 2_000_000
+BUNDLE_MAX_BYTES = 20_000
 
 
 def load(path: Path):
@@ -58,11 +50,6 @@ def fail(message: str) -> None:
 def assert_true(condition: bool, message: str) -> None:
     if not condition:
         fail(message)
-
-
-def compact_noise_text(text: str) -> str:
-    visible = "".join(char for char in str(text or "") if unicodedata.category(char) != "Cf")
-    return re.sub(r"\s+", "", visible)
 
 
 def walk_objects(value):
@@ -89,6 +76,11 @@ def verify_conversation_contexts(payload, label: str) -> None:
         if not isinstance(context, dict):
             continue
         posts = context.get("posts") or []
+        detail_path = str(context.get("detail_path") or "")
+        if not posts and detail_path:
+            detail = load_public_lazy_payload(detail_path, f"{label} conversation context")
+            posts = detail.get("posts") or []
+            context = {**context, **detail, "detail_path": detail_path}
         if not posts:
             continue
         anchor = context.get("anchor_post_id") or obj.get("post_id") or "unknown"
@@ -107,19 +99,15 @@ def verify_conversation_contexts(payload, label: str) -> None:
             post_id = post.get("post_id") or "unknown"
             post_handle = str(post.get("author_handle") or "").strip().lstrip("@").lower()
             post_created_at = str(post.get("created_at") or "")
-            compact = compact_noise_text(f"{text} {translation}")
-            profile = " ".join(str(post.get(key) or "") for key in ("author_name", "author_handle", "author_bio"))
-            compact_profile = compact_noise_text(profile)
             if root_anchor_handle and str(post_id) != obj_post_id and post_handle != root_anchor_handle:
                 is_later_context_post = bool(obj_created_at and post_created_at and post_created_at >= obj_created_at)
                 assert_true(
                     text.strip().lower().startswith(f"@{root_anchor_handle}") or is_later_context_post,
                     f"{label}:{anchor}:{post_id} root context contains unrelated non-reply post",
                 )
-            assert_true(not LOW_QUALITY_CONTEXT_RE.search(compact), f"{label}:{anchor}:{post_id} context contains low-quality vulgar noise")
             assert_true(
-                not LOW_QUALITY_CONTEXT_PROFILE_RE.search(compact_profile),
-                f"{label}:{anchor}:{post_id} context contains low-quality adult spam profile",
+                context_noise_reason(post) is None,
+                f"{label}:{anchor}:{post_id} context violates centralized content policy",
             )
             assert_true(translation.strip(), f"{label}:{anchor}:{post_id} missing context translation")
             if needs_context_translation(text):
@@ -139,6 +127,9 @@ def contextual_ids(item):
         ids.add(f"post:{post_id}")
     context = item.get("conversation_context")
     if isinstance(context, dict):
+        anchor_id = str(context.get("anchor_post_id") or "").strip()
+        if anchor_id:
+            ids.add(f"post:{anchor_id}")
         for post in context.get("posts") or []:
             if isinstance(post, dict) and post.get("post_id"):
                 ids.add(f"post:{post['post_id']}")
@@ -204,8 +195,7 @@ def verify_platform_item_quality(item, label: str) -> None:
         str(item.get(key) or "")
         for key in ("text", "clean_text", "original_text", "translation_zh", "author_name", "author_handle", "author_bio")
     )
-    compact = re.sub(r"\s+", "", text)
-    assert_true(not PLATFORM_LOW_VALUE_CONTENT_RE.search(compact), f"platform trend contains low-value adult content for {label}")
+    assert_true(platform_noise_reason(text) is None, f"platform trend violates centralized content policy for {label}")
 
 
 def verify_diting_digests() -> None:
@@ -253,20 +243,34 @@ def verify_tg_digest_item_quality(item, label: str) -> None:
     for link in item.get("links") or []:
         if isinstance(link, dict):
             text_parts.append(str(link.get("label") or ""))
-    compact = re.sub(r"\s+", "", " ".join(text_parts))
-    assert_true(not LOW_QUALITY_TG_DIGEST_RE.search(compact), f"diting digest contains low-quality TG item for {label}")
-
     title = str(item.get("title") or "").strip()
     summary = str(item.get("summary") or "").strip()
+    assert_true(
+        tg_item_policy_reason(title, summary, " ".join(text_parts[2:])) is None,
+        f"diting digest violates centralized content policy for {label}",
+    )
     assert_true(
         not TRAILING_TG_CHANNEL_HANDLE_RE.search(summary),
         f"diting digest contains trailing TG channel handle for {label}",
     )
-    title_signal_len = len(re.findall(r"[A-Za-z0-9\u3400-\u9fff]", re.sub(r"https?://\S+", "", title)))
-    assert_true(
-        bool(summary) or title_signal_len > 18 or not LOW_SIGNAL_TG_STATUS_RE.search(title),
-        f"diting digest contains low-signal TG status chatter for {label}",
-    )
+    replies = item.get("replies") or []
+    replies_path = str(item.get("replies_path") or "")
+    if replies_path:
+        reply_payload = load_public_lazy_payload(replies_path, f"{label} TG replies")
+        replies = reply_payload.get("replies") or []
+        assert_true(
+            int(item.get("replies_visible") or 0) == len(replies),
+            f"diting digest reply count mismatch for {label}",
+        )
+    for reply in replies:
+        assert_true(
+            tg_reply_policy_reason(
+                str(reply.get("text") or ""),
+                str(reply.get("sender_name") or ""),
+                bool(reply.get("media") or []),
+            ) is None,
+            f"diting digest contains filtered TG reply for {label}",
+        )
 
 
 def main() -> None:
@@ -279,7 +283,7 @@ def main() -> None:
     is_sample = source.get("status") == "sample"
     is_real_provider = not is_sample
     bundle_path = ROOT / "public" / "dashboard-data-bundle.js"
-    assert_true(bundle_path.exists(), "dashboard-data-bundle.js should exist for file:// preview")
+    assert_true(bundle_path.exists(), "dashboard-data-bundle.js should exist as the lightweight bootstrap")
     verify_lightweight_data_bundle(bundle_path)
 
     clusters = daily.get("clusters", [])
@@ -365,6 +369,17 @@ def verify_lightweight_data_bundle(bundle_path: Path) -> None:
             not any(pattern.search(key) for pattern in forbidden_patterns),
             f"dashboard-data-bundle.js should not inline archive detail payload: {key}",
         )
+
+
+def load_public_lazy_payload(relative_path: str, label: str) -> dict:
+    normalized = relative_path.replace("\\", "/").lstrip("./")
+    assert_true(normalized.startswith("dashboard-data/lazy/"), f"{label} uses an invalid lazy-data path")
+    assert_true(".." not in normalized.split("/"), f"{label} path traversal is not allowed")
+    path = ROOT / "public" / normalized
+    assert_true(path.exists(), f"{label} file is missing: {normalized}")
+    payload = load(path)
+    assert_true(isinstance(payload, dict), f"{label} payload should be an object")
+    return payload
 
 
 if __name__ == "__main__":

@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import html
 import json
+import os
 import re
 import urllib.error
 import urllib.parse
@@ -22,6 +23,8 @@ import sys
 sys.path.insert(0, str(ROOT))
 
 from src.pipeline.dashboard_builder import asset_cache_token, refresh_index_asset_versions, write_data_bundle
+from src.pipeline.content_policy import tg_item_policy_reason, tg_reply_policy_reason
+from src.pipeline.lazy_payloads import shard_tg_replies
 from src.utils.io import write_json
 
 
@@ -43,29 +46,10 @@ SENSITIVE_TEXT_PATTERNS = [
     re.compile(r"Bearer\s+[A-Za-z0-9._-]{24,}", re.IGNORECASE),
     re.compile(r"(?i)(api[_-]?key|secret|token|password)\s*[:=]\s*[\"']?[A-Za-z0-9_./+=-]{24,}"),
 ]
-TG_LOW_VALUE_ADULT_PATTERNS = [
-    re.compile(r"打飞机|撸管|约炮|找炮友|炮友|曰炮", re.IGNORECASE),
-    re.compile(r"解决性欲|性欲成本|全民打飞机", re.IGNORECASE),
-    re.compile(r"只入身体.{0,30}不入生活", re.IGNORECASE),
-    re.compile(r"(?:被操|操到).{0,40}(?:失禁|喷水|骚穴|流水不停)", re.IGNORECASE),
-    re.compile(r"(?:骚穴|失禁喷水)", re.IGNORECASE),
-]
-TG_SHORT_STATUS_CHATTER_RE = re.compile(
-    r"(?:挂了|又挂|崩了|炸了|宕机|不能用|用不了|不可用|打不开)",
-    re.IGNORECASE,
-)
-TG_SHORT_CHATTER_RE = re.compile(r"什么情况|真的假的|咋回事|有人知道|笑死|离谱|绷不住", re.IGNORECASE)
 TG_FILTER_REASON_LABELS = {
     "low_value_adult": "低俗成人向低价值内容",
     "short_status_chatter": "无摘要短状态闲聊",
 }
-TG_REPLY_BLOCK_PATTERNS = [
-    re.compile(r"打飞机|撸管|约炮|找炮友|炮友|裸聊|色情网|成人视频|情色|援交|招嫖|嫖娼|外围", re.IGNORECASE),
-    re.compile(r"加(?:微信|薇|v|qq)|私聊.{0,12}(?:资源|福利|群)|点击.{0,10}(?:领取|下载)|博彩|网赌|现金网|返佣", re.IGNORECASE),
-    re.compile(r"傻逼|脑残|滚蛋|去死|死全家", re.IGNORECASE),
-    re.compile(r"买枪|卖枪|毒品|冰毒|K粉|代办身份证|洗钱", re.IGNORECASE),
-]
-TG_REPLY_LOW_SIGNAL_RE = re.compile(r"^(哈+|哈哈哈+|笑死|666+|顶|蹲|mark|收藏|学习了|\+1|牛+|牛逼|nb|ok|好)$", re.IGNORECASE)
 TG_MARKDOWN_LINK_RE = re.compile(r"\[([^\]\n]{1,120})\]\((https?://[^)\s]+)\)", re.IGNORECASE)
 TG_STANDALONE_SEPARATOR_RE = re.compile(r"^\s*[-—_]{2,}\s*$")
 TG_TRAILING_CHANNEL_HANDLE_RE = re.compile(r"^@[A-Za-z0-9_]{3,32}$")
@@ -114,6 +98,8 @@ def main() -> None:
     for entry in detail_entries:
         daily = build_daily_detail(entry, base_url, source_dir, generated_at)
         daily_path = target / "daily" / entry["kind"] / f"{entry['date']}.json"
+        if entry["kind"] == "tg":
+            shard_tg_replies(daily, output_dir, entry["date"])
         daily = preserve_existing_detail_if_unchanged(daily_path, daily)
         write_json(str(daily_path), daily)
         entry["item_count"] = daily["item_count"]
@@ -146,8 +132,9 @@ def main() -> None:
 
     index = build_digest_index(entries, generated_at, base_url, args.detail_days)
     write_json(str(target / "index.json"), index)
-    update_data_bundle(output_dir)
-    refresh_index_asset_versions(output_dir.parent / "index.html", asset_cache_token(index["latest_date"] or "dt-digests", generated_at))
+    if not shared_asset_rebuild_deferred():
+        update_data_bundle(output_dir)
+        refresh_index_asset_versions(output_dir.parent / "index.html", asset_cache_token(index["latest_date"] or "dt-digests", generated_at))
 
     print(
         "Synced Diting digests: "
@@ -590,18 +577,7 @@ def tg_reply_filter_reason(reply: dict[str, Any]) -> str | None:
     text = compact_text(str(reply.get("text") or ""))
     sender = compact_text(str(reply.get("sender_name") or ""))
     media = reply.get("media") or []
-    if not text and not media:
-        return "empty"
-    compact = re.sub(r"\s+", "", f"{sender} {text}")
-    if any(pattern.search(compact) for pattern in TG_REPLY_BLOCK_PATTERNS):
-        return "blocked"
-    if not media:
-        signal_len = signal_char_count(text)
-        if signal_len <= 1:
-            return "low_signal"
-        if signal_len <= 8 and TG_REPLY_LOW_SIGNAL_RE.search(compact):
-            return "low_signal"
-    return None
+    return tg_reply_policy_reason(text, sender, bool(media))
 
 
 def normalize_tg_media_items(media_items: Any, base_url: str, fallback_url: str) -> list[dict[str, Any]]:
@@ -725,23 +701,10 @@ def filter_digest_sections(kind: str, sections: list[dict[str, Any]]) -> tuple[l
 
 
 def tg_item_filter_reason(item: dict[str, Any]) -> str | None:
-    full_text = compact_text(" ".join(digest_item_text_parts(item)))
-    compact_full_text = re.sub(r"\s+", "", full_text)
-    if any(pattern.search(compact_full_text) for pattern in TG_LOW_VALUE_ADULT_PATTERNS):
-        return "low_value_adult"
-
     title = compact_text(str(item.get("title") or ""))
     summary = compact_text(str(item.get("summary") or ""))
-    summary_adds_signal = bool(summary) and re.sub(r"\s+", "", summary) != re.sub(r"\s+", "", title)
-    short_text = title or summary
-    short_signal_length = signal_char_count(short_text)
-    if not summary_adds_signal and short_signal_length <= 18 and TG_SHORT_STATUS_CHATTER_RE.search(short_text):
-        return "short_status_chatter"
-    if not summary_adds_signal and short_signal_length <= 12 and (
-        short_text.rstrip().endswith(("?", "？")) or TG_SHORT_CHATTER_RE.search(short_text)
-    ):
-        return "short_status_chatter"
-    return None
+    extra_text = " ".join(digest_item_text_parts(item)[2:])
+    return tg_item_policy_reason(title, summary, extra_text)
 
 
 def digest_item_text_parts(item: dict[str, Any]) -> list[str]:
@@ -755,11 +718,6 @@ def digest_item_text_parts(item: dict[str, Any]) -> list[str]:
         if isinstance(link, dict):
             parts.append(str(link.get("label") or ""))
     return parts
-
-
-def signal_char_count(value: str) -> int:
-    without_urls = re.sub(r"https?://\S+", "", value or "", flags=re.IGNORECASE)
-    return len(re.findall(r"[A-Za-z0-9\u3400-\u9fff]", without_urls))
 
 
 def update_hero_item_count(hero_date: str, item_count: int) -> str:
@@ -1055,8 +1013,22 @@ def build_digest_index(entries: list[dict[str, Any]], generated_at: str, base_ur
         "latest": latest,
         "latest_date": latest_date,
         "counts": counts,
-        "items": entries,
+        "items": [compact_digest_index_entry(entry) for entry in entries],
     }
+
+
+def compact_digest_index_entry(entry: dict[str, Any]) -> dict[str, Any]:
+    allowed_keys = (
+        "kind",
+        "date",
+        "item_count",
+        "section_count",
+        "detail_path",
+        "detail_available",
+        "original_item_count",
+        "filtered_count",
+    )
+    return {key: entry[key] for key in allowed_keys if key in entry}
 
 
 def beijing_label_from_iso(value: str) -> str:
@@ -1067,17 +1039,11 @@ def beijing_label_from_iso(value: str) -> str:
 
 def update_data_bundle(output_dir: Path) -> None:
     bundle_path = output_dir.parent / "dashboard-data-bundle.js"
-    bundle = load_bundle(bundle_path)
-    for key in list(bundle):
-        if key.startswith("dashboard-data/dt-digests/"):
-            del bundle[key]
-    dt_dir = output_dir / "dt-digests"
-    candidate_paths = [dt_dir / "index.json"]
-    for path in candidate_paths:
-        if path.exists():
-            key = f"dashboard-data/{path.relative_to(output_dir).as_posix()}"
-            bundle[key] = json.loads(path.read_text(encoding="utf-8"))
-    write_data_bundle(bundle_path, bundle)
+    write_data_bundle(bundle_path, {})
+
+
+def shared_asset_rebuild_deferred() -> bool:
+    return str(os.getenv("BRAND_RADAR_DEFER_SHARED_ASSETS") or "").strip().lower() in {"1", "true", "yes", "on"}
 
 
 def bundled_diting_detail_paths(index_path: Path) -> set[str]:

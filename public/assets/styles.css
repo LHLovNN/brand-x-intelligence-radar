@@ -276,6 +276,12 @@ h3 {
   color: var(--muted);
 }
 
+.status-pill.loading,
+.status-pill.partial {
+  border-color: rgba(200, 116, 34, 0.3);
+  color: var(--orange);
+}
+
 .content-area {
   display: grid;
   gap: 12px;
@@ -296,6 +302,51 @@ h3 {
 .route-loading-screen {
   display: grid;
   gap: 16px;
+}
+
+.load-error-panel,
+.inline-load-error,
+.drawer-load-state {
+  display: grid;
+  justify-items: start;
+  gap: 9px;
+  border: 1px solid rgba(201, 61, 67, 0.22);
+  border-radius: 8px;
+  background: #fff8f8;
+  color: var(--text);
+  padding: 16px;
+}
+
+.load-error-panel p,
+.inline-load-error span,
+.drawer-load-state span {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.inline-load-error {
+  margin: 10px 0 10px 92px;
+}
+
+.drawer-load-state {
+  align-content: center;
+  min-height: 180px;
+  border-color: var(--line-soft);
+  background: #fafbfc;
+}
+
+.drawer-load-state .loading-line {
+  width: min(240px, 70%);
+}
+
+.drawer-empty-state {
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  padding: 18px;
 }
 
 .loading-hero-skeleton {
@@ -4154,6 +4205,10 @@ body.lightbox-open {
 }
 
 @media (max-width: 640px) {
+  .inline-load-error {
+    margin-left: 0;
+  }
+
   .main-panel,
   .sidebar {
     padding: 16px;

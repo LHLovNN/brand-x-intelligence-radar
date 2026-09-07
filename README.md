@@ -1,51 +1,36 @@
 # Brand X Intelligence Radar
 
-Brand X Intelligence Radar is a static MVP for brand public-opinion monitoring.
-It turns public social signals into a Chinese-first intelligence dashboard with
-focus ranking, full-stream browsing, daily reports and scoring methodology.
+Brand X Intelligence Radar is a static, Chinese-first intelligence dashboard.
+It combines platform-change research, AI and Telegram digests, and brand public-opinion monitoring in one reading experience.
 
 ## Product Surface
 
-- `舆情焦点`: prioritized signals selected by relevance, impact and risk.
-- `全部舆情`: date-based opinion stream for scanning and tracing source posts.
-- `舆情日报`: daily issue view with primary-brand radar and competitor baseline.
-- `设置`: public run status, data quality and scoring explanation.
+The default page is `小红书` under `谛听-情报库`.
 
-## Highlights
+- `谛听-情报库`: `小红书`, `AI日报`, and `TG日报`.
+- `品牌-舆情监控`: `舆情焦点`, `全部舆情`, `舆情日报`, and `设置`.
 
-- Chinese-first reading experience with original-text switching.
-- IPS and CSI scoring for focus prioritization and competitor comparison.
-- Source-card rendering with author, metrics, tags, media and original-post entry.
-- Daily archive browsing with a lightweight timeline structure.
-- Static dashboard output under `public/`.
+Xiaohongshu monitoring covers account growth, monetization, platform rules, risk control, account matrices, reverse engineering, and device modification.
 
-## Quick Start
+## Loading Model
+
+The site uses three levels of on-demand loading so archive growth does not slow the first screen:
+
+1. Only data for the active page is requested.
+2. Daily detail is requested only when its date is opened.
+3. Conversation context and Telegram replies are stored separately and requested only when their drawer opens.
+
+Failed JSON requests retry twice automatically. A visible retry action is shown if all three attempts fail.
+
+## Local Preview
+
+Use an HTTP server because the dashboard loads JSON files on demand:
 
 ```bash
-python3 scripts/check_dashboard_data.py
-python3 scripts/verify_data.py
-python3 -m http.server 4173 --directory public
+npm run serve
 ```
 
-Open:
-
-```text
-http://localhost:4173
-```
-
-The dashboard can also render through `public/index.html` because the demo data
-bundle is committed with the static files.
-
-## Data Model
-
-The included dashboard data demonstrates the product structure:
-
-- source posts and translated content
-- public engagement metrics
-- focus tags and attention reasons
-- primary-brand signal scoring
-- competitor baseline scoring
-- daily archive metadata
+Open `http://localhost:4173`. Opening `public/index.html` directly with `file://` is not supported.
 
 ## Verification
 
@@ -57,4 +42,7 @@ python3 scripts/report_run_summary.py
 PYTHONPYCACHEPREFIX=.pycache python3 -m compileall scripts src
 node --check public/assets/app.js
 node --check public/dashboard-data-bundle.js
+npm run verify:browser
 ```
+
+The browser check uses a real local HTTP server and fails if Playwright is unavailable or page QA does not complete.

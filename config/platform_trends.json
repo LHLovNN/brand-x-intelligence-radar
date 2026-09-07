@@ -54,7 +54,24 @@
         "account matrix",
         "case study",
         "playbook",
-        "strategy"
+        "strategy",
+        "逆向",
+        "逆向工程",
+        "APP逆向",
+        "客户端逆向",
+        "协议分析",
+        "抓包",
+        "参数签名",
+        "接口签名",
+        "改机",
+        "设备指纹",
+        "设备环境",
+        "设备伪装",
+        "机型伪装",
+        "一机一号",
+        "reverse engineering",
+        "device fingerprint",
+        "device spoofing"
       ],
       "query_groups": [
         {
@@ -133,6 +150,28 @@
             "实操",
             "case study",
             "playbook"
+          ]
+        },
+        {
+          "name": "reverse_engineering_device",
+          "intent_terms": [
+            "逆向",
+            "逆向工程",
+            "APP逆向",
+            "客户端逆向",
+            "协议分析",
+            "抓包",
+            "参数签名",
+            "接口签名",
+            "改机",
+            "设备指纹",
+            "设备环境",
+            "设备伪装",
+            "机型伪装",
+            "一机一号",
+            "reverse engineering",
+            "device fingerprint",
+            "device spoofing"
           ]
         }
       ],

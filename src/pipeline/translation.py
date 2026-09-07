@@ -36,6 +36,9 @@ class TranslationService:
     def translate_batch(self, items: list[dict[str, str]]) -> dict[str, str]:
         return {}
 
+    def classify_platform_batch(self, items: list[dict[str, str]]) -> dict[str, dict[str, Any]]:
+        return {}
+
 
 class NoopTranslationService(TranslationService):
     provider_name = "none"
@@ -78,6 +81,8 @@ class JoyBuilderTranslationService(TranslationService):
         self.max_chars_per_batch = positive_int_env("JDBUILDER_TRANSLATION_MAX_CHARS", max_chars_per_batch)
         self.errors: list[str] = []
         self.last_error = ""
+        self.classification_errors: list[str] = []
+        self.classification_last_error = ""
         self._strict_translation_attempt = False
 
     def translate_batch(self, items: list[dict[str, str]]) -> dict[str, str]:
@@ -91,6 +96,124 @@ class JoyBuilderTranslationService(TranslationService):
             except Exception as error:
                 self._record_error(error)
         return self._merge_segmented_translations(items, expanded_result, segments_by_item)
+
+    def classify_platform_batch(self, items: list[dict[str, str]]) -> dict[str, dict[str, Any]]:
+        self.classification_errors = []
+        self.classification_last_error = ""
+        decisions: dict[str, dict[str, Any]] = {}
+        for chunk in self._split_items(items):
+            last_error: Exception | None = None
+            for attempt in range(self.retry_attempts + 1):
+                try:
+                    decisions.update(self._classify_platform_chunk(chunk))
+                    last_error = None
+                    break
+                except Exception as error:
+                    last_error = error
+                    if attempt < self.retry_attempts:
+                        time.sleep(min(2**attempt, 4))
+            if last_error:
+                message = str(last_error).strip() or last_error.__class__.__name__
+                if message not in self.classification_errors and len(self.classification_errors) < 3:
+                    self.classification_errors.append(message)
+        self.classification_last_error = "; ".join(self.classification_errors)
+        return decisions
+
+    def _classify_platform_chunk(self, items: list[dict[str, str]]) -> dict[str, dict[str, Any]]:
+        allowed_domains = [
+            "账号冷启动",
+            "爆文与内容结构",
+            "流量机制",
+            "风控对抗",
+            "平台规则",
+            "矩阵",
+            "变现",
+            "私域引流",
+            "案例复盘",
+            "逆向与改机",
+        ]
+        system_prompt = (
+            "你是小红书运营情报的严格内容审核员。判断每条公开帖子是否值得进入方法论情报库。"
+            "收录必须同时满足：小红书/RedNote/Xiaohongshu 是正文核心对象，而非顺带提及；"
+            "内容属于养号、起号、内容运营、流量、变现、风控、平台规则、账号矩阵、"
+            "小红书逆向工程或改机/设备环境对抗之一；并且提供方法、步骤、案例、数据、经验或规则分析。"
+            "排除关键词擦边、平台罗列、无关故事、单纯情绪、广告、低俗内容和没有可复用信息的短句。"
+            "逆向与改机仅指围绕小红书客户端、接口、签名、设备指纹、设备环境、账号风控的技术研究，"
+            "不包括普通手机维修或与小红书无关的逆向。"
+            "只返回 JSON 数组。每项格式为："
+            '{"id":"...","central_subject":true,"relevant_domain":true,"substantive":true,'
+            '"low_value":false,"domain":"账号冷启动","confidence":0.95}。'
+            f"domain 只能是：{json.dumps(allowed_domains, ensure_ascii=False)}。"
+        )
+        input_payload = json.dumps(
+            [
+                {
+                    "id": item["id"],
+                    "language": item.get("language", "und"),
+                    "text": item.get("text", ""),
+                }
+                for item in items
+            ],
+            ensure_ascii=False,
+        )
+        request_body = {
+            "model": self.model,
+            "stream": False,
+            "input": f"{system_prompt}\n\n待审核帖子 JSON 数组：\n{input_payload}",
+        }
+        request = urllib.request.Request(
+            self.endpoint,
+            data=json.dumps(request_body).encode("utf-8"),
+            headers={
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json",
+            },
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=self.timeout_seconds) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as error:
+            body = error.read().decode("utf-8", errors="replace")
+            raise TranslationRequestError(
+                f"JoyBuilder platform review failed with HTTP {error.code}: {body[:300]}",
+                retriable=error.code == 429 or 500 <= error.code < 600,
+            ) from error
+        except urllib.error.URLError as error:
+            raise TranslationRequestError(f"JoyBuilder platform review failed: {error}") from error
+        except (socket.timeout, TimeoutError) as error:
+            raise TranslationRequestError(
+                f"JoyBuilder platform review timed out after {self.timeout_seconds}s",
+                timeout=True,
+            ) from error
+
+        text = response_output_text(payload)
+        try:
+            records = json.loads(extract_json_array(text))
+        except json.JSONDecodeError as error:
+            raise TranslationRequestError(f"JoyBuilder platform review returned non-JSON output: {text[:300]}") from error
+        decisions: dict[str, dict[str, Any]] = {}
+        allowed = set(allowed_domains)
+        for record in records if isinstance(records, list) else []:
+            if not isinstance(record, dict):
+                continue
+            item_id = str(record.get("id") or "")
+            domain = str(record.get("domain") or "")
+            if not item_id or domain not in allowed:
+                continue
+            try:
+                confidence = max(0.0, min(1.0, float(record.get("confidence") or 0)))
+            except (TypeError, ValueError):
+                confidence = 0.0
+            decisions[item_id] = {
+                "central_subject": record.get("central_subject") is True,
+                "relevant_domain": record.get("relevant_domain") is True,
+                "substantive": record.get("substantive") is True,
+                "low_value": record.get("low_value") is True,
+                "domain": domain,
+                "confidence": confidence,
+            }
+        return decisions
 
     def _expand_long_items(self, items: list[dict[str, str]]) -> tuple[list[dict[str, str]], dict[str, list[str]]]:
         expanded: list[dict[str, str]] = []

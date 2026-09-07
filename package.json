@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
   "scripts": {
     "generate": "python3 scripts/run_daily.py",
     "refresh": "python3 scripts/run_fermentation_refresh.py",

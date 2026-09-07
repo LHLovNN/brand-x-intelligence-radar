@@ -4,6 +4,7 @@ const state = {
   dailyIndex: null,
   dailyArchive: [],
   dailyDetailLoads: new Map(),
+  dailyDetailErrors: {},
   selectedDaily: null,
   competitor: null,
   sourceStatus: null,
@@ -11,7 +12,8 @@ const state = {
   xiaohongshuIndex: null,
   xiaohongshuArchive: [],
   platformDetailLoads: new Map(),
-  routeDataReady: { xiaohongshu: false, aiDaily: false, tgDaily: false },
+  platformDetailErrors: {},
+  routeDataReady: { brand: false, xiaohongshu: false, aiDaily: false, tgDaily: false },
   routeDataLoads: new Map(),
   routeDataErrors: {},
   dtDigestIndex: null,
@@ -19,6 +21,8 @@ const state = {
     ai: [],
     tg: [],
   },
+  ditingDetailLoads: new Map(),
+  ditingDetailErrors: {},
   dtDigestFilters: {
     ai: { date: "", section: "all", source: "all", query: "" },
     tg: { date: "", section: "all", source: "all", query: "" },
@@ -43,14 +47,8 @@ const USE_X_EMBED_FOR_VIDEO = false;
 const X_WIDGET_SCRIPT_URL = "https://platform.twitter.com/widgets.js";
 const DEFAULT_TIMELINE_EXPANDED_DAYS = 3;
 const BACK_TO_TOP_THRESHOLD = 520;
-const TG_COMMENT_BLOCK_PATTERNS = [
-  /打飞机|撸管|约炮|找炮友|炮友|裸聊|色情网|成人视频|情色|援交|招嫖|嫖娼|外围/i,
-  /加(?:微信|薇|v|qq)|私聊.{0,12}(?:资源|福利|群)|点击.{0,10}(?:领取|下载)|博彩|网赌|现金网|返佣/i,
-  /傻逼|脑残|滚蛋|去死|死全家/i,
-  /买枪|卖枪|毒品|冰毒|K粉|代办身份证|洗钱/i,
-];
-const TG_COMMENT_LOW_SIGNAL_RE = /^(哈+|哈哈哈+|笑死|666+|顶|蹲|mark|收藏|学习了|\+1|牛+|牛逼|nb|ok|好)$/i;
-
+const BRAND_ROUTES = new Set(["overview", "all", "daily", "settings"]);
+const JSON_LOAD_ATTEMPTS = 3;
 const routeTitles = {
   overview: "舆情焦点",
   all: "全部舆情",
@@ -82,7 +80,7 @@ const DT_DIGEST_KIND_CONFIG = {
   },
 };
 
-async function loadJson(path) {
+async function loadJson(path, options = {}) {
   const key = path.replace(/^\.\//, "");
   if (window.__DASHBOARD_DATA__) {
     if (window.__DASHBOARD_DATA__[key]) return normalizeRuntimePayload(window.__DASHBOARD_DATA__[key]);
@@ -90,19 +88,23 @@ async function loadJson(path) {
       return normalizeRuntimePayload(window.__DASHBOARD_DATA__.clusters[key]);
     }
   }
-  const response = await fetch(path, { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Failed to load ${path}`);
+  const attempts = Math.max(1, Number(options.attempts || JSON_LOAD_ATTEMPTS));
+  let lastError = null;
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    try {
+      const response = await fetch(path, { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return normalizeRuntimePayload(await response.json());
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts - 1) await waitFor(350 * (attempt + 1));
+    }
   }
-  return normalizeRuntimePayload(await response.json());
+  throw new Error(`${path} 加载失败（${lastError?.message || "网络异常"}）`);
 }
 
-async function loadJsonOptional(path, fallback) {
-  try {
-    return await loadJson(path);
-  } catch (error) {
-    return fallback;
-  }
+function waitFor(milliseconds) {
+  return new Promise((resolve) => window.setTimeout(resolve, milliseconds));
 }
 
 function normalizeRuntimePayload(value) {
@@ -144,6 +146,27 @@ function aliasNumber(target, oldKey, newKey) {
 }
 
 async function init() {
+  if (!window.location.hash) window.history.replaceState(null, "", "#/platform/xiaohongshu");
+  state.overview = emptyOverviewPayload();
+  state.daily = emptyDailyPayload();
+  state.dailyIndex = { items: [] };
+  state.dailyArchive = [];
+  state.selectedDaily = state.daily;
+  state.competitor = {};
+  state.sourceStatus = {};
+  state.xiaohongshu = emptyPlatformTrendPayload();
+  state.xiaohongshuIndex = emptyPlatformTrendIndex();
+  state.xiaohongshuArchive = [];
+  state.platformExpandedDates = new Set();
+  state.dtDigestIndex = emptyDitingDigestIndex();
+  bindNavigation();
+  setupBackToTop();
+  window.addEventListener("hashchange", render);
+  render();
+}
+
+async function loadBrandData() {
+  if (state.routeDataReady.brand) return;
   const [overview, daily, dailyIndex, competitor, sourceStatus] = await Promise.all([
     loadJson("./dashboard-data/latest.json"),
     loadJson("./dashboard-data/daily/latest.json"),
@@ -160,15 +183,35 @@ async function init() {
   state.selectedDaily = state.daily;
   state.competitor = competitor;
   state.sourceStatus = sourceStatus;
-  state.xiaohongshu = emptyPlatformTrendPayload();
-  state.xiaohongshuIndex = emptyPlatformTrendIndex();
-  state.xiaohongshuArchive = [];
-  state.platformExpandedDates = new Set();
-  state.dtDigestIndex = emptyDitingDigestIndex();
-  bindNavigation();
-  setupBackToTop();
-  window.addEventListener("hashchange", render);
-  render();
+  state.routeDataReady.brand = true;
+}
+
+function emptyOverviewPayload() {
+  return {
+    health: "loading",
+    generated_at: "",
+    generated_at_label: "",
+    metrics: {},
+    source_status: {},
+    featured_items: [],
+    hot_topics: [],
+  };
+}
+
+function emptyDailyPayload() {
+  return {
+    date: "",
+    generated_at: "",
+    generated_at_label: "",
+    metrics: {},
+    source_status: {},
+    collection_status: {},
+    featured_items: [],
+    hot_topics: [],
+    effective_posts: [],
+    clusters: [],
+    competitor: {},
+  };
 }
 
 function markDailyDetailLoaded(record) {
@@ -264,10 +307,14 @@ async function ensureDailyArchiveDate(date) {
   if (state.dailyDetailLoads.has(date)) return state.dailyDetailLoads.get(date);
   const promise = loadJson(`./dashboard-data/daily/${date}.json`)
     .then((record) => {
+      delete state.dailyDetailErrors[date];
       upsertDailyArchiveRecord(record);
       return loadedDailyRecord(date);
     })
-    .catch(() => null)
+    .catch((error) => {
+      state.dailyDetailErrors[date] = error?.message || "该日数据加载失败";
+      return null;
+    })
     .finally(() => {
       state.dailyDetailLoads.delete(date);
     });
@@ -361,10 +408,14 @@ async function ensurePlatformTrendDate(platformKey, date) {
   if (state.platformDetailLoads.has(key)) return state.platformDetailLoads.get(key);
   const promise = loadJson(`./dashboard-data/platform-trends/${platformKey}/daily/${date}.json`)
     .then((record) => {
+      delete state.platformDetailErrors[key];
       upsertPlatformRecord(record);
       return platformRecord(date);
     })
-    .catch(() => null)
+    .catch((error) => {
+      state.platformDetailErrors[key] = error?.message || "该日数据加载失败";
+      return null;
+    })
     .finally(() => {
       state.platformDetailLoads.delete(key);
     });
@@ -375,8 +426,8 @@ async function ensurePlatformTrendDate(platformKey, date) {
 async function loadXiaohongshuData() {
   if (state.routeDataReady.xiaohongshu) return;
   const [latest, index] = await Promise.all([
-    loadJsonOptional("./dashboard-data/platform-trends/xiaohongshu/latest.json", emptyPlatformTrendPayload()),
-    loadJsonOptional("./dashboard-data/platform-trends/xiaohongshu/index.json", emptyPlatformTrendIndex()),
+    loadJson("./dashboard-data/platform-trends/xiaohongshu/latest.json"),
+    loadJson("./dashboard-data/platform-trends/xiaohongshu/index.json"),
   ]);
   state.xiaohongshu = markPlatformDetailLoaded(latest);
   state.xiaohongshuIndex = index;
@@ -387,7 +438,7 @@ async function loadXiaohongshuData() {
 
 async function ensureDitingDigestIndex() {
   if (state.dtDigestIndex && state.dtDigestIndex.items?.length) return;
-  state.dtDigestIndex = await loadJsonOptional("./dashboard-data/dt-digests/index.json", emptyDitingDigestIndex());
+  state.dtDigestIndex = await loadJson("./dashboard-data/dt-digests/index.json");
 }
 
 async function loadDitingRouteData(kind) {
@@ -397,34 +448,46 @@ async function loadDitingRouteData(kind) {
   if (!state.dtDigestFilters[kind].date) {
     state.dtDigestFilters[kind].date = state.dtDigestIndex?.latest?.[kind] || ditingDigestEntries(kind)[0]?.date || "";
   }
-  await ensureDitingDigestDetail(kind, state.dtDigestFilters[kind].date);
+  const detail = await ensureDitingDigestDetail(kind, state.dtDigestFilters[kind].date, { throwOnError: true });
+  if (!detail) throw new Error(`${DT_DIGEST_KIND_CONFIG[kind].title}最新日报加载失败`);
   state.routeDataReady[routeName] = true;
 }
 
 function requestRouteData(routeName) {
-  if (!["xiaohongshu", "aiDaily", "tgDaily"].includes(routeName)) return;
-  if (state.routeDataReady[routeName] || state.routeDataLoads.has(routeName)) return;
-  const promise = (routeName === "xiaohongshu"
-    ? loadXiaohongshuData()
-    : loadDitingRouteData(routeName === "tgDaily" ? "tg" : "ai"))
+  const dataKey = routeDataKey(routeName);
+  if (!dataKey || state.routeDataReady[dataKey] || state.routeDataLoads.has(dataKey)) return;
+  delete state.routeDataErrors[dataKey];
+  const promise = (dataKey === "brand"
+    ? loadBrandData()
+    : dataKey === "xiaohongshu"
+      ? loadXiaohongshuData()
+      : loadDitingRouteData(dataKey === "tgDaily" ? "tg" : "ai"))
     .catch((error) => {
-      state.routeDataErrors[routeName] = error?.message || "数据加载失败";
+      state.routeDataErrors[dataKey] = error?.message || "数据加载失败";
     })
     .finally(() => {
-      state.routeDataLoads.delete(routeName);
-      if (route().name === routeName) render();
+      state.routeDataLoads.delete(dataKey);
+      if (routeDataKey(route().name) === dataKey) render();
     });
-  state.routeDataLoads.set(routeName, promise);
+  state.routeDataLoads.set(dataKey, promise);
+}
+
+function routeDataKey(routeName) {
+  if (BRAND_ROUTES.has(routeName)) return "brand";
+  if (["xiaohongshu", "aiDaily", "tgDaily"].includes(routeName)) return routeName;
+  return "";
 }
 
 function routeDataLoadingPage(routeName) {
   const title = routeTitles[routeName] || "数据";
-  const error = state.routeDataErrors[routeName];
+  const dataKey = routeDataKey(routeName);
+  const error = state.routeDataErrors[dataKey];
   if (!error) return pageLoadingSkeleton(title);
-  const text = `${title}加载失败：${error}`;
   return `
-    <section class="section">
-      ${empty(text)}
+    <section class="load-error-panel" role="alert">
+      <strong>${escapeHtml(title)}加载失败</strong>
+      <p>${escapeHtml(error)}</p>
+      <button class="text-button primary" type="button" data-route-retry="${escapeHtml(routeName)}">重新加载</button>
     </section>
   `;
 }
@@ -461,20 +524,39 @@ async function loadInitialDitingDigest(kind) {
 async function loadDitingDigestDetail(entry) {
   if (!entry) return null;
   const detailPath = entry.detail_path || `dashboard-data/dt-digests/daily/${entry.kind}/${entry.date}.json`;
-  try {
-    return await loadJson(`./${detailPath}`);
-  } catch (error) {
-    return null;
-  }
+  return loadJson(`./${detailPath}`);
 }
 
-async function ensureDitingDigestDetail(kind, date) {
+async function ensureDitingDigestDetail(kind, date, options = {}) {
   const details = state.dtDigests[kind] || [];
-  if (details.some((daily) => daily.date === date)) return;
+  const existing = details.find((daily) => daily.date === date);
+  if (existing) return existing;
+  const loadKey = `${kind}:${date}`;
+  if (state.ditingDetailLoads.has(loadKey)) return state.ditingDetailLoads.get(loadKey);
   const entry = ditingDigestEntries(kind).find((item) => item.date === date);
-  const detail = await loadDitingDigestDetail(entry);
-  if (!detail) return;
-  state.dtDigests[kind] = [...details, detail].sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  if (!entry) {
+    const error = new Error(`${date || "所选日期"}没有可加载的日报文件`);
+    state.ditingDetailErrors[loadKey] = error.message;
+    if (options.throwOnError) throw error;
+    return null;
+  }
+  const promise = loadDitingDigestDetail(entry)
+    .then((detail) => {
+      delete state.ditingDetailErrors[loadKey];
+      state.dtDigests[kind] = [
+        ...(state.dtDigests[kind] || []).filter((daily) => daily.date !== detail.date),
+        detail,
+      ].sort((a, b) => String(b.date).localeCompare(String(a.date)));
+      return detail;
+    })
+    .catch((error) => {
+      state.ditingDetailErrors[loadKey] = error?.message || "该日日报加载失败";
+      if (options.throwOnError) throw error;
+      return null;
+    })
+    .finally(() => state.ditingDetailLoads.delete(loadKey));
+  state.ditingDetailLoads.set(loadKey, promise);
+  return promise;
 }
 
 function emptyPlatformTrendPayload() {
@@ -495,8 +577,8 @@ function emptyPlatformTrendPayload() {
       metric_filtered: 0,
       max_items: null,
       max_candidates: 400,
-      min_views: 300,
-      min_likes: 10,
+      min_views: 100,
+      min_likes: 5,
     },
     summary: {
       accepted: 0,
@@ -504,8 +586,8 @@ function emptyPlatformTrendPayload() {
       metric_filtered: 0,
       max_items: null,
       max_candidates: 400,
-      min_views: 300,
-      min_likes: 10,
+      min_views: 100,
+      min_likes: 5,
     },
   };
 }
@@ -533,7 +615,7 @@ function emptyDitingDigestIndex() {
 }
 
 function route() {
-  const hash = window.location.hash || "#/";
+  const hash = window.location.hash || "#/platform/xiaohongshu";
   const parts = hash.replace(/^#\/?/, "").split("/").filter(Boolean);
   if (parts[0] === "platform" && parts[1] === "xiaohongshu") return { name: "xiaohongshu" };
   if (parts[0] === "diting" && parts[1] === "ai-daily") return { name: "aiDaily" };
@@ -542,7 +624,8 @@ function route() {
   if (parts[0] === "fermentation") return { name: "overview" };
   if (parts[0] === "source-status") return { name: "settings" };
   if (parts[0] === "competitor") return { name: "daily" };
-  return { name: parts[0] || "overview" };
+  if (parts[0] === "overview") return { name: "overview" };
+  return { name: parts[0] || "xiaohongshu" };
 }
 
 function render() {
@@ -557,9 +640,10 @@ function render() {
   document.getElementById("page-title").textContent = routeTitles[current.name] || "舆情焦点";
   document.getElementById("generated-at").textContent = generatedAtLabelForRoute(current.name);
   const health = document.getElementById("health-pill");
-  const sampleMode = isSampleMode();
-  health.textContent = sampleMode ? "Sample data" : state.overview.health === "normal" ? "Data healthy" : state.overview.health;
-  health.className = `status-pill ${sampleMode ? "sample" : state.overview.health}`;
+  const sampleMode = state.routeDataReady.brand && isSampleMode();
+  const healthState = routeHealthState(current.name);
+  health.textContent = sampleMode ? "Sample data" : healthState === "normal" ? "Data healthy" : healthState === "loading" ? "加载中" : healthState;
+  health.className = `status-pill ${sampleMode ? "sample" : healthState}`;
   document.querySelectorAll(".nav-list a").forEach((link) => {
     link.classList.toggle("active", link.dataset.route === current.name);
   });
@@ -569,8 +653,9 @@ function render() {
   state.conversationContexts = new Map();
   state.ditingCommentThreads = new Map();
 
-  if (!state.routeDataReady[current.name] && ["xiaohongshu", "aiDaily", "tgDaily"].includes(current.name)) {
-    if (!state.routeDataErrors[current.name]) requestRouteData(current.name);
+  const dataKey = routeDataKey(current.name);
+  if (dataKey && !state.routeDataReady[dataKey]) {
+    if (!state.routeDataErrors[dataKey]) requestRouteData(current.name);
     content.innerHTML = routeDataLoadingPage(current.name);
     if (shouldRestoreScroll) restoreMainScroll(content, routeKey);
     state.lastRouteKey = routeKey;
@@ -595,11 +680,19 @@ function render() {
 }
 
 function generatedAtLabelForRoute(routeName) {
-  if (routeName === "xiaohongshu") return state.xiaohongshu?.generated_at_label || state.overview.generated_at_label;
+  if (routeName === "xiaohongshu") return state.xiaohongshu?.generated_at_label || "等待数据";
   if (routeName === "aiDaily" || routeName === "tgDaily") {
-    return state.dtDigestIndex?.generated_at_label || state.overview.generated_at_label;
+    return state.dtDigestIndex?.generated_at_label || "等待数据";
   }
-  return state.overview.generated_at_label;
+  return state.overview?.generated_at_label || "等待数据";
+}
+
+function routeHealthState(routeName) {
+  const dataKey = routeDataKey(routeName);
+  if (!dataKey || !state.routeDataReady[dataKey]) return "loading";
+  if (dataKey === "brand") return state.overview?.health || "normal";
+  if (dataKey === "xiaohongshu") return state.xiaohongshu?.collection_status?.status === "partial" ? "partial" : "normal";
+  return "normal";
 }
 
 function bindNavigation() {
@@ -1016,6 +1109,8 @@ function platformArchiveItemCount(archive) {
 }
 
 function platformLazyPlaceholder(date) {
+  const error = state.platformDetailErrors[`xiaohongshu:${date}`];
+  if (error) return inlineLoadError("该日小红书内容加载失败", error, "platform", date);
   return timelineLoadingSkeleton("inline", isPlatformDetailLoading(date) ? 2 : 1);
 }
 
@@ -1085,6 +1180,9 @@ function ditingDigestPage(kind) {
   const selected = loadedDetails.find((daily) => daily.date === filters.date)
     || loadedDetails.find((daily) => selectedEntry && daily.date === selectedEntry.date)
     || emptyDitingDigestPayload(kind, selectedEntry);
+  const detailKey = `${kind}:${selectedEntry?.date || filters.date || ""}`;
+  const detailLoading = state.ditingDetailLoads.has(detailKey);
+  const detailError = state.ditingDetailErrors[detailKey];
   if (!filters.date && selected.date) filters.date = selected.date;
   const allItems = flattenDitingDigestItems(selected);
   const filteredSections = ditingFilteredSections(selected, config, filters);
@@ -1158,7 +1256,13 @@ function ditingDigestPage(kind) {
       </div>
     </section>
     <section class="diting-digest-feed">
-      ${filteredSections.length ? filteredSections.map((section) => ditingSectionBlock(section, config)).join("") : empty(config.emptyText)}
+      ${detailError
+        ? inlineLoadError(`${config.title}该日内容加载失败`, detailError, "diting", selectedEntry?.date || filters.date, kind)
+        : detailLoading
+          ? timelineLoadingSkeleton("inline", 3)
+          : filteredSections.length
+            ? filteredSections.map((section) => ditingSectionBlock(section, config)).join("")
+            : empty(config.emptyText)}
     </section>
   `;
 }
@@ -1356,12 +1460,14 @@ function isExplicitEmptyPublishedMedia(media = {}) {
 function ditingCommentActionNode(item, config) {
   if (config.routeName !== "tgDaily") return "";
   const replies = visibleDitingReplies(item);
-  if (replies.length) {
+  const repliesPath = dashboardJsonPath(item.replies_path || item.repliesPath || "");
+  const visibleCount = Number(item.replies_visible ?? item.repliesVisible ?? replies.length ?? 0);
+  if (replies.length || (repliesPath && visibleCount > 0)) {
     const threadId = ditingCommentThreadId(item);
-    state.ditingCommentThreads.set(threadId, { item, replies });
+    state.ditingCommentThreads.set(threadId, { item, replies, repliesPath });
     return `
       <div class="diting-comment-action">
-        <button type="button" class="diting-comment-link" data-diting-comments="${escapeHtml(threadId)}">评论(${escapeHtml(String(replies.length))})</button>
+        <button type="button" class="diting-comment-link" data-diting-comments="${escapeHtml(threadId)}">评论(${escapeHtml(String(visibleCount || replies.length))})</button>
       </div>
     `;
   }
@@ -1377,7 +1483,7 @@ function visibleDitingReplies(item) {
   const replies = Array.isArray(item?.replies) ? item.replies : [];
   return replies
     .map(normalizedDitingReply)
-    .filter((reply) => reply && !ditingReplyFilterReason(reply));
+    .filter(Boolean);
 }
 
 function normalizedDitingReply(reply) {
@@ -1390,25 +1496,6 @@ function normalizedDitingReply(reply) {
     senderName: compactDisplayText(reply.sender_name || reply.senderName || ""),
     media,
   };
-}
-
-function ditingReplyFilterReason(reply) {
-  const text = compactDisplayText(reply?.text || "");
-  const sender = compactDisplayText(reply?.senderName || "");
-  const media = Array.isArray(reply?.media) ? reply.media : [];
-  if (!text && !media.length) return "empty";
-  const compact = `${sender}${text}`.replace(/\s+/g, "");
-  if (TG_COMMENT_BLOCK_PATTERNS.some((pattern) => pattern.test(compact))) return "blocked";
-  if (!media.length) {
-    const signalLength = signalCharCount(text);
-    if (signalLength <= 1) return "low-signal";
-    if (signalLength <= 8 && TG_COMMENT_LOW_SIGNAL_RE.test(compact)) return "low-signal";
-  }
-  return "";
-}
-
-function signalCharCount(value) {
-  return (String(value || "").replace(/https?:\/\/\S+/gi, "").match(/[A-Za-z0-9\u3400-\u9fff]/g) || []).length;
 }
 
 function ditingCommentThreadId(item) {
@@ -2807,13 +2894,24 @@ function contextRelationNode(item) {
 
 function normalizedConversationContext(item) {
   const context = item?.conversation_context || item?.conversationContext || null;
-  if (!context || !Array.isArray(context.posts) || !context.posts.length) return null;
+  if (!context || typeof context !== "object") return null;
+  const posts = Array.isArray(context.posts) ? context.posts.filter(Boolean) : [];
+  const detailPath = dashboardJsonPath(context.detail_path || context.detailPath || "");
+  if (!posts.length && !detailPath) return null;
   const anchorId = String(context.anchor_post_id || item?.post_id || item?.id || "");
   return {
     ...context,
     anchor_post_id: anchorId,
-    posts: context.posts.filter(Boolean).sort((a, b) => String(a.created_at || "").localeCompare(String(b.created_at || ""))),
+    detail_path: detailPath,
+    post_count: Number(context.post_count || posts.length || 0),
+    posts: posts.sort((a, b) => String(a.created_at || "").localeCompare(String(b.created_at || ""))),
   };
+}
+
+function dashboardJsonPath(value) {
+  const path = String(value || "").trim().replace(/^\.\//, "");
+  if (!path.startsWith("dashboard-data/") || path.includes("..") || /[?#]/.test(path)) return "";
+  return path;
 }
 
 function conversationContextId(item, context) {
@@ -3414,6 +3512,9 @@ function itemMatchesAllFilters(item) {
 
 function dailyPage() {
   const daily = state.selectedDaily || state.daily;
+  if (daily._archive_stub && state.dailyDetailErrors[daily.date]) {
+    return inlineLoadError("该日舆情日报加载失败", state.dailyDetailErrors[daily.date], "daily", daily.date);
+  }
   if (daily._archive_stub && isDailyDetailLoading(daily.date)) return dailyLoadingPage(daily);
   const metrics = daily.metrics || state.overview.metrics;
   const source = daily.source_status || state.sourceStatus;
@@ -4006,7 +4107,7 @@ function settingsNoteText(note) {
 }
 
 async function renderDetail(clusterId) {
-  window.location.hash = "#/";
+  window.location.hash = "#/overview";
 }
 
 function detailPage(detail) {
@@ -4576,7 +4677,7 @@ async function selectDaily(date) {
     render();
   }
   const record = await loadPromise;
-  state.selectedDaily = record || state.daily;
+  state.selectedDaily = record || existing || state.daily;
   const nextDate = (state.selectedDaily || state.daily)?.date;
   render();
   if (nextDate && nextDate !== previousDate) resetMainScroll(document.getElementById("content"));
@@ -4611,7 +4712,25 @@ function dailyArchiveAllCount() {
 }
 
 function lazyArchivePlaceholder(date) {
+  const error = state.dailyDetailErrors[date];
+  if (error) return inlineLoadError("该日舆情内容加载失败", error, "daily", date);
   return timelineLoadingSkeleton("inline", isDailyDetailLoading(date) ? 2 : 1);
+}
+
+function inlineLoadError(title, message, scope, date = "", kind = "") {
+  return `
+    <div class="inline-load-error" role="alert">
+      <strong>${escapeHtml(title)}</strong>
+      <span>${escapeHtml(message || "网络异常，请稍后重试")}</span>
+      <button
+        class="text-button primary"
+        type="button"
+        data-detail-retry="${escapeHtml(scope)}"
+        data-detail-date="${escapeHtml(date)}"
+        data-detail-kind="${escapeHtml(kind)}"
+      >重新加载</button>
+    </div>
+  `;
 }
 
 function timelineLoadingSkeleton(mode = "", count = 3) {
@@ -4786,6 +4905,38 @@ function empty(text) {
 }
 
 function bindPageEvents(detail = null) {
+  document.querySelectorAll("[data-route-retry]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const routeName = button.dataset.routeRetry || route().name;
+      const dataKey = routeDataKey(routeName);
+      if (dataKey) delete state.routeDataErrors[dataKey];
+      requestRouteData(routeName);
+      render();
+    });
+  });
+
+  document.querySelectorAll("[data-detail-retry]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const scope = button.dataset.detailRetry;
+      const date = button.dataset.detailDate || "";
+      const kind = button.dataset.detailKind || "";
+      let promise = null;
+      if (scope === "daily") {
+        delete state.dailyDetailErrors[date];
+        promise = ensureDailyArchiveDate(date);
+      } else if (scope === "platform") {
+        delete state.platformDetailErrors[`xiaohongshu:${date}`];
+        promise = ensurePlatformTrendDate("xiaohongshu", date);
+      } else if (scope === "diting") {
+        delete state.ditingDetailErrors[`${kind}:${date}`];
+        promise = ensureDitingDigestDetail(kind, date);
+      }
+      render();
+      if (promise) await promise;
+      render();
+    });
+  });
+
   document.querySelectorAll("[data-featured-date]").forEach((button) => {
     button.addEventListener("click", async () => {
       const date = button.dataset.featuredDate;
@@ -4889,7 +5040,9 @@ function bindPageEvents(detail = null) {
       state.dtDigestFilters[kind].date = button.dataset.dtDate || "";
       state.dtDigestFilters[kind].section = "all";
       state.dtDigestFilters[kind].source = "all";
-      await ensureDitingDigestDetail(kind, state.dtDigestFilters[kind].date);
+      const promise = ensureDitingDigestDetail(kind, state.dtDigestFilters[kind].date);
+      render();
+      await promise;
       render();
     });
   });
@@ -4910,7 +5063,9 @@ function bindPageEvents(detail = null) {
       state.dtDigestFilters[kind].section = "all";
       state.dtDigestFilters[kind].source = "all";
       state.dtDateRailScroll[kind] = 0;
-      await ensureDitingDigestDetail(kind, today);
+      const promise = ensureDitingDigestDetail(kind, today);
+      render();
+      await promise;
       render();
     });
   });
@@ -4992,11 +5147,11 @@ function bindPageEvents(detail = null) {
 
 }
 
-function openDitingCommentDrawer(threadId) {
+async function openDitingCommentDrawer(threadId) {
   const record = state.ditingCommentThreads.get(threadId);
-  if (!record?.replies?.length) return;
+  if (!record || (!record.replies?.length && !record.repliesPath)) return;
   closeConversationDrawer();
-  const { item, replies } = record;
+  const { item } = record;
   const channelName = compactDisplayText(item.channel_name || item.channelName || item.channel || "TG频道");
   const itemTime = compactDisplayText(item.time || "");
   const node = document.createElement("div");
@@ -5010,14 +5165,16 @@ function openDitingCommentDrawer(threadId) {
         </div>
         <button type="button" class="conversation-drawer-close" aria-label="关闭评论">×</button>
       </div>
-      <div class="diting-comment-thread">
-        <div class="diting-comment-count">评论 ${escapeHtml(String(replies.length))} 条</div>
-        ${replies.map((reply) => ditingCommentNode(reply, item)).join("")}
-      </div>
+      <div class="diting-comment-thread">${drawerLoadingMarkup("正在加载评论")}</div>
     </aside>
   `;
   node.addEventListener("click", (event) => {
     if (event.target === node || event.target.closest(".conversation-drawer-close")) closeConversationDrawer();
+    if (event.target.closest("[data-drawer-retry]")) {
+      closeConversationDrawer();
+      openDitingCommentDrawer(threadId);
+      return;
+    }
     const mediaButton = event.target.closest("[data-media-lightbox]");
     if (mediaButton) openMediaLightbox(mediaButton.dataset.mediaLightbox, mediaLightboxOptions(mediaButton));
   });
@@ -5029,6 +5186,19 @@ function openDitingCommentDrawer(threadId) {
   document.body.appendChild(node);
   document.body.classList.add("conversation-drawer-open");
   updateBackToTopVisibility();
+  try {
+    if (!record.replies?.length && record.repliesPath) {
+      const payload = await loadJson(`./${record.repliesPath}`);
+      record.replies = (Array.isArray(payload?.replies) ? payload.replies : []).map(normalizedDitingReply).filter(Boolean);
+    }
+    if (!node.isConnected) return;
+    const replies = record.replies || [];
+    node.querySelector(".diting-comment-thread").innerHTML = replies.length
+      ? `<div class="diting-comment-count">评论 ${escapeHtml(String(replies.length))} 条</div>${replies.map((reply) => ditingCommentNode(reply, item)).join("")}`
+      : `<div class="drawer-empty-state">没有可显示的评论。</div>`;
+  } catch (error) {
+    if (node.isConnected) node.querySelector(".diting-comment-thread").innerHTML = drawerErrorMarkup("评论加载失败", error);
+  }
 }
 
 function ditingCommentNode(reply, owner) {
@@ -5048,32 +5218,28 @@ function ditingCommentNode(reply, owner) {
   `;
 }
 
-function openConversationDrawer(contextId) {
+async function openConversationDrawer(contextId) {
   const record = state.conversationContexts.get(contextId);
   if (!record?.context) return;
   closeConversationDrawer();
-  const context = record.context;
   const node = document.createElement("div");
   node.className = "conversation-drawer-shell";
   node.innerHTML = `
     <aside class="conversation-drawer" role="dialog" aria-modal="true">
       <div class="conversation-drawer-tools">
-        <div class="conversation-drawer-primary-tools">
-          <button type="button" class="text-button" data-conversation-top>最早</button>
-          <span class="language-toggle conversation-language-toggle" role="group" aria-label="上下文语言切换">
-            <button type="button" class="active" data-conversation-language="zh">中文译文</button>
-            <button type="button" data-conversation-language="original">原文</button>
-          </span>
-        </div>
+        <div class="conversation-drawer-primary-tools"><strong>完整上下文</strong></div>
         <button type="button" class="conversation-drawer-close" aria-label="关闭上下文">×</button>
       </div>
-      <div class="conversation-thread">
-        ${context.posts.map((post) => conversationThreadPost(post, context.anchor_post_id)).join("")}
-      </div>
+      <div class="conversation-thread">${drawerLoadingMarkup("正在加载上下文")}</div>
     </aside>
   `;
   node.addEventListener("click", (event) => {
     if (event.target === node || event.target.closest(".conversation-drawer-close")) closeConversationDrawer();
+    if (event.target.closest("[data-drawer-retry]")) {
+      closeConversationDrawer();
+      openConversationDrawer(contextId);
+      return;
+    }
     const mediaButton = event.target.closest("[data-media-lightbox]");
     if (mediaButton) openMediaLightbox(mediaButton.dataset.mediaLightbox, mediaLightboxOptions(mediaButton));
     if (event.target.closest("[data-conversation-top]")) {
@@ -5090,9 +5256,54 @@ function openConversationDrawer(contextId) {
   document.body.appendChild(node);
   document.body.classList.add("conversation-drawer-open");
   updateBackToTopVisibility();
-  requestAnimationFrame(() => {
-    centerConversationAnchor(node);
-  });
+  try {
+    if (!record.context.posts?.length && record.context.detail_path) {
+      const payload = await loadJson(`./${record.context.detail_path}`);
+      const loaded = normalizedConversationContext({ ...record.item, conversation_context: payload });
+      if (!loaded?.posts?.length) throw new Error("上下文文件中没有可显示内容");
+      record.context = loaded;
+    }
+    if (!node.isConnected) return;
+    renderLoadedConversationDrawer(node, record.context);
+    requestAnimationFrame(() => centerConversationAnchor(node));
+  } catch (error) {
+    if (node.isConnected) node.querySelector(".conversation-thread").innerHTML = drawerErrorMarkup("上下文加载失败", error);
+  }
+}
+
+function renderLoadedConversationDrawer(node, context) {
+  const tools = node.querySelector(".conversation-drawer-primary-tools");
+  if (tools) {
+    tools.innerHTML = `
+      <button type="button" class="text-button" data-conversation-top>最早</button>
+      <span class="language-toggle conversation-language-toggle" role="group" aria-label="上下文语言切换">
+        <button type="button" class="active" data-conversation-language="zh">中文译文</button>
+        <button type="button" data-conversation-language="original">原文</button>
+      </span>
+    `;
+  }
+  node.querySelector(".conversation-thread").innerHTML = context.posts
+    .map((post) => conversationThreadPost(post, context.anchor_post_id))
+    .join("");
+}
+
+function drawerLoadingMarkup(label) {
+  return `
+    <div class="drawer-load-state" role="status">
+      <span class="loading-line loading-line-md"></span>
+      <span>${escapeHtml(label)}</span>
+    </div>
+  `;
+}
+
+function drawerErrorMarkup(title, error) {
+  return `
+    <div class="drawer-load-state error" role="alert">
+      <strong>${escapeHtml(title)}</strong>
+      <span>${escapeHtml(error?.message || "网络异常，请稍后重试")}</span>
+      <button class="text-button primary" type="button" data-drawer-retry>重新加载</button>
+    </div>
+  `;
 }
 
 function centerConversationAnchor(node) {

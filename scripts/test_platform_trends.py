@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from src.pipeline.platform_trends import (
+    apply_platform_semantic_review,
     build_platform_queries,
     canonical_platform_tag,
     clean_post_text,
@@ -13,6 +14,7 @@ from src.pipeline.platform_trends import (
     platform_query_candidate_limit,
     public_platform_collection_status,
     score_platform_post,
+    strict_platform_relevance,
 )
 
 
@@ -25,6 +27,7 @@ def main() -> None:
     assert canonical_platform_tag("限流") == "风控对抗"
     assert canonical_platform_tag("平台规则") == "平台规则"
     assert canonical_platform_tag("账号矩阵") == "矩阵"
+    assert canonical_platform_tag("设备指纹") == "逆向与改机"
 
     media_text = clean_post_text(
         {
@@ -135,6 +138,56 @@ def main() -> None:
         "author_followers": 1000,
     }
     assert not score_platform_post(animal_cruelty_report, platform)["accepted"], "animal-cruelty reporting advocacy is not XHS growth methodology"
+
+    reverse_engineering = {
+        "clean_text": "小红书逆向工程实测：通过抓包分析接口签名和设备指纹，整理了改机环境的账号风控检查步骤。",
+        "links": [],
+        "metrics": {"likes": 18, "views": 900},
+        "author_followers": 1200,
+    }
+    reverse_decision = score_platform_post(
+        reverse_engineering,
+        {**platform, "intent_terms": [*platform["intent_terms"], "逆向工程", "抓包", "设备指纹", "改机"]},
+    )
+    assert reverse_decision["accepted"], "XHS reverse-engineering and device-environment research should be collected"
+    assert "逆向与改机" in reverse_decision["item"]["tags"]
+    assert strict_platform_relevance({**reverse_engineering, **reverse_decision["item"]})
+
+    class ReviewService:
+        configured = True
+        classification_last_error = ""
+
+        def classify_platform_batch(self, items):
+            return {
+                items[0]["id"]: {
+                    "central_subject": False,
+                    "relevant_domain": False,
+                    "substantive": False,
+                    "low_value": True,
+                    "domain": "案例复盘",
+                    "confidence": 0.98,
+                    "reason": "小红书仅被顺带提及",
+                },
+                items[1]["id"]: {
+                    "central_subject": True,
+                    "relevant_domain": True,
+                    "substantive": True,
+                    "low_value": False,
+                    "domain": "逆向与改机",
+                    "confidence": 0.94,
+                    "reason": "提供小红书客户端逆向方法",
+                },
+            }
+
+    semantic_items = [
+        {"post_id": "off-topic", "language": "zh", **item, **decision["item"]},
+        {"post_id": "reverse", "language": "zh", **reverse_engineering, **reverse_decision["item"]},
+    ]
+    reviewed, review_status = apply_platform_semantic_review(semantic_items, ReviewService())
+    assert [row["post_id"] for row in reviewed] == ["reverse"]
+    assert reviewed[0]["topic"] == "逆向与改机"
+    assert review_status["reviewed_count"] == 2
+    assert review_status["rejected_count"] == 1
 
     status = collection_status(
         [item],

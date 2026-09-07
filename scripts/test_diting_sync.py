@@ -17,6 +17,7 @@ from scripts.sync_dt_digests import (
     structured_tg_item,
     tg_item_filter_reason,
 )
+from src.pipeline.content_policy import tg_reply_policy_reason
 
 
 def main() -> None:
@@ -168,6 +169,9 @@ def main() -> None:
     }) == "low_value_adult"
     assert tg_item_filter_reason({"title": "Claude 挂了？", "summary": "Claude 挂了？"}) == "short_status_chatter"
     assert tg_item_filter_reason({"title": "Claude 挂了？", "summary": "Claude 恢复计划和替代方案整理如下"}) is None
+    assert tg_reply_policy_reason("要几把完蛋了") == "blocked"
+    assert tg_reply_policy_reason("印度人加 AI 配合起来，简直是灾难") == "blocked"
+    assert tg_reply_policy_reason("这是正常的技术讨论") is None
     print("Diting sync tests passed.")
 
 

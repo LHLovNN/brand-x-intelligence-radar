@@ -1,0 +1,100 @@
+{
+  "conversation_id": "2090346100666552477",
+  "anchor_post_id": "2090346100666552477",
+  "summary_zh": "前文是作者系统分享健身工作台小程序从demo、注册备案、MVP开发到上架推广的流程。收录帖末尾把教程转向具体产品体验，称健身小程序已上架可试用。随后作者补发链接，另一用户回应推广更难。上下文显示这是自有产品发布与引流，语气积极，传播价值在开发者圈层经验分享。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2090346100666552477",
+      "url": "https://x.com/cnzhihao/status/2090346100666552477",
+      "created_at": "2026-08-20T07:52:01Z",
+      "text": "给你们讲下这个健身工作台小程序开发和上线的完整流程。\n\n第一步：小程序 demo 版本开发（无后端+Mock 数据）\n1. workbuddy，启动工作台专家，做一个 html 的版本\n2. workbuddy，启动小程序专家，将 html 的版本转化成小程序架构；\n\n第二步：小程序注册\n1. 注册邮箱，推荐2925无限邮；\n2. 注册一个小程序账号并认证；也可以选择已经认证过的企业号直接免认证注册小程序账号；\n3. 选择类目，直接备案，这个要耗几天时间，赶紧先做了；\n4. 参加小程序开发者计划，领 6 个月云开发资源\n\n第三步：小程序 MVP 版本开发\n1. 打开小程序开发者工具，将注册好的 app_id 填进去，打开项目；\n2. 使用 kimi-cli 或者 codex-cli（推荐 kimi，目前前端第一），当然你可以继续使用 workbuddy 对小程序进行精修；\n3. 精修主要解决 3 个问题，第一，小程序迁移过来的时候出现的各种兼容性报错；第二，连上 cloudbase 云开发将前后端接好；第三，主流程真数据完全跑通。\n\n第四步：上架\n1. 备案后会接电话，然后正常接电话，初审过了之后工信部会发短信通知，记得收到短信后 24 小时内验证，验证后一般 1-2 天就完事了；\n2. 真机测试，测试通过后上线版本；\n3. 将版本提交审核，可以录一个 demo，方便审核查看，审核速度会明显加快；\n4. 审核通过后上线\n\n第五步：增加社交推广和公众号联动\n1. MVP 版本完成后，就可以打印小程序码发给朋友们试用了；\n2. 小程序官方并不支持直接推广，所以可以做一些推广用的功能，比如分享到朋友圈，打卡这些，方便社交裂变；\n3. 在公众号或者视频号发一些视频进行推广；\n4. 在小红书发笔记进行推广。\n5. 拉群，做用户调研，对产品进行迅速迭代。\n\n很快，现在基本上 2 天上一个小程序，还可以并发上。\n\n对了，之前那个健身小程序已经上架可用了，大家可以去尝试一下。加起来 3 天时间，稍微加了一些新功能，之后会接上 CLI 工具让 AI 可读。",
+      "original_text": "给你们讲下这个健身工作台小程序开发和上线的完整流程。\n\n第一步：小程序 demo 版本开发（无后端+Mock 数据）\n1. workbuddy，启动工作台专家，做一个 html 的版本\n2. workbuddy，启动小程序专家，将 html 的版本转化成小程序架构；\n\n第二步：小程序注册\n1. 注册邮箱，推荐2925无限邮；\n2. 注册一个小程序账号并认证；也可以选择已经认证过的企业号直接免认证注册小程序账号；\n3. 选择类目，直接备案，这个要耗几天时间，赶紧先做了；\n4. 参加小程序开发者计划，领 6 个月云开发资源\n\n第三步：小程序 MVP 版本开发\n1. 打开小程序开发者工具，将注册好的 app_id 填进去，打开项目；\n2. 使用 kimi-cli 或者 codex-cli（推荐 kimi，目前前端第一），当然你可以继续使用 workbuddy 对小程序进行精修；\n3. 精修主要解决 3 个问题，第一，小程序迁移过来的时候出现的各种兼容性报错；第二，连上 cloudbase 云开发将前后端接好；第三，主流程真数据完全跑通。\n\n第四步：上架\n1. 备案后会接电话，然后正常接电话，初审过了之后工信部会发短信通知，记得收到短信后 24 小时内验证，验证后一般 1-2 天就完事了；\n2. 真机测试，测试通过后上线版本；\n3. 将版本提交审核，可以录一个 demo，方便审核查看，审核速度会明显加快；\n4. 审核通过后上线\n\n第五步：增加社交推广和公众号联动\n1. MVP 版本完成后，就可以打印小程序码发给朋友们试用了；\n2. 小程序官方并不支持直接推广，所以可以做一些推广用的功能，比如分享到朋友圈，打卡这些，方便社交裂变；\n3. 在公众号或者视频号发一些视频进行推广；\n4. 在小红书发笔记进行推广。\n5. 拉群，做用户调研，对产品进行迅速迭代。\n\n很快，现在基本上 2 天上一个小程序，还可以并发上。\n\n对了，之前那个健身小程序已经上架可用了，大家可以去尝试一下。加起来 3 天时间，稍微加了一些新功能，之后会接上 CLI 工具让 AI 可读。",
+      "translation_zh": "给你们讲下这个健身工作台小程序开发和上线的完整流程。\n\n第一步：小程序 demo 版本开发（无后端+Mock 数据）\n1. workbuddy，启动工作台专家，做一个 html 的版本\n2. workbuddy，启动小程序专家，将 html 的版本转化成小程序架构；\n\n第二步：小程序注册\n1. 注册邮箱，推荐2925无限邮；\n2. 注册一个小程序账号并认证；也可以选择已经认证过的企业号直接免认证注册小程序账号；\n3. 选择类目，直接备案，这个要耗几天时间，赶紧先做了；\n4. 参加小程序开发者计划，领 6 个月云开发资源\n\n第三步：小程序 MVP 版本开发\n1. 打开小程序开发者工具，将注册好的 app_id 填进去，打开项目；\n2. 使用 kimi-cli 或者 codex-cli（推荐 kimi，目前前端第一），当然你可以继续使用 workbuddy 对小程序进行精修；\n3. 精修主要解决 3 个问题，第一，小程序迁移过来的时候出现的各种兼容性报错；第二，连上 cloudbase 云开发将前后端接好；第三，主流程真数据完全跑通。\n\n第四步：上架\n1. 备案后会接电话，然后正常接电话，初审过了之后工信部会发短信通知，记得收到短信后 24 小时内验证，验证后一般 1-2 天就完事了；\n2. 真机测试，测试通过后上线版本；\n3. 将版本提交审核，可以录一个 demo，方便审核查看，审核速度会明显加快；\n4. 审核通过后上线\n\n第五步：增加社交推广和公众号联动\n1. MVP 版本完成后，就可以打印小程序码发给朋友们试用了；\n2. 小程序官方并不支持直接推广，所以可以做一些推广用的功能，比如分享到朋友圈，打卡这些，方便社交裂变；\n3. 在公众号或者视频号发一些视频进行推广；\n4. 在小红书发笔记进行推广。\n5. 拉群，做用户调研，对产品进行迅速迭代。\n\n很快，现在基本上 2 天上一个小程序，还可以并发上。\n\n对了，之前那个健身小程序已经上架可用了，大家可以去尝试一下。加起来 3 天时间，稍微加了一些新功能，之后会接上 CLI 工具让 AI 可读。",
+      "translation_status": "source_chinese",
+      "author_name": "智昊 - OPC版",
+      "author_handle": "cnzhihao",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2051526937215180800/vt_z9_yp_normal.jpg",
+      "author_followers": 1262,
+      "author_following": 331,
+      "author_bio": "CPA｜一人公司公开经营｜企业AI交付\n每周更新：现金/收入/支出/决策/踩坑\n做过：财务流程AI化(6周→9天)、HR Agent、AI内容获客\n不讲空概念，只公开真实经营与可复用方案 ↓",
+      "author_location": "HangZhou",
+      "author_joined_at": "2025-03-21T08:42:18Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 20,
+        "reposts": 3,
+        "replies": 2,
+        "quotes": 1,
+        "bookmarks": 21,
+        "views": 2134
+      }
+    },
+    {
+      "post_id": "2090346156882805070",
+      "url": "https://x.com/cnzhihao/status/2090346156882805070",
+      "created_at": "2026-08-20T07:52:15Z",
+      "text": "玩起来哈哈！ https://t.co/Lt1G2lH091",
+      "original_text": "玩起来哈哈！ https://t.co/Lt1G2lH091",
+      "translation_zh": "玩起来哈哈！ https://t.co/Lt1G2lH091",
+      "translation_status": "source_chinese",
+      "author_name": "智昊 - OPC版",
+      "author_handle": "cnzhihao",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2051526937215180800/vt_z9_yp_normal.jpg",
+      "author_followers": 1262,
+      "author_following": 331,
+      "author_bio": "CPA｜一人公司公开经营｜企业AI交付\n每周更新：现金/收入/支出/决策/踩坑\n做过：财务流程AI化(6周→9天)、HR Agent、AI内容获客\n不讲空概念，只公开真实经营与可复用方案 ↓",
+      "author_location": "HangZhou",
+      "author_joined_at": "2025-03-21T08:42:18Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HQJmug-bAAAuKwo.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HQJmug-bAAAuKwo.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HQJmug-bAAAuKwo.jpg",
+          "expanded_url": "https://x.com/cnzhihao/status/2090346156882805070/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 114
+      }
+    },
+    {
+      "post_id": "2090488717089919027",
+      "url": "https://x.com/Jason_WealthAI/status/2090488717089919027",
+      "created_at": "2026-08-20T17:18:44Z",
+      "text": "@cnzhihao 做产品不难，难的是怎么推广出去😂",
+      "original_text": "@cnzhihao 做产品不难，难的是怎么推广出去😂",
+      "translation_zh": "@cnzhihao 做产品不难，难的是怎么推广出去😂",
+      "translation_status": "source_chinese",
+      "author_name": "JasonZ",
+      "author_handle": "Jason_WealthAI",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2064607892876189696/JSxZLBlV_normal.jpg",
+      "author_followers": 6798,
+      "author_following": 1673,
+      "author_bio": "💼 20年金融老兵：带你把复杂财富逻辑变简单\n🎁 极简财富 | 商业变现 | 投资本质\n👇 关注我，带你清醒搞钱，少走弯路。",
+      "author_location": "Seattle WA",
+      "author_joined_at": "2021-12-21T04:20:48Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 32
+      }
+    }
+  ]
+}

@@ -3,6 +3,8 @@ import re
 from urllib.parse import urlparse
 from typing import Any
 
+from src.pipeline.content_policy import brand_post_policy_reasons
+
 
 def _lower_text(value: str) -> str:
     return re.sub(r"\s+", " ", value.strip().lower())
@@ -75,17 +77,6 @@ FINANCIAL_RETURN_CONTEXT_TERMS = [
     "指数",
 ]
 
-BLOCKED_AUTHOR_HANDLES = {
-    "ctsurvivor17",
-}
-
-SENSITIVE_OFF_TOPIC_PATTERNS = {
-    "political_conspiracy": re.compile(r"\b(?:antifa|maga|qteam|stolenvalor|stoicpredo|team trump|president trump)\b", re.IGNORECASE),
-    "child_exploitation_claims": re.compile(r"\b(?:epstein island|lolita express|child trafficking|trafficked children)\b", re.IGNORECASE),
-    "political_violence_claims": re.compile(r"\b(?:assassination attempts?|terrorist|cultists?)\b", re.IGNORECASE),
-}
-
-
 def _has_any_phrase(text: str, terms: list[str]) -> bool:
     return any(term.lower() in text for term in terms)
 
@@ -113,18 +104,8 @@ def _matching_text(post: dict[str, Any]) -> str:
     return _lower_text(f"{_decode_html_entities(post.get('text'))} {_expanded_link_text(post)}")
 
 
-def _author_handle(post: dict[str, Any]) -> str:
-    return str(post.get("author_handle") or "").strip().lstrip("@").lower()
-
-
 def _policy_noise_terms(post: dict[str, Any], text: str) -> list[str]:
-    reasons: list[str] = []
-    if _author_handle(post) in BLOCKED_AUTHOR_HANDLES:
-        reasons.append("blocked_author")
-    sensitive_hits = [label for label, pattern in SENSITIVE_OFF_TOPIC_PATTERNS.items() if pattern.search(text)]
-    if len(sensitive_hits) >= 2:
-        reasons.append("off_topic_sensitive_thread")
-    return reasons
+    return brand_post_policy_reasons(post, text)
 
 
 def _readable_url_label(url: str) -> str:

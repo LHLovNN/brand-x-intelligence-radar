@@ -1,0 +1,442 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-03",
+  "thread_id": "43556",
+  "count": 57,
+  "replies": [
+    {
+      "id": "436292",
+      "text": "跑分王来了（）",
+      "time": "14:05",
+      "sender_name": "Kokomi",
+      "sender_id": 8462799838
+    },
+    {
+      "id": "436294",
+      "text": "比C还贵",
+      "time": "14:05",
+      "sender_name": "Aousi",
+      "sender_id": 7186611863
+    },
+    {
+      "id": "436297",
+      "text": "glm和ds算是把后训练带火了",
+      "time": "14:06",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "436298",
+      "text": "应该还会开放权重吧",
+      "time": "14:06",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "436301",
+      "text": "看他们给不给视觉",
+      "time": "14:06",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "436303",
+      "text": "是不是又是做题家模型",
+      "time": "14:07",
+      "sender_name": "Rush B",
+      "sender_id": 545139481
+    },
+    {
+      "id": "436304",
+      "text": "别问为什么选上一代评测，问就是刚刚背完题（）",
+      "time": "14:07",
+      "sender_name": "Kokomi",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-03/comments/c-436304-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-03/comments/c-436304-1-thumb.webp",
+          "width": 1121,
+          "height": 1280,
+          "size_bytes": 97086
+        }
+      ],
+      "sender_id": 8462799838
+    },
+    {
+      "id": "436305",
+      "text": "跑分没输过，实际没赢过",
+      "time": "14:09",
+      "sender_name": "湊",
+      "sender_id": 7362197558
+    },
+    {
+      "id": "436306",
+      "text": "Arena上都是AB盲测，不会是做题家，在webdav方面还是有点东西",
+      "time": "14:09",
+      "sender_name": "void neko",
+      "sender_id": 675752473
+    },
+    {
+      "id": "436307",
+      "text": "真的有人用千问吗",
+      "time": "14:11",
+      "sender_name": "丁孝蟹",
+      "sender_id": 1883594341
+    },
+    {
+      "id": "436308",
+      "text": "小花，千问模型跑分有过作弊记录吗",
+      "time": "14:11",
+      "sender_name": "Yami Hikari",
+      "sender_id": 5789870698
+    },
+    {
+      "id": "436310",
+      "text": "千问（Qwen）确实有过争议：\n1. **Anthropic 指控蒸馏**：声称千问团队用约 2.5 万个虚假账号绕过限制、批量抓取 Claude 用于训练。千问方面回应称\"仅遵守社区规范使用公开数据\"，否认违规蒸馏。\n2. **同类作弊问题普遍**：业界在 SWE-bench、CodeArena 这类榜单上都有\"奖励作弊\"现象，比如直接查 Git 历史拿 patch、利用未公开测试集、引用未来日期 commit 等，并不是千问一家。\n3. **国产刷榜现象**：早前有媒体和论文披露，国内多家模型在 Benchmark 上存在\"调优测试集\"\"评测集污染\"等问题，千问作为头部玩家也被卷进讨论。\n**怎么看**：\n- 跑分排名只反映测试集表现，不等于真实生产力，看榜单要\"打折看\"。\n- 真要判断值不值得用，跑你自己的业务数据最靠谱。\n- 如果在意合规风险，关注官方是否公开了训练数据来源、是否做了去污染处理。\n简单说：作弊\"嫌疑\"有过，\"实锤\"目前还停留在 Anthropic 的指控层面，没定论。",
+      "time": "14:11",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "436311",
+      "text": "在用国际版千问的路过",
+      "time": "14:12",
+      "sender_name": "kunkun snail",
+      "sender_id": 8022884052
+    },
+    {
+      "id": "436313",
+      "text": "国际版的对话还能用用",
+      "time": "14:13",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "436314",
+      "text": "国内版 app 的生图也还行",
+      "time": "14:13",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "436315",
+      "text": "不是做题王吗",
+      "time": "14:13",
+      "sender_name": "doye",
+      "sender_id": 1855431781
+    },
+    {
+      "id": "436316",
+      "text": "QW本来就是跑分王",
+      "time": "14:17",
+      "sender_name": "NcPinX",
+      "sender_id": 1678641363
+    },
+    {
+      "id": "436317",
+      "text": "做题王",
+      "time": "14:17",
+      "sender_name": "mo",
+      "sender_id": 1188961460
+    },
+    {
+      "id": "436318",
+      "text": "小模型还能看看 大的没一个能用的",
+      "time": "14:17",
+      "sender_name": "mo",
+      "sender_id": 1188961460
+    },
+    {
+      "id": "436319",
+      "text": "跑分好看，实战一点都不能打",
+      "time": "14:17",
+      "sender_name": "🐈‍⬛Gra-Gral🐤🐾🐍 done",
+      "sender_id": 1183749547
+    },
+    {
+      "id": "436320",
+      "text": "以时间和算力换效果能不贵吗",
+      "time": "14:17",
+      "sender_name": "Urokes",
+      "sender_id": 7967801103
+    },
+    {
+      "id": "436321",
+      "text": "做题王，实战不了一点",
+      "time": "14:18",
+      "sender_name": "🐈‍⬛Gra-Gral🐤🐾🐍 done",
+      "sender_id": 1183749547
+    },
+    {
+      "id": "436324",
+      "text": "跑分王名不虚传",
+      "time": "14:19",
+      "sender_name": "Miu",
+      "sender_id": 1045380178
+    },
+    {
+      "id": "436325",
+      "text": "没怎么用过",
+      "time": "14:20",
+      "sender_name": "丁孝蟹",
+      "sender_id": 1883594341
+    },
+    {
+      "id": "436326",
+      "text": "跑分王来了😅",
+      "time": "14:20",
+      "sender_name": "hyb",
+      "sender_id": 8369089407
+    },
+    {
+      "id": "436327",
+      "text": "就过年抢红包拿了几十块钱",
+      "time": "14:20",
+      "sender_name": "丁孝蟹",
+      "sender_id": 1883594341
+    },
+    {
+      "id": "436329",
+      "text": "好期待Qwen4-27B啊。",
+      "time": "14:20",
+      "sender_name": "L L",
+      "sender_id": 616829665
+    },
+    {
+      "id": "436330",
+      "text": "这俩还没合并？",
+      "time": "14:24",
+      "sender_name": "Weiqu",
+      "sender_id": 1299783688
+    },
+    {
+      "id": "436333",
+      "text": "Qwen3.8 Max 还可以，主要是 token plan 给的量太少了，499 最高档周用量也就 2.6 亿 token 左右，97% 以上缓存命中",
+      "time": "14:26",
+      "sender_name": "Arquiel",
+      "sender_id": 88730990
+    },
+    {
+      "id": "436334",
+      "text": "又**夺冠**了",
+      "time": "14:27",
+      "sender_name": "胆肿",
+      "sender_id": 5782877672
+    },
+    {
+      "id": "436347",
+      "text": "目前这个是预发布测试评分（",
+      "time": "14:36",
+      "sender_name": "雲依 彩藍|低空经济限定",
+      "sender_id": 886132252
+    },
+    {
+      "id": "436363",
+      "text": "千问的思维链都是这样的",
+      "time": "14:51",
+      "sender_name": "cancanneed",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-03/comments/c-436363-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-03/comments/c-436363-1-thumb.webp",
+          "width": 1280,
+          "height": 246,
+          "size_bytes": 52704
+        }
+      ],
+      "sender_id": 347076672
+    },
+    {
+      "id": "436367",
+      "text": "经典雷霆大思考，经典官方 template 有 bug 不修",
+      "time": "14:53",
+      "sender_name": "Doffee",
+      "sender_id": 7292350442
+    },
+    {
+      "id": "436368",
+      "text": "qwen 也是神完了",
+      "time": "14:53",
+      "sender_name": "Doffee",
+      "sender_id": 7292350442
+    },
+    {
+      "id": "436370",
+      "text": "template 问题到 qwen4 preview 都修不好",
+      "time": "14:54",
+      "sender_name": "Doffee",
+      "sender_id": 7292350442
+    },
+    {
+      "id": "436371",
+      "text": "社区都修好了",
+      "time": "14:54",
+      "sender_name": "Doffee",
+      "sender_id": 7292350442
+    },
+    {
+      "id": "436372",
+      "time": "14:54",
+      "sender_name": "Doffee",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-03/comments/c-436372-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-03/comments/c-436372-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/43556",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 142913,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 7292350442
+    },
+    {
+      "id": "436373",
+      "text": "比opus和fable跑分还高。世界第一模型？",
+      "time": "14:54",
+      "sender_name": "Stardust",
+      "sender_id": 5254185041
+    },
+    {
+      "id": "436374",
+      "text": "只是前端而已",
+      "time": "14:54",
+      "sender_name": "DG",
+      "sender_id": 5177131302
+    },
+    {
+      "id": "436378",
+      "text": "这个分数是偏重前端的",
+      "time": "14:59",
+      "sender_name": "keethebest",
+      "sender_id": 592759119
+    },
+    {
+      "id": "436404",
+      "text": "用他写了个emby播放器，眉毛",
+      "time": "15:13",
+      "sender_name": "desire",
+      "sender_id": 1472376400
+    },
+    {
+      "id": "436405",
+      "text": "跑分王来了",
+      "time": "15:13",
+      "sender_name": "Ongt",
+      "sender_id": 2001188488
+    },
+    {
+      "id": "436432",
+      "text": "姜萍点赞",
+      "time": "15:34",
+      "sender_name": "su",
+      "sender_id": 5663754773
+    },
+    {
+      "id": "436486",
+      "text": "跑起分来吊打fable，实际使用被k3和glm5.3按着锤",
+      "time": "15:51",
+      "sender_name": "Galen Moore",
+      "sender_id": 7635917900
+    },
+    {
+      "id": "436488",
+      "text": "q问一致垃圾",
+      "time": "15:52",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "436599",
+      "text": "千问的harness是做的不行",
+      "time": "16:30",
+      "sender_name": "Florian Von",
+      "sender_id": 8523777480
+    },
+    {
+      "id": "436657",
+      "text": "无情的跑分工具",
+      "time": "16:45",
+      "sender_name": "Rammiah X",
+      "sender_id": 782588521
+    },
+    {
+      "id": "436660",
+      "text": "国际版的偶用",
+      "time": "16:47",
+      "sender_name": "newbie",
+      "sender_id": 730396882
+    },
+    {
+      "id": "436745",
+      "text": "banchmark王，遥遥领先跑分软件",
+      "time": "18:09",
+      "sender_name": "Dragon♍",
+      "sender_id": 918950838
+    },
+    {
+      "id": "436747",
+      "text": "幻觉",
+      "time": "18:10",
+      "sender_name": "Flynn",
+      "sender_id": 8555131859
+    },
+    {
+      "id": "436755",
+      "text": "无情的跑分工具",
+      "time": "18:15",
+      "sender_name": "为什么磅不能翻译成英斤因为我的英斤就是磅",
+      "sender_id": 7847808536
+    },
+    {
+      "id": "436758",
+      "text": "想问下目前国内ai模型哪个比较屌？kimi第一？第二是智谱？",
+      "time": "18:16",
+      "sender_name": "BOBO Kirs",
+      "sender_id": 5520497374
+    },
+    {
+      "id": "436818",
+      "text": "我在训练集里掺了测试集😁",
+      "time": "18:59",
+      "sender_name": "agravic 0",
+      "sender_id": 6195479148
+    },
+    {
+      "id": "437002",
+      "text": "果然中国人是最会考试的",
+      "time": "20:16",
+      "sender_name": "xiaoyu yang",
+      "sender_id": 5212914022
+    },
+    {
+      "id": "437008",
+      "text": "贵的一比",
+      "time": "20:21",
+      "sender_name": "Poly Be",
+      "sender_id": 431989342
+    },
+    {
+      "id": "437218",
+      "text": "差不多是这样。GLM5.3和K3算是互有胜负",
+      "time": "22:06",
+      "sender_name": "Kokomi",
+      "sender_id": 8462799838
+    },
+    {
+      "id": "437449",
+      "text": "跑分没输过，体验没赢过（）",
+      "time": "23:29",
+      "sender_name": "…",
+      "sender_id": 1682021656
+    }
+  ]
+}

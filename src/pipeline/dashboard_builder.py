@@ -1,12 +1,15 @@
 from __future__ import annotations
 
+import hashlib
 import json
+import os
 import re
 from pathlib import Path
 from typing import Any
 
 from src.pipeline.competitor_radar import build_competitor_radar
 from src.pipeline.conversation_context import context_translation_fields, dedupe_contextual_items_keep_earliest
+from src.pipeline.lazy_payloads import shard_json_file
 from src.utils.io import write_json
 from src.utils.time import BEIJING, beijing_label, now_utc, to_iso
 
@@ -163,17 +166,16 @@ def build_dashboard_data(
     write_json(str(target / "fermentation.json"), public_fermentation)
     write_json(str(target / "competitor.json"), public_competitor)
     write_json(str(target / "source-status.json"), public_source)
-    data_bundle = {
-        "dashboard-data/latest.json": public_overview,
-        "dashboard-data/daily/latest.json": public_daily,
-        "dashboard-data/daily/index.json": json.loads((target / "daily" / "index.json").read_text(encoding="utf-8")),
-        "dashboard-data/fermentation.json": public_fermentation,
-        "dashboard-data/competitor.json": public_competitor,
-        "dashboard-data/source-status.json": public_source,
-        "clusters": {},
-    }
-    write_data_bundle(target.parent / "dashboard-data-bundle.js", data_bundle)
-    refresh_index_asset_versions(target.parent / "index.html", asset_cache_token(report_date, overview["generated_at"]))
+    for path in (
+        target / "latest.json",
+        target / "daily" / "latest.json",
+        target / "daily" / f"{report_date}.json",
+        target / "competitor.json",
+    ):
+        shard_json_file(path, target)
+    if not shared_asset_rebuild_deferred():
+        write_data_bundle(target.parent / "dashboard-data-bundle.js", {})
+        refresh_index_asset_versions(target.parent / "index.html", asset_cache_token(report_date, overview["generated_at"]))
     return public_overview
 
 
@@ -322,15 +324,22 @@ def asset_cache_token(report_date: str, generated_at: str) -> str:
     return f"{date_part}-{generated_part}"
 
 
-def refresh_index_asset_versions(path: Path, token: str) -> None:
+def shared_asset_rebuild_deferred() -> bool:
+    return str(os.getenv("BRAND_RADAR_DEFER_SHARED_ASSETS") or "").strip().lower() in {"1", "true", "yes", "on"}
+
+
+def refresh_index_asset_versions(path: Path, token: str = "") -> None:
     if not path.exists():
         return
     html = path.read_text(encoding="utf-8")
-    updated = re.sub(
-        r'((?:\./)?(?:assets/styles\.css|dashboard-data-bundle\.js|assets/app\.js)\?v=)[^"]+',
-        rf"\g<1>{token}",
-        html,
-    )
+    updated = html
+    for relative_path in ("assets/styles.css", "dashboard-data-bundle.js", "assets/app.js"):
+        asset_path = path.parent / relative_path
+        if not asset_path.exists():
+            continue
+        digest = hashlib.sha256(asset_path.read_bytes()).hexdigest()[:12]
+        pattern = rf'((?:\./)?{re.escape(relative_path)}\?v=)[^"]+'
+        updated = re.sub(pattern, rf"\g<1>{digest}", updated)
     if updated != html:
         path.write_text(updated, encoding="utf-8")
 

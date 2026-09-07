@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-27",
+  "thread_id": "43407",
+  "count": 28,
+  "replies": [
+    {
+      "id": "414620",
+      "text": "OpenGL 4.3 这波是补课——Parallels 在 Apple Silicon 上一直卡在老版本 OpenGL，不少专业软件（GIS、CAD 类）跑不动，这次用 Metal 驱动直接填坑了。\n划重点：\n- **M3 及以后**：OpenGL 最高快 160%，ArcGIS Pro 三维渲染 +35%\n- **M4 及以后**：SME2 指令加持，AI 矩阵运算最高 7 倍，Ollama / llama.cpp 在虚拟机里跑得更顺\n一句话：搞图形和本地 AI 的值得升，纯开 Word 的感知约等于零，等促销再上车不亏。",
+      "time": "09:41",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "414622",
+      "text": "gemini啥时候能再更新啊，刚开了个pro，gpt太贵了",
+      "time": "09:42",
+      "sender_name": "汤缘",
+      "sender_id": 5761670458
+    },
+    {
+      "id": "414623",
+      "time": "09:42",
+      "sender_name": "汤缘",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-27/comments/c-414623-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-27/comments/c-414623-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/43407",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 138216,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 5761670458
+    },
+    {
+      "id": "414624",
+      "time": "09:42",
+      "sender_name": "🌌 赤葵 🈷",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-27/comments/c-414624-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-27/comments/c-414624-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/43407",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 156821,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 7171316252
+    },
+    {
+      "id": "414625",
+      "text": "没理解为啥要特意装个Win虚拟机去跑本地AI 这种诉求。直接在宿主机 macOS 里跑有啥弊端吗？",
+      "time": "09:43",
+      "sender_name": "Viva Hu",
+      "sender_id": 309334302
+    },
+    {
+      "id": "414626",
+      "text": "主要是也带云盘，性价比可以",
+      "time": "09:43",
+      "sender_name": "在花 🎗",
+      "sender_id": 7508766581
+    },
+    {
+      "id": "414628",
+      "text": "大家都是官方原价订阅的吗？",
+      "time": "09:44",
+      "sender_name": "XL",
+      "sender_id": 7002736923
+    },
+    {
+      "id": "414644",
+      "text": "我一般先淘宝和咸鱼看看",
+      "time": "09:59",
+      "sender_name": "在花 🎗",
+      "sender_id": 7508766581
+    },
+    {
+      "id": "414645",
+      "text": "价格差不多会选官方",
+      "time": "09:59",
+      "sender_name": "在花 🎗",
+      "sender_id": 7508766581
+    },
+    {
+      "id": "414648",
+      "text": "为啥llama.cpp要在虚拟机里面跑？",
+      "time": "10:00",
+      "sender_name": "Yoshino ;:(){ :|:& };:",
+      "sender_id": 357394185
+    },
+    {
+      "id": "414652",
+      "text": "为什么不用破解版",
+      "time": "10:02",
+      "sender_name": "no no",
+      "sender_id": 5973696938
+    },
+    {
+      "id": "414657",
+      "text": "他只是说你这么做比以前性能提升了，宣传自己的产品性能呢",
+      "time": "10:03",
+      "sender_name": "nb5p",
+      "sender_id": 546710026
+    },
+    {
+      "id": "414669",
+      "text": "是啊，只是晒肌肉罢了。感觉这种提升没啥意义。还不如说更适合用虚拟机玩 Windows Only 的游戏了。",
+      "time": "10:05",
+      "sender_name": "Viva Hu",
+      "sender_id": 309334302
+    },
+    {
+      "id": "414678",
+      "text": "和vxbox那个更好",
+      "time": "10:07",
+      "sender_name": "qiangbao xu",
+      "sender_id": 1085637594
+    },
+    {
+      "id": "414731",
+      "text": "你是说有人买了个Mac不用macOS，在Windows里跑AI吗（",
+      "time": "10:17",
+      "sender_name": "Spreano Prutacco",
+      "sender_id": 5433934343
+    },
+    {
+      "id": "414739",
+      "text": "而且我觉得对Windows下图形性能有需求的人应该去买游戏本（\n虽然优化总是好事但有点好奇真的受众有多少",
+      "time": "10:18",
+      "sender_name": "Spreano Prutacco",
+      "sender_id": 5433934343
+    },
+    {
+      "id": "414834",
+      "text": "正版软件的受害者",
+      "time": "10:35",
+      "sender_name": "Disclaimer",
+      "sender_id": 6885959001
+    },
+    {
+      "id": "415037",
+      "text": "在我体验下来，玩galgame，mac还是用虚拟机最舒服",
+      "time": "11:00",
+      "sender_name": "Jya An",
+      "sender_id": 5678949152
+    },
+    {
+      "id": "415163",
+      "text": "谁能来个学习版地址🥲",
+      "time": "11:22",
+      "sender_name": "Iwcwcc",
+      "sender_id": 786498521
+    },
+    {
+      "id": "415185",
+      "text": "依旧没有DX12吗",
+      "time": "11:29",
+      "sender_name": "Sean Xu",
+      "sender_id": 355651735
+    },
+    {
+      "id": "415336",
+      "text": "最后的挣扎。以后我觉得连软件这个东西都可能不存在了，我还要你这样的个东西？",
+      "time": "11:53",
+      "sender_name": "Crastinate Pro",
+      "sender_id": 1098053269
+    },
+    {
+      "id": "416098",
+      "text": "看了下官网，貌似只有 Pro 订阅才有 4.3 支持？如果是 简直拉完了😂😂",
+      "time": "14:36",
+      "sender_name": "Moon wS9ErD8z",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-27/comments/c-416098-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-08-27/comments/c-416098-1-thumb.webp",
+          "width": 711,
+          "height": 1280,
+          "size_bytes": 43524
+        }
+      ],
+      "sender_id": 8095680684
+    },
+    {
+      "id": "416725",
+      "text": "有学习版了吗",
+      "time": "16:31",
+      "sender_name": "Jack Xiao",
+      "sender_id": 397540650
+    },
+    {
+      "id": "417361",
+      "text": "Apps that only run Windows and the AI part need to utilize the hardware (emulated) better..",
+      "time": "18:36",
+      "sender_name": "Alex",
+      "sender_id": 288091299
+    },
+    {
+      "id": "417363",
+      "text": "That’s a retarded take",
+      "time": "18:37",
+      "sender_name": "Alex",
+      "sender_id": 288091299
+    },
+    {
+      "id": "417369",
+      "text": "Parallels is the king in (almost) all aspects of\nPerformance-wise it ain’t too much different from UTM.. 🤣",
+      "time": "18:38",
+      "sender_name": "Alex",
+      "sender_id": 288091299
+    },
+    {
+      "id": "417371",
+      "text": "Not all “AI” are LLMs",
+      "time": "18:38",
+      "sender_name": "Alex",
+      "sender_id": 288091299
+    },
+    {
+      "id": "417635",
+      "text": "旮旯给木",
+      "time": "19:46",
+      "sender_name": "History",
+      "sender_id": 275653712
+    }
+  ]
+}

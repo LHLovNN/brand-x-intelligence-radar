@@ -2,41 +2,38 @@
 
 ## Objective
 
-Build a reusable Brand X Intelligence Radar MVP:
+Maintain a reliable Chinese-first intelligence station with two product areas:
 
-- public-social monitoring for a configurable primary brand
-- lightweight competitor baseline
-- Chinese-first opinion cards
-- daily report with historical browsing
-- static dashboard suitable for stakeholder review
-
-## Current Product Pages
-
-- `舆情焦点`: prioritized opinion signals.
-- `全部舆情`: complete date-based opinion stream.
-- `舆情日报`: daily report with primary-brand and competitor sections.
-- `设置`: public status, data quality and scoring methodology.
+- `谛听-情报库`: Xiaohongshu platform-change research plus AI and Telegram daily digests.
+- `品牌-舆情监控`: prioritized, complete and daily views of public brand discussion.
 
 ## Current Status
 
-- Static dashboard shell is implemented.
-- Historical daily archive browsing is implemented.
-- Focus feed, full stream and daily report pages are aligned.
-- Author hover cards, media rendering, Chinese/original switching and public
-  metric display are implemented.
-- Demo dashboard data is bundled for static preview.
+- The default route is `小红书`; `舆情焦点` has its own `#/overview` route.
+- Page, date, conversation-context and Telegram-comment data are loaded on demand.
+- Historical conversation contexts and Telegram replies have been migrated to separate JSON files.
+- Content filtering is centralized across brand posts, X conversation context, Xiaohongshu items, Telegram entries and Telegram comments.
+- Xiaohongshu relevance includes growth, monetization, risk control, account acquisition, platform rules, account matrices, reverse engineering and device modification.
+- Semantic review uses stable reason codes and bounded input size; deterministic rules remain the fallback.
+- Data loads retry automatically and expose an explicit retry state after repeated failure.
+- Daily publishers use module-specific commits, a shared publication lock, publish-only retry and post-publication date verification.
+- Browser QA is required in CI and cannot silently skip.
 
-## Product Principles
+## Daily Timeline
 
-- Keep the first screen useful, not promotional.
-- Preserve source evidence while presenting Chinese-first reading.
-- Separate source content from derived judgement such as tags, scores and
-  attention reasons.
-- Make daily reports traceable by date and source post.
-- Keep scoring explainable enough for stakeholder review.
+- `08:00`: brand and Xiaohongshu collection, generation, validation and publication.
+- `08:30`: AI and Telegram digest synchronization, validation and publication.
+- `08:45`: read-only update audit and user notification; it must not consume source or model quota.
+
+## Operational Boundaries
+
+- Generated module data can be resumed without treating its own lazy payloads as source-code changes.
+- The two publishers may overlap in generation, but shared publication is serialized.
+- A failed push retries only synchronization, asset rebuild and publication; collection is not repeated.
+- The published date is polled after push so a successful Git command is not mistaken for a completed Pages update.
 
 ## Next
 
-- Continue source-card fidelity QA.
-- Improve visual polish after the MVP data loop is stable.
-- Revisit delayed-spread tracking as a separate product module.
+- Observe several scheduled runs for upstream freshness, recovery behavior and notification quality.
+- Continue case-based content-policy tuning without weakening relevance requirements.
+- Reassess media hosting separately if upstream static-file throughput remains a bottleneck.

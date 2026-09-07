@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-07",
+  "thread_id": "43635",
+  "count": 10,
+  "replies": [
+    {
+      "id": "447187",
+      "text": "这个图好乱",
+      "time": "13:45",
+      "sender_name": "Yom",
+      "sender_id": 113717902
+    },
+    {
+      "id": "447190",
+      "text": "这个图看起来像是AI用dot语法生成的",
+      "time": "13:47",
+      "sender_name": "Sky forever",
+      "sender_id": 5237694033
+    },
+    {
+      "id": "447195",
+      "text": "不禁止但划清责任归属是对的，不论是以何种方式使用 AI 、制作作品，人都应当是责任的最终承担者",
+      "time": "13:50",
+      "sender_name": "橘春",
+      "sender_id": 6606439416
+    },
+    {
+      "id": "447196",
+      "text": "這是一張關於 Debian 專案針對「生成式 AI (Generative AI)」使用政策的投票偏好轉移圖（或稱為 Sankey diagram 類型圖表）。圖表展示了選民對於不同政策選項的偏好流向，數字代表票數或權重。\n\n以下是流程的詳細文字說明：\n**1. 初始選項 (頂部)** 流程始於最上方的藍色橢圓形節點：**Responsible Use of Generative AI (2.23)**。這是初始的提議或首選選項。\n\n**2. 第一層分流 (從初始選項出發)** 從「Responsible Use of Generative AI」出發，選票分散流向多個不同的政策方向：\n**流向溫和派選項：** 部分選票流向「Allow AI-Assisted Contributions with conditions」(55票) 以及「A cautious approach to generative AI」(80票)。\n**流向反對派選項：** 有大量選票直接流向較強硬的反對選項，包括「Avoid the use of LLM」(90票) 以及最底部的「Ban LLM contributions...」(155票)。\n\n**流向其他立場：** 還有選票流向「Debian is created by humans」(112票) 以及「None of the above」(128票)。\n\n**3. 中間選項的轉移 (灰色橢圓區域)** 在中間的灰色節點之間，選票根據偏好進一步轉移：\n**Allow AI-Assisted Contributions (1.92)：** 接收了來自頂部的 55 票後，其選票進一步分流。部分流向更具体的「Accept AI contributions for Debian specific work」(45票)，部分轉向反對立場如「Debian is created by humans」(117票) 和「Avoid the use of LLM」(67票)。\n\n**A cautious approach (2.08)：** 接收了來自頂部的 80 票及上層的 5 票。其選票主要流向「Avoid the use of LLM」(70票)、「Accept AI contributions...」(25票) 以及「None of the above」(143票)。\n\n**Accept AI contributions (1.77)：** 接收了來自上層的 45 票和 25 票。其選票主要流向「Debian is created by humans」(103票, 88票, 31票等多條線匯入)、「Avoid the use of LLM」(64票) 以及「None of the above」(113票)。\n**Avoid the use of LLM (1.28)：** 接收了來自各方的反對票（90, 67, 70, 64），最終主要流向「None of the above」(49票)。\n\n**Debian is created by humans (1.11)：** 接收了大量來自上層和中層的選票，最終有 21 票流向「None of the above」。\n\n**4. 匯聚點與最終選項 (菱形與粉色區域)**\n**None of the above (菱形節點)：** 這是一個重要的匯聚點。它接收了來自幾乎所有上層選項的轉移票（包括 128, 143, 49, 113, 21 等）。這代表許多選民對上述具體選項都不滿意。\n\n從這裡出發，選票主要流向底部的兩個粉色極端選項：\n流向「Reject LLMs as far as practical...」(54票)。\n流向「Ban LLM contributions from Debian via Social Contract」(113票)。\n\n**底部粉色節點 (最終強烈反對立場)：**\n**Reject LLMs as far as practical (0.77)：** 接收來自「None of the above」的 54 票。\n\n**Ban LLM contributions from Debian via Social Contract (0.56)：** 這是最底部的節點。它接收了來自最頂部的大量直接票數 (155票)，來自「None of the above」的 113 票，以及一條來自上方粉色節點的虛線連接 (125票)，顯示這可能是最終極的反對方案匯聚地。\n\n**總結：** 整個流程顯示，雖然初始選項是「負責任地使用 AI」，但選票大量轉移到了反對使用 LLM 的立場，最終匯聚在「Ban LLM contributions」和「Reject LLMs」這兩個強烈反對的選項上。中間的「None of the above」扮演了重要的緩衝和轉移角色。 by qwen",
+      "time": "13:51",
+      "sender_name": "Philip",
+      "sender_id": 375620262
+    },
+    {
+      "id": "447198",
+      "text": "能不能折叠掉啊，这一长串太影响观感了🤡",
+      "time": "13:52",
+      "sender_name": "橘春",
+      "sender_id": 6606439416
+    },
+    {
+      "id": "447199",
+      "text": "qwen",
+      "time": "13:55",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "447223",
+      "text": "看了一下，感觉只解决了责任归属问题，还是没解决垃圾PR的review成本问题",
+      "time": "14:25",
+      "sender_name": "Z",
+      "sender_id": 1653290700
+    },
+    {
+      "id": "447224",
+      "text": "估计还要再投票",
+      "time": "14:25",
+      "sender_name": "Z",
+      "sender_id": 1653290700
+    },
+    {
+      "id": "447516",
+      "text": "垃圾PR的review不好处理的，AI也只是降低了PR的门槛",
+      "time": "16:02",
+      "sender_name": "Sanmer",
+      "sender_id": 1179159637
+    },
+    {
+      "id": "447520",
+      "text": "很多开源项目都是要求PR提交者必须自己理解自己的PR，能够回答Review Comment等，有要求的，不符合要求的PR直接拒绝。",
+      "time": "16:07",
+      "sender_name": "Z",
+      "sender_id": 1653290700
+    }
+  ]
+}

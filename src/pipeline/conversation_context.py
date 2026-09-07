@@ -5,11 +5,11 @@ import json
 import os
 import re
 import socket
-import unicodedata
 import urllib.error
 import urllib.request
 from typing import Any
 
+from src.pipeline.content_policy import context_noise_reason
 from src.pipeline.translation import CHINESE_RE, TranslationService, apply_translations, needs_translation, response_output_text
 
 
@@ -22,34 +22,6 @@ CONTEXT_FETCH_LIMIT = 50
 CONTEXT_TRANSLATION_TIMEOUT_SECONDS = 30
 CONTEXT_SUMMARY_TIMEOUT_SECONDS = 20
 CONTEXT_SUMMARY_CHAR_LIMIT = 200
-LOW_QUALITY_CONTEXT_PATTERNS = [
-    re.compile(r"应该没人比我玩[的得]开了吧", re.IGNORECASE),
-    re.compile(r"我[福肤]不黑不信你看", re.IGNORECASE),
-    re.compile(r"比(?:我|你|他|她|ta).{0,4}好看的没(?:我|你|他|她|ta).{0,4}骚.{0,20}比(?:我|你|他|她|ta).{0,4}骚的没(?:我|你|他|她|ta).{0,4}好看", re.IGNORECASE),
-    re.compile(r"比(?:我|你|他|她|ta).{0,4}好看的没.{0,10}骚.{0,24}比(?:我|你|他|她|ta).{0,4}骚的没.{0,10}好看", re.IGNORECASE),
-    re.compile(r"只入身体.{0,20}不入生活", re.IGNORECASE),
-    re.compile(r"我果然太[涩色瑟]了.{0,16}有人想锐评一下我的[福肤]嘛", re.IGNORECASE),
-    re.compile(r"sao.{0,8}货.{0,16}没人比(?:她|他|ta)sao", re.IGNORECASE),
-    re.compile(r"(?:\d+\+)?(?:果然)?太[涩色瑟]了.{0,16}我真顶不住", re.IGNORECASE),
-    re.compile(r"她太[涩色瑟]了.{0,16}我真顶不住", re.IGNORECASE),
-    re.compile(r"主页.{0,16}能打(?:✈|🛩️?|飞机)", re.IGNORECASE),
-    re.compile(r"玩归玩闹归闹.{0,24}给(?:你|妳)?看[福肤].{0,24}不开玩笑", re.IGNORECASE),
-    re.compile(
-        r"(?:小红书|快手|抖音).{0,12}(?:违规|发不出).{0,24}(?:推特|twitter|x).{0,80}"
-        r"(?:开脱|上供|luo照|裸照|锐评一下不许说我|🐻黑|粉嫩的[福肤])",
-        re.IGNORECASE,
-    ),
-    re.compile(r"(?:开脱|上供).{0,30}(?:luo照|裸照|锐评一下不许说我|🐻黑|粉嫩的[福肤])", re.IGNORECASE),
-    re.compile(r"玩的就是反差.{0,30}身体已经软.{0,30}想被狠狠欺负", re.IGNORECASE),
-]
-LOW_QUALITY_CONTEXT_PROFILE_PATTERNS = [
-    re.compile(
-        r"找炮友|约炮|约p|曰炮|固炮|入驻.{0,12}(?:炮|约p)平台|真人认证.{0,30}隐私|附近的可加v|小号已禁言|涩播|涩涩|寻欢必备|远程指挥直播控制玩具|同城.{0,8}线下|绿泡泡",
-        re.IGNORECASE,
-    ),
-]
-
-
 def attach_conversation_contexts(
     posts: list[dict[str, Any]],
     clusters: list[dict[str, Any]],
@@ -395,26 +367,16 @@ def filter_context_noise(rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any
 
 
 def is_low_quality_context_row(row: dict[str, Any]) -> bool:
-    text = " ".join(
-        decoded_text(value)
-        for value in (row.get("translation_zh"), row.get("clean_text"), row.get("text"))
-        if value
-    )
-    compact = compact_context_noise_text(text)
-    if any(pattern.search(compact) for pattern in LOW_QUALITY_CONTEXT_PATTERNS):
-        return True
-    profile = " ".join(
-        decoded_text(value)
-        for value in (row.get("author_name"), row.get("author_handle"), row.get("author_bio"))
-        if value
-    )
-    compact_profile = compact_context_noise_text(profile)
-    return any(pattern.search(compact_profile) for pattern in LOW_QUALITY_CONTEXT_PROFILE_PATTERNS)
-
-
-def compact_context_noise_text(text: str) -> str:
-    visible = "".join(char for char in str(text or "") if unicodedata.category(char) != "Cf")
-    return re.sub(r"\s+", "", visible)
+    normalized = {
+        **row,
+        "text": decoded_text(row.get("text") or ""),
+        "clean_text": decoded_text(row.get("clean_text") or ""),
+        "translation_zh": decoded_text(row.get("translation_zh") or ""),
+        "author_name": decoded_text(row.get("author_name") or ""),
+        "author_handle": decoded_text(row.get("author_handle") or ""),
+        "author_bio": decoded_text(row.get("author_bio") or ""),
+    }
+    return context_noise_reason(normalized) is not None
 
 
 def strip_media_placeholder_urls(text: str, post: dict[str, Any]) -> str:

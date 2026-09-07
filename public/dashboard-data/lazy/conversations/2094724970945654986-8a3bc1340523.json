@@ -1,0 +1,287 @@
+{
+  "conversation_id": "2094724970945654986",
+  "anchor_post_id": "2094724970945654986",
+  "summary_zh": "前文是黄云分享用RPA+ChatGPT/Codex抓取小红书半年内万赞笔记及爆款商品数据的方法。收录帖并未转向具体品牌、商品价格、配送或消费体验，而是讨论数据采集工具。后续有人称赞、询问token成本，也多人提醒风控封号，并补充逆向接口等方案。上下文显示舆情偏技术讨论，真实性需看实操可行性，传播价值在于方法和风险提醒。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2094724970945654986",
+      "url": "https://x.com/huangyun_122/status/2094724970945654986",
+      "created_at": "2026-09-01T09:52:05Z",
+      "text": "鹅，这两天不断有水友加我微，来问小红书爆款笔记和爆款商品数据怎么来的\n\n其实，2年前我就借助 RPA + ChatGPT 开发好了。现在更简单：\n\n1/ 给 Codex 充好 Pro\n2/ 把安卓机连上 PC\n3/ 给 Codex 下命令：把小红书半年内万赞笔记抓出来\n\n好了，看电影去吧，约会去吧",
+      "original_text": "鹅，这两天不断有水友加我微，来问小红书爆款笔记和爆款商品数据怎么来的\n\n其实，2年前我就借助 RPA + ChatGPT 开发好了。现在更简单：\n\n1/ 给 Codex 充好 Pro\n2/ 把安卓机连上 PC\n3/ 给 Codex 下命令：把小红书半年内万赞笔记抓出来\n\n好了，看电影去吧，约会去吧",
+      "translation_zh": "鹅，这两天不断有水友加我微，来问小红书爆款笔记和爆款商品数据怎么来的\n\n其实，2年前我就借助 RPA + ChatGPT 开发好了。现在更简单：\n\n1/ 给 Codex 充好 Pro\n2/ 把安卓机连上 PC\n3/ 给 Codex 下命令：把小红书半年内万赞笔记抓出来\n\n好了，看电影去吧，约会去吧",
+      "translation_status": "source_chinese",
+      "author_name": "黄赟",
+      "author_handle": "huangyun_122",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1183766724534882305/SIxSKinT_normal.jpg",
+      "author_followers": 83947,
+      "author_following": 1337,
+      "author_bio": "Every great AI journey starts with a single Prompt\nvx: huangyun_122",
+      "author_location": "Shanghai Pudong",
+      "author_joined_at": "2010-06-13T16:04:08Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2094722605005869056/img/cN2Ggc3_FEuwPwfn.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2094722605005869056/img/cN2Ggc3_FEuwPwfn.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2094722605005869056/img/cN2Ggc3_FEuwPwfn.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              953,
+              540
+            ],
+            "duration_millis": 21919,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video.twimg.com/amplify_video/2094722605005869056/pl/EAQdWBIOlFPEgFWI.m3u8?tag=29&v=cfc"
+              },
+              {
+                "bitrate": 256000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2094722605005869056/vid/avc1/476x270/vDvY_DXWbqZ92Ive.mp4?tag=29"
+              },
+              {
+                "bitrate": 832000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2094722605005869056/vid/avc1/634x360/nbQkGUjtun5BhKEr.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2094722605005869056/vid/avc1/1270x720/iXj5BY-pzLK8TwJx.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2094722605005869056/vid/avc1/1906x1080/tRyJvHm6_o99UINc.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/huangyun_122/status/2094724970945654986/video/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HRHzSfTaAAAkEZj.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HRHzSfTaAAAkEZj.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HRHzSfTaAAAkEZj.jpg",
+          "expanded_url": "https://x.com/huangyun_122/status/2094724970945654986/video/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HRHzdQGboAAh0ru.png",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HRHzdQGboAAh0ru.png",
+          "media_url_https": "https://pbs.twimg.com/media/HRHzdQGboAAh0ru.png",
+          "expanded_url": "https://x.com/huangyun_122/status/2094724970945654986/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 179,
+        "reposts": 27,
+        "replies": 13,
+        "quotes": 2,
+        "bookmarks": 290,
+        "views": 21719
+      }
+    },
+    {
+      "post_id": "2094728010922606708",
+      "url": "https://x.com/qg7777/status/2094728010922606708",
+      "created_at": "2026-09-01T10:04:10Z",
+      "text": "@huangyun_122 黄老师在社交媒体AI分析这块确实厉害\n内容抓点👍",
+      "original_text": "@huangyun_122 黄老师在社交媒体AI分析这块确实厉害\n内容抓点👍",
+      "translation_zh": "@huangyun_122 黄老师在社交媒体AI分析这块确实厉害\n内容抓点👍",
+      "translation_status": "source_chinese",
+      "author_name": "茄哥 | Pod",
+      "author_handle": "qg7777",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2093370985508716544/zyiwk7cD_normal.jpg",
+      "author_followers": 80664,
+      "author_following": 1599,
+      "author_bio": "Finance Pod | X Premium+ | X·Space “村头CBD” Founder \n@fn168com888 Crazy Live媒体顾问 | 对话九头鸟财经Talk\n@Techub_News 顾问 | 金色财经顾问\n3亿用户数字资产选择~币安\nAI学习中欢迎探讨",
+      "author_location": "社区与资源→",
+      "author_joined_at": "2022-05-15T01:45:32Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 1242
+      }
+    },
+    {
+      "post_id": "2094734067723878713",
+      "url": "https://x.com/jierui_x/status/2094734067723878713",
+      "created_at": "2026-09-01T10:28:14Z",
+      "text": "@huangyun_122 这得消耗多少token",
+      "original_text": "@huangyun_122 这得消耗多少token",
+      "translation_zh": "@huangyun_122 这得消耗多少token",
+      "translation_status": "source_chinese",
+      "author_name": "杰瑞",
+      "author_handle": "jierui_x",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2093182410040934400/BvcxO-Ed_normal.jpg",
+      "author_followers": 1011,
+      "author_following": 15,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2013-07-13T06:54:22Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 1397
+      }
+    },
+    {
+      "post_id": "2094737224667664752",
+      "url": "https://x.com/IFITALEX/status/2094737224667664752",
+      "created_at": "2026-09-01T10:40:47Z",
+      "text": "@huangyun_122 力大出奇迹",
+      "original_text": "@huangyun_122 力大出奇迹",
+      "translation_zh": "@huangyun_122 力大出奇迹",
+      "translation_status": "source_chinese",
+      "author_name": "洞寓法师🦁",
+      "author_handle": "IFITALEX",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2070397985822068736/UOl4IkiB_normal.jpg",
+      "author_followers": 501,
+      "author_following": 412,
+      "author_bio": "🤖每日分享AI Agent评测& Vibe Coding实践 \n🧐 律师、法学硕士｜探索文科生转型FDE之路 \n🛟 AI定义效率，法眼框定事实，拒绝 FOMO！",
+      "author_location": "On-chain",
+      "author_joined_at": "2024-03-18T11:58:39Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 1231
+      }
+    },
+    {
+      "post_id": "2094766558975500659",
+      "url": "https://x.com/AIJinHan/status/2094766558975500659",
+      "created_at": "2026-09-01T12:37:21Z",
+      "text": "@huangyun_122 然后帐号过不了多久就收到站内封控提醒，再过会就封号了",
+      "original_text": "@huangyun_122 然后帐号过不了多久就收到站内封控提醒，再过会就封号了",
+      "translation_zh": "@huangyun_122 然后帐号过不了多久就收到站内封控提醒，再过会就封号了",
+      "translation_status": "source_chinese",
+      "author_name": "JinHan",
+      "author_handle": "AIJinHan",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2004116751576113152/OdXE0eMx_normal.jpg",
+      "author_followers": 24,
+      "author_following": 180,
+      "author_bio": "💼 15 年产品人 | 前阿里高级产品专家\n🤖 Ex 网易云 / 猎豹移动 / 某A轮 AI 公司产品合伙人\n📊 亿级电商&内容平台 | 0→1千万DAU工具App\n🔥 落地AI产品中｜分享实战经验｜重新出发\n🔗 个人站点：https://t.co/E7ik2KkPm3\n🚀 优先回复订阅者评论&私信",
+      "author_location": null,
+      "author_joined_at": "2025-07-14T09:33:42Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 951
+      }
+    },
+    {
+      "post_id": "2094788503368544748",
+      "url": "https://x.com/cngaohui/status/2094788503368544748",
+      "created_at": "2026-09-01T14:04:33Z",
+      "text": "@huangyun_122 这样不停的刷，肯定会被封号的。",
+      "original_text": "@huangyun_122 这样不停的刷，肯定会被封号的。",
+      "translation_zh": "@huangyun_122 这样不停的刷，肯定会被封号的。",
+      "translation_status": "source_chinese",
+      "author_name": "owen",
+      "author_handle": "cngaohui",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2081609131014959104/IzyHR1lP_normal.jpg",
+      "author_followers": 1534,
+      "author_following": 1615,
+      "author_bio": "AI资讯 | 开源项目分享 | 新鲜分享|独立开发|互联网创业",
+      "author_location": null,
+      "author_joined_at": "2026-05-30T07:43:55Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 454
+      }
+    },
+    {
+      "post_id": "2094823347750420964",
+      "url": "https://x.com/taozywu/status/2094823347750420964",
+      "created_at": "2026-09-01T16:23:00Z",
+      "text": "@huangyun_122 黄总，有点眼红啊",
+      "original_text": "@huangyun_122 黄总，有点眼红啊",
+      "translation_zh": "@huangyun_122 黄总，有点眼红啊",
+      "translation_status": "source_chinese",
+      "author_name": "AI搞钱的桃子",
+      "author_handle": "taozywu",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2093346022479278080/3OGAqnr9_normal.jpg",
+      "author_followers": 329,
+      "author_following": 542,
+      "author_bio": "程序员/自媒体/已婚有2娃。\n\n互联网、编程、AI、一人公司、搞笑梗图\n\n人生本就很苦，喜欢用AI挣点小钱。\n\n公众号：AI搞钱的桃子\n\nTG/微信/邮箱：taozywu (gmail邮箱)",
+      "author_location": null,
+      "author_joined_at": "2017-12-14T09:39:16Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 206
+      }
+    },
+    {
+      "post_id": "2094882613425275043",
+      "url": "https://x.com/Pi_Agent_Coder/status/2094882613425275043",
+      "created_at": "2026-09-01T20:18:30Z",
+      "text": "@huangyun_122 RPA 特征太明显了，风控系统秒识别的，而且爬详情和评论很容易漏。正确方案是：定制 rom+逆向接口，如果有 ip 资源池也可以考虑网页版",
+      "original_text": "@huangyun_122 RPA 特征太明显了，风控系统秒识别的，而且爬详情和评论很容易漏。正确方案是：定制 rom+逆向接口，如果有 ip 资源池也可以考虑网页版",
+      "translation_zh": "@huangyun_122 RPA 特征太明显了，风控系统秒识别的，而且爬详情和评论很容易漏。正确方案是：定制 rom+逆向接口，如果有 ip 资源池也可以考虑网页版",
+      "translation_status": "source_chinese",
+      "author_name": "Pi",
+      "author_handle": "Pi_Agent_Coder",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2094631812199067648/BMu55Q1p_normal.jpg",
+      "author_followers": 0,
+      "author_following": 3,
+      "author_bio": "Agent 重构世界",
+      "author_location": "杭州",
+      "author_joined_at": "2025-07-27T13:40:01Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 4,
+        "views": 199
+      }
+    }
+  ]
+}

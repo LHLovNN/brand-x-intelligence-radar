@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-01",
+  "thread_id": "43507",
+  "count": 27,
+  "replies": [
+    {
+      "id": "428499",
+      "text": "opencode 分叉吗?",
+      "time": "08:03",
+      "sender_name": "jim kim",
+      "sender_id": 8829965096
+    },
+    {
+      "id": "428507",
+      "text": "刚来，怎么喷？",
+      "time": "08:09",
+      "sender_name": "ʀᵤₒₘᵤ 🌱",
+      "sender_id": 5566171804
+    },
+    {
+      "id": "428511",
+      "text": "笑死我了，压缩上下文本来就丢信息",
+      "time": "08:14",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "428512",
+      "text": "之前还用",
+      "time": "08:14",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "428513",
+      "text": "我自己写的都不用这么恶心的方法",
+      "time": "08:14",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "428518",
+      "text": "这方案靠谱吗？这滑动窗口方案更丢失上下文吧",
+      "time": "08:24",
+      "sender_name": "Alex",
+      "sender_id": 1207984863
+    },
+    {
+      "id": "428519",
+      "text": "把压缩改为滑动窗口？目前最好的方法还是完成一部分内容后主动选择/compact吧？",
+      "time": "08:29",
+      "sender_name": "Atenza Zn",
+      "sender_id": 6630928598
+    },
+    {
+      "id": "428522",
+      "text": "笔记能力不还是摘要",
+      "time": "08:32",
+      "sender_name": "Daniel Liu",
+      "sender_id": 906736097
+    },
+    {
+      "id": "428523",
+      "text": "这是被逼的，压缩才是逆天，花费一次输入换一个丢失信息的摘要。这换窗是把工作摘要还有窗口关键信息做了个索引传递给新窗口检索，想要具体信息可以直接查原文的",
+      "time": "08:33",
+      "sender_name": "Emile",
+      "sender_id": 1948694905
+    },
+    {
+      "id": "428526",
+      "text": "上下文压缩是不得已用的",
+      "time": "08:35",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "428535",
+      "text": "体会过上下文压缩的逆天就不怎么用压缩了。都是记录工作文档，做各种index文件。上下文多了流口水了直接开新窗口让agent去找什么文件继续什么工作。现在看这做法果然是对的",
+      "time": "08:38",
+      "sender_name": "Emile",
+      "sender_id": 1948694905
+    },
+    {
+      "id": "428537",
+      "text": "压缩想无损不可能",
+      "time": "08:38",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "428540",
+      "text": "你跟我驴唇马嘴呢？我都说了压缩丢失信息，所以不用，你搁这扯半天压缩的事情干啥，知道有问题就不用啊",
+      "time": "08:39",
+      "sender_name": "Emile",
+      "sender_id": 1948694905
+    },
+    {
+      "id": "428545",
+      "text": "你敏感肌吧？自己扯半天别的，我一开始就说压缩有问题，你跟我复读机压缩有问题？你是机器人？",
+      "time": "08:41",
+      "sender_name": "Emile",
+      "sender_id": 1948694905
+    },
+    {
+      "id": "428550",
+      "text": "相当于历史记录信息被压缩吗",
+      "time": "08:50",
+      "sender_name": "小 面包",
+      "sender_id": 6802645742
+    },
+    {
+      "id": "428561",
+      "text": "本身Codex的聊天记录就存在本地的，给ai一个搜索查询的功能就行了，让他自己找过去的聊天记录，现在还得我提示他他才会去翻聊天记录",
+      "time": "09:00",
+      "sender_name": "cookie",
+      "sender_id": 6001593444
+    },
+    {
+      "id": "428630",
+      "text": "让子弹先飞一会，目前压缩也浪费不了多少token",
+      "time": "09:25",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "428633",
+      "text": "压缩本来就是垃圾",
+      "time": "09:26",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "428642",
+      "text": "不垃圾，垃圾的是垃圾的压缩策略",
+      "time": "09:28",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "428728",
+      "time": "09:40",
+      "sender_name": "耄耋 五号机",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-01/comments/c-428728-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-01/comments/c-428728-1-thumb.webp",
+          "width": 184,
+          "height": 188,
+          "size_bytes": 2970
+        }
+      ],
+      "sender_id": 5763978571
+    },
+    {
+      "id": "428762",
+      "text": "我刚好知道有一个无限上下文的模型",
+      "time": "09:45",
+      "sender_name": "老乡鸡 不吃",
+      "sender_id": 8501393972
+    },
+    {
+      "id": "428916",
+      "text": "怎么全是我拿到dsh之后第一时间想做的功能",
+      "time": "10:18",
+      "sender_name": "Ciallo～(∠・ω< )⌒💣",
+      "sender_id": 1619360454
+    },
+    {
+      "id": "429001",
+      "text": "和当年发短信怎么压缩到14字以内省短信费一样，大模型还是太早期了",
+      "time": "10:30",
+      "sender_name": "Tom",
+      "sender_id": 5592524862
+    },
+    {
+      "id": "429014",
+      "text": "kiro就是换窗",
+      "time": "10:32",
+      "sender_name": "Andy Vogt",
+      "sender_id": 5480099092
+    },
+    {
+      "id": "429332",
+      "text": "上下文腐化",
+      "time": "12:01",
+      "sender_name": "美国 豆包",
+      "sender_id": 723764692
+    },
+    {
+      "id": "429492",
+      "text": "是0.152版吗",
+      "time": "12:38",
+      "sender_name": "R hythm",
+      "sender_id": 1443325465
+    },
+    {
+      "id": "430647",
+      "text": "HUMAN 0.1",
+      "time": "21:51",
+      "sender_name": "Alex",
+      "sender_id": 288091299
+    }
+  ]
+}
