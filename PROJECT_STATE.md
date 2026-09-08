@@ -15,6 +15,7 @@ Maintain a reliable Chinese-first intelligence station with two product areas:
 - Content filtering is centralized across brand posts, X conversation context, Xiaohongshu items, Telegram entries and Telegram comments.
 - Xiaohongshu relevance includes growth, monetization, risk control, account acquisition, platform rules, account matrices, reverse engineering and device modification.
 - Semantic review uses stable reason codes and bounded input size; deterministic rules remain the fallback.
+- Xiaohongshu candidates that pass the metric gate but are not finally collected are retained in a private local audit for seven calendar days, with rule/model rejection reasons; audit files are never published or committed.
 - Data loads retry automatically and expose an explicit retry state after repeated failure.
 - Daily publishers use module-specific commits, a shared publication lock, publish-only retry and post-publication date verification.
 - Browser QA is required in CI and cannot silently skip.

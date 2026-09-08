@@ -5,6 +5,7 @@ import json
 import math
 import os
 import re
+from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -33,6 +34,26 @@ DEFAULT_MIN_LIKES = 5
 PLATFORM_DATA_ROOT = Path("platform-trends")
 PLATFORM_SEMANTIC_CONFIDENCE = 0.65
 PLATFORM_SEMANTIC_TEXT_LIMIT = 3000
+PLATFORM_REJECTION_AUDIT_RETENTION_DAYS = 7
+
+PLATFORM_REJECTION_REASON_LABELS = {
+    "missing_required_terms": "未同时命中小红书与目标主题",
+    "platform_not_central": "小红书不是正文核心对象",
+    "content_policy": "命中低俗、敏感或垃圾内容规则",
+    "excluded_noise": "命中排除词且缺少明确方法信息",
+    "short_reaction": "短句、感叹或仅附链接，缺少可复用信息",
+    "insufficient_method_value": "方法论结构或信息密度不足",
+    "conversation_duplicate": "同一上下文仅保留最早发布的一条",
+    "context_duplicate": "完整上下文重叠，仅保留最早发布的一条",
+    "low_value": "模型判定为低价值内容",
+    "not_central_subject": "模型判定小红书不是正文核心对象",
+    "outside_target_domain": "模型判定不属于目标情报方向",
+    "not_substantive": "模型判定缺少实质方法或案例",
+    "low_confidence": "模型判断置信度不足",
+    "semantic_rejected": "未通过模型价值复审",
+    "strict_fallback_rejected": "模型不可用时未通过严格兜底规则",
+    "final_filter": "最终结果未保留该内容",
+}
 
 
 TOPIC_TERMS = {
@@ -398,6 +419,7 @@ def collect_platform_trends(
     report_date: str,
     window_label: str,
     output_dir: str,
+    audit_dir: str | None = None,
 ) -> dict[str, Any]:
     config = load_platform_config()
     platform = platform_config(config)
@@ -418,6 +440,8 @@ def collect_platform_trends(
     min_likes = max(0, min_likes or 0)
 
     selected: list[dict[str, Any]] = []
+    metric_eligible_items: dict[str, dict[str, Any]] = {}
+    rejection_details: dict[str, dict[str, Any]] = {}
     seen: set[str] = set()
     candidates_seen = 0
     metric_filtered = 0
@@ -427,7 +451,7 @@ def collect_platform_trends(
     queries = build_platform_queries(platform)
     query_candidate_limit = platform_query_candidate_limit(max_candidates, len(queries))
 
-    for query in queries:
+    for query_index, query in enumerate(queries):
         stop_after_query = False
         if len(selected) >= item_cap or candidates_seen >= max_candidates or source_request_limit_reached(x_source):
             break
@@ -459,13 +483,29 @@ def collect_platform_trends(
                     break
                 continue
             item = normalize_platform_post(row, platform)
+            item["_audit_query_group"] = platform_query_group_name(platform, query_index)
+            metric_eligible_items[post_id] = item
             decision = score_platform_post(item, platform)
             if decision["accepted"]:
                 item.update(decision["item"])
                 selected.append(item)
+                before_dedupe = {str(entry.get("post_id") or "") for entry in selected}
                 selected, removed_duplicates = dedupe_conversation_items_keep_earliest(selected)
                 conversation_deduped += removed_duplicates
+                kept_after_dedupe = {str(entry.get("post_id") or "") for entry in selected}
+                for removed_id in before_dedupe - kept_after_dedupe:
+                    rejection_details[removed_id] = platform_rejection_detail(
+                        "conversation_dedupe",
+                        "conversation_duplicate",
+                    )
                 accepted_for_query += 1
+            else:
+                reason_code = str(decision.get("reason_code") or "final_filter")
+                rejection_details[post_id] = platform_rejection_detail(
+                    "rule_filter",
+                    reason_code,
+                    details=decision.get("details") or {},
+                )
             if len(selected) >= item_cap or candidates_seen >= max_candidates:
                 break
         query_stats.append(
@@ -488,16 +528,46 @@ def collect_platform_trends(
         append_unique_warning(warnings, "Platform trend source returned no candidates for all configured queries.")
 
     selected.sort(key=lambda item: str(item.get("created_at") or ""), reverse=True)
-    selected, semantic_review = apply_platform_semantic_review(selected, translation_service)
+    selected, semantic_review = apply_platform_semantic_review(
+        selected,
+        translation_service,
+        rejection_details=rejection_details,
+    )
     translation_status = apply_translations(selected, translation_service)
     context_status = attach_platform_context(selected, x_source, translation_service, start, end)
+    before_context_dedupe = {str(entry.get("post_id") or "") for entry in selected}
     selected, context_deduped = dedupe_contextual_items_keep_earliest(selected)
     if context_deduped:
         conversation_deduped += context_deduped
+        kept_after_context_dedupe = {str(entry.get("post_id") or "") for entry in selected}
+        for removed_id in before_context_dedupe - kept_after_context_dedupe:
+            rejection_details[removed_id] = platform_rejection_detail(
+                "context_dedupe",
+                "context_duplicate",
+            )
         context_status["deduped_after_context"] = context_deduped
         refresh_context_status_for_items(context_status, selected)
         selected.sort(key=lambda item: str(item.get("created_at") or ""), reverse=True)
         translation_status = translation_report(selected, getattr(translation_service, "provider_name", "none"))
+    audit_status: dict[str, Any] = {"enabled": False}
+    if audit_dir:
+        try:
+            audit_payload = write_platform_rejection_audit(
+                Path(audit_dir),
+                report_date,
+                window_label,
+                metric_eligible_items,
+                selected,
+                rejection_details,
+            )
+            audit_status = {
+                "enabled": True,
+                "rejected_count": audit_payload["summary"]["rejected_count"],
+                "retention_days": PLATFORM_REJECTION_AUDIT_RETENTION_DAYS,
+            }
+        except Exception as error:
+            warnings.append(f"Platform rejection audit failed: {str(error)[:180]}")
+            audit_status = {"enabled": True, "error": str(error)[:180]}
     status = collection_status(
         selected,
         candidates_seen,
@@ -555,6 +625,7 @@ def collect_platform_trends(
         "translation": translation_status,
         "conversation_context": context_status,
         "semantic_review": semantic_review,
+        "rejection_audit": audit_status,
     }
 
 
@@ -585,6 +656,15 @@ def platform_query_candidate_limit(max_candidates: int, query_count: int) -> int
     if query_count <= 1:
         return max_candidates
     return min(max_candidates, max(40, math.ceil(max_candidates / query_count)))
+
+
+def platform_query_group_name(platform: dict[str, Any], query_index: int) -> str:
+    groups = platform.get("query_groups") or []
+    if query_index < len(groups):
+        name = str(groups[query_index].get("name") or "").strip()
+        if name:
+            return name
+    return f"query_{query_index + 1}"
 
 
 def normalize_platform_post(post: dict[str, Any], platform: dict[str, Any]) -> dict[str, Any]:
@@ -666,23 +746,35 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
     alias_hits = matched_terms(lower, aliases)
     intent_hits = matched_terms(lower, intent_terms)
     if not alias_hits or not intent_hits:
-        return {"accepted": False, "item": {}}
+        return rejected_platform_decision(
+            "missing_required_terms",
+            {"platform_terms": alias_hits, "intent_terms": intent_hits},
+        )
     if not platform_focus_signal(lower, aliases):
-        return {"accepted": False, "item": {}}
-    if matched_terms(lower, PLATFORM_HARD_NOISE_TERMS) or platform_noise_reason(text):
-        return {"accepted": False, "item": {}}
-    if matched_terms(lower, exclude_terms) and not strong_method_signal(lower):
-        return {"accepted": False, "item": {}}
+        return rejected_platform_decision("platform_not_central")
+    hard_noise_hits = matched_terms(lower, PLATFORM_HARD_NOISE_TERMS)
+    policy_reason = platform_noise_reason(text)
+    if hard_noise_hits or policy_reason:
+        return rejected_platform_decision(
+            "content_policy",
+            {"policy_reason": policy_reason or "hard_noise_term", "matched_terms": hard_noise_hits},
+        )
+    excluded_hits = matched_terms(lower, exclude_terms)
+    if excluded_hits and not strong_method_signal(lower):
+        return rejected_platform_decision("excluded_noise", {"matched_terms": excluded_hits})
 
     topics = matched_topics(lower)
     structure_score = method_structure_score(lower)
     if is_short_reaction_link(item, lower, topics, structure_score):
-        return {"accepted": False, "item": {}}
+        return rejected_platform_decision("short_reaction", {"structure_score": structure_score})
     metric_score = propagation_score(item)
     topic_score = min(30, len(intent_hits) * 6 + len(topics) * 4)
     score = min(100, 35 + topic_score + structure_score + metric_score)
     if score < 62:
-        return {"accepted": False, "item": {}}
+        return rejected_platform_decision(
+            "insufficient_method_value",
+            {"quality_score": score, "structure_score": structure_score, "metric_score": metric_score},
+        )
 
     topic = topics[0] if topics else "小红书方法论"
     return {
@@ -700,9 +792,19 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
     }
 
 
+def rejected_platform_decision(reason_code: str, details: dict[str, Any] | None = None) -> dict[str, Any]:
+    return {
+        "accepted": False,
+        "item": {},
+        "reason_code": reason_code,
+        "details": details or {},
+    }
+
+
 def apply_platform_semantic_review(
     items: list[dict[str, Any]],
     review_service: Any,
+    rejection_details: dict[str, dict[str, Any]] | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     if not items:
         return [], semantic_review_report("not_needed", 0, 0, 0)
@@ -747,6 +849,12 @@ def apply_platform_semantic_review(
                 rejected_count += 1
                 reason_code = semantic_rejection_code(decision)
                 rejection_reasons[reason_code] = rejection_reasons.get(reason_code, 0) + 1
+                if rejection_details is not None:
+                    rejection_details[item_id] = platform_rejection_detail(
+                        "semantic_review",
+                        reason_code,
+                        model_decision=decision,
+                    )
             continue
 
         fallback_count += 1
@@ -755,6 +863,11 @@ def apply_platform_semantic_review(
         else:
             rejected_count += 1
             rejection_reasons["strict_fallback_rejected"] = rejection_reasons.get("strict_fallback_rejected", 0) + 1
+            if rejection_details is not None:
+                rejection_details[item_id] = platform_rejection_detail(
+                    "semantic_review",
+                    "strict_fallback_rejected",
+                )
 
     mode = "model" if reviewed_count else "strict_fallback"
     error = str(getattr(review_service, "classification_last_error", "") or "")[:300]
@@ -837,6 +950,121 @@ def semantic_review_report(
         "rejection_reasons": rejection_reasons or {},
         "error": error,
     }
+
+
+def platform_rejection_detail(
+    stage: str,
+    reason_code: str,
+    details: dict[str, Any] | None = None,
+    model_decision: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    record: dict[str, Any] = {
+        "stage": stage,
+        "reason_code": reason_code,
+        "reason_label": PLATFORM_REJECTION_REASON_LABELS.get(reason_code, "未通过最终收录规则"),
+    }
+    if details:
+        record["details"] = details
+    if model_decision:
+        record["model_decision"] = {
+            "central_subject": bool(model_decision.get("central_subject")),
+            "relevant_domain": bool(model_decision.get("relevant_domain")),
+            "substantive": bool(model_decision.get("substantive")),
+            "low_value": bool(model_decision.get("low_value")),
+            "domain": str(model_decision.get("domain") or ""),
+            "confidence": float(model_decision.get("confidence") or 0),
+            "reason": str(model_decision.get("reason") or "")[:300],
+        }
+    return record
+
+
+def write_platform_rejection_audit(
+    audit_dir: Path,
+    report_date: str,
+    window_label: str,
+    metric_eligible_items: dict[str, dict[str, Any]],
+    selected: list[dict[str, Any]],
+    rejection_details: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    final_ids = {str(item.get("post_id") or "") for item in selected}
+    rejected_items = []
+    stage_counts: dict[str, int] = {}
+    reason_counts: dict[str, int] = {}
+    for post_id, item in metric_eligible_items.items():
+        if post_id in final_ids:
+            continue
+        rejection = rejection_details.get(post_id) or platform_rejection_detail("final_filter", "final_filter")
+        stage = str(rejection.get("stage") or "final_filter")
+        reason_code = str(rejection.get("reason_code") or "final_filter")
+        stage_counts[stage] = stage_counts.get(stage, 0) + 1
+        reason_counts[reason_code] = reason_counts.get(reason_code, 0) + 1
+        rejected_items.append(platform_rejection_audit_item(item, rejection))
+    rejected_items.sort(key=lambda item: str(item.get("created_at") or ""), reverse=True)
+    expected_rejected_count = max(0, len(metric_eligible_items) - len(final_ids))
+    payload = {
+        "schema_version": 1,
+        "platform": PLATFORM_KEY,
+        "date": report_date,
+        "generated_at": to_iso(now_utc()),
+        "window_label": window_label,
+        "retention_days": PLATFORM_REJECTION_AUDIT_RETENTION_DAYS,
+        "summary": {
+            "metric_eligible_count": len(metric_eligible_items),
+            "accepted_count": len(final_ids),
+            "rejected_count": len(rejected_items),
+            "expected_rejected_count": expected_rejected_count,
+            "count_matches": len(rejected_items) == expected_rejected_count,
+            "stage_counts": stage_counts,
+            "reason_counts": reason_counts,
+        },
+        "items": rejected_items,
+    }
+    audit_dir.mkdir(parents=True, exist_ok=True)
+    write_json(str(audit_dir / f"{report_date}.json"), payload)
+    prune_platform_rejection_audits(audit_dir, report_date)
+    return payload
+
+
+def platform_rejection_audit_item(item: dict[str, Any], rejection: dict[str, Any]) -> dict[str, Any]:
+    media_types = [str(media.get("type") or "unknown") for media in item.get("media") or [] if isinstance(media, dict)]
+    return {
+        "post_id": str(item.get("post_id") or ""),
+        "url": str(item.get("url") or ""),
+        "created_at": str(item.get("created_at") or ""),
+        "language": str(item.get("language") or "und"),
+        "author": {
+            "id": str(item.get("author_id") or ""),
+            "name": str(item.get("author_name") or ""),
+            "handle": str(item.get("author_handle") or ""),
+        },
+        "text": str(item.get("clean_text") or item.get("text") or ""),
+        "links": item.get("links") or [],
+        "media": {"count": len(media_types), "types": media_types},
+        "metrics": item.get("metrics") or {},
+        "query_group": str(item.get("_audit_query_group") or ""),
+        "topic": str(item.get("topic") or ""),
+        "quality_score": item.get("quality_score"),
+        "tags": item.get("tags") or [],
+        "rejection": rejection,
+    }
+
+
+def prune_platform_rejection_audits(
+    audit_dir: Path,
+    report_date: str,
+    retention_days: int = PLATFORM_REJECTION_AUDIT_RETENTION_DAYS,
+) -> list[str]:
+    cutoff = date.fromisoformat(report_date) - timedelta(days=max(1, retention_days) - 1)
+    removed: list[str] = []
+    for path in audit_dir.glob("*.json"):
+        try:
+            audit_date = date.fromisoformat(path.stem)
+        except ValueError:
+            continue
+        if audit_date < cutoff:
+            path.unlink()
+            removed.append(path.name)
+    return sorted(removed)
 
 
 def attach_platform_context(items: list[dict[str, Any]], x_source: Any, translation_service: Any, start: Any, end: Any) -> dict[str, Any]:

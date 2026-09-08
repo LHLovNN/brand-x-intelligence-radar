@@ -142,7 +142,7 @@ class JoyBuilderTranslationService(TranslationService):
             "不包括普通手机维修或与小红书无关的逆向。"
             "只返回 JSON 数组。每项格式为："
             '{"id":"...","central_subject":true,"relevant_domain":true,"substantive":true,'
-            '"low_value":false,"domain":"账号冷启动","confidence":0.95}。'
+            '"low_value":false,"domain":"账号冷启动","confidence":0.95,"reason":"一句话说明判断依据"}。'
             f"domain 只能是：{json.dumps(allowed_domains, ensure_ascii=False)}。"
         )
         input_payload = json.dumps(
@@ -212,6 +212,7 @@ class JoyBuilderTranslationService(TranslationService):
                 "low_value": record.get("low_value") is True,
                 "domain": domain,
                 "confidence": confidence,
+                "reason": str(record.get("reason") or "")[:300],
             }
         return decisions
 

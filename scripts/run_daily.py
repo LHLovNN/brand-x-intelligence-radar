@@ -508,6 +508,7 @@ def main() -> None:
                 today,
                 window_label,
                 str(ROOT / "public" / "dashboard-data"),
+                audit_dir=str(ROOT / "data" / "audits" / "platform-trends" / "xiaohongshu" / "daily"),
             )
         except Exception as error:
             platform_trend_status = {

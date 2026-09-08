@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
+import json
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,8 +15,10 @@ from src.pipeline.platform_trends import (
     collection_status,
     platform_query_candidate_limit,
     public_platform_collection_status,
+    prune_platform_rejection_audits,
     score_platform_post,
     strict_platform_relevance,
+    write_platform_rejection_audit,
 )
 
 
@@ -188,6 +192,61 @@ def main() -> None:
     assert reviewed[0]["topic"] == "逆向与改机"
     assert review_status["reviewed_count"] == 2
     assert review_status["rejected_count"] == 1
+
+    rejection_details = {}
+    reviewed, review_status = apply_platform_semantic_review(
+        semantic_items,
+        ReviewService(),
+        rejection_details=rejection_details,
+    )
+    assert rejection_details["off-topic"]["stage"] == "semantic_review"
+    assert rejection_details["off-topic"]["reason_code"] == "low_value"
+
+    with tempfile.TemporaryDirectory() as temp_dir:
+        audit_dir = Path(temp_dir)
+        (audit_dir / "2026-09-01.json").write_text("{}\n", encoding="utf-8")
+        (audit_dir / "2026-09-02.json").write_text("{}\n", encoding="utf-8")
+        eligible = {
+            f"post-{index}": {
+                "post_id": f"post-{index}",
+                "created_at": f"2026-09-08T01:{index:02d}:00Z",
+                "clean_text": f"小红书候选内容 {index}",
+                "metrics": {"views": 1000 + index, "likes": 50 + index},
+                "_audit_query_group": "content_traffic",
+            }
+            for index in range(25)
+        }
+        audit_rejections = {
+            f"post-{index}": {
+                "stage": "rule_filter",
+                "reason_code": "platform_not_central",
+                "reason_label": "小红书不是正文核心对象",
+            }
+            for index in range(3, 18)
+        }
+        audit_rejections.update(
+            {f"post-{index}": rejection_details["off-topic"] for index in range(18, 25)}
+        )
+        audit = write_platform_rejection_audit(
+            audit_dir,
+            "2026-09-08",
+            "test window",
+            eligible,
+            [eligible[f"post-{index}"] for index in range(3)],
+            audit_rejections,
+        )
+        assert audit["summary"]["metric_eligible_count"] == 25
+        assert audit["summary"]["accepted_count"] == 3
+        assert audit["summary"]["rejected_count"] == 22
+        assert audit["summary"]["stage_counts"] == {"rule_filter": 15, "semantic_review": 7}
+        assert audit["summary"]["count_matches"] is True
+        assert len(audit["items"]) == 22
+        assert not (audit_dir / "2026-09-01.json").exists(), "eighth calendar day should be pruned"
+        assert (audit_dir / "2026-09-02.json").exists(), "seven-day retention should keep current day plus six days"
+        parsed_audit = json.loads((audit_dir / "2026-09-08.json").read_text(encoding="utf-8"))
+        assert parsed_audit["summary"]["rejected_count"] == 22
+
+        assert prune_platform_rejection_audits(audit_dir, "2026-09-08") == []
 
     status = collection_status(
         [item],
