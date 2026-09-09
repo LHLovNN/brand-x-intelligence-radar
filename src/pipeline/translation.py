@@ -16,6 +16,70 @@ HANGUL_RE = re.compile(r"[\uac00-\ud7af]")
 TEXT_SIGNAL_RE = re.compile(r"[\w\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]", re.UNICODE)
 ZH_LANGUAGES = {"zh", "zh-cn", "zh-hans", "zh-tw", "zh-hant", "cn"}
 SEGMENT_ID_SEPARATOR = "::segment::"
+PLATFORM_REVIEW_DOMAINS = (
+    "账号冷启动",
+    "爆文与内容结构",
+    "流量机制",
+    "风控对抗",
+    "平台规则",
+    "矩阵",
+    "变现",
+    "私域引流",
+    "案例复盘",
+    "逆向与改机",
+)
+
+
+def build_platform_review_prompt() -> str:
+    """Build the deterministic policy prompt used by the platform semantic reviewer."""
+    allowed_domains = json.dumps(PLATFORM_REVIEW_DOMAINS, ensure_ascii=False)
+    return (
+        "你是小红书运营情报的严格内容审核员。判断每条公开帖子是否值得进入方法论情报库。"
+        "不要把‘必须是完整教程’当作收录条件；能直接复用的工具、工作流、模板、提示词，"
+        "以及包含具体运营动作和可核验结果的真实案例，都属于实质信息。\n"
+        "逐条独立判断以下字段：\n"
+        "1. central_subject：小红书/RedNote/Xiaohongshu 是否是正文主要讨论对象。"
+        "多平台内容可以为 false，不要为了收录而虚报 true。\n"
+        "2. actionable_for_platform：内容是否明确适用于小红书，并提供可直接复用或可据此决策的信息。"
+        "以下任一情形可为 true：\n"
+        "- 工具或完整工作流明确支持小红书，且正文说明了实际能力、操作环节、平台适配、限制或风控；\n"
+        "- 提示词、脚本、模板、选题、分镜或内容生产方法明确用于小红书，或明确说明该内容形态在小红书的表现；\n"
+        "- 真实小红书运营案例同时给出具体动作和结果，例如发布频率、内容形式、账号操作，"
+        "以及涨粉、互动、流量、获客、商单或变现结果。案例不必写成系统教程；\n"
+        "- 针对小红书客户端、接口、签名、设备指纹、设备环境或账号风控的技术研究。\n"
+        "如果只是把小红书和其他平台并列罗列、只说‘也要做小红书’、通用内容末尾随手加一句"
+        "‘可发小红书’，或工具广告只宣称‘支持小红书等平台’却没有上述实质细节，"
+        "actionable_for_platform 必须为 false。\n"
+        "3. relevant_domain：内容是否属于养号、起号、内容运营、选题与内容生产、流量、变现、风控、"
+        "平台规则、账号矩阵、私域引流、案例复盘、逆向工程或改机/设备环境对抗。\n"
+        "4. substantive：是否含有方法、步骤、工具能力、工作流、模板、提示词、案例、数据、"
+        "具体经验或规则分析。具体动作加结果数据本身就可以为 true，不要求完整教程。\n"
+        "5. low_value：是否属于关键词擦边、纯平台罗列、无关故事或新闻、短感叹、没有实质信息的广告导流、"
+        "低俗色情、黑灰产，或其他没有可复用信息的内容。帖子含产品名、项目链接或口语化表达，"
+        "不能单独作为 low_value=true 的理由；要看正文是否提供了可复用信息。\n"
+        "收录有两条合格路径：A. central_subject=true；B. actionable_for_platform=true。"
+        "两条路径都还必须满足 relevant_domain=true、substantive=true、low_value=false。"
+        "若小红书不是全文唯一核心，但内容明确适用于小红书且有可复用工具/工作流/模板，"
+        "或有小红书具体动作加结果的案例，应走路径 B，不得仅因是多平台内容而拒绝。\n"
+        "正例校准：\n"
+        "- 一个多平台运营 Agent 详细说明选题、生产、发布、复盘工作流，明确支持小红书并说明自动化风控，"
+        "应判 actionable_for_platform=true、substantive=true、low_value=false。\n"
+        "- 一份可直接复用的短视频提示词或分镜模板，明确说明该内容形态用于小红书且有流量表现，"
+        "应判 actionable_for_platform=true、substantive=true。\n"
+        "- 小红书账号案例给出每天两更、具体内容形式，并报告涨粉互动和商单结果，"
+        "即使带有个人感慨、没有完整教程，也应判 substantive=true、low_value=false。\n"
+        "反例校准：\n"
+        "- 只写‘支持小红书、抖音、视频号等平台’，没有能力说明、模板、适配细节或案例，拒绝。\n"
+        "- 只说‘小红书流量很好，大家快去做’，没有动作、方法或结果细节，拒绝。\n"
+        "- 以购买、加群、私信或跳转为主要目的且没有实质方法的广告导流，以及低俗色情、黑灰产内容，拒绝。\n"
+        "逆向与改机仅指围绕小红书客户端、接口、签名、设备指纹、设备环境、账号风控的技术研究，"
+        "不包括普通手机维修或与小红书无关的逆向。\n"
+        "只返回 JSON 数组。每项格式为："
+        '{"id":"...","central_subject":true,"actionable_for_platform":true,'
+        '"relevant_domain":true,"substantive":true,"low_value":false,'
+        '"domain":"账号冷启动","confidence":0.95,"reason":"一句话说明判断依据"}。'
+        f"domain 只能是：{allowed_domains}。"
+    )
 
 
 class TranslationNotConfigured(RuntimeError):
@@ -120,31 +184,7 @@ class JoyBuilderTranslationService(TranslationService):
         return decisions
 
     def _classify_platform_chunk(self, items: list[dict[str, str]]) -> dict[str, dict[str, Any]]:
-        allowed_domains = [
-            "账号冷启动",
-            "爆文与内容结构",
-            "流量机制",
-            "风控对抗",
-            "平台规则",
-            "矩阵",
-            "变现",
-            "私域引流",
-            "案例复盘",
-            "逆向与改机",
-        ]
-        system_prompt = (
-            "你是小红书运营情报的严格内容审核员。判断每条公开帖子是否值得进入方法论情报库。"
-            "收录必须同时满足：小红书/RedNote/Xiaohongshu 是正文核心对象，而非顺带提及；"
-            "内容属于养号、起号、内容运营、流量、变现、风控、平台规则、账号矩阵、"
-            "小红书逆向工程或改机/设备环境对抗之一；并且提供方法、步骤、案例、数据、经验或规则分析。"
-            "排除关键词擦边、平台罗列、无关故事、单纯情绪、广告、低俗内容和没有可复用信息的短句。"
-            "逆向与改机仅指围绕小红书客户端、接口、签名、设备指纹、设备环境、账号风控的技术研究，"
-            "不包括普通手机维修或与小红书无关的逆向。"
-            "只返回 JSON 数组。每项格式为："
-            '{"id":"...","central_subject":true,"relevant_domain":true,"substantive":true,'
-            '"low_value":false,"domain":"账号冷启动","confidence":0.95,"reason":"一句话说明判断依据"}。'
-            f"domain 只能是：{json.dumps(allowed_domains, ensure_ascii=False)}。"
-        )
+        system_prompt = build_platform_review_prompt()
         input_payload = json.dumps(
             [
                 {
@@ -193,7 +233,7 @@ class JoyBuilderTranslationService(TranslationService):
         except json.JSONDecodeError as error:
             raise TranslationRequestError(f"JoyBuilder platform review returned non-JSON output: {text[:300]}") from error
         decisions: dict[str, dict[str, Any]] = {}
-        allowed = set(allowed_domains)
+        allowed = set(PLATFORM_REVIEW_DOMAINS)
         for record in records if isinstance(records, list) else []:
             if not isinstance(record, dict):
                 continue
@@ -207,6 +247,7 @@ class JoyBuilderTranslationService(TranslationService):
                 confidence = 0.0
             decisions[item_id] = {
                 "central_subject": record.get("central_subject") is True,
+                "actionable_for_platform": record.get("actionable_for_platform") is True,
                 "relevant_domain": record.get("relevant_domain") is True,
                 "substantive": record.get("substantive") is True,
                 "low_value": record.get("low_value") is True,

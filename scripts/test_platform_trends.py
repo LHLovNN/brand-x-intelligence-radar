@@ -7,17 +7,23 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from src.adapters.x_source_base import ProviderBudgetExceeded
 from src.pipeline.platform_trends import (
     apply_platform_semantic_review,
     build_platform_queries,
     canonical_platform_tag,
     clean_post_text,
     collection_status,
+    effective_platform_intent_terms,
     platform_query_candidate_limit,
+    platform_query_request_allowance,
     public_platform_collection_status,
     prune_platform_rejection_audits,
     score_platform_post,
+    semantic_decision_accepts,
+    search_platform_query_with_budget,
     strict_platform_relevance,
+    unique_platform_query_rows,
     write_platform_rejection_audit,
 )
 
@@ -157,6 +163,67 @@ def main() -> None:
     assert "逆向与改机" in reverse_decision["item"]["tags"]
     assert strict_platform_relevance({**reverse_engineering, **reverse_decision["item"]})
 
+    workflow_platform = {
+        **platform,
+        "query_groups": [
+            {"name": "content", "intent_terms": ["选题", "复盘", "工作流"]},
+        ],
+    }
+    assert "复盘" in effective_platform_intent_terms(workflow_platform)
+    workflow_case = {
+        "clean_text": (
+            "这个社媒运营工作流把热点发现、选题、内容生产、发布和数据复盘串起来，"
+            "发布支持小红书，并提醒小红书自动化操作应当预览后手动发布。"
+        ),
+        "links": [],
+        "metrics": {"likes": 197, "reposts": 41, "replies": 31, "views": 12525},
+        "author_followers": 0,
+    }
+    assert score_platform_post(workflow_case, workflow_platform)["accepted"], (
+        "actionable multi-platform workflows with explicit Xiaohongshu support should enter review"
+    )
+
+    prompt_template_case = {
+        "clean_text": (
+            "萌宠类 AI 账号在抖音和小红书的流量表现都不错。下面给出可直接复用的提示词、"
+            "竖屏分镜、角色一致性和镜头脚本，并说明如何按十秒视频模板生成内容。"
+        ),
+        "links": [],
+        "metrics": {"likes": 25, "reposts": 2, "replies": 21, "views": 2409},
+        "author_followers": 0,
+    }
+    assert score_platform_post(prompt_template_case, workflow_platform)["accepted"], (
+        "reusable content templates with explicit Xiaohongshu applicability should enter review"
+    )
+
+    result_case = {
+        "clean_text": (
+            "这个小红书账号每天两更，一篇垂直内容、一篇跨平台内容截图。停更半个月后后台仍有"
+            "99+ 点赞收藏、99+ 涨粉，并收到两个商单机会，这是一次低成本内容复用案例复盘。"
+        ),
+        "links": [],
+        "metrics": {"likes": 20, "reposts": 1, "replies": 34, "views": 5720},
+        "author_followers": 0,
+    }
+    result_rule_decision = score_platform_post(result_case, workflow_platform)
+    assert result_rule_decision["accepted"]
+    low_confidence_rejection = {
+        "central_subject": True,
+        "actionable_for_platform": True,
+        "relevant_domain": True,
+        "substantive": False,
+        "low_value": True,
+        "confidence": 0.68,
+    }
+    reviewed_result_case = {**result_case, **result_rule_decision["item"]}
+    assert semantic_decision_accepts(low_confidence_rejection, reviewed_result_case), (
+        "a low-confidence model rejection should defer to strong deterministic case evidence"
+    )
+    assert not semantic_decision_accepts(
+        {**low_confidence_rejection, "confidence": 0.90},
+        reviewed_result_case,
+    ), "a high-confidence low-value decision should remain a veto"
+
     class ReviewService:
         configured = True
         classification_last_error = ""
@@ -165,6 +232,7 @@ def main() -> None:
             return {
                 items[0]["id"]: {
                     "central_subject": False,
+                    "actionable_for_platform": True,
                     "relevant_domain": False,
                     "substantive": False,
                     "low_value": True,
@@ -201,6 +269,7 @@ def main() -> None:
     )
     assert rejection_details["off-topic"]["stage"] == "semantic_review"
     assert rejection_details["off-topic"]["reason_code"] == "low_value"
+    assert rejection_details["off-topic"]["model_decision"]["actionable_for_platform"] is True
 
     with tempfile.TemporaryDirectory() as temp_dir:
         audit_dir = Path(temp_dir)
@@ -290,6 +359,81 @@ def main() -> None:
     assert all(len(query) < 180 for query in queries), "split platform trend queries should stay short enough for stable Top search"
     assert platform_query_candidate_limit(400, len(queries)) == 200
     assert platform_query_candidate_limit(400, 5) == 80
+    assert platform_query_candidate_limit(600, 6, 100) == 100
+
+    live_config = json.loads((ROOT / "config" / "platform_trends.json").read_text(encoding="utf-8"))
+    live_platform = live_config["platforms"]["xiaohongshu"]
+    assert len(live_platform["query_groups"]) == 6
+    assert live_platform["max_candidates_per_query"] == 100
+    assert live_platform["max_candidates_per_day"] == 600
+    assert live_platform["max_source_requests_per_run"] == 50
+
+    globally_seen = {"cross-query"}
+    unique_rows, uniqueness = unique_platform_query_rows(
+        [
+            {"post_id": "first"},
+            {"post_id": "first"},
+            {"post_id": "cross-query"},
+            {"post_id": "second"},
+            {},
+        ],
+        globally_seen,
+    )
+    assert [post_id for post_id, _ in unique_rows] == ["first", "second"]
+    assert uniqueness == {
+        "group_unique_candidates": 3,
+        "within_query_duplicates": 1,
+        "cross_query_duplicates": 1,
+        "missing_identifier": 1,
+    }
+
+    class GreedyBudgetSource:
+        def __init__(self) -> None:
+            self.max_requests_per_run = 50
+            self.requests_used = 0
+            self.request_budget_exhausted = False
+
+        def search_posts(self, query, start_time, end_time, limit, query_type="Latest"):
+            rows = []
+            while len(rows) < limit:
+                if self.requests_used >= self.max_requests_per_run:
+                    self.request_budget_exhausted = True
+                    if rows:
+                        return rows
+                    raise ProviderBudgetExceeded("query request allowance exhausted")
+                self.requests_used += 1
+                rows.append({"post_id": f"{query}-{self.requests_used}"})
+            return rows
+
+    greedy_source = GreedyBudgetSource()
+    per_group_requests = []
+    for query_index in range(6):
+        allowance = platform_query_request_allowance(greedy_source, 6 - query_index)
+        _, request_stats = search_platform_query_with_budget(
+            greedy_source,
+            f"query-{query_index}",
+            "2026-09-08T00:00:00Z",
+            "2026-09-09T00:00:00Z",
+            100,
+            allowance,
+        )
+        per_group_requests.append(request_stats["requests_used"])
+    assert per_group_requests == [8, 8, 8, 8, 9, 9]
+    assert greedy_source.requests_used == 50
+    assert greedy_source.max_requests_per_run == 50
+
+    all_targets_status = collection_status(
+        [item],
+        candidates_seen=600,
+        max_items=None,
+        max_candidates=600,
+        warnings=[],
+        source_request_limit_reached=True,
+        query_groups_completed=6,
+        configured_query_groups=6,
+        query_targets_met=6,
+    )
+    assert all_targets_status["completion_reason"] == "query_group_targets_reached"
 
     zero_status = collection_status([], candidates_seen=0, max_items=None, max_candidates=400, warnings=["Platform trend source returned no candidates for all configured queries."])
     zero_public_status = public_platform_collection_status(zero_status)

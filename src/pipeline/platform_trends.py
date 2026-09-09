@@ -33,6 +33,8 @@ DEFAULT_MIN_VIEWS = 100
 DEFAULT_MIN_LIKES = 5
 PLATFORM_DATA_ROOT = Path("platform-trends")
 PLATFORM_SEMANTIC_CONFIDENCE = 0.65
+PLATFORM_SEMANTIC_NEGATIVE_CONFIDENCE = 0.80
+PLATFORM_SEMANTIC_RULE_FALLBACK_SCORE = 75
 PLATFORM_SEMANTIC_TEXT_LIMIT = 3000
 PLATFORM_REJECTION_AUDIT_RETENTION_DAYS = 7
 
@@ -86,6 +88,14 @@ TOPIC_TERMS = {
         "content",
         "post structure",
         "hook",
+        "提示词",
+        "分镜",
+        "脚本",
+        "内容模板",
+        "工作流",
+        "社媒运营",
+        "prompt",
+        "workflow",
     ],
     "流量机制": [
         "流量",
@@ -285,6 +295,14 @@ STRUCTURE_SIGNALS = [
     "拆解",
     "总结",
     "实操",
+    "提示词",
+    "分镜",
+    "脚本",
+    "模板",
+    "工作流",
+    "账号画像",
+    "prompt",
+    "workflow",
 ]
 
 PLATFORM_FOCUS_TERMS = [
@@ -298,6 +316,7 @@ PLATFORM_FOCUS_TERMS = [
     "标题",
     "封面",
     "内容定位",
+    "流量",
     "账号运营",
     "运营",
     "矩阵",
@@ -410,6 +429,82 @@ def apply_platform_runtime_limits(x_source: Any, config: dict[str, Any]) -> dict
     }
 
 
+def platform_query_request_allowance(x_source: Any, remaining_groups: int) -> int | None:
+    """Reserve an even share of the remaining search budget for each query group."""
+    max_requests = getattr(x_source, "max_requests_per_run", None)
+    if max_requests is None:
+        return None
+    try:
+        remaining = max(
+            0,
+            int(max_requests) - int(getattr(x_source, "requests_used", 0) or 0),
+        )
+    except (TypeError, ValueError):
+        return None
+    return remaining // max(1, int(remaining_groups))
+
+
+def search_platform_query_with_budget(
+    x_source: Any,
+    query: str,
+    start_time: str,
+    end_time: str,
+    limit: int,
+    request_allowance: int | None,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Run one query without allowing it to consume later groups' reserved requests."""
+    original_max_requests = getattr(x_source, "max_requests_per_run", None)
+    requests_before = int(getattr(x_source, "requests_used", 0) or 0)
+    can_apply_local_cap = original_max_requests is not None and hasattr(x_source, "requests_used")
+    if not can_apply_local_cap or request_allowance is None:
+        rows = x_source.search_posts(query, start_time, end_time, limit, query_type="Top")
+        requests_after = int(getattr(x_source, "requests_used", requests_before) or requests_before)
+        return rows, {
+            "request_allowance": request_allowance,
+            "requests_used": max(0, requests_after - requests_before),
+            "request_budget_limited": False,
+        }
+
+    allowance = max(0, int(request_allowance))
+    if allowance == 0:
+        return [], {
+            "request_allowance": 0,
+            "requests_used": 0,
+            "request_budget_limited": True,
+        }
+
+    global_max_requests = int(original_max_requests)
+    local_max_requests = min(global_max_requests, requests_before + allowance)
+    original_budget_exhausted = bool(getattr(x_source, "request_budget_exhausted", False))
+    has_budget_flag = hasattr(x_source, "request_budget_exhausted")
+    x_source.max_requests_per_run = local_max_requests
+    if has_budget_flag and not original_budget_exhausted:
+        x_source.request_budget_exhausted = False
+
+    rows: list[dict[str, Any]] = []
+    request_budget_limited = False
+    try:
+        try:
+            rows = x_source.search_posts(query, start_time, end_time, limit, query_type="Top")
+        except ProviderBudgetExceeded:
+            request_budget_limited = True
+        request_budget_limited = request_budget_limited or bool(
+            getattr(x_source, "request_budget_exhausted", False)
+        )
+    finally:
+        requests_after = int(getattr(x_source, "requests_used", requests_before) or requests_before)
+        x_source.max_requests_per_run = original_max_requests
+        if has_budget_flag:
+            global_budget_exhausted = request_budget_limited and requests_after >= global_max_requests
+            x_source.request_budget_exhausted = original_budget_exhausted or global_budget_exhausted
+
+    return rows, {
+        "request_allowance": allowance,
+        "requests_used": max(0, requests_after - requests_before),
+        "request_budget_limited": request_budget_limited,
+    }
+
+
 def collect_platform_trends(
     x_source: Any,
     translation_service: Any,
@@ -428,14 +523,18 @@ def collect_platform_trends(
         "BRAND_RADAR_PLATFORM_MAX_CANDIDATES",
         int(platform.get("max_candidates_per_day") or DEFAULT_MAX_CANDIDATES),
     )
+    configured_query_candidate_limit = optional_config_int(platform.get("max_candidates_per_query"))
+    max_candidates_per_query = optional_int_env(
+        "BRAND_RADAR_PLATFORM_MAX_CANDIDATES_PER_QUERY",
+        configured_query_candidate_limit,
+    )
     configured_max_items = optional_config_int(platform.get("max_items_per_day"))
     max_items = optional_int_env("BRAND_RADAR_PLATFORM_MAX_ITEMS", configured_max_items)
     min_views = optional_int_env("BRAND_RADAR_PLATFORM_MIN_VIEWS", int(platform.get("min_views_per_item") or DEFAULT_MIN_VIEWS))
     min_likes = optional_int_env("BRAND_RADAR_PLATFORM_MIN_LIKES", int(platform.get("min_likes_per_item") or DEFAULT_MIN_LIKES))
-    max_items = max(1, max_items) if max_items else None
     max_candidates = max(1, max_candidates or DEFAULT_MAX_CANDIDATES)
+    max_items = min(max_candidates, max(1, max_items)) if max_items else None
     item_cap = max_items or max_candidates
-    max_candidates = max(item_cap, max_candidates or DEFAULT_MAX_CANDIDATES)
     min_views = max(0, min_views or 0)
     min_likes = max(0, min_likes or 0)
 
@@ -449,15 +548,27 @@ def collect_platform_trends(
     warnings: list[str] = []
     query_stats: list[dict[str, Any]] = []
     queries = build_platform_queries(platform)
-    query_candidate_limit = platform_query_candidate_limit(max_candidates, len(queries))
+    query_candidate_limit = platform_query_candidate_limit(
+        max_candidates,
+        len(queries),
+        max_candidates_per_query,
+    )
 
     for query_index, query in enumerate(queries):
         stop_after_query = False
         if len(selected) >= item_cap or candidates_seen >= max_candidates or source_request_limit_reached(x_source):
             break
         limit = min(max_candidates - candidates_seen, query_candidate_limit)
+        request_allowance = platform_query_request_allowance(x_source, len(queries) - query_index)
         try:
-            rows = x_source.search_posts(query, to_iso(start), to_iso(end), limit, query_type="Top")
+            rows, query_request_stats = search_platform_query_with_budget(
+                x_source,
+                query,
+                to_iso(start),
+                to_iso(end),
+                limit,
+                request_allowance,
+            )
         except ProviderBudgetExceeded as error:
             if not source_request_limit_reached(x_source) or not candidates_seen:
                 warnings.append(str(error))
@@ -469,11 +580,8 @@ def collect_platform_trends(
         accepted_for_query = 0
         inspected_for_query = 0
         metric_filtered_for_query = 0
-        for row in rows:
-            post_id = str(row.get("post_id") or row.get("url") or "")
-            if not post_id or post_id in seen:
-                continue
-            seen.add(post_id)
+        unique_rows, query_uniqueness = unique_platform_query_rows(rows, seen)
+        for post_id, row in unique_rows:
             candidates_seen += 1
             inspected_for_query += 1
             if not passes_platform_metric_gate(row, min_views, min_likes):
@@ -510,13 +618,26 @@ def collect_platform_trends(
                 break
         query_stats.append(
             {
+                "query_group": platform_query_group_name(platform, query_index),
                 "query_label": query_label(query),
+                "candidate_target": query_candidate_limit,
                 "candidate_limit": limit,
                 "fetched": len(rows),
+                "group_unique_candidates": query_uniqueness["group_unique_candidates"],
+                "within_query_duplicates": query_uniqueness["within_query_duplicates"],
                 "inspected": inspected_for_query,
+                "cross_query_duplicates": query_uniqueness["cross_query_duplicates"],
+                "missing_identifier": query_uniqueness["missing_identifier"],
                 "metric_filtered": metric_filtered_for_query,
                 "metric_eligible": inspected_for_query - metric_filtered_for_query,
                 "accepted": accepted_for_query,
+                "target_met": query_uniqueness["group_unique_candidates"] >= query_candidate_limit,
+                "source_exhausted": (
+                    query_uniqueness["group_unique_candidates"] < query_candidate_limit
+                    and len(rows) < limit
+                    and not query_request_stats["request_budget_limited"]
+                ),
+                **query_request_stats,
             }
         )
         if source_request_limit_reached(x_source):
@@ -580,6 +701,9 @@ def collect_platform_trends(
         metric_filtered=metric_filtered,
         conversation_deduped=conversation_deduped,
         semantic_filtered=int(semantic_review.get("rejected_count") or 0),
+        query_groups_completed=len(query_stats),
+        configured_query_groups=len(queries),
+        query_targets_met=sum(1 for entry in query_stats if entry.get("target_met")),
     )
 
     payload = {
@@ -605,6 +729,18 @@ def collect_platform_trends(
             "semantic_filtered": int(semantic_review.get("rejected_count") or 0),
             "max_items": max_items,
             "max_candidates": max_candidates,
+            "max_candidates_per_query": query_candidate_limit,
+            "configured_query_groups": len(queries),
+            "query_groups_completed": len(query_stats),
+            "query_targets_met": sum(1 for entry in query_stats if entry.get("target_met")),
+            "raw_candidates_fetched": sum(int(entry.get("fetched") or 0) for entry in query_stats),
+            "group_unique_candidates_fetched": sum(
+                int(entry.get("group_unique_candidates") or 0) for entry in query_stats
+            ),
+            "within_query_duplicates": sum(
+                int(entry.get("within_query_duplicates") or 0) for entry in query_stats
+            ),
+            "cross_query_duplicates": sum(int(entry.get("cross_query_duplicates") or 0) for entry in query_stats),
             "max_source_requests": runtime_limits.get("max_source_requests"),
             "min_views": min_views,
             "min_likes": min_likes,
@@ -652,7 +788,27 @@ def build_platform_queries(platform: dict[str, Any]) -> list[str]:
     return [f"({_or_clause(aliases)}) ({_or_clause(intents)}) -filter:retweets {_negative_clause(excludes)}".strip()]
 
 
-def platform_query_candidate_limit(max_candidates: int, query_count: int) -> int:
+def effective_platform_intent_terms(platform: dict[str, Any]) -> list[str]:
+    terms: list[str] = []
+    for term in platform.get("intent_terms") or []:
+        value = str(term).strip().lower()
+        if value and value not in terms:
+            terms.append(value)
+    for group in platform.get("query_groups") or []:
+        for term in group.get("intent_terms") or []:
+            value = str(term).strip().lower()
+            if value and value not in terms:
+                terms.append(value)
+    return terms
+
+
+def platform_query_candidate_limit(
+    max_candidates: int,
+    query_count: int,
+    configured_limit: int | None = None,
+) -> int:
+    if configured_limit:
+        return min(max_candidates, max(1, int(configured_limit)))
     if query_count <= 1:
         return max_candidates
     return min(max_candidates, max(40, math.ceil(max_candidates / query_count)))
@@ -665,6 +821,38 @@ def platform_query_group_name(platform: dict[str, Any], query_index: int) -> str
         if name:
             return name
     return f"query_{query_index + 1}"
+
+
+def unique_platform_query_rows(
+    rows: list[dict[str, Any]],
+    globally_seen: set[str],
+) -> tuple[list[tuple[str, dict[str, Any]]], dict[str, int]]:
+    """Separate within-query duplicates from candidates repeated across query groups."""
+    query_seen: set[str] = set()
+    unique_rows: list[tuple[str, dict[str, Any]]] = []
+    within_query_duplicates = 0
+    cross_query_duplicates = 0
+    missing_identifier = 0
+    for row in rows:
+        post_id = str(row.get("post_id") or row.get("url") or "").strip()
+        if not post_id:
+            missing_identifier += 1
+            continue
+        if post_id in query_seen:
+            within_query_duplicates += 1
+            continue
+        query_seen.add(post_id)
+        if post_id in globally_seen:
+            cross_query_duplicates += 1
+            continue
+        globally_seen.add(post_id)
+        unique_rows.append((post_id, row))
+    return unique_rows, {
+        "group_unique_candidates": len(query_seen),
+        "within_query_duplicates": within_query_duplicates,
+        "cross_query_duplicates": cross_query_duplicates,
+        "missing_identifier": missing_identifier,
+    }
 
 
 def normalize_platform_post(post: dict[str, Any], platform: dict[str, Any]) -> dict[str, Any]:
@@ -741,7 +929,7 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
     text = combined_text(item)
     lower = text.lower()
     aliases = [str(term).lower() for term in platform.get("aliases") or []]
-    intent_terms = [str(term).lower() for term in platform.get("intent_terms") or []]
+    intent_terms = effective_platform_intent_terms(platform)
     exclude_terms = [str(term).lower() for term in [*NOISE_TERMS, *(platform.get("exclude_terms") or [])]]
     alias_hits = matched_terms(lower, aliases)
     intent_hits = matched_terms(lower, intent_terms)
@@ -837,7 +1025,7 @@ def apply_platform_semantic_review(
         decision = decisions.get(item_id)
         if decision:
             reviewed_count += 1
-            accepted = semantic_decision_accepts(decision)
+            accepted = semantic_decision_accepts(decision, item)
             if accepted:
                 domain = str(decision.get("domain") or "")
                 if domain in TOPIC_TERMS:
@@ -897,7 +1085,7 @@ def semantic_review_text(value: Any) -> str:
 def semantic_rejection_code(decision: dict[str, Any]) -> str:
     if decision.get("low_value") is True:
         return "low_value"
-    if decision.get("central_subject") is not True:
+    if decision.get("central_subject") is not True and decision.get("actionable_for_platform") is not True:
         return "not_central_subject"
     if decision.get("relevant_domain") is not True:
         return "outside_target_domain"
@@ -908,13 +1096,27 @@ def semantic_rejection_code(decision: dict[str, Any]) -> str:
     return "semantic_rejected"
 
 
-def semantic_decision_accepts(decision: dict[str, Any]) -> bool:
-    return (
+def semantic_decision_accepts(decision: dict[str, Any], item: dict[str, Any] | None = None) -> bool:
+    platform_relevant = (
         decision.get("central_subject") is True
+        or decision.get("actionable_for_platform") is True
+    )
+    confidence = float(decision.get("confidence") or 0)
+    if (
+        platform_relevant
         and decision.get("relevant_domain") is True
         and decision.get("substantive") is True
         and decision.get("low_value") is not True
-        and float(decision.get("confidence") or 0) >= PLATFORM_SEMANTIC_CONFIDENCE
+        and confidence >= PLATFORM_SEMANTIC_CONFIDENCE
+    ):
+        return True
+    if confidence >= PLATFORM_SEMANTIC_NEGATIVE_CONFIDENCE:
+        return False
+    quality_score = int((item or {}).get("quality_score") or 0)
+    return (
+        platform_relevant
+        and decision.get("relevant_domain") is True
+        and quality_score >= PLATFORM_SEMANTIC_RULE_FALLBACK_SCORE
     )
 
 
@@ -968,6 +1170,7 @@ def platform_rejection_detail(
     if model_decision:
         record["model_decision"] = {
             "central_subject": bool(model_decision.get("central_subject")),
+            "actionable_for_platform": bool(model_decision.get("actionable_for_platform")),
             "relevant_domain": bool(model_decision.get("relevant_domain")),
             "substantive": bool(model_decision.get("substantive")),
             "low_value": bool(model_decision.get("low_value")),
@@ -1106,16 +1309,27 @@ def collection_status(
     metric_filtered: int = 0,
     conversation_deduped: int = 0,
     semantic_filtered: int = 0,
+    query_groups_completed: int = 0,
+    configured_query_groups: int = 0,
+    query_targets_met: int = 0,
 ) -> dict[str, Any]:
     status = "complete"
-    if max_items and len(items) >= max_items:
+    if (
+        configured_query_groups
+        and query_groups_completed >= configured_query_groups
+        and query_targets_met >= configured_query_groups
+    ):
+        reason = "query_group_targets_reached"
+    elif max_items and len(items) >= max_items:
         reason = "daily_item_target_reached"
     elif candidates_seen >= max_candidates:
         reason = "candidate_cap_reached"
     elif source_request_limit_reached:
         reason = "source_request_limit_reached"
+    elif configured_query_groups and query_groups_completed >= configured_query_groups:
+        reason = "query_groups_completed"
     else:
-        reason = "candidate_source_exhausted"
+        reason = "collection_stopped"
     if warnings:
         status = "partial"
     return {
@@ -1127,6 +1341,9 @@ def collection_status(
         "metric_filtered": metric_filtered,
         "conversation_deduped": conversation_deduped,
         "semantic_filtered": semantic_filtered,
+        "configured_query_groups": configured_query_groups,
+        "query_groups_completed": query_groups_completed,
+        "query_targets_met": query_targets_met,
         "max_items": max_items,
         "max_candidates": max_candidates,
         "source_request_limit_reached": source_request_limit_reached,
@@ -1371,6 +1588,8 @@ def platform_focus_signal(lower: str, aliases: list[str]) -> bool:
     patterns = [
         rf"(?:{alias_pattern})[\s\S]{{0,50}}(?:{focus_pattern})",
         rf"(?:{focus_pattern})[\s\S]{{0,50}}(?:{alias_pattern})",
+        rf"(?:支持|适配|覆盖|接入|同步(?:发布)?到?|发布(?:到|至)?)[\s\S]{{0,30}}(?:{alias_pattern})",
+        rf"(?:{alias_pattern})[\s\S]{{0,30}}(?:支持|适配|自动化|工作流|发布|预览后手动)",
     ]
     return any(re.search(pattern, lower, re.IGNORECASE) for pattern in patterns)
 
