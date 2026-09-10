@@ -155,10 +155,9 @@ async function main() {
 
   await page.click('a[href="#/diting/tg-daily"]');
   await page.waitForSelector(".diting-digest-feed", { timeout: 5000 });
-  await page.waitForSelector(".diting-card", { timeout: 5000 });
   await page.waitForSelector('[data-route="tgDaily"].active', { timeout: 5000 });
+  await page.waitForSelector("[data-diting-comments]", { timeout: 5000 });
   const commentButton = page.locator("[data-diting-comments]").first();
-  if (!(await commentButton.count())) throw new Error("No TG comment thread found for lazy-load QA");
   const beforeCommentRequests = requestedPaths.filter((value) => value.includes("/dashboard-data/lazy/tg-replies/")).length;
   await commentButton.click();
   await page.waitForSelector(".diting-comment-item", { timeout: 5000 });
