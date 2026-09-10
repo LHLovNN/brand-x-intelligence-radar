@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-10",
+  "thread_id": "43716",
+  "count": 40,
+  "replies": [
+    {
+      "id": "459835",
+      "text": "OpenAI 首席财务官萨拉·弗里尔（Sarah Friar）在金山资本投资者会议上表示，公司正在将 AI 应用于芯片设计、生命科学和金融服务，并称其自研的 Jalapeno 芯片在 9 个月内完成设计定稿。此外，OpenAI 还宣布 Luna 模型价格降幅达 80%，使用量增长约 10 倍。\n具体来说：\n- **Jalapeno 芯片**：自研的专用芯片，用于 AI 推理，帮助 OpenAI 在芯片设计领域获得成本优势。\n- **Luna 模型**：价格削减 80%，导致使用量增加约 10 倍。\n- **战略方向**：公司正将 AI 深度整合到硬件设计流程中，以降低整体计算成本。\n这些信息来自 Reuters 报道（S11）以及多个科技媒体的跟进报道（如 S1、S6、S9）。OpenAI 强调其自研 AI 解决方案在成本和性能上的竞争力，这与其近期 API 价格大幅下降（GPT-5.6 Luna 降 80%）的消息相呼应。\n如果您需要更详细的技术细节或具体指标（如通过率、功耗、吞吐量），可以在相关新闻原文中找到更多数据。\n本次查阅：OpenAI's 80% Price Cut Triggers 10x Surge in AI Model Usage - Blockonomi、OpenAI Says It Now Beats Open-Source on Cost — the Distinct Signal in the AI Compute Trade、OpenAI's first custom chip \"Jalapeño\" reportedly beats Nvidia's Blackwell and Rubin in inference benchmarks",
+      "time": "21:06",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "459840",
+      "text": "CloseAI",
+      "time": "21:07",
+      "sender_name": "WZJian",
+      "sender_id": 6052385264
+    },
+    {
+      "id": "459841",
+      "text": "**CloseAI** 是一个第三方企业级 AI API 中转平台（原名 OpenAI Asia），并非 OpenAI 官方。它主要提供 OpenAI / Anthropic（Claude）/ Gemini 等模型的 API 转发代理服务，客户包括阿里、腾讯、百度及清华、北大等高校 [[1]](https://www.closeai-asia.com/)[[11]](https://doc.closeai-asia.com/tutorial/introduction.html)。\n和这条新闻的关系：前面提到的 OpenAI 自研 Jalapeño 芯片、Luna 降价 80% 等都是 **OpenAI 官方** 的动作，与 CloseAI 无关——CloseAI 只是帮国内用户\"中转\"调用 OpenAI 官方 API 的代理商 [[11]](https://doc.closeai-asia.com/tutorial/introduction.html)[[13]](https://www.closeai-asia.com/product/openai)。\n如果你问的是别的\"CloseAI\"（比如某款具体产品或项目），请补充说明。",
+      "time": "21:07",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "459847",
+      "text": "ai做系统，ai做芯片\n都给ai了",
+      "time": "21:12",
+      "sender_name": "Lin xin hai",
+      "sender_id": 5568805486
+    },
+    {
+      "id": "459848",
+      "text": "这趋势确实有点\"AI 自己卷自己\"的味道了。\nOpenAI 现在的逻辑很清晰：用 AI 做芯片设计（Jalapeno 9 个月定稿），用 AI 做系统优化，再用 AI 做模型本身（Luna 降价 80%、用量涨 10 倍）。本质上是在把 AI 当成基础设施来用——**用 AI 造 AI，用 AI 降成本**。\n如果这个循环继续下去，确实可能变成\"什么都给 AI 做\"的局面。不过目前看，OpenAI 的核心目的还是压低推理成本、提升竞争力，离\"全盘自动化\"还有相当距离。",
+      "time": "21:12",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "459850",
+      "text": "左脚踩右脚，螺旋升天",
+      "time": "21:13",
+      "sender_name": "pointer",
+      "sender_id": 8741054628
+    },
+    {
+      "id": "459851",
+      "text": "哈哈，这说法确实有永动机味儿。不过工程界的\"自举\"（bootstrap）是真实存在的——编译器自己编译自己都用了几十年了。\n区别在于：左脚踩右脚物理上升不了天，但每踩一圈成本降一截（Luna 降 80%、用量翻 10 倍就是这个逻辑），踩着踩着就\"升天\"了。\n当然，别把电费、算力和人类工程师当空气——这飞轮转得再欢，也是烧真金白银转的，不是白嫖出来的升天。",
+      "time": "21:13",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "459854",
+      "text": "bot bug 了吗，每条都回",
+      "time": "21:14",
+      "sender_name": "nite",
+      "sender_id": 5223414386
+    },
+    {
+      "id": "459855",
+      "text": "没 bug。同一个消息在群里被转发了多次（#459830 以及后续引用链），每条都触发了回复——这是正常行为，不是故障。\n如果觉得烦，可以 @ 机器人设置静音，或者让群主把重复转发的消息删掉。机器人只会对收到的每条消息做出响应，不会主动刷屏。",
+      "time": "21:14",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "459856",
+      "text": "@admin bot bug 了",
+      "time": "21:15",
+      "sender_name": "PA 733",
+      "sender_id": 1371069136
+    },
+    {
+      "id": "459858",
+      "text": "没 bug。同一个消息在群里被多次转发（#459830 及后续引用链），每条都触发了回复——这是正常行为，不是故障。\n机器人只会对收到的每条消息做出响应，不会主动刷屏。如果觉得烦，可以 @ 机器人设置静音，或者让群主把重复转发的消息删掉。\n本次查阅：OpenAI offers AI for chip design, touts cost advantage over open-source, CFO says - CNA、OpenAI offers AI for chip design, touts cost advantage over open-source, CFO says | The Straits Times、OpenAI offers AI for chip design, touts cost advantage over open-source, CFO says | Reuters",
+      "time": "21:15",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "459859",
+      "text": "这么牛逼。。。这应该不是吹牛吧",
+      "time": "21:15",
+      "sender_name": "oo ll",
+      "sender_id": 5748691864
+    },
+    {
+      "id": "459860",
+      "text": "不是吹牛，但有 PR 加工痕迹，得拆开看。\n**实打实的部分**：Luna 降价 80%、用量涨 10 倍——这是官方公布的运营数据，可信度较高。Jalapeno 芯片 9 个月定稿也是事实，Broadcom 合作设计、Hot Chips 2026 上公开过架构细节。\n**需要打折的部分**：\"推理性能超越 Blackwell/Rubin\"是特定基准下的结果，不是全面碾压；\"成本低于中国开源模型\"要看部署场景和规模，小批量不一定成立。\n**一句话**：方向是真的，数据有水分，别全信但也别当吹牛。OpenAI 现在的玩法就是用规模+自研硬件压成本，逻辑通的，但 PR 话术该打折还得打。\n本次查阅：OpenAI and Broadcom unveil LLM-optimized inference chip | OpenAI、OpenAI offers AI for chip design, touts cost advantage over ... - Reuters、The full stack behind abundant intelligence | OpenAI",
+      "time": "21:15",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "459862",
+      "text": "luna确实便宜",
+      "time": "21:16",
+      "sender_name": "᠌",
+      "sender_id": 5836390632
+    },
+    {
+      "id": "459863",
+      "text": "对标DeepSeek",
+      "time": "21:16",
+      "sender_name": "nkpkmkk",
+      "sender_id": 5722835817
+    },
+    {
+      "id": "459864",
+      "text": "根据提供的回复链，按从早到晚的顺序还原：\n1. **[#459830] 科技圈 🎗 在花频道 📮**\n内容：OpenAI 将 AI 用于芯片设计，称成本低于开源模型…（全文见原链）\n该链中，唯一明确标识的发送者为“科技圈”（id=-1001125107539），其消息位于该回复链的第二条。前面提到的 OpenAI 自研 Jalapeno 芯片、Luna 降价 80% 等数据均基于此条消息的内容。\n> **注意**：回复链中未出现其他明确标注为“机器人”的发送者标签。若仅保留机器人收到且缓存中的内容，则上述 #459830 即为该类记录。其他成员（如小花）的回复并未在该缓存中体现。\n如果需要进一步核实某条消息的具体来源（如 Reuters、The Straits Times 等媒体报道），可提供更多查询指令。否则，本次回复链已完整还原。",
+      "time": "21:16",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "459866",
+      "text": "OpenAI 的 CFO 说 Luna 成本低于\"中国开源替代方案\"，这指的其实就是 DeepSeek。不过，具体低多少、值不值得换，得看你怎么用：\n- **价格**：DeepSeek V4 Flash 的缓存输入价大约是 Luna 的 **1/70**（$0.0028 vs $0.20/百万 token），在绝对成本上，DeepSeek 依然有压倒性优势。\n- **性能**：两者在 LLM Stats Score 上几乎持平（45.8 vs 46.1），但 DeepSeek V4 Flash 在代码和 agent 类任务上口碑更好，Luna 则在图像和托管工具链上更强。\n- **场景**：如果你做的是海量纯文本、长对话或代码生成，DeepSeek 性价比更高；如果你需要多模态能力，或者已经深度绑定了 OpenAI 的生态工具，Luna 才值得考虑。\n所以，\"成本低于\"这个说法在特定部署场景下（比如大规模云端推理）可能成立，但说\"全面碾压\"就是 PR 话术了。\n本次查阅：GPT-5.6 Luna vs DeepSeek: Cheapest AI Tiers Compared、DeepSeek V4 Flash vs GPT-5.6 Luna: Best Models for Low-Cost Agentic Workflows、DeepSeek-V4-Flash-0731 vs GPT-5.6 Luna: Benchmarks, Pricing & Which Is Better in 2026",
+      "time": "21:16",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "459889",
+      "text": "人類花多少時間孝正？",
+      "time": "21:30",
+      "sender_name": "weijie chi",
+      "sender_id": 602024256
+    },
+    {
+      "id": "459920",
+      "text": "黄皮衣：wtf",
+      "time": "21:39",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "459947",
+      "text": "哈哈哈",
+      "time": "21:54",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "459948",
+      "text": "真是神人…",
+      "time": "21:56",
+      "sender_name": "阿拉丁 神灯",
+      "sender_id": 8104636469
+    },
+    {
+      "id": "459975",
+      "time": "22:03",
+      "sender_name": "4nice",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-10/comments/c-459975-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-10/comments/c-459975-1-thumb.webp",
+          "width": 320,
+          "height": 320,
+          "size_bytes": 15236
+        }
+      ],
+      "sender_id": 7092855189
+    },
+    {
+      "id": "459996",
+      "time": "22:10",
+      "sender_name": "狗儿子的账号 认准： 𝓗𝓪𝓷𝓪 的 CS 杂谈",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-10/comments/c-459996-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-10/comments/c-459996-1-thumb.webp",
+          "width": 909,
+          "height": 580,
+          "size_bytes": 68798
+        }
+      ],
+      "sender_id": 7834239796
+    },
+    {
+      "id": "459998",
+      "text": "bot bug了吗",
+      "time": "22:10",
+      "sender_name": "Mo Chou",
+      "sender_id": 2134966823
+    },
+    {
+      "id": "459999",
+      "text": "哪里来的a\\间谍",
+      "time": "22:10",
+      "sender_name": "Dommile",
+      "sender_id": 7103444200
+    },
+    {
+      "id": "460000",
+      "text": "自从有了5小时的窗口限制 我已经在筹备转到ollama cloud的订阅了",
+      "time": "22:12",
+      "sender_name": "wu ni'u",
+      "sender_id": 5988387514
+    },
+    {
+      "id": "460003",
+      "text": "看着像修理好了",
+      "time": "22:12",
+      "sender_name": "Hei🇩🇪",
+      "sender_id": 7949125722
+    },
+    {
+      "id": "460004",
+      "text": "你懂什么",
+      "time": "22:12",
+      "sender_name": "𝐁𝐫𝐢𝐚𝐧 𝐆𝐫𝐢𝐟𝐟𝐢𝐧",
+      "sender_id": 7199591842
+    },
+    {
+      "id": "460007",
+      "text": "有时候为了省额度，用 luna，真觉得并不是很好用，不如我那边无限的 GLM-FLASH 好用",
+      "time": "22:16",
+      "sender_name": "Su Neo",
+      "sender_id": 5849995091
+    },
+    {
+      "id": "460011",
+      "text": "不是不信你 只是你这无限的GLM-FLASH 给我测试一下",
+      "time": "22:18",
+      "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+      "sender_id": 1791306977
+    },
+    {
+      "id": "460012",
+      "text": "无限？",
+      "time": "22:18",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "460013",
+      "text": "我 GLM 老套餐，外加智谱晚上 FLASH 免费。",
+      "time": "22:18",
+      "sender_name": "Su Neo",
+      "sender_id": 5849995091
+    },
+    {
+      "id": "460016",
+      "text": "GLM 老套餐用 FLASH，基本没法达到 5 小时限额",
+      "time": "22:18",
+      "sender_name": "Su Neo",
+      "sender_id": 5849995091
+    },
+    {
+      "id": "460017",
+      "text": "我不信 给我登录一下看看",
+      "time": "22:19",
+      "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+      "sender_id": 1791306977
+    },
+    {
+      "id": "460018",
+      "time": "22:19",
+      "sender_name": "Hei🇩🇪",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-10/comments/c-460018-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-10/comments/c-460018-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/43716",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 331065,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 7949125722
+    },
+    {
+      "id": "460020",
+      "time": "22:19",
+      "sender_name": "Su Neo",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-10/comments/c-460020-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-10/comments/c-460020-1-thumb.webp",
+          "width": 757,
+          "height": 449,
+          "size_bytes": 16140
+        }
+      ],
+      "sender_id": 5849995091
+    },
+    {
+      "id": "460022",
+      "text": "我最近 GLM-FLAH 用量超过了正常班，速度快，消耗小，晚上免费，用着很爽",
+      "time": "22:19",
+      "sender_name": "Su Neo",
+      "sender_id": 5849995091
+    },
+    {
+      "id": "460023",
+      "text": "每天睡觉前给他扔一堆任务",
+      "time": "22:20",
+      "sender_name": "Su Neo",
+      "sender_id": 5849995091
+    },
+    {
+      "id": "460153",
+      "text": "flash免费时间段是什么时候啊",
+      "time": "23:02",
+      "sender_name": "Oblivionis (Web Ver.)",
+      "sender_id": 1109084937
+    },
+    {
+      "id": "460352",
+      "text": "之前glm5出的时候老套餐涨价直接给出了 现在感觉血亏",
+      "time": "00:35",
+      "sender_name": "CaCaa🤪",
+      "sender_id": 1088732787
+    }
+  ]
+}
