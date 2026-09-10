@@ -17,6 +17,11 @@ from src.pipeline.platform_trends import (
     effective_platform_intent_terms,
     platform_query_candidate_limit,
     platform_query_request_allowance,
+    platform_acceptance_path,
+    platform_rejection_detail,
+    platform_review_evidence_candidate,
+    platform_semantic_review_input,
+    platform_specific_hard_risk_reason,
     public_platform_collection_status,
     prune_platform_rejection_audits,
     score_platform_post,
@@ -337,10 +342,10 @@ def main() -> None:
         "low_value": True,
         "confidence": 0.82,
     }
-    assert not semantic_decision_accepts(
+    assert semantic_decision_accepts(
         rejected_observation_decision,
         {**platform_observation, **observation_rule_decision["item"]},
-    ), "low_value remains an independent veto even for a specific platform observation"
+    ), "a concrete platform observation should survive a generic low-value model verdict"
     assert semantic_decision_accepts(
         {
             "central_subject": False,
@@ -365,6 +370,112 @@ def main() -> None:
         {**rejected_observation_decision, "confidence": 0.99},
         paid_growth_comparison,
     ), "a format comparison must never bypass a high-confidence low-value veto"
+
+    platform_update = {
+        "clean_text": (
+            "据业内人士爆料：小红书预计在年底完成沙盒隔离运作，海外身份账号与内地账号不互通，"
+            "大陆账号将无法与海外账号点赞、评论或私信。"
+        ),
+        "links": [],
+        "metrics": {"likes": 36, "replies": 26, "views": 4355},
+        "author_followers": 0,
+    }
+    update_decision = score_platform_post(platform_update, platform)
+    assert update_decision["accepted"]
+    assert update_decision["item"]["acceptance_path"] == "platform_update"
+    assert update_decision["item"]["source_status"] == "rumor"
+    assert semantic_decision_accepts(
+        {
+            "platform_relation": "central",
+            "content_type": "platform_update",
+            "specific_signal": True,
+            "hard_risk": False,
+            "central_subject": True,
+            "actionable_for_platform": False,
+            "relevant_domain": True,
+            "substantive": False,
+            "low_value": True,
+            "confidence": 0.92,
+        },
+        {**platform_update, **update_decision["item"]},
+    ), "typed platform updates should not require a tutorial structure"
+
+    tool_resource = {
+        "clean_text": "AI 写公众号、小红书、头条号文章的真实写作经验分享和原创封面 AI 提示词 Skills。",
+        "links": [],
+        "media": [{"type": "video", "url": "https://example.com/demo.mp4"}],
+        "metrics": {"likes": 10, "replies": 1, "views": 1452},
+        "author_followers": 0,
+    }
+    tool_decision = score_platform_post(tool_resource, platform)
+    assert tool_decision["accepted"]
+    assert tool_decision["item"]["acceptance_path"] == "tool_resource"
+
+    monetization_lead = {
+        "clean_text": "2026 年的机会：小红书数字产品可以卖手账、模板、素材包；小红书单品带货只打一个爆品。",
+        "links": [],
+        "metrics": {"likes": 185, "replies": 4, "views": 13509},
+        "author_followers": 0,
+    }
+    monetization_decision = score_platform_post(monetization_lead, platform)
+    assert monetization_decision["accepted"]
+    assert monetization_decision["item"]["acceptance_path"] == "monetization_opportunity"
+
+    case_lead = {
+        "clean_text": (
+            "最近 X 来了很多在微信公众号、抖音、小红书拿到过结果的高手，推荐 @ExampleCreator，"
+            "3 年运营 300 个账号日更，把内容生产做成了可复制的内容工厂。"
+        ),
+        "links": [],
+        "media": [{"type": "photo", "url": "https://example.com/profile.jpg"}],
+        "metrics": {"likes": 19, "replies": 11, "views": 5563},
+        "author_followers": 0,
+    }
+    case_lead_decision = score_platform_post(case_lead, platform)
+    assert case_lead_decision["accepted"]
+    assert case_lead_decision["item"]["acceptance_path"] == "case_lead"
+
+    for candidate, path_decision, expected_path in (
+        (platform_observation, observation_rule_decision, "platform_observation"),
+        (platform_update, update_decision, "platform_update"),
+        (tool_resource, tool_decision, "tool_resource"),
+        (monetization_lead, monetization_decision, "monetization_opportunity"),
+        (case_lead, case_lead_decision, "case_lead"),
+    ):
+        reviewed_candidate = {**candidate, **path_decision["item"]}
+        assert platform_acceptance_path(reviewed_candidate) == expected_path
+        assert semantic_decision_accepts(
+            {
+                "central_subject": False,
+                "actionable_for_platform": False,
+                "relevant_domain": False,
+                "substantive": False,
+                "low_value": True,
+                "hard_risk": False,
+                "confidence": 0.99,
+            },
+            reviewed_candidate,
+        ), f"{expected_path} should survive a generic false-negative verdict"
+
+    assert platform_review_evidence_candidate({**platform_observation, **observation_rule_decision["item"]})
+    evidence_input = platform_semantic_review_input(
+        {
+            "post_id": "observation",
+            **platform_observation,
+            **observation_rule_decision["item"],
+            "media": [{"type": "photo", "url": "https://example.com/evidence.jpg"}],
+            "conversation_context": {
+                "summary_zh": "评论区讨论了手写形式带来的真实感。",
+                "posts": [
+                    {"post_id": "observation", "text": platform_observation["clean_text"]},
+                    {"post_id": "reply-1", "text": "手写笔记更像真实经验，收藏意愿更高。"},
+                ],
+            },
+        }
+    )
+    assert evidence_input["acceptance_path_hint"] == "platform_observation"
+    assert evidence_input["evidence"]["media_count"] == 1
+    assert evidence_input["evidence"]["comment_snippets"] == ["手写笔记更像真实经验，收藏意愿更高。"]
 
     generic_tutorial_namedrop = {
         "clean_text": (
@@ -410,6 +521,30 @@ def main() -> None:
         {**enumerated_platform_namedrop, **enumerated_rule_decision["item"]},
     ), "an enumerated list of platforms must not be treated as Xiaohongshu-specific application evidence"
 
+    bookmark_collector = {
+        "clean_text": (
+            "很多人存了微信、抖音、小红书收藏，最后全成了垃圾。这个 Webhook 教程可以把任何链接"
+            "自动读完并存进通用知识库。"
+        ),
+        "links": [],
+        "metrics": {"likes": 20, "replies": 5, "views": 3000},
+    }
+    assert platform_acceptance_path(bookmark_collector) == "", (
+        "a tool that merely consumes Xiaohongshu bookmarks is not a Xiaohongshu operations resource"
+    )
+
+    generic_brand_campaign = {
+        "clean_text": (
+            "品牌把一次翻译错误做成限定产品并售罄，随后借助小红书、抖音等渠道传播，"
+            "把营销翻车变成一次热点。"
+        ),
+        "links": [],
+        "metrics": {"likes": 127, "replies": 24, "views": 53521},
+    }
+    assert platform_acceptance_path(generic_brand_campaign) == "", (
+        "a generic brand campaign must not qualify when Xiaohongshu is only a distribution channel"
+    )
+
     grey_growth_link = {
         "clean_text": "小红书网盘拉新项目，两种变现方式结合，当日收益 1034，详细拆解见链接。",
         "links": ["https://example.com/promo"],
@@ -417,6 +552,7 @@ def main() -> None:
         "author_followers": 0,
         "quality_score": 99,
     }
+    assert platform_specific_hard_risk_reason(grey_growth_link["clean_text"]) == "cloud_drive_referral"
     assert not semantic_decision_accepts(
         {
             "central_subject": True,
@@ -549,6 +685,25 @@ def main() -> None:
 
         assert prune_platform_rejection_audits(audit_dir, "2026-09-08") == []
 
+        pending_audit = write_platform_rejection_audit(
+            audit_dir,
+            "2026-09-09",
+            "test window",
+            {
+                "accepted": {"post_id": "accepted", "created_at": "2026-09-09T01:00:00Z"},
+                "article": {"post_id": "article", "created_at": "2026-09-09T02:00:00Z"},
+            },
+            [{"post_id": "accepted"}],
+            {
+                "article": platform_rejection_detail(
+                    "pending_content",
+                    "article_content_unavailable",
+                )
+            },
+        )
+        assert pending_audit["summary"]["pending_count"] == 1
+        assert pending_audit["summary"]["decided_rejected_count"] == 0
+
     status = collection_status(
         [item],
         candidates_seen=80,
@@ -580,6 +735,7 @@ def main() -> None:
 
     split_platform = {
         "aliases": ["小红书", "rednote"],
+        "query_aliases": ["小红书", "rednote", "#xhs"],
         "query_groups": [
             {"intent_terms": ["养号", "起号", "涨粉"]},
             {"intent_terms": ["变现", "商单", "带货"]},
@@ -588,6 +744,7 @@ def main() -> None:
     }
     queries = build_platform_queries(split_platform)
     assert len(queries) == 2, "platform trend queries should split into configured topic groups"
+    assert all("#xhs" in query for query in queries)
     assert all(len(query) < 180 for query in queries), "split platform trend queries should stay short enough for stable Top search"
     assert platform_query_candidate_limit(400, len(queries)) == 200
     assert platform_query_candidate_limit(400, 5) == 80
@@ -596,6 +753,8 @@ def main() -> None:
     live_config = json.loads((ROOT / "config" / "platform_trends.json").read_text(encoding="utf-8"))
     live_platform = live_config["platforms"]["xiaohongshu"]
     assert len(live_platform["query_groups"]) == 6
+    assert "xhs" not in live_platform["query_aliases"]
+    assert "#xhs" in live_platform["query_aliases"]
     assert live_platform["max_candidates_per_query"] == 100
     assert live_platform["max_candidates_per_day"] == 600
     assert live_platform["max_source_requests_per_run"] == 50

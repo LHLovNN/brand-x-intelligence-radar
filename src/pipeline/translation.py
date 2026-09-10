@@ -28,45 +28,65 @@ PLATFORM_REVIEW_DOMAINS = (
     "案例复盘",
     "逆向与改机",
 )
+PLATFORM_REVIEW_CONTENT_TYPES = (
+    "platform_update",
+    "method_case",
+    "tool_resource",
+    "monetization_opportunity",
+    "case_lead",
+    "platform_observation",
+    "off_topic",
+)
+PLATFORM_REVIEW_RELATIONS = ("central", "directly_applicable", "incidental", "none")
+PLATFORM_REVIEW_SOURCE_STATUSES = ("verified", "claimed", "rumor", "unknown")
 
 
 def build_platform_review_prompt() -> str:
     """Build the deterministic policy prompt used by the platform semantic reviewer."""
     allowed_domains = json.dumps(PLATFORM_REVIEW_DOMAINS, ensure_ascii=False)
+    allowed_content_types = json.dumps(PLATFORM_REVIEW_CONTENT_TYPES, ensure_ascii=False)
     return (
-        "你是小红书运营情报的严格内容审核员。判断每条公开帖子是否值得进入方法论情报库。"
-        "不要把‘必须是完整教程’当作收录条件；能直接复用的工具、工作流、模板、提示词，"
-        "以及包含具体运营动作和可核验结果的真实案例，都属于实质信息。\n"
+        "你是小红书运营情报的严格内容审核员。情报库同时收录平台动向、方法案例、工具资源、"
+        "变现机会、案例线索和平台现象，不要只用‘是否为完整教程’这一把尺子判断。"
+        "输入可能附带 acceptance_path_hint、互动数据、媒体数量和公开评论上下文；这些都属于审核证据。\n"
         "逐条独立判断以下字段：\n"
-        "1. central_subject：小红书/RedNote/Xiaohongshu 是否是正文主要讨论对象。"
-        "多平台内容可以为 false，不要为了收录而虚报 true。\n"
-        "2. actionable_for_platform：内容是否明确适用于小红书，并提供可直接复用或可据此决策的信息。"
-        "以下任一情形可为 true：\n"
+        "1. platform_relation：central 表示小红书是主要对象；directly_applicable 表示内容可直接用于"
+        "小红书创作、运营、分析或发布；incidental 表示只是渠道罗列或顺带提及；none 表示无关。\n"
+        "2. content_type：按内容主要价值选择一个类型。platform_update 是平台产品、账号体系、规则、"
+        "算法、商业化或生态变化；method_case 是方法或完整案例；tool_resource 是 Skill、GitHub 项目、"
+        "模板或工具；monetization_opportunity 是明确的变现模式；case_lead 是可继续追踪的人物、账号、"
+        "项目或案例线索；platform_observation 是有具体对象、差异或讨论证据的平台现象；off_topic 是无关内容。\n"
+        "3. specific_signal：正文或附加证据是否包含足以支持该类型的具体对象、变化、能力、模式、数据或对比。\n"
+        "4. hard_risk：是否属于盗版或绝版资料售卖、网盘拉新、AI 代充、付费打粉或评论、"
+        "规避平台规则的引流、低俗色情或其他黑灰产。hard_risk=true 必须拒绝。\n"
+        "5. source_status：verified 表示有可核验的一手来源或数据；claimed 表示作者明确声称但尚未独立核实；"
+        "rumor 表示爆料、传闻、预计或未经证实的平台消息；unknown 表示无法判断。传闻本身不是拒绝理由。\n"
+        "兼容字段也必须返回：central_subject、actionable_for_platform、relevant_domain、substantive、low_value。\n"
+        "以下任一情形可构成有效价值：\n"
         "- 工具或完整工作流明确支持小红书，且正文说明了实际能力、操作环节、平台适配、限制或风控；\n"
         "- 提示词、脚本、模板、选题、分镜或内容生产方法明确用于小红书，或明确说明该内容形态在小红书的表现；\n"
         "- 真实小红书运营案例同时给出具体动作和结果，例如发布频率、内容形式、账号操作，"
         "以及涨粉、互动、流量、获客、商单或变现结果。案例不必写成系统教程；\n"
-        "- 针对小红书客户端、接口、签名、设备指纹、设备环境或账号风控的技术研究。\n"
+        "- 针对小红书客户端、接口、签名、设备指纹、设备环境或账号风控的技术研究；\n"
+        "- 明确描述小红书未来产品、账号体系、规则、流量机制、商业化或生态变化。即使是爆料或预计，"
+        "也应判为 platform_update、specific_signal=true，并用 source_status=rumor 标记；\n"
+        "- 明确列出可在小红书执行的变现模式，例如数字产品、模板素材或单品带货。"
+        "它可以只是机会线索，不要求给出完整 SOP；\n"
+        "- 明确指出某个人、账号、项目或团队在小红书拿到结果，可作为 case_lead 收录，"
+        "但不要把其他平台的数据误写成小红书的已验证结果；\n"
+        "- 对同一个小红书账号或同类内容给出具体形式对比、流量差异或可追溯现象。"
+        "即使正文以提问结尾，只要媒体、评论或互动数据增强了证据，也可作为 platform_observation 收录。\n"
         "多平台方法不要求提供小红书独有的机制或技术适配。只要正文明确把小红书列为实际使用或推荐场景，"
         "并给出能在小红书执行的具体方法、动作链、模板、工具链或案例结果，"
         "即使这些方法也适用于公众号、抖音或 X，actionable_for_platform 仍应为 true。\n"
-        "如果只是把小红书和其他平台并列罗列、只说‘也要做小红书’、通用内容末尾随手加一句"
-        "‘可发小红书’，或工具广告只宣称‘支持小红书等平台’却没有上述实质细节，"
-        "actionable_for_platform 必须为 false。\n"
-        "3. relevant_domain：内容是否属于养号、起号、内容运营、选题与内容生产、流量、变现、风控、"
-        "平台规则、账号矩阵、私域引流、案例复盘、逆向工程或改机/设备环境对抗。\n"
-        "4. substantive：是否含有方法、步骤、工具能力、工作流、模板、提示词、案例、数据、"
-        "具体经验或规则分析。具体动作加结果数据本身就可以为 true，不要求完整教程。\n"
-        "5. low_value：是否属于关键词擦边、纯平台罗列、无关故事或新闻、短感叹、没有实质信息的广告导流、"
-        "低俗色情、黑灰产，或其他没有可复用信息的内容。帖子含产品名、项目链接或口语化表达，"
-        "不能单独作为 low_value=true 的理由；要看正文是否提供了可复用信息。盗版或绝版资料售卖、"
-        "网盘拉新、AI 代充、付费打粉或评论、规避平台规则的引流等属于黑灰产或高风险玩法，"
-        "即使步骤具体也必须判 low_value=true。\n"
-        "收录有两条合格路径：A. central_subject=true；B. actionable_for_platform=true。"
-        "两条路径都还必须满足 relevant_domain=true、substantive=true、low_value=false。"
-        "low_value 是独立否决项：一旦为 true，即使 central_subject 或 actionable_for_platform 为 true 也不得收录。"
-        "若小红书不是全文唯一核心，但内容明确适用于小红书且有可复用工具/工作流/模板，"
-        "或有小红书具体动作加结果的案例，应走路径 B，不得仅因是多平台内容而拒绝。\n"
+        "如果只是把小红书和其他平台并列为分发渠道、收藏来源或顺带提及，platform_relation 必须为 incidental。"
+        "通用品牌营销案例不能因为最后写了‘借助小红书、抖音传播’就进入小红书情报库；"
+        "用于收纳小红书收藏的通用工具，也不等于用于小红书创作或运营。\n"
+        "收录条件：hard_risk=false，platform_relation 为 central 或 directly_applicable，"
+        "content_type 不是 off_topic，specific_signal=true，且 relevant_domain=true。"
+        "method_case 通常还应 substantive=true；platform_update、monetization_opportunity、case_lead、"
+        "tool_resource 和 platform_observation 可以是有价值线索，不要求完整教程。"
+        "low_value 只用于描述最终确实缺乏价值的内容，不能脱离 content_type 和 specific_signal 单独否决。\n"
         "正例校准：\n"
         "- 一个多平台运营 Agent 详细说明选题、生产、发布、复盘工作流，明确支持小红书并说明自动化风控，"
         "应判 actionable_for_platform=true、substantive=true、low_value=false。\n"
@@ -83,6 +103,12 @@ def build_platform_review_prompt() -> str:
         "- 对同一个小红书账号或同类内容给出明确的内容形式对比，例如手写笔记持续成为爆款、"
         "改成电脑排版或露脸后流量明显下降，属于可验证的平台现象假设；即使以提问结尾，"
         "也应判 central_subject=true、relevant_domain=true、substantive=true、low_value=false。\n"
+        "- ‘小红书预计将隔离海外身份账号与内地账号’属于平台未来动向，即使来源是业内爆料，"
+        "也应收录并标记 source_status=rumor。\n"
+        "- ‘小红书数字产品：手账、模板、素材包；小红书单品带货’已经给出具体变现模式，"
+        "应判 monetization_opportunity，不应因缺少 SOP 拒绝。\n"
+        "- 推荐一位明确声称曾在小红书拿到结果的操盘者或账号，属于 case_lead；"
+        "可以收录为追踪线索，但应把未经核实的结果标为 claimed。\n"
         "反例校准：\n"
         "- 只写‘支持小红书、抖音、视频号等平台’，没有能力说明、模板、适配细节或案例，拒绝。\n"
         "- 只说‘小红书流量很好，大家快去做’，没有动作、方法或结果细节，拒绝。\n"
@@ -91,10 +117,12 @@ def build_platform_review_prompt() -> str:
         "逆向与改机仅指围绕小红书客户端、接口、签名、设备指纹、设备环境、账号风控的技术研究，"
         "不包括普通手机维修或与小红书无关的逆向。\n"
         "只返回 JSON 数组。每项格式为："
-        '{"id":"...","central_subject":true,"actionable_for_platform":true,'
-        '"relevant_domain":true,"substantive":true,"low_value":false,'
-        '"domain":"账号冷启动","confidence":0.95,"reason":"一句话说明判断依据"}。'
-        f"domain 只能是：{allowed_domains}。"
+        '{"id":"...","platform_relation":"central","content_type":"platform_update",'
+        '"specific_signal":true,"hard_risk":false,"source_status":"rumor",'
+        '"central_subject":true,"actionable_for_platform":false,"relevant_domain":true,'
+        '"substantive":true,"low_value":false,"domain":"平台规则",'
+        '"confidence":0.95,"reason":"一句话说明判断依据"}。'
+        f"content_type 只能是：{allowed_content_types}；domain 只能是：{allowed_domains}。"
     )
 
 
@@ -116,7 +144,7 @@ class TranslationService:
     def translate_batch(self, items: list[dict[str, str]]) -> dict[str, str]:
         return {}
 
-    def classify_platform_batch(self, items: list[dict[str, str]]) -> dict[str, dict[str, Any]]:
+    def classify_platform_batch(self, items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
         return {}
 
 
@@ -177,7 +205,7 @@ class JoyBuilderTranslationService(TranslationService):
                 self._record_error(error)
         return self._merge_segmented_translations(items, expanded_result, segments_by_item)
 
-    def classify_platform_batch(self, items: list[dict[str, str]]) -> dict[str, dict[str, Any]]:
+    def classify_platform_batch(self, items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
         self.classification_errors = []
         self.classification_last_error = ""
         decisions: dict[str, dict[str, Any]] = {}
@@ -199,7 +227,7 @@ class JoyBuilderTranslationService(TranslationService):
         self.classification_last_error = "; ".join(self.classification_errors)
         return decisions
 
-    def _classify_platform_chunk(self, items: list[dict[str, str]]) -> dict[str, dict[str, Any]]:
+    def _classify_platform_chunk(self, items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
         system_prompt = build_platform_review_prompt()
         input_payload = json.dumps(
             [
@@ -207,6 +235,8 @@ class JoyBuilderTranslationService(TranslationService):
                     "id": item["id"],
                     "language": item.get("language", "und"),
                     "text": item.get("text", ""),
+                    "acceptance_path_hint": item.get("acceptance_path_hint", ""),
+                    "evidence": item.get("evidence") or {},
                 }
                 for item in items
             ],
@@ -250,6 +280,9 @@ class JoyBuilderTranslationService(TranslationService):
             raise TranslationRequestError(f"JoyBuilder platform review returned non-JSON output: {text[:300]}") from error
         decisions: dict[str, dict[str, Any]] = {}
         allowed = set(PLATFORM_REVIEW_DOMAINS)
+        allowed_content_types = set(PLATFORM_REVIEW_CONTENT_TYPES)
+        allowed_relations = set(PLATFORM_REVIEW_RELATIONS)
+        allowed_source_statuses = set(PLATFORM_REVIEW_SOURCE_STATUSES)
         for record in records if isinstance(records, list) else []:
             if not isinstance(record, dict):
                 continue
@@ -262,6 +295,23 @@ class JoyBuilderTranslationService(TranslationService):
             except (TypeError, ValueError):
                 confidence = 0.0
             decisions[item_id] = {
+                "platform_relation": (
+                    str(record.get("platform_relation") or "")
+                    if str(record.get("platform_relation") or "") in allowed_relations
+                    else ""
+                ),
+                "content_type": (
+                    str(record.get("content_type") or "")
+                    if str(record.get("content_type") or "") in allowed_content_types
+                    else ""
+                ),
+                "specific_signal": record.get("specific_signal") is True,
+                "hard_risk": record.get("hard_risk") is True,
+                "source_status": (
+                    str(record.get("source_status") or "")
+                    if str(record.get("source_status") or "") in allowed_source_statuses
+                    else "unknown"
+                ),
                 "central_subject": record.get("central_subject") is True,
                 "actionable_for_platform": record.get("actionable_for_platform") is True,
                 "relevant_domain": record.get("relevant_domain") is True,
@@ -312,12 +362,13 @@ class JoyBuilderTranslationService(TranslationService):
                 self._record_error(TranslationRequestError(f"Long translation missing segments for {item_id}: {', '.join(missing[:3])}"))
         return result
 
-    def _split_items(self, items: list[dict[str, str]]) -> list[list[dict[str, str]]]:
-        chunks: list[list[dict[str, str]]] = []
-        chunk: list[dict[str, str]] = []
+    def _split_items(self, items: list[dict[str, Any]]) -> list[list[dict[str, Any]]]:
+        chunks: list[list[dict[str, Any]]] = []
+        chunk: list[dict[str, Any]] = []
         char_count = 0
         for item in items:
-            text_length = len(item.get("text", ""))
+            evidence_length = len(json.dumps(item.get("evidence") or {}, ensure_ascii=False))
+            text_length = len(item.get("text", "")) + evidence_length + len(item.get("acceptance_path_hint", ""))
             if chunk and (len(chunk) >= self.batch_size or char_count + text_length > self.max_chars_per_batch):
                 chunks.append(chunk)
                 chunk = []

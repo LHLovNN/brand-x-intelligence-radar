@@ -55,6 +55,25 @@ PLATFORM_REUSABLE_CONTENT_TERMS = [
     "workflow",
 ]
 
+PLATFORM_ACCEPTANCE_PATH_TOPICS = {
+    "platform_update": "平台规则",
+    "tool_resource": "爆文与内容结构",
+    "monetization_opportunity": "变现",
+    "case_lead": "案例复盘",
+    "platform_observation": "爆文与内容结构",
+}
+PLATFORM_TYPED_CONTENT_TYPES = frozenset(
+    {
+        "platform_update",
+        "method_case",
+        "tool_resource",
+        "monetization_opportunity",
+        "case_lead",
+        "platform_observation",
+    }
+)
+PLATFORM_REVIEW_RELATIONS = frozenset({"central", "directly_applicable"})
+
 PLATFORM_REJECTION_REASON_LABELS = {
     "missing_required_terms": "未同时命中小红书与目标主题",
     "article_content_unavailable": "数据源未返回长文正文，暂待解析",
@@ -648,7 +667,7 @@ def collect_platform_trends(
             else:
                 reason_code = str(decision.get("reason_code") or "final_filter")
                 rejection_details[post_id] = platform_rejection_detail(
-                    "rule_filter",
+                    "pending_content" if reason_code == "article_content_unavailable" else "rule_filter",
                     reason_code,
                     details=decision.get("details") or {},
                 )
@@ -689,13 +708,38 @@ def collect_platform_trends(
         append_unique_warning(warnings, "Platform trend source returned no candidates for all configured queries.")
 
     selected.sort(key=lambda item: str(item.get("created_at") or ""), reverse=True)
+    evidence_targets = [item for item in selected if platform_review_evidence_candidate(item)]
+    review_evidence_status = attach_platform_context(
+        evidence_targets,
+        x_source,
+        translation_service,
+        start,
+        end,
+    )
     selected, semantic_review = apply_platform_semantic_review(
         selected,
         translation_service,
         rejection_details=rejection_details,
     )
     translation_status = apply_translations(selected, translation_service)
-    context_status = attach_platform_context(selected, x_source, translation_service, start, end)
+    remaining_context_items = [
+        item
+        for item in selected
+        if not isinstance(item.get("conversation_context"), dict)
+        or not item["conversation_context"].get("posts")
+    ]
+    final_context_status = attach_platform_context(
+        remaining_context_items,
+        x_source,
+        translation_service,
+        start,
+        end,
+    )
+    context_status = merge_platform_context_statuses(
+        review_evidence_status,
+        final_context_status,
+        selected,
+    )
     before_context_dedupe = {str(entry.get("post_id") or "") for entry in selected}
     selected, context_deduped = dedupe_contextual_items_keep_earliest(selected)
     if context_deduped:
@@ -724,6 +768,7 @@ def collect_platform_trends(
             audit_status = {
                 "enabled": True,
                 "rejected_count": audit_payload["summary"]["rejected_count"],
+                "pending_count": audit_payload["summary"].get("pending_count", 0),
                 "retention_days": PLATFORM_REJECTION_AUDIT_RETENTION_DAYS,
             }
         except Exception as error:
@@ -801,6 +846,7 @@ def collect_platform_trends(
         "translation": translation_status,
         "conversation_context": context_status,
         "semantic_review": semantic_review,
+        "review_evidence": review_evidence_status,
         "rejection_audit": audit_status,
     }
 
@@ -817,12 +863,12 @@ def build_platform_queries(platform: dict[str, Any]) -> list[str]:
     if platform.get("query_groups"):
         queries = []
         for group in platform["query_groups"]:
-            aliases = group.get("aliases") or platform.get("aliases") or []
+            aliases = group.get("query_aliases") or platform.get("query_aliases") or group.get("aliases") or platform.get("aliases") or []
             intents = group.get("intent_terms") or platform.get("intent_terms") or []
             excludes = group.get("exclude_terms") or platform.get("exclude_terms") or []
             queries.append(f"({_or_clause(aliases)}) ({_or_clause(intents)}) -filter:retweets {_negative_clause(excludes)}".strip())
         return [query for query in queries if query]
-    aliases = platform.get("aliases") or []
+    aliases = platform.get("query_aliases") or platform.get("aliases") or []
     intents = platform.get("intent_terms") or []
     excludes = platform.get("exclude_terms") or []
     return [f"({_or_clause(aliases)}) ({_or_clause(intents)}) -filter:retweets {_negative_clause(excludes)}".strip()]
@@ -978,37 +1024,43 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
     reusable_content_hits = matched_terms(lower, PLATFORM_REUSABLE_CONTENT_TERMS)
     case_evidence = platform_case_evidence_signal(lower, aliases)
     risk_evidence = platform_risk_evidence_signal(lower, aliases)
+    acceptance_path = platform_acceptance_path(item, lower, aliases)
+    hard_noise_hits = matched_terms(lower, PLATFORM_HARD_NOISE_TERMS)
+    policy_reason = platform_noise_reason(text) or platform_specific_hard_risk_reason(text)
+    if hard_noise_hits or policy_reason:
+        return rejected_platform_decision(
+            "content_policy",
+            {"policy_reason": policy_reason or "hard_noise_term", "matched_terms": hard_noise_hits},
+        )
     if not intent_hits:
         intent_hits = reusable_content_hits
     if not intent_hits and case_evidence:
         intent_hits = ["platform_case_evidence"]
     if not intent_hits and risk_evidence:
         intent_hits = ["platform_risk_evidence"]
+    if not intent_hits and acceptance_path:
+        intent_hits = [acceptance_path]
     if not alias_hits or not intent_hits:
         return rejected_platform_decision(
             "missing_required_terms",
             {"platform_terms": alias_hits, "intent_terms": intent_hits},
         )
-    if not platform_focus_signal(lower, aliases) and not case_evidence and not risk_evidence:
+    if not platform_focus_signal(lower, aliases) and not case_evidence and not risk_evidence and not acceptance_path:
         return rejected_platform_decision("platform_not_central")
-    hard_noise_hits = matched_terms(lower, PLATFORM_HARD_NOISE_TERMS)
-    policy_reason = platform_noise_reason(text)
-    if hard_noise_hits or policy_reason:
-        return rejected_platform_decision(
-            "content_policy",
-            {"policy_reason": policy_reason or "hard_noise_term", "matched_terms": hard_noise_hits},
-        )
     excluded_hits = matched_terms(lower, exclude_terms)
     if excluded_hits and not strong_method_signal(lower):
         return rejected_platform_decision("excluded_noise", {"matched_terms": excluded_hits})
 
     topics = matched_topics(lower)
+    acceptance_topic = PLATFORM_ACCEPTANCE_PATH_TOPICS.get(acceptance_path or "")
+    if acceptance_topic and acceptance_topic not in topics:
+        topics.insert(0, acceptance_topic)
     if case_evidence and "案例复盘" not in topics:
         topics.append("案例复盘")
     if risk_evidence and "风控对抗" not in topics:
         topics.append("风控对抗")
     structure_score = method_structure_score(lower)
-    if case_evidence or risk_evidence:
+    if case_evidence or risk_evidence or acceptance_path:
         structure_score = max(12, structure_score)
     if is_short_reaction_link(item, lower, topics, structure_score):
         return rejected_platform_decision("short_reaction", {"structure_score": structure_score})
@@ -1030,9 +1082,11 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
             "score_value": score,
             "score_label": "GQS",
             "quality_label": "黄金内容",
-            "selected_reason": selection_reason(topic, structure_score, metric_score),
+            "selected_reason": selection_reason(topic, structure_score, metric_score, acceptance_path),
             "reusable_takeaway": reusable_takeaway(topic),
             "tags": platform_item_tags(topic, topics),
+            "acceptance_path": acceptance_path or "method_case",
+            "source_status": platform_source_status(text),
         },
     }
 
@@ -1074,14 +1128,7 @@ def apply_platform_semantic_review(
     reviewer = getattr(review_service, "classify_platform_batch", None)
     decisions: dict[str, dict[str, Any]] = {}
     if callable(reviewer) and bool(getattr(review_service, "configured", False)):
-        review_input = [
-            {
-                "id": str(item.get("post_id") or index),
-                "language": str(item.get("language") or "und"),
-                "text": semantic_review_text(item.get("clean_text") or item.get("text") or ""),
-            }
-            for index, item in enumerate(items)
-        ]
+        review_input = [platform_semantic_review_input(item, index) for index, item in enumerate(items)]
         try:
             decisions = reviewer(review_input) or {}
         except Exception as error:
@@ -1114,6 +1161,12 @@ def apply_platform_semantic_review(
                 if domain in TOPIC_TERMS:
                     item["topic"] = domain
                     item["tags"] = platform_item_tags(domain, [domain, *matched_topics(combined_text(item).lower())])
+                content_type = str(decision.get("content_type") or "")
+                if content_type in PLATFORM_TYPED_CONTENT_TYPES:
+                    item["acceptance_path"] = content_type
+                source_status = str(decision.get("source_status") or "")
+                if source_status in {"verified", "claimed", "rumor", "unknown"}:
+                    item["source_status"] = source_status
                 item["semantic_confidence"] = float(decision.get("confidence") or 0)
                 kept.append(item)
             else:
@@ -1167,7 +1220,75 @@ def semantic_review_text(value: Any) -> str:
     return f"{text[:head_size]}\n...[内容过长，已截取中段]...\n{text[-650:]}"
 
 
+def platform_semantic_review_input(item: dict[str, Any], index: int = 0) -> dict[str, Any]:
+    context = item.get("conversation_context") or {}
+    context_posts = context.get("posts") if isinstance(context, dict) else []
+    comment_snippets: list[str] = []
+    anchor_id = str(item.get("post_id") or "")
+    for post in context_posts or []:
+        if not isinstance(post, dict) or str(post.get("post_id") or "") == anchor_id:
+            continue
+        value = re.sub(
+            r"\s+",
+            " ",
+            str(post.get("translation_zh") or post.get("clean_text") or post.get("text") or ""),
+        ).strip()
+        if value:
+            comment_snippets.append(value[:180])
+        if len(comment_snippets) >= 6:
+            break
+    media_evidence = []
+    for entry in item.get("media") or []:
+        if not isinstance(entry, dict):
+            continue
+        media_evidence.append(
+            {
+                "type": str(entry.get("type") or "unknown"),
+                "url": str(
+                    entry.get("media_url_https")
+                    or entry.get("media_url")
+                    or entry.get("preview_image_url")
+                    or entry.get("expanded_url")
+                    or entry.get("url")
+                    or ""
+                ),
+                "description": str(
+                    entry.get("alt_text")
+                    or entry.get("description")
+                    or entry.get("title")
+                    or ""
+                )[:300],
+            }
+        )
+        if len(media_evidence) >= 4:
+            break
+    media_types = [entry["type"] for entry in media_evidence]
+    metrics = item.get("metrics") or {}
+    evidence = {
+        "media_count": len(media_types),
+        "media_types": media_types,
+        "media": media_evidence,
+        "reply_count": raw_metric(item, "replies", "reply_count"),
+        "bookmark_count": raw_metric(item, "bookmarks", "bookmark_count"),
+        "quote_count": raw_metric(item, "quotes", "quote_count"),
+        "links": [str(link) for link in item.get("links") or []][:4],
+        "context_summary": str(context.get("summary_zh") or "")[:500] if isinstance(context, dict) else "",
+        "comment_snippets": comment_snippets,
+    }
+    return {
+        "id": str(item.get("post_id") or index),
+        "language": str(item.get("language") or "und"),
+        "text": semantic_review_text(item.get("clean_text") or item.get("text") or ""),
+        "acceptance_path_hint": str(item.get("acceptance_path") or ""),
+        "evidence": evidence,
+    }
+
+
 def semantic_rejection_code(decision: dict[str, Any]) -> str:
+    if decision.get("hard_risk") is True:
+        return "content_policy"
+    if decision.get("content_type") == "off_topic" or decision.get("platform_relation") in {"incidental", "none"}:
+        return "not_central_subject"
     if decision.get("low_value") is True:
         return "low_value"
     if decision.get("central_subject") is not True and decision.get("actionable_for_platform") is not True:
@@ -1200,6 +1321,16 @@ def semantic_decision_accepts(decision: dict[str, Any], item: dict[str, Any] | N
 
 
 def semantic_model_accepts(decision: dict[str, Any]) -> bool:
+    if decision.get("hard_risk") is True:
+        return False
+    content_type = str(decision.get("content_type") or "")
+    relation = str(decision.get("platform_relation") or "")
+    if content_type in PLATFORM_TYPED_CONTENT_TYPES and relation in PLATFORM_REVIEW_RELATIONS:
+        if decision.get("specific_signal") is not True or decision.get("relevant_domain") is not True:
+            return False
+        if content_type == "method_case" and decision.get("substantive") is not True:
+            return False
+        return float(decision.get("confidence") or 0) >= PLATFORM_SEMANTIC_CONFIDENCE
     platform_relevant = decision.get("central_subject") is True or decision.get("actionable_for_platform") is True
     return (
         platform_relevant
@@ -1215,9 +1346,19 @@ def semantic_rule_override_reason(
     item: dict[str, Any] | None,
 ) -> str:
     """Return the bounded deterministic reason that overrules a model false negative."""
-    if not item or decision.get("relevant_domain") is not True:
+    if not item:
+        return ""
+    if decision.get("hard_risk") is True:
+        return ""
+    text = combined_text(item)
+    if platform_noise_reason(text) or platform_specific_hard_risk_reason(text):
         return ""
     quality_score = int(item.get("quality_score") or 0)
+    acceptance_path = str(item.get("acceptance_path") or platform_acceptance_path(item))
+    if acceptance_path in PLATFORM_ACCEPTANCE_PATH_TOPICS and quality_score >= 62:
+        return acceptance_path
+    if decision.get("relevant_domain") is not True:
+        return ""
     if quality_score < PLATFORM_SEMANTIC_RULE_FALLBACK_SCORE:
         return ""
     lower = combined_text(item).lower()
@@ -1292,6 +1433,11 @@ def platform_rejection_detail(
         record["details"] = details
     if model_decision:
         record["model_decision"] = {
+            "platform_relation": str(model_decision.get("platform_relation") or ""),
+            "content_type": str(model_decision.get("content_type") or ""),
+            "specific_signal": bool(model_decision.get("specific_signal")),
+            "hard_risk": bool(model_decision.get("hard_risk")),
+            "source_status": str(model_decision.get("source_status") or "unknown"),
             "central_subject": bool(model_decision.get("central_subject")),
             "actionable_for_platform": bool(model_decision.get("actionable_for_platform")),
             "relevant_domain": bool(model_decision.get("relevant_domain")),
@@ -1327,6 +1473,7 @@ def write_platform_rejection_audit(
         rejected_items.append(platform_rejection_audit_item(item, rejection))
     rejected_items.sort(key=lambda item: str(item.get("created_at") or ""), reverse=True)
     expected_rejected_count = max(0, len(metric_eligible_items) - len(final_ids))
+    pending_count = stage_counts.get("pending_content", 0)
     payload = {
         "schema_version": 1,
         "platform": PLATFORM_KEY,
@@ -1338,6 +1485,8 @@ def write_platform_rejection_audit(
             "metric_eligible_count": len(metric_eligible_items),
             "accepted_count": len(final_ids),
             "rejected_count": len(rejected_items),
+            "decided_rejected_count": max(0, len(rejected_items) - pending_count),
+            "pending_count": pending_count,
             "expected_rejected_count": expected_rejected_count,
             "count_matches": len(rejected_items) == expected_rejected_count,
             "stage_counts": stage_counts,
@@ -1369,6 +1518,8 @@ def platform_rejection_audit_item(item: dict[str, Any], rejection: dict[str, Any
         "metrics": item.get("metrics") or {},
         "query_group": str(item.get("_audit_query_group") or ""),
         "topic": str(item.get("topic") or ""),
+        "acceptance_path": str(item.get("acceptance_path") or ""),
+        "source_status": str(item.get("source_status") or "unknown"),
         "quality_score": item.get("quality_score"),
         "tags": item.get("tags") or [],
         "rejection": rejection,
@@ -1410,6 +1561,49 @@ def attach_platform_context(items: list[dict[str, Any]], x_source: Any, translat
         to_iso(end),
         allow_anchor_threads=True,
     )
+
+
+def platform_review_evidence_candidate(item: dict[str, Any]) -> bool:
+    """Limit pre-review context calls to candidates where surrounding evidence can change the decision."""
+    acceptance_path = str(item.get("acceptance_path") or platform_acceptance_path(item))
+    if acceptance_path not in PLATFORM_ACCEPTANCE_PATH_TOPICS:
+        return False
+    has_media = any(isinstance(entry, dict) for entry in item.get("media") or [])
+    replies = raw_metric(item, "replies", "reply_count")
+    quotes = raw_metric(item, "quotes", "quote_count")
+    if acceptance_path in {"platform_observation", "case_lead"}:
+        return has_media or replies >= 3 or quotes >= 1
+    if acceptance_path in {"platform_update", "tool_resource"}:
+        return has_media or replies >= 5 or quotes >= 1
+    return False
+
+
+def merge_platform_context_statuses(
+    review_status: dict[str, Any],
+    final_status: dict[str, Any],
+    selected: list[dict[str, Any]],
+) -> dict[str, Any]:
+    merged: dict[str, Any] = {}
+    for key in ("eligible", "attempted", "filtered_noise", "capped_contexts"):
+        merged[key] = int(review_status.get(key) or 0) + int(final_status.get(key) or 0)
+    merged["attached"] = sum(
+        1
+        for item in selected
+        if isinstance(item.get("conversation_context"), dict) and item["conversation_context"].get("posts")
+    )
+    merged["unresolved"] = int(review_status.get("unresolved") or 0) + int(final_status.get("unresolved") or 0)
+    merged["fetch_limit"] = max(int(review_status.get("fetch_limit") or 0), int(final_status.get("fetch_limit") or 0))
+    summary: dict[str, int] = {}
+    for status in (review_status, final_status):
+        for name, count in (status.get("summary") or {}).items():
+            summary[str(name)] = summary.get(str(name), 0) + int(count or 0)
+    merged["summary"] = summary
+    warnings: list[str] = []
+    for warning in [*(review_status.get("warnings") or []), *(final_status.get("warnings") or [])]:
+        append_unique_warning(warnings, str(warning))
+    merged["warnings"] = warnings[:5]
+    merged["review_evidence_attempted"] = int(review_status.get("attempted") or 0)
+    return merged
 
 
 def refresh_context_status_for_items(context_status: dict[str, Any], items: list[dict[str, Any]]) -> None:
@@ -1576,6 +1770,8 @@ def public_platform_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
         "score_label",
         "selected_reason",
         "reusable_takeaway",
+        "acceptance_path",
+        "source_status",
         "tags",
         "author_id",
         "author_name",
@@ -1718,6 +1914,122 @@ def platform_focus_signal(lower: str, aliases: list[str]) -> bool:
         rf"(?:{alias_pattern})[\s\S]{{0,30}}(?:支持|适配|自动化|工作流|发布|预览后手动)",
     ]
     return any(re.search(pattern, lower, re.IGNORECASE) for pattern in patterns)
+
+
+def platform_acceptance_path(
+    item: dict[str, Any],
+    lower: str | None = None,
+    aliases: list[str] | None = None,
+) -> str:
+    """Return a bounded value path for platform intelligence beyond full tutorials."""
+    value = lower if lower is not None else combined_text(item).lower()
+    platform_aliases = aliases or ["小红书", "xiaohongshu", "rednote", "xhs"]
+    if not matched_terms(value, platform_aliases):
+        return ""
+    if platform_update_signal(value, platform_aliases):
+        return "platform_update"
+    if platform_tool_resource_signal(value, platform_aliases):
+        return "tool_resource"
+    if platform_monetization_opportunity_signal(value, platform_aliases):
+        return "monetization_opportunity"
+    if platform_case_lead_signal(value, platform_aliases):
+        return "case_lead"
+    if platform_content_comparison_signal(item, value, platform_aliases):
+        return "platform_observation"
+    return ""
+
+
+def platform_update_signal(lower: str, aliases: list[str]) -> bool:
+    alias_pattern = "|".join(re.escape(str(alias).strip().lower()) for alias in aliases if str(alias).strip())
+    if not alias_pattern:
+        return False
+    update_pattern = (
+        r"(?:内测|上线(?:了)?(?:新)?(?:功能|服务|版本|入口)|平台改版|不互通|隔离|分区|账号体系|身份账号|"
+        r"算法调整|推荐调整|规则调整|商业化调整|机制变化|规则变化|政策变化|算法变化|生态变化|"
+        r"功能新增|功能下线)"
+    )
+    platform_object = r"(?:账号|身份|用户|互动|点赞|评论|转发|私信|注册|流量|推荐|算法|规则|审核|商业化|生态|功能|平台)"
+    nearby = (
+        rf"(?:{alias_pattern})[\s\S]{{0,100}}{update_pattern}|"
+        rf"{update_pattern}[\s\S]{{0,100}}(?:{alias_pattern})"
+    )
+    return bool(re.search(nearby, lower, re.IGNORECASE) and re.search(platform_object, lower, re.IGNORECASE))
+
+
+def platform_tool_resource_signal(lower: str, aliases: list[str]) -> bool:
+    if not matched_terms(lower, aliases):
+        return False
+    resource_pattern = r"(?:\bskills?\b|github|开源(?:项目|仓库)?|代码仓库|提示词(?:库)?|prompt\s*(?:library|repo))"
+    production_pattern = r"(?:写|创作|生成|制作|配图|封面|图文|笔记|选题|发布|运营|分析|复盘|账号|内容)"
+    if not re.search(resource_pattern, lower, re.IGNORECASE):
+        return False
+    alias_pattern = "|".join(re.escape(str(alias).strip().lower()) for alias in aliases if str(alias).strip())
+    return bool(
+        re.search(
+            rf"(?:{alias_pattern})[^。！？\n]{{0,55}}{production_pattern}|"
+            rf"{production_pattern}[^。！？\n]{{0,55}}(?:{alias_pattern})",
+            lower,
+            re.IGNORECASE,
+        )
+    )
+
+
+def platform_monetization_opportunity_signal(lower: str, aliases: list[str]) -> bool:
+    alias_pattern = "|".join(re.escape(str(alias).strip().lower()) for alias in aliases if str(alias).strip())
+    if not alias_pattern:
+        return False
+    concrete_model = (
+        r"(?:数字产品|单品带货|知识产品|商单|带货|店铺|"
+        r"咨询服务|代运营|affiliate|digital product)"
+    )
+    return bool(
+        re.search(
+            rf"(?:{alias_pattern})[^。！？\n]{{0,45}}{concrete_model}|"
+            rf"{concrete_model}[^。！？\n]{{0,45}}(?:{alias_pattern})",
+            lower,
+            re.IGNORECASE,
+        )
+    )
+
+
+def platform_case_lead_signal(lower: str, aliases: list[str]) -> bool:
+    if not matched_terms(lower, aliases):
+        return False
+    subject_pattern = r"(?:@[a-z0-9_]{2,20}|博主|操盘手|高手|团队|账号|项目)"
+    result_pattern = r"(?:拿到过结果|跑通|做成|起号成功|爆文|涨粉|利润|收入|阅读|变现)"
+    alias_pattern = "|".join(re.escape(str(alias).strip().lower()) for alias in aliases if str(alias).strip())
+    has_platform_result = bool(
+        re.search(
+            rf"(?:{alias_pattern})[^。！？\n]{{0,55}}{result_pattern}|"
+            rf"{result_pattern}[^。！？\n]{{0,55}}(?:{alias_pattern})",
+            lower,
+            re.IGNORECASE,
+        )
+    )
+    return has_platform_result and bool(re.search(subject_pattern, lower, re.IGNORECASE))
+
+
+def platform_specific_hard_risk_reason(text: str) -> str | None:
+    lower = str(text or "").lower()
+    patterns = {
+        "pirated_material_sales": r"(?:小红书[^。！？\n]{0,30})?(?:卖|售卖|销售)[^。！？\n]{0,12}(?:盗版|绝版)(?:电子书|资料|课程)",
+        "cloud_drive_referral": r"(?:小红书[^。！？\n]{0,35})?网盘拉新",
+        "ai_recharge_lead_generation": r"ai\s*代充[\s\S]{0,180}(?:引流|获客|被动收入|教程|sop|赚钱)",
+        "paid_fake_engagement": r"(?:刷赞|付费涨粉|付费评论|打粉|给[^。！？\n]{0,12}(?:元|块钱)[^。！？\n]{0,12}评论)",
+    }
+    for reason, pattern in patterns.items():
+        if re.search(pattern, lower, re.IGNORECASE):
+            return reason
+    return None
+
+
+def platform_source_status(text: str) -> str:
+    lower = str(text or "").lower()
+    if re.search(r"(?:据悉|据.{0,12}爆料|业内人士|传闻|预计|可能|听说|网传)", lower, re.IGNORECASE):
+        return "rumor"
+    if re.search(r"(?:实测|官方|公告|数据|截图|项目|github|开源|\d+[万千k+%]|拿到过结果)", lower, re.IGNORECASE):
+        return "claimed"
+    return "unknown"
 
 
 def platform_case_evidence_signal(lower: str, aliases: list[str]) -> bool:
@@ -1876,7 +2188,17 @@ def propagation_score(item: dict[str, Any]) -> int:
     return min(22, score)
 
 
-def selection_reason(topic: str, structure_score: int, metric_score: int) -> str:
+def selection_reason(topic: str, structure_score: int, metric_score: int, acceptance_path: str = "") -> str:
+    path_reasons = {
+        "platform_update": "内容包含具体的平台产品、规则或生态变化线索",
+        "tool_resource": "内容提供可用于小红书创作或运营的工具资源",
+        "monetization_opportunity": "内容提出了明确的小红书变现模式",
+        "case_lead": "内容提供可继续追踪的小红书人物、账号或案例线索",
+        "platform_observation": "内容记录了具体的小红书内容表现差异或讨论证据",
+    }
+    if acceptance_path in path_reasons:
+        spread = "，且已有一定传播反馈" if metric_score >= 8 else ""
+        return f"{path_reasons[acceptance_path]}，主题归为「{topic}」{spread}。"
     method = "内容包含可复用的方法、步骤或复盘结构" if structure_score >= 12 else "内容命中明确的小红书运营/增长意图"
     spread = "且已有一定传播反馈" if metric_score >= 8 else "，适合进入当日方法论样本池"
     return f"{method}，主题归为「{topic}」{spread}。"

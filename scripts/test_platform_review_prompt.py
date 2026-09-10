@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from src.pipeline.translation import (  # noqa: E402
+    PLATFORM_REVIEW_CONTENT_TYPES,
     PLATFORM_REVIEW_DOMAINS,
     JoyBuilderTranslationService,
     build_platform_review_prompt,
@@ -30,19 +31,20 @@ class FakeResponse:
         return json.dumps(self.payload, ensure_ascii=False).encode("utf-8")
 
 
-def test_platform_review_prompt_has_two_acceptance_paths() -> None:
+def test_platform_review_prompt_has_typed_acceptance_paths() -> None:
     prompt = build_platform_review_prompt()
 
     assert prompt == build_platform_review_prompt()
-    assert "A. central_subject=true；B. actionable_for_platform=true" in prompt
-    assert "多平台内容可以为 false，不要为了收录而虚报 true" in prompt
+    for content_type in PLATFORM_REVIEW_CONTENT_TYPES:
+        assert content_type in prompt
+    assert "platform_relation" in prompt
+    assert "specific_signal" in prompt
+    assert "source_status=rumor" in prompt
     assert "案例不必写成系统教程" in prompt
-    assert "具体动作加结果数据本身就可以为 true" in prompt
     assert "多平台方法不要求提供小红书独有的机制或技术适配" in prompt
     assert "即使这些方法也适用于公众号、抖音或 X" in prompt
-    assert "只宣称‘支持小红书等平台’" in prompt
     assert "低俗色情和其他黑灰产内容，拒绝" in prompt
-    assert "low_value 是独立否决项" in prompt
+    assert "不能脱离 content_type 和 specific_signal 单独否决" in prompt
     for domain in PLATFORM_REVIEW_DOMAINS:
         assert domain in prompt
 
@@ -54,7 +56,7 @@ def test_platform_review_prompt_contains_regression_examples() -> None:
     assert "短视频提示词或分镜模板" in prompt
     assert "每天两更、具体内容形式" in prompt
     assert "涨粉互动和商单结果" in prompt
-    assert "不得仅因是多平台内容而拒绝" in prompt
+    assert "多平台方法不要求提供小红书独有的机制或技术适配" in prompt
     assert "小红书适合图文起步" in prompt
     assert "先用轻量图文验证内容与洞察" in prompt
     assert "对标账号和选择简单形式" in prompt
@@ -63,6 +65,10 @@ def test_platform_review_prompt_contains_regression_examples() -> None:
     assert "通用生产工具不必具备小红书独有功能" in prompt
     assert "手写笔记持续成为爆款" in prompt
     assert "属于可验证的平台现象假设" in prompt
+    assert "隔离海外身份账号与内地账号" in prompt
+    assert "小红书数字产品" in prompt
+    assert "case_lead" in prompt
+    assert "收藏来源" in prompt
 
 
 def test_platform_review_prompt_keeps_risk_vetoes() -> None:
@@ -77,7 +83,7 @@ def test_platform_review_prompt_keeps_risk_vetoes() -> None:
         "低俗色情",
     ):
         assert rejected_pattern in prompt
-    assert "即使步骤具体也必须判 low_value=true" in prompt
+    assert "hard_risk=true 必须拒绝" in prompt
 
 
 def test_platform_review_parser_keeps_actionable_field() -> None:
@@ -86,6 +92,11 @@ def test_platform_review_parser_keeps_actionable_field() -> None:
         [
             {
                 "id": "multi-platform-workflow",
+                "platform_relation": "directly_applicable",
+                "content_type": "tool_resource",
+                "specific_signal": True,
+                "hard_risk": False,
+                "source_status": "verified",
                 "central_subject": False,
                 "actionable_for_platform": True,
                 "relevant_domain": True,
@@ -111,6 +122,8 @@ def test_platform_review_parser_keeps_actionable_field() -> None:
                     "id": "multi-platform-workflow",
                     "language": "zh",
                     "text": "完整运营工作流支持小红书，并说明发布前检查和自动化风控。",
+                    "acceptance_path_hint": "tool_resource",
+                    "evidence": {"media_count": 1},
                 }
             ]
         )
@@ -118,13 +131,20 @@ def test_platform_review_parser_keeps_actionable_field() -> None:
     decision = decisions["multi-platform-workflow"]
     assert decision["central_subject"] is False
     assert decision["actionable_for_platform"] is True
+    assert decision["content_type"] == "tool_resource"
+    assert decision["platform_relation"] == "directly_applicable"
+    assert decision["specific_signal"] is True
+    assert decision["hard_risk"] is False
+    assert decision["source_status"] == "verified"
     assert decision["substantive"] is True
     assert decision["low_value"] is False
-    assert '"actionable_for_platform":true' in captured_request["input"]
+    assert '"actionable_for_platform"' in captured_request["input"]
+    assert '"acceptance_path_hint": "tool_resource"' in captured_request["input"]
+    assert '"media_count": 1' in captured_request["input"]
 
 
 if __name__ == "__main__":
-    test_platform_review_prompt_has_two_acceptance_paths()
+    test_platform_review_prompt_has_typed_acceptance_paths()
     test_platform_review_prompt_contains_regression_examples()
     test_platform_review_prompt_keeps_risk_vetoes()
     test_platform_review_parser_keeps_actionable_field()
