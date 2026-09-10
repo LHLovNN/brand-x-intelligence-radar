@@ -121,6 +121,24 @@ def main() -> None:
     assert plan["audit"]["summary"]["stage_counts"] == {"rule_filter": 1}
     assert plan["audit"]["summary"]["reason_counts"] == {"missing_required_terms": 1}
 
+    enriched_payload = {**payload, "items": list(payload["items"])}
+    enriched_audit = {**audit, "items": list(audit["items"])}
+    enriched_plan = build_promotion_plan(
+        enriched_payload,
+        enriched_audit,
+        platform,
+        ["promote-me"],
+        generated_at="2026-09-09T06:00:00Z",
+        generated_at_label="2026-09-09 14:00 BJT",
+        source_threads={"promote-me": enriched_thread("promote-me", promotable["text"])},
+    )
+    enriched = enriched_plan["payload"]["items"][0]
+    assert enriched["author_avatar_url"] == "https://example.com/avatar.jpg"
+    assert enriched["author_followers"] == 1234
+    assert len(enriched["media"]) == 1
+    assert len(enriched["conversation_context"]["posts"]) == 2
+    assert enriched_plan["payload"]["collection_status"]["conversation_context"]["attached"] == 1
+
     idempotent = build_promotion_plan(
         plan["payload"],
         plan["audit"],
@@ -168,6 +186,46 @@ def audit_item(post_id: str, text: str, *, stage: str, reason_code: str) -> dict
             "reason_label": "测试原因",
         },
     }
+
+
+def enriched_thread(post_id: str, text: str) -> list[dict]:
+    anchor = {
+        "post_id": post_id,
+        "url": f"https://x.com/example/status/{post_id}",
+        "created_at": "2026-09-08T11:00:00Z",
+        "language": "zh",
+        "text": text,
+        "author_id": "author",
+        "author_name": "示例作者",
+        "author_handle": "example",
+        "author_avatar_url": "https://example.com/avatar.jpg",
+        "author_followers": 1234,
+        "author_following": 56,
+        "author_bio": "示例简介",
+        "author_location": "北京",
+        "author_joined_at": "2020-01-01T00:00:00Z",
+        "author_verified": False,
+        "conversation_id": post_id,
+        "media": [{"type": "photo", "media_url_https": "https://example.com/image.jpg"}],
+        "links": [],
+        "like_count": 20,
+        "repost_count": 2,
+        "reply_count": 3,
+        "quote_count": 0,
+        "bookmark_count": 4,
+        "view_count": 2000,
+    }
+    reply = {
+        **anchor,
+        "post_id": "reply-1",
+        "url": "https://x.com/replier/status/reply-1",
+        "created_at": "2026-09-08T11:05:00Z",
+        "text": "这套流程确实可以复用。",
+        "author_handle": "replier",
+        "media": [],
+        "reply_to_post_id": post_id,
+    }
+    return [anchor, reply]
 
 
 def test_atomic_rollback_on_second_replace() -> None:

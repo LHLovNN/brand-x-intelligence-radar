@@ -24,7 +24,15 @@ from src.pipeline.platform_trends import (  # noqa: E402
     public_translation_status,
     score_platform_post,
 )
-from src.pipeline.translation import needs_translation, translation_report  # noqa: E402
+from src.pipeline.conversation_context import (  # noqa: E402
+    build_context_for_post,
+    filter_context_noise,
+    filter_thread_context_rows,
+    prepare_context_rows,
+)
+from src.pipeline.dashboard_builder import write_data_bundle  # noqa: E402
+from src.pipeline.lazy_payloads import shard_json_file  # noqa: E402
+from src.pipeline.translation import build_translation_service, needs_translation, translation_report  # noqa: E402
 from src.utils.config import load_project_json  # noqa: E402
 from src.utils.io import read_json  # noqa: E402
 from src.utils.time import beijing_label, now_utc, to_iso  # noqa: E402
@@ -51,6 +59,14 @@ def parse_args() -> argparse.Namespace:
         help="Post ID to promote. Repeat this option for multiple posts.",
     )
     parser.add_argument("--dry-run", action="store_true", help="Validate and print the result without writing files.")
+    parser.add_argument(
+        "--source-threads-json",
+        type=Path,
+        help=(
+            "Optional provider thread data keyed by post ID. When supplied, promoted cards retain "
+            "author profiles, media URLs and available conversation context."
+        ),
+    )
     parser.add_argument(
         "--data-root",
         type=Path,
@@ -104,6 +120,8 @@ def main() -> None:
 
     config = load_project_json("platform_trends.local.json")
     platform = platform_config(config)
+    source_threads = load_source_threads(args.source_threads_json) if args.source_threads_json else None
+    summary_service = build_translation_service("twitterapi_io") if source_threads is not None else None
     now = now_utc()
     try:
         plan = build_promotion_plan(
@@ -113,6 +131,8 @@ def main() -> None:
             requested_ids,
             generated_at=to_iso(now),
             generated_at_label=beijing_label(now),
+            source_threads=source_threads,
+            summary_service=summary_service,
         )
     except PromotionError as error:
         raise SystemExit(str(error)) from error
@@ -141,6 +161,9 @@ def main() -> None:
         atomic_replace_files(pending_files)
     except AtomicWriteError as error:
         raise SystemExit(str(error)) from error
+    shard_json_file(daily_path, data_root)
+    shard_json_file(latest_path, data_root)
+    write_data_bundle(data_root.parent / "dashboard-data-bundle.js", {})
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
@@ -152,6 +175,8 @@ def build_promotion_plan(
     *,
     generated_at: str,
     generated_at_label: str,
+    source_threads: dict[str, list[dict[str, Any]]] | None = None,
+    summary_service: Any | None = None,
 ) -> dict[str, Any]:
     requested_ids = unique_nonempty(requested_ids)
     items = deepcopy(list(payload.get("items") or []))
@@ -167,12 +192,34 @@ def build_promotion_plan(
     pending_ids = [post_id for post_id in requested_ids if post_id not in existing_by_id]
     restored_items: list[dict[str, Any]] = []
     failures: list[str] = []
+    promoted_context_attempted = 0
+    promoted_context_attached = 0
+    promoted_context_filtered_noise = 0
+    promoted_context_summary_counts: Counter[str] = Counter()
     min_views = int((payload.get("collection_status") or {}).get("min_views") or platform.get("min_views_per_item") or 0)
     min_likes = int((payload.get("collection_status") or {}).get("min_likes") or platform.get("min_likes_per_item") or 0)
 
     for post_id in pending_ids:
         audit_item = audit_by_id[post_id]
-        normalized = normalize_platform_post(audit_item_as_source_post(audit_item), platform)
+        source_rows = list((source_threads or {}).get(post_id) or [])
+        source_post = audit_item_as_source_post(audit_item)
+        if source_threads is not None:
+            if not source_rows:
+                failures.append(f"{post_id}: source thread data is missing")
+                continue
+            source_post = next(
+                (row for row in source_rows if str(row.get("post_id") or "") == post_id),
+                None,
+            )
+            if not source_post:
+                failures.append(f"{post_id}: source thread data does not contain the anchor post")
+                continue
+            source_error = enriched_source_error(audit_item, source_post)
+            if source_error:
+                failures.append(f"{post_id}: {source_error}")
+                continue
+
+        normalized = normalize_platform_post(source_post, platform)
         if not passes_platform_metric_gate(normalized, min_views, min_likes):
             failures.append(f"{post_id}: no longer meets the public metric gate")
             continue
@@ -191,6 +238,17 @@ def build_promotion_plan(
         normalized["translation_zh"] = display_text
         normalized["translation_status"] = "source_chinese"
         normalized["conversation_context"] = {}
+        if source_rows:
+            promoted_context_attempted += 1
+            context_rows = filter_thread_context_rows(normalized, source_rows)
+            context_rows, removed = filter_context_noise(context_rows)
+            promoted_context_filtered_noise += removed
+            prepared_rows = prepare_context_rows(context_rows, summary_service)
+            context = build_context_for_post(normalized, prepared_rows, summary_service)
+            if context and len(context.get("posts") or []) > 1:
+                normalized["conversation_context"] = context
+                promoted_context_attached += 1
+                promoted_context_summary_counts[str(context.get("summary_status") or "fallback")] += 1
         restored_items.extend(public_platform_items([normalized]))
 
     if failures:
@@ -225,6 +283,23 @@ def build_promotion_plan(
     )
     translation_status["configured"] = configured
     collection_status["translation"] = translation_status
+
+    if promoted_context_attempted:
+        context_status = deepcopy(collection_status.get("conversation_context") or {})
+        context_status["attempted"] = int(context_status.get("attempted") or 0) + promoted_context_attempted
+        context_status["eligible"] = max(
+            int(context_status.get("eligible") or 0) + promoted_context_attempted,
+            context_status["attempted"],
+        )
+        context_status["attached"] = int(context_status.get("attached") or 0) + promoted_context_attached
+        context_status["unresolved"] = int(context_status.get("unresolved") or 0) + (
+            promoted_context_attempted - promoted_context_attached
+        )
+        context_status["filtered_noise"] = int(context_status.get("filtered_noise") or 0) + promoted_context_filtered_noise
+        summary_counts = Counter(context_status.get("summary") or {})
+        summary_counts.update(promoted_context_summary_counts)
+        context_status["summary"] = dict(summary_counts)
+        collection_status["conversation_context"] = context_status
 
     semantic_rejections = [
         item for item in remaining_audit_items if str((item.get("rejection") or {}).get("stage") or "") == "semantic_review"
@@ -311,6 +386,35 @@ def audit_item_as_source_post(item: dict[str, Any]) -> dict[str, Any]:
         "bookmark_count": metrics.get("bookmarks"),
         "view_count": metrics.get("views"),
     }
+
+
+def load_source_threads(path: Path) -> dict[str, list[dict[str, Any]]]:
+    try:
+        payload = read_json(str(path.resolve()))
+    except Exception as error:
+        raise SystemExit(f"Unable to read source thread data: {path}") from error
+    if not isinstance(payload, dict):
+        raise SystemExit("Source thread data must be a JSON object keyed by post ID.")
+    result: dict[str, list[dict[str, Any]]] = {}
+    for post_id, rows in payload.items():
+        if not isinstance(rows, list) or any(not isinstance(row, dict) for row in rows):
+            raise SystemExit(f"Source thread data for {post_id} must be a list of post objects.")
+        result[str(post_id)] = rows
+    return result
+
+
+def enriched_source_error(audit_item: dict[str, Any], source_post: dict[str, Any]) -> str:
+    if not str(source_post.get("author_avatar_url") or "").strip():
+        return "source post is missing the author avatar"
+    if source_post.get("author_followers") is None or source_post.get("author_following") is None:
+        return "source post is missing author follower/following counts"
+    if not str(source_post.get("conversation_id") or "").strip():
+        return "source post is missing its conversation ID"
+    expected_media = int(((audit_item.get("media") or {}).get("count") or 0))
+    actual_media = len(source_post.get("media") or [])
+    if actual_media < expected_media:
+        return f"source post has {actual_media} media item(s), expected at least {expected_media}"
+    return ""
 
 
 def unique_records_by_id(items: list[dict[str, Any]], label: str) -> dict[str, dict[str, Any]]:
