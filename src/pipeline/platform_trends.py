@@ -38,8 +38,26 @@ PLATFORM_SEMANTIC_RULE_FALLBACK_SCORE = 75
 PLATFORM_SEMANTIC_TEXT_LIMIT = 3000
 PLATFORM_REJECTION_AUDIT_RETENTION_DAYS = 7
 
+# These are scoring signals only. Keeping them out of the source queries avoids
+# broadening collection with generic AI-tool posts, while allowing an already
+# fetched post to reach semantic review when it explicitly applies the method
+# to Xiaohongshu.
+PLATFORM_REUSABLE_CONTENT_TERMS = [
+    "提示词",
+    "分镜",
+    "脚本",
+    "内容模板",
+    "配图",
+    "工作流",
+    "内容生产",
+    "内容形式",
+    "prompt",
+    "workflow",
+]
+
 PLATFORM_REJECTION_REASON_LABELS = {
     "missing_required_terms": "未同时命中小红书与目标主题",
+    "article_content_unavailable": "数据源未返回长文正文，暂待解析",
     "platform_not_central": "小红书不是正文核心对象",
     "content_policy": "命中低俗、敏感或垃圾内容规则",
     "excluded_noise": "命中排除词且缺少明确方法信息",
@@ -316,6 +334,7 @@ PLATFORM_FOCUS_TERMS = [
     "标题",
     "封面",
     "内容定位",
+    *PLATFORM_REUSABLE_CONTENT_TERMS,
     "流量",
     "账号运营",
     "运营",
@@ -444,6 +463,21 @@ def platform_query_request_allowance(x_source: Any, remaining_groups: int) -> in
     return remaining // max(1, int(remaining_groups))
 
 
+def source_search_telemetry(x_source: Any) -> dict[str, Any]:
+    stats = getattr(x_source, "last_search_stats", None)
+    if not isinstance(stats, dict):
+        return {"source_pages_used": None, "source_stop_reason": "unknown"}
+    pages = stats.get("pages_used")
+    try:
+        pages_value = max(0, int(pages)) if pages is not None else None
+    except (TypeError, ValueError):
+        pages_value = None
+    return {
+        "source_pages_used": pages_value,
+        "source_stop_reason": str(stats.get("stop_reason") or "unknown"),
+    }
+
+
 def search_platform_query_with_budget(
     x_source: Any,
     query: str,
@@ -463,6 +497,7 @@ def search_platform_query_with_budget(
             "request_allowance": request_allowance,
             "requests_used": max(0, requests_after - requests_before),
             "request_budget_limited": False,
+            **source_search_telemetry(x_source),
         }
 
     allowance = max(0, int(request_allowance))
@@ -471,6 +506,8 @@ def search_platform_query_with_budget(
             "request_allowance": 0,
             "requests_used": 0,
             "request_budget_limited": True,
+            "source_pages_used": 0,
+            "source_stop_reason": "request_budget",
         }
 
     global_max_requests = int(original_max_requests)
@@ -502,6 +539,7 @@ def search_platform_query_with_budget(
         "request_allowance": allowance,
         "requests_used": max(0, requests_after - requests_before),
         "request_budget_limited": request_budget_limited,
+        **source_search_telemetry(x_source),
     }
 
 
@@ -636,6 +674,8 @@ def collect_platform_trends(
                     query_uniqueness["group_unique_candidates"] < query_candidate_limit
                     and len(rows) < limit
                     and not query_request_stats["request_budget_limited"]
+                    and query_request_stats.get("source_stop_reason")
+                    in {"empty_page", "missing_next_cursor", "unknown", None}
                 ),
                 **query_request_stats,
             }
@@ -928,17 +968,28 @@ def raw_metric(post: dict[str, Any], *keys: str) -> int:
 def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[str, Any]:
     text = combined_text(item)
     lower = text.lower()
+    if platform_article_content_unavailable(item):
+        return rejected_platform_decision("article_content_unavailable")
     aliases = [str(term).lower() for term in platform.get("aliases") or []]
     intent_terms = effective_platform_intent_terms(platform)
     exclude_terms = [str(term).lower() for term in [*NOISE_TERMS, *(platform.get("exclude_terms") or [])]]
     alias_hits = matched_terms(lower, aliases)
     intent_hits = matched_terms(lower, intent_terms)
+    reusable_content_hits = matched_terms(lower, PLATFORM_REUSABLE_CONTENT_TERMS)
+    case_evidence = platform_case_evidence_signal(lower, aliases)
+    risk_evidence = platform_risk_evidence_signal(lower, aliases)
+    if not intent_hits:
+        intent_hits = reusable_content_hits
+    if not intent_hits and case_evidence:
+        intent_hits = ["platform_case_evidence"]
+    if not intent_hits and risk_evidence:
+        intent_hits = ["platform_risk_evidence"]
     if not alias_hits or not intent_hits:
         return rejected_platform_decision(
             "missing_required_terms",
             {"platform_terms": alias_hits, "intent_terms": intent_hits},
         )
-    if not platform_focus_signal(lower, aliases):
+    if not platform_focus_signal(lower, aliases) and not case_evidence and not risk_evidence:
         return rejected_platform_decision("platform_not_central")
     hard_noise_hits = matched_terms(lower, PLATFORM_HARD_NOISE_TERMS)
     policy_reason = platform_noise_reason(text)
@@ -952,7 +1003,13 @@ def score_platform_post(item: dict[str, Any], platform: dict[str, Any]) -> dict[
         return rejected_platform_decision("excluded_noise", {"matched_terms": excluded_hits})
 
     topics = matched_topics(lower)
+    if case_evidence and "案例复盘" not in topics:
+        topics.append("案例复盘")
+    if risk_evidence and "风控对抗" not in topics:
+        topics.append("风控对抗")
     structure_score = method_structure_score(lower)
+    if case_evidence or risk_evidence:
+        structure_score = max(12, structure_score)
     if is_short_reaction_link(item, lower, topics, structure_score):
         return rejected_platform_decision("short_reaction", {"structure_score": structure_score})
     metric_score = propagation_score(item)
@@ -989,6 +1046,21 @@ def rejected_platform_decision(reason_code: str, details: dict[str, Any] | None 
     }
 
 
+def platform_article_content_unavailable(item: dict[str, Any]) -> bool:
+    raw_text = str(item.get("clean_text") or item.get("text") or "")
+    visible_text = re.sub(r"https?://\S+", "", raw_text).strip()
+    if len(re.findall(r"[a-z0-9\u3400-\u9fff]", visible_text.lower())) > 8:
+        return False
+    media = item.get("media") or []
+    has_article_card = any(
+        isinstance(entry, dict) and str(entry.get("source") or "").lower() == "card"
+        for entry in media
+    )
+    links = [str(link or "").lower() for link in item.get("links") or []]
+    has_article_link = any("x.com/i/article/" in link or "twitter.com/i/article/" in link for link in links)
+    return has_article_card or has_article_link
+
+
 def apply_platform_semantic_review(
     items: list[dict[str, Any]],
     review_service: Any,
@@ -1019,14 +1091,25 @@ def apply_platform_semantic_review(
     reviewed_count = 0
     rejected_count = 0
     fallback_count = 0
+    overridden_count = 0
     rejection_reasons: dict[str, int] = {}
+    override_reasons: dict[str, int] = {}
     for index, item in enumerate(items):
         item_id = str(item.get("post_id") or index)
         decision = decisions.get(item_id)
         if decision:
             reviewed_count += 1
+            override_reason = ""
+            if not semantic_model_accepts(decision):
+                override_reason = semantic_rule_override_reason(decision, item)
             accepted = semantic_decision_accepts(decision, item)
             if accepted:
+                if not override_reason and not semantic_model_accepts(decision):
+                    override_reason = "low_confidence_rule_fallback"
+                if override_reason:
+                    overridden_count += 1
+                    override_reasons[override_reason] = override_reasons.get(override_reason, 0) + 1
+                    item["_semantic_override_reason"] = override_reason
                 domain = str(decision.get("domain") or "")
                 if domain in TOPIC_TERMS:
                     item["topic"] = domain
@@ -1066,6 +1149,8 @@ def apply_platform_semantic_review(
         fallback_count,
         rejection_reasons,
         error,
+        overridden_count,
+        override_reasons,
     )
 
 
@@ -1097,18 +1182,12 @@ def semantic_rejection_code(decision: dict[str, Any]) -> str:
 
 
 def semantic_decision_accepts(decision: dict[str, Any], item: dict[str, Any] | None = None) -> bool:
-    platform_relevant = (
-        decision.get("central_subject") is True
-        or decision.get("actionable_for_platform") is True
-    )
+    platform_relevant = decision.get("central_subject") is True or decision.get("actionable_for_platform") is True
     confidence = float(decision.get("confidence") or 0)
-    if (
-        platform_relevant
-        and decision.get("relevant_domain") is True
-        and decision.get("substantive") is True
-        and decision.get("low_value") is not True
-        and confidence >= PLATFORM_SEMANTIC_CONFIDENCE
-    ):
+    if semantic_model_accepts(decision):
+        return True
+    override_reason = semantic_rule_override_reason(decision, item)
+    if override_reason:
         return True
     if confidence >= PLATFORM_SEMANTIC_NEGATIVE_CONFIDENCE:
         return False
@@ -1118,6 +1197,45 @@ def semantic_decision_accepts(decision: dict[str, Any], item: dict[str, Any] | N
         and decision.get("relevant_domain") is True
         and quality_score >= PLATFORM_SEMANTIC_RULE_FALLBACK_SCORE
     )
+
+
+def semantic_model_accepts(decision: dict[str, Any]) -> bool:
+    platform_relevant = decision.get("central_subject") is True or decision.get("actionable_for_platform") is True
+    return (
+        platform_relevant
+        and decision.get("relevant_domain") is True
+        and decision.get("substantive") is True
+        and decision.get("low_value") is not True
+        and float(decision.get("confidence") or 0) >= PLATFORM_SEMANTIC_CONFIDENCE
+    )
+
+
+def semantic_rule_override_reason(
+    decision: dict[str, Any],
+    item: dict[str, Any] | None,
+) -> str:
+    """Return the bounded deterministic reason that overrules a model false negative."""
+    if not item or decision.get("relevant_domain") is not True:
+        return ""
+    quality_score = int(item.get("quality_score") or 0)
+    if quality_score < PLATFORM_SEMANTIC_RULE_FALLBACK_SCORE:
+        return ""
+    lower = combined_text(item).lower()
+    aliases = ["小红书", "xiaohongshu", "rednote", "xhs"]
+    if not matched_terms(lower, aliases):
+        return ""
+
+    if decision.get("low_value") is True or decision.get("substantive") is not True:
+        return ""
+    if platform_content_comparison_signal(item, lower, aliases):
+        return "platform_content_comparison"
+    if platform_case_evidence_signal(lower, aliases):
+        return "platform_case_evidence"
+    if method_structure_score(lower) < 10:
+        return ""
+    if explicit_platform_application_signal(lower, aliases):
+        return "explicit_platform_application"
+    return ""
 
 
 def strict_platform_relevance(item: dict[str, Any]) -> bool:
@@ -1143,12 +1261,17 @@ def semantic_review_report(
     fallback_count: int,
     rejection_reasons: dict[str, int] | None = None,
     error: str = "",
+    overridden_count: int = 0,
+    override_reasons: dict[str, int] | None = None,
 ) -> dict[str, Any]:
     return {
         "mode": mode,
         "reviewed_count": reviewed_count,
+        "accepted_count": max(0, reviewed_count + fallback_count - rejected_count),
         "rejected_count": rejected_count,
         "fallback_count": fallback_count,
+        "overridden_count": overridden_count,
+        "override_reasons": override_reasons or {},
         "rejection_reasons": rejection_reasons or {},
         "error": error,
     }
@@ -1524,8 +1647,11 @@ def public_semantic_review_status(status: dict[str, Any]) -> dict[str, Any]:
     return {
         "mode": status.get("mode", "unknown"),
         "reviewed_count": int(status.get("reviewed_count") or 0),
+        "accepted_count": int(status.get("accepted_count") or 0),
         "rejected_count": int(status.get("rejected_count") or 0),
         "fallback_count": int(status.get("fallback_count") or 0),
+        "overridden_count": int(status.get("overridden_count") or 0),
+        "override_reasons": status.get("override_reasons") or {},
         "rejection_reasons": status.get("rejection_reasons") or {},
     }
 
@@ -1592,6 +1718,121 @@ def platform_focus_signal(lower: str, aliases: list[str]) -> bool:
         rf"(?:{alias_pattern})[\s\S]{{0,30}}(?:支持|适配|自动化|工作流|发布|预览后手动)",
     ]
     return any(re.search(pattern, lower, re.IGNORECASE) for pattern in patterns)
+
+
+def platform_case_evidence_signal(lower: str, aliases: list[str]) -> bool:
+    """Detect a result that is explicitly tied to a Xiaohongshu action or account."""
+    alias_pattern = "|".join(re.escape(str(alias).strip().lower()) for alias in aliases if str(alias).strip())
+    if not alias_pattern:
+        return False
+    bound_alias = (
+        rf"(?:(?:发到|发布到|同步到|在|做|运营)\s*(?:{alias_pattern})|"
+        rf"(?:{alias_pattern})(?:账号|起号|笔记|店铺|发布|发|卖|运营|矩阵|粉丝|上))"
+    )
+    engagement_result = (
+        r"(?:起号第?\s*\d+\s*天|一发就(?:火|爆)|篇篇爆款|"
+        r"(?:\d[\d,.]*\s*(?:万|千|k|w|\+)?\s*(?:阅读|浏览|播放|曝光|点赞|赞|收藏|粉丝|涨粉|评论|商单))|"
+        r"(?:(?:阅读|浏览|播放|曝光|点赞|赞|收藏|粉丝|涨粉|评论|商单)\s*(?:达到|破|有|为|[:：])?\s*"
+        r"\d[\d,.]*\s*(?:万|千|k|w|\+)?))"
+    )
+    nearby_patterns = [
+        rf"{bound_alias}[\s\S]{{0,90}}{engagement_result}",
+        rf"{engagement_result}[\s\S]{{0,90}}{bound_alias}",
+    ]
+    if any(re.search(pattern, lower, re.IGNORECASE) for pattern in nearby_patterns):
+        return True
+    revenue_pattern = (
+        rf"{bound_alias}[\s\S]{{0,35}}(?:卖|售卖|店铺|带货|变现)"
+        rf"[\s\S]{{0,35}}(?:赚|收入|收益|成交)[^。！？\n]{{0,12}}\d"
+    )
+    return bool(re.search(revenue_pattern, lower, re.IGNORECASE))
+
+
+def explicit_platform_application_signal(lower: str, aliases: list[str]) -> bool:
+    alias_pattern = "|".join(re.escape(str(alias).strip().lower()) for alias in aliases if str(alias).strip())
+    if not alias_pattern:
+        return False
+    generic_platform_claim = re.search(
+        rf"(?:适合|用于|用来|面向)[^。！？\n]{{0,8}}(?:所有|各个?|任何|多)平台"
+        rf"[^。！？\n]{{0,45}}(?:{alias_pattern})",
+        lower,
+        re.IGNORECASE,
+    )
+    if generic_platform_claim:
+        return False
+    post_alias_binding = (
+        r"(?:适合|用于|用来|面向|配图|图文|提示词|分镜|脚本|模板|工作流|"
+        r"自动化|风控|平台限制|内容形式)"
+    )
+    has_post_alias_binding = bool(
+        re.search(
+            rf"(?:{alias_pattern})[^。！？\n]{{0,30}}{post_alias_binding}",
+            lower,
+            re.IGNORECASE,
+        )
+    )
+    pre_alias_matches = re.finditer(
+        rf"(?:适合|用于|用来|面向)[^。！？\n]{{0,28}}(?:{alias_pattern})",
+        lower,
+        re.IGNORECASE,
+    )
+    other_platform_pattern = re.compile(r"(?:公众号|抖音|视频号|微博|快手|b站|bilibili|tiktok)", re.IGNORECASE)
+    has_direct_pre_alias_binding = any(
+        not other_platform_pattern.search(match.group(0))
+        for match in pre_alias_matches
+    )
+    if not has_post_alias_binding and not has_direct_pre_alias_binding:
+        return False
+    method_hits = matched_terms(
+        lower,
+        ["图文", "配图", "提示词", "分镜", "脚本", "模板", "工作流", "选题", "对标", "复盘", "数据反馈", "内容形式"],
+    )
+    return len(set(method_hits)) >= 2
+
+
+def platform_risk_evidence_signal(lower: str, aliases: list[str]) -> bool:
+    """Recognize a concrete platform scam or data-risk chain, not a generic privacy mention."""
+    if not matched_terms(lower, aliases):
+        return False
+    risk_terms = matched_terms(
+        lower,
+        ["外部地址", "外链", "手机号", "个人信息", "个人数据", "数据卖", "诈骗", "骗局", "钓鱼", "盗号"],
+    )
+    if len(risk_terms) < 2:
+        return False
+    return bool(re.search(r"(?:然后|后续|流程|会给|引导|让你|不要|千万|小心|再把)", lower))
+
+
+def platform_content_comparison_signal(
+    item: dict[str, Any],
+    lower: str,
+    aliases: list[str],
+) -> bool:
+    if item.get("links") or re.search(r"https?://\S+", lower):
+        return False
+    signal_length = len(re.findall(r"[a-z0-9\u3400-\u9fff]", lower))
+    if signal_length < 45:
+        return False
+    alias_pattern = "|".join(re.escape(str(alias).strip().lower()) for alias in aliases if str(alias).strip())
+    if not alias_pattern:
+        return False
+    format_pattern = r"(?:手写|电脑码字|露脸|不露脸|图文|视频|封面|标题|笔记|口播|实拍)"
+    has_platform_format = any(
+        re.search(pattern, lower, re.IGNORECASE)
+        for pattern in (
+            rf"(?:{alias_pattern})[^。！？\n]{{0,70}}{format_pattern}",
+            rf"{format_pattern}[^。！？\n]{{0,70}}(?:{alias_pattern})",
+        )
+    )
+    result_pattern = r"(?:爆款|流量|曝光|阅读|播放|点赞|收藏|涨粉)"
+    direct_comparison = re.search(
+        rf"{format_pattern}[^。！？\n]{{0,45}}{result_pattern}[^。！？\n]{{0,35}}"
+        rf"(?:但是|但|一旦|相比|反而|断崖式)[^。！？\n]{{0,45}}{format_pattern}"
+        rf"[^。！？\n]{{0,35}}{result_pattern}",
+        lower,
+        re.IGNORECASE,
+    )
+    return has_platform_format and bool(direct_comparison)
 
 
 def method_structure_score(lower: str) -> int:

@@ -117,6 +117,18 @@ def main() -> None:
     short_reaction_decision = score_platform_post(short_reaction_link, platform)
     assert not short_reaction_decision["accepted"], "short reaction links should not enter platform trend collection"
 
+    unresolved_article = {
+        "clean_text": "https://t.co/article-only",
+        "links": [],
+        "media": [{"url": "https://example.com/cover.jpg", "type": "photo", "source": "card"}],
+        "metrics": {"likes": 61, "views": 43322, "replies": 116},
+        "author_followers": 1000,
+    }
+    unresolved_decision = score_platform_post(unresolved_article, platform)
+    assert unresolved_decision["reason_code"] == "article_content_unavailable", (
+        "an article shell should be marked unresolved instead of classified as off-topic"
+    )
+
     platform_news = {
         "clean_text": "杜撰“小红书上市失败”贴文，被警方行拘。涉企网络谣言案件通报。",
         "links": [],
@@ -196,6 +208,65 @@ def main() -> None:
         "reusable content templates with explicit Xiaohongshu applicability should enter review"
     )
 
+    live_dictionary_template = {
+        "clean_text": (
+            "handraw-style 把 216 种手绘风格做成编号和中英文提示词，先选风格再替换主题，"
+            "做公众号、小红书配图时可以让系列图片长期保持一致。"
+        ),
+        "links": ["https://github.com/example/handraw-style"],
+        "metrics": {"likes": 116, "reposts": 23, "replies": 22, "views": 7398},
+        "author_followers": 0,
+    }
+    assert score_platform_post(live_dictionary_template, platform)["accepted"], (
+        "explicit Xiaohongshu prompt and image workflows must reach semantic review"
+    )
+
+    live_result_case = {
+        "clean_text": (
+            "我用 AI 三天做出一个游戏，发到小红书一发就火了：4 万阅读、2000 个赞，"
+            "随后把评论里的玩家反馈整理成需求池继续迭代。"
+        ),
+        "links": [],
+        "metrics": {"likes": 19, "reposts": 3, "replies": 7, "views": 2254},
+        "author_followers": 0,
+    }
+    live_result_decision = score_platform_post(live_result_case, platform)
+    assert live_result_decision["accepted"], (
+        "a concrete Xiaohongshu result and feedback loop must not require a legacy intent keyword"
+    )
+    assert "案例复盘" in live_result_decision["item"]["tags"]
+
+    platform_scam_chain = {
+        "clean_text": (
+            "小红书有人用高价回收名表获客，随后发外部地址让你填写手机号。千万不要填，"
+            "他们会把个人信息和个人数据再卖给别人，这是完整的钓鱼链路。"
+        ),
+        "links": [],
+        "metrics": {"likes": 5, "replies": 1, "views": 221},
+        "author_followers": 0,
+    }
+    scam_decision = score_platform_post(platform_scam_chain, platform)
+    assert scam_decision["accepted"], "a concrete Xiaohongshu data-risk chain should reach semantic review"
+    assert "风控对抗" in scam_decision["item"]["tags"]
+
+    normal_delete_word_case = {
+        "clean_text": (
+            "品牌没有删帖公关，而是 48 小时把误译做成限定产品并售罄，随后借助小红书、"
+            "抖音持续发布这个梗，引发一轮流量。"
+        ),
+        "links": [],
+        "metrics": {"likes": 127, "reposts": 10, "replies": 24, "views": 53521},
+        "author_followers": 0,
+    }
+    assert score_platform_post(normal_delete_word_case, platform)["accepted"], (
+        "ordinary discussion of deleting a post should not trip the takedown-service policy"
+    )
+    delete_service_ad = {
+        **normal_delete_word_case,
+        "clean_text": "小红书专业删帖服务，可处理负面笔记，联系客服报价下单。",
+    }
+    assert not score_platform_post(delete_service_ad, platform)["accepted"]
+
     result_case = {
         "clean_text": (
             "这个小红书账号每天两更，一篇垂直内容、一篇跨平台内容截图。停更半个月后后台仍有"
@@ -223,6 +294,167 @@ def main() -> None:
         {**low_confidence_rejection, "confidence": 0.90},
         reviewed_result_case,
     ), "a high-confidence low-value decision should remain a veto"
+
+    multi_platform_playbook = {
+        "clean_text": (
+            "公众号、小红书和 X 都适合图文分享。\n1. 新手先用轻量图文验证内容；"
+            "\n2. 以流量为目标选题并对标账号；\n3. 选择最简单的形式，再根据真实数据持续调整。"
+        ),
+        "links": [],
+        "metrics": {"likes": 100, "reposts": 10, "replies": 20, "views": 9000},
+        "author_followers": 0,
+    }
+    playbook_rule_decision = score_platform_post(multi_platform_playbook, workflow_platform)
+    assert playbook_rule_decision["accepted"]
+    assert semantic_decision_accepts(
+        {
+            "central_subject": False,
+            "actionable_for_platform": False,
+            "relevant_domain": True,
+            "substantive": True,
+            "low_value": False,
+            "confidence": 0.86,
+        },
+        {**multi_platform_playbook, **playbook_rule_decision["item"]},
+    ), "strong explicit platform application should override a model centrality false negative"
+
+    platform_observation = {
+        "clean_text": (
+            "小红书上有个讲 AI 课程的博主，手写笔记基本篇篇爆款，"
+            "但是一旦改成电脑码字或者露脸，流量就断崖式下跌，这是何原因？"
+        ),
+        "links": [],
+        "metrics": {"likes": 71, "reposts": 3, "replies": 16, "views": 17330},
+        "author_followers": 0,
+    }
+    observation_rule_decision = score_platform_post(platform_observation, platform)
+    assert observation_rule_decision["accepted"]
+    rejected_observation_decision = {
+        "central_subject": True,
+        "actionable_for_platform": False,
+        "relevant_domain": True,
+        "substantive": False,
+        "low_value": True,
+        "confidence": 0.82,
+    }
+    assert not semantic_decision_accepts(
+        rejected_observation_decision,
+        {**platform_observation, **observation_rule_decision["item"]},
+    ), "low_value remains an independent veto even for a specific platform observation"
+    assert semantic_decision_accepts(
+        {
+            "central_subject": False,
+            "actionable_for_platform": False,
+            "relevant_domain": True,
+            "substantive": True,
+            "low_value": False,
+            "confidence": 0.92,
+        },
+        {**platform_observation, **observation_rule_decision["item"]},
+    ), "a substantive no-link format comparison can recover from a centrality false negative"
+
+    paid_growth_comparison = {
+        **platform_observation,
+        "clean_text": (
+            "小红书图文刷赞后流量更高，但是一旦改发视频流量就下降。提供刷量、付费涨粉服务，"
+            "需要的请私信下单。"
+        ),
+        "quality_score": 90,
+    }
+    assert not semantic_decision_accepts(
+        {**rejected_observation_decision, "confidence": 0.99},
+        paid_growth_comparison,
+    ), "a format comparison must never bypass a high-confidence low-value veto"
+
+    generic_tutorial_namedrop = {
+        "clean_text": (
+            "通用短视频教程：\n1. 找选题；\n2. 写脚本和分镜；\n3. 发布后复盘。"
+            "这套方法适合所有平台，最后做出的成片也可以发布到小红书。"
+        ),
+        "links": [],
+        "metrics": {"likes": 120, "reposts": 20, "replies": 15, "views": 12000},
+        "author_followers": 0,
+    }
+    generic_rule_decision = score_platform_post(generic_tutorial_namedrop, workflow_platform)
+    assert generic_rule_decision["accepted"]
+    assert not semantic_decision_accepts(
+        {
+            "central_subject": False,
+            "actionable_for_platform": False,
+            "relevant_domain": True,
+            "substantive": True,
+            "low_value": False,
+            "confidence": 0.99,
+        },
+        {**generic_tutorial_namedrop, **generic_rule_decision["item"]},
+    ), "a generic tutorial with an end-of-post Xiaohongshu namedrop must not be force-accepted"
+
+    enumerated_platform_namedrop = {
+        **generic_tutorial_namedrop,
+        "clean_text": (
+            "通用短视频教程：\n1. 找选题；\n2. 写脚本和分镜；\n3. 发布后复盘。"
+            "这套图文模板适合公众号、抖音和小红书。"
+        ),
+    }
+    enumerated_rule_decision = score_platform_post(enumerated_platform_namedrop, workflow_platform)
+    assert enumerated_rule_decision["accepted"]
+    assert not semantic_decision_accepts(
+        {
+            "central_subject": False,
+            "actionable_for_platform": False,
+            "relevant_domain": True,
+            "substantive": True,
+            "low_value": False,
+            "confidence": 0.99,
+        },
+        {**enumerated_platform_namedrop, **enumerated_rule_decision["item"]},
+    ), "an enumerated list of platforms must not be treated as Xiaohongshu-specific application evidence"
+
+    grey_growth_link = {
+        "clean_text": "小红书网盘拉新项目，两种变现方式结合，当日收益 1034，详细拆解见链接。",
+        "links": ["https://example.com/promo"],
+        "metrics": {"likes": 25, "reposts": 5, "replies": 3, "views": 4000},
+        "author_followers": 0,
+        "quality_score": 99,
+    }
+    assert not semantic_decision_accepts(
+        {
+            "central_subject": True,
+            "actionable_for_platform": False,
+            "relevant_domain": True,
+            "substantive": False,
+            "low_value": True,
+            "confidence": 0.90,
+        },
+        grey_growth_link,
+    ), "link-led grey growth promotions must remain rejected"
+
+    class FalseNegativeReviewService:
+        configured = True
+        classification_last_error = ""
+
+        def classify_platform_batch(self, items):
+            return {
+                items[0]["id"]: {
+                    "central_subject": False,
+                    "actionable_for_platform": False,
+                    "relevant_domain": True,
+                    "substantive": True,
+                    "low_value": False,
+                    "domain": "爆文与内容结构",
+                    "confidence": 0.86,
+                    "reason": "误判为通用多平台方法",
+                }
+            }
+
+    overridden_rows, overridden_status = apply_platform_semantic_review(
+        [{"post_id": "playbook", "language": "zh", **multi_platform_playbook, **playbook_rule_decision["item"]}],
+        FalseNegativeReviewService(),
+    )
+    assert [row["post_id"] for row in overridden_rows] == ["playbook"]
+    assert overridden_status["accepted_count"] == 1
+    assert overridden_status["overridden_count"] == 1
+    assert overridden_status["override_reasons"] == {"explicit_platform_application": 1}
 
     class ReviewService:
         configured = True

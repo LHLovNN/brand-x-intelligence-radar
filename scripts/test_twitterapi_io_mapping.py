@@ -110,6 +110,44 @@ def main() -> None:
     top_mapped = adapter._map_tweet(sample, '"joybuy uk" refund -filter:retweets', query_type="Top")
     assert top_mapped["query_type"] == "Top"
 
+    article_mapped = adapter._map_tweet(
+        {
+            **sample,
+            "id": "1900000000000000099",
+            "text": "https://t.co/article-only",
+            "articleData": {
+                "article": {
+                    "title": "小红书图文起号复盘",
+                    "preview_text": "用三种封面测试首周流量。",
+                    "contents": [
+                        {"type": "unstyled", "text": "第一步先固定选题范围。"},
+                        {"type": "unstyled", "text": "第二步根据收藏率调整封面。"},
+                    ],
+                }
+            },
+        },
+        '"小红书" 起号 -filter:retweets',
+    )
+    assert article_mapped["text"] == (
+        "小红书图文起号复盘\n\n用三种封面测试首周流量。\n\n"
+        "第一步先固定选题范围。\n\n第二步根据收藏率调整封面。"
+    )
+    teaser_article = adapter._map_tweet(
+        {
+            **sample,
+            "id": "1900000000000000100",
+            "text": "这篇长文记录了完整过程，全文见 https://t.co/article-only",
+            "articleData": {
+                "title": "小红书账号复盘",
+                "contents": [{"type": "unstyled", "text": "连续更新三十天后，收藏率明显提升。"}],
+            },
+        },
+        '"小红书" 复盘 -filter:retweets',
+    )
+    assert teaser_article["text"] == (
+        "这篇长文记录了完整过程，全文见\n\n小红书账号复盘\n\n连续更新三十天后，收藏率明显提升。"
+    )
+
     class CaptureAdapter(TwitterApiIoAdapter):
         def __init__(self) -> None:
             super().__init__(api_key="test-key")
@@ -122,6 +160,11 @@ def main() -> None:
 
     capture = CaptureAdapter()
     capture.search_posts("joybuy", "2026-07-16T00:00:00Z", "2026-07-17T00:00:00Z", 1, query_type="Top")
+    assert capture.last_search_stats == {
+        "pages_used": 1,
+        "rows_returned": 0,
+        "stop_reason": "empty_page",
+    }
     assert capture.requests[0]["params"]["queryType"] == "Top"
     assert capture.requests[0]["budget_scope"] == "search"
     assert "since_time:" in capture.requests[0]["params"]["query"]
@@ -227,6 +270,11 @@ def main() -> None:
     partial_rows = partial.search_posts("joybuy", "2026-07-16T00:00:00Z", "2026-07-17T00:00:00Z", 5)
     assert [row["text"] for row in partial_rows] == ["Joybuy page 1", "Joybuy page 2"]
     assert partial.request_budget_exhausted is True
+    assert partial.last_search_stats == {
+        "pages_used": 2,
+        "rows_returned": 2,
+        "stop_reason": "request_budget",
+    }
 
     class ScopedPaginationAdapter(TwitterApiIoAdapter):
         def __init__(self) -> None:
@@ -265,6 +313,7 @@ def main() -> None:
     )
     assert len(scoped_search_rows) == 4, "normal search should still use the regular page cap"
     assert len(scoped_search.requests) == 4
+    assert scoped_search.last_search_stats["stop_reason"] == "target_met"
 
     scoped_context = ScopedPaginationAdapter()
     scoped_context_rows = scoped_context.conversation_posts(
@@ -276,6 +325,33 @@ def main() -> None:
     assert len(scoped_context_rows) == 2, "conversation context should stop at the context page cap"
     assert len(scoped_context.requests) == 2
     assert all(request["budget_scope"] == "context" for request in scoped_context.requests)
+    assert scoped_context.last_search_stats == {
+        "pages_used": 2,
+        "rows_returned": 2,
+        "stop_reason": "page_limit",
+    }
+
+    class CursorStopAdapter(TwitterApiIoAdapter):
+        def __init__(self, payloads) -> None:
+            super().__init__(api_key="test-key", request_pause_seconds=0)
+            self.payloads = list(payloads)
+
+        def _get_json(self, path, params, budget_scope="search"):
+            self._reserve_request_budget(budget_scope)
+            return self.payloads.pop(0)
+
+    missing_cursor = CursorStopAdapter([{"tweets": [{**sample, "id": "missing-cursor"}]}])
+    assert len(missing_cursor.search_posts("joybuy", "2026-07-16T00:00:00Z", "2026-07-17T00:00:00Z", 2)) == 1
+    assert missing_cursor.last_search_stats["stop_reason"] == "missing_next_cursor"
+
+    repeated_cursor = CursorStopAdapter(
+        [
+            {"tweets": [{**sample, "id": "repeat-1"}], "next_cursor": "same"},
+            {"tweets": [{**sample, "id": "repeat-2"}], "next_cursor": "same"},
+        ]
+    )
+    assert len(repeated_cursor.search_posts("joybuy", "2026-07-16T00:00:00Z", "2026-07-17T00:00:00Z", 3)) == 2
+    assert repeated_cursor.last_search_stats["stop_reason"] == "repeated_cursor"
 
     scoped_thread = ScopedPaginationAdapter()
     scoped_thread_rows = scoped_thread.thread_context_posts(

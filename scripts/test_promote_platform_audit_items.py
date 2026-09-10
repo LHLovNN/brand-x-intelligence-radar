@@ -113,6 +113,7 @@ def main() -> None:
     assert plan["payload"]["collection_status"]["translation"]["counts"] == {"source_chinese": 2}
     assert plan["payload"]["collection_status"]["semantic_filtered"] == 0
     assert plan["payload"]["collection_status"]["semantic_review"]["rejected_count"] == 0
+    assert plan["payload"]["collection_status"]["semantic_review"]["accepted_count"] == 1
     assert plan["audit"]["summary"]["accepted_count"] == 2
     assert plan["audit"]["summary"]["rejected_count"] == 1
     assert plan["audit"]["summary"]["expected_rejected_count"] == 1

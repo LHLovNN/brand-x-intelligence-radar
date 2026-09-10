@@ -38,8 +38,11 @@ def test_platform_review_prompt_has_two_acceptance_paths() -> None:
     assert "多平台内容可以为 false，不要为了收录而虚报 true" in prompt
     assert "案例不必写成系统教程" in prompt
     assert "具体动作加结果数据本身就可以为 true" in prompt
+    assert "多平台方法不要求提供小红书独有的机制或技术适配" in prompt
+    assert "即使这些方法也适用于公众号、抖音或 X" in prompt
     assert "只宣称‘支持小红书等平台’" in prompt
-    assert "低俗色情、黑灰产内容，拒绝" in prompt
+    assert "低俗色情和其他黑灰产内容，拒绝" in prompt
+    assert "low_value 是独立否决项" in prompt
     for domain in PLATFORM_REVIEW_DOMAINS:
         assert domain in prompt
 
@@ -52,6 +55,29 @@ def test_platform_review_prompt_contains_regression_examples() -> None:
     assert "每天两更、具体内容形式" in prompt
     assert "涨粉互动和商单结果" in prompt
     assert "不得仅因是多平台内容而拒绝" in prompt
+    assert "小红书适合图文起步" in prompt
+    assert "先用轻量图文验证内容与洞察" in prompt
+    assert "对标账号和选择简单形式" in prompt
+    assert "正常、合规的数字产品已经在小红书产生收入或订单" in prompt
+    assert "生产该产品所需的提示词仓库" in prompt
+    assert "通用生产工具不必具备小红书独有功能" in prompt
+    assert "手写笔记持续成为爆款" in prompt
+    assert "属于可验证的平台现象假设" in prompt
+
+
+def test_platform_review_prompt_keeps_risk_vetoes() -> None:
+    prompt = build_platform_review_prompt()
+
+    for rejected_pattern in (
+        "盗版或绝版资料售卖",
+        "网盘拉新",
+        "AI 代充",
+        "付费打粉或评论",
+        "规避平台规则的引流",
+        "低俗色情",
+    ):
+        assert rejected_pattern in prompt
+    assert "即使步骤具体也必须判 low_value=true" in prompt
 
 
 def test_platform_review_parser_keeps_actionable_field() -> None:
@@ -100,5 +126,6 @@ def test_platform_review_parser_keeps_actionable_field() -> None:
 if __name__ == "__main__":
     test_platform_review_prompt_has_two_acceptance_paths()
     test_platform_review_prompt_contains_regression_examples()
+    test_platform_review_prompt_keeps_risk_vetoes()
     test_platform_review_parser_keeps_actionable_field()
     print("Platform review prompt tests passed.")

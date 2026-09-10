@@ -73,7 +73,6 @@ PLATFORM_HARD_NOISE_TERMS = [
     "约会软件",
     "成人交友",
     "小黄书",
-    "删帖",
     "删除微信公众号文章",
     "删除微博",
     "删除推特",
@@ -135,6 +134,10 @@ PLATFORM_HARD_NOISE_TERMS = [
 
 PLATFORM_HARD_NOISE_PATTERNS = [
     *CONTEXT_LOW_QUALITY_PATTERNS[-3:],
+    re.compile(
+        r"(?:代删帖|有偿删帖|专业删帖|删帖服务|删帖报价|联系.{0,8}删帖|删帖.{0,8}(?:下单|客服))",
+        re.IGNORECASE,
+    ),
 ]
 
 TG_LOW_VALUE_ADULT_PATTERNS = [

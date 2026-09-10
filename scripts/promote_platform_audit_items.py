@@ -232,6 +232,10 @@ def build_promotion_plan(
     semantic_review = deepcopy(collection_status.get("semantic_review") or {})
     if semantic_review or semantic_rejections:
         semantic_review["rejected_count"] = len(semantic_rejections)
+        semantic_input_count = int(semantic_review.get("reviewed_count") or 0) + int(
+            semantic_review.get("fallback_count") or 0
+        )
+        semantic_review["accepted_count"] = max(0, semantic_input_count - len(semantic_rejections))
         semantic_review["rejection_reasons"] = count_rejection_values(semantic_rejections, "reason_code")
         collection_status["semantic_review"] = semantic_review
     collection_status["semantic_filtered"] = len(semantic_rejections)

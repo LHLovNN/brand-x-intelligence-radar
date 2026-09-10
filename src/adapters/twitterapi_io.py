@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import socket
 import sys
 import time
@@ -45,6 +46,11 @@ class TwitterApiIoAdapter(XSourceBase):
         self.request_budget_exhausted = False
         self.context_request_budget_exhausted = False
         self.last_request_at = 0.0
+        self.last_search_stats: dict[str, Any] = {
+            "pages_used": 0,
+            "rows_returned": 0,
+            "stop_reason": "not_started",
+        }
 
     def search_posts(
         self,
@@ -56,6 +62,7 @@ class TwitterApiIoAdapter(XSourceBase):
         budget_scope: str = "search",
     ) -> list[dict[str, Any]]:
         if limit <= 0:
+            self.last_search_stats = {"pages_used": 0, "rows_returned": 0, "stop_reason": "target_met"}
             return []
 
         query_type = self._normalized_query_type(query_type)
@@ -66,46 +73,65 @@ class TwitterApiIoAdapter(XSourceBase):
         cursor: str | None = None
         pages = 0
         max_pages = self._max_pages_for_scope(budget_scope)
+        stop_reason = "page_limit"
 
-        while len(posts) < limit and pages < max_pages:
-            if cursor:
-                if cursor in seen_cursors:
+        try:
+            while len(posts) < limit and pages < max_pages:
+                if cursor:
+                    if cursor in seen_cursors:
+                        stop_reason = "repeated_cursor"
+                        break
+                    seen_cursors.add(cursor)
+                params = {
+                    "query": bounded_query,
+                    "queryType": query_type,
+                }
+                if cursor:
+                    params["cursor"] = cursor
+
+                try:
+                    payload = self._get_json("/twitter/tweet/advanced_search", params, budget_scope=budget_scope)
+                except ProviderBudgetExceeded:
+                    stop_reason = "request_budget"
+                    if posts:
+                        break
+                    raise
+                pages += 1
+                rows = self._extract_tweets(payload)
+                if not rows:
+                    stop_reason = "empty_page"
                     break
-                seen_cursors.add(cursor)
-            params = {
-                "query": bounded_query,
-                "queryType": query_type,
-            }
-            if cursor:
-                params["cursor"] = cursor
 
-            try:
-                payload = self._get_json("/twitter/tweet/advanced_search", params, budget_scope=budget_scope)
-            except ProviderBudgetExceeded:
-                if posts:
-                    return posts
-                raise
-            pages += 1
-            rows = self._extract_tweets(payload)
-            if not rows:
-                break
-
-            for row in rows:
-                post = self._map_tweet(row, query, query_type=query_type)
-                post_id = post["post_id"]
-                if post_id in seen_ids:
-                    continue
-                seen_ids.add(post_id)
-                posts.append(post)
+                for row in rows:
+                    post = self._map_tweet(row, query, query_type=query_type)
+                    post_id = post["post_id"]
+                    if post_id in seen_ids:
+                        continue
+                    seen_ids.add(post_id)
+                    posts.append(post)
+                    if len(posts) >= limit:
+                        stop_reason = "target_met"
+                        break
                 if len(posts) >= limit:
                     break
 
-            cursor = self._extract_next_cursor(payload)
-            if not cursor:
-                break
-            time.sleep(self.request_pause_seconds)
+                cursor = self._extract_next_cursor(payload)
+                if not cursor:
+                    stop_reason = "missing_next_cursor"
+                    break
+                time.sleep(self.request_pause_seconds)
 
-        return posts
+            return posts
+        except Exception:
+            if stop_reason != "request_budget":
+                stop_reason = "error"
+            raise
+        finally:
+            self.last_search_stats = {
+                "pages_used": pages,
+                "rows_returned": len(posts),
+                "stop_reason": stop_reason,
+            }
 
     def _normalized_query_type(self, query_type: str) -> str:
         value = str(query_type or "Latest").strip().lower()
@@ -358,7 +384,7 @@ class TwitterApiIoAdapter(XSourceBase):
         return {
             "post_id": post_id or url,
             "url": url,
-            "text": self._string_value(tweet, "text", "full_text", "fullText", "content") or "",
+            "text": self._tweet_text(tweet),
             "author_id": self._string_value(author, "id", "user_id", "userId", "rest_id"),
             "author_name": self._string_value(author, "name", "display_name", "displayName") or author_handle,
             "author_handle": author_handle,
@@ -427,6 +453,54 @@ class TwitterApiIoAdapter(XSourceBase):
             "query_type": self._normalized_query_type(query_type),
             "brand_candidate": "",
         }
+
+    def _tweet_text(self, tweet: dict[str, Any]) -> str:
+        text = self._string_value(tweet, "text", "full_text", "fullText") or ""
+        if not text:
+            content = self._value(tweet, "content")
+            if isinstance(content, str):
+                text = content
+        article_text = self._embedded_article_text(tweet)
+        if not article_text:
+            return text
+        intro = re.sub(r"https?://\S+", "", text).strip()
+        if not intro:
+            return article_text
+        if intro in article_text:
+            return article_text
+        return f"{intro}\n\n{article_text}"
+
+    def _embedded_article_text(self, tweet: dict[str, Any]) -> str:
+        """Use article text already embedded in a tweet response without making another API call."""
+        candidates: list[dict[str, Any]] = []
+        for key in ("article", "articleData", "article_data"):
+            value = self._value(tweet, key)
+            if isinstance(value, dict):
+                candidates.extend(self._article_candidates(value))
+        parts: list[str] = []
+        for candidate in candidates:
+            for key in ("title", "preview_text", "previewText"):
+                value = candidate.get(key)
+                if isinstance(value, str) and value.strip() and value.strip() not in parts:
+                    parts.append(value.strip())
+            for key in ("contents", "content", "blocks"):
+                value = candidate.get(key)
+                if not isinstance(value, list):
+                    continue
+                for block in value:
+                    if not isinstance(block, dict):
+                        continue
+                    block_text = block.get("text")
+                    if isinstance(block_text, str) and block_text.strip() and block_text.strip() not in parts:
+                        parts.append(block_text.strip())
+        return "\n\n".join(parts)
+
+    def _article_candidates(self, value: dict[str, Any]) -> list[dict[str, Any]]:
+        candidates = [value]
+        for child in value.values():
+            if isinstance(child, dict):
+                candidates.extend(self._article_candidates(child))
+        return candidates
 
     def _metric_value(self, tweet: dict[str, Any], *keys: str, allow_none: bool = False) -> int | None:
         value = self._int_value(tweet, *keys, default=None)
