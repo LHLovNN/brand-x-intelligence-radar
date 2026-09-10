@@ -1,16 +1,18 @@
 {
   "status": "normal",
-  "raw_posts_collected": 34,
-  "effective_posts": 33,
+  "raw_posts_collected": 63,
+  "effective_posts": 60,
   "brand_breakdown": {
-    "primary_candidates": 24,
-    "primary_effective": 24,
-    "competitor_candidates": 10,
-    "competitor_effective": 9
+    "primary_candidates": 48,
+    "primary_effective": 45,
+    "competitor_candidates": 15,
+    "competitor_effective": 15
   },
   "translation": {
     "counts": {
-      "translated": 34
+      "provider_supplied": 1,
+      "source_chinese": 1,
+      "translated": 61
     },
     "missing_count": 0,
     "fallback_original_count": 0
