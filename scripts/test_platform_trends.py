@@ -554,6 +554,8 @@ def main() -> None:
         "quality_score": 99,
     }
     assert platform_specific_hard_risk_reason(grey_growth_link["clean_text"]) == "cloud_drive_referral"
+    assert platform_specific_hard_risk_reason("某平台内容被指为中共统战和大外宣") == "political_advocacy"
+    assert platform_specific_hard_risk_reason("分析小红书在不同国家的内容审核政策") is None
     assert not semantic_decision_accepts(
         {
             "central_subject": True,

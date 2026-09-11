@@ -2065,6 +2065,10 @@ def platform_specific_hard_risk_reason(text: str) -> str | None:
         "cloud_drive_referral": r"(?:小红书[^。！？\n]{0,35})?网盘拉新",
         "ai_recharge_lead_generation": r"ai\s*代充[\s\S]{0,180}(?:引流|获客|被动收入|教程|sop|赚钱)",
         "paid_fake_engagement": r"(?:刷赞|付费涨粉|付费评论|打粉|给[^。！？\n]{0,12}(?:元|块钱)[^。！？\n]{0,12}评论)",
+        "political_advocacy": (
+            r"(?:中共|中国共产党|ccp)[\s\S]{0,80}(?:统战|内外宣|大外宣|干预.{0,12}选举|灭亡)|"
+            r"(?:统战|内外宣|大外宣|干预.{0,12}选举|灭亡)[\s\S]{0,80}(?:中共|中国共产党|ccp)"
+        ),
     }
     for reason, pattern in patterns.items():
         if re.search(pattern, lower, re.IGNORECASE):
