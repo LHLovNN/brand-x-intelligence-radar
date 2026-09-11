@@ -15,7 +15,8 @@ from src.pipeline.platform_trends import (
     clean_post_text,
     collection_status,
     effective_platform_intent_terms,
-    platform_query_candidate_limit,
+    passes_platform_metric_gate,
+    platform_query_tasks,
     platform_query_request_allowance,
     platform_acceptance_path,
     platform_rejection_detail,
@@ -746,18 +747,26 @@ def main() -> None:
     assert len(queries) == 2, "platform trend queries should split into configured topic groups"
     assert all("#xhs" in query for query in queries)
     assert all(len(query) < 180 for query in queries), "split platform trend queries should stay short enough for stable Top search"
-    assert platform_query_candidate_limit(400, len(queries)) == 200
-    assert platform_query_candidate_limit(400, 5) == 80
-    assert platform_query_candidate_limit(600, 6, 100) == 100
+    assert platform_query_tasks(["q1", "q2"], 2) == [
+        (1, 0, "q1"),
+        (1, 1, "q2"),
+        (2, 0, "q1"),
+        (2, 1, "q2"),
+    ]
 
     live_config = json.loads((ROOT / "config" / "platform_trends.json").read_text(encoding="utf-8"))
     live_platform = live_config["platforms"]["xiaohongshu"]
     assert len(live_platform["query_groups"]) == 6
     assert "xhs" not in live_platform["query_aliases"]
     assert "#xhs" in live_platform["query_aliases"]
-    assert live_platform["max_candidates_per_query"] == 100
-    assert live_platform["max_candidates_per_day"] == 600
+    assert "max_candidates_per_query" not in live_platform
+    assert "max_candidates_per_day" not in live_platform
+    assert live_platform["query_rounds"] == 2
+    assert live_platform["max_pages_per_query_round"] == 3
     assert live_platform["max_source_requests_per_run"] == 50
+    assert live_platform["min_likes_per_item"] == 1
+    assert passes_platform_metric_gate({"view_count": 100, "like_count": 1}, 100, 1)
+    assert not passes_platform_metric_gate({"view_count": 100, "like_count": 0}, 100, 1)
 
     globally_seen = {"cross-query"}
     unique_rows, uniqueness = unique_platform_query_rows(
@@ -779,20 +788,25 @@ def main() -> None:
     }
 
     class GreedyBudgetSource:
-        def __init__(self) -> None:
-            self.max_requests_per_run = 50
+        def __init__(self, max_requests_per_run=50) -> None:
+            self.max_requests_per_run = max_requests_per_run
+            self.max_pages_per_query = 99
             self.requests_used = 0
             self.request_budget_exhausted = False
+            self.calls = []
 
         def search_posts(self, query, start_time, end_time, limit, query_type="Latest"):
             rows = []
-            while len(rows) < limit:
+            pages = 0
+            self.calls.append({"query": query, "query_type": query_type})
+            while len(rows) < limit and pages < self.max_pages_per_query:
                 if self.requests_used >= self.max_requests_per_run:
                     self.request_budget_exhausted = True
                     if rows:
                         return rows
                     raise ProviderBudgetExceeded("query request allowance exhausted")
                 self.requests_used += 1
+                pages += 1
                 rows.append({"post_id": f"{query}-{self.requests_used}"})
             return rows
 
@@ -812,6 +826,31 @@ def main() -> None:
     assert per_group_requests == [8, 8, 8, 8, 9, 9]
     assert greedy_source.requests_used == 50
     assert greedy_source.max_requests_per_run == 50
+
+    round_source = GreedyBudgetSource()
+    round_tasks = platform_query_tasks([f"query-{index}" for index in range(6)], 2)
+    round_request_counts = []
+    for task_index, (_, _, query) in enumerate(round_tasks):
+        allowance = platform_query_request_allowance(round_source, len(round_tasks) - task_index)
+        _, request_stats = search_platform_query_with_budget(
+            round_source,
+            query,
+            "2026-09-08T00:00:00Z",
+            "2026-09-09T00:00:00Z",
+            1_000_000,
+            min(3, allowance),
+            page_cap=3,
+        )
+        round_request_counts.append(request_stats["requests_used"])
+    assert [call["query"] for call in round_source.calls] == [
+        *[f"query-{index}" for index in range(6)],
+        *[f"query-{index}" for index in range(6)],
+    ]
+    assert all(call["query_type"] == "Top" for call in round_source.calls)
+    assert round_request_counts == [3] * 12
+    assert round_source.requests_used == 36
+    assert round_source.max_requests_per_run == 50
+    assert round_source.max_pages_per_query == 99
 
     all_targets_status = collection_status(
         [item],

@@ -576,18 +576,18 @@ function emptyPlatformTrendPayload() {
       candidates_inspected: 0,
       metric_filtered: 0,
       max_items: null,
-      max_candidates: 400,
+      max_candidates: null,
       min_views: 100,
-      min_likes: 5,
+      min_likes: 1,
     },
     summary: {
       accepted: 0,
       candidates_inspected: 0,
       metric_filtered: 0,
       max_items: null,
-      max_candidates: 400,
+      max_candidates: null,
       min_views: 100,
-      min_likes: 5,
+      min_likes: 1,
     },
   };
 }
