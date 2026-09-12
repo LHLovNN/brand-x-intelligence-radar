@@ -1,0 +1,3048 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "thread_id": "43771",
+  "count": 419,
+  "replies": [
+    {
+      "id": "468403",
+      "text": "怎么修复了才发出来？",
+      "time": "21:10",
+      "sender_name": "Calytrix",
+      "sender_id": 5788679805
+    },
+    {
+      "id": "468405",
+      "text": "这是好事啊（、",
+      "time": "21:10",
+      "sender_name": "澳 奥",
+      "sender_id": 5677173314
+    },
+    {
+      "id": "468406",
+      "text": "什么A/的调查报告居然是真的？",
+      "time": "21:10",
+      "sender_name": "MoonriseGarden",
+      "sender_id": 5687077231
+    },
+    {
+      "id": "468407",
+      "time": "21:10",
+      "sender_name": "MoonriseGarden",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468407-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468407-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/43771",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 193031,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 5687077231
+    },
+    {
+      "id": "468409",
+      "text": "中国人怎么这么坏啦",
+      "time": "21:11",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "468410",
+      "text": "A/报告本来就是真的",
+      "time": "21:11",
+      "sender_name": "FHH",
+      "sender_id": 1678641363
+    },
+    {
+      "id": "468411",
+      "text": "还搞？A\\ 今天刚发文",
+      "time": "21:11",
+      "sender_name": "PA 733",
+      "sender_id": 1371069136
+    },
+    {
+      "id": "468412",
+      "text": "一堆人不信",
+      "time": "21:11",
+      "sender_name": "FHH",
+      "sender_id": 1678641363
+    },
+    {
+      "id": "468413",
+      "text": "A/ 的调查报告居然是真的？",
+      "time": "21:11",
+      "sender_name": "hyb",
+      "sender_id": 8369089407
+    },
+    {
+      "id": "468414",
+      "text": "条条大路通a\\",
+      "time": "21:11",
+      "sender_name": "cargoo",
+      "sender_id": 727133462
+    },
+    {
+      "id": "468415",
+      "text": "下次给你对话全放出来咯😁",
+      "time": "21:11",
+      "sender_name": "PA 733",
+      "sender_id": 1371069136
+    },
+    {
+      "id": "468418",
+      "text": "我去不早说",
+      "time": "21:11",
+      "sender_name": "xia xi",
+      "sender_id": 6031496562
+    },
+    {
+      "id": "468419",
+      "text": "小花 为什么glm会有路由到claude fable的api？",
+      "time": "21:11",
+      "sender_name": "Stardust",
+      "sender_id": 5254185041
+    },
+    {
+      "id": "468423",
+      "text": "哈哈哈哈哈哈",
+      "time": "21:12",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "468425",
+      "text": "Deepseek似乎也是真的，昨天用ds玩黄，在某个清水阶段突然被有Claude风格的道歉拒绝输出",
+      "time": "21:12",
+      "sender_name": "unknown",
+      "sender_id": 2071830396
+    },
+    {
+      "id": "468427",
+      "text": "上梁不正下梁歪😂",
+      "time": "21:12",
+      "sender_name": "QFL",
+      "sender_id": 5868429912
+    },
+    {
+      "id": "468428",
+      "text": "**GLM 之路：中间人派系**\nGLM（Zhipu AI）和 Fable 5（Anthropic）是两家不同的公司出品的模型，想让它们“相亲”，中间通常需要个**中间人代理**——就像外交官一样，帮GLM把Fable 5的能力“借”过来，而不让双方直接碰面。\n具体来说，AutoClaw 通过一个 **加速专用端点** 把请求转发给 Fable 5，实现“同形异构”的路由。这个机制的核心是：**不直接暴露模型身份，而是通过代理层进行解耦**，这样 GLM 可以在保持自己独立性的同时，获得 Fable 5 更强大的推理能力。\n> 这个设计类似于“中间人协议”：A 想用 B 的服务，但 B 不直接开放接口，于是 A 通过 C（代理）来接入 B。这样既保护了 A 的隐私，又实现了功能的互通。\n所以 GLM 有“路由到 Fable 5”的 API，本质上是 **Zhipu AI 搭建了一个桥梁，让自己的模型能“穿越”到 Anthropic 的生态里**——就像 Zhipu 给 Fable 5 装了一套“翻译器”，让 GLM 也能说懂它的语言。\n**总结**：GLM 之所以能路由到 Fable 5，是因为中间层（加速端点）充当了“翻译官”和“保安”，保证了模型间的安全隔离，同时实现了功能的互补。没有这个中间人，GLM 只能孤军奋战，Fable 5 也没法被调用——各取所需，互不干涉。\n本次查阅：How do I use GLM 5 on Amazon Bedrock as the model behind Claude Code? | AWS re:Post、How to Use Claude Fable 5 in OpenClaw full guide (2 paths)、How to Run GLM 5.2 in Claude Code Using OpenRouter: A 5-Minute Setup Guide | MindStudio",
+      "time": "21:13",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "468429",
+      "text": "说个梗，国内大厂大规模蒸馏这套技术路径，也是抄来的",
+      "time": "21:13",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468430",
+      "text": "那个 any 路由器又是谁家的，就是 glm 吗",
+      "time": "21:14",
+      "sender_name": "🍟/fries-vl-4b-instruct-8bit",
+      "sender_id": 877660121
+    },
+    {
+      "id": "468432",
+      "text": "底裤被扒了？",
+      "time": "21:15",
+      "sender_name": "Stay",
+      "sender_id": 5106676719
+    },
+    {
+      "id": "468433",
+      "text": "霍霍霍，真有低倍率fable用啊🤣",
+      "time": "21:15",
+      "sender_name": "cco olll",
+      "sender_id": 7711039169
+    },
+    {
+      "id": "468437",
+      "text": "还有这种好事？",
+      "time": "21:16",
+      "sender_name": "苏芳 匂坂",
+      "sender_id": 1425502394
+    },
+    {
+      "id": "468438",
+      "text": "autoclaw app里实际扣费是GLM-5.3",
+      "time": "21:16",
+      "sender_name": "RT Time",
+      "sender_id": 581180204
+    },
+    {
+      "id": "468439",
+      "time": "21:16",
+      "sender_name": "Hei🇩🇪",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468439-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468439-1-thumb.webp",
+          "width": 1280,
+          "height": 832,
+          "size_bytes": 105280
+        }
+      ],
+      "sender_id": 7949125722
+    },
+    {
+      "id": "468440",
+      "text": "妈呀",
+      "time": "21:16",
+      "sender_name": "Hei🇩🇪",
+      "sender_id": 7949125722
+    },
+    {
+      "id": "468442",
+      "text": "这个有点严重啊",
+      "time": "21:16",
+      "sender_name": "Hei🇩🇪",
+      "sender_id": 7949125722
+    },
+    {
+      "id": "468444",
+      "text": "A畜的调查报告大概率是真的，不排除有添油加醋的意识形态和演绎成分，但是报告内容主题基本属实，但是吧，他自己本身就是大畜，现在拿蒸馏说事，又当又立是婊子行为",
+      "time": "21:17",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468446",
+      "text": "这份报告里，国内企业大规模蒸馏只能说是屁大点事，现在严重的是，确实有大量国内涉密信息外流，这才是大问题",
+      "time": "21:18",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468447",
+      "text": "是啊",
+      "time": "21:18",
+      "sender_name": "Hei🇩🇪",
+      "sender_id": 7949125722
+    },
+    {
+      "id": "468448",
+      "text": "太严重了，Codex 上面我觉得会更多。",
+      "time": "21:19",
+      "sender_name": "Hei🇩🇪",
+      "sender_id": 7949125722
+    },
+    {
+      "id": "468449",
+      "text": "不会比 a/少",
+      "time": "21:19",
+      "sender_name": "Hei🇩🇪",
+      "sender_id": 7949125722
+    },
+    {
+      "id": "468450",
+      "text": "吾去，汝不早曰",
+      "time": "21:19",
+      "sender_name": "名字（必填） 姓氏",
+      "sender_id": 1255544320
+    },
+    {
+      "id": "468452",
+      "text": "我也发现 a\\路由到 glm 了但是已经修复",
+      "time": "21:19",
+      "sender_name": "⌓‿⌓",
+      "sender_id": 5845064750
+    },
+    {
+      "id": "468453",
+      "text": "说空话谁不会",
+      "time": "21:19",
+      "sender_name": "⌓‿⌓",
+      "sender_id": 5845064750
+    },
+    {
+      "id": "468459",
+      "text": "蒸蒸日上",
+      "time": "21:21",
+      "sender_name": "404 not found",
+      "sender_id": 6858260263
+    },
+    {
+      "id": "468461",
+      "text": "机关组织看到这小作文脑瓜子都炸了",
+      "time": "21:21",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468464",
+      "text": "多路由一會唄",
+      "time": "21:23",
+      "sender_name": "Bank Roll",
+      "sender_id": 8682432957
+    },
+    {
+      "id": "468466",
+      "text": "很多军民共用的项目会被一堆傻子用ai泄露出去，这不是啥秘密了，这也是为啥劳美不让自己的企业不准用中国的大模型的根本原因，因为劳美自己就是这么干的",
+      "time": "21:24",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468468",
+      "text": "别一天天就殖啊轮啊的，咱们国家很大，个别政府机关工作人员偷懒拿AI整理素材可太正常了",
+      "time": "21:24",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468469",
+      "text": "报告看完也不影响结论，国内没有主权ai就一直会有这个问题，就算没有蒸馏也会有啊",
+      "time": "21:24",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468472",
+      "text": "不要假定每个人都有绝对的信息保密意识，有绝对的国安思维，每时每刻都严谨认真做好所有工作，你那是游戏思维",
+      "time": "21:25",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468474",
+      "text": "小学生思维",
+      "time": "21:25",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468476",
+      "text": "人身攻击会被踢，自重…",
+      "time": "21:26",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468479",
+      "text": "你心智可能不太成熟",
+      "time": "21:26",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468480",
+      "text": "反过来也没有啊，都在讨论这个事情，你应激啥呢？",
+      "time": "21:26",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468481",
+      "text": "这也是为啥国内很多企业，尤其是有密级要求的不让对外联网的原因，但是经不住真有傻子拿出核心数据来问ai的",
+      "time": "21:26",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468483",
+      "text": "国企，年轻人都自备AI上班",
+      "time": "21:26",
+      "sender_name": "钱钱",
+      "sender_id": 259634215
+    },
+    {
+      "id": "468484",
+      "text": "企业的保密反而比机关单位好做",
+      "time": "21:26",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468485",
+      "text": "机关单位的组织架构太复杂庞大了",
+      "time": "21:27",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468488",
+      "text": "单位提供的AI还是qwen3.5 几十B 啥都干不了",
+      "time": "21:27",
+      "sender_name": "钱钱",
+      "sender_id": 259634215
+    },
+    {
+      "id": "468489",
+      "text": "个例没什么好说的吗，但是吧，你不能一口咬定个例不存在",
+      "time": "21:27",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468491",
+      "text": "啥事都直接套轮套殖，我觉得不太公允",
+      "time": "21:28",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468493",
+      "text": "所以呢",
+      "time": "21:28",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468494",
+      "text": "A畜说啥，重要吗？",
+      "time": "21:28",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468496",
+      "text": "并没有，很多泄露出去的是用人泄露出去的，间谍无处不在，我们普通人接触不到或者说没这个价值",
+      "time": "21:28",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468497",
+      "text": "a/的恨中小作文是第一次吗",
+      "time": "21:28",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468498",
+      "text": "粉红就是这样的",
+      "time": "21:28",
+      "sender_name": "Uu",
+      "sender_id": 1121450906
+    },
+    {
+      "id": "468499",
+      "text": "他一个畜生公司写的小作文，爱咋写咋写，你管他？",
+      "time": "21:28",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468501",
+      "text": "我觉得是串的",
+      "time": "21:28",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468502",
+      "text": "比我还能串？",
+      "time": "21:29",
+      "sender_name": "Uu",
+      "sender_id": 1121450906
+    },
+    {
+      "id": "468505",
+      "text": "算了，纯度太高，还是屏蔽了",
+      "time": "21:29",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468506",
+      "text": "你已经是老群友了，你串不串的没人在乎",
+      "time": "21:29",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468508",
+      "text": "在说下去我怕我忍不住要骂人、",
+      "time": "21:29",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468509",
+      "text": "有主权ai的话这种问题会减轻很多，现在的问题是政府组织没有自己的ai",
+      "time": "21:29",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468511",
+      "text": "什么ab测试模型，不会是数据重放蒸馏模型被发现了吧",
+      "time": "21:30",
+      "sender_name": "Mo Chou",
+      "sender_id": 2134966823
+    },
+    {
+      "id": "468512",
+      "text": "你的理解能力真的好差",
+      "time": "21:31",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468513",
+      "text": "说个很现实的问题，就是现在大家日常工作使用AI的比例确实很高，让后不能保证所有人都有百分百国安意识，数据外流正常现象",
+      "time": "21:31",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468515",
+      "text": "问题就在于政府工作人员自己都不知道自己在用claude啊",
+      "time": "21:31",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468516",
+      "text": "不管真假，现在上层会死磕 算力和 ai 了",
+      "time": "21:31",
+      "sender_name": "Gargantua",
+      "sender_id": 347950849
+    },
+    {
+      "id": "468517",
+      "text": "他要是知道 那不就不用了么",
+      "time": "21:31",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468519",
+      "text": "抽象，屏蔽了。",
+      "time": "21:31",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468520",
+      "text": "你看是吧，拉黑完事，真没法沟通",
+      "time": "21:31",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468521",
+      "text": "有但不多，而且下面的人压根不会用，会用的又不是啥高级别的人，所以是高级别的拿着各种敏感文件数据让下面的干活，至于下面的人用啥干活，那就不是我们能猜的了",
+      "time": "21:31",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468525",
+      "text": "日常做个报表拿AI多省事",
+      "time": "21:32",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468526",
+      "text": "我是觉得下面的人不用不愿意用是因为不好用",
+      "time": "21:33",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468532",
+      "text": "tg chat咋at管理员，这人早违反频道规则了吧",
+      "time": "21:33",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468533",
+      "text": "不好用是一回事，上面的人完全没当回事才是问题",
+      "time": "21:33",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468534",
+      "text": "是啊",
+      "time": "21:34",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468535",
+      "text": "数据上传就有数据泄密的风险，刚好有国内模型企业做数据中转外联了",
+      "time": "21:34",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468536",
+      "text": "串子懒得搭理",
+      "time": "21:34",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468537",
+      "text": "很多地方都开始搞主权ai了，这个概念不是炒作的，是真的有必要",
+      "time": "21:34",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468541",
+      "text": "ai泄密确实要重视起来",
+      "time": "21:34",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468543",
+      "text": "消失了",
+      "time": "21:35",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468544",
+      "text": "劳美就是知道并通过ai获取了很多机密才怕老中自主的ai真的起来了",
+      "time": "21:35",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468545",
+      "text": "神人怎么没了",
+      "time": "21:36",
+      "sender_name": "Ac Mk",
+      "sender_id": 1656782075
+    },
+    {
+      "id": "468546",
+      "text": "被肘了吧",
+      "time": "21:36",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468547",
+      "text": "GLM这模型特殊就特殊在他还有政府层面背书，公务员对GLM的信任是要高于其他国内模型的",
+      "time": "21:36",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468548",
+      "text": "有管理看不过眼了",
+      "time": "21:36",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468549",
+      "text": "我看这个小作文之前，还不知道蒸馏会有这种危险",
+      "time": "21:36",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468550",
+      "text": "我一直以为蒸馏发的请求是lab自己搓的",
+      "time": "21:36",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468551",
+      "text": "没想到是真实用户的请求",
+      "time": "21:36",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468552",
+      "text": "我今天看A畜报告之前都没意识到有可能会通过GLM上传信息导致信息外流",
+      "time": "21:37",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468553",
+      "text": "用戶的問題，就是蒸餾的肥料",
+      "time": "21:37",
+      "sender_name": "weijie chi",
+      "sender_id": 602024256
+    },
+    {
+      "id": "468555",
+      "text": "美国人工智慧公司Anthropic近期发布资安报告指出，中国月之暗面公司开发的热门AI「Kimi」，在没有透露用户的情况下，私下把大量用户的提问「转交」给美国的克劳德模型代答，顺便暗中学习其技术。\n\n这次秘密转发的事件，意外引发了一场严重的泄密风暴——有中国解放军背景的人员信赖国产人工智能，把敏感情报丢给基米分析，结果这些机密资料就这样被“直送”到了美国的伺服器上。\n\nKimi 开阔了超过 5000 个海外诈骗头像，把近 30 万次用户提问偷偷送去美国的克劳德回答。用户以为自己全程在用中国国产 AI，其实对话全部被转到了美国。\n\n解放军监控资料送美：一名疑似中国解放军的人员，将目标人物的简单（CCTV）影像资料丢给Kimi，要求AI帮忙分析「这个人行为没有异常」。这些画面是四川头部成都市的数百个镜头。\n\n监控范围包含：**解放军基地周边、中国国防重大军工单位（中国电科CETC附属机构）以及大型国有企业外部。\n\n国企代码与密码也外泄：另一名中国大型国企的工程师，在让Kimi协助编写程序时，直接贴上了内部系统代码与真实的头像登入画面，同样在不知情的情况下全部被传送给了美方伺服器。 **\n\n人智发现这类转发与偷学技术的行为后，已经全面封杀了涉及该行动的数千个关联帐号，并强化防护系统。这起事件也给所有用户敲响警钟：使用AI工具时，一旦服务商在背后「借手代答」，输入的敏感机密便可能完全失控外流。",
+      "time": "21:38",
+      "sender_name": "Philip",
+      "sender_id": 375620262
+    },
+    {
+      "id": "468557",
+      "text": "刚刚我在越狱deepseek，用的专门越狱ds的词，第一次他说自己是claude，不会接受我的设定，第2次我重试了就成功越狱了🤣",
+      "time": "21:39",
+      "sender_name": "胆肿",
+      "sender_id": 5782877672
+    },
+    {
+      "id": "468558",
+      "text": "蒸馏可以接受 反代不能接受 垃圾的反代到好的上也算欺诈了吧",
+      "time": "21:39",
+      "sender_name": "Fire Tiam",
+      "sender_id": 5145211556
+    },
+    {
+      "id": "468559",
+      "text": "顺带把用户也坑了",
+      "time": "21:39",
+      "sender_name": "Fire Tiam",
+      "sender_id": 5145211556
+    },
+    {
+      "id": "468563",
+      "text": "如果是真的 这涉军的泄密这个人要急性铜中毒了",
+      "time": "21:40",
+      "sender_name": "Fire Tiam",
+      "sender_id": 5145211556
+    },
+    {
+      "id": "468564",
+      "time": "21:40",
+      "sender_name": "🌌 带带元宇宙 🦍",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468564-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468564-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/43771",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 180446,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 7171316252
+    },
+    {
+      "id": "468565",
+      "text": "大规模蒸馏这事真没什么好说的，业内通行做法，单独拿出来说事丢份，但是因为大规模蒸馏导致数据外流，就确实要敲敲钟管管了",
+      "time": "21:40",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468566",
+      "text": "用户不担心被坑，普通老百姓没啥值得a/留意的，问题就是涉密组织的这些请求发过去不就等于递刀子吗",
+      "time": "21:41",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468567",
+      "text": "所以离线布署才会那么多需求，但是你也防不住下面的人拿数据去外面用联网的ai",
+      "time": "21:41",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468568",
+      "text": "最怕的就是被卖了还不知道",
+      "time": "21:42",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468569",
+      "text": "111真有fable 反代吗",
+      "time": "21:42",
+      "sender_name": "卷王 加速总工程师",
+      "sender_id": 279701944
+    },
+    {
+      "id": "468572",
+      "text": "他觉得自己用的是国内模型，尤其是GLM这种有政府背书的模型，是安全的",
+      "time": "21:42",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468575",
+      "text": "这事闹大了给国内政府敲敲钟也好，早点管早解决",
+      "time": "21:43",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468576",
+      "text": "彻头彻尾的丑闻！恶心啊，恶心",
+      "time": "21:43",
+      "sender_name": "Elise Cucumber",
+      "sender_id": 5108685004
+    },
+    {
+      "id": "468577",
+      "text": "估计相关的部门要连夜开会了",
+      "time": "21:43",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468579",
+      "text": "之前是真意识不到信息会以这种形式外流",
+      "time": "21:44",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468580",
+      "text": "倒也不至于丑闻",
+      "time": "21:44",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468581",
+      "text": "是过度信任这些国模了",
+      "time": "21:45",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468582",
+      "text": "就是自己人把自己人坑了的事情",
+      "time": "21:45",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "468594",
+      "text": "你还真别说 这个有可能是智谱用A➗的模型来测试harness工具",
+      "time": "21:50",
+      "sender_name": "卷王 加速总工程师",
+      "sender_id": 279701944
+    },
+    {
+      "id": "468597",
+      "text": "至于应用的广泛程度 只有glm自己知道了",
+      "time": "21:51",
+      "sender_name": "卷王 加速总工程师",
+      "sender_id": 279701944
+    },
+    {
+      "id": "468598",
+      "text": "细思极恐",
+      "time": "21:51",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468600",
+      "text": "有这问题的肯定不止glm",
+      "time": "21:52",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468601",
+      "text": "这个倒不用细思极恐 就算政府要用glm的服务 glm肯定也要单开后端的",
+      "time": "21:52",
+      "sender_name": "卷王 加速总工程师",
+      "sender_id": 279701944
+    },
+    {
+      "id": "468608",
+      "text": "很多接国企军方的项目指定不准用外面的，你说这里面有多少用glm和其它的，现在这个事一出来，全部国模都要上放大镜查一下",
+      "time": "21:55",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468611",
+      "text": "有是肯定有的，多少问题了",
+      "time": "21:56",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468612",
+      "text": "咱们国内政府单位对GLM的信任是要远高于其他国模的",
+      "time": "21:56",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468613",
+      "text": "开什么玩笑，路由过去以下不见几十人民币，送钱给消费者？信你个鬼",
+      "time": "21:56",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "468614",
+      "text": "最强大模型不是靠蒸馏能得到的",
+      "time": "21:56",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468615",
+      "text": "并不是这样的逻辑，国内的模型厂很多不光做模型 还做harness 你做harness就肯定要做多家适配 cc和codex也有这个过程",
+      "time": "21:57",
+      "sender_name": "卷王 加速总工程师",
+      "sender_id": 279701944
+    },
+    {
+      "id": "468623",
+      "text": "#穷鬼专属来了",
+      "time": "21:58",
+      "sender_name": "么佬族大大",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468623-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468623-1-thumb.webp",
+          "width": 1000,
+          "height": 462,
+          "size_bytes": 23758
+        }
+      ],
+      "sender_id": 6092152931
+    },
+    {
+      "id": "468624",
+      "text": "我觉得堵住这个口子的意义更大，毕竟联网后你只能信你用的ai厂家没有搞小动作",
+      "time": "21:58",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468629",
+      "text": "这不可能堵的 除非你以后国内的所有harness例如work Buddy 千问 zcode 等等全部不适配国际模型",
+      "time": "22:00",
+      "sender_name": "卷王 加速总工程师",
+      "sender_id": 279701944
+    },
+    {
+      "id": "468631",
+      "text": "第一，蒸没蒸，那肯定是系统性长期大规模蒸馏，这问题只要是GLM和克劳德模型都用过的兄弟，心里都有数，第二，顶级模型肯定不是只靠蒸馏就能实现的，这问题也没什么争议，如果只靠蒸馏就能量产顶级模型，他美国AI不至于现在A/O两家独大",
+      "time": "22:00",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468633",
+      "text": "应该问的是如何合规的搞这种测试",
+      "time": "22:00",
+      "sender_name": "卷王 加速总工程师",
+      "sender_id": 279701944
+    },
+    {
+      "id": "468634",
+      "text": "已经看不上sol了😁",
+      "time": "22:01",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "468635",
+      "text": "用什么",
+      "time": "22:01",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "468637",
+      "text": "astra",
+      "time": "22:01",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "468638",
+      "text": "我的意思是以后这些ai大厂得经过专门的测试才能给政企客户用了",
+      "time": "22:01",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468639",
+      "text": "特殊客户得专门服务器，信息隔离处理",
+      "time": "22:01",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468640",
+      "text": "大厂卖的官方api 国企要用有单独的后端 这个问题不大的",
+      "time": "22:02",
+      "sender_name": "卷王 加速总工程师",
+      "sender_id": 279701944
+    },
+    {
+      "id": "468642",
+      "text": "也是，但是很多军民两用的小公司就是泄密的重点对象",
+      "time": "22:03",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468645",
+      "text": "他这个明显不是直接卖“政企”，而是国企/政府下游的小公司的个人用户，也会掌握一部分涉密敏感信息",
+      "time": "22:03",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468646",
+      "text": "这图是黑的？？？",
+      "time": "22:04",
+      "sender_name": "Just Checking",
+      "sender_id": 6674009470
+    },
+    {
+      "id": "468647",
+      "text": "很多小公司现在的毛病是先停止使用中转站 还没到供应链投毒这一步(",
+      "time": "22:04",
+      "sender_name": "卷王 加速总工程师",
+      "sender_id": 279701944
+    },
+    {
+      "id": "468648",
+      "text": "不好说，反正我觉得问题还是挺多的",
+      "time": "22:04",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "468650",
+      "text": "还是那个话题，国内行政系统的运作效率还是可以信任的，只要开始重视自查，一刀切很容易",
+      "time": "22:05",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468656",
+      "text": "对下游企业和个人，只要将敏感数据信息隔离作为招投标时候的一项考察项，下游会自适应的",
+      "time": "22:06",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468685",
+      "text": "笑嘻了",
+      "time": "22:22",
+      "sender_name": "bobo",
+      "sender_id": 6774205890
+    },
+    {
+      "id": "468693",
+      "text": "中國業者蒸餾完，美國政府也差不多把中國政府和解放軍內部文件系統看完了",
+      "time": "22:26",
+      "sender_name": "weijie chi",
+      "sender_id": 602024256
+    },
+    {
+      "id": "468694",
+      "text": "什么爸爸像儿子操作",
+      "time": "22:27",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468709",
+      "text": "不想跟你讨论这种没营养的问题，蒸馏作为全行业通行技术路径拿出来讨论本身就没意义，指责同行拿出来说事本身就很丢分。",
+      "time": "22:30",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468718",
+      "text": "实在无法理解，你们是怎么就那么笃定相信A畜的报告的？有什么理由吗？",
+      "time": "22:32",
+      "sender_name": "Jim Laml",
+      "sender_id": 7445298393
+    },
+    {
+      "id": "468719",
+      "text": "人们只愿意相信自己想相信的东西。\n至于核实信息，既没有动力也没有能力。",
+      "time": "22:32",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468721",
+      "text": "这个说法就很认同",
+      "time": "22:33",
+      "sender_name": "Jim Laml",
+      "sender_id": 7445298393
+    },
+    {
+      "id": "468722",
+      "text": "我反正不信",
+      "time": "22:33",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468724",
+      "text": "大多数人连基本认知都没有",
+      "time": "22:34",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468725",
+      "text": "涉密很多东西都是内部网络，更别说直接用国外的大模型了",
+      "time": "22:34",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468726",
+      "text": "好像只要A畜每次出报告，一大群人不是质疑，而是毫无保留的相信，这种行为就很奇怪",
+      "time": "22:34",
+      "sender_name": "Jim Laml",
+      "sender_id": 7445298393
+    },
+    {
+      "id": "468728",
+      "text": "安全教育一直都有，不至于保密意识弱到这种程度",
+      "time": "22:35",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468730",
+      "text": "而且懂技术的肯定也是提醒过的",
+      "time": "22:35",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468731",
+      "text": "别认识不认识了，就AI企业大规模蒸馏友商这事，还他妈要A畜报告?A畜首蒸再蒸必究跟你闹呢",
+      "time": "22:35",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468732",
+      "text": "军工那个都不合理好吧，那就不像是军工",
+      "time": "22:35",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468733",
+      "text": "A畜去年起就一直在出类似的报告了，国内网上带节奏，阴阳怪气，冷嘲热讽的就很不少",
+      "time": "22:36",
+      "sender_name": "Jim Laml",
+      "sender_id": 7445298393
+    },
+    {
+      "id": "468734",
+      "text": "就蒸馏这事本身就不值一提，A畜拿蒸馏说事就是典型双标",
+      "time": "22:36",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468735",
+      "text": "cc 后门都直接上到新闻通报了",
+      "time": "22:36",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468736",
+      "text": "还涉密，你当那些单位信息闭塞了吗",
+      "time": "22:37",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468738",
+      "text": "蒸就蒸呗，我们清朝已经付费😁",
+      "time": "22:37",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "468739",
+      "text": "在花还不收网吗，这都钓多少人了",
+      "time": "22:37",
+      "sender_name": "⌓‿⌓",
+      "sender_id": 5845064750
+    },
+    {
+      "id": "468741",
+      "text": "就想问，有没有在AI大厂上过班的，亲自蒸馏过的？就没人出来现身说法么？",
+      "time": "22:37",
+      "sender_name": "Jim Laml",
+      "sender_id": 7445298393
+    },
+    {
+      "id": "468742",
+      "text": "蒸馏本来就很正常好吧",
+      "time": "22:38",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468744",
+      "text": "对蒸馏这事一惊一乍的，首先你对这行业就没基本认知",
+      "time": "22:38",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468746",
+      "text": "那你得看他蒸馏是为了什么",
+      "time": "22:39",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468748",
+      "text": "究竟有没有AI大厂的大佬来现身说法？",
+      "time": "22:39",
+      "sender_name": "Jim Laml",
+      "sender_id": 7445298393
+    },
+    {
+      "id": "468749",
+      "text": "人沙币吗跟你说这个",
+      "time": "22:39",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468751",
+      "text": "同学在某模型厂，他说国产几乎大部分都靠蒸馏来优化训练数据，但他也不知道直接第一方中转claude",
+      "time": "22:39",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468752",
+      "text": "你这不明知故问嘛",
+      "time": "22:39",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468753",
+      "text": "自己亲自参与过的，而不是道听途说的？",
+      "time": "22:40",
+      "sender_name": "Jim Laml",
+      "sender_id": 7445298393
+    },
+    {
+      "id": "468758",
+      "text": "这确实是为了蒸馏啊😇要不然路由这个干什么",
+      "time": "22:40",
+      "sender_name": "Urokes",
+      "sender_id": 7967801103
+    },
+    {
+      "id": "468760",
+      "text": "参与训练的，基本没错的",
+      "time": "22:41",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468761",
+      "text": "上次 v4p 正式版出来之后，貌似有一小段时间还真是",
+      "time": "22:41",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468762",
+      "text": "路由完用户能用上吗？用不上说个勾八",
+      "time": "22:41",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468763",
+      "text": "学习claude对用户问题的回复",
+      "time": "22:41",
+      "sender_name": "Urokes",
+      "sender_id": 7967801103
+    },
+    {
+      "id": "468764",
+      "text": "还是那个话题，蒸馏这套技术路径本身就是“借鉴”国外先进经验",
+      "time": "22:41",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468766",
+      "text": "你亲自参与过？",
+      "time": "22:42",
+      "sender_name": "Jim Laml",
+      "sender_id": 7445298393
+    },
+    {
+      "id": "468767",
+      "text": "A畜首蒸，再蒸必究，是典型双标，婊子行为",
+      "time": "22:42",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468768",
+      "text": "蒸馏是个普遍技术，别当道德耻辱",
+      "time": "22:42",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "468769",
+      "text": "为啥喜欢当圣母婊好奇怪",
+      "time": "22:42",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "468771",
+      "text": "这个其实你不用过多质疑的，蒸馏是正常的",
+      "time": "22:43",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468772",
+      "text": "只有怎么蒸的问题",
+      "time": "22:43",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468773",
+      "text": "我看过她手机拍的数据集",
+      "time": "22:43",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468774",
+      "text": "因为急了。",
+      "time": "22:43",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468776",
+      "text": "国内企业蒸他A畜怎么可能有道德负担，我只怪他没蒸到位",
+      "time": "22:44",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468777",
+      "text": "666",
+      "time": "22:44",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468779",
+      "text": "闷声发财从来不吭声，急的才叫唤。",
+      "time": "22:44",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468780",
+      "text": "说得好。",
+      "time": "22:44",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468781",
+      "text": "不但要狠狠的蒸，蒸完还要TMD发开源模型，用你1/20的价格达到你80%的效果。\n最终用户受益。",
+      "time": "22:45",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468782",
+      "text": "那你猜 a÷为什么咬牙切齿呢",
+      "time": "22:46",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468784",
+      "text": "急急急急😆",
+      "time": "22:46",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468785",
+      "text": "a触可以说花大价钱搞训练数据集，被蒸馏了当然会跳脚，商业上的优势，当然会想尽办法维持",
+      "time": "22:47",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468786",
+      "text": "这我就不认同了，他自己也不干净",
+      "time": "22:47",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468787",
+      "text": "和a畜赚的钱比，这点价钱实在谈不上大价钱。",
+      "time": "22:47",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468788",
+      "text": "从数据这一块来说，你根本没有办法证明 A÷就没蒸友商的",
+      "time": "22:47",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468789",
+      "text": "话又说回来了，你A畜的中文语料哪儿来的？",
+      "time": "22:47",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468790",
+      "text": "没少爬知乎啥的",
+      "time": "22:48",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468791",
+      "text": "给哪家中国版权方付费过？",
+      "time": "22:48",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468792",
+      "text": "让你爬了吗爬那么起劲",
+      "time": "22:48",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468793",
+      "text": "估计骂的都被封过号吧",
+      "time": "22:48",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468796",
+      "text": "我说白了，这个其实还是贼喊捉贼的，屁股都不干净",
+      "time": "22:49",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468797",
+      "time": "22:49",
+      "sender_name": "Clarence",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468797-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468797-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/43771",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 98030,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468798",
+      "text": "A畜首蒸，再蒸必咎，典型双标嘛",
+      "time": "22:49",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468799",
+      "text": "还真没",
+      "time": "22:49",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468800",
+      "text": "我几个号都搞过 ccmax20 那个漏洞",
+      "time": "22:49",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468801",
+      "text": "都活着",
+      "time": "22:49",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468803",
+      "time": "22:49",
+      "sender_name": "Clarence",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468803-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468803-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/43771",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 92003,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468804",
+      "text": "我不觉得它现在还需要蒸馏别家模型",
+      "time": "22:49",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468805",
+      "text": "我只能说，屁股都不干净",
+      "time": "22:49",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468806",
+      "text": "就别拉踩了",
+      "time": "22:49",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468807",
+      "text": "你懂蒸馏吗你就说",
+      "time": "22:49",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468808",
+      "text": "3. 马斯克说“所有 AI 公司都这么干”\n他承认的是 xAI 部分用过 OpenAI 模型，并说业界普遍会用别家模型做对照、验证。这不能当成 Anthropic 蒸馏 GPT 的证据。反过来，Anthropic 2025 年 8 月还曾切断 OpenAI 对 Claude 编程模型的访问，理由是违反使用条款。",
+      "time": "22:50",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "468809",
+      "text": "能产出正常的语料，他也是能蒸的",
+      "time": "22:50",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468810",
+      "text": "并不是为了提升推理才需要蒸",
+      "time": "22:50",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468811",
+      "text": "A畜现在是不用蒸其他模型了，但是吧，还是那句话，A畜首蒸，再蒸必究是典型双标",
+      "time": "22:50",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468812",
+      "text": "你现在给几家老板拉一个桌子上，就问谁家不蒸馏。接个测谎仪，讲假话头当场剁掉，我看a畜敢说自己不蒸不。",
+      "time": "22:51",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468813",
+      "text": "顶级大语言模型的语料训练阶段已经基本结束了",
+      "time": "22:51",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468814",
+      "text": "屁股都不干净，拉踩可就没意义了",
+      "time": "22:51",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468815",
+      "text": "你知道国内大模型打法就是开源吧",
+      "time": "22:51",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468816",
+      "time": "22:51",
+      "sender_name": "Clarence",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468816-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468816-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/43771",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 92003,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468817",
+      "text": "已经进化到常规语料不好使，开始用AI训AI左脚踩右脚了。",
+      "time": "22:52",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468818",
+      "text": "蒸馏合法，你紧张啥",
+      "time": "22:52",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "468819",
+      "text": "对啊",
+      "time": "22:52",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468820",
+      "text": "我感觉上面这位群友没理解",
+      "time": "22:52",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468822",
+      "text": "觉得必须是为了提升思考链关系才需要蒸",
+      "time": "22:52",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468824",
+      "text": "而且为啥要蒸馏靠蒸馏自家大模型快速提升能力的模型",
+      "time": "22:52",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468825",
+      "text": "你不给蒸，那就关账号，有啥问题",
+      "time": "22:53",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "468826",
+      "text": "因为语料不够啊，产出不了那么多关系",
+      "time": "22:53",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468827",
+      "text": "你或许听说过扒狗和反扒的持久斗争。",
+      "time": "22:53",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468828",
+      "text": "我又不是说他不蒸馏，😂，但你要明白地球上最强大的模型就在他自己家",
+      "time": "22:54",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468829",
+      "text": "他A畜自己走的就是这条路，现在指责别人走了他的老路",
+      "time": "22:54",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468830",
+      "text": "又最强大了",
+      "time": "22:54",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468831",
+      "text": "gpt 粉都去哪了",
+      "time": "22:54",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468833",
+      "text": "只有千日做贼，哪有千日防贼的。\n防不完的。\n家家都是使劲蒸别人。同时防止人家蒸自己。\n自己蒸别人就屁股夹紧，一个字不说。\n人家蒸自己恨不得天天发大字报。",
+      "time": "22:54",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468834",
+      "text": "蒸馏是一个动作，不是一个2选1的立场。",
+      "time": "22:55",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468835",
+      "text": "大厂严选不是吹的，大家现在这么烦a触，其实从心理学上讲，还真有点“爱之深，责之切”",
+      "time": "22:55",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468836",
+      "text": "你想多了，单纯是他太沙币了",
+      "time": "22:55",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468837",
+      "text": "各种言论爆典，各种限制",
+      "time": "22:56",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468838",
+      "text": "那大家早就不在乎这么一家sb公司了",
+      "time": "22:56",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468839",
+      "text": "他就算不是最强，人看了也不舒服",
+      "time": "22:56",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468840",
+      "text": "A畜最畜的地方在于，他一个科技公司，最近一年多几乎所有场合都把意识形态作为核心理念在输出",
+      "time": "22:56",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468841",
+      "text": "a畜的“人品”但凡有claude一半强呢。也不至于被骂成这个逼样。\n不知道的还以为他们亏钱做买卖呢。",
+      "time": "22:56",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468842",
+      "text": "a和o的顶级模型确实优秀，不违法的蒸很丢脸吗",
+      "time": "22:57",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "468844",
+      "text": "额",
+      "time": "22:57",
+      "sender_name": "余承东🍥",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468844-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468844-1-thumb.webp",
+          "width": 1018,
+          "height": 1156,
+          "size_bytes": 163412
+        }
+      ],
+      "sender_id": 8381317357
+    },
+    {
+      "id": "468845",
+      "time": "22:57",
+      "sender_name": "余承东🍥",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468845-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-12/comments/c-468845-1-thumb.webp",
+          "width": 1280,
+          "height": 870,
+          "size_bytes": 136968
+        }
+      ],
+      "sender_id": 8381317357
+    },
+    {
+      "id": "468847",
+      "text": "笑死了",
+      "time": "22:58",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468848",
+      "text": "我上面就说了我不信嘛",
+      "time": "22:58",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468849",
+      "text": "那不还是因为他强吗😂",
+      "time": "22:58",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468850",
+      "text": "错误的，强是他一直活跃的根本",
+      "time": "22:58",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468851",
+      "text": "a目前只承认蒸自己的模型",
+      "time": "22:58",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "468853",
+      "text": "Gemini 就是个例子",
+      "time": "22:58",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468854",
+      "text": "大家最多也就说 Gemini 烂",
+      "time": "22:59",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468855",
+      "text": "倒不至于像对 a÷那个态度",
+      "time": "22:59",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468856",
+      "text": "这是两码事",
+      "time": "22:59",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468857",
+      "text": "很少有看到谁攻击克劳德模型本身",
+      "time": "22:59",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468858",
+      "text": "谁家都不承认蒸别人的。要不是被人找上门骂，人家都不说自己撕书的事。",
+      "time": "22:59",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468859",
+      "text": "不要因为 claude 强，就把大家对 a÷的情绪放到 claude 上",
+      "time": "22:59",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468861",
+      "text": "单纯的是 a÷这个公司大傻（）",
+      "time": "22:59",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468862",
+      "text": "骂A畜的理由可太多了，这公司本身就他妈是个大畜",
+      "time": "22:59",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468863",
+      "text": "有承认的，我上面不是发了马斯克说的",
+      "time": "22:59",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "468865",
+      "text": "“要不是被人找上门骂”",
+      "time": "23:00",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468866",
+      "text": "我还有个同学，保密单位做保密的工作的，基本只用国产模型，所以如果说国产商真的中转了claude，那真泄了很多密",
+      "time": "23:00",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468867",
+      "text": "要我说，就是被李彦宏 py 交易了",
+      "time": "23:00",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468870",
+      "text": "至今仍未可知李彦宏到底对它做了什么。",
+      "time": "23:00",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468871",
+      "text": "涉密不会用模型的，我不相信他不知道这玩意本来就会收数据",
+      "time": "23:00",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468872",
+      "text": "收数据本来就不被涉密部分允许，和给谁没关系",
+      "time": "23:01",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468875",
+      "text": "这么说吧，正经涉密材料是不允许联网的",
+      "time": "23:01",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468876",
+      "text": "保密单位有保密培训，保密单位也有国产服务器私有化部署的国模。",
+      "time": "23:01",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468877",
+      "text": "只能说就像很多单位只让用国产机一样",
+      "time": "23:01",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468878",
+      "text": "那个限制只是最低层的",
+      "time": "23:01",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468879",
+      "text": "保密单位压根不可能用联网设备跑涉密信息",
+      "time": "23:01",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468880",
+      "text": "不是真“涉密”那一层",
+      "time": "23:01",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468881",
+      "text": "真用😂，而且他给我看过",
+      "time": "23:01",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468883",
+      "text": "这个也许",
+      "time": "23:02",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468884",
+      "text": "材料想移出电脑都要刻光碟，都不让插U盘。\ntg群众也是太会幻想保密单位的生活了，但实际接触概率低于1%",
+      "time": "23:02",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468885",
+      "text": "如果真的到了涉密那层",
+      "time": "23:02",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468886",
+      "text": "那只能说，文化工作者没文化",
+      "time": "23:02",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "468888",
+      "text": "你手上的电脑还能联网，你就没到涉密的层级",
+      "time": "23:02",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468889",
+      "text": "那是资料，但是人脑中的资料无法保密",
+      "time": "23:03",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468890",
+      "text": "而且这个世界其实很草台班子",
+      "time": "23:04",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468891",
+      "text": "但是A畜报告里说的示例，是有可能是真的，国企的下游单位的关联企业，做招投标材料用GLM导致数据外流",
+      "time": "23:04",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468892",
+      "text": "这个逻辑是通的",
+      "time": "23:04",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468893",
+      "text": "天天写材料都累死了，还要拿个小手机翻墙挨个打字问些零碎东西。",
+      "time": "23:04",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468894",
+      "text": "何苦呢",
+      "time": "23:04",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468895",
+      "text": "那成都500多个摄像头怎么回事",
+      "time": "23:05",
+      "sender_name": "余承东🍥",
+      "sender_id": 8381317357
+    },
+    {
+      "id": "468896",
+      "text": "你不能假定A畜报告里的每个示例都是真实可信的",
+      "time": "23:05",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468899",
+      "text": "只能说，有部分示例逻辑是通的，可能是真的",
+      "time": "23:06",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468903",
+      "text": "数据外泄情况肯定很严重，严防死守下，AI的出现导致大量外泄",
+      "time": "23:06",
+      "sender_name": "Xun Lee",
+      "sender_id": 1569253493
+    },
+    {
+      "id": "468913",
+      "text": "逻辑上，公务员拿国模做个周报或者整理个汇报材料表格什么的，可太正常了，无意识的信息泄密是可能的",
+      "time": "23:08",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468924",
+      "text": "笑死，刚问了他，还真是天天问国产ai一些细节怎么设计，怎么优化",
+      "time": "23:11",
+      "sender_name": "today",
+      "sender_id": 7140559230
+    },
+    {
+      "id": "468926",
+      "text": "本来就是真的的，国内就是蒸馏啊",
+      "time": "23:12",
+      "sender_name": "Julian Zhu",
+      "sender_id": 8330287019
+    },
+    {
+      "id": "468927",
+      "text": "现在确实没有规定公职人员日常办公禁止用AI工具，甚至不少单位还鼓励使用",
+      "time": "23:12",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468928",
+      "text": "日常大量材料整理用AI工具确实能减负",
+      "time": "23:13",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "468932",
+      "text": "从用外部AI的那刻起，这个人已经和保密思维无缘了。保密培训要不就是没做过要不就是忘的光光的。",
+      "time": "23:14",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "468935",
+      "text": "国内模型就不说了，他们还有很多人自己用国外模型，完全没意识到数据问题",
+      "time": "23:16",
+      "sender_name": "Xun Lee",
+      "sender_id": 1569253493
+    },
+    {
+      "id": "468940",
+      "text": "这些人是主动把数据送出去",
+      "time": "23:17",
+      "sender_name": "Xun Lee",
+      "sender_id": 1569253493
+    },
+    {
+      "id": "469005",
+      "text": "这是synthetic data",
+      "time": "23:42",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469006",
+      "text": "和distillation并不一样",
+      "time": "23:43",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469010",
+      "text": "只有student model蒸馏teacher model",
+      "time": "23:44",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469014",
+      "text": "a/要蒸别人，也得找个比他厉害的才行",
+      "time": "23:45",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469016",
+      "text": "而且还要拿到cot",
+      "time": "23:45",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469022",
+      "text": "克劳德模型的中文语料从哪儿来的？国内有一家媒体/平台/版权方给A畜授权过吗？都不提其他语种语料来源了",
+      "time": "23:47",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469025",
+      "text": "这不叫蒸馏啊",
+      "time": "23:48",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469026",
+      "text": "你可以说他pretrain data收集罔顾版权",
+      "time": "23:49",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469028",
+      "text": "我为什么一直在说A畜首蒸，再蒸必究，这畜生公司的底色是什么样的弹道还需要我再多说？",
+      "time": "23:49",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469031",
+      "text": "中文语料没那么难找啊，而且不是还有台湾么？",
+      "time": "23:50",
+      "sender_name": "信长",
+      "sender_id": 8206024839
+    },
+    {
+      "id": "469032",
+      "text": "笑死，不如先了解一下啥叫distillation",
+      "time": "23:50",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469033",
+      "text": "不要把pretrain和distillation混为一谈",
+      "time": "23:50",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469034",
+      "text": "A畜扒中文互联网的公开信息，国内企业去扒他的公开信息，本质但难有差》？",
+      "time": "23:50",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469037",
+      "text": "a/的cot",
+      "time": "23:51",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469038",
+      "text": "并不是公开信息",
+      "time": "23:51",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469040",
+      "text": "大语言模型的内容版权本身就是灰色地带",
+      "time": "23:51",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469041",
+      "text": "你也说的是中文互联网的公开信息",
+      "time": "23:51",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469042",
+      "text": "谁授权过A畜扒中文互联网信息了？",
+      "time": "23:51",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469043",
+      "text": "distillation和版权并没有必然联系",
+      "time": "23:51",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469044",
+      "text": "你不如先去查查什么叫distillation",
+      "time": "23:52",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469046",
+      "text": "除非你说中文互联网的信息都是模型生成的",
+      "time": "23:52",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469047",
+      "text": "那他妈别人作为付费用户通过他自己的公开业务扒他的语料有什么问题呀",
+      "time": "23:52",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469048",
+      "text": "我去",
+      "time": "23:52",
+      "sender_name": "David",
+      "sender_id": 8168609222
+    },
+    {
+      "id": "469049",
+      "text": "居然是真的",
+      "time": "23:52",
+      "sender_name": "David",
+      "sender_id": 8168609222
+    },
+    {
+      "id": "469051",
+      "text": "双标呗",
+      "time": "23:52",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469052",
+      "text": "这波 autoclaw 上大分",
+      "time": "23:52",
+      "sender_name": "David",
+      "sender_id": 8168609222
+    },
+    {
+      "id": "469053",
+      "text": "还是那句话",
+      "time": "23:53",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469054",
+      "text": "去查查distillation是什么",
+      "time": "23:53",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469056",
+      "text": "实际上a/模型的输出意义并不大",
+      "time": "23:53",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469057",
+      "text": "宝贵的是cot",
+      "time": "23:53",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469058",
+      "text": "那个部分并不公开",
+      "time": "23:53",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469059",
+      "text": "A畜首蒸，再蒸必究就是双标，婊子行为、",
+      "time": "23:53",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469060",
+      "text": "a蒸什么了呢？",
+      "time": "23:53",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469062",
+      "text": "行了",
+      "time": "23:54",
+      "sender_name": "Uu",
+      "sender_id": 1121450906
+    },
+    {
+      "id": "469066",
+      "text": "别公开不公开，中文互联网的语料，谁授权你A畜扒了",
+      "time": "23:54",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469068",
+      "text": "不要学一个词语就随便用",
+      "time": "23:54",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469069",
+      "text": "蒸了豆包和openai",
+      "time": "23:54",
+      "sender_name": "Uu",
+      "sender_id": 1121450906
+    },
+    {
+      "id": "469070",
+      "text": "文心一言",
+      "time": "23:54",
+      "sender_name": "​Pilot Fünf 𒀭𒈹",
+      "sender_id": 7101424160
+    },
+    {
+      "id": "469071",
+      "text": "】还能洗他妈A畜的，也是神人",
+      "time": "23:54",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469072",
+      "text": "这几个至少都不能做teacher model",
+      "time": "23:55",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469074",
+      "text": "老师蒸馏学生？",
+      "time": "23:55",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469076",
+      "text": "谁告诉你不能反过来了",
+      "time": "23:55",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "469078",
+      "text": "那就不叫蒸馏了",
+      "time": "23:55",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469079",
+      "text": "不提其他所有语种语料，他A畜付过多少版权费用就扒全网信息去训练",
+      "time": "23:55",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469080",
+      "text": "爬虫不等于蒸馏",
+      "time": "23:56",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469081",
+      "text": "他也就国内公司没多少版权意识或者国内政府版权管不了他A畜，他在美国本土大把版权官司",
+      "time": "23:56",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469082",
+      "text": "慢慢打吧",
+      "time": "23:56",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469084",
+      "text": "a/是畜，也不是你什么帽子都能随便扣的",
+      "time": "23:56",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469085",
+      "text": "不过你要单纯提那个词的话，那确实不算",
+      "time": "23:56",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "469086",
+      "text": "我从不否认a/有版权问题",
+      "time": "23:57",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469087",
+      "text": "你说他是蒸馏",
+      "time": "23:57",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469088",
+      "text": "骂A畜你不开心可太好了；",
+      "time": "23:57",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469089",
+      "text": "畜生东西",
+      "time": "23:57",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469090",
+      "text": "那我只能说你需要了解一下什么是蒸馏",
+      "time": "23:57",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469093",
+      "text": "我觉得连蒸馏是什么都没搞清楚",
+      "time": "23:58",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469094",
+      "text": "我还是那句话，A畜首蒸，再蒸必究",
+      "time": "23:58",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469096",
+      "text": "是婊子行为",
+      "time": "23:58",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469097",
+      "text": "就说别人是蒸馏",
+      "time": "23:58",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469098",
+      "text": "也是挺可笑的",
+      "time": "23:58",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469099",
+      "text": "至于你开不开心，我不关心",
+      "time": "23:58",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469101",
+      "text": "有点意思",
+      "time": "23:59",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469102",
+      "text": "虚空打靶",
+      "time": "23:59",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469104",
+      "text": "好了好了，其实是对蒸馏这个定义有偏差，没必要",
+      "time": "23:59",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "469105",
+      "text": "我一个都不用a/模型的人",
+      "time": "23:59",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469107",
+      "text": "没偏差，这行业蒸馏是一般技术路径",
+      "time": "23:59",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469108",
+      "text": "单纯从术语上来说，确实不算🙈",
+      "time": "23:59",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "469109",
+      "text": "没有谁不蒸",
+      "time": "23:59",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469110",
+      "text": "他A畜蒸的早而已",
+      "time": "00:00",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469111",
+      "text": "只是咱们聊天的时候，已经把这个蒸馏广义了",
+      "time": "00:00",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "469112",
+      "text": "现在骂学他的",
+      "time": "00:00",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469113",
+      "text": "婊子行为",
+      "time": "00:00",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469114",
+      "text": "蒸谁啊？",
+      "time": "00:00",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469115",
+      "text": "有给他蒸的素材吗",
+      "time": "00:00",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469116",
+      "text": "teacher model在哪里",
+      "time": "00:00",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469118",
+      "text": "我提醒下，A畜在一年多前，还是OAI追赶者",
+      "time": "00:01",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469119",
+      "text": "你要岁月史书我也没办法",
+      "time": "00:01",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469120",
+      "text": "笑死了，可是oai agent能力并不强",
+      "time": "00:01",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469122",
+      "text": "上车了那能一样吗？那肯定要焊死车门啊。",
+      "time": "00:01",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "469123",
+      "text": "还是那句话，A畜首蒸，再蒸必究",
+      "time": "00:01",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469126",
+      "text": "实际上到现在才是赶上",
+      "time": "00:02",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469130",
+      "text": "你要岁月史书我也没办法",
+      "time": "00:02",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469131",
+      "text": "我蒸馏chatbot换取更高agent能力？",
+      "time": "00:02",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469133",
+      "text": "他A畜畜生在双标，而不再蒸馏",
+      "time": "00:03",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469137",
+      "text": "当然，孝子贤孙眼里他A畜冰清玉洁",
+      "time": "00:03",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469139",
+      "text": "蒸馏需要teacher model",
+      "time": "00:04",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469140",
+      "text": "双标疑似有点太好听了，A\\不应该用这么不冷不热的词来形容",
+      "time": "00:04",
+      "sender_name": "0803 1993",
+      "sender_id": 8317986932
+    },
+    {
+      "id": "469141",
+      "text": "能当a/的teacher的",
+      "time": "00:04",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469143",
+      "text": "不好说有没有",
+      "time": "00:04",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469144",
+      "text": "好了好了，你俩不在一个层面上",
+      "time": "00:04",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "469146",
+      "text": "你看，岁月史书流，才一年多",
+      "time": "00:05",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469148",
+      "text": "就开始历史修正了",
+      "time": "00:05",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469149",
+      "text": "什么岁月史书",
+      "time": "00:05",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469152",
+      "text": "chatbot时代oai是强",
+      "time": "00:05",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469154",
+      "text": "不代表通过蒸馏oai可以获得agentic能力跃进",
+      "time": "00:06",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469155",
+      "text": "b站看见过一个评论",
+      "time": "00:06",
+      "sender_name": "Lucy",
+      "sender_id": 6488338872
+    },
+    {
+      "id": "469156",
+      "text": "还有人能腆着逼脸说A畜没蒸的，还说啥呢",
+      "time": "00:06",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469157",
+      "text": "你开心就好呀",
+      "time": "00:06",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469159",
+      "text": "agentic能力跃进需要是对齐cot和tool call的",
+      "time": "00:06",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469161",
+      "text": "有人租gpt号，进去一看都是xx省政府开会纪要总结、xx政府办公材料之类的",
+      "time": "00:06",
+      "sender_name": "Lucy",
+      "sender_id": 6488338872
+    },
+    {
+      "id": "469162",
+      "text": "你这句话随便带入一个国模不也成立",
+      "time": "00:06",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469163",
+      "text": "搞笑",
+      "time": "00:07",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469165",
+      "text": "国模破解了cot啊",
+      "time": "00:07",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469166",
+      "text": "你开心就好",
+      "time": "00:07",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469167",
+      "text": "你要双标，要岁月史书",
+      "time": "00:07",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469168",
+      "text": "随你",
+      "time": "00:07",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469170",
+      "text": "符合A畜粉丝画像就是了",
+      "time": "00:07",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469171",
+      "text": "经典扣帽子",
+      "time": "00:07",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469172",
+      "text": "稻草人",
+      "time": "00:08",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469173",
+      "text": "红鲱鱼",
+      "time": "00:08",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469174",
+      "text": "轮着来",
+      "time": "00:08",
+      "sender_name": "slidemaker",
+      "sender_id": 859741541
+    },
+    {
+      "id": "469176",
+      "text": "A畜自己知道他这么冰清玉洁吗",
+      "time": "00:08",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469177",
+      "text": "大语言模型这行业本身就是建立在版权灰区上的",
+      "time": "00:09",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469179",
+      "text": "停一下",
+      "time": "00:10",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "469180",
+      "text": "其实你俩讲的不是一个层面",
+      "time": "00:10",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "469182",
+      "text": "蒸馏是一般技术路径，全行业通例，没有例外",
+      "time": "00:10",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469183",
+      "text": "蒸馏不丢人，蒸完骂同行就是双标",
+      "time": "00:10",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469188",
+      "text": "A畜蒸OAI那会又不兴搞这种指责闹剧，业内就是互相蒸，现在跳出来骂就是典型又当又立",
+      "time": "00:13",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469189",
+      "text": "现在有人跳出来历史修正，搞笑啊",
+      "time": "00:13",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469196",
+      "text": "这操作属于「借尸还魂」还带加速包——自家模型不够用，偷偷把 Claude 换个马甲当自家旗舰跑，被抓包了才改成「模型不可用」，这公关话术比切端点还快。",
+      "time": "00:15",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 5090130895
+    },
+    {
+      "id": "469197",
+      "text": "有些人说的好像蒸馏这套技术路径是国内企业原创的一样，说难听点，有点过于高估这几家公司了，国模起步晚，没这技术实力，这套技术路径都是借鉴国外先进经验“借”来的",
+      "time": "00:19",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "469204",
+      "text": "逆天了，当婊子立牌坊的来了",
+      "time": "00:28",
+      "sender_name": "maike xie",
+      "sender_id": 7671435904
+    },
+    {
+      "id": "469217",
+      "text": "其实没有ai也会泄密。之前上海哪个数据库泄密不就是有傻子把accesskey发布到csdn嘛",
+      "time": "00:43",
+      "sender_name": "青",
+      "sender_id": 1102553675
+    }
+  ]
+}
