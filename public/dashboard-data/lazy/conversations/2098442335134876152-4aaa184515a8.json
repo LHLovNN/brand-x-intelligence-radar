@@ -1,0 +1,77 @@
+{
+  "conversation_id": "2098442335134876152",
+  "anchor_post_id": "2098442335134876152",
+  "summary_zh": "前文围绕 Agent 操作已登录网站时登录态、点击和复跑命令的痛点。收录帖转向 OpenCLI 的产品能力与使用体验，未谈价格或配送。后续作者补充安装方式、版本差异、浏览器桥、验证命令和已知坑，有助判断内容偏真实教程与避坑反馈，情绪中性实用，传播价值在开发者场景。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2098442335134876152",
+      "url": "https://x.com/myluke1/status/2098442335134876152",
+      "created_at": "2026-09-11T16:03:34Z",
+      "text": "Agent 要刷你已经登录的网站，最烦的不是点不动，是登录态带不过去、每次还得对着页面瞎摸。OpenCLI 接的是你本机已经登录的 Chrome，把常用站收成能复跑的命令。\n\nB站、知乎、小红书、X 这类站，直接打命令就能拉热榜、搜、下内容，结果能喂给脚本或 Agent。没有现成命令的站，Agent 也能在同一套登录态里点、填、抽页面，抽的是页面结构，不是截图。新站还能写成下次还能用的命令，不用每回从零摸。\n\n硬坑：必须装浏览器桥接扩展。站点一改版命令就会空；扩展和命令行版本对不齐时，点了会报成功但页面没动。现在 npm 的最新版还停在上一版。\n\n你现在卡的是「常用站没有现成命令」，还是「Agent 在已登录页上点了没反应」？\n\nhttps://t.co/DeMmyFBIeM",
+      "original_text": "Agent 要刷你已经登录的网站，最烦的不是点不动，是登录态带不过去、每次还得对着页面瞎摸。OpenCLI 接的是你本机已经登录的 Chrome，把常用站收成能复跑的命令。\n\nB站、知乎、小红书、X 这类站，直接打命令就能拉热榜、搜、下内容，结果能喂给脚本或 Agent。没有现成命令的站，Agent 也能在同一套登录态里点、填、抽页面，抽的是页面结构，不是截图。新站还能写成下次还能用的命令，不用每回从零摸。\n\n硬坑：必须装浏览器桥接扩展。站点一改版命令就会空；扩展和命令行版本对不齐时，点了会报成功但页面没动。现在 npm 的最新版还停在上一版。\n\n你现在卡的是「常用站没有现成命令」，还是「Agent 在已登录页上点了没反应」？\n\nhttps://t.co/DeMmyFBIeM",
+      "translation_zh": "Agent 要刷你已经登录的网站，最烦的不是点不动，是登录态带不过去、每次还得对着页面瞎摸。OpenCLI 接的是你本机已经登录的 Chrome，把常用站收成能复跑的命令。\n\nB站、知乎、小红书、X 这类站，直接打命令就能拉热榜、搜、下内容，结果能喂给脚本或 Agent。没有现成命令的站，Agent 也能在同一套登录态里点、填、抽页面，抽的是页面结构，不是截图。新站还能写成下次还能用的命令，不用每回从零摸。\n\n硬坑：必须装浏览器桥接扩展。站点一改版命令就会空；扩展和命令行版本对不齐时，点了会报成功但页面没动。现在 npm 的最新版还停在上一版。\n\n你现在卡的是「常用站没有现成命令」，还是「Agent 在已登录页上点了没反应」？\n\nhttps://t.co/DeMmyFBIeM",
+      "translation_status": "source_chinese",
+      "author_name": "Luke｜AI 出海记",
+      "author_handle": "myluke1",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1323437611751362560/hHFMDoou_normal.jpg",
+      "author_followers": 610,
+      "author_following": 974,
+      "author_bio": "10+ 年程序员 · 2 年独立开发\nAI 工具实测 | Agent / 效率 / 出海踩坑\n少吹牛，多截图，能跑通才说好用\n独立开发日记 · 互动多的我会回\nTiktok 广告归因平台 https://t.co/6AHLvBuab8",
+      "author_location": "Build in Public",
+      "author_joined_at": "2011-07-22T15:28:01Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/jackwener/OpenCLI"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HR8qKGcb0AAGWyg.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HR8qKGcb0AAGWyg.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HR8qKGcb0AAGWyg.jpg",
+          "expanded_url": "https://x.com/myluke1/status/2098442335134876152/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 1,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 131
+      }
+    },
+    {
+      "post_id": "2098442447529611528",
+      "url": "https://x.com/myluke1/status/2098442447529611528",
+      "created_at": "2026-09-11T16:04:01Z",
+      "text": "安装（需要 Node >= 20.18.1）： npm install -g @jackwener/opencli\n\n注意：GitHub 已到 v1.8.8，npm latest 仍是 1.8.7（#2458）。桌面端也可从 https://t.co/ZVczZlPNlq 装 OpenCLIApp。\n\n浏览器桥：Chrome Web Store 搜 OpenCLI https://t.co/6FZQGrZc9H\n\n验证： opencli doctor opencli list opencli hackernews top --limit 5\n\n给 Agent 装 skill： npx skills add jackwener/opencli --skill opencli-browser\n\n已知坑：\n• 扩展未连上 / 登录过期 → 空数据或 Unauthorized\n• 扩展和 CLI 版本错位时，click 会报 clicked:true 但页面没动（#2418）\n• 小红书连续读详情会撞风控（#1825）\n• Chrome 152 上扩展断开调试后再导航会被拒（#2487）",
+      "original_text": "安装（需要 Node >= 20.18.1）： npm install -g @jackwener/opencli\n\n注意：GitHub 已到 v1.8.8，npm latest 仍是 1.8.7（#2458）。桌面端也可从 https://t.co/ZVczZlPNlq 装 OpenCLIApp。\n\n浏览器桥：Chrome Web Store 搜 OpenCLI https://t.co/6FZQGrZc9H\n\n验证： opencli doctor opencli list opencli hackernews top --limit 5\n\n给 Agent 装 skill： npx skills add jackwener/opencli --skill opencli-browser\n\n已知坑：\n• 扩展未连上 / 登录过期 → 空数据或 Unauthorized\n• 扩展和 CLI 版本错位时，click 会报 clicked:true 但页面没动（#2418）\n• 小红书连续读详情会撞风控（#1825）\n• Chrome 152 上扩展断开调试后再导航会被拒（#2487）",
+      "translation_zh": "安装（需要 Node >= 20.18.1）： npm install -g @jackwener/opencli\n\n注意：GitHub 已到 v1.8.8，npm latest 仍是 1.8.7（#2458）。桌面端也可从 https://t.co/ZVczZlPNlq 装 OpenCLIApp。\n\n浏览器桥：Chrome Web Store 搜 OpenCLI https://t.co/6FZQGrZc9H\n\n验证： opencli doctor opencli list opencli hackernews top --limit 5\n\n给 Agent 装 skill： npx skills add jackwener/opencli --skill opencli-browser\n\n已知坑：\n• 扩展未连上 / 登录过期 → 空数据或 Unauthorized\n• 扩展和 CLI 版本错位时，click 会报 clicked:true 但页面没动（#2418）\n• 小红书连续读详情会撞风控（#1825）\n• Chrome 152 上扩展断开调试后再导航会被拒（#2487）",
+      "translation_status": "source_chinese",
+      "author_name": "Luke｜AI 出海记",
+      "author_handle": "myluke1",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1323437611751362560/hHFMDoou_normal.jpg",
+      "author_followers": 610,
+      "author_following": 974,
+      "author_bio": "10+ 年程序员 · 2 年独立开发\nAI 工具实测 | Agent / 效率 / 出海踩坑\n少吹牛，多截图，能跑通才说好用\n独立开发日记 · 互动多的我会回\nTiktok 广告归因平台 https://t.co/6AHLvBuab8",
+      "author_location": "Build in Public",
+      "author_joined_at": "2011-07-22T15:28:01Z",
+      "author_verified": false,
+      "links": [
+        "https://opencli.info/download",
+        "https://chromewebstore.google.com/detail/opencli/ildkmabpimmkaediidaifkhjpohdnifk"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 25
+      }
+    }
+  ]
+}
