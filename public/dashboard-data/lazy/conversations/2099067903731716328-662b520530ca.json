@@ -1,0 +1,66 @@
+{
+  "conversation_id": "2099067903731716328",
+  "anchor_post_id": "2099067903731716328",
+  "summary_zh": "前文围绕 Agent-Reach 项目展开，介绍其不直接抓数据，而是帮 Agent 安装和检查 yt-dlp、gh CLI、bili-cli、Exa 等工具，并明确登录态平台有封号风险。收录帖把话题落到产品功能、使用门槛和风险透明度，语气偏正向审慎。后续仅一条“可以浇朋友吗”的不明回应，未补充事实，传播和验证价值有限。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2099067903731716328",
+      "url": "https://x.com/chatgpt1499/status/2099067903731716328",
+      "created_at": "2026-09-13T09:29:21Z",
+      "text": "刷到有人推荐 Agent-Reach，说是能治 Agent 上网就抓瞎的毛病。\n\n我核了一遍官方仓库。它自己不抓数据，管的是选型、装好、体检：YouTube 字幕走 yt-dlp，GitHub 走 gh CLI，B站走 bili-cli，全网搜索走 Exa，网页和 RSS 装完就能用。\n\n把仓库里的安装文档丢给你的 Agent，它自己查环境、装依赖，你不用逐条读文档。\n\n我更在意它把代价写在了明面上。Twitter、小红书、Reddit 这些要登录态的平台，官方直接建议上专用小号，脚本调用有被检测封号的风险；安装默认只做只读检查。\n\n如果你用 Claude Code、OpenClaw 或 Cursor，这个值得先看一眼。OpenClaw 用户记得先开命令执行权限。项目 MIT 许可，Python 3.10 起。\n\nhttps://t.co/WTMvQpdVQT",
+      "original_text": "刷到有人推荐 Agent-Reach，说是能治 Agent 上网就抓瞎的毛病。\n\n我核了一遍官方仓库。它自己不抓数据，管的是选型、装好、体检：YouTube 字幕走 yt-dlp，GitHub 走 gh CLI，B站走 bili-cli，全网搜索走 Exa，网页和 RSS 装完就能用。\n\n把仓库里的安装文档丢给你的 Agent，它自己查环境、装依赖，你不用逐条读文档。\n\n我更在意它把代价写在了明面上。Twitter、小红书、Reddit 这些要登录态的平台，官方直接建议上专用小号，脚本调用有被检测封号的风险；安装默认只做只读检查。\n\n如果你用 Claude Code、OpenClaw 或 Cursor，这个值得先看一眼。OpenClaw 用户记得先开命令执行权限。项目 MIT 许可，Python 3.10 起。\n\nhttps://t.co/WTMvQpdVQT",
+      "translation_zh": "刷到有人推荐 Agent-Reach，说是能治 Agent 上网就抓瞎的毛病。\n\n我核了一遍官方仓库。它自己不抓数据，管的是选型、装好、体检：YouTube 字幕走 yt-dlp，GitHub 走 gh CLI，B站走 bili-cli，全网搜索走 Exa，网页和 RSS 装完就能用。\n\n把仓库里的安装文档丢给你的 Agent，它自己查环境、装依赖，你不用逐条读文档。\n\n我更在意它把代价写在了明面上。Twitter、小红书、Reddit 这些要登录态的平台，官方直接建议上专用小号，脚本调用有被检测封号的风险；安装默认只做只读检查。\n\n如果你用 Claude Code、OpenClaw 或 Cursor，这个值得先看一眼。OpenClaw 用户记得先开命令执行权限。项目 MIT 许可，Python 3.10 起。\n\nhttps://t.co/WTMvQpdVQT",
+      "translation_status": "source_chinese",
+      "author_name": "Lotus",
+      "author_handle": "chatgpt1499",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2095955406711668736/S5oi-jUl_normal.jpg",
+      "author_followers": 28,
+      "author_following": 35,
+      "author_bio": "AI 企业培训讲师、运营专家、增长黑客，专注 SEO、AI 搜索优化、AI 智能体与 Vibe Coding，持续分享 AI 提效、获客与 Web 出海实战。",
+      "author_location": null,
+      "author_joined_at": "2022-03-31T10:35:27Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/Panniantong/Agent-Reach"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 365
+      }
+    },
+    {
+      "post_id": "2099147211384729611",
+      "url": "https://x.com/ldxhjxy/status/2099147211384729611",
+      "created_at": "2026-09-13T14:44:30Z",
+      "text": "@chatgpt1499 可以浇朋友吗",
+      "original_text": "@chatgpt1499 可以浇朋友吗",
+      "translation_zh": "@chatgpt1499 可以浇朋友吗",
+      "translation_status": "source_chinese",
+      "author_name": "江小鱼",
+      "author_handle": "ldxhjxy",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2014106991912730625/X_gBU_Hq_normal.jpg",
+      "author_followers": 5638,
+      "author_following": 5356,
+      "author_bio": "三千年读史不外功名利禄，九万里悟道终落到诗酒田园。\n文能提笔安天下，武能上马定乾坤。\n雄关漫道真如铁，而今迈步从头越！\n2021年进入币圈，玩合约负债25万U的老韭菜一枚！",
+      "author_location": "HongKong",
+      "author_joined_at": "2019-06-21T08:50:34Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 3
+      }
+    }
+  ]
+}

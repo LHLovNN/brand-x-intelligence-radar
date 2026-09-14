@@ -1,0 +1,74 @@
+{
+  "conversation_id": "2099135509834682508",
+  "anchor_post_id": "2099135509834682508",
+  "summary_zh": "前文围绕AI Agent联网取数难题展开，称反爬、鉴权、限流常卡住接口，并推荐开源项目Agent-Reach，介绍其整合多种采集工具、覆盖多平台，可用于选题、竞品和舆情监控。后续有人补充真实成本在长期维护。上下文显示这是工具推荐与技术讨论，情绪偏正向但带理性提醒。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2099135509834682508",
+      "url": "https://x.com/realfxw/status/2099135509834682508",
+      "created_at": "2026-09-13T13:58:00Z",
+      "text": "做 Agent 最头疼的往往不是模型逻辑，而是让它联网“拿数据”——反爬、登录鉴权、频率限制，折腾半天全卡在接口上。\n\n推荐关注开源项目 Agent-Reach，相当于直接给 AI Agent 装上了一副全网“采集外骨骼”：\n\n整合成熟生态：打包了 yt-dlp、twitter-cli、xhs-cli 等经过验证的成熟工具，无需反复手搓爬虫。\n\n高墙平台通吃：覆盖 YouTube、X、小红书、微信公众号、B站、微博、Reddit 与 V2EX 等高难度内容源。\n\n无缝赋能 Agent：解决 Claude Code、OpenClaw 等框架在抓取资料时卡在 API 和订阅限制上的痛点。\n\n以前是人工帮 AI 找资料喂饭，现在才算真正走向 AI 自主抓取。做自动化选题、竞品跟踪或行业舆情监控的朋友值得一试。\n\n你在跑 Agent 抓数据时，最常被哪个平台的反爬折腾？👇\nhttps://t.co/6bkwbUsVc9",
+      "original_text": "做 Agent 最头疼的往往不是模型逻辑，而是让它联网“拿数据”——反爬、登录鉴权、频率限制，折腾半天全卡在接口上。\n\n推荐关注开源项目 Agent-Reach，相当于直接给 AI Agent 装上了一副全网“采集外骨骼”：\n\n整合成熟生态：打包了 yt-dlp、twitter-cli、xhs-cli 等经过验证的成熟工具，无需反复手搓爬虫。\n\n高墙平台通吃：覆盖 YouTube、X、小红书、微信公众号、B站、微博、Reddit 与 V2EX 等高难度内容源。\n\n无缝赋能 Agent：解决 Claude Code、OpenClaw 等框架在抓取资料时卡在 API 和订阅限制上的痛点。\n\n以前是人工帮 AI 找资料喂饭，现在才算真正走向 AI 自主抓取。做自动化选题、竞品跟踪或行业舆情监控的朋友值得一试。\n\n你在跑 Agent 抓数据时，最常被哪个平台的反爬折腾？👇\nhttps://t.co/6bkwbUsVc9",
+      "translation_zh": "做 Agent 最头疼的往往不是模型逻辑，而是让它联网“拿数据”——反爬、登录鉴权、频率限制，折腾半天全卡在接口上。\n\n推荐关注开源项目 Agent-Reach，相当于直接给 AI Agent 装上了一副全网“采集外骨骼”：\n\n整合成熟生态：打包了 yt-dlp、twitter-cli、xhs-cli 等经过验证的成熟工具，无需反复手搓爬虫。\n\n高墙平台通吃：覆盖 YouTube、X、小红书、微信公众号、B站、微博、Reddit 与 V2EX 等高难度内容源。\n\n无缝赋能 Agent：解决 Claude Code、OpenClaw 等框架在抓取资料时卡在 API 和订阅限制上的痛点。\n\n以前是人工帮 AI 找资料喂饭，现在才算真正走向 AI 自主抓取。做自动化选题、竞品跟踪或行业舆情监控的朋友值得一试。\n\n你在跑 Agent 抓数据时，最常被哪个平台的反爬折腾？👇\nhttps://t.co/6bkwbUsVc9",
+      "translation_status": "source_chinese",
+      "author_name": "TechVerser",
+      "author_handle": "realfxw",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2072335456419897344/ktRiDNBp_normal.jpg",
+      "author_followers": 319,
+      "author_following": 964,
+      "author_bio": "学习成瘾者｜AI 研究方向\n用严谨把复杂讲清楚\n关注：模型、自动化、工程化",
+      "author_location": null,
+      "author_joined_at": "2022-05-09T05:21:51Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/Panniantong/Agent-Reach"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HSGTACKWIAMNSwJ.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HSGTACKWIAMNSwJ.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HSGTACKWIAMNSwJ.jpg",
+          "expanded_url": "https://x.com/realfxw/status/2099135509834682508/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 9,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 12,
+        "views": 1670
+      }
+    },
+    {
+      "post_id": "2099139681388822670",
+      "url": "https://x.com/lm_0x9/status/2099139681388822670",
+      "created_at": "2026-09-13T14:14:34Z",
+      "text": "@realfxw 给 agent 装「上网能力」的真实成本，往往不在工具本身，而在维持性：反爬策略会变、登录会过期、限流会调。建议把取数层做成适配器（可替换、带退化和告警），并显式记录「数据新鲜度」——否则模型再强，也会拿过期数据给出很自信的结论。",
+      "original_text": "@realfxw 给 agent 装「上网能力」的真实成本，往往不在工具本身，而在维持性：反爬策略会变、登录会过期、限流会调。建议把取数层做成适配器（可替换、带退化和告警），并显式记录「数据新鲜度」——否则模型再强，也会拿过期数据给出很自信的结论。",
+      "translation_zh": "@realfxw 给 agent 装「上网能力」的真实成本，往往不在工具本身，而在维持性：反爬策略会变、登录会过期、限流会调。建议把取数层做成适配器（可替换、带退化和告警），并显式记录「数据新鲜度」——否则模型再强，也会拿过期数据给出很自信的结论。",
+      "translation_status": "source_chinese",
+      "author_name": "大力侃球⚽",
+      "author_handle": "lm_0x9",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2087134014956269569/WKPVNPuG_normal.png",
+      "author_followers": 4274,
+      "author_following": 1043,
+      "author_bio": "⚽️ 五大联赛/世界杯深度解析 | 每日赛前情报 + 盘口精算\n🎯 用数据说话，带你读懂每场比赛\n📲 交流群：https://t.co/XfNmqK2QXv\n🏆 #世界杯2026 #五大联赛 #英超 #西甲",
+      "author_location": null,
+      "author_joined_at": "2024-01-25T02:49:08Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 37
+      }
+    }
+  ]
+}
