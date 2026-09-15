@@ -12,6 +12,8 @@ BASE_URL="${BRAND_RADAR_PUBLIC_BASE_URL:-https://lhlovnn.github.io/brand-x-intel
 REPORT_PATH="$STATE_DIR/public-freshness-$EXPECTED_DATE.json"
 ATTEMPT_PATH="$STATE_DIR/repair-attempts-$EXPECTED_DATE.json"
 MAX_REPAIR_ATTEMPTS="${BRAND_RADAR_HEALTH_MAX_REPAIR_ATTEMPTS:-2}"
+DAILY_LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-daily.lock"
+DITING_LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-diting-digests.lock"
 
 if [[ ! "$EXPECTED_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
   printf 'Invalid health-check date: %s\n' "$EXPECTED_DATE" >&2
@@ -80,8 +82,20 @@ temporary.replace(path)
 PY
 }
 
+lock_is_active() {
+  local lock_dir="$1"
+  local owner_pid=""
+  [[ -f "$lock_dir/pid" ]] || return 1
+  owner_pid="$(cat "$lock_dir/pid" 2>/dev/null || true)"
+  [[ "$owner_pid" =~ ^[0-9]+$ ]] && kill -0 "$owner_pid" 2>/dev/null
+}
+
 repair_daily_modules() {
   local attempts
+  if lock_is_active "$DAILY_LOCK_DIR"; then
+    log "Daily job is still running; deferring repair without consuming an attempt."
+    return 1
+  fi
   attempts="$(repair_attempts daily)"
   if (( attempts >= MAX_REPAIR_ATTEMPTS )); then
     log "Daily module repair limit reached for $EXPECTED_DATE; manual investigation required."
@@ -124,6 +138,10 @@ repair_daily_modules() {
 
 repair_diting_modules() {
   local attempts
+  if lock_is_active "$DITING_LOCK_DIR"; then
+    log "AI/TG job is still running; deferring repair without consuming an attempt."
+    return 1
+  fi
   attempts="$(repair_attempts diting)"
   if (( attempts >= MAX_REPAIR_ATTEMPTS )); then
     log "AI/TG repair limit reached for $EXPECTED_DATE; manual investigation required."
