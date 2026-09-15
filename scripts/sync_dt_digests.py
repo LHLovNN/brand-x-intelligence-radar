@@ -26,6 +26,10 @@ from src.pipeline.dashboard_builder import asset_cache_token, refresh_index_asse
 from src.pipeline.content_policy import tg_item_policy_reason, tg_reply_policy_reason
 from src.pipeline.lazy_payloads import shard_tg_replies
 from src.utils.io import write_json
+from src.utils.network import configure_outbound_network
+
+
+configure_outbound_network()
 
 
 DEFAULT_BASE_URL = "https://codew1028.github.io/dt"

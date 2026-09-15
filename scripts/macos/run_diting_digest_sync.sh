@@ -14,7 +14,10 @@ PYTHON_BIN="${PYTHON_BIN:-python3}"
 DETAIL_DAYS="${BRAND_RADAR_DITING_DETAIL_DAYS:-60}"
 BRANCH="${BRAND_RADAR_DITING_BRANCH:-main}"
 ISOLATED_WORKTREE="${BRAND_RADAR_DITING_ISOLATED_WORKTREE:-1}"
+SOURCE_REPO="${BRAND_RADAR_DITING_SOURCE_REPO:-git@github.com:codew1028/dt.git}"
 SYNC_PARENT=""
+SOURCE_PARENT=""
+SOURCE_DIR=""
 RUN_ID="$(date '+%Y%m%d-%H%M%S')"
 RUN_STARTED_EPOCH="$(date '+%s')"
 RUN_STATUS="failed"
@@ -45,6 +48,11 @@ cleanup() {
   if [[ -n "$SYNC_PARENT" && -d "$SYNC_PARENT" ]]; then
     case "$SYNC_PARENT" in
       "$TMP_BASE"/brand-radar-diting-sync.*) rm -rf "$SYNC_PARENT" ;;
+    esac
+  fi
+  if [[ -n "$SOURCE_PARENT" && -d "$SOURCE_PARENT" ]]; then
+    case "$SOURCE_PARENT" in
+      "$TMP_BASE"/brand-radar-diting-source.*) rm -rf "$SOURCE_PARENT" ;;
     esac
   fi
   if [[ "$exit_code" == "0" ]]; then
@@ -103,6 +111,13 @@ prepare_sync_checkout() {
   git clone --quiet --depth 1 --branch "$BRANCH" "$remote_url" "$ROOT"
 }
 
+prepare_source_checkout() {
+  SOURCE_PARENT="$(mktemp -d "$TMP_BASE/brand-radar-diting-source.XXXXXX")"
+  SOURCE_DIR="$SOURCE_PARENT/repo"
+  log "Preparing local Diting source checkout."
+  git clone --quiet --depth 1 "$SOURCE_REPO" "$SOURCE_DIR"
+}
+
 commit_with_repo_identity() {
   local message="$1"
   local author_name
@@ -138,6 +153,7 @@ PY
 
 cd "$PRIMARY_ROOT"
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export BRAND_RADAR_FORCE_IPV4="${BRAND_RADAR_FORCE_IPV4:-1}"
 
 command -v git >/dev/null 2>&1 || fail "git is not available."
 command -v "$PYTHON_BIN" >/dev/null 2>&1 || fail "$PYTHON_BIN is not available."
@@ -148,12 +164,14 @@ prepare_sync_checkout
 cd "$ROOT"
 export BRAND_RADAR_DEFER_SHARED_ASSETS=1
 
+prepare_source_checkout
+
 log "Syncing AI/TG digest data from Diting."
 CURRENT_STAGE="upstream_sync"
 if command -v caffeinate >/dev/null 2>&1; then
-  caffeinate -dimsu "$PYTHON_BIN" scripts/sync_dt_digests.py --detail-days "$DETAIL_DAYS"
+  caffeinate -dimsu "$PYTHON_BIN" scripts/sync_dt_digests.py --detail-days "$DETAIL_DAYS" --source-dir "$SOURCE_DIR"
 else
-  "$PYTHON_BIN" scripts/sync_dt_digests.py --detail-days "$DETAIL_DAYS"
+  "$PYTHON_BIN" scripts/sync_dt_digests.py --detail-days "$DETAIL_DAYS" --source-dir "$SOURCE_DIR"
 fi
 
 log "Verifying Diting digest artifacts."

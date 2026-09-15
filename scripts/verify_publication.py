@@ -3,11 +3,22 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
+
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from src.utils.network import configure_outbound_network
+
+
+configure_outbound_network()
 
 
 DEFAULT_BASE_URL = "https://lhlovnn.github.io/brand-x-intelligence-radar"

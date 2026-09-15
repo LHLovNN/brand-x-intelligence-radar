@@ -25,6 +25,7 @@ cat > "$PLIST" <<PLIST
   <string>$LABEL</string>
   <key>ProgramArguments</key>
   <array>
+    <string>/bin/bash</string>
     <string>$RUNNER</string>
   </array>
   <key>WorkingDirectory</key>

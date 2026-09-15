@@ -155,6 +155,7 @@ run_daily() {
 
 cd "$ROOT"
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export BRAND_RADAR_FORCE_IPV4="${BRAND_RADAR_FORCE_IPV4:-1}"
 
 command -v git >/dev/null 2>&1 || fail "git is not available."
 command -v security >/dev/null 2>&1 || fail "macOS security command is not available."

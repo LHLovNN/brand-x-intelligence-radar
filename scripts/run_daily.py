@@ -28,6 +28,7 @@ from src.pipeline.translation import (
 )
 from src.utils.config import load_project_json
 from src.utils.io import read_json, write_json, write_jsonl
+from src.utils.network import configure_outbound_network
 from src.utils.time import (
     BEIJING,
     beijing_daily_window,
@@ -40,6 +41,8 @@ from src.utils.time import (
 
 
 CHECKPOINT_PATH = ROOT / "data" / "checkpoints" / "daily" / "latest.json"
+
+configure_outbound_network()
 
 
 def report_date_arg(value: str) -> str:
