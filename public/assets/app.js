@@ -49,6 +49,7 @@ const DEFAULT_TIMELINE_EXPANDED_DAYS = 3;
 const BACK_TO_TOP_THRESHOLD = 520;
 const BRAND_ROUTES = new Set(["overview", "all", "daily", "settings"]);
 const JSON_LOAD_ATTEMPTS = 3;
+const BRAND_DATA_REFRESH_INTERVAL_MS = 5 * 60 * 1000;
 const routeTitles = {
   overview: "舆情焦点",
   all: "全部舆情",
@@ -161,12 +162,20 @@ async function init() {
   state.dtDigestIndex = emptyDitingDigestIndex();
   bindNavigation();
   setupBackToTop();
-  window.addEventListener("hashchange", render);
+  window.addEventListener("hashchange", () => {
+    render();
+    refreshCurrentBrandData();
+  });
+  window.addEventListener("focus", refreshCurrentBrandData);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") refreshCurrentBrandData();
+  });
+  window.setInterval(refreshCurrentBrandData, BRAND_DATA_REFRESH_INTERVAL_MS);
   render();
 }
 
-async function loadBrandData() {
-  if (state.routeDataReady.brand) return;
+async function loadBrandData(options = {}) {
+  if (state.routeDataReady.brand && !options.force) return;
   const [overview, daily, dailyIndex, competitor, sourceStatus] = await Promise.all([
     loadJson("./dashboard-data/latest.json"),
     loadJson("./dashboard-data/daily/latest.json"),
@@ -453,12 +462,12 @@ async function loadDitingRouteData(kind) {
   state.routeDataReady[routeName] = true;
 }
 
-function requestRouteData(routeName) {
+function requestRouteData(routeName, options = {}) {
   const dataKey = routeDataKey(routeName);
-  if (!dataKey || state.routeDataReady[dataKey] || state.routeDataLoads.has(dataKey)) return;
+  if (!dataKey || (!options.force && state.routeDataReady[dataKey]) || state.routeDataLoads.has(dataKey)) return;
   delete state.routeDataErrors[dataKey];
   const promise = (dataKey === "brand"
-    ? loadBrandData()
+    ? loadBrandData(options)
     : dataKey === "xiaohongshu"
       ? loadXiaohongshuData()
       : loadDitingRouteData(dataKey === "tgDaily" ? "tg" : "ai"))
@@ -470,6 +479,13 @@ function requestRouteData(routeName) {
       if (routeDataKey(route().name) === dataKey) render();
     });
   state.routeDataLoads.set(dataKey, promise);
+}
+
+function refreshCurrentBrandData() {
+  const current = route();
+  if (routeDataKey(current.name) !== "brand") return;
+  if (!state.routeDataReady.brand || state.routeDataLoads.has("brand")) return;
+  requestRouteData(current.name, { force: true });
 }
 
 function routeDataKey(routeName) {
