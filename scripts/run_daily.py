@@ -72,9 +72,35 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="When resuming from checkpoint, fetch only eligible conversation context without rerunning collection.",
     )
+    parser.add_argument(
+        "--refresh-platform-trends",
+        action="store_true",
+        help="When resuming from checkpoint, rerun only the platform-trend collection.",
+    )
+    parser.add_argument(
+        "--platform-trends-only",
+        action="store_true",
+        help="Refresh platform trends from a checkpoint without rebuilding brand dashboard data.",
+    )
+    parser.add_argument(
+        "--checkpoint-date",
+        type=report_date_arg,
+        metavar="YYYY-MM-DD",
+        help="Resume from the checkpoint for this exact report date instead of the latest checkpoint.",
+    )
     args = parser.parse_args()
     if args.attach_context_from_provider and not args.resume_from_checkpoint:
         parser.error("--attach-context-from-provider requires --resume-from-checkpoint")
+    if args.refresh_platform_trends and not args.resume_from_checkpoint:
+        parser.error("--refresh-platform-trends requires --resume-from-checkpoint")
+    if args.platform_trends_only and not args.resume_from_checkpoint:
+        parser.error("--platform-trends-only requires --resume-from-checkpoint")
+    if args.platform_trends_only and not args.refresh_platform_trends:
+        parser.error("--platform-trends-only requires --refresh-platform-trends")
+    if args.platform_trends_only and args.attach_context_from_provider:
+        parser.error("--platform-trends-only cannot be combined with --attach-context-from-provider")
+    if args.checkpoint_date and not args.resume_from_checkpoint:
+        parser.error("--checkpoint-date requires --resume-from-checkpoint")
     return args
 
 
@@ -404,12 +430,17 @@ def write_collection_checkpoint(
     write_json(str(ROOT / "data" / "checkpoints" / "daily" / f"{today}.json"), payload)
 
 
-def read_collection_checkpoint() -> dict[str, Any]:
-    if not CHECKPOINT_PATH.exists():
-        raise SystemExit(f"No local daily checkpoint found at {CHECKPOINT_PATH}. Run a normal local daily job first.")
-    checkpoint = read_json(str(CHECKPOINT_PATH))
+def read_collection_checkpoint(report_date: str = "") -> dict[str, Any]:
+    checkpoint_path = ROOT / "data" / "checkpoints" / "daily" / f"{report_date}.json" if report_date else CHECKPOINT_PATH
+    if not checkpoint_path.exists():
+        raise SystemExit(f"No local daily checkpoint found at {checkpoint_path}. Run a normal local daily job first.")
+    checkpoint = read_json(str(checkpoint_path))
     if not checkpoint.get("raw_posts"):
-        raise SystemExit(f"Local daily checkpoint has no raw posts: {CHECKPOINT_PATH}")
+        raise SystemExit(f"Local daily checkpoint has no raw posts: {checkpoint_path}")
+    if report_date and checkpoint.get("report_date") != report_date:
+        raise SystemExit(
+            f"Checkpoint report date mismatch: expected {report_date}, found {checkpoint.get('report_date') or 'missing'}"
+        )
     return checkpoint
 
 
@@ -427,7 +458,7 @@ def main() -> None:
     x_source = None
 
     if args.resume_from_checkpoint:
-        checkpoint = read_collection_checkpoint()
+        checkpoint = read_collection_checkpoint(args.checkpoint_date or "")
         provider = checkpoint["provider"]
         raw_posts = checkpoint["raw_posts"]
         collection_status = checkpoint["collection_status"]
@@ -458,6 +489,25 @@ def main() -> None:
             write_collection_checkpoint(provider, raw_posts, collection_status, start, end, today, window_label)
 
     translation_service = build_translation_service(provider)
+    if args.platform_trends_only:
+        platform_source = get_x_source(provider)
+        result = collect_platform_trends(
+            platform_source,
+            translation_service,
+            provider,
+            start,
+            end,
+            today,
+            window_label,
+            str(ROOT / "public" / "dashboard-data"),
+            audit_dir=str(ROOT / "data" / "audits" / "platform-trends" / "xiaohongshu" / "daily"),
+        )
+        print(
+            "Refreshed platform trends only: "
+            f"{result.get('accepted', 0)} accepted / {result.get('candidates_inspected', 0)} candidates"
+        )
+        return
+
     normalized = normalize_posts(raw_posts, keyword_config)
     translation_status = apply_translations(normalized, translation_service)
     collection_status["translation"] = translation_status
@@ -499,7 +549,7 @@ def main() -> None:
         collection_status=collection_status,
     )
     platform_trend_status = None
-    if platform_trends_enabled() and not args.resume_from_checkpoint:
+    if platform_trends_enabled() and (not args.resume_from_checkpoint or args.refresh_platform_trends):
         try:
             platform_source = get_x_source(provider)
             platform_trend_status = collect_platform_trends(

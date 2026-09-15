@@ -11,6 +11,8 @@ TMP_BASE="${TMPDIR:-/tmp}"
 TMP_BASE="${TMP_BASE%/}"
 LOCK_DIR="$TMP_BASE/brand-radar-diting-digests.lock"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
+SYNC_TIMEOUT_SECONDS="${BRAND_RADAR_DITING_SYNC_TIMEOUT_SECONDS:-1800}"
+NETWORK_COMMAND_TIMEOUT_SECONDS="${BRAND_RADAR_NETWORK_COMMAND_TIMEOUT_SECONDS:-600}"
 DETAIL_DAYS="${BRAND_RADAR_DITING_DETAIL_DAYS:-60}"
 BRANCH="${BRAND_RADAR_DITING_BRANCH:-main}"
 ISOLATED_WORKTREE="${BRAND_RADAR_DITING_ISOLATED_WORKTREE:-1}"
@@ -22,6 +24,7 @@ RUN_ID="$(date '+%Y%m%d-%H%M%S')"
 RUN_STARTED_EPOCH="$(date '+%s')"
 RUN_STATUS="failed"
 CURRENT_STAGE="startup"
+source "$PRIMARY_ROOT/scripts/macos/runner_lock_helpers.sh"
 
 mkdir -p "$LOG_DIR"
 find "$LOG_DIR" -type f -name 'diting-run-*.log' -mtime +30 -delete 2>/dev/null || true
@@ -44,7 +47,7 @@ cleanup() {
   finished_epoch="$(date '+%s')"
   elapsed=$((finished_epoch - RUN_STARTED_EPOCH))
   release_publish_lock
-  rmdir "$LOCK_DIR" 2>/dev/null || true
+  release_run_lock
   if [[ -n "$SYNC_PARENT" && -d "$SYNC_PARENT" ]]; then
     case "$SYNC_PARENT" in
       "$TMP_BASE"/brand-radar-diting-sync.*) rm -rf "$SYNC_PARENT" ;;
@@ -62,10 +65,12 @@ cleanup() {
     "$RUN_ID" "$RUN_STATUS" "$CURRENT_STAGE" "$elapsed" "$RUN_LOG"
 }
 
-if ! mkdir "$LOCK_DIR" 2>/dev/null; then
+if ! acquire_run_lock; then
   fail "Another ${BRAND_RADAR_DISPLAY_NAME} Diting digest sync is already active."
 fi
 trap cleanup EXIT
+trap 'handle_runner_signal INT' INT
+trap 'handle_runner_signal TERM' TERM
 
 ensure_no_local_source_changes() {
   local untracked
@@ -96,7 +101,7 @@ prepare_sync_checkout() {
     ROOT="$PRIMARY_ROOT"
     ensure_no_local_source_changes
     log "Syncing repository."
-    git pull --ff-only origin "$BRANCH"
+    run_bounded "$NETWORK_COMMAND_TIMEOUT_SECONDS" git pull --ff-only origin "$BRANCH"
     return
   fi
 
@@ -108,20 +113,20 @@ prepare_sync_checkout() {
   SYNC_PARENT="$(mktemp -d "$TMP_BASE/brand-radar-diting-sync.XXXXXX")"
   ROOT="$SYNC_PARENT/repo"
   log "Preparing isolated clean checkout for Diting digest sync."
-  git clone --quiet --depth 1 --branch "$BRANCH" "$remote_url" "$ROOT"
+  run_bounded "$NETWORK_COMMAND_TIMEOUT_SECONDS" git clone --quiet --depth 1 --branch "$BRANCH" "$remote_url" "$ROOT"
 }
 
 prepare_source_checkout() {
   SOURCE_PARENT="$(mktemp -d "$TMP_BASE/brand-radar-diting-source.XXXXXX")"
   SOURCE_DIR="$SOURCE_PARENT/repo"
   log "Preparing sparse local Diting source checkout."
-  git clone --quiet --depth 1 --filter=blob:none --no-checkout "$SOURCE_REPO" "$SOURCE_DIR"
+  run_bounded "$NETWORK_COMMAND_TIMEOUT_SECONDS" git clone --quiet --depth 1 --filter=blob:none --no-checkout "$SOURCE_REPO" "$SOURCE_DIR"
   git -C "$SOURCE_DIR" sparse-checkout set --no-cone \
     '/search-index.json' \
     '/*-AI日报.html' \
     '/*-tg-digest.html' \
     '/*-tg-digest.json'
-  git -C "$SOURCE_DIR" checkout --quiet
+  run_bounded "$NETWORK_COMMAND_TIMEOUT_SECONDS" git -C "$SOURCE_DIR" checkout --quiet
 }
 
 commit_with_repo_identity() {
@@ -160,6 +165,8 @@ PY
 cd "$PRIMARY_ROOT"
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export BRAND_RADAR_FORCE_IPV4="${BRAND_RADAR_FORCE_IPV4:-1}"
+export GIT_TERMINAL_PROMPT=0
+export GIT_SSH_COMMAND="${GIT_SSH_COMMAND:-ssh -o BatchMode=yes -o ConnectTimeout=20}"
 
 command -v git >/dev/null 2>&1 || fail "git is not available."
 command -v "$PYTHON_BIN" >/dev/null 2>&1 || fail "$PYTHON_BIN is not available."
@@ -170,14 +177,15 @@ prepare_sync_checkout
 cd "$ROOT"
 export BRAND_RADAR_DEFER_SHARED_ASSETS=1
 
+CURRENT_STAGE="prepare_source_checkout"
 prepare_source_checkout
 
 log "Syncing AI/TG digest data from Diting."
 CURRENT_STAGE="upstream_sync"
 if command -v caffeinate >/dev/null 2>&1; then
-  caffeinate -dimsu "$PYTHON_BIN" scripts/sync_dt_digests.py --detail-days "$DETAIL_DAYS" --source-dir "$SOURCE_DIR"
+  run_bounded "$SYNC_TIMEOUT_SECONDS" caffeinate -dimsu "$PYTHON_BIN" scripts/sync_dt_digests.py --detail-days "$DETAIL_DAYS" --source-dir "$SOURCE_DIR"
 else
-  "$PYTHON_BIN" scripts/sync_dt_digests.py --detail-days "$DETAIL_DAYS" --source-dir "$SOURCE_DIR"
+  run_bounded "$SYNC_TIMEOUT_SECONDS" "$PYTHON_BIN" scripts/sync_dt_digests.py --detail-days "$DETAIL_DAYS" --source-dir "$SOURCE_DIR"
 fi
 
 log "Verifying Diting digest artifacts."
@@ -222,14 +230,14 @@ data = json.loads(Path("public/dashboard-data/dt-digests/index.json").read_text(
 print((data.get("latest") or {}).get("tg") or "")
 PY
 )"
-"$PYTHON_BIN" scripts/verify_publication.py \
+run_bounded "$NETWORK_COMMAND_TIMEOUT_SECONDS" "$PYTHON_BIN" scripts/verify_publication.py \
   --base-url "${BRAND_RADAR_PUBLIC_BASE_URL:-https://lhlovnn.github.io/brand-x-intelligence-radar}" \
   --ai-date "$AI_DATE" \
   --tg-date "$TG_DATE"
 
 if [[ "$ISOLATED_WORKTREE" == "1" && -z "$(git -C "$PRIMARY_ROOT" status --porcelain)" ]]; then
   CURRENT_STAGE="refresh_primary_checkout"
-  git -C "$PRIMARY_ROOT" pull --ff-only origin "$BRANCH"
+  run_bounded "$NETWORK_COMMAND_TIMEOUT_SECONDS" git -C "$PRIMARY_ROOT" pull --ff-only origin "$BRANCH"
 else
   log "Primary checkout has local changes; leaving it untouched after isolated publication."
 fi

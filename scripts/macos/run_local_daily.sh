@@ -8,14 +8,20 @@ source "$ROOT/scripts/macos/publish_helpers.sh"
 LOG_DIR="$ROOT/data/logs/macos"
 LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-daily.lock"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
+GENERATION_TIMEOUT_SECONDS="${BRAND_RADAR_GENERATION_TIMEOUT_SECONDS:-7200}"
+NETWORK_COMMAND_TIMEOUT_SECONDS="${BRAND_RADAR_NETWORK_COMMAND_TIMEOUT_SECONDS:-600}"
 RESUME_FROM_CHECKPOINT="${BRAND_RADAR_RESUME_FROM_CHECKPOINT:-0}"
 ATTACH_CONTEXT_FROM_PROVIDER="${BRAND_RADAR_ATTACH_CONTEXT_FROM_PROVIDER:-0}"
+REFRESH_PLATFORM_TRENDS="${BRAND_RADAR_REFRESH_PLATFORM_TRENDS:-0}"
+PLATFORM_TRENDS_ONLY="${BRAND_RADAR_PLATFORM_TRENDS_ONLY:-0}"
+CHECKPOINT_DATE="${BRAND_RADAR_CHECKPOINT_DATE:-}"
 REPORT_DATE="${BRAND_RADAR_REPORT_DATE:-}"
 BRANCH="${BRAND_RADAR_BRANCH:-main}"
 RUN_ID="$(date '+%Y%m%d-%H%M%S')"
 RUN_STARTED_EPOCH="$(date '+%s')"
 RUN_STATUS="failed"
 CURRENT_STAGE="startup"
+source "$ROOT/scripts/macos/runner_lock_helpers.sh"
 
 mkdir -p "$LOG_DIR"
 find "$LOG_DIR" -type f -name 'daily-run-*.log' -mtime +30 -delete 2>/dev/null || true
@@ -38,7 +44,7 @@ cleanup() {
   finished_epoch="$(date '+%s')"
   elapsed=$((finished_epoch - RUN_STARTED_EPOCH))
   release_publish_lock
-  rmdir "$LOCK_DIR" 2>/dev/null || true
+  release_run_lock
   if [[ "$exit_code" == "0" ]]; then
     RUN_STATUS="success"
   fi
@@ -46,10 +52,12 @@ cleanup() {
     "$RUN_ID" "$RUN_STATUS" "$CURRENT_STAGE" "$elapsed" "$RUN_LOG"
 }
 
-if ! mkdir "$LOCK_DIR" 2>/dev/null; then
+if ! acquire_run_lock; then
   fail "Another ${BRAND_RADAR_DISPLAY_NAME} daily run is already active."
 fi
 trap cleanup EXIT
+trap 'handle_runner_signal INT' INT
+trap 'handle_runner_signal TERM' TERM
 
 require_local_secret() {
   local name="$1"
@@ -129,33 +137,38 @@ commit_with_repo_identity() {
 
 run_daily() {
   local args=()
+  local command=()
   if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
     args+=(--resume-from-checkpoint)
     if [[ "$ATTACH_CONTEXT_FROM_PROVIDER" == "1" ]]; then
       args+=(--attach-context-from-provider)
     fi
+    if [[ "$REFRESH_PLATFORM_TRENDS" == "1" ]]; then
+      args+=(--refresh-platform-trends)
+    fi
+    if [[ "$PLATFORM_TRENDS_ONLY" == "1" ]]; then
+      args+=(--platform-trends-only)
+    fi
+    if [[ -n "$CHECKPOINT_DATE" ]]; then
+      args+=(--checkpoint-date "$CHECKPOINT_DATE")
+    fi
   elif [[ -n "$REPORT_DATE" ]]; then
     args+=(--report-date "$REPORT_DATE")
   fi
 
+  command=("$PYTHON_BIN" scripts/run_daily.py "${args[@]}")
   if command -v caffeinate >/dev/null 2>&1; then
-    if [[ ${#args[@]} -gt 0 ]]; then
-      caffeinate -dimsu "$PYTHON_BIN" scripts/run_daily.py "${args[@]}"
-    else
-      caffeinate -dimsu "$PYTHON_BIN" scripts/run_daily.py
-    fi
+    run_bounded "$GENERATION_TIMEOUT_SECONDS" caffeinate -dimsu "${command[@]}"
   else
-    if [[ ${#args[@]} -gt 0 ]]; then
-      "$PYTHON_BIN" scripts/run_daily.py "${args[@]}"
-    else
-      "$PYTHON_BIN" scripts/run_daily.py
-    fi
+    run_bounded "$GENERATION_TIMEOUT_SECONDS" "${command[@]}"
   fi
 }
 
 cd "$ROOT"
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export BRAND_RADAR_FORCE_IPV4="${BRAND_RADAR_FORCE_IPV4:-1}"
+export GIT_TERMINAL_PROMPT=0
+export GIT_SSH_COMMAND="${GIT_SSH_COMMAND:-ssh -o BatchMode=yes -o ConnectTimeout=20}"
 
 command -v git >/dev/null 2>&1 || fail "git is not available."
 command -v security >/dev/null 2>&1 || fail "macOS security command is not available."
@@ -168,11 +181,20 @@ fi
 if [[ "$ATTACH_CONTEXT_FROM_PROVIDER" == "1" && "$RESUME_FROM_CHECKPOINT" != "1" ]]; then
   fail "BRAND_RADAR_ATTACH_CONTEXT_FROM_PROVIDER requires BRAND_RADAR_RESUME_FROM_CHECKPOINT."
 fi
+if [[ "$REFRESH_PLATFORM_TRENDS" == "1" && "$RESUME_FROM_CHECKPOINT" != "1" ]]; then
+  fail "BRAND_RADAR_REFRESH_PLATFORM_TRENDS requires BRAND_RADAR_RESUME_FROM_CHECKPOINT."
+fi
+if [[ "$PLATFORM_TRENDS_ONLY" == "1" && "$REFRESH_PLATFORM_TRENDS" != "1" ]]; then
+  fail "BRAND_RADAR_PLATFORM_TRENDS_ONLY requires BRAND_RADAR_REFRESH_PLATFORM_TRENDS."
+fi
+if [[ -n "$CHECKPOINT_DATE" && "$RESUME_FROM_CHECKPOINT" != "1" ]]; then
+  fail "BRAND_RADAR_CHECKPOINT_DATE requires BRAND_RADAR_RESUME_FROM_CHECKPOINT."
+fi
 ensure_no_local_source_changes
 
 CURRENT_STAGE="initial_repository_sync"
 log "Syncing repository."
-git pull --ff-only origin "$BRANCH"
+run_bounded "$NETWORK_COMMAND_TIMEOUT_SECONDS" git pull --ff-only origin "$BRANCH"
 
 export X_SOURCE_PROVIDER="${X_SOURCE_PROVIDER:-twitterapi_io}"
 export X_DAILY_LIMIT="${X_DAILY_LIMIT:-120}"
@@ -193,6 +215,9 @@ if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
   if [[ "$ATTACH_CONTEXT_FROM_PROVIDER" == "1" ]]; then
     TWITTERAPI_IO_KEY="$(require_local_secret TWITTERAPI_IO_KEY "source connector credential")"
     log "Resuming daily dashboard generation from local checkpoint and fetching eligible conversation context only."
+  elif [[ "$REFRESH_PLATFORM_TRENDS" == "1" ]]; then
+    TWITTERAPI_IO_KEY="$(require_local_secret TWITTERAPI_IO_KEY "source connector credential")"
+    log "Resuming daily dashboard generation from local checkpoint and refreshing platform trends only."
   else
     log "Resuming daily dashboard generation from local checkpoint without calling X."
   fi
@@ -249,10 +274,21 @@ release_publish_lock
 
 CURRENT_STAGE="public_verification"
 VERIFY_ARGS=(--brand-date "$COMMIT_REPORT_DATE")
-if [[ "$RESUME_FROM_CHECKPOINT" != "1" ]]; then
-  VERIFY_ARGS+=(--xiaohongshu-date "$COMMIT_REPORT_DATE")
+if [[ "$RESUME_FROM_CHECKPOINT" != "1" || "$REFRESH_PLATFORM_TRENDS" == "1" ]]; then
+  COMMIT_PLATFORM_DATE="$($PYTHON_BIN - <<'PY'
+import json
+from pathlib import Path
+
+try:
+    print(json.loads(Path("public/dashboard-data/platform-trends/xiaohongshu/latest.json").read_text(encoding="utf-8")).get("date") or "")
+except Exception:
+    print("")
+PY
+)"
+  [[ -n "$COMMIT_PLATFORM_DATE" ]] || fail "Cannot determine Xiaohongshu publication date."
+  VERIFY_ARGS+=(--xiaohongshu-date "$COMMIT_PLATFORM_DATE")
 fi
-"$PYTHON_BIN" scripts/verify_publication.py \
+run_bounded "$NETWORK_COMMAND_TIMEOUT_SECONDS" "$PYTHON_BIN" scripts/verify_publication.py \
   --base-url "${BRAND_RADAR_PUBLIC_BASE_URL:-https://lhlovnn.github.io/brand-x-intelligence-radar}" \
   "${VERIFY_ARGS[@]}"
 

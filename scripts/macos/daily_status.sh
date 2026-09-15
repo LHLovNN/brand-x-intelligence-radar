@@ -6,6 +6,7 @@ source "$ROOT/scripts/macos/local_env.sh"
 
 LABEL="$BRAND_RADAR_LAUNCHD_LABEL"
 DITING_LABEL="$BRAND_RADAR_DITING_LAUNCHD_LABEL"
+HEALTH_LABEL="$BRAND_RADAR_HEALTH_LAUNCHD_LABEL"
 LEGACY_LABEL="$BRAND_RADAR_LEGACY_LAUNCHD_LABEL"
 LOG_DIR="$ROOT/data/logs/macos"
 LAUNCHD_DOMAIN="gui/$(id -u)"
@@ -33,6 +34,13 @@ else
   printf 'Diting LaunchAgent loaded: no\n'
 fi
 
+printf 'Freshness health-check LaunchAgent: %s\n' "$HEALTH_LABEL"
+if launchctl print "$LAUNCHD_DOMAIN/$HEALTH_LABEL" >/dev/null 2>&1; then
+  printf 'Freshness health-check LaunchAgent loaded: yes\n'
+else
+  printf 'Freshness health-check LaunchAgent loaded: no\n'
+fi
+
 printf '\nGit status:\n'
 git status --short
 
@@ -54,4 +62,14 @@ fi
 if [[ -f "$LOG_DIR/diting-digests.err.log" ]]; then
   printf '\nLast Diting stderr log lines:\n'
   tail -n 80 "$LOG_DIR/diting-digests.err.log"
+fi
+
+if [[ -f "$LOG_DIR/healthcheck.out.log" ]]; then
+  printf '\nLast freshness health-check stdout log lines:\n'
+  tail -n 80 "$LOG_DIR/healthcheck.out.log"
+fi
+
+if [[ -f "$LOG_DIR/healthcheck.err.log" ]]; then
+  printf '\nLast freshness health-check stderr log lines:\n'
+  tail -n 80 "$LOG_DIR/healthcheck.err.log"
 fi

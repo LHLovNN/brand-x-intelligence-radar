@@ -24,7 +24,7 @@ Maintain a reliable Chinese-first intelligence station with two product areas:
 
 - `08:00`: brand and Xiaohongshu collection, generation, validation and publication.
 - `08:30`: AI and Telegram digest synchronization, validation and publication.
-- `08:45`: read-only update audit and user notification; it must not consume source or model quota.
+- `10:00` and `14:00`: public freshness checks and bounded repair; unreachable public endpoints must never trigger collection.
 
 ## Operational Boundaries
 
@@ -35,6 +35,6 @@ Maintain a reliable Chinese-first intelligence station with two product areas:
 
 ## Next
 
-- Observe several scheduled runs for upstream freshness, recovery behavior and notification quality.
+- Observe several scheduled runs for upstream freshness, recovery behavior and health-check logs.
 - Continue case-based content-policy tuning without weakening relevance requirements.
 - Reassess media hosting separately if upstream static-file throughput remains a bottleneck.

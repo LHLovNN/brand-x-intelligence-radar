@@ -133,6 +133,33 @@ async function main() {
   await page.waitForSelector(".daily-history-item", { timeout: 5000 });
   await page.waitForSelector(".daily-section", { timeout: 5000 });
   await page.waitForSelector(".daily-story-card", { timeout: 5000 });
+  const historicalDaily = page.locator("[data-daily-date]").nth(1);
+  if (await historicalDaily.count()) {
+    const historicalDate = await historicalDaily.getAttribute("data-daily-date");
+    await historicalDaily.click();
+    await page.waitForSelector(`[data-daily-date="${historicalDate}"].active`, { timeout: 5000 });
+
+    const refreshResponse = page.waitForResponse((response) => response.url().includes("/dashboard-data/daily/latest.json"));
+    await page.evaluate(() => refreshCurrentBrandData());
+    await refreshResponse;
+    await page.waitForFunction(() => !document.querySelector("#health-pill")?.textContent?.includes("加载中"));
+    if (!(await page.locator(`[data-daily-date="${historicalDate}"].active`).count())) {
+      throw new Error("Background refresh reset the selected historical daily report");
+    }
+
+    await page.route("**/dashboard-data/latest.json", async (route) => {
+      await route.fulfill({ status: 503, contentType: "application/json", body: "{}" });
+    });
+    await page.evaluate(() => refreshCurrentBrandData());
+    await page.waitForFunction(() => document.querySelector("#health-pill")?.textContent?.includes("刷新失败"), null, { timeout: 5000 });
+    if (!(await page.locator(`[data-daily-date="${historicalDate}"].active`).count())) {
+      throw new Error("Failed background refresh discarded the selected historical report");
+    }
+    await page.unroute("**/dashboard-data/latest.json");
+
+    await page.evaluate(() => refreshCurrentBrandData());
+    await page.waitForFunction(() => document.querySelector("#health-pill")?.textContent === "Data healthy", null, { timeout: 5000 });
+  }
   await page.screenshot({ path: path.join(outDir, "daily.png"), fullPage: true });
 
   await page.click('a[href="#/all"]');

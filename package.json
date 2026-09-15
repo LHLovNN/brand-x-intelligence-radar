@@ -27,6 +27,9 @@
     "local:diting:sync": "bash scripts/macos/run_diting_digest_sync.sh",
     "local:diting:install": "bash scripts/macos/install_diting_launchd.sh",
     "local:diting:uninstall": "bash scripts/macos/uninstall_diting_launchd.sh",
+    "local:health:check": "bash scripts/macos/run_daily_healthcheck.sh",
+    "local:health:install": "bash scripts/macos/install_healthcheck_launchd.sh",
+    "local:health:uninstall": "bash scripts/macos/uninstall_healthcheck_launchd.sh",
     "diting:sync": "python3 scripts/sync_dt_digests.py",
     "serve": "python3 -m http.server 4173 --directory public"
   }

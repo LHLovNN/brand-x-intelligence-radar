@@ -176,6 +176,12 @@ async function init() {
 
 async function loadBrandData(options = {}) {
   if (state.routeDataReady.brand && !options.force) return;
+  const previousLatestDate = state.daily?.date || "";
+  const previousSelectedDaily = state.selectedDaily;
+  const previousSelectedDate = previousSelectedDaily?.date || "";
+  const wasFollowingLatest = !previousSelectedDate || previousSelectedDate === previousLatestDate;
+  const previousFeaturedExpandedDates = new Set(state.featuredExpandedDates || []);
+  const previousAllExpandedDates = new Set(state.allExpandedDates || []);
   const [overview, daily, dailyIndex, competitor, sourceStatus] = await Promise.all([
     loadJson("./dashboard-data/latest.json"),
     loadJson("./dashboard-data/daily/latest.json"),
@@ -187,12 +193,28 @@ async function loadBrandData(options = {}) {
   state.daily = markDailyDetailLoaded(daily);
   state.dailyIndex = dailyIndex;
   state.dailyArchive = dailyArchiveFromIndex();
-  state.featuredExpandedDates = defaultDailyOpenDates();
-  state.allExpandedDates = defaultDailyOpenDates();
-  state.selectedDaily = state.daily;
+  if (options.force) {
+    const availableDates = new Set(state.dailyArchive.map((record) => record.date).filter(Boolean));
+    state.featuredExpandedDates = preservedExpandedDates(previousFeaturedExpandedDates, availableDates, wasFollowingLatest);
+    state.allExpandedDates = preservedExpandedDates(previousAllExpandedDates, availableDates, wasFollowingLatest);
+    state.selectedDaily = wasFollowingLatest
+      ? state.daily
+      : loadedDailyRecord(previousSelectedDate) || previousSelectedDaily || state.daily;
+  } else {
+    state.featuredExpandedDates = defaultDailyOpenDates();
+    state.allExpandedDates = defaultDailyOpenDates();
+    state.selectedDaily = state.daily;
+  }
   state.competitor = competitor;
   state.sourceStatus = sourceStatus;
   state.routeDataReady.brand = true;
+}
+
+function preservedExpandedDates(previousDates, availableDates, includeLatest) {
+  const preserved = new Set([...previousDates].filter((date) => availableDates.has(date)));
+  if (includeLatest && state.daily?.date) preserved.add(state.daily.date);
+  if (!preserved.size && state.daily?.date) preserved.add(state.daily.date);
+  return preserved;
 }
 
 function emptyOverviewPayload() {
@@ -482,6 +504,7 @@ function requestRouteData(routeName, options = {}) {
 }
 
 function refreshCurrentBrandData() {
+  if (document.visibilityState !== "visible") return;
   const current = route();
   if (routeDataKey(current.name) !== "brand") return;
   if (!state.routeDataReady.brand || state.routeDataLoads.has("brand")) return;
@@ -658,7 +681,17 @@ function render() {
   const health = document.getElementById("health-pill");
   const sampleMode = state.routeDataReady.brand && isSampleMode();
   const healthState = routeHealthState(current.name);
-  health.textContent = sampleMode ? "Sample data" : healthState === "normal" ? "Data healthy" : healthState === "loading" ? "加载中" : healthState;
+  const refreshError = routeDataKey(current.name) === "brand" && state.routeDataReady.brand ? state.routeDataErrors.brand : "";
+  health.textContent = sampleMode
+    ? "Sample data"
+    : refreshError
+      ? "刷新失败，显示缓存"
+      : healthState === "normal"
+        ? "Data healthy"
+        : healthState === "loading"
+          ? "加载中"
+          : healthState;
+  health.title = refreshError || "";
   health.className = `status-pill ${sampleMode ? "sample" : healthState}`;
   document.querySelectorAll(".nav-list a").forEach((link) => {
     link.classList.toggle("active", link.dataset.route === current.name);
@@ -706,6 +739,7 @@ function generatedAtLabelForRoute(routeName) {
 function routeHealthState(routeName) {
   const dataKey = routeDataKey(routeName);
   if (!dataKey || !state.routeDataReady[dataKey]) return "loading";
+  if (dataKey === "brand" && state.routeDataErrors.brand) return "partial";
   if (dataKey === "brand") return state.overview?.health || "normal";
   if (dataKey === "xiaohongshu") return state.xiaohongshu?.collection_status?.status === "partial" ? "partial" : "normal";
   return "normal";

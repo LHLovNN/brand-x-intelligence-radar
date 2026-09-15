@@ -31,13 +31,16 @@ The app remembers the selected date and reading position for each page during th
 
 - `08:00`: brand and Xiaohongshu daily run.
 - `08:30`: AI and Telegram digest synchronization.
-- `08:45`: read-only freshness audit and notification.
+- `10:00` and `14:00`: public freshness check and bounded repair.
 
-The 08:45 audit does not rerun collection and does not call source or language-model services. If it reports an issue, first use the reported category:
+The freshness check first reads the four public dates. A network failure never triggers repair. A stale module is retried at most twice per day. Brand data reuses the exact-date checkpoint when available; Xiaohongshu source collection runs again only when its own public date is stale. AI/TG repair does not consume X source quota.
 
-- `上游未更新`: confirm the upstream digest has produced today's files.
-- `本地同步失败`: inspect the latest module run log and scheduler state.
-- `发布未生效`: compare local dates with the public JSON dates and inspect the publication workflow.
+Install or remove the repair check with:
+
+```bash
+npm run local:health:install
+npm run local:health:uninstall
+```
 
 ## Manual Validation
 

@@ -27,6 +27,8 @@ The 08:00 and 08:30 jobs generate and commit only their own module artifacts. Sh
 - Each publisher rebases before rebuilding shared assets.
 - Push races retry the publication stage only, never collection.
 - Post-push verification polls public JSON until expected dates appear or times out.
+- Long-running collection, source synchronization and network publication commands have hard time limits.
+- Run and publication locks record their owner process and recover automatically after a crash.
 - Interrupted runs may leave module-owned lazy files; those files are allowed during the next recovery run and are staged with their owning module.
 - The shared rebuild removes lazy JSON files that are no longer referenced by any public detail payload.
 
@@ -36,7 +38,9 @@ The Diting synchronization uses an isolated clean checkout by default so upstrea
 
 - `08:00`: brand and Xiaohongshu collection and publication.
 - `08:30`: Diting AI/TG synchronization and publication.
-- `08:45`: read-only Codex freshness audit and user notification.
+- `10:00` and `14:00`: public freshness checks with bounded module repair.
+
+The repair job skips all mutation when the public site is unreachable. When a module is reachable but stale, it records a per-day attempt before repair and stops after two attempts. An exact-date checkpoint prevents a brand repair from repeating primary collection; Xiaohongshu collection is refreshed only when that module is stale.
 
 ## Verification
 
@@ -51,4 +55,4 @@ node --check public/dashboard-data-bundle.js
 npm run verify:browser
 ```
 
-CI pins Playwright `1.62.1`, serves `public/` over HTTP, verifies the default Xiaohongshu route does not eagerly load brand data, exercises date-level loading, and checks lazy context/comment drawers and retry behavior.
+CI pins Playwright `1.62.1`, serves `public/` over HTTP, verifies the default Xiaohongshu route does not eagerly load brand data, exercises date-level loading, checks background refresh state preservation and stale-cache messaging, and checks lazy context/comment drawers and retry behavior.
