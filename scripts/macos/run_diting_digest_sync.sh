@@ -114,8 +114,14 @@ prepare_sync_checkout() {
 prepare_source_checkout() {
   SOURCE_PARENT="$(mktemp -d "$TMP_BASE/brand-radar-diting-source.XXXXXX")"
   SOURCE_DIR="$SOURCE_PARENT/repo"
-  log "Preparing local Diting source checkout."
-  git clone --quiet --depth 1 "$SOURCE_REPO" "$SOURCE_DIR"
+  log "Preparing sparse local Diting source checkout."
+  git clone --quiet --depth 1 --filter=blob:none --no-checkout "$SOURCE_REPO" "$SOURCE_DIR"
+  git -C "$SOURCE_DIR" sparse-checkout set --no-cone \
+    '/search-index.json' \
+    '/*-AI日报.html' \
+    '/*-tg-digest.html' \
+    '/*-tg-digest.json'
+  git -C "$SOURCE_DIR" checkout --quiet
 }
 
 commit_with_repo_identity() {
