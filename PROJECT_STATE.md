@@ -24,7 +24,7 @@ Maintain a reliable Chinese-first intelligence station with two product areas:
 
 - `08:00`: brand and Xiaohongshu collection, generation, validation and publication.
 - `08:30`: AI and Telegram digest synchronization, validation and publication.
-- `10:00` and `14:00`: public freshness checks and bounded repair; unreachable public endpoints must never trigger collection.
+- `09:00` and `11:00`: public freshness checks and bounded repair; unreachable public endpoints must never trigger collection.
 
 ## Operational Boundaries
 

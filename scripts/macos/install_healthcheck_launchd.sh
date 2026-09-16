@@ -29,8 +29,8 @@ cat > "$PLIST" <<PLIST
   <string>$ROOT</string>
   <key>StartCalendarInterval</key>
   <array>
-    <dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>0</integer></dict>
-    <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>11</integer><key>Minute</key><integer>0</integer></dict>
   </array>
   <key>StandardOutPath</key>
   <string>$LOG_DIR/healthcheck.out.log</string>
@@ -57,4 +57,4 @@ launchctl print "$LAUNCHD_DOMAIN/$LABEL" >/dev/null 2>&1 || {
 }
 
 printf 'Installed %s.\n' "$PLIST"
-printf '%s freshness repair checks are scheduled for 10:00 and 14:00 local time.\n' "$BRAND_RADAR_DISPLAY_NAME"
+printf '%s freshness repair checks are scheduled for 09:00 and 11:00 local time.\n' "$BRAND_RADAR_DISPLAY_NAME"

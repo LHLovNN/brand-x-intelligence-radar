@@ -31,7 +31,7 @@ The app remembers the selected date and reading position for each page during th
 
 - `08:00`: brand and Xiaohongshu daily run.
 - `08:30`: AI and Telegram digest synchronization.
-- `10:00` and `14:00`: public freshness check and bounded repair.
+- `09:00` and `11:00`: public freshness check and bounded repair.
 
 The freshness check first reads the four public dates. A network failure never triggers repair. A stale module is retried at most twice per day. Brand data reuses the exact-date checkpoint when available; Xiaohongshu source collection runs again only when its own public date is stale. AI/TG repair does not consume X source quota.
 
