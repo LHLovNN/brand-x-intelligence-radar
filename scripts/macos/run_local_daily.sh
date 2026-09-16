@@ -45,11 +45,18 @@ cleanup() {
   elapsed=$((finished_epoch - RUN_STARTED_EPOCH))
   release_publish_lock
   release_run_lock
-  if [[ "$exit_code" == "0" ]]; then
+  if [[ "$exit_code" == "0" && "$CURRENT_STAGE" == "complete" ]]; then
     RUN_STATUS="success"
+  else
+    RUN_STATUS="failed"
+    if [[ "$exit_code" == "0" ]]; then
+      exit_code=1
+    fi
   fi
   printf '{"job":"daily","run_id":"%s","status":"%s","stage":"%s","elapsed_seconds":%s,"log":"%s"}\n' \
     "$RUN_ID" "$RUN_STATUS" "$CURRENT_STAGE" "$elapsed" "$RUN_LOG"
+  trap - EXIT
+  exit "$exit_code"
 }
 
 if ! acquire_run_lock; then
@@ -136,27 +143,25 @@ commit_with_repo_identity() {
 }
 
 run_daily() {
-  local args=()
-  local command=()
+  local command=("$PYTHON_BIN" scripts/run_daily.py)
   if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
-    args+=(--resume-from-checkpoint)
+    command+=(--resume-from-checkpoint)
     if [[ "$ATTACH_CONTEXT_FROM_PROVIDER" == "1" ]]; then
-      args+=(--attach-context-from-provider)
+      command+=(--attach-context-from-provider)
     fi
     if [[ "$REFRESH_PLATFORM_TRENDS" == "1" ]]; then
-      args+=(--refresh-platform-trends)
+      command+=(--refresh-platform-trends)
     fi
     if [[ "$PLATFORM_TRENDS_ONLY" == "1" ]]; then
-      args+=(--platform-trends-only)
+      command+=(--platform-trends-only)
     fi
     if [[ -n "$CHECKPOINT_DATE" ]]; then
-      args+=(--checkpoint-date "$CHECKPOINT_DATE")
+      command+=(--checkpoint-date "$CHECKPOINT_DATE")
     fi
   elif [[ -n "$REPORT_DATE" ]]; then
-    args+=(--report-date "$REPORT_DATE")
+    command+=(--report-date "$REPORT_DATE")
   fi
 
-  command=("$PYTHON_BIN" scripts/run_daily.py "${args[@]}")
   if command -v caffeinate >/dev/null 2>&1; then
     run_bounded "$GENERATION_TIMEOUT_SECONDS" caffeinate -dimsu "${command[@]}"
   else

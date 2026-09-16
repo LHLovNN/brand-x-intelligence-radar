@@ -58,11 +58,18 @@ cleanup() {
       "$TMP_BASE"/brand-radar-diting-source.*) rm -rf "$SOURCE_PARENT" ;;
     esac
   fi
-  if [[ "$exit_code" == "0" ]]; then
+  if [[ "$exit_code" == "0" && "$CURRENT_STAGE" == "complete" ]]; then
     RUN_STATUS="success"
+  else
+    RUN_STATUS="failed"
+    if [[ "$exit_code" == "0" ]]; then
+      exit_code=1
+    fi
   fi
   printf '{"job":"diting","run_id":"%s","status":"%s","stage":"%s","elapsed_seconds":%s,"log":"%s"}\n' \
     "$RUN_ID" "$RUN_STATUS" "$CURRENT_STAGE" "$elapsed" "$RUN_LOG"
+  trap - EXIT
+  exit "$exit_code"
 }
 
 if ! acquire_run_lock; then
