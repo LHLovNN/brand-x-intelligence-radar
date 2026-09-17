@@ -1,0 +1,155 @@
+{
+  "conversation_id": "2100350264293441962",
+  "anchor_post_id": "2100350264293441962",
+  "summary_zh": "前文回顾其小红书爆款复刻Agent引发咨询，话题从图文复刻转向视频带货制作。收录帖重点推广Hypit，可克隆爆款视频结构，强调安装部署、GitHub、软件免费、样例成片约1美元、省剪辑人力。后续仅一人称赞省脑力，无实测反馈；有助判断为正向推广内容，真实性仍需外部验证。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2100350264293441962",
+      "url": "https://x.com/yhslgg/status/2100350264293441962",
+      "created_at": "2026-09-16T22:25:00Z",
+      "text": "上次老杨是复刻小红书笔记爆了，这次把图书带货爆款视频也 Clone 了。\n上次搞个小红书爆款复刻 Agent，\n\n用时半小时：抓爆款、拆为什么爆、复刻 3-5 条，再给运营策略。\nhttps://t.co/a7phcXUJPz\n那条发出去之后，很多人私信问同一句话：图文我会复刻了，视频怎么办？\n\n对，图文这条路现在太卷了。标题能改，封面能仿，文案能洗。\n\n视频这边一直卡死在最后一步：你知道这条为什么爆，也改得出口播，但成片还得自己找素材、自己剪、自己卡点。拆得再明白，出不了片，等于白拆。\n\n现在这块可以用 Hypit 接上。\n\n它不是让 Agent「想一条视频」，是让 Agent Clone 一条已经验证过的爆款结构：人物、台词、B-roll、字幕、特效、节奏，整套变成可改、可复用、可批量跑的 workflow。\n你还是老流程，只是最后出片不用手搓了：\n\n 这次我直接复刻一个 书单带货的爆款视频，\n\n具体搞法很简单：\n\n1、直接先搞定Hypit安装部署：\n2、启动 Claude Code / Codex\n我直接把参考视频丢进去，/hypit clone this video\n让Hypit自动分析，拆解，再改主持人、改产品、改语言、改 CTA。\n\n3、如下图5.8万的点赞，已经很暴了，我现在要做的就是1:1复刻后，然后给我换新的图片和素材，字体等，为了就是发到抖音后不同质化。\n\n4、下一次我再拆解一本书的话，就是直接把书名和文案丢进来，配音、视频效果，画面动效等直接教给Hypit搞定。\n\n以前仿一条能投的视频，一个实习生一天：$60。写脚本 2 小时，拍 2 小时，剪 1 小时。\n现在软件本体 $0，官方样例成片 $1 出头。\n\n更狠的是，Clone 的不是 1 条，是一组能换壳的变体。\n\n做小红书虚拟产品、抖音单品带货、AI 口播、知识付费引流的，别再只复刻笔记了。\n\n笔记解决曝光，视频解决信任和转化。\n这条比再找 10 个剪辑模板有用。\n我把Hypit GitHub：https://t.co/940stHiyJk\n收藏仓库，别看完就走。\n #Hypit #爆款复刻",
+      "original_text": "上次老杨是复刻小红书笔记爆了，这次把图书带货爆款视频也 Clone 了。\n上次搞个小红书爆款复刻 Agent，\n\n用时半小时：抓爆款、拆为什么爆、复刻 3-5 条，再给运营策略。\nhttps://t.co/a7phcXUJPz\n那条发出去之后，很多人私信问同一句话：图文我会复刻了，视频怎么办？\n\n对，图文这条路现在太卷了。标题能改，封面能仿，文案能洗。\n\n视频这边一直卡死在最后一步：你知道这条为什么爆，也改得出口播，但成片还得自己找素材、自己剪、自己卡点。拆得再明白，出不了片，等于白拆。\n\n现在这块可以用 Hypit 接上。\n\n它不是让 Agent「想一条视频」，是让 Agent Clone 一条已经验证过的爆款结构：人物、台词、B-roll、字幕、特效、节奏，整套变成可改、可复用、可批量跑的 workflow。\n你还是老流程，只是最后出片不用手搓了：\n\n 这次我直接复刻一个 书单带货的爆款视频，\n\n具体搞法很简单：\n\n1、直接先搞定Hypit安装部署：\n2、启动 Claude Code / Codex\n我直接把参考视频丢进去，/hypit clone this video\n让Hypit自动分析，拆解，再改主持人、改产品、改语言、改 CTA。\n\n3、如下图5.8万的点赞，已经很暴了，我现在要做的就是1:1复刻后，然后给我换新的图片和素材，字体等，为了就是发到抖音后不同质化。\n\n4、下一次我再拆解一本书的话，就是直接把书名和文案丢进来，配音、视频效果，画面动效等直接教给Hypit搞定。\n\n以前仿一条能投的视频，一个实习生一天：$60。写脚本 2 小时，拍 2 小时，剪 1 小时。\n现在软件本体 $0，官方样例成片 $1 出头。\n\n更狠的是，Clone 的不是 1 条，是一组能换壳的变体。\n\n做小红书虚拟产品、抖音单品带货、AI 口播、知识付费引流的，别再只复刻笔记了。\n\n笔记解决曝光，视频解决信任和转化。\n这条比再找 10 个剪辑模板有用。\n我把Hypit GitHub：https://t.co/940stHiyJk\n收藏仓库，别看完就走。\n #Hypit #爆款复刻",
+      "translation_zh": "上次老杨是复刻小红书笔记爆了，这次把图书带货爆款视频也 Clone 了。\n上次搞个小红书爆款复刻 Agent，\n\n用时半小时：抓爆款、拆为什么爆、复刻 3-5 条，再给运营策略。\nhttps://t.co/a7phcXUJPz\n那条发出去之后，很多人私信问同一句话：图文我会复刻了，视频怎么办？\n\n对，图文这条路现在太卷了。标题能改，封面能仿，文案能洗。\n\n视频这边一直卡死在最后一步：你知道这条为什么爆，也改得出口播，但成片还得自己找素材、自己剪、自己卡点。拆得再明白，出不了片，等于白拆。\n\n现在这块可以用 Hypit 接上。\n\n它不是让 Agent「想一条视频」，是让 Agent Clone 一条已经验证过的爆款结构：人物、台词、B-roll、字幕、特效、节奏，整套变成可改、可复用、可批量跑的 workflow。\n你还是老流程，只是最后出片不用手搓了：\n\n 这次我直接复刻一个 书单带货的爆款视频，\n\n具体搞法很简单：\n\n1、直接先搞定Hypit安装部署：\n2、启动 Claude Code / Codex\n我直接把参考视频丢进去，/hypit clone this video\n让Hypit自动分析，拆解，再改主持人、改产品、改语言、改 CTA。\n\n3、如下图5.8万的点赞，已经很暴了，我现在要做的就是1:1复刻后，然后给我换新的图片和素材，字体等，为了就是发到抖音后不同质化。\n\n4、下一次我再拆解一本书的话，就是直接把书名和文案丢进来，配音、视频效果，画面动效等直接教给Hypit搞定。\n\n以前仿一条能投的视频，一个实习生一天：$60。写脚本 2 小时，拍 2 小时，剪 1 小时。\n现在软件本体 $0，官方样例成片 $1 出头。\n\n更狠的是，Clone 的不是 1 条，是一组能换壳的变体。\n\n做小红书虚拟产品、抖音单品带货、AI 口播、知识付费引流的，别再只复刻笔记了。\n\n笔记解决曝光，视频解决信任和转化。\n这条比再找 10 个剪辑模板有用。\n我把Hypit GitHub：https://t.co/940stHiyJk\n收藏仓库，别看完就走。\n #Hypit #爆款复刻",
+      "translation_status": "source_chinese",
+      "author_name": "老杨啊 | AI产品商业化",
+      "author_handle": "yhslgg",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2004167168632700929/E6cWf4yC_normal.jpg",
+      "author_followers": 23295,
+      "author_following": 1573,
+      "author_bio": "15+年创业老炮，专拆AI时代的产品和生意\n产品后端怎么做，AI怎么进岗位，流量怎么接到成交\n有啥说啥,不藏着.\n合作/交流：DM/VX:yhslgg",
+      "author_location": "shenzhen china",
+      "author_joined_at": "2010-08-01T16:07:26Z",
+      "author_verified": false,
+      "links": [
+        "https://x.com/yhslgg/status/2054424984521674842",
+        "https://github.com/hypit-ai/hypit"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HSVtvfIawAAgi1l.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HSVtvfIawAAgi1l.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HSVtvfIawAAgi1l.jpg",
+          "expanded_url": "https://x.com/yhslgg/status/2100350264293441962/video/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2100206923710902272/img/IOL1dhQsW-CA80Ur.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2100206923710902272/img/IOL1dhQsW-CA80Ur.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2100206923710902272/img/IOL1dhQsW-CA80Ur.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              185,
+              104
+            ],
+            "duration_millis": 39958,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video.twimg.com/amplify_video/2100206923710902272/pl/Lo2UG3Bk6zmYIUBG.m3u8?tag=29"
+              },
+              {
+                "bitrate": 256000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2100206923710902272/vid/avc1/480x270/OfCZ6xIshR14gtbS.mp4?tag=29"
+              },
+              {
+                "bitrate": 832000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2100206923710902272/vid/avc1/640x360/za0WqnvlZ4PbtiLR.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2100206923710902272/vid/avc1/1280x720/q5WPGAqTFT6DnSfq.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2100206923710902272/vid/avc1/1920x1080/7kfFQdQOUown0JwQ.mp4?tag=29"
+              },
+              {
+                "bitrate": 25128000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2100206923710902272/vid/avc1/3330x1872/GpKQ77H_yzSi2gtQ.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/yhslgg/status/2100350264293441962/video/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2100207006309380096/img/iy5cYncjT6xKhPhR.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2100207006309380096/img/iy5cYncjT6xKhPhR.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2100207006309380096/img/iy5cYncjT6xKhPhR.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              3,
+              4
+            ],
+            "duration_millis": 27366,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video.twimg.com/amplify_video/2100207006309380096/pl/UEvwDYlgYtXlo3ZF.m3u8?tag=29"
+              },
+              {
+                "bitrate": 632000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2100207006309380096/vid/avc1/320x426/4eldmrhRSyirZXtN.mp4?tag=29"
+              },
+              {
+                "bitrate": 950000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2100207006309380096/vid/avc1/480x640/rE83R7vhK2m-vEV4.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2100207006309380096/vid/avc1/720x960/JhsyE5x19INsKe96.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/yhslgg/status/2100350264293441962/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 8,
+        "views": 1019
+      }
+    },
+    {
+      "post_id": "2100350506082423193",
+      "url": "https://x.com/MerveOzervfnt/status/2100350506082423193",
+      "created_at": "2026-09-16T22:25:57Z",
+      "text": "@yhslgg 这执行力没谁了，照着做真的能省不少脑细胞",
+      "original_text": "@yhslgg 这执行力没谁了，照着做真的能省不少脑细胞",
+      "translation_zh": "@yhslgg 这执行力没谁了，照着做真的能省不少脑细胞",
+      "translation_status": "source_chinese",
+      "author_name": "binance50凡雨墨",
+      "author_handle": "MerveOzervfnt",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2095876993346846720/rOe23RZu_normal.jpg",
+      "author_followers": 11,
+      "author_following": 11,
+      "author_bio": "热爱生活，也享受独处。喜欢城市夜晚的灯光。记录正在发生的生活。",
+      "author_location": null,
+      "author_joined_at": "2026-08-10T23:37:19Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 15
+      }
+    }
+  ]
+}
