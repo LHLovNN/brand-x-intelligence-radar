@@ -43,6 +43,8 @@ The Diting synchronization uses an isolated clean checkout by default so upstrea
 
 The primary check writes the daily skip marker only when all four modules were already current before any repair. A network failure, stale result or repaired result leaves the follow-up enabled. The repair job skips all mutation when the public site is unreachable. When a module is reachable but stale, it records a per-day attempt before repair and stops after two attempts. An exact-date checkpoint prevents a brand repair from repeating primary collection; Xiaohongshu collection is refreshed only when that module is stale.
 
+AI/TG recovery has a separate upstream gate. The health check first reads Diting's source index and repairs only local modules whose expected-date source artifact exists. Missing or unreachable upstream data is recorded per module in the daily health state as a manual-intervention cause, and subsequent automatic retries remain blocked only for the affected module and date. Targeted repair passes the available kinds and expected date to the isolated Diting publisher.
+
 ## Verification
 
 ```bash

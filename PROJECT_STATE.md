@@ -33,6 +33,7 @@ Maintain a reliable Chinese-first intelligence station with two product areas:
 - The two publishers may overlap in generation, but shared publication is serialized.
 - A failed push retries only synchronization, asset rebuild and publication; collection is not repeated.
 - The published date is polled after push so a successful Git command is not mistaken for a completed Pages update.
+- AI/TG repair is gated by the upstream source date: local publication gaps auto-repair, while upstream gaps are recorded and blocked for manual intervention.
 
 ## Next
 

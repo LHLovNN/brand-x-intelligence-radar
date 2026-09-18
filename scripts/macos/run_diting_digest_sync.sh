@@ -14,6 +14,8 @@ PYTHON_BIN="${PYTHON_BIN:-python3}"
 SYNC_TIMEOUT_SECONDS="${BRAND_RADAR_DITING_SYNC_TIMEOUT_SECONDS:-1800}"
 NETWORK_COMMAND_TIMEOUT_SECONDS="${BRAND_RADAR_NETWORK_COMMAND_TIMEOUT_SECONDS:-600}"
 DETAIL_DAYS="${BRAND_RADAR_DITING_DETAIL_DAYS:-60}"
+REQUESTED_KINDS="${BRAND_RADAR_DITING_KINDS:-}"
+REQUESTED_DATE="${BRAND_RADAR_DITING_DATE:-}"
 BRANCH="${BRAND_RADAR_DITING_BRANCH:-main}"
 ISOLATED_WORKTREE="${BRAND_RADAR_DITING_ISOLATED_WORKTREE:-1}"
 SOURCE_REPO="${BRAND_RADAR_DITING_SOURCE_REPO:-git@github.com:codew1028/dt.git}"
@@ -177,6 +179,12 @@ export GIT_SSH_COMMAND="${GIT_SSH_COMMAND:-ssh -o BatchMode=yes -o ConnectTimeou
 
 command -v git >/dev/null 2>&1 || fail "git is not available."
 command -v "$PYTHON_BIN" >/dev/null 2>&1 || fail "$PYTHON_BIN is not available."
+if [[ -n "$REQUESTED_KINDS" && ! "$REQUESTED_KINDS" =~ ^(ai|tg)(,(ai|tg))*$ ]]; then
+  fail "Invalid Diting kinds: $REQUESTED_KINDS"
+fi
+if [[ -n "$REQUESTED_DATE" && ! "$REQUESTED_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+  fail "Invalid Diting date: $REQUESTED_DATE"
+fi
 
 log "Starting ${BRAND_RADAR_DISPLAY_NAME} Diting digest sync."
 CURRENT_STAGE="prepare_checkout"
@@ -189,10 +197,20 @@ prepare_source_checkout
 
 log "Syncing AI/TG digest data from Diting."
 CURRENT_STAGE="upstream_sync"
+set -- scripts/sync_dt_digests.py --detail-days "$DETAIL_DAYS" --source-dir "$SOURCE_DIR"
+case ",$REQUESTED_KINDS," in
+  *,ai,*) set -- "$@" --kind ai ;;
+esac
+case ",$REQUESTED_KINDS," in
+  *,tg,*) set -- "$@" --kind tg ;;
+esac
+if [[ -n "$REQUESTED_DATE" ]]; then
+  set -- "$@" --date "$REQUESTED_DATE"
+fi
 if command -v caffeinate >/dev/null 2>&1; then
-  run_bounded "$SYNC_TIMEOUT_SECONDS" caffeinate -dimsu "$PYTHON_BIN" scripts/sync_dt_digests.py --detail-days "$DETAIL_DAYS" --source-dir "$SOURCE_DIR"
+  run_bounded "$SYNC_TIMEOUT_SECONDS" caffeinate -dimsu "$PYTHON_BIN" "$@"
 else
-  run_bounded "$SYNC_TIMEOUT_SECONDS" "$PYTHON_BIN" scripts/sync_dt_digests.py --detail-days "$DETAIL_DAYS" --source-dir "$SOURCE_DIR"
+  run_bounded "$SYNC_TIMEOUT_SECONDS" "$PYTHON_BIN" "$@"
 fi
 
 log "Verifying Diting digest artifacts."

@@ -12,9 +12,13 @@ BASE_URL="${BRAND_RADAR_PUBLIC_BASE_URL:-https://lhlovnn.github.io/brand-x-intel
 REPORT_PATH="$STATE_DIR/public-freshness-$EXPECTED_DATE.json"
 ATTEMPT_PATH="$STATE_DIR/repair-attempts-$EXPECTED_DATE.json"
 INITIAL_PASS_PATH="$STATE_DIR/initial-fresh-$EXPECTED_DATE.ok"
+DITING_UPSTREAM_REPORT_PATH="$STATE_DIR/diting-upstream-$EXPECTED_DATE.json"
+DITING_UPSTREAM_BLOCK_PATH="$STATE_DIR/diting-upstream-manual-$EXPECTED_DATE.json"
 MAX_REPAIR_ATTEMPTS="${BRAND_RADAR_HEALTH_MAX_REPAIR_ATTEMPTS:-2}"
 RUN_HOUR_RAW="${BRAND_RADAR_HEALTH_RUN_HOUR:-$(TZ=Asia/Shanghai date '+%H')}"
 FORCE_CHECK="${BRAND_RADAR_HEALTH_FORCE_CHECK:-0}"
+OVERRIDE_DITING_UPSTREAM_BLOCK="${BRAND_RADAR_HEALTH_OVERRIDE_DITING_UPSTREAM_BLOCK:-0}"
+DITING_SOURCE_BASE_URL="${BRAND_RADAR_DITING_SOURCE_BASE_URL:-https://codew1028.github.io/dt}"
 DAILY_LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-daily.lock"
 DITING_LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-diting-digests.lock"
 
@@ -32,6 +36,10 @@ if [[ ! "$RUN_HOUR_RAW" =~ ^[0-9]{1,2}$ ]] || (( 10#$RUN_HOUR_RAW > 23 )); then
 fi
 if [[ "$FORCE_CHECK" != "0" && "$FORCE_CHECK" != "1" ]]; then
   printf 'Invalid force-check flag: %s\n' "$FORCE_CHECK" >&2
+  exit 2
+fi
+if [[ "$OVERRIDE_DITING_UPSTREAM_BLOCK" != "0" && "$OVERRIDE_DITING_UPSTREAM_BLOCK" != "1" ]]; then
+  printf 'Invalid Diting upstream-block override flag: %s\n' "$OVERRIDE_DITING_UPSTREAM_BLOCK" >&2
   exit 2
 fi
 
@@ -74,6 +82,92 @@ from pathlib import Path
 
 report = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
 raise SystemExit(0 if not report["components"][sys.argv[2]]["fresh"] else 1)
+PY
+}
+
+upstream_component_is_fresh() {
+  local component="$1"
+  "$PYTHON_BIN" - "$DITING_UPSTREAM_REPORT_PATH" "$component" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+report = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+raise SystemExit(0 if report["components"][sys.argv[2]]["fresh"] else 1)
+PY
+}
+
+upstream_component_observed() {
+  local component="$1"
+  "$PYTHON_BIN" - "$DITING_UPSTREAM_REPORT_PATH" "$component" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+report = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+item = report["components"][sys.argv[2]]
+print(item.get("observed") or item.get("error") or "unknown")
+PY
+}
+
+check_diting_upstream() {
+  set +e
+  "$PYTHON_BIN" "$ROOT/scripts/check_diting_upstream.py" \
+    --base-url "$DITING_SOURCE_BASE_URL" \
+    --expected-date "$EXPECTED_DATE" \
+    --output "$DITING_UPSTREAM_REPORT_PATH"
+  local result=$?
+  set -e
+  return "$result"
+}
+
+diting_component_is_blocked() {
+  local component="$1"
+  [[ "$OVERRIDE_DITING_UPSTREAM_BLOCK" == "0" && -f "$DITING_UPSTREAM_BLOCK_PATH" ]] || return 1
+  "$PYTHON_BIN" - "$DITING_UPSTREAM_BLOCK_PATH" "$component" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+report = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+raise SystemExit(0 if sys.argv[2] in (report.get("blocked_components") or {}) else 1)
+PY
+}
+
+record_diting_upstream_block() {
+  local component="$1"
+  "$PYTHON_BIN" - "$DITING_UPSTREAM_REPORT_PATH" "$DITING_UPSTREAM_BLOCK_PATH" "$component" <<'PY'
+import json
+import sys
+from datetime import datetime
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+report_path = Path(sys.argv[1])
+block_path = Path(sys.argv[2])
+component = sys.argv[3]
+report = json.loads(report_path.read_text(encoding="utf-8"))
+existing = json.loads(block_path.read_text(encoding="utf-8")) if block_path.exists() else {}
+blocked = existing.get("blocked_components") or {}
+now = datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
+upstream = report["components"][component]
+previous = blocked.get(component) or {}
+blocked[component] = {
+    "reason": "upstream_unreachable" if not report.get("reachable") else "upstream_missing",
+    "expected": upstream.get("expected") or report.get("expected_date") or "",
+    "observed": upstream.get("observed") or "",
+    "error": upstream.get("error") or "",
+    "first_detected_at": previous.get("first_detected_at") or now,
+    "last_detected_at": now,
+}
+payload = {
+    "expected_date": report.get("expected_date") or "",
+    "updated_at": now,
+    "blocked_components": blocked,
+}
+temporary = block_path.with_suffix(block_path.suffix + ".tmp")
+temporary.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+temporary.replace(block_path)
 PY
 }
 
@@ -162,18 +256,86 @@ repair_daily_modules() {
 
 repair_diting_modules() {
   local attempts
+  local upstream_exit=0
+  local repair_ai=0
+  local repair_tg=0
+  local blocked=0
+  local check_ai=0
+  local check_tg=0
+  local kinds=""
+  local observed=""
+
+  if component_is_stale ai; then
+    if diting_component_is_blocked ai; then
+      log "AI日报 remains paused because its upstream issue requires manual investigation."
+    else
+      check_ai=1
+    fi
+  fi
+  if component_is_stale tg; then
+    if diting_component_is_blocked tg; then
+      log "TG日报 remains paused because its upstream issue requires manual investigation."
+    else
+      check_tg=1
+    fi
+  fi
+  if [[ "$check_ai" == "0" && "$check_tg" == "0" ]]; then
+    return 1
+  fi
   if lock_is_active "$DITING_LOCK_DIR"; then
     log "AI/TG job is still running; deferring repair without consuming an attempt."
     return 1
   fi
+
+  check_diting_upstream || upstream_exit=$?
+  if [[ "$upstream_exit" == "2" ]]; then
+    if [[ "$check_ai" == "1" ]]; then record_diting_upstream_block ai; fi
+    if [[ "$check_tg" == "1" ]]; then record_diting_upstream_block tg; fi
+    log "The AI/TG upstream source could not be checked reliably; skipping sync and recording manual intervention."
+    return 1
+  fi
+
+  if [[ "$check_ai" == "1" ]]; then
+    if upstream_component_is_fresh ai; then
+      repair_ai=1
+    else
+      observed="$(upstream_component_observed ai)"
+      log "AI日报 is also missing upstream (expected $EXPECTED_DATE, observed $observed); skipping ineffective sync."
+      record_diting_upstream_block ai
+      blocked=1
+    fi
+  fi
+  if [[ "$check_tg" == "1" ]]; then
+    if upstream_component_is_fresh tg; then
+      repair_tg=1
+    else
+      observed="$(upstream_component_observed tg)"
+      log "TG日报 is also missing upstream (expected $EXPECTED_DATE, observed $observed); skipping ineffective sync."
+      record_diting_upstream_block tg
+      blocked=1
+    fi
+  fi
+  if [[ "$blocked" == "1" ]]; then
+    log "Recorded the upstream AI/TG cause at $DITING_UPSTREAM_BLOCK_PATH; automatic retries are paused for manual investigation."
+  fi
+  if [[ "$repair_ai" == "0" && "$repair_tg" == "0" ]]; then
+    return 1
+  fi
+
   attempts="$(repair_attempts diting)"
   if (( attempts >= MAX_REPAIR_ATTEMPTS )); then
     log "AI/TG repair limit reached for $EXPECTED_DATE; manual investigation required."
     return 1
   fi
   record_repair_attempt diting
-  log "Repairing AI/TG digests; this does not use the X source quota."
-  "$ROOT/scripts/macos/run_diting_digest_sync.sh"
+  if [[ "$repair_ai" == "1" ]]; then kinds="ai"; fi
+  if [[ "$repair_tg" == "1" ]]; then
+    if [[ -n "$kinds" ]]; then kinds="$kinds,tg"; else kinds="tg"; fi
+  fi
+  log "Repairing local Diting modules from available upstream data: $kinds."
+  BRAND_RADAR_DITING_KINDS="$kinds" \
+    BRAND_RADAR_DITING_DATE="$EXPECTED_DATE" \
+    "$ROOT/scripts/macos/run_diting_digest_sync.sh"
 }
 
 log "Checking public dashboard freshness for $EXPECTED_DATE."

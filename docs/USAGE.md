@@ -34,7 +34,9 @@ The app remembers the selected date and reading position for each page during th
 - `09:00`: primary public freshness check and bounded repair.
 - `11:00`: conditional follow-up only when the primary check found an issue, could not complete, or performed a repair.
 
-When all four modules are already current at the primary check, the secondary launch reads the local success marker and exits without another public request. A primary network failure, stale module or repair leaves no marker, so the secondary check still runs. A network failure never triggers repair. A stale module is retried at most twice per day. Brand data reuses the exact-date checkpoint when available; Xiaohongshu source collection runs again only when its own public date is stale. AI/TG repair does not consume X source quota. Set `BRAND_RADAR_HEALTH_FORCE_CHECK=1` for an intentional manual recheck.
+When all four modules are already current at the primary check, the secondary launch reads the local success marker and exits without another public request. A primary network failure, stale module or repair leaves no marker, so the secondary check still runs. A network failure never triggers repair. A stale module is retried at most twice per day. Brand data reuses the exact-date checkpoint when available; Xiaohongshu source collection runs again only when its own public date is stale.
+
+Before repairing AI or TG, the health check reads the upstream Diting index. It syncs only stale local modules whose expected-date source page already exists upstream. If a source page is also missing or the upstream index is unreachable, it records a per-day manual-intervention report and pauses automatic retries for each affected module without blocking the other module. After the upstream issue is resolved, an intentional manual recovery can set `BRAND_RADAR_HEALTH_OVERRIDE_DITING_UPSTREAM_BLOCK=1`. Set `BRAND_RADAR_HEALTH_FORCE_CHECK=1` for an intentional manual recheck of an otherwise healthy day.
 
 Install or remove the repair check with:
 
