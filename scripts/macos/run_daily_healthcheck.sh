@@ -11,7 +11,10 @@ EXPECTED_DATE="${BRAND_RADAR_HEALTH_EXPECTED_DATE:-$(TZ=Asia/Shanghai date '+%Y-
 BASE_URL="${BRAND_RADAR_PUBLIC_BASE_URL:-https://lhlovnn.github.io/brand-x-intelligence-radar}"
 REPORT_PATH="$STATE_DIR/public-freshness-$EXPECTED_DATE.json"
 ATTEMPT_PATH="$STATE_DIR/repair-attempts-$EXPECTED_DATE.json"
+INITIAL_PASS_PATH="$STATE_DIR/initial-fresh-$EXPECTED_DATE.ok"
 MAX_REPAIR_ATTEMPTS="${BRAND_RADAR_HEALTH_MAX_REPAIR_ATTEMPTS:-2}"
+RUN_HOUR_RAW="${BRAND_RADAR_HEALTH_RUN_HOUR:-$(TZ=Asia/Shanghai date '+%H')}"
+FORCE_CHECK="${BRAND_RADAR_HEALTH_FORCE_CHECK:-0}"
 DAILY_LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-daily.lock"
 DITING_LOCK_DIR="${TMPDIR:-/tmp}/brand-radar-diting-digests.lock"
 
@@ -23,12 +26,33 @@ if [[ ! "$MAX_REPAIR_ATTEMPTS" =~ ^[0-9]+$ ]]; then
   printf 'Invalid repair-attempt limit: %s\n' "$MAX_REPAIR_ATTEMPTS" >&2
   exit 2
 fi
+if [[ ! "$RUN_HOUR_RAW" =~ ^[0-9]{1,2}$ ]] || (( 10#$RUN_HOUR_RAW > 23 )); then
+  printf 'Invalid health-check run hour: %s\n' "$RUN_HOUR_RAW" >&2
+  exit 2
+fi
+if [[ "$FORCE_CHECK" != "0" && "$FORCE_CHECK" != "1" ]]; then
+  printf 'Invalid force-check flag: %s\n' "$FORCE_CHECK" >&2
+  exit 2
+fi
+
+RUN_HOUR=$((10#$RUN_HOUR_RAW))
 
 mkdir -p "$STATE_DIR"
 
 log() {
   printf '[%s] %s\n' "$(date '+%Y-%m-%d %H:%M:%S %Z')" "$*"
 }
+
+record_initial_freshness() {
+  local temporary="$INITIAL_PASS_PATH.tmp.$$"
+  printf '%s\n' "$EXPECTED_DATE" > "$temporary"
+  mv "$temporary" "$INITIAL_PASS_PATH"
+}
+
+if (( RUN_HOUR >= 11 )) && [[ "$FORCE_CHECK" == "0" && -f "$INITIAL_PASS_PATH" ]]; then
+  log "Skipping the secondary freshness check: the initial check passed with all four modules current."
+  exit 0
+fi
 
 check_freshness() {
   set +e
@@ -154,6 +178,10 @@ repair_diting_modules() {
 
 log "Checking public dashboard freshness for $EXPECTED_DATE."
 if check_freshness; then
+  if (( RUN_HOUR < 11 )); then
+    record_initial_freshness
+    log "Initial freshness check passed; today's secondary check will skip external verification."
+  fi
   log "All four public modules are current."
   exit 0
 else

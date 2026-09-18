@@ -38,9 +38,10 @@ The Diting synchronization uses an isolated clean checkout by default so upstrea
 
 - `08:00`: brand and Xiaohongshu collection and publication.
 - `08:30`: Diting AI/TG synchronization and publication.
-- `09:00` and `11:00`: public freshness checks with bounded module repair.
+- `09:00`: primary public freshness check with bounded module repair.
+- `11:00`: conditional follow-up; it exits from a local success marker when the primary check found all four modules current.
 
-The repair job skips all mutation when the public site is unreachable. When a module is reachable but stale, it records a per-day attempt before repair and stops after two attempts. An exact-date checkpoint prevents a brand repair from repeating primary collection; Xiaohongshu collection is refreshed only when that module is stale.
+The primary check writes the daily skip marker only when all four modules were already current before any repair. A network failure, stale result or repaired result leaves the follow-up enabled. The repair job skips all mutation when the public site is unreachable. When a module is reachable but stale, it records a per-day attempt before repair and stops after two attempts. An exact-date checkpoint prevents a brand repair from repeating primary collection; Xiaohongshu collection is refreshed only when that module is stale.
 
 ## Verification
 

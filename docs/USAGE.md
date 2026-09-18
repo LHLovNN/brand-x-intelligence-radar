@@ -31,9 +31,10 @@ The app remembers the selected date and reading position for each page during th
 
 - `08:00`: brand and Xiaohongshu daily run.
 - `08:30`: AI and Telegram digest synchronization.
-- `09:00` and `11:00`: public freshness check and bounded repair.
+- `09:00`: primary public freshness check and bounded repair.
+- `11:00`: conditional follow-up only when the primary check found an issue, could not complete, or performed a repair.
 
-The freshness check first reads the four public dates. A network failure never triggers repair. A stale module is retried at most twice per day. Brand data reuses the exact-date checkpoint when available; Xiaohongshu source collection runs again only when its own public date is stale. AI/TG repair does not consume X source quota.
+When all four modules are already current at the primary check, the secondary launch reads the local success marker and exits without another public request. A primary network failure, stale module or repair leaves no marker, so the secondary check still runs. A network failure never triggers repair. A stale module is retried at most twice per day. Brand data reuses the exact-date checkpoint when available; Xiaohongshu source collection runs again only when its own public date is stale. AI/TG repair does not consume X source quota. Set `BRAND_RADAR_HEALTH_FORCE_CHECK=1` for an intentional manual recheck.
 
 Install or remove the repair check with:
 
