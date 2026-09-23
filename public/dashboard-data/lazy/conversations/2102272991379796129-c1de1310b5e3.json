@@ -1,0 +1,70 @@
+{
+  "conversation_id": "2102272991379796129",
+  "anchor_post_id": "2102272991379796129",
+  "summary_zh": "收录帖从GitHub热榜观察切入，讨论AI工具不再只是Agent壳，而是AutoClip切片、NOMAD离线知识盒、ai-memory等可交付项目，并转向客户对象、按条/包月/安装年维等报价与部署体验。后续有人认可“能卖服务”的筛选标准，并称将压测失败率。上下文显示内容偏行业分析，情绪正向，传播价值在方法论。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2102272991379796129",
+      "url": "https://x.com/AfengWeb3/status/2102272991379796129",
+      "created_at": "2026-09-22T05:45:14Z",
+      "text": "2026-9-22\n今日 GitHub 可变现项目观察\n\n今天重点看：热度从「又一个 Agent 壳」转到能直接卖服务的三件事——短视频切片工厂、离线知识盒子、以及给编程 Agent 省 token / 接记忆。\n\n1. AutoClip：把长视频自动切成能发的高光切片\n\n今日关注点：GitHub Trending daily 上榜，约 8.2k 星，今天还在涨；有桌面包、Docker Web、CLI / MCP 三条入口，不是只能给程序员玩的脚本。\n\n用途：导入本地视频、YouTube、B 站，AI 看字幕找高光、起标题、自动切片和合集，还能按抖音 / 小红书 / Shorts / B 站预设导出。模型可走通义、OpenAI 兼容、Gemini，也能接 Ollama 本地。\n\n适合谁：TG 频道主、短视频工作室、课程/直播回放运营、资料群里靠切片引流的人。\n\n赚钱点：需求方是「每天有 2–3 小时成片、自己剪不过来」的频道主和中小商家。包装成「切片工厂」：按条收费（一条高光切片）、按场次包月（一场直播回放出 N 条）、或帮人在 Windows 上装好桌面版 + 接他现有 API。对接会 Docker / FFmpeg / 语音转写的开发，号主收撮合费或按月代运营差价。合规提醒：只处理客户自己有权使用的素材，别接盗播、搬运整片。\n\n难度：低到中等。有安装包的人当天能出片；要做成自动流水线（MCP 批量）再找开发。\n\n地址：https://t.co/7bEWkdHtft\n\n2. Project NOMAD：一台自己的离线知识/教育服务器\n\n今日关注点：daily 热度高，约 3.8 万星；本质是「家里/店里一台机，断网也能查百科、上课、问 AI」。\n\n用途：Debian / Ubuntu 上一键装，浏览器打开就能用：离线维基百科和电子书（Kiwix）、可汗学院课（Kolibri）、离线地图、本地笔记，再加 Ollama + Qdrant 做文档问答。适合做成局域网资料站，不是又一个云知识库 SaaS。\n\n适合谁：资料/会员群运营者、培训机构、想把内容装进盒子卖硬件的人；也适合「不能把资料丢公有云」的小团队。\n\n赚钱点：需求方听得懂——「给我一台断网也能查、能问、能上课的盒子」。包装成：组装机 + 预装 NOMAD + 灌好中文资料包，卖硬件差价；或上门/远程部署到现有小主机，收安装费 + 年维。对接会 Docker / Ubuntu 的运维，不必找大模型专家。注意：默认无登录，接内网前要加鉴权，别裸奔到公网。内容版权只灌客户有权分发的资料。\n\n难度：中等。会装 Ubuntu + Docker 就能交付；要做成「开箱即用的中文资料盒」需要内容打包，这才是溢价点。\n\n地址：https://t.co/nmmep7C8PV\n\n3. ai-memory：换 Agent、换电脑也不丢项目记忆\n\n今日关注点：daily 上榜，约 7.7k 星；专门解决「Claude Code 干到一半，换成 Codex 还要从头讲一遍」。\n\n用途：给 20 多家编程 Agent（Claude Code、Codex、Cursor、Gemini CLI、OpenCode 等）做一份共享长期记忆。记忆是 git 里的普通 Markdown，能 grep、能丢进 Obsidian；团队可共用一台记忆服务器，带多用户和审计。\n\n适合谁：同时用好几家编程 Agent 的外包团队、工作室、以及「人走了项目记忆也走了」的小公司。\n\n赚钱点：需求方是外包老板，痛点是 token 浪费和交接事故。包装成「团队记忆中台」：私有部署一台记忆服务 + 给每人接上常用 Agent，按席位月费。对接会 Rust/服务部署、熟悉 Claude Code / Codex 钩子的开发。号主按「部署一次 + 按人续费」抽成。别承诺能替代客户自己的保密制度，代码和会话进记忆前要脱敏。\n\n难度：中等偏高。单人试用还行；要给团队上多用户、权限和审计，需要会部署的人。\n\n地址：https://t.co/glaspd2R6x\n\n4. Context Mode：把 Agent 上下文砍掉 98%，少烧 token\n\n今日关注点：weekly 仍在涨，约 2.4 万星；它不是新聊天框，而是 MCP + hooks，拦住「工具一吐就是几十 KB 把窗口撑爆」。\n\n用途：给编码 Agent 沙盒化工具输出、把会话事件存 SQLite，压缩后按需检索；号称支持 17 个客户端。简单理解：同样的活，少塞垃圾进上下文，模型不容易失忆，账单也更瘦。\n\n适合谁：已经在用 Cursor / Claude Code / Codex 的外包团队、以及帮客户「把 AI 开发成本打下来」的实施方。\n\n赚钱点：需求方听得懂的一句话是「你们现在每个月 AI 账单太肥，我帮你瘦」。包装成诊断 + 安装：先看客户现在的 MCP/工具有多臃肿，再装 Context Mode、改路由，按月节省金额抽成或收实施费。对接熟悉 MCP 的开发即可。适合当「降本单」进门，再连带卖记忆、代码审查。注意许可证是 ELv2，商用分发前让开发先看条款，别当纯 MIT 乱贴牌。\n\n难度：中等。给自己用几条命令；给客户做 17 端适配和效果对比，需要会写实施报告的人。\n\n地址：https://t.co/Ml24YJaAFa\n\n5. Magnitude：看你电脑配什么，再帮你跑最合适的本地模型\n\n今日关注点：monthly 仍在爬，约 4.8k 星；桌面端会先测机器，再推荐、下载、调优模型，一键接到现有 Agent。Apple Silicon / NVIDIA / AMD / 纯 CPU 都能试。\n\n用途：不想再为 API 按 token 付钱、又怕自己乱下模型把显卡打满的人。它把「选模型、下模型、接到 Codex / OpenCode / Hermes」收成一个安装包。\n\n适合谁：在意外泄提示词的工作室、想给客服/内部知识库上本地模型的中小商家、以及帮客户「把 API 账单砍掉」的实施方。\n\n赚钱点：需求方是「能不能别把对话传到外面、顺便少花钱」。包装成到店/远程装机：装 Magnitude、选能跑得动的模型、接到他正在用的 Agent，收安装费 + 模型更新年费。对接会装桌面软件、懂一点显卡驱动的人就够，不必训练模型。别承诺「本地 = 和 GPT 一样聪明」，按客户机器实测 tok/s 再报价。\n\n难度：低到中等。自己电脑装是低；给客户选对模型、接到他的工作流是中等。\n\n地址：https://t.co/vmKjnq2P6l\n\n今日优先关注\n\n1. AutoClip：今天最好卖。频道主、课销、直播切片听得懂，能按条/按场报价，开发也好找。\n2. Project NOMAD：适合做成「资料盒 / 培训机」硬件+部署套餐，差价比纯软件咨询好收。\n3. Context Mode：专打已经在烧编程 Agent 的团队，降本故事清楚，适合当进门单再卖记忆和本地模型。\n\n趋势判断：今天这波热度不在新模型，而在「视频能出片、知识能离线、Agent 能省钱」——中介该推的是能报价、能交付、客户能听懂的安装和代运营，而不是再安利一个聊天框。",
+      "original_text": "2026-9-22\n今日 GitHub 可变现项目观察\n\n今天重点看：热度从「又一个 Agent 壳」转到能直接卖服务的三件事——短视频切片工厂、离线知识盒子、以及给编程 Agent 省 token / 接记忆。\n\n1. AutoClip：把长视频自动切成能发的高光切片\n\n今日关注点：GitHub Trending daily 上榜，约 8.2k 星，今天还在涨；有桌面包、Docker Web、CLI / MCP 三条入口，不是只能给程序员玩的脚本。\n\n用途：导入本地视频、YouTube、B 站，AI 看字幕找高光、起标题、自动切片和合集，还能按抖音 / 小红书 / Shorts / B 站预设导出。模型可走通义、OpenAI 兼容、Gemini，也能接 Ollama 本地。\n\n适合谁：TG 频道主、短视频工作室、课程/直播回放运营、资料群里靠切片引流的人。\n\n赚钱点：需求方是「每天有 2–3 小时成片、自己剪不过来」的频道主和中小商家。包装成「切片工厂」：按条收费（一条高光切片）、按场次包月（一场直播回放出 N 条）、或帮人在 Windows 上装好桌面版 + 接他现有 API。对接会 Docker / FFmpeg / 语音转写的开发，号主收撮合费或按月代运营差价。合规提醒：只处理客户自己有权使用的素材，别接盗播、搬运整片。\n\n难度：低到中等。有安装包的人当天能出片；要做成自动流水线（MCP 批量）再找开发。\n\n地址：https://t.co/7bEWkdHtft\n\n2. Project NOMAD：一台自己的离线知识/教育服务器\n\n今日关注点：daily 热度高，约 3.8 万星；本质是「家里/店里一台机，断网也能查百科、上课、问 AI」。\n\n用途：Debian / Ubuntu 上一键装，浏览器打开就能用：离线维基百科和电子书（Kiwix）、可汗学院课（Kolibri）、离线地图、本地笔记，再加 Ollama + Qdrant 做文档问答。适合做成局域网资料站，不是又一个云知识库 SaaS。\n\n适合谁：资料/会员群运营者、培训机构、想把内容装进盒子卖硬件的人；也适合「不能把资料丢公有云」的小团队。\n\n赚钱点：需求方听得懂——「给我一台断网也能查、能问、能上课的盒子」。包装成：组装机 + 预装 NOMAD + 灌好中文资料包，卖硬件差价；或上门/远程部署到现有小主机，收安装费 + 年维。对接会 Docker / Ubuntu 的运维，不必找大模型专家。注意：默认无登录，接内网前要加鉴权，别裸奔到公网。内容版权只灌客户有权分发的资料。\n\n难度：中等。会装 Ubuntu + Docker 就能交付；要做成「开箱即用的中文资料盒」需要内容打包，这才是溢价点。\n\n地址：https://t.co/nmmep7C8PV\n\n3. ai-memory：换 Agent、换电脑也不丢项目记忆\n\n今日关注点：daily 上榜，约 7.7k 星；专门解决「Claude Code 干到一半，换成 Codex 还要从头讲一遍」。\n\n用途：给 20 多家编程 Agent（Claude Code、Codex、Cursor、Gemini CLI、OpenCode 等）做一份共享长期记忆。记忆是 git 里的普通 Markdown，能 grep、能丢进 Obsidian；团队可共用一台记忆服务器，带多用户和审计。\n\n适合谁：同时用好几家编程 Agent 的外包团队、工作室、以及「人走了项目记忆也走了」的小公司。\n\n赚钱点：需求方是外包老板，痛点是 token 浪费和交接事故。包装成「团队记忆中台」：私有部署一台记忆服务 + 给每人接上常用 Agent，按席位月费。对接会 Rust/服务部署、熟悉 Claude Code / Codex 钩子的开发。号主按「部署一次 + 按人续费」抽成。别承诺能替代客户自己的保密制度，代码和会话进记忆前要脱敏。\n\n难度：中等偏高。单人试用还行；要给团队上多用户、权限和审计，需要会部署的人。\n\n地址：https://t.co/glaspd2R6x\n\n4. Context Mode：把 Agent 上下文砍掉 98%，少烧 token\n\n今日关注点：weekly 仍在涨，约 2.4 万星；它不是新聊天框，而是 MCP + hooks，拦住「工具一吐就是几十 KB 把窗口撑爆」。\n\n用途：给编码 Agent 沙盒化工具输出、把会话事件存 SQLite，压缩后按需检索；号称支持 17 个客户端。简单理解：同样的活，少塞垃圾进上下文，模型不容易失忆，账单也更瘦。\n\n适合谁：已经在用 Cursor / Claude Code / Codex 的外包团队、以及帮客户「把 AI 开发成本打下来」的实施方。\n\n赚钱点：需求方听得懂的一句话是「你们现在每个月 AI 账单太肥，我帮你瘦」。包装成诊断 + 安装：先看客户现在的 MCP/工具有多臃肿，再装 Context Mode、改路由，按月节省金额抽成或收实施费。对接熟悉 MCP 的开发即可。适合当「降本单」进门，再连带卖记忆、代码审查。注意许可证是 ELv2，商用分发前让开发先看条款，别当纯 MIT 乱贴牌。\n\n难度：中等。给自己用几条命令；给客户做 17 端适配和效果对比，需要会写实施报告的人。\n\n地址：https://t.co/Ml24YJaAFa\n\n5. Magnitude：看你电脑配什么，再帮你跑最合适的本地模型\n\n今日关注点：monthly 仍在爬，约 4.8k 星；桌面端会先测机器，再推荐、下载、调优模型，一键接到现有 Agent。Apple Silicon / NVIDIA / AMD / 纯 CPU 都能试。\n\n用途：不想再为 API 按 token 付钱、又怕自己乱下模型把显卡打满的人。它把「选模型、下模型、接到 Codex / OpenCode / Hermes」收成一个安装包。\n\n适合谁：在意外泄提示词的工作室、想给客服/内部知识库上本地模型的中小商家、以及帮客户「把 API 账单砍掉」的实施方。\n\n赚钱点：需求方是「能不能别把对话传到外面、顺便少花钱」。包装成到店/远程装机：装 Magnitude、选能跑得动的模型、接到他正在用的 Agent，收安装费 + 模型更新年费。对接会装桌面软件、懂一点显卡驱动的人就够，不必训练模型。别承诺「本地 = 和 GPT 一样聪明」，按客户机器实测 tok/s 再报价。\n\n难度：低到中等。自己电脑装是低；给客户选对模型、接到他的工作流是中等。\n\n地址：https://t.co/vmKjnq2P6l\n\n今日优先关注\n\n1. AutoClip：今天最好卖。频道主、课销、直播切片听得懂，能按条/按场报价，开发也好找。\n2. Project NOMAD：适合做成「资料盒 / 培训机」硬件+部署套餐，差价比纯软件咨询好收。\n3. Context Mode：专打已经在烧编程 Agent 的团队，降本故事清楚，适合当进门单再卖记忆和本地模型。\n\n趋势判断：今天这波热度不在新模型，而在「视频能出片、知识能离线、Agent 能省钱」——中介该推的是能报价、能交付、客户能听懂的安装和代运营，而不是再安利一个聊天框。",
+      "translation_zh": "2026-9-22\n今日 GitHub 可变现项目观察\n\n今天重点看：热度从「又一个 Agent 壳」转到能直接卖服务的三件事——短视频切片工厂、离线知识盒子、以及给编程 Agent 省 token / 接记忆。\n\n1. AutoClip：把长视频自动切成能发的高光切片\n\n今日关注点：GitHub Trending daily 上榜，约 8.2k 星，今天还在涨；有桌面包、Docker Web、CLI / MCP 三条入口，不是只能给程序员玩的脚本。\n\n用途：导入本地视频、YouTube、B 站，AI 看字幕找高光、起标题、自动切片和合集，还能按抖音 / 小红书 / Shorts / B 站预设导出。模型可走通义、OpenAI 兼容、Gemini，也能接 Ollama 本地。\n\n适合谁：TG 频道主、短视频工作室、课程/直播回放运营、资料群里靠切片引流的人。\n\n赚钱点：需求方是「每天有 2–3 小时成片、自己剪不过来」的频道主和中小商家。包装成「切片工厂」：按条收费（一条高光切片）、按场次包月（一场直播回放出 N 条）、或帮人在 Windows 上装好桌面版 + 接他现有 API。对接会 Docker / FFmpeg / 语音转写的开发，号主收撮合费或按月代运营差价。合规提醒：只处理客户自己有权使用的素材，别接盗播、搬运整片。\n\n难度：低到中等。有安装包的人当天能出片；要做成自动流水线（MCP 批量）再找开发。\n\n地址：https://t.co/7bEWkdHtft\n\n2. Project NOMAD：一台自己的离线知识/教育服务器\n\n今日关注点：daily 热度高，约 3.8 万星；本质是「家里/店里一台机，断网也能查百科、上课、问 AI」。\n\n用途：Debian / Ubuntu 上一键装，浏览器打开就能用：离线维基百科和电子书（Kiwix）、可汗学院课（Kolibri）、离线地图、本地笔记，再加 Ollama + Qdrant 做文档问答。适合做成局域网资料站，不是又一个云知识库 SaaS。\n\n适合谁：资料/会员群运营者、培训机构、想把内容装进盒子卖硬件的人；也适合「不能把资料丢公有云」的小团队。\n\n赚钱点：需求方听得懂——「给我一台断网也能查、能问、能上课的盒子」。包装成：组装机 + 预装 NOMAD + 灌好中文资料包，卖硬件差价；或上门/远程部署到现有小主机，收安装费 + 年维。对接会 Docker / Ubuntu 的运维，不必找大模型专家。注意：默认无登录，接内网前要加鉴权，别裸奔到公网。内容版权只灌客户有权分发的资料。\n\n难度：中等。会装 Ubuntu + Docker 就能交付；要做成「开箱即用的中文资料盒」需要内容打包，这才是溢价点。\n\n地址：https://t.co/nmmep7C8PV\n\n3. ai-memory：换 Agent、换电脑也不丢项目记忆\n\n今日关注点：daily 上榜，约 7.7k 星；专门解决「Claude Code 干到一半，换成 Codex 还要从头讲一遍」。\n\n用途：给 20 多家编程 Agent（Claude Code、Codex、Cursor、Gemini CLI、OpenCode 等）做一份共享长期记忆。记忆是 git 里的普通 Markdown，能 grep、能丢进 Obsidian；团队可共用一台记忆服务器，带多用户和审计。\n\n适合谁：同时用好几家编程 Agent 的外包团队、工作室、以及「人走了项目记忆也走了」的小公司。\n\n赚钱点：需求方是外包老板，痛点是 token 浪费和交接事故。包装成「团队记忆中台」：私有部署一台记忆服务 + 给每人接上常用 Agent，按席位月费。对接会 Rust/服务部署、熟悉 Claude Code / Codex 钩子的开发。号主按「部署一次 + 按人续费」抽成。别承诺能替代客户自己的保密制度，代码和会话进记忆前要脱敏。\n\n难度：中等偏高。单人试用还行；要给团队上多用户、权限和审计，需要会部署的人。\n\n地址：https://t.co/glaspd2R6x\n\n4. Context Mode：把 Agent 上下文砍掉 98%，少烧 token\n\n今日关注点：weekly 仍在涨，约 2.4 万星；它不是新聊天框，而是 MCP + hooks，拦住「工具一吐就是几十 KB 把窗口撑爆」。\n\n用途：给编码 Agent 沙盒化工具输出、把会话事件存 SQLite，压缩后按需检索；号称支持 17 个客户端。简单理解：同样的活，少塞垃圾进上下文，模型不容易失忆，账单也更瘦。\n\n适合谁：已经在用 Cursor / Claude Code / Codex 的外包团队、以及帮客户「把 AI 开发成本打下来」的实施方。\n\n赚钱点：需求方听得懂的一句话是「你们现在每个月 AI 账单太肥，我帮你瘦」。包装成诊断 + 安装：先看客户现在的 MCP/工具有多臃肿，再装 Context Mode、改路由，按月节省金额抽成或收实施费。对接熟悉 MCP 的开发即可。适合当「降本单」进门，再连带卖记忆、代码审查。注意许可证是 ELv2，商用分发前让开发先看条款，别当纯 MIT 乱贴牌。\n\n难度：中等。给自己用几条命令；给客户做 17 端适配和效果对比，需要会写实施报告的人。\n\n地址：https://t.co/Ml24YJaAFa\n\n5. Magnitude：看你电脑配什么，再帮你跑最合适的本地模型\n\n今日关注点：monthly 仍在爬，约 4.8k 星；桌面端会先测机器，再推荐、下载、调优模型，一键接到现有 Agent。Apple Silicon / NVIDIA / AMD / 纯 CPU 都能试。\n\n用途：不想再为 API 按 token 付钱、又怕自己乱下模型把显卡打满的人。它把「选模型、下模型、接到 Codex / OpenCode / Hermes」收成一个安装包。\n\n适合谁：在意外泄提示词的工作室、想给客服/内部知识库上本地模型的中小商家、以及帮客户「把 API 账单砍掉」的实施方。\n\n赚钱点：需求方是「能不能别把对话传到外面、顺便少花钱」。包装成到店/远程装机：装 Magnitude、选能跑得动的模型、接到他正在用的 Agent，收安装费 + 模型更新年费。对接会装桌面软件、懂一点显卡驱动的人就够，不必训练模型。别承诺「本地 = 和 GPT 一样聪明」，按客户机器实测 tok/s 再报价。\n\n难度：低到中等。自己电脑装是低；给客户选对模型、接到他的工作流是中等。\n\n地址：https://t.co/vmKjnq2P6l\n\n今日优先关注\n\n1. AutoClip：今天最好卖。频道主、课销、直播切片听得懂，能按条/按场报价，开发也好找。\n2. Project NOMAD：适合做成「资料盒 / 培训机」硬件+部署套餐，差价比纯软件咨询好收。\n3. Context Mode：专打已经在烧编程 Agent 的团队，降本故事清楚，适合当进门单再卖记忆和本地模型。\n\n趋势判断：今天这波热度不在新模型，而在「视频能出片、知识能离线、Agent 能省钱」——中介该推的是能报价、能交付、客户能听懂的安装和代运营，而不是再安利一个聊天框。",
+      "translation_status": "source_chinese",
+      "author_name": "阿风 | AI & Web3 实战",
+      "author_handle": "AfengWeb3",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2011645662123966464/DpkCmtH1_normal.jpg",
+      "author_followers": 331,
+      "author_following": 1450,
+      "author_bio": "折腾跨境出海基建， eSIM｜港卡｜美卡｜U卡｜AI工具｜美股｜ web3 ｜Alpha套利撸毛｜  持续分享真实记录\nTG交流群：https://t.co/qEfpwDuKFW",
+      "author_location": null,
+      "author_joined_at": "2023-11-30T02:26:49Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/zhouxiaoka/autoclip",
+        "https://github.com/Crosstalk-Solutions/project-nomad",
+        "https://github.com/akitaonrails/ai-memory",
+        "https://github.com/mksglu/context-mode",
+        "https://github.com/magnitudedev/magnitude"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 1081
+      }
+    },
+    {
+      "post_id": "2102297726629331399",
+      "url": "https://x.com/FWsainanshou/status/2102297726629331399",
+      "created_at": "2026-09-22T07:23:31Z",
+      "text": "@AfengWeb3 「能卖服务」这条切得准。我筛 GitHub 项目只看三件事：谁付钱、交付边界清不清、Agent 失败时人如何接管。短视频切片与离线知识盒都符合——可编程的重复劳动，不是又一个聊天壳。下周我会拿自己的 12 条 eval 压测一次失败率。",
+      "original_text": "@AfengWeb3 「能卖服务」这条切得准。我筛 GitHub 项目只看三件事：谁付钱、交付边界清不清、Agent 失败时人如何接管。短视频切片与离线知识盒都符合——可编程的重复劳动，不是又一个聊天壳。下周我会拿自己的 12 条 eval 压测一次失败率。",
+      "translation_zh": "@AfengWeb3 「能卖服务」这条切得准。我筛 GitHub 项目只看三件事：谁付钱、交付边界清不清、Agent 失败时人如何接管。短视频切片与离线知识盒都符合——可编程的重复劳动，不是又一个聊天壳。下周我会拿自己的 12 条 eval 压测一次失败率。",
+      "translation_status": "source_chinese",
+      "author_name": "Dee · Crucible of the Strong",
+      "author_handle": "FWsainanshou",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2100564109393809408/WHNBMaAz_normal.jpg",
+      "author_followers": 27,
+      "author_following": 155,
+      "author_bio": "I use AI · learn AI · build with AI.\nSharing AI entrepreneurship in public.\nProblem → Steps → Result.",
+      "author_location": "Mars ",
+      "author_joined_at": "2024-12-31T13:27:53Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 1
+      }
+    }
+  ]
+}
