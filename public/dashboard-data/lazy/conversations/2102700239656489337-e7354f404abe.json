@@ -1,0 +1,114 @@
+{
+  "conversation_id": "2102700239656489337",
+  "anchor_post_id": "2102700239656489337",
+  "summary_zh": "前文无其他对话，仅作者长帖介绍为自媒体妻子开发的 Obsidian 插件 Prism，聚焦局部改稿、多平台改写、配图、留档和节省 token，称近期将开源，未涉及价格或配送。后续两人仅表示关注/点名 Prism。上下文显示为产品自述与早期兴趣反馈，情绪偏正面，真实性需待开源验证，传播量有限。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2102700239656489337",
+      "url": "https://x.com/zhiyulab/status/2102700239656489337",
+      "created_at": "2026-09-23T10:02:58Z",
+      "text": "给做超级个体自媒体的媳妇做了 Prism：改稿不用整篇重来，准备开源\n\n媳妇在做超级个体自媒体，平时最磨人的就是审稿和改稿：\n明明只想微调一句，AI 往往把整篇都重写一遍，原来改满意的地方全被洗掉了；公众号、小红书、X 还各要一版，每版都要重新琢磨配图，大半天时间全耗在无休止的返工上。\n\n在这之前，先真心安利一下 Obsidian。对于超级个体真正做内容而言，它绝对是目前体验最好、最靠谱的「第二个超级大脑」。所有阅读积累、碎片灵感、赛道认知全以 Markdown 纯文本锁在本地，100% 属于你自己，越用越有复利。如果你在认真做个人 IP 或自媒体，强烈推荐把它当成你的核心数字基建。\n\n正因为 Obsidian 接口足够开放，我直接在她这个「超级大脑」里做了一个打通生产全链路的插件——Prism。\nPrism 本身包含好几个模块，「内容坊」只是它其中一个功能，它把一篇内容的生命周期拆成了四步：素材、选题、产出、落地。\n\n真正解决她改稿内耗的，就是「产出」这一环：\n\n改哪句动哪句：哪句话不满意就单改哪句，改完当场看到替换效果，其余段落纹丝不动，彻底告别整篇推倒重来。\n\n真正调动第二大脑：写稿前，Prism 会先去检索你 Obsidian 库里长期沉淀的笔记，并结合Typesafe最近很火的Jev决策模型来辅助选题判断与定调；写完的内容直接归档回库，让平时攒的碎片资产真正跑进生产流。\n\n母稿一键多发与留档：一份母稿直接改出各平台版本。发前先审一遍并给出修改建议；配图前通读全文，自主判断配几张、放在哪段。每一版修改都完整留档，随时可以追溯最早的素材，退回任意一版。\n\n个人 IP 视觉一致性：传一次形象，后面的配图插图就固定用这个专属 IP，在画板上改图也很直观。内置风格里吸收了 @AdrianPunk115 的复古扁平小剧场和 @ianneo_ai 的小黑插图并署名（两位老师用图讲故事的skill非常棒），也支持传垫图自定义风格、自定义提示词（也支持AI改写提示词）。\n\n底层还做了很多克制的工程优化：每次局部微调尽量共用上下文开头，命中缓存，能省下大笔 token 消耗。你可以填自己的 API Key，也支持直接接本地的 Claude Code 和 Codex CLI。\n\nPrism 的其他功能后面推出，目标是为超级个体节省Token，近期会开源。\n\n如果你也是正在探索超级个体，或者也在用 Obsidian 搭建内容生产流，评论区扣「Prism」，开源上线时第一时间通知你。",
+      "original_text": "给做超级个体自媒体的媳妇做了 Prism：改稿不用整篇重来，准备开源\n\n媳妇在做超级个体自媒体，平时最磨人的就是审稿和改稿：\n明明只想微调一句，AI 往往把整篇都重写一遍，原来改满意的地方全被洗掉了；公众号、小红书、X 还各要一版，每版都要重新琢磨配图，大半天时间全耗在无休止的返工上。\n\n在这之前，先真心安利一下 Obsidian。对于超级个体真正做内容而言，它绝对是目前体验最好、最靠谱的「第二个超级大脑」。所有阅读积累、碎片灵感、赛道认知全以 Markdown 纯文本锁在本地，100% 属于你自己，越用越有复利。如果你在认真做个人 IP 或自媒体，强烈推荐把它当成你的核心数字基建。\n\n正因为 Obsidian 接口足够开放，我直接在她这个「超级大脑」里做了一个打通生产全链路的插件——Prism。\nPrism 本身包含好几个模块，「内容坊」只是它其中一个功能，它把一篇内容的生命周期拆成了四步：素材、选题、产出、落地。\n\n真正解决她改稿内耗的，就是「产出」这一环：\n\n改哪句动哪句：哪句话不满意就单改哪句，改完当场看到替换效果，其余段落纹丝不动，彻底告别整篇推倒重来。\n\n真正调动第二大脑：写稿前，Prism 会先去检索你 Obsidian 库里长期沉淀的笔记，并结合Typesafe最近很火的Jev决策模型来辅助选题判断与定调；写完的内容直接归档回库，让平时攒的碎片资产真正跑进生产流。\n\n母稿一键多发与留档：一份母稿直接改出各平台版本。发前先审一遍并给出修改建议；配图前通读全文，自主判断配几张、放在哪段。每一版修改都完整留档，随时可以追溯最早的素材，退回任意一版。\n\n个人 IP 视觉一致性：传一次形象，后面的配图插图就固定用这个专属 IP，在画板上改图也很直观。内置风格里吸收了 @AdrianPunk115 的复古扁平小剧场和 @ianneo_ai 的小黑插图并署名（两位老师用图讲故事的skill非常棒），也支持传垫图自定义风格、自定义提示词（也支持AI改写提示词）。\n\n底层还做了很多克制的工程优化：每次局部微调尽量共用上下文开头，命中缓存，能省下大笔 token 消耗。你可以填自己的 API Key，也支持直接接本地的 Claude Code 和 Codex CLI。\n\nPrism 的其他功能后面推出，目标是为超级个体节省Token，近期会开源。\n\n如果你也是正在探索超级个体，或者也在用 Obsidian 搭建内容生产流，评论区扣「Prism」，开源上线时第一时间通知你。",
+      "translation_zh": "给做超级个体自媒体的媳妇做了 Prism：改稿不用整篇重来，准备开源\n\n媳妇在做超级个体自媒体，平时最磨人的就是审稿和改稿：\n明明只想微调一句，AI 往往把整篇都重写一遍，原来改满意的地方全被洗掉了；公众号、小红书、X 还各要一版，每版都要重新琢磨配图，大半天时间全耗在无休止的返工上。\n\n在这之前，先真心安利一下 Obsidian。对于超级个体真正做内容而言，它绝对是目前体验最好、最靠谱的「第二个超级大脑」。所有阅读积累、碎片灵感、赛道认知全以 Markdown 纯文本锁在本地，100% 属于你自己，越用越有复利。如果你在认真做个人 IP 或自媒体，强烈推荐把它当成你的核心数字基建。\n\n正因为 Obsidian 接口足够开放，我直接在她这个「超级大脑」里做了一个打通生产全链路的插件——Prism。\nPrism 本身包含好几个模块，「内容坊」只是它其中一个功能，它把一篇内容的生命周期拆成了四步：素材、选题、产出、落地。\n\n真正解决她改稿内耗的，就是「产出」这一环：\n\n改哪句动哪句：哪句话不满意就单改哪句，改完当场看到替换效果，其余段落纹丝不动，彻底告别整篇推倒重来。\n\n真正调动第二大脑：写稿前，Prism 会先去检索你 Obsidian 库里长期沉淀的笔记，并结合Typesafe最近很火的Jev决策模型来辅助选题判断与定调；写完的内容直接归档回库，让平时攒的碎片资产真正跑进生产流。\n\n母稿一键多发与留档：一份母稿直接改出各平台版本。发前先审一遍并给出修改建议；配图前通读全文，自主判断配几张、放在哪段。每一版修改都完整留档，随时可以追溯最早的素材，退回任意一版。\n\n个人 IP 视觉一致性：传一次形象，后面的配图插图就固定用这个专属 IP，在画板上改图也很直观。内置风格里吸收了 @AdrianPunk115 的复古扁平小剧场和 @ianneo_ai 的小黑插图并署名（两位老师用图讲故事的skill非常棒），也支持传垫图自定义风格、自定义提示词（也支持AI改写提示词）。\n\n底层还做了很多克制的工程优化：每次局部微调尽量共用上下文开头，命中缓存，能省下大笔 token 消耗。你可以填自己的 API Key，也支持直接接本地的 Claude Code 和 Codex CLI。\n\nPrism 的其他功能后面推出，目标是为超级个体节省Token，近期会开源。\n\n如果你也是正在探索超级个体，或者也在用 Obsidian 搭建内容生产流，评论区扣「Prism」，开源上线时第一时间通知你。",
+      "translation_status": "source_chinese",
+      "author_name": "紙予",
+      "author_handle": "zhiyulab",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2063998307542974465/HSkxvgQ9_normal.jpg",
+      "author_followers": 161,
+      "author_following": 3677,
+      "author_bio": "Where stories breathe softly.",
+      "author_location": null,
+      "author_joined_at": "2019-01-01T04:52:09Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HS5Kt7jbAAAJto7.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HS5Kt7jbAAAJto7.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HS5Kt7jbAAAJto7.jpg",
+          "expanded_url": "https://x.com/zhiyulab/status/2102700239656489337/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HS5Kt7jaAAAInQE.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HS5Kt7jaAAAInQE.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HS5Kt7jaAAAInQE.jpg",
+          "expanded_url": "https://x.com/zhiyulab/status/2102700239656489337/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HS5Kt7mbAAAl6Vn.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HS5Kt7mbAAAl6Vn.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HS5Kt7mbAAAl6Vn.jpg",
+          "expanded_url": "https://x.com/zhiyulab/status/2102700239656489337/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 5,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 1,
+        "bookmarks": 2,
+        "views": 964
+      }
+    },
+    {
+      "post_id": "2102725122738315370",
+      "url": "https://x.com/RichardWang889/status/2102725122738315370",
+      "created_at": "2026-09-23T11:41:50Z",
+      "text": "@zhiyulab 好的，关注下",
+      "original_text": "@zhiyulab 好的，关注下",
+      "translation_zh": "@zhiyulab 好的，关注下",
+      "translation_status": "source_chinese",
+      "author_name": "王天衡",
+      "author_handle": "RichardWang889",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1971913820252893184/x3rlvFaA_normal.jpg",
+      "author_followers": 2718,
+      "author_following": 2558,
+      "author_bio": "生意百晓生｜投资，也做生意\n提升能力，多看世界，多做实践\n 知识结构 × 思维深度 × 学习速度 × 实践反馈 × 持续迭代\n《壮志在我胸》",
+      "author_location": "Shanghai",
+      "author_joined_at": "2025-01-25T11:16:47Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 23
+      }
+    },
+    {
+      "post_id": "2102727453416501317",
+      "url": "https://x.com/Chris62771610/status/2102727453416501317",
+      "created_at": "2026-09-23T11:51:06Z",
+      "text": "@zhiyulab Prism",
+      "original_text": "@zhiyulab Prism",
+      "translation_zh": "@zhiyulab 的 Prism",
+      "translation_status": "translated",
+      "author_name": "Chris",
+      "author_handle": "Chris62771610",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2087577329451384832/JDHQ-pHv_normal.jpg",
+      "author_followers": 942,
+      "author_following": 261,
+      "author_bio": "89｜HK｜热爱AI｜用AI赚到了副业收入\n分享自身使用AI经历，因为冲动订了个年费Heavy\n因为Grok Bot 写了个https://t.co/HFhINBGVXy",
+      "author_location": "香港",
+      "author_joined_at": "2018-06-04T09:29:56Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 23
+      }
+    }
+  ]
+}
