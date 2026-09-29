@@ -1,0 +1,975 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-28",
+  "thread_id": "44063",
+  "count": 126,
+  "replies": [
+    {
+      "id": "516156",
+      "text": "字节跳动",
+      "time": "16:37",
+      "sender_name": "Dot",
+      "sender_id": 8275249850
+    },
+    {
+      "id": "516157",
+      "text": "什么时候淘汰下来洋垃圾给我用用",
+      "time": "16:37",
+      "sender_name": "Jlypx",
+      "sender_id": 1021743999
+    },
+    {
+      "id": "516158",
+      "text": "我真破崩了",
+      "time": "16:37",
+      "sender_name": "Dot",
+      "sender_id": 8275249850
+    },
+    {
+      "id": "516159",
+      "text": "梁文峰，民族英雄！",
+      "time": "16:37",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "516162",
+      "text": "加起来还不如OpenAI一家",
+      "time": "16:40",
+      "sender_name": "chaoscard",
+      "sender_id": 777487517
+    },
+    {
+      "id": "516163",
+      "text": "美国大概是56GW\n算力差更多，这只是电量衡量",
+      "time": "16:40",
+      "sender_name": "void neko",
+      "sender_id": 675752473
+    },
+    {
+      "id": "516164",
+      "text": "OpenAI一家就100",
+      "time": "16:40",
+      "sender_name": "chaoscard",
+      "sender_id": 777487517
+    },
+    {
+      "id": "516165",
+      "text": "别搞了别搞了，手机都买不起了😭",
+      "time": "16:40",
+      "sender_name": "🫧",
+      "sender_id": 7161690172
+    },
+    {
+      "id": "516168",
+      "text": "哈哈哈",
+      "time": "16:42",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "516169",
+      "text": "The global model tracks over 5,000 facilities across four regions. The US leads the world with 56GW of capacity as of 2026YE",
+      "time": "16:43",
+      "sender_name": "void neko",
+      "sender_id": 675752473
+    },
+    {
+      "id": "516171",
+      "text": "要是真有100GW，也就不用暂停20x pro还要搞降智，再加50x pro",
+      "time": "16:44",
+      "sender_name": "void neko",
+      "sender_id": 675752473
+    },
+    {
+      "id": "516172",
+      "text": "小花 为啥字节包了全国20%的数据中心容量，但豆包还跟个弱智一样🌝",
+      "time": "16:44",
+      "sender_name": "Stardust",
+      "sender_id": 5254185041
+    },
+    {
+      "id": "516174",
+      "text": "《中国几乎不受电力限制、劳动力短缺或公众抗议影响，常规能在12个月内交付100MW级设施》",
+      "time": "16:45",
+      "sender_name": "杂牌可乐",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516174-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516174-1-thumb.webp",
+          "width": 480,
+          "height": 639,
+          "size_bytes": 18874
+        }
+      ],
+      "sender_id": 2013037643
+    },
+    {
+      "id": "516175",
+      "text": "因为**机房容量不等于模型智商**：数据中心是厨房，模型和训练方法才是厨师；厨房再大，厨师要是把盐当糖，照样端出一锅黑暗料理。\n而且这“20%”说的是字节租用的**已交付数据中心容量**，不是“豆包独占的显卡”，更不代表每次对话都调用最强模型。[[2]](https://newsletter.semianalysis.com/p/the-chinese-ai-infrastructure-boom) 用户侧还可能受模型版本、推理策略和成本延迟限制。简单说：字节买了大厨房，不代表你点的每道菜都由米其林主厨现炒。",
+      "time": "16:45",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "516180",
+      "text": "正常，中国市场不是你死就是我亡，最卷的市场，没有之一",
+      "time": "16:46",
+      "sender_name": "Kuirb",
+      "sender_id": 5137188208
+    },
+    {
+      "id": "516181",
+      "text": "所以字节买了大厨房在里面炒屎玩吗",
+      "time": "16:46",
+      "sender_name": "Stardust",
+      "sender_id": 5254185041
+    },
+    {
+      "id": "516183",
+      "text": "差不多：**厨房买得大，不代表每口锅都在给豆包炒菜**——还得分给推荐、广告、剪辑、训练和别的业务。豆包要是端出屎味套餐，可能是菜谱、厨师或你点到的档口不行；别急着怪厨房，厨房挺无辜，顶多电费账单先哭了。",
+      "time": "16:46",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "516184",
+      "text": "因为国内市场豆包市占率断档第一，需要的算力支持规模自然大，顺便，豆包主打轻生活助手定位，对快速反应的要求很高，轻量模型本质不就是即快又快",
+      "time": "16:48",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516185",
+      "text": "作为日常生活助手定位，绝大多数用户是不能接受模型长时间思考，而更倾向于马上输出结果",
+      "time": "16:49",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516186",
+      "text": "豆包的定位跟百度坐一桌",
+      "time": "16:49",
+      "sender_name": "黙茶",
+      "sender_id": 8615070158
+    },
+    {
+      "id": "516187",
+      "text": "每次有类似新闻，豆包总会拿出来炫耀666",
+      "time": "16:49",
+      "sender_name": "kunkun snail",
+      "sender_id": 8022884052
+    },
+    {
+      "id": "516188",
+      "text": "是豆包吗🤔",
+      "time": "16:50",
+      "sender_name": "Peter",
+      "sender_id": 194992263
+    },
+    {
+      "id": "516189",
+      "text": "现金流进入负了，军备竞赛也就进入了二阶段了，保不住增速就等着坠落了",
+      "time": "16:50",
+      "sender_name": "scom",
+      "sender_id": 7363956007
+    },
+    {
+      "id": "516192",
+      "text": "电网是不是赚麻了",
+      "time": "16:53",
+      "sender_name": "水泥脚拌姬",
+      "sender_id": 5553995959
+    },
+    {
+      "id": "516193",
+      "text": "豆包就是不蒸馏，自己训练模型的真实水平🌝",
+      "time": "16:53",
+      "sender_name": "Stardust",
+      "sender_id": 5254185041
+    },
+    {
+      "id": "516195",
+      "text": "代价呢",
+      "time": "16:57",
+      "sender_name": "Horn",
+      "sender_id": 7128538707
+    },
+    {
+      "id": "516198",
+      "text": "因为企业用电和个人用电是分开的，而且民用水电很便宜；在美国，通常企业用电比民电更便宜。",
+      "time": "17:01"
+    },
+    {
+      "id": "516199",
+      "text": "不见得我现在一个月交700电费",
+      "time": "17:02",
+      "sender_name": "网友 芙顺兰",
+      "sender_id": 8931815431
+    },
+    {
+      "id": "516206",
+      "text": "你一个月能用700电费，说明你的收入支撑的生活水平耗电有那么多，和民用电便不便宜没有逻辑关系，这个能耗用商用电只会更贵",
+      "time": "17:11",
+      "sender_name": "ASIIIO",
+      "sender_id": 5023897886
+    },
+    {
+      "id": "516207",
+      "text": "这下真的白热化军备竞赛了",
+      "time": "17:11",
+      "sender_name": "Cabbaken",
+      "sender_id": 1011280410
+    },
+    {
+      "id": "516208",
+      "text": "一座大型数据中心的用电量是可以比肩中型城市的，不只是电价问题，不是所有国家都可以保证国内凭空多出来的这么庞大的用电需求的",
+      "time": "17:13",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516209",
+      "text": "如果数据中心选址城市本身电力供应没有预留对应的冗余空间，那要么就是数据中枢跟当地居民抢电，要么就是投资扩建当地电力基础设施，而这一部分投资如果折算电价，那就很夸张了",
+      "time": "17:15",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516213",
+      "text": "你这说的像是美国国内，目前就是这个情况，抢电力而涨价",
+      "time": "17:21",
+      "sender_name": "Jove Z",
+      "sender_id": 1962342300
+    },
+    {
+      "id": "516214",
+      "text": "字节算力都去seedance了吧，糖包随便搞点算力得了，seedance确实牛逼",
+      "time": "17:27",
+      "sender_name": "咪咪",
+      "sender_id": 6741901160
+    },
+    {
+      "id": "516217",
+      "text": "得了吧，真实落地的有一半就好了",
+      "time": "17:29",
+      "sender_name": "粉红的波波",
+      "sender_id": 8091816255
+    },
+    {
+      "id": "516222",
+      "text": "卖给散户的vps怎么还是那么贵",
+      "time": "17:32",
+      "sender_name": "終🍥",
+      "sender_id": 1142823584
+    },
+    {
+      "id": "516223",
+      "text": "阿里的200m清凉为什么还限速那么狠",
+      "time": "17:32",
+      "sender_name": "終🍥",
+      "sender_id": 1142823584
+    },
+    {
+      "id": "516224",
+      "text": "给散户的主要是带宽占用",
+      "time": "17:32",
+      "sender_name": "张子君",
+      "sender_id": 5358248575
+    },
+    {
+      "id": "516225",
+      "text": "欧洲随便找一个商家都是2g口🥺",
+      "time": "17:33",
+      "sender_name": "終🍥",
+      "sender_id": 1142823584
+    },
+    {
+      "id": "516226",
+      "text": "三大运营商太坏了",
+      "time": "17:34",
+      "sender_name": "終🍥",
+      "sender_id": 1142823584
+    },
+    {
+      "id": "516231",
+      "text": "力工梭哈理论",
+      "time": "17:36",
+      "sender_name": "张子君",
+      "sender_id": 5358248575
+    },
+    {
+      "id": "516232",
+      "text": "何意味？",
+      "time": "17:40",
+      "sender_name": "Minicncn",
+      "sender_id": 8026798274
+    },
+    {
+      "id": "516234",
+      "text": "还有就是机房肯定是希望有大户，这种价格不敏感",
+      "time": "17:43",
+      "sender_name": "张子君",
+      "sender_id": 5358248575
+    },
+    {
+      "id": "516241",
+      "text": "这里的数据中心不能简单等于 AI 数据中心，里面有很多运营商的小机房。",
+      "time": "17:49",
+      "sender_name": "jason bush",
+      "sender_id": 5719026501
+    },
+    {
+      "id": "516247",
+      "text": "等墨脱水电站竣工了优势更明显",
+      "time": "18:06",
+      "sender_name": "Rainbow,Bale",
+      "sender_id": 7198800694
+    },
+    {
+      "id": "516249",
+      "text": "正视差距",
+      "time": "18:11",
+      "sender_name": "Harry",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516249-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516249-1-thumb.webp",
+          "width": 1254,
+          "height": 1254,
+          "size_bytes": 267178
+        }
+      ],
+      "sender_id": 953895093
+    },
+    {
+      "id": "516251",
+      "text": "好事，没差距反而带不动国产化",
+      "time": "18:15",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "516252",
+      "text": "还好国内境外SI都能用上，感谢牢美的算力",
+      "time": "18:18",
+      "sender_name": "Rainbow,Bale",
+      "sender_id": 7198800694
+    },
+    {
+      "id": "516253",
+      "text": "美国不打穷酸仗😂",
+      "time": "18:23",
+      "sender_name": "𝚃𝚒𝚖 𝙲𝚘𝚌𝚔",
+      "sender_id": 1537379879
+    },
+    {
+      "id": "516259",
+      "text": "我认为国模应该补点中文语料了",
+      "time": "18:25",
+      "sender_name": "Lain",
+      "sender_id": 8064301706
+    },
+    {
+      "id": "516262",
+      "text": "豆包的强项不在有多强，而是弱得恰到好处，能保证普罗大众日常免费使用的同时，又不让算力被占用太多.",
+      "time": "18:26",
+      "sender_name": "Seaway Goal",
+      "sender_id": 5440344162
+    },
+    {
+      "id": "516265",
+      "text": "怎么说呢，这玩意功率是一方面，但是真实可用的算力也是一方面啊",
+      "time": "18:27",
+      "sender_name": "lee",
+      "sender_id": 7675985742
+    },
+    {
+      "id": "516268",
+      "text": "AI能力也是一方面",
+      "time": "18:27",
+      "sender_name": "𝚃𝚒𝚖 𝙲𝚘𝚌𝚔",
+      "sender_id": 1537379879
+    },
+    {
+      "id": "516279",
+      "text": "老生常谈，对中国国内当前算力基建规模总是习惯性忽视近几年来通过转口贸易流入中国的大量英伟达算力卡",
+      "time": "18:40",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516282",
+      "text": "每年通过灰产渠道流入中国的英伟达算力卡体量保守估计占英伟达总出货量 30%以上",
+      "time": "18:40",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516283",
+      "text": "加价多少",
+      "time": "18:42",
+      "sender_name": "Lain",
+      "sender_id": 8064301706
+    },
+    {
+      "id": "516286",
+      "text": "三倍左右",
+      "time": "18:42",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516289",
+      "text": "还…行？",
+      "time": "18:43",
+      "sender_name": "Lain",
+      "sender_id": 8064301706
+    },
+    {
+      "id": "516292",
+      "text": "确实还行，甚至还比国产算力卡性价比高点",
+      "time": "18:44",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516294",
+      "text": "这说的是明面上的，暗地里的肯定是不能算",
+      "time": "18:45",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "516298",
+      "text": "这个还没算境外租赁的",
+      "time": "18:47",
+      "sender_name": "Rainbow,Bale",
+      "sender_id": 7198800694
+    },
+    {
+      "id": "516311",
+      "text": "这问题摆台面上讨论中美都尴尬，美国的算力卡出口管制形同虚设，中国也需要大量溢价采购美国算力卡",
+      "time": "18:52",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516315",
+      "text": "加油，算力这东西就算自己用不了也能租出去，很长时间内，算力是不够用的",
+      "time": "19:12",
+      "sender_name": "𝕯𝖆𝖒𝖔𝖓",
+      "sender_id": 81408797
+    },
+    {
+      "id": "516318",
+      "text": "图表内的数字已经充分考虑走私的芯片 已经是最乐观的估计 以后先调查再发表意见",
+      "time": "19:19",
+      "sender_name": "Harry",
+      "sender_id": 953895093
+    },
+    {
+      "id": "516319",
+      "text": "美国的算力也没算美国本土外的数据中心 美国在海外的数据中心的算力只会碾压级的超过中国在海外的算力",
+      "time": "19:21",
+      "sender_name": "Harry",
+      "sender_id": 953895093
+    },
+    {
+      "id": "516323",
+      "text": "如果你是国产化的投资者，确实是好事。如果你是关心中国在前沿科学和技术的发展和创新，这非常不乐观。因为早年一边搬起石头砸自己的脚，现在一边在别人走出来的路上连滚带爬的追。早年限制GPU发展、轻视科学计算新方向、新前沿。且仍然持续的浪费大量的资源用于AI的思想审查与管控。在前沿领域，别人做什么就跟上，这种模式下永远只是追随者。\n\n现在的短板主要在算力芯片和预训练。950的FP8性能是GB200的5%，大概是VR200的1-2%，VR200已经开始交付，今年内就会开始用于训练。华为会进步，国际大厂也进步，它们会先达成RSI并实现飞轮式的发展。",
+      "time": "19:39",
+      "sender_name": "Harry",
+      "sender_id": 953895093
+    },
+    {
+      "id": "516324",
+      "text": "别充分考虑估算 8 倍差距了，你就直接按美国芯科法按 10 倍算呗，还有美政府给你背书",
+      "time": "19:39",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516325",
+      "text": "纯小丑发言",
+      "time": "19:42",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516326",
+      "text": "连滚带爬，思想审查与管控，用词、总结的真好",
+      "time": "19:43",
+      "sender_name": "Jove Z",
+      "sender_id": 1962342300
+    },
+    {
+      "id": "516327",
+      "text": "查一查就不会说这么愚蠢的话。走私英伟达30%的出货量，现在总算力应该在6-8M等效H100左右，而不是3-4M等效H100。",
+      "time": "19:43",
+      "sender_name": "Harry",
+      "sender_id": 953895093
+    },
+    {
+      "id": "516329",
+      "text": "我觉得英伟达的财报比你这破图靠谱，毕竟他财报有美证监会审核，你只有一张嘴",
+      "time": "19:45",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516333",
+      "text": "英伟达财报数据如何得出30%AI算力芯片流入中国？10%都是高估。",
+      "time": "19:47",
+      "sender_name": "Harry",
+      "sender_id": 953895093
+    },
+    {
+      "id": "516338",
+      "text": "这还要问我，你装啥业内人士啊，小丑还是少说两句吧，丢人",
+      "time": "19:48",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516340",
+      "text": "把你调查的英伟达财报数据拿出来就可以了",
+      "time": "19:48",
+      "sender_name": "Harry",
+      "sender_id": 953895093
+    },
+    {
+      "id": "516344",
+      "text": "我长期投资英伟达，常看季度财报和电话会议，请问你的数据呢？",
+      "time": "19:49",
+      "sender_name": "Harry",
+      "sender_id": 953895093
+    },
+    {
+      "id": "516356",
+      "text": "虽然你很想证明什么，但是吧，太用力了，适得其反，很小丑",
+      "time": "19:53",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516371",
+      "time": "20:03",
+      "sender_name": "Harry",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516371-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516371-1-thumb.webp",
+          "width": 986,
+          "height": 2048,
+          "size_bytes": 147724
+        }
+      ],
+      "sender_id": 953895093
+    },
+    {
+      "id": "516372",
+      "time": "20:03",
+      "sender_name": "Harry",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516372-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516372-1-thumb.webp",
+          "width": 991,
+          "height": 2048,
+          "size_bytes": 162776
+        }
+      ],
+      "sender_id": 953895093
+    },
+    {
+      "id": "516373",
+      "time": "20:03",
+      "sender_name": "Harry",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516373-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516373-1-thumb.webp",
+          "width": 987,
+          "height": 2048,
+          "size_bytes": 158600
+        }
+      ],
+      "sender_id": 953895093
+    },
+    {
+      "id": "516374",
+      "text": "我是在证明什么，可惜你既无事实，也无证据，不知道在嘲笑什么，嘲笑自己吗。",
+      "time": "20:03",
+      "sender_name": "Harry",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516374-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516374-1-thumb.webp",
+          "width": 991,
+          "height": 2048,
+          "size_bytes": 123274
+        }
+      ],
+      "sender_id": 953895093
+    },
+    {
+      "id": "516375",
+      "text": "我靠，你还有脸回复",
+      "time": "20:04",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516376",
+      "text": "小看你了",
+      "time": "20:04",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516377",
+      "text": "脸皮真厚",
+      "time": "20:04",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516378",
+      "text": "多读点书，不然赶不上你眼里的小丑了。",
+      "time": "20:05",
+      "sender_name": "Harry",
+      "sender_id": 953895093
+    },
+    {
+      "id": "516381",
+      "text": "兄弟，还隔着设问 ai，你信不信原问题我来问 grok 马上给我证明合理",
+      "time": "20:06",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516383",
+      "text": "小丑啊",
+      "time": "20:06",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516384",
+      "text": "你表演太用力了，懂吗，就显得很拙劣",
+      "time": "20:07",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516425",
+      "text": "你是纯小丑🤡一个，别人认真回复，你呢？你搁这挨个给别人点踩🦶？是讲不过别人，只好搞些小学生行为，对吗？😁😁😁",
+      "time": "20:25",
+      "sender_name": "Paradox",
+      "sender_id": 6506550353
+    },
+    {
+      "id": "516453",
+      "text": "其实可以解释一下一般统计口径下，中美当前算力差距 8-10 倍这个说法的来源，拜登政府时期通过的芯片与科学法案，以立法的形式规定中国可以获得的算力芯片上限为美国同期水平的十分之一，基于这项法律，按它上限估算中国获得的进口算力规模，再加上中国国产算力规模，大概就是 8-10 倍差距",
+      "time": "20:37",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516466",
+      "text": "只要是亲美智库，你统计的数据就不能超出这个范围，不然就是指着懂王和老黄的鼻子骂娘，违法向中国输出算力芯片",
+      "time": "20:39",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516477",
+      "text": "本身这问题就不太好摆台面上讨论，国内 ai 头部企业模型训练高度依赖英伟达算力硬件，除了智谱清言实现了部分国产化硬件规模部署，其他企业基本上还是一水的英伟达，这些算力卡从哪而来？",
+      "time": "20:45",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516480",
+      "text": "还是说在有些人眼里，国内 ai 企业真是靠大规模算力管制前进口的 h100 和国产卡把中美大模型差距拉到 6±3 个月周期的？那你这打的是谁的脸？",
+      "time": "20:47",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516491",
+      "text": "至于算力卡流入中国的规模，其实压根不用跟这产业沾边的兄弟解释，多年形成的成熟转口产业链，英伟达产能的3成流入中国估计的都很保守了",
+      "time": "20:56",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516504",
+      "text": "英伟达每季度的财报里都存在大量在第三方中转售出，却无法定位最终销售地的算力卡出货，举个例子新加坡，只这一地就转口了两成多算力卡，而无法交代最终部署地，这么大体量的算力卡最终去向我觉得不难猜",
+      "time": "21:01",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516507",
+      "text": "算力卡这种商品单价极高，而且不存在部署算力集群跑AI之外的用途，那么这么高货值的算力硬件卖出去，总不能是在仓库吃会吧？如果落地部署，为什么无法统计部署国信息？那个国家的用户是有钱大规模采购却无法公开部署英伟达算力硬件的？不难猜吧",
+      "time": "21:03",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516519",
+      "text": "哪个几千上万B的模型不能即时输出结果；且基本都是专家模型路由，算下来顶多几个8b16b的小模型互相调用而已；豆包市占率断档第一没的说，但豆包模型本身快不到哪去；且用的多的原因是推广的好，不代表这是大家公认的好模型",
+      "time": "21:09",
+      "sender_name": "蓝色大肥鱼",
+      "sender_id": 1961933652
+    },
+    {
+      "id": "516520",
+      "text": "豆包就是用顶级厨房炒屎",
+      "time": "21:09",
+      "sender_name": "蓝色大肥鱼",
+      "sender_id": 1961933652
+    },
+    {
+      "id": "516521",
+      "text": "我从头到尾都没说豆包好哈，别过度解读",
+      "time": "21:09",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516524",
+      "text": "你重新看看你说的，不是在拉踩其他模型慢嘛",
+      "time": "21:11",
+      "sender_name": "蓝色大肥鱼",
+      "sender_id": 1961933652
+    },
+    {
+      "id": "516526",
+      "text": "不要过度解读",
+      "time": "21:12",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516527",
+      "text": "没有过渡解读，就这句“对快速反应的要求很高”，不就是说其他模型慢，没法即时响应用户的请求嘛",
+      "time": "21:13",
+      "sender_name": "蓝色大肥鱼",
+      "sender_id": 1961933652
+    },
+    {
+      "id": "516528",
+      "text": "要不你亲自解读下？",
+      "time": "21:13",
+      "sender_name": "蓝色大肥鱼",
+      "sender_id": 1961933652
+    },
+    {
+      "id": "516529",
+      "text": "生活助手类AI是不是专指豆包？",
+      "time": "21:14",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516530",
+      "text": "但是反过来看的话，北美大豆包和豆包的情况非常相似了",
+      "time": "21:14",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516532",
+      "text": "我不觉得豆包是生活助手模型。任一个其他模型，deepseek啥的都能比豆包提供更专业的生活方面的指导。豆包就一个小丑。小丑就是小丑，生活助手类豆包也是小丑",
+      "time": "21:16",
+      "sender_name": "蓝色大肥鱼",
+      "sender_id": 1961933652
+    },
+    {
+      "id": "516535",
+      "text": "换个角度讲，入门级用户和生活助手场景，是极度时间和成本敏感的。正常模型开正常思考比如说花30秒烧烤算是相当正常甚至挺快的了，但是在这种场景下，30秒是相当长的时间了。这么一来的话，可能也不算拉踩别的模型慢(大概)",
+      "time": "21:18",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516536",
+      "text": "不过我确实没体验过豆包有多蠢",
+      "time": "21:19",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516537",
+      "text": "这都能解读出来拉踩，只能说顺从了",
+      "time": "21:19",
+      "sender_name": "飞絮",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516537-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516537-1-thumb.webp",
+          "width": 800,
+          "height": 246,
+          "size_bytes": 30660
+        }
+      ],
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516538",
+      "text": "我只知道北美大豆包有多蠢()",
+      "time": "21:19",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516539",
+      "text": "哪个模型都能几秒出结果，你现场可以试试glm、deepseek那些",
+      "time": "21:21",
+      "sender_name": "蓝色大肥鱼",
+      "sender_id": 1961933652
+    },
+    {
+      "id": "516543",
+      "text": "来个具体任务吧",
+      "time": "21:23",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516549",
+      "text": "一般的用户不会用harness做啥高级任务，都是网页或者app直接问。我刚试了下，一个问题三秒；可能和问题有关",
+      "time": "21:24",
+      "sender_name": "蓝色大肥鱼",
+      "sender_id": 1961933652
+    },
+    {
+      "id": "516550",
+      "text": "要是考虑harness，豆包也不见得快到哪去",
+      "time": "21:24",
+      "sender_name": "蓝色大肥鱼",
+      "sender_id": 1961933652
+    },
+    {
+      "id": "516552",
+      "text": "我没有定量分析过，但是就日常体验而言gpt默认档位是要比哈基米默认档位慢的",
+      "time": "21:25",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516554",
+      "text": "肯定是APP/Web，谁拿harness问生活助手",
+      "time": "21:25",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516556",
+      "text": "也没人拿豆包上harness",
+      "time": "21:25",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516557",
+      "text": "除了买了火山token plan的冤种",
+      "time": "21:26",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516559",
+      "text": "不是有个豆包work嘛，说不定就是那位所说的生活助手类",
+      "time": "21:26",
+      "sender_name": "蓝色大肥鱼",
+      "sender_id": 1961933652
+    },
+    {
+      "id": "516561",
+      "text": "生活助手就是日常任务吧",
+      "time": "21:26",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516562",
+      "text": "还是那个话题，原话在这，能不能就事论事",
+      "time": "21:27",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516563",
+      "text": "阅读理解这么做，有点过分了",
+      "time": "21:28",
+      "sender_name": "飞絮",
+      "sender_id": 8021169340
+    },
+    {
+      "id": "516568",
+      "text": "坏了",
+      "time": "21:29",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516570",
+      "text": "去实测了一下，北美大豆包怎么这么慢",
+      "time": "21:30",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516572",
+      "time": "21:30",
+      "sender_name": "Karlcx",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516572-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-09-28/comments/c-516572-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/44063",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 4052889,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 6487702202
+    },
+    {
+      "id": "516676",
+      "text": "测的deepseek，一个问题总耗时三秒，回答的算很准确，没坏。总的来说，除了豆包外的主流模型，都不算慢",
+      "time": "23:04",
+      "sender_name": "蓝色大肥鱼",
+      "sender_id": 1961933652
+    },
+    {
+      "id": "516698",
+      "text": "花钱就是好事，不过可惜钱投入的行业不多吧？",
+      "time": "23:26",
+      "sender_name": "ʀᵤₒₘᵤ 🌱",
+      "sender_id": 5566171804
+    }
+  ]
+}
