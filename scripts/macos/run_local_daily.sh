@@ -278,7 +278,11 @@ publish_committed_changes "$BRANCH" "Refresh shared dashboard assets ${COMMIT_RE
 release_publish_lock
 
 CURRENT_STAGE="public_verification"
-VERIFY_ARGS=(--brand-date "$COMMIT_REPORT_DATE")
+if [[ -n "$REPORT_DATE" ]]; then
+  VERIFY_ARGS=(--brand-history-date "$COMMIT_REPORT_DATE")
+else
+  VERIFY_ARGS=(--brand-date "$COMMIT_REPORT_DATE")
+fi
 if [[ "$RESUME_FROM_CHECKPOINT" != "1" || "$REFRESH_PLATFORM_TRENDS" == "1" ]]; then
   COMMIT_PLATFORM_DATE="$($PYTHON_BIN - <<'PY'
 import json
@@ -291,7 +295,11 @@ except Exception:
 PY
 )"
   [[ -n "$COMMIT_PLATFORM_DATE" ]] || fail "Cannot determine Xiaohongshu publication date."
-  VERIFY_ARGS+=(--xiaohongshu-date "$COMMIT_PLATFORM_DATE")
+  if [[ -n "$REPORT_DATE" ]]; then
+    VERIFY_ARGS+=(--xiaohongshu-history-date "$COMMIT_PLATFORM_DATE")
+  else
+    VERIFY_ARGS+=(--xiaohongshu-date "$COMMIT_PLATFORM_DATE")
+  fi
 fi
 run_bounded "$NETWORK_COMMAND_TIMEOUT_SECONDS" "$PYTHON_BIN" scripts/verify_publication.py \
   --base-url "${BRAND_RADAR_PUBLIC_BASE_URL:-https://lhlovnn.github.io/brand-x-intelligence-radar}" \

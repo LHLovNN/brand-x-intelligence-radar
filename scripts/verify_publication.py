@@ -34,6 +34,8 @@ def main() -> None:
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL)
     parser.add_argument("--brand-date", default="")
     parser.add_argument("--xiaohongshu-date", default="")
+    parser.add_argument("--brand-history-date", default="")
+    parser.add_argument("--xiaohongshu-history-date", default="")
     parser.add_argument("--ai-date", default="")
     parser.add_argument("--tg-date", default="")
     parser.add_argument("--timeout", type=int, default=300)
@@ -43,6 +45,8 @@ def main() -> None:
     expected = {
         "brand": args.brand_date,
         "xiaohongshu": args.xiaohongshu_date,
+        "brand_history": args.brand_history_date,
+        "xiaohongshu_history": args.xiaohongshu_history_date,
         "ai": args.ai_date,
         "tg": args.tg_date,
     }
@@ -79,6 +83,16 @@ def fetch_public_payloads(base_url: str, expected: dict[str, str]) -> dict[str, 
         payloads["brand"] = fetch_json(f"{base_url.rstrip('/')}/{PUBLIC_PATHS['brand']}?qa={cache_bust}")
     if "xiaohongshu" in expected:
         payloads["xiaohongshu"] = fetch_json(f"{base_url.rstrip('/')}/{PUBLIC_PATHS['xiaohongshu']}?qa={cache_bust}")
+    if "brand_history" in expected:
+        date = expected["brand_history"]
+        payloads["brand_history"] = fetch_json(
+            f"{base_url.rstrip('/')}/dashboard-data/daily/{date}.json?qa={cache_bust}"
+        )
+    if "xiaohongshu_history" in expected:
+        date = expected["xiaohongshu_history"]
+        payloads["xiaohongshu_history"] = fetch_json(
+            f"{base_url.rstrip('/')}/dashboard-data/platform-trends/xiaohongshu/daily/{date}.json?qa={cache_bust}"
+        )
     if "ai" in expected or "tg" in expected:
         payloads["diting"] = fetch_json(f"{base_url.rstrip('/')}/{PUBLIC_PATHS['diting']}?qa={cache_bust}")
     return payloads
@@ -96,6 +110,10 @@ def observed_dates(payloads: dict[str, Any], expected: dict[str, str]) -> dict[s
         result["brand"] = str(payloads.get("brand", {}).get("date") or "")
     if "xiaohongshu" in expected:
         result["xiaohongshu"] = str(payloads.get("xiaohongshu", {}).get("date") or "")
+    if "brand_history" in expected:
+        result["brand_history"] = str(payloads.get("brand_history", {}).get("date") or "")
+    if "xiaohongshu_history" in expected:
+        result["xiaohongshu_history"] = str(payloads.get("xiaohongshu_history", {}).get("date") or "")
     if "ai" in expected:
         result["ai"] = str(payloads.get("diting", {}).get("latest", {}).get("ai") or "")
     if "tg" in expected:

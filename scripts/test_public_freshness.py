@@ -7,6 +7,7 @@ sys.path.insert(0, str(ROOT))
 
 from scripts.check_public_freshness import freshness_report
 from scripts.check_diting_upstream import latest_upstream_dates, upstream_freshness_report
+from scripts.verify_publication import observed_dates
 
 
 def main() -> None:
@@ -46,6 +47,15 @@ def main() -> None:
     upstream = upstream_freshness_report(expected, {}, "network unavailable")
     assert upstream["reachable"] is False
     assert upstream["components"]["ai"]["error"] == "network unavailable"
+
+    observed = observed_dates(
+        {
+            "brand_history": {"date": "2026-09-25"},
+            "xiaohongshu_history": {"date": "2026-09-25"},
+        },
+        {"brand_history": "2026-09-25", "xiaohongshu_history": "2026-09-25"},
+    )
+    assert observed == {"brand_history": "2026-09-25", "xiaohongshu_history": "2026-09-25"}
     print("Public freshness tests passed.")
 
 
