@@ -160,18 +160,28 @@ def build_dashboard_data(
     public_competitor = public_dashboard_payload(competitor)
     public_source = public_dashboard_payload(overview["source_status"])
 
-    write_json(str(target / "latest.json"), public_overview)
-    write_json(str(target / "daily" / "latest.json"), public_daily)
+    existing_dates = [
+        str(record.get("date") or "")
+        for record in load_existing_daily_records(target / "daily")
+        if record.get("date")
+    ]
+    is_latest_report = not existing_dates or report_date >= max(existing_dates)
     write_daily_history(target, public_daily)
-    write_json(str(target / "fermentation.json"), public_fermentation)
-    write_json(str(target / "competitor.json"), public_competitor)
-    write_json(str(target / "source-status.json"), public_source)
-    for path in (
-        target / "latest.json",
-        target / "daily" / "latest.json",
-        target / "daily" / f"{report_date}.json",
-        target / "competitor.json",
-    ):
+    paths_to_shard = [target / "daily" / f"{report_date}.json"]
+    if is_latest_report:
+        write_json(str(target / "latest.json"), public_overview)
+        write_json(str(target / "daily" / "latest.json"), public_daily)
+        write_json(str(target / "fermentation.json"), public_fermentation)
+        write_json(str(target / "competitor.json"), public_competitor)
+        write_json(str(target / "source-status.json"), public_source)
+        paths_to_shard.extend(
+            (
+                target / "latest.json",
+                target / "daily" / "latest.json",
+                target / "competitor.json",
+            )
+        )
+    for path in paths_to_shard:
         shard_json_file(path, target)
     if not shared_asset_rebuild_deferred():
         write_data_bundle(target.parent / "dashboard-data-bundle.js", {})
@@ -243,9 +253,10 @@ def write_daily_history(target: Path, current_daily: dict[str, Any]) -> None:
     for record in records.values():
         write_json(str(daily_dir / f"{record['date']}.json"), record)
 
+    latest_record = max(records.values(), key=lambda item: item["date"])
     index = {
-        "latest_date": current_daily["date"],
-        "generated_at": current_daily["generated_at"],
+        "latest_date": latest_record["date"],
+        "generated_at": latest_record["generated_at"],
         "items": [daily_index_item(record) for record in sorted(records.values(), key=lambda item: item["date"], reverse=True)],
     }
     write_json(str(daily_dir / "index.json"), index)

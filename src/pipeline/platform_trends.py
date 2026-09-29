@@ -1721,10 +1721,23 @@ def collection_status(
 def write_platform_payload(target: Path, payload: dict[str, Any]) -> None:
     platform_dir = target / PLATFORM_DATA_ROOT / PLATFORM_KEY
     platform_dir.mkdir(parents=True, exist_ok=True)
-    write_json(str(platform_dir / "latest.json"), payload)
-    write_json(str(platform_dir / "daily" / f"{payload['date']}.json"), payload)
-    shard_json_file(platform_dir / "latest.json", target)
-    shard_json_file(platform_dir / "daily" / f"{payload['date']}.json", target)
+    daily_path = platform_dir / "daily" / f"{payload['date']}.json"
+    existing_dates = []
+    daily_dir = platform_dir / "daily"
+    if daily_dir.exists():
+        for path in daily_dir.glob("*.json"):
+            try:
+                record = read_json(str(path))
+            except Exception:
+                continue
+            if record.get("date"):
+                existing_dates.append(str(record["date"]))
+    is_latest_report = not existing_dates or str(payload["date"]) >= max(existing_dates)
+    write_json(str(daily_path), payload)
+    shard_json_file(daily_path, target)
+    if is_latest_report:
+        write_json(str(platform_dir / "latest.json"), payload)
+        shard_json_file(platform_dir / "latest.json", target)
     write_json(str(platform_dir / "index.json"), platform_index(platform_dir, payload))
     if not shared_asset_rebuild_deferred():
         update_bundle(target.parent / "dashboard-data-bundle.js", target)
@@ -1742,9 +1755,10 @@ def platform_index(platform_dir: Path, current: dict[str, Any]) -> dict[str, Any
             if record.get("date"):
                 records[record["date"]] = record
     records[current["date"]] = current
+    latest_record = max(records.values(), key=lambda item: str(item.get("date") or ""))
     return {
-        "latest_date": current["date"],
-        "generated_at": current["generated_at"],
+        "latest_date": latest_record["date"],
+        "generated_at": latest_record["generated_at"],
         "items": [
             {
                 "date": record.get("date"),
