@@ -1,0 +1,92 @@
+{
+  "conversation_id": "2103716949545103535",
+  "anchor_post_id": "2103716949545103535",
+  "summary_zh": "前文即收录帖，作者回顾两年前做“小视频宝”：用爆款模板、Manim、TTS和提示词工程拼视频，再对比 Opus 5.5、Sora、可灵即梦、NotebookLM及p5js开源MV的能力跃迁。内容未涉及价格、配送或购买体验，而是落在AI视频工具能力和产品化落差。后续两人附和AI进化快。上下文表明这是从业者主观感慨，情绪震撼夹失落，传播价值偏技术圈。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2103716949545103535",
+      "url": "https://x.com/yrmkejun/status/2103716949545103535",
+      "created_at": "2026-09-26T05:23:00Z",
+      "text": "哎，虽然还没用到 Opus 5.5 感叹一下大模型制作视频的能力进步的太快了。\n\n两年前受 yangyi 启发做了小视频宝，本意也是想要一句 prompt 就能生成一个视频，当时还在啃结构化和提示词工程，一个提示词调一天。\n\n核心设计也很简单，就是小红书抖音找爆款模板，然后基于 Manim + 一堆 TTS 做好插槽，大模型只需要生成 JSON 前端展示表单，最后异步渲染出来，也经历了艰难的产品化（倒闭了，做产品太难了\n\n如果你对当时的我说让模型直接画出视频的话，我绝对会觉得就是搞笑的。\n\n后面，随着oai 的 sora 及可灵即梦出现后，我觉得视频模型也很难替代传统生成方式。因为它做不到精准的代码级的控制。\n\n再后来 notebooklm 一键出视频，以及各种 agent 涌现，各种视频 skills 的出现，我自认为本质还是一样换汤不换药。\n\n直到前几天发布，我看到那个 mv 作者开源的代码完全是 p5 js 绘制的，我真的字面意义瘫坐了，可爱的画风，完美的卡点，故事性叙事，超长视频等等...如果用它去复刻小视频宝当时熬夜达旦做的模板只能说降维打击。\n\n写到这儿，索然无味。\n\n碎碎念，意难平。\n\n祝看完的你身体健康。",
+      "original_text": "哎，虽然还没用到 Opus 5.5 感叹一下大模型制作视频的能力进步的太快了。\n\n两年前受 yangyi 启发做了小视频宝，本意也是想要一句 prompt 就能生成一个视频，当时还在啃结构化和提示词工程，一个提示词调一天。\n\n核心设计也很简单，就是小红书抖音找爆款模板，然后基于 Manim + 一堆 TTS 做好插槽，大模型只需要生成 JSON 前端展示表单，最后异步渲染出来，也经历了艰难的产品化（倒闭了，做产品太难了\n\n如果你对当时的我说让模型直接画出视频的话，我绝对会觉得就是搞笑的。\n\n后面，随着oai 的 sora 及可灵即梦出现后，我觉得视频模型也很难替代传统生成方式。因为它做不到精准的代码级的控制。\n\n再后来 notebooklm 一键出视频，以及各种 agent 涌现，各种视频 skills 的出现，我自认为本质还是一样换汤不换药。\n\n直到前几天发布，我看到那个 mv 作者开源的代码完全是 p5 js 绘制的，我真的字面意义瘫坐了，可爱的画风，完美的卡点，故事性叙事，超长视频等等...如果用它去复刻小视频宝当时熬夜达旦做的模板只能说降维打击。\n\n写到这儿，索然无味。\n\n碎碎念，意难平。\n\n祝看完的你身体健康。",
+      "translation_zh": "哎，虽然还没用到 Opus 5.5 感叹一下大模型制作视频的能力进步的太快了。\n\n两年前受 yangyi 启发做了小视频宝，本意也是想要一句 prompt 就能生成一个视频，当时还在啃结构化和提示词工程，一个提示词调一天。\n\n核心设计也很简单，就是小红书抖音找爆款模板，然后基于 Manim + 一堆 TTS 做好插槽，大模型只需要生成 JSON 前端展示表单，最后异步渲染出来，也经历了艰难的产品化（倒闭了，做产品太难了\n\n如果你对当时的我说让模型直接画出视频的话，我绝对会觉得就是搞笑的。\n\n后面，随着oai 的 sora 及可灵即梦出现后，我觉得视频模型也很难替代传统生成方式。因为它做不到精准的代码级的控制。\n\n再后来 notebooklm 一键出视频，以及各种 agent 涌现，各种视频 skills 的出现，我自认为本质还是一样换汤不换药。\n\n直到前几天发布，我看到那个 mv 作者开源的代码完全是 p5 js 绘制的，我真的字面意义瘫坐了，可爱的画风，完美的卡点，故事性叙事，超长视频等等...如果用它去复刻小视频宝当时熬夜达旦做的模板只能说降维打击。\n\n写到这儿，索然无味。\n\n碎碎念，意难平。\n\n祝看完的你身体健康。",
+      "translation_status": "source_chinese",
+      "author_name": "KeJun",
+      "author_handle": "yrmkejun",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1667110127651135493/09y0YbZy_normal.jpg",
+      "author_followers": 6223,
+      "author_following": 217,
+      "author_bio": "全沾工程师 独立游戏制作中 分享AI日常\n\nGitHub ⇢ https://t.co/3wF5dSxBDn\nUniHelper ⇢ https://t.co/uCLF9Rt4UU",
+      "author_location": "中国",
+      "author_joined_at": "2015-07-04T06:15:06Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 4,
+        "reposts": 0,
+        "replies": 4,
+        "quotes": 0,
+        "bookmarks": 4,
+        "views": 1422
+      }
+    },
+    {
+      "post_id": "2103744452296949993",
+      "url": "https://x.com/Wonsen_Wang/status/2103744452296949993",
+      "created_at": "2026-09-26T07:12:17Z",
+      "text": "@yrmkejun AI进化速度太快了",
+      "original_text": "@yrmkejun AI进化速度太快了",
+      "translation_zh": "@yrmkejun AI 的进化速度太快了",
+      "translation_status": "translated",
+      "author_name": "Wonsen",
+      "author_handle": "Wonsen_Wang",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1922296761483153408/ih2M-T0p_normal.jpg",
+      "author_followers": 69,
+      "author_following": 115,
+      "author_bio": "CVD diamond & MPCVD | Industrialization, scale-up and applications | Thermal management | Quantum diamond & sensing | Reading, research & 中文交流",
+      "author_location": null,
+      "author_joined_at": "2011-08-20T07:18:10Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 63
+      }
+    },
+    {
+      "post_id": "2103916857745186964",
+      "url": "https://x.com/An_yhl/status/2103916857745186964",
+      "created_at": "2026-09-26T18:37:22Z",
+      "text": "@yrmkejun 现在一句话出片，回头看当时调一天提示词真像在练内功",
+      "original_text": "@yrmkejun 现在一句话出片，回头看当时调一天提示词真像在练内功",
+      "translation_zh": "@yrmkejun 现在一句话出片，回头看当时调一天提示词真像在练内功",
+      "translation_status": "source_chinese",
+      "author_name": "晚晚",
+      "author_handle": "An_yhl",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2050293129363030017/Rr1VpitJ_normal.jpg",
+      "author_followers": 2107,
+      "author_following": 234,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-12-12T11:54:25Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 7
+      }
+    }
+  ]
+}

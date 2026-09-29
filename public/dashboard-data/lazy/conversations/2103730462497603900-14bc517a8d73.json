@@ -1,0 +1,74 @@
+{
+  "conversation_id": "2103730462497603900",
+  "anchor_post_id": "2103730462497603900",
+  "summary_zh": "片段未见更早前文，收录帖直接推荐开源工具 res-downloader，围绕其 GitHub 热度、支持平台、解密、代理抓取、跨平台和使用流程展开，突出下载体验而非价格/配送。随后一人回应称覆盖面广、m3u8 和直播流实用。上下文显示为正向工具推荐，互动少，传播价值主要在技术受众。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2103730462497603900",
+      "url": "https://x.com/realfxw/status/2103730462497603900",
+      "created_at": "2026-09-26T06:16:42Z",
+      "text": "推荐一款 GitHub 斩获超 20k Star 的开源资源嗅探下载神器——res-downloader（爱享素材下载器）。\n\n平时想下载微信视频号、小红书、抖音无水印素材，或者抓取网页里的 m3u8 分段视频与直播流，经常会遇到接口加密或难以获取直链的问题。这款工具基于 Go + Wails 架构开发，把传统抓包工具的高门槛彻底封装成了一个开箱即用、界面直观的桌面应用。\n\n🔥 核心亮点：\n\n多平台全面覆盖：完美支持微信视频号、小程序、小红书、抖音、快手，以及 QQ 音乐、酷狗、网页直播流与 m3u8 媒体。\n\n原生支持视频号解密：针对微信视频号特殊的加密机制，下载后可直接在操作项内一键解密，无需繁琐的二次转换。\n\n轻量跨平台：基于 Go + Vue + Wails 构建，占用资源极低，原生支持 Windows、macOS 和 Linux。\n\n傻瓜式代理捕获：底层采用本地 HTTP/HTTPS 代理拦截（类似 Charles / Fiddler），自动筛选音视频流，过滤无关杂质请求，普通用户点开就能用。\n\n🚀 上手流程：\n\n首次打开时按提示信任本地根证书；\n\n在客户端点击“启动代理”；\n\n电脑端正常浏览需要抓取的内容（如微信电脑版点开视频号、网页播放视频）；\n\n资源会自动实时推送到列表，点击下载或解密即可。\n\n做自媒体素材收集、影音存档或逆向学习的开发者，非常建议常备在工具箱中。\n\n🔗 开源地址：https://t.co/BPL0LWo7FW",
+      "original_text": "推荐一款 GitHub 斩获超 20k Star 的开源资源嗅探下载神器——res-downloader（爱享素材下载器）。\n\n平时想下载微信视频号、小红书、抖音无水印素材，或者抓取网页里的 m3u8 分段视频与直播流，经常会遇到接口加密或难以获取直链的问题。这款工具基于 Go + Wails 架构开发，把传统抓包工具的高门槛彻底封装成了一个开箱即用、界面直观的桌面应用。\n\n🔥 核心亮点：\n\n多平台全面覆盖：完美支持微信视频号、小程序、小红书、抖音、快手，以及 QQ 音乐、酷狗、网页直播流与 m3u8 媒体。\n\n原生支持视频号解密：针对微信视频号特殊的加密机制，下载后可直接在操作项内一键解密，无需繁琐的二次转换。\n\n轻量跨平台：基于 Go + Vue + Wails 构建，占用资源极低，原生支持 Windows、macOS 和 Linux。\n\n傻瓜式代理捕获：底层采用本地 HTTP/HTTPS 代理拦截（类似 Charles / Fiddler），自动筛选音视频流，过滤无关杂质请求，普通用户点开就能用。\n\n🚀 上手流程：\n\n首次打开时按提示信任本地根证书；\n\n在客户端点击“启动代理”；\n\n电脑端正常浏览需要抓取的内容（如微信电脑版点开视频号、网页播放视频）；\n\n资源会自动实时推送到列表，点击下载或解密即可。\n\n做自媒体素材收集、影音存档或逆向学习的开发者，非常建议常备在工具箱中。\n\n🔗 开源地址：https://t.co/BPL0LWo7FW",
+      "translation_zh": "推荐一款 GitHub 斩获超 20k Star 的开源资源嗅探下载神器——res-downloader（爱享素材下载器）。\n\n平时想下载微信视频号、小红书、抖音无水印素材，或者抓取网页里的 m3u8 分段视频与直播流，经常会遇到接口加密或难以获取直链的问题。这款工具基于 Go + Wails 架构开发，把传统抓包工具的高门槛彻底封装成了一个开箱即用、界面直观的桌面应用。\n\n🔥 核心亮点：\n\n多平台全面覆盖：完美支持微信视频号、小程序、小红书、抖音、快手，以及 QQ 音乐、酷狗、网页直播流与 m3u8 媒体。\n\n原生支持视频号解密：针对微信视频号特殊的加密机制，下载后可直接在操作项内一键解密，无需繁琐的二次转换。\n\n轻量跨平台：基于 Go + Vue + Wails 构建，占用资源极低，原生支持 Windows、macOS 和 Linux。\n\n傻瓜式代理捕获：底层采用本地 HTTP/HTTPS 代理拦截（类似 Charles / Fiddler），自动筛选音视频流，过滤无关杂质请求，普通用户点开就能用。\n\n🚀 上手流程：\n\n首次打开时按提示信任本地根证书；\n\n在客户端点击“启动代理”；\n\n电脑端正常浏览需要抓取的内容（如微信电脑版点开视频号、网页播放视频）；\n\n资源会自动实时推送到列表，点击下载或解密即可。\n\n做自媒体素材收集、影音存档或逆向学习的开发者，非常建议常备在工具箱中。\n\n🔗 开源地址：https://t.co/BPL0LWo7FW",
+      "translation_status": "source_chinese",
+      "author_name": "TechVerser",
+      "author_handle": "realfxw",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2072335456419897344/ktRiDNBp_normal.jpg",
+      "author_followers": 916,
+      "author_following": 983,
+      "author_bio": "学习成瘾者｜AI 研究方向\n用严谨把复杂讲清楚\n关注：模型、自动化、工程化",
+      "author_location": null,
+      "author_joined_at": "2022-05-09T05:21:51Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/putyy/res-downloader"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HTHzsNKXEAAjOvm.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HTHzsNKXEAAjOvm.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HTHzsNKXEAAjOvm.jpg",
+          "expanded_url": "https://x.com/realfxw/status/2103730462497603900/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 20,
+        "reposts": 3,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 28,
+        "views": 3251
+      }
+    },
+    {
+      "post_id": "2103922725157028087",
+      "url": "https://x.com/An_yhl/status/2103922725157028087",
+      "created_at": "2026-09-26T19:00:41Z",
+      "text": "@realfxw 这个覆盖面确实挺广，m3u8 和直播流下载很实用",
+      "original_text": "@realfxw 这个覆盖面确实挺广，m3u8 和直播流下载很实用",
+      "translation_zh": "@realfxw 这个覆盖面确实挺广，m3u8 和直播流下载很实用",
+      "translation_status": "source_chinese",
+      "author_name": "晚晚",
+      "author_handle": "An_yhl",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2050293129363030017/Rr1VpitJ_normal.jpg",
+      "author_followers": 2107,
+      "author_following": 234,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-12-12T11:54:25Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 20
+      }
+    }
+  ]
+}
