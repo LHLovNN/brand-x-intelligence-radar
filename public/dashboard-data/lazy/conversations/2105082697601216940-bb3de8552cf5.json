@@ -1,0 +1,107 @@
+{
+  "conversation_id": "2105082697601216940",
+  "anchor_post_id": "2105082697601216940",
+  "summary_zh": "前文即收录帖本身，作者详述把闲置工作 iPhone 接入 AI 系统，借 iPhone Mirroring、Tailscale 和 Mac 完成移动端原生 App“最后一公里”执行，并强调权限、身份隔离、回执核验及稳定性坑点。后续两人简短认可其思路。上下文显示这是技术实践分享，情绪偏正向，真实性主要来自具体流程与故障细节。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2105082697601216940",
+      "url": "https://x.com/runes_leo/status/2105082697601216940",
+      "created_at": "2026-09-29T23:50:00Z",
+      "text": "我最近把一台闲置的工作 iPhone，接进了自己的 AI 系统。\n\n不是越狱，不是在手机上跑模型，更不是做一个“万能手机 Agent”。\n\n我想解决的是一个很现实的问题：\n\nAI 现在已经能研究、写稿、整理信息、生成素材，但微信、小红书、B站、YouTube Studio 这些真实业务的最后一公里，很多事情还是只能发生在手机原生 App 里。\n\n所以我没有把手机变成第二台服务器，而是把它变成了一个 移动执行节点。\n\nMac 继续负责思考、状态、任务和审批；\niPhone Mirroring 负责把手机原生界面接出来；\nTailscale 负责设备之间的私有网络；\n工作 iPhone 只负责最后一公里的执行和结果回读。\n\n最重要的一点是：\n\n手机不是新的事实源，只是执行节点。\n\n内容队列、CRM、付费资格、任务状态、审批权，都继续留在原来的系统里。\n\n这次真正花时间的，也不是“怎么让 AI 点手机”，而是怎么保证它不会点错。\n\n比如我重新检查之前做的剪贴板中转时，发现白名单里绑定的居然是我的个人 iPhone，而不是工作机。\n\n所以第一步不是继续自动化，而是先把身份彻底隔离：\n\n个人手机 = 控制和审批\n工作手机 = 自动化执行目标\n\n中转服务只接受工作手机的 Tailscale 来源，其他来源默认拒绝。\n\n后面又踩了 macOS 权限的坑。\n\n系统设置里明明显示 MCPX 已经有“屏幕录制”权限，实际截图却一直失败。最后才发现，系统权限数据库里还认着旧版本程序的签名。\n\n这让我越来越确定：\n\n自动化系统里，不能只看“开关是不是开了”。\n\n真正要验证的是：\n\n现在运行的这个程序，到底有没有真正拿到权限。\n\niPhone Mirroring 自己也并不是永远稳定。\n\n中间真实遇到过无线链路退化、连接被系统拆掉、镜像暂停再恢复。\n\n所以我最后给整条链加了一条很简单的原则：\n\n不要把“动作发出去了”当成“动作成功了”。最后必须重新读取结果。\n\n今天这条链终于做了真正的端到端验收：\n\n工作 iPhone\n→ Tailscale 私有网络\n→ Mac 临时测试页\n→ 剪贴板中转\n→ 固定测试字符串抵达 Mac\n→ 内容完全一致\n→ 验收通过\n→ 临时测试服务销毁\n\n不是 AI 告诉我“应该成功了”。\n\n而是系统真的拿到了最终结果。\n\n现在这台工作手机已经不只是一个实验设备了。\n\n微信、小红书、B站、YouTube、YT Studio、抖音、剪映、公众号助手，都可以逐渐变成现有 AI 系统的原生执行入口。\n\n但我不会为每个平台重新造一套系统。\n\n原来的内容、关系、任务和权限系统继续负责事实和决策，手机只负责那些必须在原生 App 里完成的事情。\n\n跑完这一轮以后，我最大的感受反而不是：\n\n“AI 终于可以控制手机了。”\n\n而是：\n\nAI 越来越强以后，真正需要固定下来的，不是更多提示词，而是身份、权限、审批门、回执和结果核验。\n\n模型可以换，客户端可以换，手机也可以换。\n\n但谁保存最终事实、谁可以写入、哪些动作不可逆、结果未知时能不能重试、平台最后到底是什么状态——这些不能乱。\n\n如果这套继续稳定，我更想整理出来的，也不是一个“手机自动点击机器人”。\n\n而是一套更薄的：\n\nAI 移动执行协议。\n\n让 AI 不只是会想、会写，而是真的能安全地把事情做到最后一公里。",
+      "original_text": "我最近把一台闲置的工作 iPhone，接进了自己的 AI 系统。\n\n不是越狱，不是在手机上跑模型，更不是做一个“万能手机 Agent”。\n\n我想解决的是一个很现实的问题：\n\nAI 现在已经能研究、写稿、整理信息、生成素材，但微信、小红书、B站、YouTube Studio 这些真实业务的最后一公里，很多事情还是只能发生在手机原生 App 里。\n\n所以我没有把手机变成第二台服务器，而是把它变成了一个 移动执行节点。\n\nMac 继续负责思考、状态、任务和审批；\niPhone Mirroring 负责把手机原生界面接出来；\nTailscale 负责设备之间的私有网络；\n工作 iPhone 只负责最后一公里的执行和结果回读。\n\n最重要的一点是：\n\n手机不是新的事实源，只是执行节点。\n\n内容队列、CRM、付费资格、任务状态、审批权，都继续留在原来的系统里。\n\n这次真正花时间的，也不是“怎么让 AI 点手机”，而是怎么保证它不会点错。\n\n比如我重新检查之前做的剪贴板中转时，发现白名单里绑定的居然是我的个人 iPhone，而不是工作机。\n\n所以第一步不是继续自动化，而是先把身份彻底隔离：\n\n个人手机 = 控制和审批\n工作手机 = 自动化执行目标\n\n中转服务只接受工作手机的 Tailscale 来源，其他来源默认拒绝。\n\n后面又踩了 macOS 权限的坑。\n\n系统设置里明明显示 MCPX 已经有“屏幕录制”权限，实际截图却一直失败。最后才发现，系统权限数据库里还认着旧版本程序的签名。\n\n这让我越来越确定：\n\n自动化系统里，不能只看“开关是不是开了”。\n\n真正要验证的是：\n\n现在运行的这个程序，到底有没有真正拿到权限。\n\niPhone Mirroring 自己也并不是永远稳定。\n\n中间真实遇到过无线链路退化、连接被系统拆掉、镜像暂停再恢复。\n\n所以我最后给整条链加了一条很简单的原则：\n\n不要把“动作发出去了”当成“动作成功了”。最后必须重新读取结果。\n\n今天这条链终于做了真正的端到端验收：\n\n工作 iPhone\n→ Tailscale 私有网络\n→ Mac 临时测试页\n→ 剪贴板中转\n→ 固定测试字符串抵达 Mac\n→ 内容完全一致\n→ 验收通过\n→ 临时测试服务销毁\n\n不是 AI 告诉我“应该成功了”。\n\n而是系统真的拿到了最终结果。\n\n现在这台工作手机已经不只是一个实验设备了。\n\n微信、小红书、B站、YouTube、YT Studio、抖音、剪映、公众号助手，都可以逐渐变成现有 AI 系统的原生执行入口。\n\n但我不会为每个平台重新造一套系统。\n\n原来的内容、关系、任务和权限系统继续负责事实和决策，手机只负责那些必须在原生 App 里完成的事情。\n\n跑完这一轮以后，我最大的感受反而不是：\n\n“AI 终于可以控制手机了。”\n\n而是：\n\nAI 越来越强以后，真正需要固定下来的，不是更多提示词，而是身份、权限、审批门、回执和结果核验。\n\n模型可以换，客户端可以换，手机也可以换。\n\n但谁保存最终事实、谁可以写入、哪些动作不可逆、结果未知时能不能重试、平台最后到底是什么状态——这些不能乱。\n\n如果这套继续稳定，我更想整理出来的，也不是一个“手机自动点击机器人”。\n\n而是一套更薄的：\n\nAI 移动执行协议。\n\n让 AI 不只是会想、会写，而是真的能安全地把事情做到最后一公里。",
+      "translation_zh": "我最近把一台闲置的工作 iPhone，接进了自己的 AI 系统。\n\n不是越狱，不是在手机上跑模型，更不是做一个“万能手机 Agent”。\n\n我想解决的是一个很现实的问题：\n\nAI 现在已经能研究、写稿、整理信息、生成素材，但微信、小红书、B站、YouTube Studio 这些真实业务的最后一公里，很多事情还是只能发生在手机原生 App 里。\n\n所以我没有把手机变成第二台服务器，而是把它变成了一个 移动执行节点。\n\nMac 继续负责思考、状态、任务和审批；\niPhone Mirroring 负责把手机原生界面接出来；\nTailscale 负责设备之间的私有网络；\n工作 iPhone 只负责最后一公里的执行和结果回读。\n\n最重要的一点是：\n\n手机不是新的事实源，只是执行节点。\n\n内容队列、CRM、付费资格、任务状态、审批权，都继续留在原来的系统里。\n\n这次真正花时间的，也不是“怎么让 AI 点手机”，而是怎么保证它不会点错。\n\n比如我重新检查之前做的剪贴板中转时，发现白名单里绑定的居然是我的个人 iPhone，而不是工作机。\n\n所以第一步不是继续自动化，而是先把身份彻底隔离：\n\n个人手机 = 控制和审批\n工作手机 = 自动化执行目标\n\n中转服务只接受工作手机的 Tailscale 来源，其他来源默认拒绝。\n\n后面又踩了 macOS 权限的坑。\n\n系统设置里明明显示 MCPX 已经有“屏幕录制”权限，实际截图却一直失败。最后才发现，系统权限数据库里还认着旧版本程序的签名。\n\n这让我越来越确定：\n\n自动化系统里，不能只看“开关是不是开了”。\n\n真正要验证的是：\n\n现在运行的这个程序，到底有没有真正拿到权限。\n\niPhone Mirroring 自己也并不是永远稳定。\n\n中间真实遇到过无线链路退化、连接被系统拆掉、镜像暂停再恢复。\n\n所以我最后给整条链加了一条很简单的原则：\n\n不要把“动作发出去了”当成“动作成功了”。最后必须重新读取结果。\n\n今天这条链终于做了真正的端到端验收：\n\n工作 iPhone\n→ Tailscale 私有网络\n→ Mac 临时测试页\n→ 剪贴板中转\n→ 固定测试字符串抵达 Mac\n→ 内容完全一致\n→ 验收通过\n→ 临时测试服务销毁\n\n不是 AI 告诉我“应该成功了”。\n\n而是系统真的拿到了最终结果。\n\n现在这台工作手机已经不只是一个实验设备了。\n\n微信、小红书、B站、YouTube、YT Studio、抖音、剪映、公众号助手，都可以逐渐变成现有 AI 系统的原生执行入口。\n\n但我不会为每个平台重新造一套系统。\n\n原来的内容、关系、任务和权限系统继续负责事实和决策，手机只负责那些必须在原生 App 里完成的事情。\n\n跑完这一轮以后，我最大的感受反而不是：\n\n“AI 终于可以控制手机了。”\n\n而是：\n\nAI 越来越强以后，真正需要固定下来的，不是更多提示词，而是身份、权限、审批门、回执和结果核验。\n\n模型可以换，客户端可以换，手机也可以换。\n\n但谁保存最终事实、谁可以写入、哪些动作不可逆、结果未知时能不能重试、平台最后到底是什么状态——这些不能乱。\n\n如果这套继续稳定，我更想整理出来的，也不是一个“手机自动点击机器人”。\n\n而是一套更薄的：\n\nAI 移动执行协议。\n\n让 AI 不只是会想、会写，而是真的能安全地把事情做到最后一公里。",
+      "translation_status": "source_chinese",
+      "author_name": "Leo｜LeoLabs.me",
+      "author_handle": "runes_leo",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1806959742176329728/zyGcWCwL_normal.jpg",
+      "author_followers": 22949,
+      "author_following": 759,
+      "author_bio": "预测市场策略 · AI 工具实战 · Crypto 链上\n订阅：Alpha Call 首发｜实跑证据、成本/ROI、风险与后续更新\nLeo Labs · Build in public\n加群 👉 https://t.co/haHYDyNPjK",
+      "author_location": "AI × Crypto",
+      "author_joined_at": "2022-10-09T03:04:59Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HTXl6Sja4AAw4oN.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HTXl6Sja4AAw4oN.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HTXl6Sja4AAw4oN.jpg",
+          "expanded_url": "https://x.com/runes_leo/status/2105082697601216940/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HTXl6SobsAEF3bz.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HTXl6SobsAEF3bz.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HTXl6SobsAEF3bz.jpg",
+          "expanded_url": "https://x.com/runes_leo/status/2105082697601216940/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 3,
+        "reposts": 1,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 2,
+        "views": 756
+      }
+    },
+    {
+      "post_id": "2105082904573591863",
+      "url": "https://x.com/Alwaysshine20/status/2105082904573591863",
+      "created_at": "2026-09-29T23:50:49Z",
+      "text": "@runes_leo 把回执和权限守住，AI 才算真的跑完最后一公里",
+      "original_text": "@runes_leo 把回执和权限守住，AI 才算真的跑完最后一公里",
+      "translation_zh": "@runes_leo 把回执和权限守住，AI 才算真的跑完最后一公里",
+      "translation_status": "source_chinese",
+      "author_name": "币安高返佣注册 买美股上币安",
+      "author_handle": "Alwaysshine20",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2104359543438458881/5IFkQrik_normal.jpg",
+      "author_followers": 92,
+      "author_following": 55,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2020-10-22T18:31:26Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 9
+      }
+    },
+    {
+      "post_id": "2105083095393489380",
+      "url": "https://x.com/TUGE8888/status/2105083095393489380",
+      "created_at": "2026-09-29T23:51:35Z",
+      "text": "@runes_leo 研究的够透彻",
+      "original_text": "@runes_leo 研究的够透彻",
+      "translation_zh": "@runes_leo 研究的够透彻",
+      "translation_status": "source_chinese",
+      "author_name": "寻一方净土",
+      "author_handle": "TUGE8888",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2073760660337672193/bvoU0_pO_normal.jpg",
+      "author_followers": 43851,
+      "author_following": 11982,
+      "author_bio": "📩 DM for Collab⚡️币圈资深老韭菜｜⚡️阿尔法信息挖掘 ｜BTC 信仰者  ｜交易员丨所有内容不作为投资建议",
+      "author_location": "合作联系👉",
+      "author_joined_at": "2021-11-19T07:45:58Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 16
+      }
+    }
+  ]
+}
