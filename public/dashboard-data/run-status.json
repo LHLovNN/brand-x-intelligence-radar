@@ -1,37 +1,43 @@
 {
   "status": "ok",
-  "generated_at": "2026-09-30T01:12:48Z",
-  "window_start": "2026-09-29T00:00:00Z",
-  "window_end": "2026-09-30T00:00:00Z",
-  "window_label": "2026-09-29 08:00 BJT - 2026-09-30 08:00 BJT",
-  "raw_posts": 35,
-  "normalized_posts": 35,
-  "primary_signals": 4,
+  "generated_at": "2026-10-01T07:40:18Z",
+  "window_start": "2026-09-30T00:00:00Z",
+  "window_end": "2026-10-01T00:00:00Z",
+  "window_label": "2026-09-30 08:00 BJT - 2026-10-01 08:00 BJT",
+  "raw_posts": 24,
+  "normalized_posts": 24,
+  "primary_signals": 5,
   "collection_status": {
     "status": "complete",
-    "warnings": [],
+    "warnings": [
+      "Chinese translation is unavailable for some posts; original text is shown as fallback.",
+      "部分对话上下文暂未补齐；主帖和已取得的上下文仍会展示。"
+    ],
     "translation": {
       "configured": true,
       "counts": {
-        "translated": 35
+        "error": 23,
+        "source_chinese": 1
       },
-      "missing_count": 0,
-      "fallback_original_count": 0
+      "missing_count": 23,
+      "fallback_original_count": 23
     }
   },
   "platform_trends": {
-    "status": "complete",
-    "accepted": 10,
-    "candidates_inspected": 257,
-    "warnings": []
+    "status": "partial",
+    "accepted": 0,
+    "candidates_inspected": 0,
+    "warnings": [
+      "平台流变未从数据源取到候选内容，请检查查询配置或稍后补跑。"
+    ]
   },
   "dashboard_metrics": {
-    "effective_intelligence": 4,
+    "effective_intelligence": 5,
     "high_risk": 0,
     "needs_review": 0,
-    "primary_volume": 24,
-    "primary_candidate_volume": 24,
-    "competitor_volume": 11,
-    "negative_share": 0
+    "primary_volume": 13,
+    "primary_candidate_volume": 13,
+    "competitor_volume": 10,
+    "negative_share": 20
   }
 }
