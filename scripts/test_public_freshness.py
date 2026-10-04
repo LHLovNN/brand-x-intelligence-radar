@@ -29,6 +29,17 @@ def main() -> None:
     assert report["components"]["ai"]["error"] == "network unavailable"
     assert report["components"]["tg"]["error"] == "network unavailable"
 
+    report = freshness_report(
+        expected,
+        current,
+        {},
+        {"xiaohongshu": {"healthy": False, "reason": "collection_status=partial, candidates_inspected=0"}},
+    )
+    assert report["reachable"] is True
+    assert report["fresh"] is False
+    assert report["components"]["xiaohongshu"]["fresh"] is False
+    assert report["components"]["xiaohongshu"]["quality_reason"] == "collection_status=partial, candidates_inspected=0"
+
     upstream_index = [
         {"f": "20260915-AI日报.html"},
         {"f": "2026-09-15-tg-digest.html"},
