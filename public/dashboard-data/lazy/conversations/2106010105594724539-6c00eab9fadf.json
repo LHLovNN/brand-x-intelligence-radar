@@ -1,0 +1,94 @@
+{
+  "conversation_id": "2106010105594724539",
+  "anchor_post_id": "2106010105594724539",
+  "summary_zh": "前文围绕AI Agent联网抓取内容成本高、反爬麻烦的痛点展开，收录帖将话题转向开源库Agent-Reach，强调可抓推特、B站、小红书且“零API费用”。后续作者补充Panniantong工作流、CLI和项目链接，另有人认可省事省钱。上下文显示情绪正面，有链接支撑但互动量有限，传播价值偏技术圈。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2106010105594724539",
+      "url": "https://x.com/musen9527/status/2106010105594724539",
+      "created_at": "2026-10-02T13:15:11Z",
+      "text": "搞AI Agent的兄弟们平时想让它联网搜点东西，要么去买贵得要死的官方API，要么自己去跟各大平台的反爬斗智斗勇，头发都快掉光了。\n\n今天刷GitHub看到个叫 Agent-Reach 的开源库，直接用命令行搞定。它能去推特、B站和小红书直接抓内容，零API费用，今天在榜单上挺火的，做AI应用的可以去瞅瞅。",
+      "original_text": "搞AI Agent的兄弟们平时想让它联网搜点东西，要么去买贵得要死的官方API，要么自己去跟各大平台的反爬斗智斗勇，头发都快掉光了。\n\n今天刷GitHub看到个叫 Agent-Reach 的开源库，直接用命令行搞定。它能去推特、B站和小红书直接抓内容，零API费用，今天在榜单上挺火的，做AI应用的可以去瞅瞅。",
+      "translation_zh": "搞AI Agent的兄弟们平时想让它联网搜点东西，要么去买贵得要死的官方API，要么自己去跟各大平台的反爬斗智斗勇，头发都快掉光了。\n\n今天刷GitHub看到个叫 Agent-Reach 的开源库，直接用命令行搞定。它能去推特、B站和小红书直接抓内容，零API费用，今天在榜单上挺火的，做AI应用的可以去瞅瞅。",
+      "translation_status": "source_chinese",
+      "author_name": "不上班研究僧musen",
+      "author_handle": "musen9527",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1956689848313806848/XLOpusaZ_normal.jpg",
+      "author_followers": 5027,
+      "author_following": 5456,
+      "author_bio": "专注挖掘全球前沿 AI 黑马与开源生产力工具 ⚡\n不讲假大空，只拆核心架构、落地场景与实操门槛。\n📚 独立精选 AI 解读站与深度实操指南直达 ⬇️",
+      "author_location": "Sham Shui Po District",
+      "author_joined_at": "2024-12-24T17:13:05Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 5,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 343
+      }
+    },
+    {
+      "post_id": "2106010263002718628",
+      "url": "https://x.com/musen9527/status/2106010263002718628",
+      "created_at": "2026-10-02T13:15:49Z",
+      "text": "Seriously slick workflow by Panniantong—giving agents full web vision via a single CLI with zero API fees is an absolute game-changer. 🚀\n\n🔗 项目地址：https://t.co/Jjuya8zCRQ",
+      "original_text": "Seriously slick workflow by Panniantong—giving agents full web vision via a single CLI with zero API fees is an absolute game-changer. 🚀\n\n🔗 项目地址：https://t.co/Jjuya8zCRQ",
+      "translation_zh": "Panniantong 打造的工作流真的非常丝滑——通过单个 CLI 让智能体获得完整的网页视觉能力，而且 API 费用为零，绝对是改变游戏规则的存在。🚀\n\n🔗 项目地址：https://t.co/Jjuya8zCRQ",
+      "translation_status": "translated",
+      "author_name": "不上班研究僧musen",
+      "author_handle": "musen9527",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1956689848313806848/XLOpusaZ_normal.jpg",
+      "author_followers": 5027,
+      "author_following": 5456,
+      "author_bio": "专注挖掘全球前沿 AI 黑马与开源生产力工具 ⚡\n不讲假大空，只拆核心架构、落地场景与实操门槛。\n📚 独立精选 AI 解读站与深度实操指南直达 ⬇️",
+      "author_location": "Sham Shui Po District",
+      "author_joined_at": "2024-12-24T17:13:05Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/Panniantong/Agent-Reach"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 4,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 44
+      }
+    },
+    {
+      "post_id": "2106015266014667005",
+      "url": "https://x.com/Mayorleo9/status/2106015266014667005",
+      "created_at": "2026-10-02T13:35:41Z",
+      "text": "@musen9527 太折腾。好在有大佬开源了，可以直接拿来用，省得再为API的事纠结，专心做产品就行了。",
+      "original_text": "@musen9527 太折腾。好在有大佬开源了，可以直接拿来用，省得再为API的事纠结，专心做产品就行了。",
+      "translation_zh": "@musen9527 太折腾。好在有大佬开源了，可以直接拿来用，省得再为API的事纠结，专心做产品就行了。",
+      "translation_status": "source_chinese",
+      "author_name": "纽约市长",
+      "author_handle": "Mayorleo9",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2056416089803018241/scL1JTWB_normal.jpg",
+      "author_followers": 983,
+      "author_following": 630,
+      "author_bio": "每天5条中文干货｜AI工具·职场避坑·热点拆解｜纯信息，不灌水｜帮你把刷手机的时间花得值",
+      "author_location": null,
+      "author_joined_at": "2026-05-18T16:33:58Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 18
+      }
+    }
+  ]
+}
