@@ -182,7 +182,7 @@ command -v "$PYTHON_BIN" >/dev/null 2>&1 || fail "$PYTHON_BIN is not available."
 if [[ -n "$REQUESTED_KINDS" && ! "$REQUESTED_KINDS" =~ ^(ai|tg)(,(ai|tg))*$ ]]; then
   fail "Invalid Diting kinds: $REQUESTED_KINDS"
 fi
-if [[ -n "$REQUESTED_DATE" && ! "$REQUESTED_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+if [[ -n "$REQUESTED_DATE" && ! "$REQUESTED_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}(,[0-9]{4}-[0-9]{2}-[0-9]{2})*$ ]]; then
   fail "Invalid Diting date: $REQUESTED_DATE"
 fi
 
