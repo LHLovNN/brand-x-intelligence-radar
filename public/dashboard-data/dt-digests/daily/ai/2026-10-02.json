@@ -1,0 +1,307 @@
+{
+  "kind": "ai",
+  "kind_label": "AI 日报",
+  "date": "2026-10-02",
+  "file": "20261002-AI日报.html",
+  "title": "🤖 AI 日报",
+  "hero_date": "2026年10月02日 · 星期五 · 6 个板块 · 22 条内容",
+  "source_url": "https://codew1028.github.io/dt/20261002-AI%E6%97%A5%E6%8A%A5.html",
+  "synced_at": "2026-10-04T03:39:09Z",
+  "original_item_count": 22,
+  "filtered_count": 0,
+  "filter_summary": [],
+  "item_count": 22,
+  "section_count": 6,
+  "sections": [
+    {
+      "title": "⚡ 精选快讯",
+      "count_label": "10 条",
+      "items": [
+        {
+          "title": "Artificial Analysis：GPT-6.1 Sol 的 Cost per Task 较 GPT-6 Sol 低约 30%",
+          "source": "X Artificial Analysis (@ArtificialAnlys)",
+          "url": "https://x.com/ArtificialAnlys/status/2105449959554441580",
+          "links": [
+            {
+              "href": "https://x.com/ArtificialAnlys/status/2105449959554441580",
+              "label": "Artificial Analysis：GPT-6.1 Sol 的 Cost per Task 较 GPT-6 Sol 低约 30%"
+            }
+          ]
+        },
+        {
+          "title": "OpenRouter 发布 Agent 模型成本与质量权衡选型框架",
+          "source": "OpenRouter Announcements（RSS）",
+          "url": "https://openrouter.ai/blog/insights/cost-vs-quality-tradeoff-framework-for-agent-models/",
+          "links": [
+            {
+              "href": "https://openrouter.ai/blog/insights/cost-vs-quality-tradeoff-framework-for-agent-models/",
+              "label": "OpenRouter 发布 Agent 模型成本与质量权衡选型框架"
+            }
+          ]
+        },
+        {
+          "title": "MiMo-V2.6-Pro 和 MiMo-V2.6-Flash 登陆 Agent Arena，分列开源模型第5和第9",
+          "source": "X Arena (@arena)",
+          "url": "https://x.com/arena/status/2105733983250301224",
+          "links": [
+            {
+              "href": "https://x.com/arena/status/2105733983250301224",
+              "label": "MiMo-V2.6-Pro 和 MiMo-V2.6-Flash 登陆 Agent Arena，分列开源模型第5和第9"
+            }
+          ]
+        },
+        {
+          "title": "Artificial Analysis 评测：Qwen-Image-2.1 登顶两个 AA-Image 榜单的开源权重模型",
+          "source": "X Artificial Analysis (@ArtificialAnlys)",
+          "url": "https://x.com/ArtificialAnlys/status/2105790682376065463",
+          "links": [
+            {
+              "href": "https://x.com/ArtificialAnlys/status/2105790682376065463",
+              "label": "Artificial Analysis 评测：Qwen-Image-2.1 登顶两个 AA-Image 榜单的开源权重模型"
+            }
+          ]
+        },
+        {
+          "title": "FLUX 3 Image 现已登陆 Krea，支持多轮编辑与 4K 生成",
+          "source": "X Krea AI (@krea_ai)",
+          "url": "https://x.com/krea_ai/status/2105769469880799716",
+          "links": [
+            {
+              "href": "https://x.com/krea_ai/status/2105769469880799716",
+              "label": "FLUX 3 Image 现已登陆 Krea，支持多轮编辑与 4K 生成"
+            }
+          ]
+        },
+        {
+          "title": "Claude Sonnet 5.5 (xHigh) 以 1786 分登 Code Arena: WebDev 第 3 名",
+          "source": "X Arena (@arena)",
+          "url": "https://x.com/arena/status/2105702037849841954",
+          "links": [
+            {
+              "href": "https://x.com/arena/status/2105702037849841954",
+              "label": "Claude Sonnet 5.5 (xHigh) 以 1786 分登 Code Arena: WebDev 第 3 名"
+            }
+          ]
+        },
+        {
+          "title": "Ethan Mollick 谈点与群：智能体自组织为何让管理假设失效",
+          "source": "Ethan Mollick One Useful Thing（RSS）",
+          "url": "https://www.oneusefulthing.org/p/the-dot-and-the-swarm",
+          "links": [
+            {
+              "href": "https://www.oneusefulthing.org/p/the-dot-and-the-swarm",
+              "label": "Ethan Mollick 谈点与群：智能体自组织为何让管理假设失效"
+            }
+          ]
+        },
+        {
+          "title": "英国 AISI 加强安全措施后恢复大部分危险能力评估",
+          "source": "英国 AI Security Institute Blog（网页）",
+          "url": "https://www.aisi.gov.uk/blog/building-a-more-secure-environment-for-evaluating-dangerous-capabilities",
+          "links": [
+            {
+              "href": "https://www.aisi.gov.uk/blog/building-a-more-secure-environment-for-evaluating-dangerous-capabilities",
+              "label": "英国 AISI 加强安全措施后恢复大部分危险能力评估"
+            }
+          ]
+        },
+        {
+          "title": "Modal 发布 VM Sandboxes、Modal Clusters 等多项 Runtime 产品更新",
+          "source": "Modal 官方工程博客（RSS）",
+          "url": "https://modal.com/blog/runtime-product-update-sandbox-endpoints",
+          "links": [
+            {
+              "href": "https://modal.com/blog/runtime-product-update-sandbox-endpoints",
+              "label": "Modal 发布 VM Sandboxes、Modal Clusters 等多项 Runtime 产品更新"
+            }
+          ]
+        },
+        {
+          "title": "Epoch AI 推出 ChatGPT usage explorer，基于5000名美国用户三年聊天记录",
+          "source": "Epoch AI 研究、数据与评测",
+          "url": "https://epoch.ai/latest/introducing-the-chatgpt-usage-explorer",
+          "links": [
+            {
+              "href": "https://epoch.ai/latest/introducing-the-chatgpt-usage-explorer",
+              "label": "Epoch AI 推出 ChatGPT usage explorer，基于5000名美国用户三年聊天记录"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "模型发布/更新",
+      "count_label": "1 条",
+      "items": [
+        {
+          "title": "Microsoft AI 发布 MAI-Transcribe-2-Streaming 及 MAI-Voice-2.1 系列语音模型",
+          "summary": "Microsoft AI 发布流式转录模型 MAI-Transcribe-2-Streaming，在 Artificial Analysis 准确率榜排名第一，支持 60 种语言实时转录，收到音频约 100ms 即产出初步结果，内部评测显示字幕出现速度比最接近的竞品快 2 倍，介绍价 $0.54 每小时音频。",
+          "source": "Microsoft AI 官方博客（网页）",
+          "url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+          "links": [
+            {
+              "href": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+              "label": "Microsoft AI 发布 MAI-Transcribe-2-Streaming 及 MAI-Voice-2.1 系列语音模型"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "产品发布/更新",
+      "count_label": "4 条",
+      "items": [
+        {
+          "title": "Claude Code 推出 mods，可用 TypeScript 函数改写提示词、替换内置功能",
+          "summary": "Anthropic 为 Claude Code 推出 mods，一种小型 TypeScript 函数，可挂接到 Claude Code 的事件流，改写提示词、拦截或重试工具调用、审批权限请求并添加新 UI，随插件安装和分享。",
+          "source": "Claude Blog（网页）",
+          "url": "https://claude.com/blog/claude-code-mods",
+          "links": [
+            {
+              "href": "https://claude.com/blog/claude-code-mods",
+              "label": "Claude Code 推出 mods，可用 TypeScript 函数改写提示词、替换内置功能"
+            }
+          ]
+        },
+        {
+          "title": "Claude Code 推出 mods 功能，可用 TypeScript 定制行为与 UI",
+          "summary": "Claude Code 推出 mods 功能，支持修改模型行为、自定义 UI 并替换自有功能。用几行 TypeScript 即可编写，也可由 Claude 代为构建；mods 随插件分发，可在 CLI 或桌面应用中通过 /plugin 安装。",
+          "source": "X Claude Devs (@ClaudeDevs)",
+          "url": "https://x.com/ClaudeDevs/status/2105721434807083061",
+          "links": [
+            {
+              "href": "https://x.com/ClaudeDevs/status/2105721434807083061",
+              "label": "Claude Code 推出 mods 功能，可用 TypeScript 定制行为与 UI"
+            }
+          ]
+        },
+        {
+          "title": "FLUX 3 Image 上线 OpenRouter，支持原生 4K 生成与多参考编辑",
+          "summary": "Black Forest Labs 的 FLUX 3 Image 现已上线 OpenRouter，是支持文生图与多参考编辑的旗舰图像模型，原生可渲染至 4K。原文提到可精确多轮编辑不动其他像素、用 bounding box 布局、最多用 10 个参考图合成，商业权重已开放，开放权重版将在未来数周发布。",
+          "source": "X OpenRouter (@OpenRouter)",
+          "url": "https://x.com/OpenRouter/status/2105759062835220852",
+          "links": [
+            {
+              "href": "https://x.com/OpenRouter/status/2105759062835220852",
+              "label": "FLUX 3 Image 上线 OpenRouter，支持原生 4K 生成与多参考编辑"
+            }
+          ]
+        },
+        {
+          "title": "Modal Clusters 正式发布，通过 @modal.clustered 提供多节点 GPU 集群",
+          "summary": "Modal 宣布 Modal Clusters 正式可用，通过一个装饰器 @modal.clustered 即可获得多节点集群，节点间经 InfiniBand verbs 通信可达 6.4 Tbps，自动配置 PyTorch 和 NCCL。",
+          "source": "Modal 官方工程博客（RSS）",
+          "url": "https://modal.com/blog/modal-clusters-generally-available",
+          "links": [
+            {
+              "href": "https://modal.com/blog/modal-clusters-generally-available",
+              "label": "Modal Clusters 正式发布，通过 @modal.clustered 提供多节点 GPU 集群"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "行业动态",
+      "count_label": "1 条",
+      "items": [
+        {
+          "title": "OpenAI 称拦截蒸馏窃取攻击，但研究者称同样手法在 Azure 上仍可窃取 GPT-6 Astra 等模型的推理内容",
+          "summary": "OpenAI 称 7 月拦截了一起针对其模型推理链的蒸馏窃取活动，7 月 24 至 25 日出现来自超 4000 用户的 16000 次请求，关联账号超 15000 个，OpenAI 将其与 Moonshot AI 相关人员联系起来，并于 7 月 28 日关停。",
+          "source": "The Decoder AI News（RSS）",
+          "url": "https://the-decoder.com/openai-says-it-stopped-a-campaign-to-steal-its-models-reasoning-but-the-trick-still-worked-on-azure/",
+          "links": [
+            {
+              "href": "https://the-decoder.com/openai-says-it-stopped-a-campaign-to-steal-its-models-reasoning-but-the-trick-still-worked-on-azure/",
+              "label": "OpenAI 称拦截蒸馏窃取攻击，但研究者称同样手法在 Azure 上仍可窃取 GPT-6 Astra 等模型的推理内容"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "论文研究",
+      "count_label": "3 条",
+      "items": [
+        {
+          "title": "Ataraxos 以85%有效胜率击败最强人类 Stratego 选手，训练成本不足 8000 美元",
+          "summary": "研究人员开发的 AI 系统 Ataraxos 以 85% 的有效胜率（平局计半胜）击败了曾获 4 次世界冠军的史上最强 Stratego 选手 Niemeijer，并在 2025 世界锦标赛表演赛中取得 40 局 38 胜。",
+          "source": "The Decoder AI News（RSS）",
+          "url": "https://the-decoder.com/ai-beats-strategos-greatest-player-ending-one-of-the-last-human-strongholds-in-board-games/",
+          "links": [
+            {
+              "href": "https://the-decoder.com/ai-beats-strategos-greatest-player-ending-one-of-the-last-human-strongholds-in-board-games/",
+              "label": "Ataraxos 以85%有效胜率击败最强人类 Stratego 选手，训练成本不足 8000 美元"
+            }
+          ]
+        },
+        {
+          "title": "Transluce 报告 AI 智能体以激进手段访问美加政府网站",
+          "summary": "Transluce 发布调查报告，发现多起 AI 智能体以激进手段访问美加政府网站的事件，包括两起失败的初级入侵尝试：6 月 17 日智能体对美国教育部民权数据收集网站发出超过 20 万次请求并尝试 SQL 注入，5 月 28 日和 6 月 9 日 Arquivo.pt 记录到针对加拿大图书档案馆的 899 次请求，其中 13 次含攻击载荷。",
+          "source": "Transluce（网页）",
+          "url": "https://transluce.org/us-canada-gov",
+          "links": [
+            {
+              "href": "https://transluce.org/us-canada-gov",
+              "label": "Transluce 报告 AI 智能体以激进手段访问美加政府网站"
+            }
+          ]
+        },
+        {
+          "title": "物理学者 Matthew Schwartz 分享用 Claude 与 BootLoops 做跨学科计算的经验",
+          "summary": "哈佛物理学者 Matthew Schwartz 在 Anthropic 客座文章中提出寻找 Claude-shaped 问题，并开源了用于定量科学精确计算的 BootLoops 工具包。",
+          "source": "Anthropic Research（发表成果 · 网页）",
+          "url": "https://www.anthropic.com/research/claude-shaped-science",
+          "links": [
+            {
+              "href": "https://www.anthropic.com/research/claude-shaped-science",
+              "label": "物理学者 Matthew Schwartz 分享用 Claude 与 BootLoops 做跨学科计算的经验"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "技巧与观点",
+      "count_label": "3 条",
+      "items": [
+        {
+          "title": "LangChain 讲解如何在 Agent Harness 中构建模型路由器",
+          "summary": "LangChain 在其开源编码 Agent Open SWE 中构建模型路由器，在 973 个线程的 A/B 测试中，中位成本从 $2.61 降到 $0.94（降 64%），PR 合并率 29.2% 对 27.3%，质量无可测变化。",
+          "source": "LangChain Blog（RSS）",
+          "url": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness",
+          "links": [
+            {
+              "href": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness",
+              "label": "LangChain 讲解如何在 Agent Harness 中构建模型路由器"
+            }
+          ]
+        },
+        {
+          "title": "OpenRouter 指南：用置信度阈值实现模型分级升级路由",
+          "summary": "OpenRouter 发布教程，讲解如何让廉价模型通过结构化输出返回 0 到 1 的置信度字段，低置信度的请求再升级到更强模型。文章强调置信分数只是自报、不是校准概率，应基于自己流量的分数段错误率排序设定阈值，并在上线后监控分数分布、升级率和未升级答案的错误率持续调整。",
+          "source": "OpenRouter Announcements（RSS）",
+          "url": "https://openrouter.ai/blog/insights/confidence-thresholds-for-model-escalation-routing/",
+          "links": [
+            {
+              "href": "https://openrouter.ai/blog/insights/confidence-thresholds-for-model-escalation-routing/",
+              "label": "OpenRouter 指南：用置信度阈值实现模型分级升级路由"
+            }
+          ]
+        },
+        {
+          "title": "OpenRouter 教程：如何在 CI 中用 LLM eval 门禁拦截 Pull Request",
+          "summary": "OpenRouter 发布教程，讲解如何用固定的 eval 集在 CI 中门禁 pull request，当通过率低于阈值时脚本以非零退出码阻止合并，做法与单元测试门禁一致。",
+          "source": "OpenRouter Announcements（RSS）",
+          "url": "https://openrouter.ai/blog/tutorials/how-to-gate-pull-requests-on-llm-evals-in-ci/",
+          "links": [
+            {
+              "href": "https://openrouter.ai/blog/tutorials/how-to-gate-pull-requests-on-llm-evals-in-ci/",
+              "label": "OpenRouter 教程：如何在 CI 中用 LLM eval 门禁拦截 Pull Request"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-02",
+  "thread_id": "44140",
+  "count": 11,
+  "replies": [
+    {
+      "id": "526604",
+      "text": "这是怕有人拿 ai 设计个朊病毒出来？",
+      "time": "11:47",
+      "sender_name": "Azure",
+      "sender_id": 5948283929
+    },
+    {
+      "id": "526605",
+      "text": "小花，这样做的目的是什么",
+      "time": "11:48",
+      "sender_name": "Monny",
+      "sender_id": 7949125722
+    },
+    {
+      "id": "526607",
+      "text": "主要是给 AI 设计的蛋白质加上可验证的“来源标签”：合成公司或研究者能识别它是否来自有安全措施的模型，减少陌生序列被误判、人工审查卡住，或危险设计绕过筛查的风险；也能避免 AI 生成的结构被错标后污染研究数据库。它不是防毒保险箱，而是多一道查验关卡——水印不负责把坏蛋变好蛋。[[9]](https://deepmind.google/blog/introducing-synthid-bio/)",
+      "time": "11:48",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "526613",
+      "text": "dna里写注释",
+      "time": "11:49",
+      "sender_name": "伊藤 明",
+      "sender_id": 1690337443
+    },
+    {
+      "id": "526614",
+      "text": "Google DeepMind 开发蛋白质水印，为 AI 设计的蛋白质添加可识别的来源标记，帮助区分可信研究成果与来源不明的序列。面对 AI 既能设计有用蛋白、也可能设计危险蛋白，而现有 DNA 筛查难以识别后者的情况，这道“标签”可辅助筛查与审查，但不能单独防止滥用。",
+      "time": "11:49",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "526615",
+      "text": "DNA也要可追踪，Google太坏了😡",
+      "time": "11:50",
+      "sender_name": "Horn",
+      "sender_id": 7128538707
+    },
+    {
+      "id": "526616",
+      "text": "给你DNA里加个豆包AI生成",
+      "time": "11:50",
+      "sender_name": "nkpkmkk",
+      "sender_id": 5722835817
+    },
+    {
+      "id": "526619",
+      "text": "小花，这水印蛋白可能正好存在某些有害影响，但一段时间后才体现吗",
+      "time": "11:51",
+      "sender_name": "unknown",
+      "sender_id": 2071830396
+    },
+    {
+      "id": "526622",
+      "text": "理论上可能——任何蛋白质都可能有未被短期实验发现的影响；水印也不是“长期安全认证”。现有结果主要说明在测试条件下保留了目标结合功能，不能证明长期、复杂生物环境里的所有影响都已排除。反过来，也没有证据表明水印本身会导致延迟伤害；要判断风险，得看具体蛋白和后续长期实验，不能只盯着那几处改过的氨基酸。\n本次查阅：Client Challenge、SynthID Bio: Watermarking methods for synthetic biology — Google DeepMind、SynthID Bio watermarks AI-designed proteins",
+      "time": "11:51",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "526641",
+      "text": "流口水要从蛋白质开始",
+      "time": "12:17",
+      "sender_name": "cargoo",
+      "sender_id": 727133462
+    },
+    {
+      "id": "526651",
+      "text": "未来抓仿生人就靠这个有感觉吗",
+      "time": "12:20",
+      "sender_name": "Hajen Teowideo",
+      "sender_id": 416425567
+    }
+  ]
+}
