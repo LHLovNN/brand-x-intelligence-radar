@@ -1,41 +1,38 @@
 {
   "status": "ok",
-  "generated_at": "2026-10-04T02:10:41Z",
-  "window_start": "2026-10-03T00:00:00Z",
-  "window_end": "2026-10-04T00:00:00Z",
-  "window_label": "2026-10-03 08:00 BJT - 2026-10-04 08:00 BJT",
-  "raw_posts": 31,
-  "normalized_posts": 31,
-  "primary_signals": 5,
+  "generated_at": "2026-10-04T04:16:32Z",
+  "window_start": "2026-10-01T00:00:00Z",
+  "window_end": "2026-10-02T00:00:00Z",
+  "window_label": "2026-10-01 08:00 BJT - 2026-10-02 08:00 BJT",
+  "raw_posts": 30,
+  "normalized_posts": 30,
+  "primary_signals": 6,
   "collection_status": {
     "status": "complete",
-    "warnings": [
-      "Chinese translation is unavailable for some posts; original text is shown as fallback."
-    ],
+    "warnings": [],
     "translation": {
       "configured": true,
       "counts": {
-        "error": 4,
-        "source_chinese": 1,
-        "translated": 26
+        "translated": 29,
+        "source_chinese": 1
       },
-      "missing_count": 4,
-      "fallback_original_count": 4
+      "missing_count": 0,
+      "fallback_original_count": 0
     }
   },
   "platform_trends": {
     "status": "complete",
-    "accepted": 14,
-    "candidates_inspected": 238,
+    "accepted": 26,
+    "candidates_inspected": 224,
     "warnings": []
   },
   "dashboard_metrics": {
-    "effective_intelligence": 5,
-    "high_risk": 1,
+    "effective_intelligence": 6,
+    "high_risk": 0,
     "needs_review": 0,
-    "primary_volume": 15,
-    "primary_candidate_volume": 16,
-    "competitor_volume": 15,
-    "negative_share": 40
+    "primary_volume": 17,
+    "primary_candidate_volume": 17,
+    "competitor_volume": 12,
+    "negative_share": 17
   }
 }
