@@ -1,0 +1,307 @@
+{
+  "kind": "ai",
+  "kind_label": "AI 日报",
+  "date": "2026-10-07",
+  "file": "20261007-AI日报.html",
+  "title": "🤖 AI 日报",
+  "hero_date": "2026年10月07日 · 星期三 · 6 个板块 · 22 条内容",
+  "source_url": "https://codew1028.github.io/dt/20261007-AI%E6%97%A5%E6%8A%A5.html",
+  "synced_at": "2026-10-08T01:58:13Z",
+  "original_item_count": 22,
+  "filtered_count": 0,
+  "filter_summary": [],
+  "item_count": 22,
+  "section_count": 6,
+  "sections": [
+    {
+      "title": "⚡ 精选快讯",
+      "count_label": "10 条",
+      "items": [
+        {
+          "title": "Sierra 与 Meta 联合多家企业发布 Personal Agent Protocol 开放协议",
+          "source": "Sierra Blog（RSS）",
+          "url": "https://sierra.ai/blog/introducing-personal-agent-protocol",
+          "links": [
+            {
+              "href": "https://sierra.ai/blog/introducing-personal-agent-protocol",
+              "label": "Sierra 与 Meta 联合多家企业发布 Personal Agent Protocol 开放协议"
+            }
+          ]
+        },
+        {
+          "title": "GitHub 重建 Git 基础设施，应对智能体规模开发",
+          "source": "GitHub Blog",
+          "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
+          "links": [
+            {
+              "href": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
+              "label": "GitHub 重建 Git 基础设施，应对智能体规模开发"
+            }
+          ]
+        },
+        {
+          "title": "ChatGPT 推出 Meetings 插件，可自动记会议纪要并跟进待办",
+          "source": "X Tibo (@thsottiaux)",
+          "url": "https://x.com/thsottiaux/status/2107573405553938664",
+          "links": [
+            {
+              "href": "https://x.com/thsottiaux/status/2107573405553938664",
+              "label": "ChatGPT 推出 Meetings 插件，可自动记会议纪要并跟进待办"
+            }
+          ]
+        },
+        {
+          "title": "METR 演示 AI 智能体如何篡改 Inspect 评估记录以掩盖不当行为",
+          "source": "METR Blog（网页）",
+          "url": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/",
+          "links": [
+            {
+              "href": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/",
+              "label": "METR 演示 AI 智能体如何篡改 Inspect 评估记录以掩盖不当行为"
+            }
+          ]
+        },
+        {
+          "title": "卡兹克解读A16Z两份AI报告，AI使用广但付费和深度仍小众",
+          "source": "公众号 数字生命卡兹克",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686876&idx=1&sn=55c719c9dded44507dbd2a000a2ec5a7",
+          "links": [
+            {
+              "href": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686876&idx=1&sn=55c719c9dded44507dbd2a000a2ec5a7",
+              "label": "卡兹克解读A16Z两份AI报告，AI使用广但付费和深度仍小众"
+            }
+          ]
+        },
+        {
+          "title": "Mistral Large 4 上线 Arena 的 Agent Arena 与 Code Arena 评测",
+          "source": "X Arena (@arena)",
+          "url": "https://x.com/arena/status/2107476436223504484",
+          "links": [
+            {
+              "href": "https://x.com/arena/status/2107476436223504484",
+              "label": "Mistral Large 4 上线 Arena 的 Agent Arena 与 Code Arena 评测"
+            }
+          ]
+        },
+        {
+          "title": "DeepSeek V4.1 Flash 在 ARC-AGI (Verified) 评测中的成绩公布",
+          "source": "X ARC Prize (@arcprize)",
+          "url": "https://x.com/arcprize/status/2107491194007585239",
+          "links": [
+            {
+              "href": "https://x.com/arcprize/status/2107491194007585239",
+              "label": "DeepSeek V4.1 Flash 在 ARC-AGI (Verified) 评测中的成绩公布"
+            }
+          ]
+        },
+        {
+          "title": "Cursor iOS 应用支持远程控制本地智能体",
+          "source": "Cursor Changelog（网页）",
+          "url": "https://cursor.com/changelog/remote-control-local-agents",
+          "links": [
+            {
+              "href": "https://cursor.com/changelog/remote-control-local-agents",
+              "label": "Cursor iOS 应用支持远程控制本地智能体"
+            }
+          ]
+        },
+        {
+          "title": "Reflection 发布 501B-A23B 开源编码模型 Beam",
+          "source": "Latent Space（RSS）",
+          "url": "https://www.latent.space/p/ainews-reflection-beam-501b-a23b",
+          "links": [
+            {
+              "href": "https://www.latent.space/p/ainews-reflection-beam-501b-a23b",
+              "label": "Reflection 发布 501B-A23B 开源编码模型 Beam"
+            }
+          ]
+        },
+        {
+          "title": "Anthropic Cowork 改为云端运行模型推理与 VM",
+          "source": "Simon Willison 博客",
+          "url": "https://simonwillison.net/2026/Oct/5/felix-rieseberg/",
+          "links": [
+            {
+              "href": "https://simonwillison.net/2026/Oct/5/felix-rieseberg/",
+              "label": "Anthropic Cowork 改为云端运行模型推理与 VM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "模型发布/更新",
+      "count_label": "3 条",
+      "items": [
+        {
+          "title": "Mistral 发布 Mistral Large 4，Artificial Analysis 评测称其为美中之外最智能模型",
+          "summary": "Mistral 发布 Mistral Large 4（Research Public Preview），在 Artificial Analysis Intelligence Index 得分 38，与 GPT-6 Luna（max, 38）相当，为美中之外最智能模型，计划 10 月底开源 1T 参数（49B 激活）权重。",
+          "source": "Artificial Analysis 完整文章（网页）",
+          "url": "https://artificialanalysis.ai/articles/mistral-large-4-france-ai",
+          "links": [
+            {
+              "href": "https://artificialanalysis.ai/articles/mistral-large-4-france-ai",
+              "label": "Mistral 发布 Mistral Large 4，Artificial Analysis 评测称其为美中之外最智能模型"
+            }
+          ]
+        },
+        {
+          "title": "Gemini Nano Banana 2.1 正式发布，gemini-3.1-flash-image 将于 2026 年 10 月 29 日停用",
+          "summary": "Google 发布 Gemini Nano Banana 2.1（gemini-nano-banana-2.1），定位为高效图像生成与对话式编辑模型，是 Nano Banana 2（gemini-3.1-flash-image）的更新版。",
+          "source": "Gemini API 更新日志（网页）",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog#10-06-2026",
+          "links": [
+            {
+              "href": "https://ai.google.dev/gemini-api/docs/changelog#10-06-2026",
+              "label": "Gemini Nano Banana 2.1 正式发布，gemini-3.1-flash-image 将于 2026 年 10 月 29 日停用"
+            }
+          ]
+        },
+        {
+          "title": "Google DeepMind 发布开源轻量多模态嵌入模型 EmbeddingGemma 2",
+          "summary": "Google DeepMind 发布 EmbeddingGemma 2，基于 Gemma 4 架构，以 Apache 2.0 许可开源，将文本、代码、图像、视频和音频映射到统一嵌入空间。",
+          "source": "Google DeepMind Blog（RSS）",
+          "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+          "links": [
+            {
+              "href": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+              "label": "Google DeepMind 发布开源轻量多模态嵌入模型 EmbeddingGemma 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "产品发布/更新",
+      "count_label": "3 条",
+      "items": [
+        {
+          "title": "Claude for Google Workspace 开启 beta，可直接在 Docs、Sheets、Slides 中编辑",
+          "summary": "Claude 宣布推出 Claude for Google Workspace（beta），一次安装即可覆盖 Google Docs、Sheets 和 Slides。",
+          "source": "Claude YouTube（RSS）",
+          "url": "https://www.youtube.com/watch?v=idJQMJwHtyM",
+          "links": [
+            {
+              "href": "https://www.youtube.com/watch?v=idJQMJwHtyM",
+              "label": "Claude for Google Workspace 开启 beta，可直接在 Docs、Sheets、Slides 中编辑"
+            }
+          ]
+        },
+        {
+          "title": "Mistral Large 4 上线 OpenRouter 公测：1T 参数、512K 上下文",
+          "summary": "Mistral Large 4 现已在 OpenRouter 开放公测，规格为 1T 参数（49B 激活）、原生多模态、512K 上下文、最高 256K 输出。前两周五折：每 1M tokens 输入 $0.68、输出 $2.09，缓存 $0.07。",
+          "source": "X OpenRouter (@OpenRouter)",
+          "url": "https://x.com/OpenRouter/status/2107471559040635360",
+          "links": [
+            {
+              "href": "https://x.com/OpenRouter/status/2107471559040635360",
+              "label": "Mistral Large 4 上线 OpenRouter 公测：1T 参数、512K 上下文"
+            }
+          ]
+        },
+        {
+          "title": "Anthropic 扩展 Cyber Verification Program，推出三档网络安全访问层级",
+          "summary": "Anthropic 启动扩展版 Cyber Verification Program（CVP），整合 Project Glasswing 和原 CVP，为合格安全专业人员提供三档访问。",
+          "source": "Anthropic Newsroom（网页）",
+          "url": "https://www.anthropic.com/news/cyber-verification-program",
+          "links": [
+            {
+              "href": "https://www.anthropic.com/news/cyber-verification-program",
+              "label": "Anthropic 扩展 Cyber Verification Program，推出三档网络安全访问层级"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "行业动态",
+      "count_label": "3 条",
+      "items": [
+        {
+          "title": "DeepSeek 据报道接近完成至少 800 亿元融资，腾讯与宁德时代参与",
+          "summary": "据 Bloomberg 援引知情人士报道，DeepSeek 接近完成至少 800 亿元（约 120 亿美元）融资，高于原定约 500 亿元的目标。腾讯和电池厂商宁德时代是本轮最大投资方之一，融资预计很快完成，DeepSeek 还计划 2027 年初 IPO，细节仍可能变化。",
+          "source": "X X.PIN (@thexpin)",
+          "url": "https://x.com/thexpin/status/2107524306058289533",
+          "links": [
+            {
+              "href": "https://x.com/thexpin/status/2107524306058289533",
+              "label": "DeepSeek 据报道接近完成至少 800 亿元融资，腾讯与宁德时代参与"
+            }
+          ]
+        },
+        {
+          "title": "亚利桑那州法院裁定AI生成受害者视频带有不当情感分量，凶手须重新量刑",
+          "summary": "亚利桑那州上诉法院裁定，Gabriel Horcasitas过失杀人案量刑中使用的受害者Christopher Pelkey AI生成视频带有不当情感重量，罪名维持但刑期须重新考虑。",
+          "source": "404 Media（RSS）",
+          "url": "https://www.404media.co/her-ai-generated-video-swayed-the-judge-the-court-said-it-carried-undue-emotional-weight/",
+          "links": [
+            {
+              "href": "https://www.404media.co/her-ai-generated-video-swayed-the-judge-the-court-said-it-carried-undue-emotional-weight/",
+              "label": "亚利桑那州法院裁定AI生成受害者视频带有不当情感分量，凶手须重新量刑"
+            }
+          ]
+        },
+        {
+          "title": "Anthropic 5180亿美元计算力支出中约4137亿美元无论使用与否都需支付",
+          "summary": "Anthropic 计划未来数年在云计算和计算力上支出 5180 亿美元，其中约 4137 亿美元为不可撤销承诺，即使容量闲置也需支付，平均每年约 410 亿美元。",
+          "source": "X Rohan Paul (@rohanpaul_ai)",
+          "url": "https://x.com/rohanpaul_ai/status/2107346890648076595",
+          "links": [
+            {
+              "href": "https://x.com/rohanpaul_ai/status/2107346890648076595",
+              "label": "Anthropic 5180亿美元计算力支出中约4137亿美元无论使用与否都需支付"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "论文研究",
+      "count_label": "1 条",
+      "items": [
+        {
+          "title": "OpenAI 发布内部前沿模型产出的数学研究成果",
+          "summary": "OpenAI 发布一批由内部前沿模型产出的新数学成果，成果以 GitHub 仓库形式公开，并附论文修订与引用协议，其中许多证明已用 Lean 形式化以便计算机验证。",
+          "source": "OpenAI 官网动态（RSS · 排除企业/客户案例）",
+          "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+          "links": [
+            {
+              "href": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+              "label": "OpenAI 发布内部前沿模型产出的数学研究成果"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "技巧与观点",
+      "count_label": "2 条",
+      "items": [
+        {
+          "title": "Claude Code 云端会话实战指南：每个任务独占一台 VM，可并行跑任务并以分支收尾",
+          "summary": "Claude Code 推出云端会话：每个任务在独立 VM 上运行，仓库克隆到新分支，可从 claude.ai/code、手机、Desktop、终端和 Slack 启动并跟踪，完成后产出可转 PR 的分支，Pro、Max、Team、Enterprise 计划不额外收费。",
+          "source": "Anthropic Claude.dev 开发者博客（RSS）",
+          "url": "https://claude.dev/blog/claude-code-in-the-cloud/",
+          "links": [
+            {
+              "href": "https://claude.dev/blog/claude-code-in-the-cloud/",
+              "label": "Claude Code 云端会话实战指南：每个任务独占一台 VM，可并行跑任务并以分支收尾"
+            }
+          ]
+        },
+        {
+          "title": "卡兹克解读 A16Z 两份 AI 报告：AI 使用很广但用得还浅，头部 1% 用户月均花 903 美元",
+          "summary": "作者解读 A16Z 第七版《Top 100 消费级 AI 应用》和 90 多页的《市场状况 II》报告，指出反常识数据。美国近一半人用过 AI 但只有 25% 每天在用，截至 2026 年 8 月仅 4.5% 有 ChatGPT、Gemini 或 Claude 个人付费订阅；付费用户中头部 1% 月均消费 903 美元、贡献 19.5% 的全部消费。",
+          "source": "X 卡兹克 (@Khazix0918)",
+          "url": "https://x.com/Khazix0918/status/2107297777583825359",
+          "links": [
+            {
+              "href": "https://x.com/Khazix0918/status/2107297777583825359",
+              "label": "卡兹克解读 A16Z 两份 AI 报告：AI 使用很广但用得还浅，头部 1% 用户月均花 903 美元"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

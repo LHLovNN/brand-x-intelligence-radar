@@ -1,0 +1,307 @@
+{
+  "kind": "ai",
+  "kind_label": "AI 日报",
+  "date": "2026-10-08",
+  "file": "20261008-AI日报.html",
+  "title": "🤖 AI 日报",
+  "hero_date": "2026年10月08日 · 星期四 · 6 个板块 · 22 条内容",
+  "source_url": "https://codew1028.github.io/dt/20261008-AI%E6%97%A5%E6%8A%A5.html",
+  "synced_at": "2026-10-08T01:58:13Z",
+  "original_item_count": 22,
+  "filtered_count": 0,
+  "filter_summary": [],
+  "item_count": 22,
+  "section_count": 6,
+  "sections": [
+    {
+      "title": "⚡ 精选快讯",
+      "count_label": "10 条",
+      "items": [
+        {
+          "title": "Nemotron 系列微调后达到 IOI 2026 与 IMO 2026 金牌水平",
+          "source": "Hugging Face 社区博客（混合发现）",
+          "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
+          "links": [
+            {
+              "href": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
+              "label": "Nemotron 系列微调后达到 IOI 2026 与 IMO 2026 金牌水平"
+            }
+          ]
+        },
+        {
+          "title": "LlamaIndex 发布 OpenDocRouter：一个 API 统一调用多种文档解析模型",
+          "source": "LlamaIndex 产品、工程与评测",
+          "url": "https://www.llamaindex.ai/blog/introducing-opendocrouter",
+          "links": [
+            {
+              "href": "https://www.llamaindex.ai/blog/introducing-opendocrouter",
+              "label": "LlamaIndex 发布 OpenDocRouter：一个 API 统一调用多种文档解析模型"
+            }
+          ]
+        },
+        {
+          "title": "Perplexity 开源 pplx-embed-v2-late 多模态 late-interaction 嵌入模型（9B 与 0.6B）",
+          "source": "X Aravind Srinivas（Perplexity CEO） (@AravSrinivas)",
+          "url": "https://x.com/AravSrinivas/status/2107871834205196784",
+          "links": [
+            {
+              "href": "https://x.com/AravSrinivas/status/2107871834205196784",
+              "label": "Perplexity 开源 pplx-embed-v2-late 多模态 late-interaction 嵌入模型（9B 与 0.6B）"
+            }
+          ]
+        },
+        {
+          "title": "Unsloth 开源教程：本地训练 Qwen3.5 0.8B 决策模型，准确率从 20.7% 提升至 74.3%",
+          "source": "X Unsloth (@UnslothAI)",
+          "url": "https://x.com/UnslothAI/status/2107868866361930236",
+          "links": [
+            {
+              "href": "https://x.com/UnslothAI/status/2107868866361930236",
+              "label": "Unsloth 开源教程：本地训练 Qwen3.5 0.8B 决策模型，准确率从 20.7% 提升至 74.3%"
+            }
+          ]
+        },
+        {
+          "title": "vLLM 详解 DeepSeek-V4.1-Flash 优化：Agent 场景吞吐提升 5 倍",
+          "source": "vLLM 官方博客（RSS）",
+          "url": "https://vllm.ai/blog/2026-10-07-deepseek-v41-flash",
+          "links": [
+            {
+              "href": "https://vllm.ai/blog/2026-10-07-deepseek-v41-flash",
+              "label": "vLLM 详解 DeepSeek-V4.1-Flash 优化：Agent 场景吞吐提升 5 倍"
+            }
+          ]
+        },
+        {
+          "title": "LangChain 重构 Deep Agents 的 Skills 支持，新增工具绑定、固定技能与线程内重载",
+          "source": "LangChain Blog（RSS）",
+          "url": "https://www.langchain.com/blog/revamping-skills-in-deep-agents",
+          "links": [
+            {
+              "href": "https://www.langchain.com/blog/revamping-skills-in-deep-agents",
+              "label": "LangChain 重构 Deep Agents 的 Skills 支持，新增工具绑定、固定技能与线程内重载"
+            }
+          ]
+        },
+        {
+          "title": "Liquid AI 发布开源决策模型 d1-3B 和 d1-omni-600M",
+          "source": "Liquid AI 模型与工程博客（网页）",
+          "url": "https://www.liquid.ai/blog/d1-open",
+          "links": [
+            {
+              "href": "https://www.liquid.ai/blog/d1-open",
+              "label": "Liquid AI 发布开源决策模型 d1-3B 和 d1-omni-600M"
+            }
+          ]
+        },
+        {
+          "title": "Stanford HAI 研究：想让员工拥抱 AI，别把它包装成效率工具",
+          "source": "Stanford HAI News（网页）",
+          "url": "https://hai.stanford.edu/news/want-employees-to-embrace-ai-stop-selling-it-as-a-productivity-tool",
+          "links": [
+            {
+              "href": "https://hai.stanford.edu/news/want-employees-to-embrace-ai-stop-selling-it-as-a-productivity-tool",
+              "label": "Stanford HAI 研究：想让员工拥抱 AI，别把它包装成效率工具"
+            }
+          ]
+        },
+        {
+          "title": "Google 发布 Developer Knowledge API 生态，为 AI 智能体提供官方文档检索",
+          "source": "Google Developers Blog（RSS）",
+          "url": "https://developers.googleblog.com/supercharge-your-development-with-the-google-developer-knowledge-api-ecosystem/",
+          "links": [
+            {
+              "href": "https://developers.googleblog.com/supercharge-your-development-with-the-google-developer-knowledge-api-ecosystem/",
+              "label": "Google 发布 Developer Knowledge API 生态，为 AI 智能体提供官方文档检索"
+            }
+          ]
+        },
+        {
+          "title": "PromptArmor 解析 WebMCP 的机制与主要安全风险",
+          "source": "PromptArmor Threat Intelligence",
+          "url": "https://www.promptarmor.com/resources/what-is-webmcp",
+          "links": [
+            {
+              "href": "https://www.promptarmor.com/resources/what-is-webmcp",
+              "label": "PromptArmor 解析 WebMCP 的机制与主要安全风险"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "模型发布/更新",
+      "count_label": "1 条",
+      "items": [
+        {
+          "title": "Anthropic 发布 Claude Haiku 5.5，运行成本平均降低约 75%",
+          "summary": "Anthropic 发布 Claude Haiku 5.5，定位为迄今最便宜、最快的小模型，适合摘要、压缩、数据库查询、分类等高吞吐任务，并可搭配 Opus 5.5 和 Sonnet 5.5 担任编码子智能体。",
+          "source": "Anthropic Newsroom（网页）",
+          "url": "https://www.anthropic.com/claude-haiku-5-5",
+          "links": [
+            {
+              "href": "https://www.anthropic.com/claude-haiku-5-5",
+              "label": "Anthropic 发布 Claude Haiku 5.5，运行成本平均降低约 75%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "产品发布/更新",
+      "count_label": "6 条",
+      "items": [
+        {
+          "title": "OpenAI 向全部 ChatGPT 用户推出 GPT-6 与 Intelligent UI",
+          "summary": "OpenAI 发布面向更广泛用户的 GPT-6，并随 GPT-6 在 ChatGPT 中引入 Intelligent UI，可生成图形、按钮、表单、图表和可交互组件来回答问题。",
+          "source": "OpenAI 官网动态（RSS · 排除企业/客户案例）",
+          "url": "https://openai.com/index/gpt-6-for-everyone/",
+          "links": [
+            {
+              "href": "https://openai.com/index/gpt-6-for-everyone/",
+              "label": "OpenAI 向全部 ChatGPT 用户推出 GPT-6 与 Intelligent UI"
+            }
+          ]
+        },
+        {
+          "title": "Anthropic 为 Claude Max 和 Team 套餐推出月度 Platform API 额度",
+          "summary": "Anthropic 正在为 Claude Max 和 Team 套餐推出月度 Claude Platform API 额度：Max 5x 为 $100，Max 20x 为 $200，Team 最多 $500 且可共享。额度适用于任何模型，包括 Haiku 5.5，可在自己的代码或第三方 harness 中使用。",
+          "source": "X Claude Devs (@ClaudeDevs)",
+          "url": "https://x.com/ClaudeDevs/status/2107895957933408429",
+          "links": [
+            {
+              "href": "https://x.com/ClaudeDevs/status/2107895957933408429",
+              "label": "Anthropic 为 Claude Max 和 Team 套餐推出月度 Platform API 额度"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI Decisions API 公测上线",
+          "summary": "OpenAI 推出 Decisions API 公开测试版，向所有开发者开放，可让应用在接近实时的速度下选择合适的模型、工具或动作。官方称其决策速度最高比通过 Responses API 的 GPT-6 Luna 快 10 倍，作者表示团队将自用该 API 以多种方式改进体验。",
+          "source": "X Tibo (@thsottiaux)",
+          "url": "https://x.com/thsottiaux/status/2107574912349303197",
+          "links": [
+            {
+              "href": "https://x.com/thsottiaux/status/2107574912349303197",
+              "label": "OpenAI Decisions API 公测上线"
+            }
+          ]
+        },
+        {
+          "title": "Claude Code v2.1.293 发布：新增 Claude Haiku 5.5 并修复大量问题",
+          "summary": "Claude Code 发布 v2.1.293，新增 Claude Haiku 5.5（claude-haiku-5-5）作为 Anthropic API 默认 Haiku 模型，支持 1M 上下文，价格为 $0.10/$0.50 每百万 token（超 100K 提示为 $0.50/$2.50）。",
+          "source": "Claude Code GitHub Releases（RSS）",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
+          "links": [
+            {
+              "href": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
+              "label": "Claude Code v2.1.293 发布：新增 Claude Haiku 5.5 并修复大量问题"
+            }
+          ]
+        },
+        {
+          "title": "NVIDIA 与 Microsoft 发布 RTX Spark 及 DGX Station for Windows，推动 AI Agent 落地 Windows PC",
+          "summary": "NVIDIA 与 Microsoft 在旧金山 Windows AI 和 Surface 活动上宣布为 Windows PC 引入 AI Agent 硬件与软件。",
+          "source": "NVIDIA Blog（RSS）",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
+          "links": [
+            {
+              "href": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
+              "label": "NVIDIA 与 Microsoft 发布 RTX Spark 及 DGX Station for Windows，推动 AI Agent 落地 Windows PC"
+            }
+          ]
+        },
+        {
+          "title": "Google 推出实验性游戏平台 Playground，用提示词即可创建游戏",
+          "summary": "Google 推出实验性游戏平台 Playground，用户通过文本提示词即可创建、游玩和分享自定义游戏，无需编程经验。",
+          "source": "Google Blog AI（RSS）",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+          "links": [
+            {
+              "href": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+              "label": "Google 推出实验性游戏平台 Playground，用提示词即可创建游戏"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "行业动态",
+      "count_label": "1 条",
+      "items": [
+        {
+          "title": "亚利桑那州法院裁定 AI 生成受害者视频带有不当情感分量 将重新量刑",
+          "summary": "亚利桑那州上诉法院裁定，Gabriel Horcasitas 2021 年路怒枪杀 Christopher Pelkey 一案维持过失杀人定罪，但因量刑听证中播放的 AI 生成受害者视频带有不当情感分量，法官须重新考虑刑期。",
+          "source": "404 Media（RSS）",
+          "url": "https://www.404media.co/undue-emotional-weight/",
+          "links": [
+            {
+              "href": "https://www.404media.co/undue-emotional-weight/",
+              "label": "亚利桑那州法院裁定 AI 生成受害者视频带有不当情感分量 将重新量刑"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "论文研究",
+      "count_label": "2 条",
+      "items": [
+        {
+          "title": "Google Research 三个月专利起草实验发现AI辅助未必能培养初级律师的专业判断",
+          "summary": "Google Research 在 NBER 发表的论文报告了一项三个月随机田野实验，向11家知识产权律所的133名律师随机开放当时未发布的 AI 专利写作助手（现属 Gemini Notebook）。",
+          "source": "Google Research Blog（网页）",
+          "url": "https://research.google/blog/does-better-work-always-mean-better-workers/",
+          "links": [
+            {
+              "href": "https://research.google/blog/does-better-work-always-mean-better-workers/",
+              "label": "Google Research 三个月专利起草实验发现AI辅助未必能培养初级律师的专业判断"
+            }
+          ]
+        },
+        {
+          "title": "Microsoft Research Asia 开源 Agent Lightning v1.0：3,500 行代码的真实 harness 智能体 RL 训练框架",
+          "summary": "Microsoft Research Asia 提出 Harnessed Agentic RL 训练范式并开源重建的 Agent Lightning v1.0，让部署时使用的同一 agent harness 直接参与强化学习，无需在训练框架内重写 agent。",
+          "source": "Microsoft Research 博客（RSS）",
+          "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/",
+          "links": [
+            {
+              "href": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/",
+              "label": "Microsoft Research Asia 开源 Agent Lightning v1.0：3,500 行代码的真实 harness 智能体 RL 训练框架"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "技巧与观点",
+      "count_label": "2 条",
+      "items": [
+        {
+          "title": "Google 开放 SynthID Detector 门户，可检测图片、视频和音频是否由 AI 生成",
+          "summary": "Google 介绍检测媒体是否由 AI 生成的方法：访问 https://synthid.com 上传图片、视频或音频文件，门户会扫描文件是否包含来自 Google 或其合作伙伴的 SynthID 水印。",
+          "source": "X Google (@Google)",
+          "url": "https://x.com/Google/status/2107836410254291345",
+          "links": [
+            {
+              "href": "https://x.com/Google/status/2107836410254291345",
+              "label": "Google 开放 SynthID Detector 门户，可检测图片、视频和音频是否由 AI 生成"
+            }
+          ]
+        },
+        {
+          "title": "a16z 解析德州为何让数据中心排队等电",
+          "summary": "a16z 的 Ryan McEntush 分析德州电网暂停审批数据中心的原因：并网队列从 2024 年底的 63 GW 激增到今年 6 月的 474 GW，约 90% 是数据中心，开发商大量投机性申请且社区沟通不足。",
+          "source": "a16z News（RSS）",
+          "url": "https://www.a16z.news/p/why-texas-is-making-data-centers",
+          "links": [
+            {
+              "href": "https://www.a16z.news/p/why-texas-is-making-data-centers",
+              "label": "a16z 解析德州为何让数据中心排队等电"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
