@@ -299,6 +299,9 @@ def main() -> None:
     expected_source_status = "sample" if is_sample else "normal"
     assert_true(source["status"] == expected_source_status, f"source status should be {expected_source_status}")
     assert_true(source["raw_posts_collected"] >= source["effective_posts"], "raw posts should be >= effective posts")
+    if is_real_provider:
+        collection_state = str((daily.get("collection_status") or {}).get("status") or "missing")
+        assert_true(collection_state == "complete", f"brand collection should be complete, got {collection_state}")
     verify_conversation_contexts(latest, "latest")
     verify_conversation_contexts(daily, "daily/latest")
     verify_conversation_contexts(competitor, "competitor")

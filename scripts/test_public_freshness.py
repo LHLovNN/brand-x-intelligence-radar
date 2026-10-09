@@ -40,6 +40,16 @@ def main() -> None:
     assert report["components"]["xiaohongshu"]["fresh"] is False
     assert report["components"]["xiaohongshu"]["quality_reason"] == "collection_status=partial, candidates_inspected=0"
 
+    report = freshness_report(
+        expected,
+        current,
+        {},
+        {"brand": {"healthy": False, "reason": "collection_status=partial"}},
+    )
+    assert report["fresh"] is False
+    assert report["components"]["brand"]["fresh"] is False
+    assert report["components"]["brand"]["quality_reason"] == "collection_status=partial"
+
     upstream_index = [
         {"f": "20260915-AI日报.html"},
         {"f": "2026-09-15-tg-digest.html"},

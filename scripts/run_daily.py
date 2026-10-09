@@ -205,7 +205,11 @@ def query_limit_for_mode(brand_limit: int, query_count: int, modes: list[dict[st
     return max(1, math.ceil(mode_brand_limit / max(1, query_count)))
 
 
-def allocated_brand_request_limits(max_requests: int | None, brand_limits: dict[str, int]) -> dict[str, int]:
+def allocated_brand_request_limits(
+    max_requests: int | None,
+    brand_limits: dict[str, int],
+    minimum_requests: dict[str, int] | None = None,
+) -> dict[str, int]:
     if max_requests is None:
         return {}
     active = [(brand, int(limit or 0)) for brand, limit in brand_limits.items() if int(limit or 0) > 0]
@@ -222,9 +226,19 @@ def allocated_brand_request_limits(max_requests: int | None, brand_limits: dict[
             allocations[brand] = 1
         return allocations
 
-    for brand, _ in active:
-        allocations[brand] = 1
-    remaining = total_requests - len(active)
+    requested_minimums = {
+        brand: max(1, int((minimum_requests or {}).get(brand, 1) or 1))
+        for brand, _ in active
+    }
+    minimum_total = sum(requested_minimums.values())
+    if minimum_total <= total_requests:
+        for brand, _ in active:
+            allocations[brand] = requested_minimums[brand]
+        remaining = total_requests - minimum_total
+    else:
+        for brand, _ in active:
+            allocations[brand] = 1
+        remaining = total_requests - len(active)
     total_weight = sum(weight for _, weight in active) or 1
     while remaining > 0:
         brand, _ = max(
@@ -316,7 +330,20 @@ def collect_real_posts(
     warnings: list[str] = []
     stopped_early = False
     search_modes = configured_search_modes(source_config)
-    brand_request_limits = allocated_brand_request_limits(getattr(x_source, "max_requests_per_run", None), brand_limits)
+    queries_by_brand = {
+        brand_key: build_x_search_queries(keyword_config, brand_key)
+        for brand_key in ("joybuy", "temu")
+        if brand_limits.get(brand_key, 0) > 0
+    }
+    minimum_brand_requests = {
+        brand_key: len(queries) * len(search_modes)
+        for brand_key, queries in queries_by_brand.items()
+    }
+    brand_request_limits = allocated_brand_request_limits(
+        getattr(x_source, "max_requests_per_run", None),
+        brand_limits,
+        minimum_brand_requests,
+    )
 
     for brand_key in ("joybuy", "temu"):
         if stopped_early:
@@ -324,9 +351,14 @@ def collect_real_posts(
         brand_limit = brand_limits.get(brand_key, 0)
         if brand_limit <= 0:
             continue
-        queries = build_x_search_queries(keyword_config, brand_key)
+        queries = queries_by_brand.get(brand_key) or []
         query_tasks = [(mode, query) for mode in search_modes for query in queries]
         brand_request_limit = brand_request_limits.get(brand_key) if brand_request_limits else None
+        if brand_request_limit is not None and brand_request_limit < len(query_tasks):
+            warnings.append(
+                f"Provider request budget cannot cover every {brand_key} query: "
+                f"{brand_request_limit}/{len(query_tasks)} requests available."
+            )
         brand_request_start = current_search_requests_used(x_source)
         for task_index, (mode, query) in enumerate(query_tasks):
             if stopped_early:

@@ -3,6 +3,12 @@ from __future__ import annotations
 from typing import Any
 
 
+# TwitterAPI.io rejects the final query above 512 characters. The adapter adds
+# a 44-character since/until window, so keep generated query bodies below this
+# limit before the window is attached.
+MAX_BASE_QUERY_LENGTH = 460
+
+
 def build_x_search_queries(keyword_config: dict[str, Any], brand_key: str) -> list[str]:
     brand = keyword_config["brands"][brand_key]
     terms = brand.get("brand_terms", [])
@@ -15,9 +21,8 @@ def build_x_search_queries(keyword_config: dict[str, Any], brand_key: str) -> li
         for group in query_groups:
             group_terms = group.get("terms", []) if isinstance(group, dict) else []
             group_context = group.get("context_terms", []) if isinstance(group, dict) else []
-            context_clause = f" ({_or_clause(group_context)})" if group_context else ""
             if group_terms:
-                queries.append(f"({_or_clause(group_terms)}){context_clause} -filter:retweets {negative_clause}".strip())
+                queries.extend(_bounded_group_queries(group_terms, group_context, negative_clause))
         if queries:
             return queries
 
@@ -27,7 +32,7 @@ def build_x_search_queries(keyword_config: dict[str, Any], brand_key: str) -> li
             for term in terms
             if term.lower() not in {"jd", "京东", "jingdong"}
         ]
-        queries = [f"({_or_clause(primary_terms)}) -filter:retweets {negative_clause}".strip()]
+        queries = _bounded_group_queries(primary_terms, [], negative_clause)
         jd_terms = [
             "JD.com",
             "Jingdong",
@@ -49,12 +54,46 @@ def build_x_search_queries(keyword_config: dict[str, Any], brand_key: str) -> li
             "JD Belgium",
             "JD Luxembourg",
         ]
-        queries.append(f"({_or_clause(jd_terms)}) -filter:retweets {negative_clause}".strip())
+        queries.extend(_bounded_group_queries(jd_terms, [], negative_clause))
         return queries
 
     context_terms = brand.get("query_context_terms", [])
+    return _bounded_group_queries(terms, context_terms, negative_clause)
+
+
+def _bounded_group_queries(
+    terms: list[str],
+    context_terms: list[str],
+    negative_clause: str,
+    max_length: int = MAX_BASE_QUERY_LENGTH,
+) -> list[str]:
+    query = _render_group_query(terms, context_terms, negative_clause)
+    if len(query) <= max_length:
+        return [query]
+
+    splittable: list[tuple[str, int]] = []
+    if len(terms) > 1:
+        splittable.append(("terms", len(_or_clause(terms))))
+    if len(context_terms) > 1:
+        splittable.append(("context", len(_or_clause(context_terms))))
+    if not splittable:
+        raise ValueError(f"Search query cannot fit provider limit ({len(query)} > {max_length})")
+
+    dimension = max(splittable, key=lambda item: item[1])[0]
+    values = terms if dimension == "terms" else context_terms
+    midpoint = max(1, len(values) // 2)
+    halves = (values[:midpoint], values[midpoint:])
+    bounded: list[str] = []
+    for half in halves:
+        next_terms = half if dimension == "terms" else terms
+        next_context = half if dimension == "context" else context_terms
+        bounded.extend(_bounded_group_queries(next_terms, next_context, negative_clause, max_length))
+    return list(dict.fromkeys(bounded))
+
+
+def _render_group_query(terms: list[str], context_terms: list[str], negative_clause: str) -> str:
     context_clause = f" ({_or_clause(context_terms)})" if context_terms else ""
-    return [f"({_or_clause(terms)}){context_clause} -filter:retweets {negative_clause}".strip()]
+    return f"({_or_clause(terms)}){context_clause} -filter:retweets {negative_clause}".strip()
 
 
 def _or_clause(terms: list[str]) -> str:

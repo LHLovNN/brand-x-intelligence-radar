@@ -83,6 +83,11 @@ def clear_collection_env() -> None:
 def main() -> None:
     clear_collection_env()
     assert allocated_brand_request_limits(6, {"joybuy": 100, "temu": 20}) == {"joybuy": 5, "temu": 1}
+    assert allocated_brand_request_limits(
+        6,
+        {"joybuy": 100, "temu": 20},
+        {"joybuy": 3, "temu": 2},
+    ) == {"joybuy": 4, "temu": 2}
 
     keyword_config = {
         "brands": {

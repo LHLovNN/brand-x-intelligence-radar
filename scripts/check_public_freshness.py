@@ -36,6 +36,16 @@ def observed_component_dates(base_url: str) -> tuple[dict[str, str], dict[str, s
     dates["xiaohongshu"] = str(payloads.get("xiaohongshu", {}).get("date") or "")
     dates["ai"] = str(payloads.get("diting", {}).get("latest", {}).get("ai") or "")
     dates["tg"] = str(payloads.get("diting", {}).get("latest", {}).get("tg") or "")
+    brand_status = (payloads.get("brand", {}).get("collection_status") or {})
+    brand_collection_state = str(brand_status.get("status") or "")
+    quality["brand"] = {
+        "healthy": brand_collection_state in {"complete", "sample"},
+        "reason": (
+            ""
+            if brand_collection_state in {"complete", "sample"}
+            else f"collection_status={brand_collection_state or 'missing'}"
+        ),
+    }
     xiaohongshu_status = (payloads.get("xiaohongshu", {}).get("collection_status") or {})
     candidates = int(xiaohongshu_status.get("candidates_inspected") or 0)
     collection_state = str(xiaohongshu_status.get("status") or "")
