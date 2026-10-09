@@ -63,8 +63,8 @@ launchctl unsetenv JDCLOUD_GPT_API_KEY >/dev/null 2>&1 || true
 
 launchctl bootout "$LAUNCHD_DOMAIN/$LABEL" >/dev/null 2>&1 || true
 launchctl unload "$PLIST" >/dev/null 2>&1 || true
-if ! launchctl bootstrap "$LAUNCHD_DOMAIN" "$PLIST" >/dev/null 2>&1; then
-  launchctl load -w "$PLIST" >/dev/null
+if ! launchctl load -w "$PLIST" >/dev/null 2>&1; then
+  launchctl bootstrap "$LAUNCHD_DOMAIN" "$PLIST" >/dev/null
 fi
 launchctl enable "$LAUNCHD_DOMAIN/$LABEL" >/dev/null 2>&1 || true
 
