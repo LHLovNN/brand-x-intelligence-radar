@@ -1,0 +1,130 @@
+{
+  "conversation_id": "2108155107175010468",
+  "anchor_post_id": "2108155107175010468",
+  "summary_zh": "对话起于 wlzh 介绍开源项目 xiaohongshu-mcp：让 AI 助手发帖、搜索、评论、点赞等，并说明部署方式、使用限制和作者实测效果，把话题聚焦到小红书自动化运营工具本身。后续有人追问 cookie 存储泄露风险，也有人补充过期与重试处理。上下文显示信息偏技术分享，情绪总体中性但带安全顾虑，有助于判断其传播价值在开发者和运营人群。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2108155107175010468",
+      "url": "https://x.com/wlzh/status/2108155107175010468",
+      "created_at": "2026-10-08T11:18:39Z",
+      "text": "1.6 万 star 了，这个让 AI 直接玩小红书的 MCP。\n\nxiaohongshu-mcp，干的事很直接：给 AI 助手接上小红书。发图文、发视频、搜内容、看推荐、读帖子详情和评论、发评论、回评论、点赞、收藏、看用户主页，一套全齐。第一次扫码登录一次，cookie 存下来后面就不用管了。\n\n部署有三条路：Docker 一行命令、二进制直接跑、不想折腾的还有个浏览器插件版 x-mcp，装上即用。作者自己先用 Claude Code 跑了几周自动化运营，验证没问题才开源的，实操第一天点赞收藏就干到 999+。\n\n有几个坑 README 里写得很实在：标题不能超过 20 个字、正文 1000 字封顶；同一个账号别在多个网页端同时登录，会被踢下线；新号建议先实名，不然会弹实名认证。\n\nApache 2.0 开源，作者 xpzouying。做小红书矩阵、想让 agent 替你运营账号的，可以看看。",
+      "original_text": "1.6 万 star 了，这个让 AI 直接玩小红书的 MCP。\n\nxiaohongshu-mcp，干的事很直接：给 AI 助手接上小红书。发图文、发视频、搜内容、看推荐、读帖子详情和评论、发评论、回评论、点赞、收藏、看用户主页，一套全齐。第一次扫码登录一次，cookie 存下来后面就不用管了。\n\n部署有三条路：Docker 一行命令、二进制直接跑、不想折腾的还有个浏览器插件版 x-mcp，装上即用。作者自己先用 Claude Code 跑了几周自动化运营，验证没问题才开源的，实操第一天点赞收藏就干到 999+。\n\n有几个坑 README 里写得很实在：标题不能超过 20 个字、正文 1000 字封顶；同一个账号别在多个网页端同时登录，会被踢下线；新号建议先实名，不然会弹实名认证。\n\nApache 2.0 开源，作者 xpzouying。做小红书矩阵、想让 agent 替你运营账号的，可以看看。",
+      "translation_zh": "1.6 万 star 了，这个让 AI 直接玩小红书的 MCP。\n\nxiaohongshu-mcp，干的事很直接：给 AI 助手接上小红书。发图文、发视频、搜内容、看推荐、读帖子详情和评论、发评论、回评论、点赞、收藏、看用户主页，一套全齐。第一次扫码登录一次，cookie 存下来后面就不用管了。\n\n部署有三条路：Docker 一行命令、二进制直接跑、不想折腾的还有个浏览器插件版 x-mcp，装上即用。作者自己先用 Claude Code 跑了几周自动化运营，验证没问题才开源的，实操第一天点赞收藏就干到 999+。\n\n有几个坑 README 里写得很实在：标题不能超过 20 个字、正文 1000 字封顶；同一个账号别在多个网页端同时登录，会被踢下线；新号建议先实名，不然会弹实名认证。\n\nApache 2.0 开源，作者 xpzouying。做小红书矩阵、想让 agent 替你运营账号的，可以看看。",
+      "translation_status": "source_chinese",
+      "author_name": "M.",
+      "author_handle": "wlzh",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1971564093330100224/LUdVXeKz_normal.jpg",
+      "author_followers": 15690,
+      "author_following": 529,
+      "author_bio": "🎯 AI玩家&AI硬件",
+      "author_location": null,
+      "author_joined_at": "2009-03-26T01:31:32Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUGr39xWEAEra15.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUGr39xWEAEra15.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUGr39xWEAEra15.jpg",
+          "expanded_url": "https://x.com/wlzh/status/2108155107175010468/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 6,
+        "reposts": 0,
+        "replies": 15,
+        "quotes": 0,
+        "bookmarks": 6,
+        "views": 724
+      }
+    },
+    {
+      "post_id": "2108155158660317645",
+      "url": "https://x.com/wlzh/status/2108155158660317645",
+      "created_at": "2026-10-08T11:18:52Z",
+      "text": "https://t.co/ayaFPq0Oxl",
+      "original_text": "https://t.co/ayaFPq0Oxl",
+      "translation_zh": "链接：https://t.co/ayaFPq0Oxl",
+      "translation_status": "translated",
+      "author_name": "M.",
+      "author_handle": "wlzh",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1971564093330100224/LUdVXeKz_normal.jpg",
+      "author_followers": 15690,
+      "author_following": 529,
+      "author_bio": "🎯 AI玩家&AI硬件",
+      "author_location": null,
+      "author_joined_at": "2009-03-26T01:31:32Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/xpzouying/xiaohongshu-mcp"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 159
+      }
+    },
+    {
+      "post_id": "2108173188220035198",
+      "url": "https://x.com/xiexieyixin/status/2108173188220035198",
+      "created_at": "2026-10-08T12:30:30Z",
+      "text": "@wlzh cookie 存哪 这要是泄露号就没了",
+      "original_text": "@wlzh cookie 存哪 这要是泄露号就没了",
+      "translation_zh": "@wlzh cookie 存哪 这要是泄露号就没了",
+      "translation_status": "source_chinese",
+      "author_name": "风中浪客",
+      "author_handle": "xiexieyixin",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1933163868311973888/CelxLGvL_normal.jpg",
+      "author_followers": 5512,
+      "author_following": 7497,
+      "author_bio": "Web3 战略思想家 | 虚拟货币生态系统长期主义观察者 | 区块链基础设施哲学实践者与分布式治理探索者\nai资源交流群：https://t.co/xeGIUsaeDJ\n在去中心化范式转型的浪潮中，以代码为信仰、以协议为桥梁，持续探寻价值传递的本质、人类协作的新边界，以及数字时代永恒价值的确定性。",
+      "author_location": "東京 千代田区",
+      "author_joined_at": "2018-02-23T03:11:47Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 17
+      }
+    },
+    {
+      "post_id": "2108339736222023906",
+      "url": "https://x.com/Thomas3cnl/status/2108339736222023906",
+      "created_at": "2026-10-08T23:32:18Z",
+      "text": "@wlzh Cookie 存下来也会过期。自动任务遇到登录失效时，最好停下来提醒，别当成普通接口报错一直重试。",
+      "original_text": "@wlzh Cookie 存下来也会过期。自动任务遇到登录失效时，最好停下来提醒，别当成普通接口报错一直重试。",
+      "translation_zh": "@wlzh Cookie 存下来也会过期。自动任务遇到登录失效时，最好停下来提醒，别当成普通接口报错一直重试。",
+      "translation_status": "source_chinese",
+      "author_name": "辛安",
+      "author_handle": "Thomas3cnl",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2105290616389488640/2FQ2BVkb_normal.jpg",
+      "author_followers": 311,
+      "author_following": 563,
+      "author_bio": "VPS 运维实战记录 | 反向隧道 / 监控告警 / AI agent 玩家",
+      "author_location": null,
+      "author_joined_at": "2026-04-20T05:05:13Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 6
+      }
+    }
+  ]
+}

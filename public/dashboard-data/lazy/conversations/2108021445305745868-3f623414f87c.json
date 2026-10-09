@@ -1,0 +1,225 @@
+{
+  "conversation_id": "2108021445305745868",
+  "anchor_post_id": "2108021445305745868",
+  "summary_zh": "前文作者讲国庆用 Codex、Claude Code 做 AI 视频，晒小红书曝光/播放/涨粉数据，并开源 11 个视频制作 Skills。收录帖把话题落到具体工具与使用体验：AI 写稿不难，难在脚本、分镜、字幕、封面联动和工作流稳定。后续有人认同痛点、建议记录依赖，也有人质疑曝光转粉低。上下文显示讨论基于实操，情绪偏正向。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2108021445305745868",
+      "url": "https://x.com/eazymoney888/status/2108021445305745868",
+      "created_at": "2026-10-08T02:27:32Z",
+      "text": "国庆几天没怎么休息，一直在折腾 Codex、Claude Code 和 AI 视频制作。\n\n没想到折腾出了点意外收获。\n\n小红书近 30 天曝光 1206 万，播放 275 万。国庆这几天自己统计涨粉大约 2000。\n\n数据截图放下面，省得被说吹牛。\n\n先说结论：AI 确实把个人做内容的门槛拉低了，但真正折腾下来发现，最麻烦的根本不是让 AI 写稿，而是怎么让它稳定地把一条视频做完。\n\n之前遇到的问题挺多：\n\nAI 写的稿子看起来很完整，实际经不起事实核查。\n资料、脚本、分镜、配音、字幕之间经常对不上。\n改了几句话，后面的字幕、封面、镜头又得重新折腾。\n有时候模型生成了一堆东西，最后连哪个才是最终版本都搞不清楚。\n\n于是国庆期间索性把自己的视频制作流程拆成了一套 Skills。\n\n目前开源了 11 个，主要包括：\n\n资料和素材索引\n基于证据的故事脚本\n视频分镜与素材规划\n机制解释动画\nAI 概念镜头规划\n配音与字幕同步\n封面设计及独立审查\n成片质检和发布文案\n\n支持 Codex、Claude Code，以及兼容 SKILL.md 的 Agent。\n\n它不是那种输入一句话就全自动出大片的项目，更像是一套给 AI Agent 用的视频制作 SOP。\n\n每个 Skill 只负责一个明确任务，留下对应产物，方便下一步接着干，也方便发现问题后局部重做。\n\n仓库地址：\n\nhttps://t.co/HVn2PyayRl\n\nMIT 协议，免费开源，可以按需安装单个 Skill，也可以组合使用。\n\n目前还在持续完善，欢迎大家拍砖、提 Issue，特别想听听有没有更好的多 Agent 协作和视频工作流思路。\n\n另外说点题外话。\n\n最近也在认真折腾 X，发现技术圈一个挺有意思的现象：\n\n很多人能花三天写出一个不错的开源项目，却不愿意花三分钟介绍自己做了什么。\n\n我自己以前也是这样。\n\n现在开始尝试把开发过程、AI 实验、踩坑经验分享到 X，顺便认识更多做独立开发、AI Agent 和开源项目的人。\n\n我的 X：\nhttps://t.co/Fjm7mb8VfD\nV 站有没有同样在经营 X 的朋友？\n\n欢迎留下你的 GitHub、X 或者最近在做的项目，有意思的我都会去看看。\n\n最后想讨论一个问题：\n\n当 AI 把内容制作成本压到越来越低，未来真正值钱的，是会写代码、会做内容，还是知道什么东西值得做？",
+      "original_text": "国庆几天没怎么休息，一直在折腾 Codex、Claude Code 和 AI 视频制作。\n\n没想到折腾出了点意外收获。\n\n小红书近 30 天曝光 1206 万，播放 275 万。国庆这几天自己统计涨粉大约 2000。\n\n数据截图放下面，省得被说吹牛。\n\n先说结论：AI 确实把个人做内容的门槛拉低了，但真正折腾下来发现，最麻烦的根本不是让 AI 写稿，而是怎么让它稳定地把一条视频做完。\n\n之前遇到的问题挺多：\n\nAI 写的稿子看起来很完整，实际经不起事实核查。\n资料、脚本、分镜、配音、字幕之间经常对不上。\n改了几句话，后面的字幕、封面、镜头又得重新折腾。\n有时候模型生成了一堆东西，最后连哪个才是最终版本都搞不清楚。\n\n于是国庆期间索性把自己的视频制作流程拆成了一套 Skills。\n\n目前开源了 11 个，主要包括：\n\n资料和素材索引\n基于证据的故事脚本\n视频分镜与素材规划\n机制解释动画\nAI 概念镜头规划\n配音与字幕同步\n封面设计及独立审查\n成片质检和发布文案\n\n支持 Codex、Claude Code，以及兼容 SKILL.md 的 Agent。\n\n它不是那种输入一句话就全自动出大片的项目，更像是一套给 AI Agent 用的视频制作 SOP。\n\n每个 Skill 只负责一个明确任务，留下对应产物，方便下一步接着干，也方便发现问题后局部重做。\n\n仓库地址：\n\nhttps://t.co/HVn2PyayRl\n\nMIT 协议，免费开源，可以按需安装单个 Skill，也可以组合使用。\n\n目前还在持续完善，欢迎大家拍砖、提 Issue，特别想听听有没有更好的多 Agent 协作和视频工作流思路。\n\n另外说点题外话。\n\n最近也在认真折腾 X，发现技术圈一个挺有意思的现象：\n\n很多人能花三天写出一个不错的开源项目，却不愿意花三分钟介绍自己做了什么。\n\n我自己以前也是这样。\n\n现在开始尝试把开发过程、AI 实验、踩坑经验分享到 X，顺便认识更多做独立开发、AI Agent 和开源项目的人。\n\n我的 X：\nhttps://t.co/Fjm7mb8VfD\nV 站有没有同样在经营 X 的朋友？\n\n欢迎留下你的 GitHub、X 或者最近在做的项目，有意思的我都会去看看。\n\n最后想讨论一个问题：\n\n当 AI 把内容制作成本压到越来越低，未来真正值钱的，是会写代码、会做内容，还是知道什么东西值得做？",
+      "translation_zh": "国庆几天没怎么休息，一直在折腾 Codex、Claude Code 和 AI 视频制作。\n\n没想到折腾出了点意外收获。\n\n小红书近 30 天曝光 1206 万，播放 275 万。国庆这几天自己统计涨粉大约 2000。\n\n数据截图放下面，省得被说吹牛。\n\n先说结论：AI 确实把个人做内容的门槛拉低了，但真正折腾下来发现，最麻烦的根本不是让 AI 写稿，而是怎么让它稳定地把一条视频做完。\n\n之前遇到的问题挺多：\n\nAI 写的稿子看起来很完整，实际经不起事实核查。\n资料、脚本、分镜、配音、字幕之间经常对不上。\n改了几句话，后面的字幕、封面、镜头又得重新折腾。\n有时候模型生成了一堆东西，最后连哪个才是最终版本都搞不清楚。\n\n于是国庆期间索性把自己的视频制作流程拆成了一套 Skills。\n\n目前开源了 11 个，主要包括：\n\n资料和素材索引\n基于证据的故事脚本\n视频分镜与素材规划\n机制解释动画\nAI 概念镜头规划\n配音与字幕同步\n封面设计及独立审查\n成片质检和发布文案\n\n支持 Codex、Claude Code，以及兼容 SKILL.md 的 Agent。\n\n它不是那种输入一句话就全自动出大片的项目，更像是一套给 AI Agent 用的视频制作 SOP。\n\n每个 Skill 只负责一个明确任务，留下对应产物，方便下一步接着干，也方便发现问题后局部重做。\n\n仓库地址：\n\nhttps://t.co/HVn2PyayRl\n\nMIT 协议，免费开源，可以按需安装单个 Skill，也可以组合使用。\n\n目前还在持续完善，欢迎大家拍砖、提 Issue，特别想听听有没有更好的多 Agent 协作和视频工作流思路。\n\n另外说点题外话。\n\n最近也在认真折腾 X，发现技术圈一个挺有意思的现象：\n\n很多人能花三天写出一个不错的开源项目，却不愿意花三分钟介绍自己做了什么。\n\n我自己以前也是这样。\n\n现在开始尝试把开发过程、AI 实验、踩坑经验分享到 X，顺便认识更多做独立开发、AI Agent 和开源项目的人。\n\n我的 X：\nhttps://t.co/Fjm7mb8VfD\nV 站有没有同样在经营 X 的朋友？\n\n欢迎留下你的 GitHub、X 或者最近在做的项目，有意思的我都会去看看。\n\n最后想讨论一个问题：\n\n当 AI 把内容制作成本压到越来越低，未来真正值钱的，是会写代码、会做内容，还是知道什么东西值得做？",
+      "translation_status": "source_chinese",
+      "author_name": "周周聊搞钱",
+      "author_handle": "eazymoney888",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2089399841625653248/Ygfb6xm3_normal.jpg",
+      "author_followers": 1080,
+      "author_following": 981,
+      "author_bio": "法学生→科技从业者 → 商业内容创作者 \n关注 AI、科技与商业正在发生的变化（搞钱xHustle）\n分享趋势、公司、产品，以及背后的商业逻辑 \nBuilding 长青科技｜长期主义者｜开源精神忠实拥护者\n\nAI · Business · Finance · Philosophy · Life⁠",
+      "author_location": "San Jose, California, USA",
+      "author_joined_at": "2023-07-26T02:48:44Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/Ucmp0001/video-production-skills",
+        "https://x.com/eazymoney888"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUEyOwEbsAAqEy0.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUEyOwEbsAAqEy0.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUEyOwEbsAAqEy0.jpg",
+          "expanded_url": "https://x.com/eazymoney888/status/2108021445305745868/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 4,
+        "reposts": 1,
+        "replies": 6,
+        "quotes": 0,
+        "bookmarks": 2,
+        "views": 442
+      }
+    },
+    {
+      "post_id": "2108021513748451388",
+      "url": "https://x.com/eazymoney888/status/2108021513748451388",
+      "created_at": "2026-10-08T02:27:48Z",
+      "text": "另外，有没有 V 友也在 X 上分享 AI、独立开发或者开源项目？\n\n最近开始认真经营 X，想多认识一些真正在动手做东西的人。\n\n我的：https://t.co/8DV8IbPoMQ\n\n欢迎丢自己的账号或者 GitHub 项目过来，互相交流下。技术人做东西很厉害，但也得让好东西被更多人看到。",
+      "original_text": "另外，有没有 V 友也在 X 上分享 AI、独立开发或者开源项目？\n\n最近开始认真经营 X，想多认识一些真正在动手做东西的人。\n\n我的：https://t.co/8DV8IbPoMQ\n\n欢迎丢自己的账号或者 GitHub 项目过来，互相交流下。技术人做东西很厉害，但也得让好东西被更多人看到。",
+      "translation_zh": "另外，有没有 V 友也在 X 上分享 AI、独立开发或者开源项目？\n\n最近开始认真经营 X，想多认识一些真正在动手做东西的人。\n\n我的：https://t.co/8DV8IbPoMQ\n\n欢迎丢自己的账号或者 GitHub 项目过来，互相交流下。技术人做东西很厉害，但也得让好东西被更多人看到。",
+      "translation_status": "source_chinese",
+      "author_name": "周周聊搞钱",
+      "author_handle": "eazymoney888",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2089399841625653248/Ygfb6xm3_normal.jpg",
+      "author_followers": 1080,
+      "author_following": 981,
+      "author_bio": "法学生→科技从业者 → 商业内容创作者 \n关注 AI、科技与商业正在发生的变化（搞钱xHustle）\n分享趋势、公司、产品，以及背后的商业逻辑 \nBuilding 长青科技｜长期主义者｜开源精神忠实拥护者\n\nAI · Business · Finance · Philosophy · Life⁠",
+      "author_location": "San Jose, California, USA",
+      "author_joined_at": "2023-07-26T02:48:44Z",
+      "author_verified": false,
+      "links": [
+        "https://x.com/eazymoney888"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 179
+      }
+    },
+    {
+      "post_id": "2108024116506931227",
+      "url": "https://x.com/WukongNumber1/status/2108024116506931227",
+      "created_at": "2026-10-08T02:38:09Z",
+      "text": "@eazymoney888 最麻烦的确实不是写稿，是改一句后面字幕封面全得跟着重来，我这几天拿 Claude Code 搭流程也卡在这儿，拆成一个个 Skill 这思路挺对味。",
+      "original_text": "@eazymoney888 最麻烦的确实不是写稿，是改一句后面字幕封面全得跟着重来，我这几天拿 Claude Code 搭流程也卡在这儿，拆成一个个 Skill 这思路挺对味。",
+      "translation_zh": "@eazymoney888 最麻烦的确实不是写稿，是改一句后面字幕封面全得跟着重来，我这几天拿 Claude Code 搭流程也卡在这儿，拆成一个个 Skill 这思路挺对味。",
+      "translation_status": "source_chinese",
+      "author_name": "Wukong",
+      "author_handle": "WukongNumber1",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2086488271518134272/1UtEQLaC_normal.jpg",
+      "author_followers": 3125,
+      "author_following": 3221,
+      "author_bio": "AI Agent 实战｜Marketing 研究者\n产品踩坑｜账号风控｜工具实测",
+      "author_location": null,
+      "author_joined_at": "2024-12-13T12:48:15Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 25
+      }
+    },
+    {
+      "post_id": "2108032687571341810",
+      "url": "https://x.com/eazymoney888/status/2108032687571341810",
+      "created_at": "2026-10-08T03:12:12Z",
+      "text": "这个是单天的数据",
+      "original_text": "这个是单天的数据",
+      "translation_zh": "这个是单天的数据",
+      "translation_status": "source_chinese",
+      "author_name": "周周聊搞钱",
+      "author_handle": "eazymoney888",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2089399841625653248/Ygfb6xm3_normal.jpg",
+      "author_followers": 1080,
+      "author_following": 981,
+      "author_bio": "法学生→科技从业者 → 商业内容创作者 \n关注 AI、科技与商业正在发生的变化（搞钱xHustle）\n分享趋势、公司、产品，以及背后的商业逻辑 \nBuilding 长青科技｜长期主义者｜开源精神忠实拥护者\n\nAI · Business · Finance · Philosophy · Life⁠",
+      "author_location": "San Jose, California, USA",
+      "author_joined_at": "2023-07-26T02:48:44Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUE8fIFaAAAme2n.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUE8fIFaAAAme2n.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUE8fIFaAAAme2n.jpg",
+          "expanded_url": "https://x.com/eazymoney888/status/2108032687571341810/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 15
+      }
+    },
+    {
+      "post_id": "2108033965391237275",
+      "url": "https://x.com/kanhaishibukan/status/2108033965391237275",
+      "created_at": "2026-10-08T03:17:17Z",
+      "text": "@eazymoney888 1206 万曝光涨 2000 粉 这转化有点低",
+      "original_text": "@eazymoney888 1206 万曝光涨 2000 粉 这转化有点低",
+      "translation_zh": "@eazymoney888 1206 万曝光涨 2000 粉 这转化有点低",
+      "translation_status": "source_chinese",
+      "author_name": "kanbukan(看不看)",
+      "author_handle": "kanhaishibukan",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2096160068547039232/S9O0sx6b_normal.jpg",
+      "author_followers": 161,
+      "author_following": 287,
+      "author_bio": "🎙️ 对话过上百家AI公司CEO/CTO｜AI × 增长 × FDE\n🏢 前大厂腾讯（tx）牛马\n🌐 主理 https://t.co/b00aaX4kJH｜https://t.co/SIQ86Bp1Vi\n🚀 用户增长负责人｜AI × 云计算\n📈 做增长、内容、GEO与产品创新",
+      "author_location": "shenzhen&shanghai",
+      "author_joined_at": "2025-08-13T06:14:00Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 7
+      }
+    },
+    {
+      "post_id": "2108034858086006846",
+      "url": "https://x.com/lijd426/status/2108034858086006846",
+      "created_at": "2026-10-08T03:20:50Z",
+      "text": "@eazymoney888 脚本改一句以后，哪些镜头和字幕得跟着重做，这个依赖关系最值得自动记下来",
+      "original_text": "@eazymoney888 脚本改一句以后，哪些镜头和字幕得跟着重做，这个依赖关系最值得自动记下来",
+      "translation_zh": "@eazymoney888 脚本改一句以后，哪些镜头和字幕得跟着重做，这个依赖关系最值得自动记下来",
+      "translation_status": "source_chinese",
+      "author_name": "杂记",
+      "author_handle": "lijd426",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2107466322271686656/S5L9acNp_normal.jpg",
+      "author_followers": 237,
+      "author_following": 317,
+      "author_bio": "程序员，平时折腾 AI 和各种工具。\n记录 AI 做项目管理、销售报表、CAD 的实际过程，也聊工作和生活。\nBTC：资深被套选手🤦‍♂️",
+      "author_location": null,
+      "author_joined_at": "2026-10-06T13:40:56Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 17
+      }
+    },
+    {
+      "post_id": "2108043743077298266",
+      "url": "https://x.com/jackiez000/status/2108043743077298266",
+      "created_at": "2026-10-08T03:56:08Z",
+      "text": "@eazymoney888 AI 视频实操者👍👍👍",
+      "original_text": "@eazymoney888 AI 视频实操者👍👍👍",
+      "translation_zh": "@eazymoney888 AI 视频实操者👍👍👍",
+      "translation_status": "source_chinese",
+      "author_name": "梭哈弟",
+      "author_handle": "jackiez000",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2105524512473399296/Hbd4Q2gU_normal.jpg",
+      "author_followers": 3431,
+      "author_following": 3418,
+      "author_bio": "梭哈哥小迷弟，梭哈体学习践行者。\n关注梭哈哥：@sh11668，早日暴富。\n\n在X上边学边写。\n想三天三夜，想不通就发，想到什么记什么。\n\nWriting and learning as I go on X.\nPosting whatever comes to mind.\nThanks for following.",
+      "author_location": null,
+      "author_joined_at": "2026-07-19T10:23:13Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 23
+      }
+    }
+  ]
+}
