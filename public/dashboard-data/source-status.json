@@ -1,25 +1,26 @@
 {
   "status": "normal",
-  "raw_posts_collected": 60,
-  "effective_posts": 44,
+  "raw_posts_collected": 74,
+  "effective_posts": 52,
   "brand_breakdown": {
-    "primary_candidates": 43,
-    "primary_effective": 28,
-    "competitor_candidates": 17,
-    "competitor_effective": 16
+    "primary_candidates": 55,
+    "primary_effective": 34,
+    "competitor_candidates": 19,
+    "competitor_effective": 18
   },
   "translation": {
     "counts": {
-      "translated": 43,
-      "source_chinese": 17
+      "translated": 53,
+      "source_chinese": 16,
+      "provider_supplied": 4
     },
-    "missing_count": 0,
-    "fallback_original_count": 0
+    "missing_count": 1,
+    "fallback_original_count": 1
   },
   "notes": [
     "Public social data collection is active. Review duplicate rate and relevance regularly.",
     "Bookmarks are collected only when the data source provides them.",
     "Quote counts are treated as public propagation signals.",
-    "Chinese translation coverage is complete."
+    "Chinese translation unavailable for 1 posts; original text is shown as fallback."
   ]
 }
