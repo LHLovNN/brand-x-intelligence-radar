@@ -1,0 +1,3360 @@
+{
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14T03:01:13Z",
+  "generated_at_label": "2026-10-14 11:01 BJT",
+  "window_label": "2026-10-13 08:00 BJT - 2026-10-14 08:00 BJT",
+  "metrics": {
+    "effective_intelligence": 6,
+    "high_risk": 0,
+    "needs_review": 0,
+    "primary_volume": 37,
+    "primary_candidate_volume": 44,
+    "competitor_volume": 0,
+    "negative_share": 33
+  },
+  "source_status": {
+    "status": "normal",
+    "raw_posts_collected": 44,
+    "effective_posts": 37,
+    "brand_breakdown": {
+      "primary_candidates": 44,
+      "primary_effective": 37,
+      "competitor_candidates": 0,
+      "competitor_effective": 0
+    },
+    "translation": {
+      "counts": {
+        "translated": 31,
+        "source_chinese": 13
+      },
+      "missing_count": 0,
+      "fallback_original_count": 0
+    },
+    "notes": [
+      "Public social data collection is active. Review duplicate rate and relevance regularly.",
+      "Bookmarks are collected only when the data source provides them.",
+      "Quote counts are treated as public propagation signals.",
+      "Chinese translation coverage is complete."
+    ]
+  },
+  "collection_status": {
+    "status": "partial",
+    "warnings": [
+      "Collection stopped early after reaching a protective runtime threshold."
+    ],
+    "translation": {
+      "configured": true,
+      "counts": {
+        "translated": 31,
+        "source_chinese": 13
+      },
+      "missing_count": 0,
+      "fallback_original_count": 0
+    }
+  },
+  "executive_summary": {
+    "headline": "今日最高优先级主品牌舆情为：Competitor comparison and substitution signals。",
+    "risk": "Overall risk is medium with IPS 74.",
+    "action": "建议动作：竞品对照观察。样例竞品基线讨论涉及 general shopping experience。"
+  },
+  "competitor": {
+    "brand": "competitor",
+    "volume": 0,
+    "sentiment": {
+      "negative": 0,
+      "neutral": 0,
+      "positive": 0
+    },
+    "top_terms": [],
+    "top_posts": [],
+    "anomalies": []
+  },
+  "featured_items": [
+    {
+      "id": "featured-primary-cluster-004",
+      "brand": "primary",
+      "cluster_id": "primary-signal-004",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @AlertEtGo",
+      "author_name": "Alert&Go",
+      "author_handle": "AlertEtGo",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1686708896121888769/h4sv-Env_normal.jpg",
+      "author_followers": 168158,
+      "author_following": 1376,
+      "author_bio": null,
+      "author_location": "France",
+      "author_joined_at": "2015-06-07T09:34:27Z",
+      "author_verified": false,
+      "post_url": "https://x.com/AlertEtGo/status/2109932778804461616",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109932778804461616",
+      "conversation_context": {},
+      "created_at": "2026-10-13T09:02:29Z",
+      "language": "fr",
+      "title": "Product, deal and availability discussion",
+      "display_title": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "original_text": "HORI Instrument ocarina du temps électrique pour Nintendo Switch 2 | Consoles Nintendo Switch est dispo sur JoyBuy à 69.99€ !\n►  https://t.co/KsFMU27ox9 https://t.co/gIwCsx95Qt",
+      "translation_zh": "HORI 时之笛电子乐器，适用于 Nintendo Switch 2 | Nintendo Switch 主机已在 JoyBuy 上架，售价 69.99€！\n► awin1.com/cread.php",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "links": [
+        "https://www.awin1.com/cread.php?awinmid=123928&awinaffid=300117&platform=dl&ued=https%3A%2F%2Fwww.joybuy.fr%2Fdp%2Fhori-instrument-ocarina-du-temps-%C3%A9lectrique%2F100024175008686"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUf8robXAAAJPvz.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUf8robXAAAJPvz.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUf8robXAAAJPvz.jpg",
+          "expanded_url": "https://x.com/AlertEtGo/status/2109932778804461616/photo/1"
+        }
+      ],
+      "score": {
+        "ips": 71,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 60,
+        "current_impact": 54,
+        "future_potential": 78,
+        "credibility": 86,
+        "business_impact": 50,
+        "urgency": 49,
+        "sentiment": "positive",
+        "confidence": 0.81,
+        "recommended_action": "传播机会",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "product_interest",
+          "promotion"
+        ],
+        "special_flags": [
+          "high_influence_account"
+        ],
+        "explanation": "商品、优惠或库存信息可反映自然需求与转化入口，综合优先级 71。"
+      },
+      "score_value": 71,
+      "score_label": "IPS",
+      "tags": [
+        "product_deal",
+        "product_interest",
+        "promotion",
+        "高潜传播",
+        "高影响力账号"
+      ],
+      "metrics": {
+        "total_likes": 15,
+        "total_reposts": 1,
+        "total_replies": 4,
+        "total_quotes": 0,
+        "total_bookmarks": 2,
+        "total_views": 15356,
+        "max_author_followers": 168158,
+        "public_interactions": 20
+      },
+      "post_metrics": {
+        "likes": 8,
+        "reposts": 1,
+        "replies": 4,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 6690
+      },
+      "source_count": 10,
+      "related_sources": 9,
+      "selected_reason": "内容指向价格促销与导购：内容强调优惠、低价、券包或导购入口；作者具备较高影响力（168158 followers），当前 13 次赞评转引、6690 浏览，同日相似讨论 10 条；研判：可评估是否存在可借势传播的价格/活动卖点。",
+      "recommended_action": "传播机会",
+      "href": "",
+      "external_href": "https://x.com/AlertEtGo/status/2109932778804461616",
+      "sentiment": "positive",
+      "level": "medium"
+    },
+    {
+      "id": "featured-primary-cluster-001",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @StockCheckerUK",
+      "author_name": "Stock Checker UK",
+      "author_handle": "StockCheckerUK",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1477936510284570625/9vJwgJfS_normal.jpg",
+      "author_followers": 38010,
+      "author_following": 3,
+      "author_bio": null,
+      "author_location": "United Kingdom",
+      "author_joined_at": "2021-03-02T15:14:07Z",
+      "author_verified": false,
+      "post_url": "https://x.com/StockCheckerUK/status/2110034053667733694",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110034053667733694",
+      "conversation_context": {},
+      "created_at": "2026-10-13T15:44:55Z",
+      "language": "en",
+      "title": "Corporate, market and strategy discussion",
+      "display_title": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "original_text": "⚡ Unihertz Titan 2 Elite 256GB 5G Smartphone is now just £459.99 on Joybuy, down from £589.99!\n\n&gt; https://t.co/cVO4Qs3iOL https://t.co/cN0rykiLaJ",
+      "translation_zh": "⚡ Unihertz Titan 2 Elite 256GB 5G Smartphone 现在在 Joybuy 仅售 £459.99，原价 £589.99！\n\n> stock-checker.com/deals",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "links": [
+        "https://stock-checker.com/deals/unihertz-titan-2-elite-256gb-5g-smartphone-973083"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUhYn7sXYAA2CcW.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUhYn7sXYAA2CcW.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUhYn7sXYAA2CcW.jpg",
+          "expanded_url": "https://x.com/StockCheckerUK/status/2110034053667733694/photo/1"
+        }
+      ],
+      "score": {
+        "ips": 66,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 48,
+        "current_impact": 38,
+        "future_potential": 70,
+        "credibility": 86,
+        "business_impact": 56,
+        "urgency": 47,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "背景观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "corporate_context"
+        ],
+        "special_flags": [],
+        "explanation": "公司、资本市场或战略背景信息对品牌心智有间接影响，当前综合优先级为 66。"
+      },
+      "score_value": 66,
+      "score_label": "IPS",
+      "tags": [
+        "company_market",
+        "corporate_context",
+        "高影响力账号"
+      ],
+      "metrics": {
+        "total_likes": 1,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 2478,
+        "max_author_followers": 38010,
+        "public_interactions": 1
+      },
+      "post_metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 2058
+      },
+      "source_count": 5,
+      "related_sources": 4,
+      "selected_reason": "内容指向公司/资本市场信息：内容涉及公司战略、资本市场、行业报告或管理层动态；作者具备较高影响力（38010 followers），当前 0 次赞评转引、2058 浏览，同日相似讨论 5 条；研判：对品牌心智有间接影响，应与消费者体验类舆情分开阅读。",
+      "recommended_action": "背景观察",
+      "href": "",
+      "external_href": "https://x.com/StockCheckerUK/status/2110034053667733694",
+      "sentiment": "neutral",
+      "level": "medium"
+    },
+    {
+      "id": "featured-primary-cluster-005",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @etailment",
+      "author_name": "etailment",
+      "author_handle": "etailment",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2077769004169469952/5ucSJ3jY_normal.png",
+      "author_followers": 6298,
+      "author_following": 916,
+      "author_bio": null,
+      "author_location": "Frankfurt am Main, Deutschland",
+      "author_joined_at": "2011-10-27T07:55:25Z",
+      "author_verified": false,
+      "post_url": "https://x.com/etailment/status/2109918920962433104",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109918920962433104",
+      "conversation_context": {},
+      "created_at": "2026-10-13T08:07:25Z",
+      "language": "de",
+      "title": "Regulatory and market-access scrutiny around 主品牌",
+      "display_title": "相关讨论涉及 主品牌 在海外市场的监管审查、并购交易或市场准入风险。",
+      "original_text": "Handelsdeals werden zur Infrastrukturprüfung.\n\nÖsterreich gibt grünes Licht für die Übernahme der MediaMarkt-Mutter Ceconomy durch https://t.co/JKtFbznMbn. Das Ja ist an Auflagen zu Daten, Lieferketten und sicherheitsrelevanten Personalentscheidungen geknüpft.\n\nFür Händler reicht das Signal über den einzelnen Deal hinaus. Wer Kundenzugang, Sortimente, Logistik und Datenbestände übernimmt, kauft nicht nur Umsatz – sondern rückt in Fragen nationaler und europäischer Kontrolle.\n\nIn Österreich betreibt MediaMarkt 56 Märkte mit rund 2.400 Beschäftigten. Im Geschäftsjahr 2025/26 lag der Umsatz dort bei 1,3 Mrd. Euro. Das ist groß genug, um politisch relevant zu sein, aber klein genug, um die Auflagen als Blaupause zu lesen.\n\nOffen bleibt Brüssel: Die EU-Kommission will bis zum 4. November entscheiden. Erst dann zeigt sich, wie eng der europäische Rahmen für chinesisches Kapital im Handelsgeschäft gezogen wird.\n\nDie Konsequenz: Händler sollten Datenhoheit, Lieferketten und Kontrollrechte bei M&A und Partnerschaften nicht als Legal-Anhang behandeln. Wie sauber wären solche Auflagen in Ihrem Unternehmen operativ abbildbar?",
+      "translation_zh": "贸易交易正在变成基础设施审查。\n\n奥地利为 JD.com 收购 MediaMarkt 母公司 Ceconomy 开了绿灯。该批准附带了有关数据、供应链以及与安全相关的人事决策的条件。\n\n对零售商而言，这一信号的意义超出了单笔交易。谁接管客户入口、商品品类、物流和数据资产，买下的就不只是营收——而是进入了国家和欧洲层面的监管议题。\n\n在奥地利，MediaMarkt 运营着 56 家门店，约有 2,400 名员工。在 2025/26 财年，其在当地的营收为 13 亿欧元。这一规模大到足以具有政治相关性，但又小到足以让这些条件被视作蓝图。\n\n布鲁塞尔方面仍悬而未决：欧盟委员会希望在 11 月 4 日前作出决定。只有到那时，才会看出欧洲对中国资本进入零售业务所划定的框架有多严格。\n\n结论是：零售商在并购和合作伙伴关系中，不应把数据主权、供应链和控制权视为法律附件来处理。在您的企业中，这类条件在运营层面能被多干净利落地落实？",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论涉及 主品牌 在海外市场的监管审查、并购交易或市场准入风险。",
+      "links": [
+        "http://JD.com"
+      ],
+      "media": [],
+      "score": {
+        "ips": 66,
+        "level": "medium",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 82,
+        "current_impact": 27,
+        "future_potential": 55,
+        "credibility": 66,
+        "business_impact": 90,
+        "urgency": 88,
+        "sentiment": "negative",
+        "confidence": 0.81,
+        "recommended_action": "管理层同步",
+        "risk_labels": [
+          "regulatory",
+          "market_access",
+          "acquisition"
+        ],
+        "opportunity_labels": [],
+        "special_flags": [],
+        "explanation": "监管与并购审查影响海外市场准入和品牌信任，当前影响力 27，可信度 66，建议纳入管理层视野。"
+      },
+      "score_value": 66,
+      "score_label": "IPS",
+      "tags": [
+        "regulatory",
+        "market_access",
+        "acquisition"
+      ],
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 1,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 38,
+        "max_author_followers": 6298,
+        "public_interactions": 1
+      },
+      "post_metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 38
+      },
+      "source_count": 1,
+      "related_sources": 0,
+      "selected_reason": "内容指向监管/并购风险：内容涉及海外监管审查、并购交易或市场准入风险；当前 1 次赞评转引、38 浏览；研判：这类舆情可能影响管理层判断、市场信任和欧洲业务推进，应从普通消费体验中单独拎出。",
+      "recommended_action": "管理层同步",
+      "href": "",
+      "external_href": "https://x.com/etailment/status/2109918920962433104",
+      "sentiment": "negative",
+      "level": "medium"
+    },
+    {
+      "id": "featured-primary-cluster-003",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @hydrochaeris_4i",
+      "author_name": "水豚啊水豚",
+      "author_handle": "hydrochaeris_4i",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2052505080587284482/FvaJiGtO_normal.jpg",
+      "author_followers": 19,
+      "author_following": 7,
+      "author_bio": null,
+      "author_location": "London, England",
+      "author_joined_at": "2023-07-03T15:23:41Z",
+      "author_verified": false,
+      "post_url": "https://x.com/hydrochaeris_4i/status/2110076610556973165",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110076610556973165",
+      "conversation_context": {},
+      "created_at": "2026-10-13T18:34:01Z",
+      "language": "zh",
+      "title": "General 主品牌 overseas shopping discussion",
+      "display_title": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "original_text": "🐶的日常：\n起因：来拿joybuy的配送商品\n结局：被我按在椅子亲\n\n很喜欢把狗脑袋搂在怀里，闷死算喜丧",
+      "translation_zh": "🐶的日常：\n起因：来拿joybuy的配送商品\n结局：被我按在椅子亲\n\n很喜欢把狗脑袋搂在怀里，闷死算喜丧",
+      "translation_status": "source_chinese",
+      "summary_zh": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "links": [],
+      "media": [],
+      "score": {
+        "ips": 70,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 48,
+        "current_impact": 64,
+        "future_potential": 81,
+        "credibility": 86,
+        "business_impact": 42,
+        "urgency": 45,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "观察",
+        "risk_labels": [],
+        "opportunity_labels": [],
+        "special_flags": [
+          "potential_viral",
+          "high_influence_account"
+        ],
+        "explanation": "该情报与 主品牌 海外购物相关，当前综合优先级为 70。"
+      },
+      "score_value": 70,
+      "score_label": "IPS",
+      "tags": [
+        "general_observation",
+        "高潜传播",
+        "高影响力账号"
+      ],
+      "metrics": {
+        "total_likes": 72,
+        "total_reposts": 7,
+        "total_replies": 35,
+        "total_quotes": 3,
+        "total_bookmarks": 15,
+        "total_views": 28241,
+        "max_author_followers": 180380,
+        "public_interactions": 117
+      },
+      "post_metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 22
+      },
+      "source_count": 17,
+      "related_sources": 16,
+      "selected_reason": "内容指向履约与物流心智：原帖围绕发货、仓库、配送或包裹进度展开；当前传播仍弱，22 浏览且暂无赞评转引，同日相似讨论 17 条；研判：需要判断这是正向履约口碑还是潜在配送投诉。",
+      "recommended_action": "观察",
+      "href": "",
+      "external_href": "https://x.com/hydrochaeris_4i/status/2110076610556973165",
+      "sentiment": "neutral",
+      "level": "medium"
+    },
+    {
+      "id": "featured-primary-cluster-006",
+      "brand": "primary",
+      "cluster_id": "primary-signal-006",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @bbrlfh",
+      "author_name": "火星网友",
+      "author_handle": "bbrlfh",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2095322636104708096/YfwYVALk_normal.jpg",
+      "author_followers": 60,
+      "author_following": 526,
+      "author_bio": null,
+      "author_location": "火星",
+      "author_joined_at": "2015-07-24T13:30:16Z",
+      "author_verified": false,
+      "post_url": "https://x.com/bbrlfh/status/2110026972697133513",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110026972697133513",
+      "conversation_context": {},
+      "created_at": "2026-10-13T15:16:47Z",
+      "language": "zh",
+      "title": "Trust, safety and authenticity concerns",
+      "display_title": "相关讨论涉及信任、安全、真假或隐私相关担忧。",
+      "original_text": "DNS泄漏？\n\n用这个网站检测：https://t.co/c69mpOmWwy\n列表里没有出现大陆国旗，就说明你的 DNS 是安全的！\nwebrtc：https://t.co/wRIPuhGU9G\n IPv6泄漏检测：https://t.co/zoRh7GVckF\n\n圈x的可以改一下\n\n[dns]\n# 禁用系统运营商默认 DNS（防止运营商劫持与偷跑泄漏）\nno-system\n\n# 禁用 IPv6，避免双栈泄漏\nno-ipv6\n\n# 国内大厂核心域名与 CDN，指定阿里/腾讯极速解析\nserver=/*.cn/223.5.5.5\nserver=/*.alicdn.com/223.5.5.5\nserver=/*.taobao.com/223.5.5.5\nserver=/*.alipay.com/223.5.5.5\nserver=/*.jd.com/223.5.5.5\nserver=/*.360buyimg.com/223.5.5.5\nserver=/*.qq.com/119.29.29.29\nserver=/*.tencent.com/119.29.29.29\nserver=/*.weixin.com/119.29.29.29\nserver=/*.qpic.cn/119.29.29.29\nserver=/*.bilibili.com/119.29.29.29\nserver=/*.bilivideo.com/119.29.29.29\nserver=/*.bytedance.com/223.5.5.5\nserver=/*.byteimg.com/223.5.5.5\nserver=/*.baidu.com/223.5.5.5\nserver=/*.163.com/223.5.5.5\nserver=/*.icloud.com/119.29.29.29\nserver=/*.icloud.com.cn/119.29.29.29\n\n# 全局默认 DNS 仅保留国内公共 DNS（只用于分流命中 Direct 的域名）\nserver=223.5.5.5\nserver=119.29.29.29\n\nalias = /iosapps.itunes.apple.com/iosapps.itunes.apple.com.download.ks-cdn.com\n\n[filter_local]\nhost-suffix, https://t.co/kI1X2s9brf, direct\n# 1. 明确直连的常用国内大厂（放在最顶部，瞬间直连，毫无延迟）\nhost-suffix, cn, direct\nhost-keyword, baidu, direct\nhost-keyword, alibaba, direct\nhost-keyword, alipay, direct\nhost-keyword, taobao, direct\nhost-keyword, jd, direct\nhost-keyword, 360buyimg, direct\nhost-keyword, tencent, direct\nhost-keyword, weixin, direct\nhost-keyword, qq, direct\nhost-keyword, bilibili, direct\nhost-keyword, byteimg, direct\nhost-keyword, bytedance, direct\nhost-suffix, https://t.co/AyINx8HfCK, direct\nhost-suffix, https://t.co/rO9Ilpk3Hs, direct\n\n# 2. 局域网直连 (Local IP)\nip-cidr, 10.0.0.0/8, direct\nip-cidr, 127.0.0.0/8, direct\nip-cidr, 172.16.0.0/12, direct\nip-cidr, 192.168.0.0/16, direct\nip-cidr, 224.0.0.0/24, direct\nip-cidr, 182.254.116.0/24, direct\n\n# > 核心防泄露：拦截所有未匹配的域名直接走代理节点远程解析，禁止本地查询 IP\nhost-keyword, ., 兜底分流\n# 3. 国内常见 IP 段快速直连（此时只处理纯 IP 流量）\ngeoip, cn, direct\n\n# 4. 关键：兜底全部走节点远程解析（绝不让未匹配域名在本地查 IP）\nfinal, 兜底分流",
+      "translation_zh": "DNS泄漏？\n\n用这个网站检测：browserleaks.com/dns\n列表里没有出现大陆国旗，就说明你的 DNS 是安全的！\nwebrtc：browserleaks.com/webrtc\n IPv6泄漏检测：browserleaks.com/ip\n\n圈x的可以改一下\n\n[dns]\n# 禁用系统运营商默认 DNS（防止运营商劫持与偷跑泄漏）\nno-system\n\n# 禁用 IPv6，避免双栈泄漏\nno-ipv6\n\n# 国内大厂核心域名与 CDN，指定阿里/腾讯极速解析\nserver=/*.cn/223.5.5.5\nserver=/*.alicdn.com/223.5.5.5\nserver=/*.taobao.com/223.5.5.5\nserver=/*.alipay.com/223.5.5.5\nserver=/*.jd.com/223.5.5.5\nserver=/*.360buyimg.com/223.5.5.5\nserver=/*.qq.com/119.29.29.29\nserver=/*.tencent.com/119.29.29.29\nserver=/*.weixin.com/119.29.29.29\nserver=/*.qpic.cn/119.29.29.29\nserver=/*.bilibili.com/119.29.29.29\nserver=/*.bilivideo.com/119.29.29.29\nserver=/*.bytedance.com/223.5.5.5\nserver=/*.byteimg.com/223.5.5.5\nserver=/*.baidu.com/223.5.5.5\nserver=/*.163.com/223.5.5.5\nserver=/*.icloud.com/119.29.29.29\nserver=/*.icloud.com.cn/119.29.29.29\n\n# 全局默认 DNS 仅保留国内公共 DNS（只用于分流命中 Direct 的域名）\nserver=223.5.5.5\nserver=119.29.29.29\n\nalias = /iosapps.itunes.apple.com/iosapps.itunes.apple.com.download.ks-cdn.com\n\n[filter_local]\nhost-suffix, gaiaapp.copm.com.cn direct\n# 1. 明确直连的常用国内大厂（放在最顶部，瞬间直连，毫无延迟）\nhost-suffix, cn, direct\nhost-keyword, baidu, direct\nhost-keyword, alibaba, direct\nhost-keyword, alipay, direct\nhost-keyword, taobao, direct\nhost-keyword, jd, direct\nhost-keyword, 360buyimg, direct\nhost-keyword, tencent, direct\nhost-keyword, weixin, direct\nhost-keyword, qq, direct\nhost-keyword, bilibili, direct\nhost-keyword, byteimg, direct\nhost-keyword, bytedance, direct\nhost-suffix, 163.com direct\nhost-suffix, 126.net direct\n\n# 2. 局域网直连 (Local IP)\nip-cidr, 10.0.0.0/8, direct\nip-cidr, 127.0.0.0/8, direct\nip-cidr, 172.16.0.0/12, direct\nip-cidr, 192.168.0.0/16, direct\nip-cidr, 224.0.0.0/24, direct\nip-cidr, 182.254.116.0/24, direct\n\n# > 核心防泄露：拦截所有未匹配的域名直接走代理节点远程解析，禁止本地查询 IP\nhost-keyword, ., 兜底分流\n# 3. 国内常见 IP 段快速直连（此时只处理纯 IP 流量）\ngeoip, cn, direct\n\n# 4. 关键：兜底全部走节点远程解析（绝不让未匹配域名在本地查 IP）\nfinal, 兜底分流",
+      "translation_status": "source_chinese",
+      "summary_zh": "相关讨论涉及信任、安全、真假或隐私相关担忧。",
+      "links": [
+        "http://browserleaks.com/dns",
+        "http://browserleaks.com/webrtc",
+        "http://browserleaks.com/ip",
+        "http://gaiaapp.copm.com.cn",
+        "http://163.com",
+        "http://126.net"
+      ],
+      "media": [],
+      "score": {
+        "ips": 61,
+        "level": "medium",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 74,
+        "current_impact": 25,
+        "future_potential": 48,
+        "credibility": 66,
+        "business_impact": 82,
+        "urgency": 77,
+        "sentiment": "negative",
+        "confidence": 0.81,
+        "recommended_action": "观察",
+        "risk_labels": [
+          "brand_trust",
+          "safety"
+        ],
+        "opportunity_labels": [],
+        "special_flags": [],
+        "explanation": "信任、安全或真实性讨论可能影响品牌可信度，当前影响力 25，未来发酵潜力 48。"
+      },
+      "score_value": 61,
+      "score_label": "IPS",
+      "tags": [
+        "trust_safety",
+        "brand_trust",
+        "safety"
+      ],
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 95,
+        "max_author_followers": 60,
+        "public_interactions": 0
+      },
+      "post_metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 95
+      },
+      "source_count": 1,
+      "related_sources": 0,
+      "selected_reason": "内容指向多平台比价/货架露出：原帖把品牌与其他电商平台并列展示；当前传播仍弱，95 浏览且暂无赞评转引；研判：适合观察品牌在海外用户心智中的货架位置和竞品集合。",
+      "recommended_action": "观察",
+      "href": "",
+      "external_href": "https://x.com/bbrlfh/status/2110026972697133513",
+      "sentiment": "negative",
+      "level": "medium"
+    }
+  ],
+  "hot_topics": [
+    {
+      "rank": 1,
+      "title": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "cluster_id": "primary-signal-004",
+      "score_value": 71,
+      "level": "medium",
+      "source_count": 10,
+      "count_label": "10 条同日相似讨论",
+      "reason": "内容指向价格促销与导购：内容强调优惠、低价、券包或导购入口；作者具备较高影响力（168158 followers），当前 13 次赞评转引、6690 浏览，同日相似讨论 10 条；研判：可评估是否存在可借势传播的价格/活动卖点。"
+    },
+    {
+      "rank": 2,
+      "title": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "cluster_id": "primary-signal-001",
+      "score_value": 66,
+      "level": "medium",
+      "source_count": 5,
+      "count_label": "5 条同日相似讨论",
+      "reason": "内容指向公司/资本市场信息：内容涉及公司战略、资本市场、行业报告或管理层动态；作者具备较高影响力（38010 followers），当前 0 次赞评转引、2058 浏览，同日相似讨论 5 条；研判：对品牌心智有间接影响，应与消费者体验类舆情分开阅读。"
+    },
+    {
+      "rank": 3,
+      "title": "相关讨论涉及 主品牌 在海外市场的监管审查、并购交易或市场准入风险。",
+      "cluster_id": "primary-signal-005",
+      "score_value": 66,
+      "level": "medium",
+      "source_count": 1,
+      "count_label": "公开舆情",
+      "reason": "内容指向监管/并购风险：内容涉及海外监管审查、并购交易或市场准入风险；当前 1 次赞评转引、38 浏览；研判：这类舆情可能影响管理层判断、市场信任和欧洲业务推进，应从普通消费体验中单独拎出。"
+    },
+    {
+      "rank": 4,
+      "title": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "cluster_id": "primary-signal-003",
+      "score_value": 70,
+      "level": "medium",
+      "source_count": 17,
+      "count_label": "17 条同日相似讨论",
+      "reason": "内容指向履约与物流心智：原帖围绕发货、仓库、配送或包裹进度展开；当前传播仍弱，22 浏览且暂无赞评转引，同日相似讨论 17 条；研判：需要判断这是正向履约口碑还是潜在配送投诉。"
+    },
+    {
+      "rank": 5,
+      "title": "相关讨论涉及信任、安全、真假或隐私相关担忧。",
+      "cluster_id": "primary-signal-006",
+      "score_value": 61,
+      "level": "medium",
+      "source_count": 1,
+      "count_label": "公开舆情",
+      "reason": "内容指向多平台比价/货架露出：原帖把品牌与其他电商平台并列展示；当前传播仍弱，95 浏览且暂无赞评转引；研判：适合观察品牌在海外用户心智中的货架位置和竞品集合。"
+    }
+  ],
+  "effective_posts": [
+    {
+      "post_id": "2110146563884646634",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/LoveMyself_24/status/2110146563884646634",
+      "text": "📍 Surabaya, Jawa Timur\n📦 Jastip & GO : linktr.ee/zulfas.stuff\n📝 Bisa personal order dari Taobao, Weidian, Xianyu, XHS/Rednote, JD.com PDD dan Douyin.\n\n#jastipchina #dramachina #jastipmurah #cdrama #jastipchinaindo",
+      "original_text": "📍 Surabaya, Jawa Timur\n📦 Jastip &amp; GO : https://t.co/r72DEuYnsm\n📝 Bisa personal order dari Taobao, Weidian, Xianyu, XHS/Rednote, https://t.co/gv8jBmGnmj, PDD dan Douyin.\n\n#jastipchina #dramachina #jastipmurah #cdrama #jastipchinaindo https://t.co/Kh7UnCxRFW",
+      "links": [
+        "https://linktr.ee/zulfas.stuff",
+        "https://JD.COM"
+      ],
+      "translation_zh": "📍 Surabaya, Jawa Timur\n📦 代购 & GO：linktr.ee/zulfas.stuff\n📝 可以从 Taobao、Weidian、Xianyu、XHS/Rednote、JD.com、PDD 和 Douyin 进行个人下单。\n\n#jastipchina #dramachina #jastipmurah #cdrama #jastipchinaindo",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Zulfa's.Stuff INA GO 🇮🇩",
+      "author_handle": "LoveMyself_24",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2034235090730196992/4UA9NeS4_normal.jpg",
+      "author_followers": 49,
+      "author_following": 52,
+      "author_bio": null,
+      "author_location": "Kota Surabaya, Jawa Timur",
+      "author_joined_at": "2020-05-28T12:12:47Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T23:12:00Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2099190187649904988",
+      "conversation_context": {},
+      "language": "tl",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUi_GEwbYAAz1Ec.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUi_GEwbYAAz1Ec.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUi_GEwbYAAz1Ec.jpg",
+          "expanded_url": "https://x.com/LoveMyself_24/status/2110146563884646634/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HUi_GgFa4AARE42.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUi_GgFa4AARE42.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUi_GgFa4AARE42.jpg",
+          "expanded_url": "https://x.com/LoveMyself_24/status/2110146563884646634/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HUi_G5FbEAAyp2z.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUi_G5FbEAAyp2z.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUi_G5FbEAAyp2z.jpg",
+          "expanded_url": "https://x.com/LoveMyself_24/status/2110146563884646634/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HUi_HTSb0AAnogF.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUi_HTSb0AAnogF.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUi_HTSb0AAnogF.jpg",
+          "expanded_url": "https://x.com/LoveMyself_24/status/2110146563884646634/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 13
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2110131055672144255",
+      "brand": "primary",
+      "cluster_id": "primary-signal-004",
+      "topic": "product_deal",
+      "url": "https://x.com/lesnums/status/2110131055672144255",
+      "text": "🔗 l.lesnumeriques.com/5tt\nLa tablette Tactile Xiaomi Redmi Pad 2 Pro est proposée à 259,90 € chez Joybuy soit une baisse d'environ 39 € sur le prix habituellement constaté.",
+      "original_text": "🔗 https://t.co/ey4ylRpukG\nLa tablette Tactile Xiaomi Redmi Pad 2 Pro est proposée à 259,90 € chez Joybuy soit une baisse d'environ 39 € sur le prix habituellement constaté. https://t.co/7WcnF77kgs",
+      "links": [
+        "https://l.lesnumeriques.com/5tt"
+      ],
+      "translation_zh": "🔗 l.lesnumeriques.com/5tt\nXiaomi Redmi Pad 2 Pro 触控平板电脑在 Joybuy 售价为 259.90 €，比通常观察到的价格下降了约 39 €。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Les Numériques",
+      "author_handle": "lesnums",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1635603257870434306/4aZrFj1Y_normal.jpg",
+      "author_followers": 153284,
+      "author_following": 401,
+      "author_bio": null,
+      "author_location": "Dans nos labos 🔬",
+      "author_joined_at": "2012-02-13T16:31:24Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T22:10:22Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110131055672144255",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUixAbWWoAEob8A.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUixAbWWoAEob8A.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUixAbWWoAEob8A.jpg",
+          "expanded_url": "https://x.com/lesnums/status/2110131055672144255/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 238
+      },
+      "sentiment": "positive",
+      "level": "medium",
+      "score_value": 71,
+      "score_label": "IPS",
+      "matched_terms": [
+        "product_interest",
+        "promotion",
+        "product_deal"
+      ]
+    },
+    {
+      "post_id": "2110131031554527540",
+      "brand": "primary",
+      "cluster_id": "primary-signal-004",
+      "topic": "product_deal",
+      "url": "https://x.com/lesnums_bonplan/status/2110131031554527540",
+      "text": "🔗 l.lesnumeriques.com/Alq\nLa tablette Tactile Xiaomi Redmi Pad 2 Pro est proposée à 259,90 € chez Joybuy soit une baisse d'environ 39 € sur le prix habituellement constaté.",
+      "original_text": "🔗 https://t.co/sttqmAupb5\nLa tablette Tactile Xiaomi Redmi Pad 2 Pro est proposée à 259,90 € chez Joybuy soit une baisse d'environ 39 € sur le prix habituellement constaté. https://t.co/o1lLo4VkE9",
+      "links": [
+        "https://l.lesnumeriques.com/Alq"
+      ],
+      "translation_zh": "🔗 l.lesnumeriques.com/Alq\nXiaomi Redmi Pad 2 Pro 触控平板电脑在 Joybuy 售价为 259.90 €，比通常观察到的价格下降了约 39 €。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Bons Plans High-Tech",
+      "author_handle": "lesnums_bonplan",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1442755465558073348/U98UYg20_normal.png",
+      "author_followers": 10856,
+      "author_following": 29,
+      "author_bio": null,
+      "author_location": "Dans nos labos 🔬",
+      "author_joined_at": "2010-01-21T23:58:50Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T22:10:16Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110131031554527540",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUiw_GrW4AAgz9h.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUiw_GrW4AAgz9h.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUiw_GrW4AAgz9h.jpg",
+          "expanded_url": "https://x.com/lesnums_bonplan/status/2110131031554527540/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 77
+      },
+      "sentiment": "positive",
+      "level": "medium",
+      "score_value": 71,
+      "score_label": "IPS",
+      "matched_terms": [
+        "product_interest",
+        "promotion",
+        "product_deal"
+      ]
+    },
+    {
+      "post_id": "2110130248100835378",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "company_market",
+      "url": "https://x.com/DTradingAcademy/status/2110130248100835378",
+      "text": "Other Hong Kong stocks on Tuesday 10/13. Meituan shares +0.70%, Baidu -0.18%, Tencent -0.14%, Xiaomi Corp +2.12%, JD.com Inc, -3.32%, Kuaishou Technology -0.34%, Xinyi Solar Holdings -1.31%, China's Shanghai +0.10% at 3,800.86, CXMT shares ended down -2.79%.",
+      "original_text": "Other Hong Kong stocks on Tuesday 10/13. Meituan shares +0.70%, Baidu -0.18%, Tencent -0.14%, Xiaomi Corp +2.12%, https://t.co/gU4k3gyZzN Inc, -3.32%, Kuaishou Technology -0.34%, Xinyi Solar Holdings -1.31%, China's Shanghai +0.10% at 3,800.86, CXMT shares ended down -2.79%.",
+      "links": [
+        "https://JD.com"
+      ],
+      "translation_zh": "10/13 周二其他香港股票表现。Meituan 股价 +0.70%，Baidu -0.18%，Tencent -0.14%，Xiaomi Corp +2.12%，JD.com Inc -3.32%，Kuaishou Technology -0.34%，Xinyi Solar Holdings -1.31%，中国上海指数 +0.10%，报 3,800.86，CXMT 股价收跌 -2.79%。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Day Trading Academy",
+      "author_handle": "DTradingAcademy",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/378800000412994280/5661be1a8625bd36406b48f28bf653a0_normal.jpeg",
+      "author_followers": 11155,
+      "author_following": 20,
+      "author_bio": null,
+      "author_location": "Worldwide",
+      "author_joined_at": "2012-03-25T02:20:56Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T22:07:10Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110130248100835378",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 68
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 66,
+      "score_label": "IPS",
+      "matched_terms": [
+        "corporate_context",
+        "company_market"
+      ]
+    },
+    {
+      "post_id": "2110112442650853468",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/pointsdesuture/status/2110112442650853468",
+      "text": "qlqun a déjà commandé joybuy",
+      "original_text": "qlqun a déjà commandé joybuy",
+      "links": [],
+      "translation_zh": "有人已经在 joybuy 下过单了吗",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "蓮屬",
+      "author_handle": "pointsdesuture",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2108672368679714816/iWL90o-b_normal.jpg",
+      "author_followers": 235,
+      "author_following": 112,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2022-11-22T21:25:29Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T20:56:24Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110112442650853468",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 82
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2110109833903108446",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "company_market",
+      "url": "https://x.com/712JIE/status/2110109833903108446",
+      "text": "准备1w本金去撸京东家政赠品\n\n十天收益大约4600元，大致流程如下\n\n65元一瓶的沐浴露送2小时家政\n（2小时家政原价120元）\n\n一个京东号可以下单5瓶\n\n重点是什么？沐浴露要有“过敏无忧”标签\n\n有了这个标签才能实现“0”成本白嫖赠品家政\n\n收到货第八天可以使用赠品家政，家政完成差不多需要俩天，共计十天一个周期\n\n原理是过敏无忧60天之内都可以申请退款，这个申请理由也是相当容易糊弄。随便拍张照片都可以成功。\n\n200元利润哪里来的？有谁需要家政？\n\n第一\n预约一次家政需补20元服务差价\n\n第二\n可以卖给家政公司或者在闲鱼上贩卖\n均价60元左右\n\n利润60-20=40元\n40x5=200元\n一个号200元\n1w本金大概可下单23个号\n那就是23x200=4600元\n\n这利润也是非常可观\n总之本金越多收益越多",
+      "original_text": "准备1w本金去撸京东家政赠品\n\n十天收益大约4600元，大致流程如下\n\n65元一瓶的沐浴露送2小时家政\n（2小时家政原价120元）\n\n一个京东号可以下单5瓶\n\n重点是什么？沐浴露要有“过敏无忧”标签\n\n有了这个标签才能实现“0”成本白嫖赠品家政\n\n收到货第八天可以使用赠品家政，家政完成差不多需要俩天，共计十天一个周期\n\n原理是过敏无忧60天之内都可以申请退款，这个申请理由也是相当容易糊弄。随便拍张照片都可以成功。\n\n200元利润哪里来的？有谁需要家政？\n\n第一\n预约一次家政需补20元服务差价\n\n第二\n可以卖给家政公司或者在闲鱼上贩卖\n均价60元左右\n\n利润60-20=40元\n40x5=200元\n一个号200元\n1w本金大概可下单23个号\n那就是23x200=4600元\n\n这利润也是非常可观\n总之本金越多收益越多",
+      "links": [],
+      "translation_zh": "准备1w本金去撸京东家政赠品\n\n十天收益大约4600元，大致流程如下\n\n65元一瓶的沐浴露送2小时家政\n（2小时家政原价120元）\n\n一个京东号可以下单5瓶\n\n重点是什么？沐浴露要有“过敏无忧”标签\n\n有了这个标签才能实现“0”成本白嫖赠品家政\n\n收到货第八天可以使用赠品家政，家政完成差不多需要俩天，共计十天一个周期\n\n原理是过敏无忧60天之内都可以申请退款，这个申请理由也是相当容易糊弄。随便拍张照片都可以成功。\n\n200元利润哪里来的？有谁需要家政？\n\n第一\n预约一次家政需补20元服务差价\n\n第二\n可以卖给家政公司或者在闲鱼上贩卖\n均价60元左右\n\n利润60-20=40元\n40x5=200元\n一个号200元\n1w本金大概可下单23个号\n那就是23x200=4600元\n\n这利润也是非常可观\n总之本金越多收益越多",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+      "author_name": "Novae7",
+      "author_handle": "712JIE",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2086919959859666944/83pT5aNc_normal.jpg",
+      "author_followers": 593,
+      "author_following": 624,
+      "author_bio": null,
+      "author_location": "Hong Kong",
+      "author_joined_at": "2026-04-22T17:21:51Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T20:46:03Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110109833903108446",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUidqD1bkAAbnbG.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUidqD1bkAAbnbG.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUidqD1bkAAbnbG.jpg",
+          "expanded_url": "https://x.com/712JIE/status/2110109833903108446/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HUidqBJaMAAM3yc.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUidqBJaMAAM3yc.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUidqBJaMAAM3yc.jpg",
+          "expanded_url": "https://x.com/712JIE/status/2110109833903108446/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HUidqBLacAAv2vv.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUidqBLacAAv2vv.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUidqBLacAAv2vv.jpg",
+          "expanded_url": "https://x.com/712JIE/status/2110109833903108446/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HUidqD2aoAAzoPY.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUidqD2aoAAzoPY.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUidqD2aoAAzoPY.jpg",
+          "expanded_url": "https://x.com/712JIE/status/2110109833903108446/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 80
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 66,
+      "score_label": "IPS",
+      "matched_terms": [
+        "corporate_context",
+        "company_market"
+      ]
+    },
+    {
+      "post_id": "2110076610556973165",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/hydrochaeris_4i/status/2110076610556973165",
+      "text": "🐶的日常：\n起因：来拿joybuy的配送商品\n结局：被我按在椅子亲\n\n很喜欢把狗脑袋搂在怀里，闷死算喜丧",
+      "original_text": "🐶的日常：\n起因：来拿joybuy的配送商品\n结局：被我按在椅子亲\n\n很喜欢把狗脑袋搂在怀里，闷死算喜丧",
+      "links": [],
+      "translation_zh": "🐶的日常：\n起因：来拿joybuy的配送商品\n结局：被我按在椅子亲\n\n很喜欢把狗脑袋搂在怀里，闷死算喜丧",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "水豚啊水豚",
+      "author_handle": "hydrochaeris_4i",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2052505080587284482/FvaJiGtO_normal.jpg",
+      "author_followers": 19,
+      "author_following": 7,
+      "author_bio": null,
+      "author_location": "London, England",
+      "author_joined_at": "2023-07-03T15:23:41Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T18:34:01Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110076610556973165",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 22
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2110052950924243282",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/JackieDog11/status/2110052950924243282",
+      "text": "One of the bills looks to manage the issue of skimmers on electronic terminals. Read more about it and the remaining changes to the Business Code: jbwilliams-jd.com/Blog.php",
+      "original_text": "One of the bills looks to manage the issue of skimmers on electronic terminals. Read more about it and the remaining changes to the Business Code: https://t.co/As6oMtGcUb",
+      "links": [
+        "https://jbwilliams-jd.com/Blog.php?Topic=Texas&Subtopic=89th-legislative-session&Blog=4-house-and-senate-bills-that-modifies-the-business-and-commerce-code"
+      ],
+      "translation_zh": "其中一项法案旨在处理电子终端上的盗刷器问题。阅读更多关于该法案以及《Business Code》其余变更的内容：jbwilliams-jd.com/Blog.php",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Jackie Williams",
+      "author_handle": "JackieDog11",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1682046006526099457/jq-j35ZA_normal.jpg",
+      "author_followers": 12,
+      "author_following": 10,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2017-10-04T16:06:06Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T17:00:01Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110052950924243282",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2110051253455868343",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/zweiui/status/2110051253455868343",
+      "text": "卧槽！卧槽！！！\n京东上广东地区买AirPods5可以用国补！！！！！！",
+      "original_text": "卧槽！卧槽！！！\n京东上广东地区买AirPods5可以用国补！！！！！！ https://t.co/37fYs6UEr5",
+      "links": [],
+      "translation_zh": "卧槽！卧槽！！！\n京东上广东地区买AirPods5可以用国补！！！！！！",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "MIss站长",
+      "author_handle": "zweiui",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1122329798070554625/ZZJ3zEiQ_normal.jpg",
+      "author_followers": 14,
+      "author_following": 49,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2019-04-28T02:40:07Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T16:53:16Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110051253455868343",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUhobb6boAA6g1C.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUhobb6boAA6g1C.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUhobb6boAA6g1C.jpg",
+          "expanded_url": "https://x.com/zweiui/status/2110051253455868343/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 18
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2110034053667733694",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "company_market",
+      "url": "https://x.com/StockCheckerUK/status/2110034053667733694",
+      "text": "⚡ Unihertz Titan 2 Elite 256GB 5G Smartphone is now just £459.99 on Joybuy, down from £589.99!\n\n> stock-checker.com/deals",
+      "original_text": "⚡ Unihertz Titan 2 Elite 256GB 5G Smartphone is now just £459.99 on Joybuy, down from £589.99!\n\n&gt; https://t.co/cVO4Qs3iOL https://t.co/cN0rykiLaJ",
+      "links": [
+        "https://stock-checker.com/deals/unihertz-titan-2-elite-256gb-5g-smartphone-973083"
+      ],
+      "translation_zh": "⚡ Unihertz Titan 2 Elite 256GB 5G Smartphone 现在在 Joybuy 仅售 £459.99，原价 £589.99！\n\n> stock-checker.com/deals",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Stock Checker UK",
+      "author_handle": "StockCheckerUK",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1477936510284570625/9vJwgJfS_normal.jpg",
+      "author_followers": 38010,
+      "author_following": 3,
+      "author_bio": null,
+      "author_location": "United Kingdom",
+      "author_joined_at": "2021-03-02T15:14:07Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T15:44:55Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110034053667733694",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUhYn7sXYAA2CcW.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUhYn7sXYAA2CcW.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUhYn7sXYAA2CcW.jpg",
+          "expanded_url": "https://x.com/StockCheckerUK/status/2110034053667733694/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 2058
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 66,
+      "score_label": "IPS",
+      "matched_terms": [
+        "corporate_context",
+        "company_market"
+      ]
+    },
+    {
+      "post_id": "2110033402649088046",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/Jameswang0531/status/2110033402649088046",
+      "text": "这不是黄牛，是平台把黄牛生意收编了。黄牛赚的是信息差和手速，京东这一步是把\"稀缺\"本身做成商品：7,999 买的不是手机，是一个不被插队的资格，而且下单不退。承诺的成本是零，卖的却是真实的钱——8503 人预约说明这门生意成立了：当平台开始卖资格，排队的人就成了它的库存。",
+      "original_text": "这不是黄牛，是平台把黄牛生意收编了。黄牛赚的是信息差和手速，京东这一步是把\"稀缺\"本身做成商品：7,999 买的不是手机，是一个不被插队的资格，而且下单不退。承诺的成本是零，卖的却是真实的钱——8503 人预约说明这门生意成立了：当平台开始卖资格，排队的人就成了它的库存。",
+      "links": [],
+      "translation_zh": "这不是黄牛，是平台把黄牛生意收编了。黄牛赚的是信息差和手速，京东这一步是把\"稀缺\"本身做成商品：7,999 买的不是手机，是一个不被插队的资格，而且下单不退。承诺的成本是零，卖的却是真实的钱——8503 人预约说明这门生意成立了：当平台开始卖资格，排队的人就成了它的库存。",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "热河南路观察者334",
+      "author_handle": "Jameswang0531",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2109730329586257920/IUW6AbrZ_normal.jpg",
+      "author_followers": 849,
+      "author_following": 1337,
+      "author_bio": null,
+      "author_location": "United States",
+      "author_joined_at": "2024-05-31T07:44:43Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T15:42:20Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2110032798656676194",
+      "conversation_id": "2110033402649088046",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 27
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2110032798656676194",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/op7418/status/2110032798656676194",
+      "text": "太狠了，京东自己当黄牛了。\n\n这 7999 只是你有购买的资格，你手机的钱还是得另付",
+      "original_text": "太狠了，京东自己当黄牛了。\n\n这 7999 只是你有购买的资格，你手机的钱还是得另付 https://t.co/ugZeN6lPkt",
+      "links": [],
+      "translation_zh": "太狠了，京东自己当黄牛了。\n\n这 7999 只是你有购买的资格，你手机的钱还是得另付",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "歸藏(guizang.ai)",
+      "author_handle": "op7418",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1636981205504786434/xDl77JIw_normal.jpg",
+      "author_followers": 180380,
+      "author_following": 1311,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2013-08-14T02:18:36Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T15:39:56Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110032798656676194",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUhXpBebcAARMQn.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUhXpBebcAARMQn.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUhXpBebcAARMQn.jpg",
+          "expanded_url": "https://x.com/op7418/status/2110032798656676194/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 17,
+        "reposts": 0,
+        "replies": 25,
+        "quotes": 3,
+        "bookmarks": 7,
+        "views": 24318
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2110031591850598602",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/ayayieuo/status/2110031591850598602",
+      "text": "udh sering nemuin rude buyyer tp ttp sedih aja gt huft (capek jd seller)",
+      "original_text": "udh sering nemuin rude buyyer tp ttp sedih aja gt huft (capek jd seller)",
+      "links": [],
+      "translation_zh": "已经经常遇到粗鲁的买家了，但还是会觉得难过，唉（当卖家好累）",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "aya dipanggil ay",
+      "author_handle": "ayayieuo",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2108837396251070464/IKG4WegP_normal.jpg",
+      "author_followers": 14,
+      "author_following": 149,
+      "author_bio": null,
+      "author_location": "jgnfollow",
+      "author_joined_at": "2023-07-06T11:10:51Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T15:35:08Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110031591850598602",
+      "conversation_context": {},
+      "language": "in",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 12
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2110026972697133513",
+      "brand": "primary",
+      "cluster_id": "primary-signal-006",
+      "topic": "trust_safety",
+      "url": "https://x.com/bbrlfh/status/2110026972697133513",
+      "text": "DNS泄漏？\n\n用这个网站检测：browserleaks.com/dns\n列表里没有出现大陆国旗，就说明你的 DNS 是安全的！\nwebrtc：browserleaks.com/webrtc\n IPv6泄漏检测：browserleaks.com/ip\n\n圈x的可以改一下\n\n[dns]\n# 禁用系统运营商默认 DNS（防止运营商劫持与偷跑泄漏）\nno-system\n\n# 禁用 IPv6，避免双栈泄漏\nno-ipv6\n\n# 国内大厂核心域名与 CDN，指定阿里/腾讯极速解析\nserver=/*.cn/223.5.5.5\nserver=/*.alicdn.com/223.5.5.5\nserver=/*.taobao.com/223.5.5.5\nserver=/*.alipay.com/223.5.5.5\nserver=/*.jd.com/223.5.5.5\nserver=/*.360buyimg.com/223.5.5.5\nserver=/*.qq.com/119.29.29.29\nserver=/*.tencent.com/119.29.29.29\nserver=/*.weixin.com/119.29.29.29\nserver=/*.qpic.cn/119.29.29.29\nserver=/*.bilibili.com/119.29.29.29\nserver=/*.bilivideo.com/119.29.29.29\nserver=/*.bytedance.com/223.5.5.5\nserver=/*.byteimg.com/223.5.5.5\nserver=/*.baidu.com/223.5.5.5\nserver=/*.163.com/223.5.5.5\nserver=/*.icloud.com/119.29.29.29\nserver=/*.icloud.com.cn/119.29.29.29\n\n# 全局默认 DNS 仅保留国内公共 DNS（只用于分流命中 Direct 的域名）\nserver=223.5.5.5\nserver=119.29.29.29\n\nalias = /iosapps.itunes.apple.com/iosapps.itunes.apple.com.download.ks-cdn.com\n\n[filter_local]\nhost-suffix, gaiaapp.copm.com.cn direct\n# 1. 明确直连的常用国内大厂（放在最顶部，瞬间直连，毫无延迟）\nhost-suffix, cn, direct\nhost-keyword, baidu, direct\nhost-keyword, alibaba, direct\nhost-keyword, alipay, direct\nhost-keyword, taobao, direct\nhost-keyword, jd, direct\nhost-keyword, 360buyimg, direct\nhost-keyword, tencent, direct\nhost-keyword, weixin, direct\nhost-keyword, qq, direct\nhost-keyword, bilibili, direct\nhost-keyword, byteimg, direct\nhost-keyword, bytedance, direct\nhost-suffix, 163.com direct\nhost-suffix, 126.net direct\n\n# 2. 局域网直连 (Local IP)\nip-cidr, 10.0.0.0/8, direct\nip-cidr, 127.0.0.0/8, direct\nip-cidr, 172.16.0.0/12, direct\nip-cidr, 192.168.0.0/16, direct\nip-cidr, 224.0.0.0/24, direct\nip-cidr, 182.254.116.0/24, direct\n\n# > 核心防泄露：拦截所有未匹配的域名直接走代理节点远程解析，禁止本地查询 IP\nhost-keyword, ., 兜底分流\n# 3. 国内常见 IP 段快速直连（此时只处理纯 IP 流量）\ngeoip, cn, direct\n\n# 4. 关键：兜底全部走节点远程解析（绝不让未匹配域名在本地查 IP）\nfinal, 兜底分流",
+      "original_text": "DNS泄漏？\n\n用这个网站检测：https://t.co/c69mpOmWwy\n列表里没有出现大陆国旗，就说明你的 DNS 是安全的！\nwebrtc：https://t.co/wRIPuhGU9G\n IPv6泄漏检测：https://t.co/zoRh7GVckF\n\n圈x的可以改一下\n\n[dns]\n# 禁用系统运营商默认 DNS（防止运营商劫持与偷跑泄漏）\nno-system\n\n# 禁用 IPv6，避免双栈泄漏\nno-ipv6\n\n# 国内大厂核心域名与 CDN，指定阿里/腾讯极速解析\nserver=/*.cn/223.5.5.5\nserver=/*.alicdn.com/223.5.5.5\nserver=/*.taobao.com/223.5.5.5\nserver=/*.alipay.com/223.5.5.5\nserver=/*.jd.com/223.5.5.5\nserver=/*.360buyimg.com/223.5.5.5\nserver=/*.qq.com/119.29.29.29\nserver=/*.tencent.com/119.29.29.29\nserver=/*.weixin.com/119.29.29.29\nserver=/*.qpic.cn/119.29.29.29\nserver=/*.bilibili.com/119.29.29.29\nserver=/*.bilivideo.com/119.29.29.29\nserver=/*.bytedance.com/223.5.5.5\nserver=/*.byteimg.com/223.5.5.5\nserver=/*.baidu.com/223.5.5.5\nserver=/*.163.com/223.5.5.5\nserver=/*.icloud.com/119.29.29.29\nserver=/*.icloud.com.cn/119.29.29.29\n\n# 全局默认 DNS 仅保留国内公共 DNS（只用于分流命中 Direct 的域名）\nserver=223.5.5.5\nserver=119.29.29.29\n\nalias = /iosapps.itunes.apple.com/iosapps.itunes.apple.com.download.ks-cdn.com\n\n[filter_local]\nhost-suffix, https://t.co/kI1X2s9brf, direct\n# 1. 明确直连的常用国内大厂（放在最顶部，瞬间直连，毫无延迟）\nhost-suffix, cn, direct\nhost-keyword, baidu, direct\nhost-keyword, alibaba, direct\nhost-keyword, alipay, direct\nhost-keyword, taobao, direct\nhost-keyword, jd, direct\nhost-keyword, 360buyimg, direct\nhost-keyword, tencent, direct\nhost-keyword, weixin, direct\nhost-keyword, qq, direct\nhost-keyword, bilibili, direct\nhost-keyword, byteimg, direct\nhost-keyword, bytedance, direct\nhost-suffix, https://t.co/AyINx8HfCK, direct\nhost-suffix, https://t.co/rO9Ilpk3Hs, direct\n\n# 2. 局域网直连 (Local IP)\nip-cidr, 10.0.0.0/8, direct\nip-cidr, 127.0.0.0/8, direct\nip-cidr, 172.16.0.0/12, direct\nip-cidr, 192.168.0.0/16, direct\nip-cidr, 224.0.0.0/24, direct\nip-cidr, 182.254.116.0/24, direct\n\n# > 核心防泄露：拦截所有未匹配的域名直接走代理节点远程解析，禁止本地查询 IP\nhost-keyword, ., 兜底分流\n# 3. 国内常见 IP 段快速直连（此时只处理纯 IP 流量）\ngeoip, cn, direct\n\n# 4. 关键：兜底全部走节点远程解析（绝不让未匹配域名在本地查 IP）\nfinal, 兜底分流",
+      "links": [
+        "http://browserleaks.com/dns",
+        "http://browserleaks.com/webrtc",
+        "http://browserleaks.com/ip",
+        "http://gaiaapp.copm.com.cn",
+        "http://163.com",
+        "http://126.net"
+      ],
+      "translation_zh": "DNS泄漏？\n\n用这个网站检测：browserleaks.com/dns\n列表里没有出现大陆国旗，就说明你的 DNS 是安全的！\nwebrtc：browserleaks.com/webrtc\n IPv6泄漏检测：browserleaks.com/ip\n\n圈x的可以改一下\n\n[dns]\n# 禁用系统运营商默认 DNS（防止运营商劫持与偷跑泄漏）\nno-system\n\n# 禁用 IPv6，避免双栈泄漏\nno-ipv6\n\n# 国内大厂核心域名与 CDN，指定阿里/腾讯极速解析\nserver=/*.cn/223.5.5.5\nserver=/*.alicdn.com/223.5.5.5\nserver=/*.taobao.com/223.5.5.5\nserver=/*.alipay.com/223.5.5.5\nserver=/*.jd.com/223.5.5.5\nserver=/*.360buyimg.com/223.5.5.5\nserver=/*.qq.com/119.29.29.29\nserver=/*.tencent.com/119.29.29.29\nserver=/*.weixin.com/119.29.29.29\nserver=/*.qpic.cn/119.29.29.29\nserver=/*.bilibili.com/119.29.29.29\nserver=/*.bilivideo.com/119.29.29.29\nserver=/*.bytedance.com/223.5.5.5\nserver=/*.byteimg.com/223.5.5.5\nserver=/*.baidu.com/223.5.5.5\nserver=/*.163.com/223.5.5.5\nserver=/*.icloud.com/119.29.29.29\nserver=/*.icloud.com.cn/119.29.29.29\n\n# 全局默认 DNS 仅保留国内公共 DNS（只用于分流命中 Direct 的域名）\nserver=223.5.5.5\nserver=119.29.29.29\n\nalias = /iosapps.itunes.apple.com/iosapps.itunes.apple.com.download.ks-cdn.com\n\n[filter_local]\nhost-suffix, gaiaapp.copm.com.cn direct\n# 1. 明确直连的常用国内大厂（放在最顶部，瞬间直连，毫无延迟）\nhost-suffix, cn, direct\nhost-keyword, baidu, direct\nhost-keyword, alibaba, direct\nhost-keyword, alipay, direct\nhost-keyword, taobao, direct\nhost-keyword, jd, direct\nhost-keyword, 360buyimg, direct\nhost-keyword, tencent, direct\nhost-keyword, weixin, direct\nhost-keyword, qq, direct\nhost-keyword, bilibili, direct\nhost-keyword, byteimg, direct\nhost-keyword, bytedance, direct\nhost-suffix, 163.com direct\nhost-suffix, 126.net direct\n\n# 2. 局域网直连 (Local IP)\nip-cidr, 10.0.0.0/8, direct\nip-cidr, 127.0.0.0/8, direct\nip-cidr, 172.16.0.0/12, direct\nip-cidr, 192.168.0.0/16, direct\nip-cidr, 224.0.0.0/24, direct\nip-cidr, 182.254.116.0/24, direct\n\n# > 核心防泄露：拦截所有未匹配的域名直接走代理节点远程解析，禁止本地查询 IP\nhost-keyword, ., 兜底分流\n# 3. 国内常见 IP 段快速直连（此时只处理纯 IP 流量）\ngeoip, cn, direct\n\n# 4. 关键：兜底全部走节点远程解析（绝不让未匹配域名在本地查 IP）\nfinal, 兜底分流",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "火星网友",
+      "author_handle": "bbrlfh",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2095322636104708096/YfwYVALk_normal.jpg",
+      "author_followers": 60,
+      "author_following": 526,
+      "author_bio": null,
+      "author_location": "火星",
+      "author_joined_at": "2015-07-24T13:30:16Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T15:16:47Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110026972697133513",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 95
+      },
+      "sentiment": "negative",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "brand_trust",
+        "safety",
+        "trust_safety"
+      ]
+    },
+    {
+      "post_id": "2110025898242212041",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/LiuYuning_ID/status/2110025898242212041",
+      "text": "[261012] JD.com Weibo Update \n\nMulai 12 Oktober, Liu Yuning hadir di layar-layar iklan di berbagai kota di China! 👀💛 Siapa tahu bisa bertemu dengannya!\n\n#LiuYuning #刘宇宁 #摩登兄弟刘宇宁 #LiuYuningIndonesia #京东",
+      "original_text": "[261012] https://t.co/Turd3niBVZ Weibo Update \n\nMulai 12 Oktober, Liu Yuning hadir di layar-layar iklan di berbagai kota di China! 👀💛 Siapa tahu bisa bertemu dengannya!\n\n#LiuYuning #刘宇宁 #摩登兄弟刘宇宁 #LiuYuningIndonesia #京东 https://t.co/jJRcoIOl96",
+      "links": [
+        "https://JD.com"
+      ],
+      "translation_zh": "[261012] JD.com 微博更新 \n\n从 10 月 12 日起，Liu Yuning 将出现在中国各个城市的广告屏幕上！👀💛 说不定能遇见他！\n\n#LiuYuning #刘宇宁 #摩登兄弟刘宇宁 #LiuYuningIndonesia #京东",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Liu Yuning Indonesia 💛 刘宇宁",
+      "author_handle": "LiuYuning_ID",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2050256707176325120/FJc2F3bQ_normal.jpg",
+      "author_followers": 1466,
+      "author_following": 14,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-07-29T10:35:04Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T15:12:31Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110025898242212041",
+      "conversation_context": {},
+      "language": "in",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUhRXe9agAAQ1mL.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUhRXe9agAAQ1mL.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUhRXe9agAAQ1mL.jpg",
+          "expanded_url": "https://x.com/LiuYuning_ID/status/2110025898242212041/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HUhRXfNaEAAq9i7.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUhRXfNaEAAq9i7.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUhRXfNaEAAq9i7.jpg",
+          "expanded_url": "https://x.com/LiuYuning_ID/status/2110025898242212041/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HUhRXfTa0AA-L8g.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUhRXfTa0AA-L8g.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUhRXfTa0AA-L8g.jpg",
+          "expanded_url": "https://x.com/LiuYuning_ID/status/2110025898242212041/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 8,
+        "reposts": 1,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 2,
+        "views": 309
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2110021042693456160",
+      "brand": "primary",
+      "cluster_id": "primary-signal-004",
+      "topic": "product_deal",
+      "url": "https://x.com/lesnums_bonplan/status/2110021042693456160",
+      "text": "🔗 l.lesnumeriques.com/kIT\nLe smartphone Samsung Galaxy S26 512 Go s'affiche aujourd'hui à 819,00 € chez Joybuy.",
+      "original_text": "🔗 https://t.co/I395Q4WYRx\nLe smartphone Samsung Galaxy S26 512 Go s'affiche aujourd'hui à 819,00 € chez Joybuy. https://t.co/v3hAXd7jyr",
+      "links": [
+        "https://l.lesnumeriques.com/kIT"
+      ],
+      "translation_zh": "🔗 l.lesnumeriques.com/kIT\nSamsung Galaxy S26 512GB 智能手机今天在 Joybuy 的价格为 819,00 €。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Bons Plans High-Tech",
+      "author_handle": "lesnums_bonplan",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1442755465558073348/U98UYg20_normal.png",
+      "author_followers": 10856,
+      "author_following": 29,
+      "author_bio": null,
+      "author_location": "Dans nos labos 🔬",
+      "author_joined_at": "2010-01-21T23:58:50Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T14:53:13Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110021042693456160",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUhM840XsAAHqwX.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUhM840XsAAHqwX.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUhM840XsAAHqwX.jpg",
+          "expanded_url": "https://x.com/lesnums_bonplan/status/2110021042693456160/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 129
+      },
+      "sentiment": "positive",
+      "level": "medium",
+      "score_value": 71,
+      "score_label": "IPS",
+      "matched_terms": [
+        "product_interest",
+        "promotion",
+        "product_deal"
+      ]
+    },
+    {
+      "post_id": "2110020999970279755",
+      "brand": "primary",
+      "cluster_id": "primary-signal-004",
+      "topic": "product_deal",
+      "url": "https://x.com/lesnums/status/2110020999970279755",
+      "text": "🔗 l.lesnumeriques.com/n8K\nLe smartphone Samsung Galaxy S26 512 Go s'affiche aujourd'hui à 819,00 € chez Joybuy.",
+      "original_text": "🔗 https://t.co/zCI0sr559M\nLe smartphone Samsung Galaxy S26 512 Go s'affiche aujourd'hui à 819,00 € chez Joybuy. https://t.co/p2WIfrDBcz",
+      "links": [
+        "https://l.lesnumeriques.com/n8K"
+      ],
+      "translation_zh": "🔗 l.lesnumeriques.com/n8K\nSamsung Galaxy S26 512GB 智能手机今天在 Joybuy 的价格为 819,00 €。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Les Numériques",
+      "author_handle": "lesnums",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1635603257870434306/4aZrFj1Y_normal.jpg",
+      "author_followers": 153284,
+      "author_following": 401,
+      "author_bio": null,
+      "author_location": "Dans nos labos 🔬",
+      "author_joined_at": "2012-02-13T16:31:24Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T14:53:03Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2110020999970279755",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUhM6ZNWUAEGUnd.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUhM6ZNWUAEGUnd.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUhM6ZNWUAEGUnd.jpg",
+          "expanded_url": "https://x.com/lesnums/status/2110020999970279755/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 525
+      },
+      "sentiment": "positive",
+      "level": "medium",
+      "score_value": 71,
+      "score_label": "IPS",
+      "matched_terms": [
+        "product_interest",
+        "promotion",
+        "product_deal"
+      ]
+    },
+    {
+      "post_id": "2109995867906216005",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/cicimoji/status/2109995867906216005",
+      "text": "turnitin lgi MAHAL dan SUSAH ya gais, aku yg awalnya fh aja ga sanggup, ampe udh jd seller doang ttp gk sanggup. web2 aja close turnitin",
+      "original_text": "turnitin lgi MAHAL dan SUSAH ya gais, aku yg awalnya fh aja ga sanggup, ampe udh jd seller doang ttp gk sanggup. web2 aja close turnitin",
+      "links": [],
+      "translation_zh": "Turnitin 现在又贵又难搞啊各位，我一开始光是 fh 就受不了了，到已经只是当卖家了还是受不了。连那些网站都关闭 Turnitin 了",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "𝓜oji - JOKI TUGAS, NO DM PLS",
+      "author_handle": "cicimoji",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1916510898535251968/XsyO34gw_normal.png",
+      "author_followers": 114,
+      "author_following": 114,
+      "author_bio": null,
+      "author_location": "NO DM SUNG WA",
+      "author_joined_at": "2025-02-01T15:10:23Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T13:13:11Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2109665339894284386",
+      "conversation_id": "2109995867906216005",
+      "conversation_context": {},
+      "language": "in",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 82
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2109980679673151955",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/carratsvt__/status/2109980679673151955",
+      "text": "gue ga cocok jd seller soalnya emosian 😭🙏",
+      "original_text": "gue ga cocok jd seller soalnya emosian 😭🙏",
+      "links": [],
+      "translation_zh": "我不适合当卖家，因为我太容易情绪化了 😭🙏",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "nonu",
+      "author_handle": "carratsvt__",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1838540776235843584/jHp3CCKv_normal.jpg",
+      "author_followers": 983,
+      "author_following": 964,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-09-07T19:26:30Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T12:12:50Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109980679673151955",
+      "conversation_context": {},
+      "language": "in",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 66
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2109975524848357659",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "competitor_comparison",
+      "url": "https://x.com/PhillipsSt51361/status/2109975524848357659",
+      "text": "JoyBuy, simile ad Amazon cinese, con oltre 100mila prodotti, ha recentemente fatto una mossa aggressiva per entrare nel mercato europeo: ha acquisito un grande retailer tedesco e punta su consegne rapide e prezzi competitivi, entrando deciso in un se...",
+      "original_text": "JoyBuy, simile ad Amazon cinese, con oltre 100mila prodotti, ha recentemente fatto una mossa aggressiva per entrare nel mercato europeo: ha acquisito un grande retailer tedesco e punta su consegne rapide e prezzi competitivi, entrando deciso in un se... https://t.co/9njb1n7sQi",
+      "links": [],
+      "translation_zh": "JoyBuy 类似于中国版 Amazon，拥有超过 10 万种商品，最近为进入欧洲市场采取了激进举措：它收购了一家大型德国零售商，并主打快速配送和有竞争力的价格，强势进入一个领...",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Mia Ceran",
+      "author_handle": "PhillipsSt51361",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2107248611163774976/3wGKvHGr_normal.jpg",
+      "author_followers": 0,
+      "author_following": 4,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-02-10T22:20:21Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T11:52:21Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109975524848357659",
+      "conversation_context": {},
+      "language": "it",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2109975445664051200/img/Jo4tzCSsb4v_-o9n.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2109975445664051200/img/Jo4tzCSsb4v_-o9n.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2109975445664051200/img/Jo4tzCSsb4v_-o9n.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              9,
+              16
+            ],
+            "duration_millis": 29013,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video.twimg.com/amplify_video/2109975445664051200/pl/uBoZgBeNhppBudW7.m3u8?tag=14"
+              },
+              {
+                "bitrate": 632000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2109975445664051200/vid/avc1/320x568/DmBc-6BLrbHVawah.mp4?tag=14"
+              },
+              {
+                "bitrate": 950000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2109975445664051200/vid/avc1/480x852/WHBIoZj7K8AU6HEM.mp4?tag=14"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2109975445664051200/vid/avc1/720x1280/IV3pYmLnSewtnstE.mp4?tag=14"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/PhillipsSt51361/status/2109975524848357659/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 4
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 74,
+      "score_label": "IPS",
+      "matched_terms": [
+        "competitive_position",
+        "competitor_comparison"
+      ]
+    },
+    {
+      "post_id": "2109967688265089417",
+      "brand": "primary",
+      "cluster_id": "primary-signal-004",
+      "topic": "product_deal",
+      "url": "https://x.com/Econogeek_/status/2109967688265089417",
+      "text": "Splatoon Raiders sur Nintendo switch 2 à 44,16€ sur joybuy\n➡️ joybuy.fr/dp",
+      "original_text": "Splatoon Raiders sur Nintendo switch 2 à 44,16€ sur joybuy\n➡️ https://t.co/tmYRIzOtq5 https://t.co/Dog8NeI3Fr",
+      "links": [
+        "https://www.joybuy.fr/dp/nintendo-splatoon-raiders-switch-2-version/102141416"
+      ],
+      "translation_zh": "Nintendo switch 2 上的 Splatoon Raiders 在 joybuy 售价 44.16€\n➡️ joybuy.fr/dp",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Econogeek",
+      "author_handle": "Econogeek_",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1974112347313553408/Y-eeH6Z2_normal.jpg",
+      "author_followers": 1563,
+      "author_following": 172,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2009-10-27T11:04:29Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T11:21:12Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109967688265089417",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUgcZ6VWYAAD984.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUgcZ6VWYAAD984.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUgcZ6VWYAAD984.jpg",
+          "expanded_url": "https://x.com/Econogeek_/status/2109967688265089417/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 42
+      },
+      "sentiment": "positive",
+      "level": "medium",
+      "score_value": 71,
+      "score_label": "IPS",
+      "matched_terms": [
+        "product_interest",
+        "promotion",
+        "product_deal"
+      ]
+    },
+    {
+      "post_id": "2109965971154931858",
+      "brand": "primary",
+      "cluster_id": "primary-signal-004",
+      "topic": "product_deal",
+      "url": "https://x.com/lesnums_bonplan/status/2109965971154931858",
+      "text": "🔗 l.lesnumeriques.com/aGy\nLa tablette Tactile Xiaomi Redmi Pad 2 Pro est proposée à 259,90 € chez Joybuy soit une baisse d'environ 39 € sur le prix habituellement constaté. l.lesnumeriques.com/aGy",
+      "original_text": "🔗 https://t.co/CUOr1CMD22\nLa tablette Tactile Xiaomi Redmi Pad 2 Pro est proposée à 259,90 € chez Joybuy soit une baisse d'environ 39 € sur le prix habituellement constaté. https://t.co/CUOr1CMD22",
+      "links": [
+        "https://l.lesnumeriques.com/aGy",
+        "https://l.lesnumeriques.com/aGy"
+      ],
+      "translation_zh": "🔗 l.lesnumeriques.com/aGy\nXiaomi Redmi Pad 2 Pro 触控平板电脑在 Joybuy 售价为 259,90 €，比通常观察到的价格低约 39 €。l.lesnumeriques.com/aGy",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Bons Plans High-Tech",
+      "author_handle": "lesnums_bonplan",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1442755465558073348/U98UYg20_normal.png",
+      "author_followers": 10856,
+      "author_following": 29,
+      "author_bio": null,
+      "author_location": "Dans nos labos 🔬",
+      "author_joined_at": "2010-01-21T23:58:50Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T11:14:23Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109965971154931858",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 177
+      },
+      "sentiment": "positive",
+      "level": "medium",
+      "score_value": 71,
+      "score_label": "IPS",
+      "matched_terms": [
+        "product_interest",
+        "promotion",
+        "product_deal"
+      ]
+    },
+    {
+      "post_id": "2109965892771832009",
+      "brand": "primary",
+      "cluster_id": "primary-signal-004",
+      "topic": "product_deal",
+      "url": "https://x.com/lesnums/status/2109965892771832009",
+      "text": "🔗 l.lesnumeriques.com/dg3\nLa tablette Tactile Xiaomi Redmi Pad 2 Pro est proposée à 259,90 € chez Joybuy soit une baisse d'environ 39 € sur le prix habituellement constaté.",
+      "original_text": "🔗 https://t.co/pW5mcxylj0\nLa tablette Tactile Xiaomi Redmi Pad 2 Pro est proposée à 259,90 € chez Joybuy soit une baisse d'environ 39 € sur le prix habituellement constaté. https://t.co/3iqVAwCqZV",
+      "links": [
+        "https://l.lesnumeriques.com/dg3"
+      ],
+      "translation_zh": "🔗 l.lesnumeriques.com/dg3\nXiaomi Redmi Pad 2 Pro 触控平板电脑在 Joybuy 售价为 259,90 €，相比通常观察到的价格约降低 39 €。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Les Numériques",
+      "author_handle": "lesnums",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1635603257870434306/4aZrFj1Y_normal.jpg",
+      "author_followers": 153284,
+      "author_following": 401,
+      "author_bio": null,
+      "author_location": "Dans nos labos 🔬",
+      "author_joined_at": "2012-02-13T16:31:24Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T11:14:04Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109965892771832009",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUgayqWW4AAuCGS.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUgayqWW4AAuCGS.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUgayqWW4AAuCGS.jpg",
+          "expanded_url": "https://x.com/lesnums/status/2109965892771832009/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 649
+      },
+      "sentiment": "positive",
+      "level": "medium",
+      "score_value": 71,
+      "score_label": "IPS",
+      "matched_terms": [
+        "product_interest",
+        "promotion",
+        "product_deal"
+      ]
+    },
+    {
+      "post_id": "2109943466780205472",
+      "brand": "primary",
+      "cluster_id": "primary-signal-004",
+      "topic": "product_deal",
+      "url": "https://x.com/AlertEtGo/status/2109943466780205472",
+      "text": "Console Nintendo Switch 2 - Edition 40e anniversaire de The Legend of Zelda - Version EU | Consoles Nintendo Switch est dispo sur JoyBuy à 519.99€ !\n► awin1.com/cread.php",
+      "original_text": "Console Nintendo Switch 2 - Edition 40e anniversaire de The Legend of Zelda - Version EU | Consoles Nintendo Switch est dispo sur JoyBuy à 519.99€ !\n►  https://t.co/40yVROQReA https://t.co/stgUOSEODx",
+      "links": [
+        "https://www.awin1.com/cread.php?awinmid=123928&awinaffid=300117&platform=dl&ued=https%3A%2F%2Fwww.joybuy.fr%2Fdp%2Fconsole-nintendo-switch-2-edition-40e%2F100020300146533"
+      ],
+      "translation_zh": "Nintendo Switch 2 主机 - The Legend of Zelda 40 周年纪念版 - EU 版本 | Nintendo Switch 主机已在 JoyBuy 上架，售价 519.99€！\n► awin1.com/cread.php",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Alert&Go",
+      "author_handle": "AlertEtGo",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1686708896121888769/h4sv-Env_normal.jpg",
+      "author_followers": 168158,
+      "author_following": 1376,
+      "author_bio": null,
+      "author_location": "France",
+      "author_joined_at": "2015-06-07T09:34:27Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T09:44:57Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109943466780205472",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUgGZwpXYAATRUh.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUgGZwpXYAATRUh.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUgGZwpXYAATRUh.jpg",
+          "expanded_url": "https://x.com/AlertEtGo/status/2109943466780205472/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 6,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 6772
+      },
+      "sentiment": "positive",
+      "level": "medium",
+      "score_value": 71,
+      "score_label": "IPS",
+      "matched_terms": [
+        "product_interest",
+        "promotion",
+        "product_deal"
+      ]
+    },
+    {
+      "post_id": "2109932778804461616",
+      "brand": "primary",
+      "cluster_id": "primary-signal-004",
+      "topic": "product_deal",
+      "url": "https://x.com/AlertEtGo/status/2109932778804461616",
+      "text": "HORI Instrument ocarina du temps électrique pour Nintendo Switch 2 | Consoles Nintendo Switch est dispo sur JoyBuy à 69.99€ !\n► awin1.com/cread.php",
+      "original_text": "HORI Instrument ocarina du temps électrique pour Nintendo Switch 2 | Consoles Nintendo Switch est dispo sur JoyBuy à 69.99€ !\n►  https://t.co/KsFMU27ox9 https://t.co/gIwCsx95Qt",
+      "links": [
+        "https://www.awin1.com/cread.php?awinmid=123928&awinaffid=300117&platform=dl&ued=https%3A%2F%2Fwww.joybuy.fr%2Fdp%2Fhori-instrument-ocarina-du-temps-%C3%A9lectrique%2F100024175008686"
+      ],
+      "translation_zh": "HORI 时之笛电子乐器，适用于 Nintendo Switch 2 | Nintendo Switch 主机已在 JoyBuy 上架，售价 69.99€！\n► awin1.com/cread.php",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Alert&Go",
+      "author_handle": "AlertEtGo",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1686708896121888769/h4sv-Env_normal.jpg",
+      "author_followers": 168158,
+      "author_following": 1376,
+      "author_bio": null,
+      "author_location": "France",
+      "author_joined_at": "2015-06-07T09:34:27Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T09:02:29Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109932778804461616",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUf8robXAAAJPvz.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUf8robXAAAJPvz.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUf8robXAAAJPvz.jpg",
+          "expanded_url": "https://x.com/AlertEtGo/status/2109932778804461616/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 8,
+        "reposts": 1,
+        "replies": 4,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 6690
+      },
+      "sentiment": "positive",
+      "level": "medium",
+      "score_value": 71,
+      "score_label": "IPS",
+      "matched_terms": [
+        "product_interest",
+        "promotion",
+        "product_deal"
+      ]
+    },
+    {
+      "post_id": "2109918920962433104",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "regulatory",
+      "url": "https://x.com/etailment/status/2109918920962433104",
+      "text": "Handelsdeals werden zur Infrastrukturprüfung.\n\nÖsterreich gibt grünes Licht für die Übernahme der MediaMarkt-Mutter Ceconomy durch JD.com Das Ja ist an Auflagen zu Daten, Lieferketten und sicherheitsrelevanten Personalentscheidungen geknüpft.\n\nFür Händler reicht das Signal über den einzelnen Deal hinaus. Wer Kundenzugang, Sortimente, Logistik und Datenbestände übernimmt, kauft nicht nur Umsatz – sondern rückt in Fragen nationaler und europäischer Kontrolle.\n\nIn Österreich betreibt MediaMarkt 56 Märkte mit rund 2.400 Beschäftigten. Im Geschäftsjahr 2025/26 lag der Umsatz dort bei 1,3 Mrd. Euro. Das ist groß genug, um politisch relevant zu sein, aber klein genug, um die Auflagen als Blaupause zu lesen.\n\nOffen bleibt Brüssel: Die EU-Kommission will bis zum 4. November entscheiden. Erst dann zeigt sich, wie eng der europäische Rahmen für chinesisches Kapital im Handelsgeschäft gezogen wird.\n\nDie Konsequenz: Händler sollten Datenhoheit, Lieferketten und Kontrollrechte bei M&A und Partnerschaften nicht als Legal-Anhang behandeln. Wie sauber wären solche Auflagen in Ihrem Unternehmen operativ abbildbar?",
+      "original_text": "Handelsdeals werden zur Infrastrukturprüfung.\n\nÖsterreich gibt grünes Licht für die Übernahme der MediaMarkt-Mutter Ceconomy durch https://t.co/JKtFbznMbn. Das Ja ist an Auflagen zu Daten, Lieferketten und sicherheitsrelevanten Personalentscheidungen geknüpft.\n\nFür Händler reicht das Signal über den einzelnen Deal hinaus. Wer Kundenzugang, Sortimente, Logistik und Datenbestände übernimmt, kauft nicht nur Umsatz – sondern rückt in Fragen nationaler und europäischer Kontrolle.\n\nIn Österreich betreibt MediaMarkt 56 Märkte mit rund 2.400 Beschäftigten. Im Geschäftsjahr 2025/26 lag der Umsatz dort bei 1,3 Mrd. Euro. Das ist groß genug, um politisch relevant zu sein, aber klein genug, um die Auflagen als Blaupause zu lesen.\n\nOffen bleibt Brüssel: Die EU-Kommission will bis zum 4. November entscheiden. Erst dann zeigt sich, wie eng der europäische Rahmen für chinesisches Kapital im Handelsgeschäft gezogen wird.\n\nDie Konsequenz: Händler sollten Datenhoheit, Lieferketten und Kontrollrechte bei M&A und Partnerschaften nicht als Legal-Anhang behandeln. Wie sauber wären solche Auflagen in Ihrem Unternehmen operativ abbildbar?",
+      "links": [
+        "http://JD.com"
+      ],
+      "translation_zh": "贸易交易正在变成基础设施审查。\n\n奥地利为 JD.com 收购 MediaMarkt 母公司 Ceconomy 开了绿灯。该批准附带了有关数据、供应链以及与安全相关的人事决策的条件。\n\n对零售商而言，这一信号的意义超出了单笔交易。谁接管客户入口、商品品类、物流和数据资产，买下的就不只是营收——而是进入了国家和欧洲层面的监管议题。\n\n在奥地利，MediaMarkt 运营着 56 家门店，约有 2,400 名员工。在 2025/26 财年，其在当地的营收为 13 亿欧元。这一规模大到足以具有政治相关性，但又小到足以让这些条件被视作蓝图。\n\n布鲁塞尔方面仍悬而未决：欧盟委员会希望在 11 月 4 日前作出决定。只有到那时，才会看出欧洲对中国资本进入零售业务所划定的框架有多严格。\n\n结论是：零售商在并购和合作伙伴关系中，不应把数据主权、供应链和控制权视为法律附件来处理。在您的企业中，这类条件在运营层面能被多干净利落地落实？",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "etailment",
+      "author_handle": "etailment",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2077769004169469952/5ucSJ3jY_normal.png",
+      "author_followers": 6298,
+      "author_following": 916,
+      "author_bio": null,
+      "author_location": "Frankfurt am Main, Deutschland",
+      "author_joined_at": "2011-10-27T07:55:25Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T08:07:25Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109918920962433104",
+      "conversation_context": {},
+      "language": "de",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 38
+      },
+      "sentiment": "negative",
+      "level": "medium",
+      "score_value": 66,
+      "score_label": "IPS",
+      "matched_terms": [
+        "regulatory",
+        "market_access",
+        "acquisition"
+      ]
+    },
+    {
+      "post_id": "2109918882945519883",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/YanYan38572/status/2109918882945519883",
+      "text": "美国原生电话卡的，不要去京东找紫卡买了，红包卡Red Pocket Mobile才是真神！",
+      "original_text": "美国原生电话卡的，不要去京东找紫卡买了，红包卡Red Pocket Mobile才是真神！",
+      "links": [],
+      "translation_zh": "美国原生电话卡的，不要去京东找紫卡买了，红包卡Red Pocket Mobile才是真神！",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "𝕏yizhen",
+      "author_handle": "YanYan38572",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1649175773927047168/851wam7P_normal.jpg",
+      "author_followers": 72,
+      "author_following": 1359,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2023-04-20T06:44:19Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T08:07:16Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2109581478707527823",
+      "conversation_id": "2109918882945519883",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 15
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2109902126897926173",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/shynafo/status/2109902126897926173",
+      "text": "@ads Why can’t I eliminate joybuy adverts from my feed, I can’t block them and clicking Not Interested does nothing. Fix this shit.",
+      "original_text": "@ads Why can’t I eliminate joybuy adverts from my feed, I can’t block them and clicking Not Interested does nothing. Fix this shit.",
+      "links": [],
+      "translation_zh": "@ads 为什么我不能从我的信息流里清除 joybuy 广告，我没法屏蔽它们，点“不感兴趣”也毫无作用。把这破问题修好。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": " Super Shy NAFO  💎",
+      "author_handle": "shynafo",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1724886925293527040/5eOVoP5h_normal.jpg",
+      "author_followers": 2683,
+      "author_following": 2938,
+      "author_bio": null,
+      "author_location": "Langley, McLean",
+      "author_joined_at": "2023-08-12T23:40:51Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T07:00:41Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109902126897926173",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 32
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2109880091371250073",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/LiuYuning_ID/status/2109880091371250073",
+      "text": "[261012] JD.com Weibo Update - GIF (1)\n\nHai, Mofan! Stiker ekspresi Liu Yuning sudah dirilis! Tambah satu, tambah satu, tambah satu, tambah satu! 😂 \n\n#LiuYuning #刘宇宁 #摩登兄弟刘宇宁 #LiuYuningIndonesia #京东",
+      "original_text": "[261012] https://t.co/Turd3niBVZ Weibo Update - GIF (1)\n\nHai, Mofan! Stiker ekspresi Liu Yuning sudah dirilis! Tambah satu, tambah satu, tambah satu, tambah satu! 😂 \n\n#LiuYuning #刘宇宁 #摩登兄弟刘宇宁 #LiuYuningIndonesia #京东 https://t.co/kDREgowC5f",
+      "links": [
+        "https://JD.com"
+      ],
+      "translation_zh": "[261012] JD.com 微博更新 - GIF (1)\n\n嗨，Mofan！刘宇宁的表情贴纸已经发布啦！加一个，加一个，加一个，加一个！😂 \n\n#LiuYuning #刘宇宁 #摩登兄弟刘宇宁 #LiuYuningIndonesia #京东",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Liu Yuning Indonesia 💛 刘宇宁",
+      "author_handle": "LiuYuning_ID",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2050256707176325120/FJc2F3bQ_normal.jpg",
+      "author_followers": 1466,
+      "author_following": 14,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-07-29T10:35:04Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T05:33:08Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109880091371250073",
+      "conversation_context": {},
+      "language": "in",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/tweet_video_thumb/HUfMs2_bwAA3sOl.jpg",
+          "type": "animated_gif",
+          "preview_image_url": "https://pbs.twimg.com/tweet_video_thumb/HUfMs2_bwAA3sOl.jpg",
+          "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/HUfMs2_bwAA3sOl.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "variants": [
+              {
+                "bitrate": 0,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/tweet_video/HUfMs2_bwAA3sOl.mp4"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/LiuYuning_ID/status/2109880091371250073/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/tweet_video_thumb/HUfMs2faMAAyKry.jpg",
+          "type": "animated_gif",
+          "preview_image_url": "https://pbs.twimg.com/tweet_video_thumb/HUfMs2faMAAyKry.jpg",
+          "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/HUfMs2faMAAyKry.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "variants": [
+              {
+                "bitrate": 0,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/tweet_video/HUfMs2faMAAyKry.mp4"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/LiuYuning_ID/status/2109880091371250073/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/tweet_video_thumb/HUfMs2nbgAAGwcu.jpg",
+          "type": "animated_gif",
+          "preview_image_url": "https://pbs.twimg.com/tweet_video_thumb/HUfMs2nbgAAGwcu.jpg",
+          "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/HUfMs2nbgAAGwcu.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "variants": [
+              {
+                "bitrate": 0,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/tweet_video/HUfMs2nbgAAGwcu.mp4"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/LiuYuning_ID/status/2109880091371250073/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/tweet_video_thumb/HUfMs2taMAA4oMZ.jpg",
+          "type": "animated_gif",
+          "preview_image_url": "https://pbs.twimg.com/tweet_video_thumb/HUfMs2taMAA4oMZ.jpg",
+          "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/HUfMs2taMAA4oMZ.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "variants": [
+              {
+                "bitrate": 0,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/tweet_video/HUfMs2taMAA4oMZ.mp4"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/LiuYuning_ID/status/2109880091371250073/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 15,
+        "reposts": 2,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 3,
+        "views": 655
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2109876110175412681",
+      "brand": "primary",
+      "cluster_id": "primary-signal-004",
+      "topic": "product_deal",
+      "url": "https://x.com/RakuFirst/status/2109876110175412681",
+      "text": "📢 【2026年】京東（JD.com\n\n📅 注目の日程\n\n🔸 10月12日 20:00｜セール開始。予約金不要で購入可能\n🔸 10月20日｜大型タイムセール。一部商品が期間限定価格に\n🔸 10月31日 20:00〜11月3日｜割引強化期間。クーポン配布やカテゴリー別の割引が充実\n🔸 11月10日 20:00〜11月11日｜双11のメインセール期間\n\n📦 仕入れ時の注意点\nセール期間中は注文が集中するため、商品価格・在庫状況・中国国内の配送・国際物流のスケジュールを事前に確認しておきましょう。\n\n📌 日程をカレンダーにまとめたので、ぜひ保存してご活用ください。\n\n※時間はすべて中国時間です（日本時間は＋1時間）。割引内容は京東公式サイトをご確認ください。\n\n#京東 #双11 #中国輸入 #中国仕入れ #越境EC #EC運営 #ラクット輸入",
+      "original_text": "📢 【2026年】京東（https://t.co/xuhce7ZEhN）の双11セール日程を一目でチェック！\n\n📅 注目の日程\n\n🔸 10月12日 20:00｜セール開始。予約金不要で購入可能\n🔸 10月20日｜大型タイムセール。一部商品が期間限定価格に\n🔸 10月31日 20:00〜11月3日｜割引強化期間。クーポン配布やカテゴリー別の割引が充実\n🔸 11月10日 20:00〜11月11日｜双11のメインセール期間\n\n📦 仕入れ時の注意点\nセール期間中は注文が集中するため、商品価格・在庫状況・中国国内の配送・国際物流のスケジュールを事前に確認しておきましょう。\n\n📌 日程をカレンダーにまとめたので、ぜひ保存してご活用ください。\n\n※時間はすべて中国時間です（日本時間は＋1時間）。割引内容は京東公式サイトをご確認ください。\n\n#京東 #双11 #中国輸入 #中国仕入れ #越境EC #EC運営 #ラクット輸入",
+      "links": [
+        "http://JD.com"
+      ],
+      "translation_zh": "📢 【2026年】京东（JD.com\n\n📅 重点日期\n\n🔸 10月12日 20:00｜大促开始。无需支付预订金即可购买\n🔸 10月20日｜大型限时促销。部分商品进入限时价格\n🔸 10月31日 20:00〜11月3日｜折扣加强期。发放优惠券，按品类提供的折扣更加丰富\n🔸 11月10日 20:00〜11月11日｜双11主会场促销期\n\n📦 采购时的注意事项\n大促期间订单会集中，请提前确认商品价格、库存情况、中国国内配送以及国际物流的日程安排。\n\n📌 我已把日程整理到日历中，请务必保存并加以利用。\n\n※时间均为中国时间（日本时间为＋1小时）。折扣内容请确认京东官方网站。\n\n#京东 #双11 #中国进口 #中国采购 #跨境EC #EC运营 #ラクット輸入",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "中国輸入代行ラクファースト【RAKU FIRST公式】",
+      "author_handle": "RakuFirst",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1837044109774835713/TVHcRupG_normal.jpg",
+      "author_followers": 106,
+      "author_following": 63,
+      "author_bio": null,
+      "author_location": "無料登録はこちら👉️",
+      "author_joined_at": "2023-06-22T05:20:07Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T05:17:18Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109876110175412681",
+      "conversation_context": {},
+      "language": "ja",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUfJERSbEAAk8Y1.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUfJERSbEAAk8Y1.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUfJERSbEAAk8Y1.jpg",
+          "expanded_url": "https://x.com/RakuFirst/status/2109876110175412681/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 57
+      },
+      "sentiment": "positive",
+      "level": "medium",
+      "score_value": 71,
+      "score_label": "IPS",
+      "matched_terms": [
+        "product_interest",
+        "promotion",
+        "product_deal"
+      ]
+    },
+    {
+      "post_id": "2109874990741151855",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "competitor_comparison",
+      "url": "https://x.com/lesnums_bonplan/status/2109874990741151855",
+      "text": "🔗 l.lesnumeriques.com/DSN\nL'aspirateur robot Ecovacs Deebot N20 Plus s'affiche aujourd'hui à 249,00 € chez Joybuy. C'est actuellement le meilleur aspirateur robot à prix abordable de notre comparatif, selon les 62 modèles testés dans notre laboratoire. l.lesnumeriques.com/DSN",
+      "original_text": "🔗 https://t.co/WmAWMqUq7K\nL'aspirateur robot Ecovacs Deebot N20 Plus s'affiche aujourd'hui à 249,00 € chez Joybuy. C'est actuellement le meilleur aspirateur robot à prix abordable de notre comparatif, selon les 62 modèles testés dans notre laboratoire. https://t.co/WmAWMqUq7K",
+      "links": [
+        "https://l.lesnumeriques.com/DSN",
+        "https://l.lesnumeriques.com/DSN"
+      ],
+      "translation_zh": "🔗 l.lesnumeriques.com/DSN\nEcovacs Deebot N20 Plus 扫地机器人今天在 Joybuy 的价格为 249,00 €。根据我们实验室测试的 62 款型号，它目前是我们对比评测中性价比最高的平价扫地机器人。l.lesnumeriques.com/DSN",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Bons Plans High-Tech",
+      "author_handle": "lesnums_bonplan",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1442755465558073348/U98UYg20_normal.png",
+      "author_followers": 10856,
+      "author_following": 29,
+      "author_bio": null,
+      "author_location": "Dans nos labos 🔬",
+      "author_joined_at": "2010-01-21T23:58:50Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T05:12:52Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109874990741151855",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 174
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 74,
+      "score_label": "IPS",
+      "matched_terms": [
+        "competitive_position",
+        "competitor_comparison"
+      ]
+    },
+    {
+      "post_id": "2109874986093609215",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "competitor_comparison",
+      "url": "https://x.com/lesnums/status/2109874986093609215",
+      "text": "🔗 l.lesnumeriques.com/IUg\nL'aspirateur robot Ecovacs Deebot N20 Plus s'affiche aujourd'hui à 249,00 € chez Joybuy. C'est actuellement le meilleur aspirateur robot à prix abordable de notre comparatif, selon les 62 modèles testés dans notre laboratoire. l.lesnumeriques.com/IUg",
+      "original_text": "🔗 https://t.co/hVNBMqgWUS\nL'aspirateur robot Ecovacs Deebot N20 Plus s'affiche aujourd'hui à 249,00 € chez Joybuy. C'est actuellement le meilleur aspirateur robot à prix abordable de notre comparatif, selon les 62 modèles testés dans notre laboratoire. https://t.co/hVNBMqgWUS",
+      "links": [
+        "https://l.lesnumeriques.com/IUg",
+        "https://l.lesnumeriques.com/IUg"
+      ],
+      "translation_zh": "🔗 l.lesnumeriques.com/IUg\nEcovacs Deebot N20 Plus 扫地机器人今天在 Joybuy 标价 249,00 €。根据我们实验室测试的 62 款型号，它目前是我们对比评测中性价比最高的平价扫地机器人。l.lesnumeriques.com/IUg",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Les Numériques",
+      "author_handle": "lesnums",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1635603257870434306/4aZrFj1Y_normal.jpg",
+      "author_followers": 153284,
+      "author_following": 401,
+      "author_bio": null,
+      "author_location": "Dans nos labos 🔬",
+      "author_joined_at": "2012-02-13T16:31:24Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T05:12:50Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109874986093609215",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 724
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 74,
+      "score_label": "IPS",
+      "matched_terms": [
+        "competitive_position",
+        "competitor_comparison"
+      ]
+    },
+    {
+      "post_id": "2109867954749800813",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "company_market",
+      "url": "https://x.com/Jiangliuer3264/status/2109867954749800813",
+      "text": "不要炒币，普通人是斗不过黑客的，我京东上买过一个ledger 钱包，按照说明书给我的App 下载地址验证成功，后面我发现这个App 根本不是谷歌商店的App ，只是界面很像，grok 查了一下资质，广东那家公司是香港经销商授权的，香港经销商是ledger 授权的。所以京东售卖的是经销商的经销商，还打着ledger 的名义卖完全不同的产品。\n\n后面我退货了，卖方在微信上承认是他们改造的，说可以仅退款，我表示不要，把货也退给他们了。\n\n现在想想，好险",
+      "original_text": "不要炒币，普通人是斗不过黑客的，我京东上买过一个ledger 钱包，按照说明书给我的App 下载地址验证成功，后面我发现这个App 根本不是谷歌商店的App ，只是界面很像，grok 查了一下资质，广东那家公司是香港经销商授权的，香港经销商是ledger 授权的。所以京东售卖的是经销商的经销商，还打着ledger 的名义卖完全不同的产品。\n\n后面我退货了，卖方在微信上承认是他们改造的，说可以仅退款，我表示不要，把货也退给他们了。\n\n现在想想，好险",
+      "links": [],
+      "translation_zh": "不要炒币，普通人是斗不过黑客的，我京东上买过一个ledger 钱包，按照说明书给我的App 下载地址验证成功，后面我发现这个App 根本不是谷歌商店的App ，只是界面很像，grok 查了一下资质，广东那家公司是香港经销商授权的，香港经销商是ledger 授权的。所以京东售卖的是经销商的经销商，还打着ledger 的名义卖完全不同的产品。\n\n后面我退货了，卖方在微信上承认是他们改造的，说可以仅退款，我表示不要，把货也退给他们了。\n\n现在想想，好险",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+      "author_name": "CandyAI",
+      "author_handle": "Jiangliuer3264",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2099286261223829504/QZNN46kN_normal.jpg",
+      "author_followers": 66,
+      "author_following": 168,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2025-09-13T04:16:30Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T04:44:54Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109867954749800813",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 22
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 66,
+      "score_label": "IPS",
+      "matched_terms": [
+        "corporate_context",
+        "company_market"
+      ]
+    },
+    {
+      "post_id": "2109863103358017627",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/_iuha/status/2109863103358017627",
+      "text": "ada untungnya juga udahan jd seller app prem :)))",
+      "original_text": "ada untungnya juga udahan jd seller app prem :)))",
+      "links": [],
+      "translation_zh": "不当高级版 app 卖家也有好处 :)))",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "✿ ,",
+      "author_handle": "_iuha",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2109520489219813376/7fkfjyak_normal.png",
+      "author_followers": 311,
+      "author_following": 319,
+      "author_bio": null,
+      "author_location": "loveth’ ",
+      "author_joined_at": "2010-02-06T18:07:52Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T04:25:37Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109863103358017627",
+      "conversation_context": {},
+      "language": "in",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 53
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2109858334132125808",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/caminoclynlatam/status/2109858334132125808",
+      "text": "🇧🇷 [PT]\n❤️🛒 JD SUPERMARKET celebra o 11.11 com Liu Yuning! 💛🎁\nDesde 12 de outubro, pesquise 「超市向前冲」 na JD.com e participe para ganhar cartões exclusivos do Ning e outros prêmios.",
+      "original_text": "🇧🇷 [PT]\n❤️🛒 JD SUPERMARKET celebra o 11.11 com Liu Yuning! 💛🎁\nDesde 12 de outubro, pesquise 「超市向前冲」 na https://t.co/LmDL8PeZZ6 e participe para ganhar cartões exclusivos do Ning e outros prêmios. https://t.co/BhonVZ0yim",
+      "links": [
+        "https://JD.com"
+      ],
+      "translation_zh": "🇧🇷 [PT]\n❤️🛒 JD SUPERMARKET 携手 Liu Yuning 庆祝 11.11！💛🎁\n从 10 月 12 日起，在 JD.com 搜索「超市向前冲」并参与活动，即有机会赢取 Ning 独家卡片和其他奖品。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Caminantes Nocturnas 🦅Liu Yuning (刘宇宁) - LATAM🌻",
+      "author_handle": "caminoclynlatam",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2090576277472182273/ehMsRoG9_normal.jpg",
+      "author_followers": 105,
+      "author_following": 47,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2025-12-22T02:47:47Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T04:06:40Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109858303723389214",
+      "conversation_context": {},
+      "language": "pt",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HUe4-FfWIAAb2N_.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUe4-FfWIAAb2N_.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUe4-FfWIAAb2N_.jpg",
+          "expanded_url": "https://x.com/caminoclynlatam/status/2109858334132125808/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 42
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2109849406958641499",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "company_market",
+      "url": "https://x.com/CHUISONGjIha5z/status/2109849406958641499",
+      "text": "明者观智（3）云·思坦福\n En el camino del emprendimiento\n20261012\niPSC- iOPZ源胚质（111)\n《创业路上》\n马老师在美国斯坦福大学的讲演 告诉学生 创业不容易 有很多的坑要避开！\n阿里巴巴的创业 一路走来也是不容易的 ！\n今天刚好又看到新闻 阿里系成功转型！\n难怪最近不少人说，阿里正在迎来新的蜕变。它已经不只是大家印象里的电商公司，而是一步步往顶尖AI科技企业转型。最近最受关注的，就是苹果和阿里达成的合作，国行iPhone上的Apple智能，会接入阿里千问大模型，给国内用户提供AI能力。这也能看出来，千问这套技术，已经得到头部硬件大厂的认可。现在阿里最新市值来到2.16万亿，和拼多多、京东拉开了差距。当然不是说淘宝天猫不重要了，电商依旧是稳定的基本盘，只是它的增长故事，不再单纯依靠卖货。AI和云计算，成了新的增长主线。阿里云这几年的势头很猛，AI相关收入连续多个季度保持三位数增长，算力、大模型这块，已经变成阿里非常重要的新引擎。而且它还把AI和电商打通，像智能导购、自动生成商品素材、优惠自动计算这些功能，慢慢融入日常购物里，电商和AI不再是互不相关的两块业务，而是互相借力。如果这一轮AI赛道能跑通，对国内科技行业来说，大概率会开启新一轮的竞争。各家大厂同台比拼技术、产品和商业化，很有可能迎来科技圈群雄竞逐的新阶段，还是挺值得期待的。\n企业成功不容易 要面对市场的各种竞争与变化！ 目前 虽然注册的企业很多 但平均年龄 也就是三年左右。\n企业家的平均寿命 也很短 只有56岁左右！ 而且可能更低 企业家压力大 担风险 担责任！身体健康受到影响与损伤！\n我也是企业家 从事过很多行业 例如： 电子IC 矿泉水 工艺礼品 房地产业 教育培训 玉石矿业 石头造纸 股票基金 投融资 等等 每个行业都不容易 特别是对身心的影响！\n所以我十多年前就投资生物科技 希望自己和朋友 家人 特别是企业家 能够更健康 活着更长久 企业家是中流抵柱！\n在目前的研究中 由iPSC分化形成的iOPZ源胚质 可以帮助到企业家！ 上期我介绍了一点 这期再介绍一些！\n源胚质作用机理概述二\n．修复组织器官1.通过上述成体干细胞的修复，直接分化成组织器官实质细胞，修复损伤或衰竭的器官。2.源胚质直接进入组织器官实质细胞内，如骨骼肌、脂肪、肝祖细胞、肝实质细胞、心肌细胞、神经元、血管内皮细胞、肾祖细胞、肾上皮细胞、内分泌细胞、生殖系统支持细胞等等，直接恢复机体体内，脂类、糖类、氨基酸代谢，促进有毒物质分解，实现新陈代谢有序恢复。尤其是同成体干细胞类似机理对血管内皮细胞、神经元、内分泌系统和生殖系统支持细胞的修复，直接修复机体心脑血管、中枢和外周神经系统，内分泌系统以及生殖细胞，系统性回调机体生理年龄获得重生。源胚质对心脏、肾脏祖细胞和实质细胞的修复，使机体在重要器脏方面得以脱衰弱，使体内在除微观代谢、神经免疫内分泌修复的基础上，在机体结构性管道运输和动力运输方面获得新生，让整体人体从细胞到组织器官彻底回调生理年龄。",
+      "original_text": "明者观智（3）云·思坦福\n En el camino del emprendimiento\n20261012\niPSC- iOPZ源胚质（111)\n《创业路上》\n马老师在美国斯坦福大学的讲演 告诉学生 创业不容易 有很多的坑要避开！\n阿里巴巴的创业 一路走来也是不容易的 ！\n今天刚好又看到新闻 阿里系成功转型！\n难怪最近不少人说，阿里正在迎来新的蜕变。它已经不只是大家印象里的电商公司，而是一步步往顶尖AI科技企业转型。最近最受关注的，就是苹果和阿里达成的合作，国行iPhone上的Apple智能，会接入阿里千问大模型，给国内用户提供AI能力。这也能看出来，千问这套技术，已经得到头部硬件大厂的认可。现在阿里最新市值来到2.16万亿，和拼多多、京东拉开了差距。当然不是说淘宝天猫不重要了，电商依旧是稳定的基本盘，只是它的增长故事，不再单纯依靠卖货。AI和云计算，成了新的增长主线。阿里云这几年的势头很猛，AI相关收入连续多个季度保持三位数增长，算力、大模型这块，已经变成阿里非常重要的新引擎。而且它还把AI和电商打通，像智能导购、自动生成商品素材、优惠自动计算这些功能，慢慢融入日常购物里，电商和AI不再是互不相关的两块业务，而是互相借力。如果这一轮AI赛道能跑通，对国内科技行业来说，大概率会开启新一轮的竞争。各家大厂同台比拼技术、产品和商业化，很有可能迎来科技圈群雄竞逐的新阶段，还是挺值得期待的。\n企业成功不容易 要面对市场的各种竞争与变化！ 目前 虽然注册的企业很多 但平均年龄 也就是三年左右。\n企业家的平均寿命 也很短 只有56岁左右！ 而且可能更低 企业家压力大 担风险 担责任！身体健康受到影响与损伤！\n我也是企业家 从事过很多行业 例如： 电子IC  矿泉水 工艺礼品 房地产业 教育培训 玉石矿业 石头造纸 股票基金 投融资 等等 每个行业都不容易 特别是对身心的影响！\n所以我十多年前就投资生物科技 希望自己和朋友 家人 特别是企业家 能够更健康 活着更长久 企业家是中流抵柱！\n在目前的研究中 由iPSC分化形成的iOPZ源胚质 可以帮助到企业家！ 上期我介绍了一点 这期再介绍一些！\n源胚质作用机理概述二\n．修复组织器官1.通过上述成体干细胞的修复，直接分化成组织器官实质细胞，修复损伤或衰竭的器官。2.源胚质直接进入组织器官实质细胞内，如骨骼肌、脂肪、肝祖细胞、肝实质细胞、心肌细胞、神经元、血管内皮细胞、肾祖细胞、肾上皮细胞、内分泌细胞、生殖系统支持细胞等等，直接恢复机体体内，脂类、糖类、氨基酸代谢，促进有毒物质分解，实现新陈代谢有序恢复。尤其是同成体干细胞类似机理对血管内皮细胞、神经元、内分泌系统和生殖系统支持细胞的修复，直接修复机体心脑血管、中枢和外周神经系统，内分泌系统以及生殖细胞，系统性回调机体生理年龄获得重生。源胚质对心脏、肾脏祖细胞和实质细胞的修复，使机体在重要器脏方面得以脱衰弱，使体内在除微观代谢、神经免疫内分泌修复的基础上，在机体结构性管道运输和动力运输方面获得新生，让整体人体从细胞到组织器官彻底回调生理年龄。",
+      "links": [],
+      "translation_zh": "明者观智（3）云·思坦福\n En el camino del emprendimiento\n20261012\niPSC- iOPZ源胚质（111)\n《创业路上》\n马老师在美国斯坦福大学的讲演 告诉学生 创业不容易 有很多的坑要避开！\n阿里巴巴的创业 一路走来也是不容易的 ！\n今天刚好又看到新闻 阿里系成功转型！\n难怪最近不少人说，阿里正在迎来新的蜕变。它已经不只是大家印象里的电商公司，而是一步步往顶尖AI科技企业转型。最近最受关注的，就是苹果和阿里达成的合作，国行iPhone上的Apple智能，会接入阿里千问大模型，给国内用户提供AI能力。这也能看出来，千问这套技术，已经得到头部硬件大厂的认可。现在阿里最新市值来到2.16万亿，和拼多多、京东拉开了差距。当然不是说淘宝天猫不重要了，电商依旧是稳定的基本盘，只是它的增长故事，不再单纯依靠卖货。AI和云计算，成了新的增长主线。阿里云这几年的势头很猛，AI相关收入连续多个季度保持三位数增长，算力、大模型这块，已经变成阿里非常重要的新引擎。而且它还把AI和电商打通，像智能导购、自动生成商品素材、优惠自动计算这些功能，慢慢融入日常购物里，电商和AI不再是互不相关的两块业务，而是互相借力。如果这一轮AI赛道能跑通，对国内科技行业来说，大概率会开启新一轮的竞争。各家大厂同台比拼技术、产品和商业化，很有可能迎来科技圈群雄竞逐的新阶段，还是挺值得期待的。\n企业成功不容易 要面对市场的各种竞争与变化！ 目前 虽然注册的企业很多 但平均年龄 也就是三年左右。\n企业家的平均寿命 也很短 只有56岁左右！ 而且可能更低 企业家压力大 担风险 担责任！身体健康受到影响与损伤！\n我也是企业家 从事过很多行业 例如： 电子IC 矿泉水 工艺礼品 房地产业 教育培训 玉石矿业 石头造纸 股票基金 投融资 等等 每个行业都不容易 特别是对身心的影响！\n所以我十多年前就投资生物科技 希望自己和朋友 家人 特别是企业家 能够更健康 活着更长久 企业家是中流抵柱！\n在目前的研究中 由iPSC分化形成的iOPZ源胚质 可以帮助到企业家！ 上期我介绍了一点 这期再介绍一些！\n源胚质作用机理概述二\n．修复组织器官1.通过上述成体干细胞的修复，直接分化成组织器官实质细胞，修复损伤或衰竭的器官。2.源胚质直接进入组织器官实质细胞内，如骨骼肌、脂肪、肝祖细胞、肝实质细胞、心肌细胞、神经元、血管内皮细胞、肾祖细胞、肾上皮细胞、内分泌细胞、生殖系统支持细胞等等，直接恢复机体体内，脂类、糖类、氨基酸代谢，促进有毒物质分解，实现新陈代谢有序恢复。尤其是同成体干细胞类似机理对血管内皮细胞、神经元、内分泌系统和生殖系统支持细胞的修复，直接修复机体心脑血管、中枢和外周神经系统，内分泌系统以及生殖细胞，系统性回调机体生理年龄获得重生。源胚质对心脏、肾脏祖细胞和实质细胞的修复，使机体在重要器脏方面得以脱衰弱，使体内在除微观代谢、神经免疫内分泌修复的基础上，在机体结构性管道运输和动力运输方面获得新生，让整体人体从细胞到组织器官彻底回调生理年龄。",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "CHUI SONG jIANG",
+      "author_handle": "CHUISONGjIha5z",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2088678069124956160/VrNPk4Ed_normal.jpg",
+      "author_followers": 3,
+      "author_following": 72,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-08-15T17:21:39Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T03:31:12Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109849406958641499",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2109847735423614976/img/LdVMo5nE7xJc6FNL.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2109847735423614976/img/LdVMo5nE7xJc6FNL.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2109847735423614976/img/LdVMo5nE7xJc6FNL.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              4,
+              3
+            ],
+            "duration_millis": 1832600,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video.twimg.com/amplify_video/2109847735423614976/pl/aqKxHsTO5s2IYB82.m3u8?tag=29"
+              },
+              {
+                "bitrate": 256000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2109847735423614976/vid/avc1/360x270/RpgVKhyKzJf2GCEp.mp4?tag=29"
+              },
+              {
+                "bitrate": 832000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2109847735423614976/vid/avc1/480x360/dPCabQtCYO4TQPmf.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2109847735423614976/vid/avc1/960x720/Li8LolJlrIejjwom.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2109847735423614976/vid/avc1/1440x1080/DcRSgPBlKBZrhXsa.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/CHUISONGjIha5z/status/2109849406958641499/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 250
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 66,
+      "score_label": "IPS",
+      "matched_terms": [
+        "corporate_context",
+        "company_market"
+      ]
+    },
+    {
+      "post_id": "2109847467500142644",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "general_observation",
+      "url": "https://x.com/Rachellpaduano6/status/2109847467500142644",
+      "text": "Di samping permasalahanya, mau nanya knp km spill penghasilan? aku tau km kesel tp bisa ga sensor penghasilan yg puluhan juta?? \n\nTakutnya makin byk penipu sm org awam yg mau join jd seller pdhl jd seller ga segampang itu.\n\nKm pun jual under, canv4 1b 500p, yutucb 1b 4k kek???",
+      "original_text": "Di samping permasalahanya, mau nanya knp km spill penghasilan? aku tau km kesel tp bisa ga sensor penghasilan yg puluhan juta?? \n\nTakutnya makin byk penipu sm org awam yg mau join jd seller pdhl jd seller ga segampang itu.\n\nKm pun jual under, canv4 1b 500p, yutucb 1b 4k kek???",
+      "links": [],
+      "translation_zh": "抛开问题本身不说，想问一下你为什么要爆收入？我知道你很生气，但能不能把那种几十万/几千万的收入打码？？\n\n怕的是会有越来越多骗子和外行人想加入当 seller，明明当 seller 没那么简单。\n\n你自己还卖 under，canv4 1b 500p，yutucb 1b 4k 这样？？？",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "𝗮𝗶𝗿𝗶 ִ ࣪𖤐",
+      "author_handle": "Rachellpaduano6",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2081547312770531328/GRoo3Lha_normal.png",
+      "author_followers": 1705,
+      "author_following": 1359,
+      "author_bio": null,
+      "author_location": "⠀⠀ii⠀𓈈⠀❤︎⠀welcome⠀darling⠀꒱꒱⠀",
+      "author_joined_at": "2016-09-15T11:37:46Z",
+      "author_verified": false,
+      "created_at": "2026-10-13T03:23:29Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2109847467500142644",
+      "conversation_context": {},
+      "language": "in",
+      "media": [],
+      "metrics": {
+        "likes": 32,
+        "reposts": 3,
+        "replies": 6,
+        "quotes": 0,
+        "bookmarks": 3,
+        "views": 2495
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    }
+  ],
+  "summary_only": false,
+  "clusters": [
+    {
+      "cluster_id": "primary-signal-002",
+      "title": "Competitor comparison and substitution signals",
+      "summary": "3 related posts compare 主品牌 with other shopping platforms.",
+      "summary_zh": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "lead_post": {
+        "post_id": "2109975524848357659",
+        "created_at": "2026-10-13T11:52:21Z",
+        "author": {
+          "id": "2021348450768445440",
+          "handle": "PhillipsSt51361",
+          "name": "Mia Ceran",
+          "avatar_url": "https://pbs.twimg.com/profile_images/2107248611163774976/3wGKvHGr_normal.jpg",
+          "followers": 0,
+          "following": 4,
+          "bio": null,
+          "location": null,
+          "joined_at": "2026-02-10T22:20:21Z",
+          "verified": false
+        },
+        "author_name": "Mia Ceran",
+        "author_handle": "PhillipsSt51361",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2107248611163774976/3wGKvHGr_normal.jpg",
+        "author_followers": 0,
+        "author_following": 4,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2026-02-10T22:20:21Z",
+        "author_verified": false,
+        "url": "https://x.com/PhillipsSt51361/status/2109975524848357659",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2109975524848357659",
+        "conversation_context": {},
+        "language": "it",
+        "text": "JoyBuy, simile ad Amazon cinese, con oltre 100mila prodotti, ha recentemente fatto una mossa aggressiva per entrare nel mercato europeo: ha acquisito un grande retailer tedesco e punta su consegne rapide e prezzi competitivi, entrando deciso in un se... https://t.co/9njb1n7sQi",
+        "clean_text": "JoyBuy, simile ad Amazon cinese, con oltre 100mila prodotti, ha recentemente fatto una mossa aggressiva per entrare nel mercato europeo: ha acquisito un grande retailer tedesco e punta su consegne rapide e prezzi competitivi, entrando deciso in un se...",
+        "links": [],
+        "translation_zh": "JoyBuy 类似于中国版 Amazon，拥有超过 10 万种商品，最近为进入欧洲市场采取了激进举措：它收购了一家大型德国零售商，并主打快速配送和有竞争力的价格，强势进入一个领...",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 4
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/amplify_video_thumb/2109975445664051200/img/Jo4tzCSsb4v_-o9n.jpg",
+            "type": "video",
+            "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2109975445664051200/img/Jo4tzCSsb4v_-o9n.jpg",
+            "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2109975445664051200/img/Jo4tzCSsb4v_-o9n.jpg",
+            "video_info": {
+              "aspect_ratio": [
+                9,
+                16
+              ],
+              "duration_millis": 29013,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/amplify_video/2109975445664051200/pl/uBoZgBeNhppBudW7.m3u8?tag=14"
+                },
+                {
+                  "bitrate": 632000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/2109975445664051200/vid/avc1/320x568/DmBc-6BLrbHVawah.mp4?tag=14"
+                },
+                {
+                  "bitrate": 950000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/2109975445664051200/vid/avc1/480x852/WHBIoZj7K8AU6HEM.mp4?tag=14"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/2109975445664051200/vid/avc1/720x1280/IV3pYmLnSewtnstE.mp4?tag=14"
+                }
+              ]
+            },
+            "expanded_url": "https://x.com/PhillipsSt51361/status/2109975524848357659/video/1"
+          }
+        ]
+      },
+      "topic": "competitor_comparison",
+      "risk_types": [],
+      "opportunity_types": [
+        "competitive_position"
+      ],
+      "post_count": 3,
+      "first_seen_at": "2026-10-13T05:12:50Z",
+      "last_seen_at": "2026-10-13T11:52:21Z",
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 902,
+        "max_author_followers": 153284,
+        "public_interactions": 0
+      },
+      "score": {
+        "ips": 74,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 68,
+        "current_impact": 50,
+        "future_potential": 77,
+        "credibility": 86,
+        "business_impact": 64,
+        "urgency": 58,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "竞品对照观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "competitive_position"
+        ],
+        "special_flags": [
+          "high_influence_account"
+        ],
+        "explanation": "用户将主品牌与其他平台对照，适合观察价格、配送或品类竞争位置。综合优先级 74。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 3,
+        "amplifiers": 1,
+        "latest": 3,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-004",
+      "title": "Product, deal and availability discussion",
+      "summary": "10 related posts mention product availability, deals or affiliate promotion.",
+      "summary_zh": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "lead_post": {
+        "post_id": "2109932778804461616",
+        "created_at": "2026-10-13T09:02:29Z",
+        "author": {
+          "id": "3238748839",
+          "handle": "AlertEtGo",
+          "name": "Alert&Go",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1686708896121888769/h4sv-Env_normal.jpg",
+          "followers": 168158,
+          "following": 1376,
+          "bio": null,
+          "location": "France",
+          "joined_at": "2015-06-07T09:34:27Z",
+          "verified": false
+        },
+        "author_name": "Alert&Go",
+        "author_handle": "AlertEtGo",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1686708896121888769/h4sv-Env_normal.jpg",
+        "author_followers": 168158,
+        "author_following": 1376,
+        "author_bio": null,
+        "author_location": "France",
+        "author_joined_at": "2015-06-07T09:34:27Z",
+        "author_verified": false,
+        "url": "https://x.com/AlertEtGo/status/2109932778804461616",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2109932778804461616",
+        "conversation_context": {},
+        "language": "fr",
+        "text": "HORI Instrument ocarina du temps électrique pour Nintendo Switch 2 | Consoles Nintendo Switch est dispo sur JoyBuy à 69.99€ !\n►  https://t.co/KsFMU27ox9 https://t.co/gIwCsx95Qt",
+        "clean_text": "HORI Instrument ocarina du temps électrique pour Nintendo Switch 2 | Consoles Nintendo Switch est dispo sur JoyBuy à 69.99€ !\n► awin1.com/cread.php",
+        "links": [
+          "https://www.awin1.com/cread.php?awinmid=123928&awinaffid=300117&platform=dl&ued=https%3A%2F%2Fwww.joybuy.fr%2Fdp%2Fhori-instrument-ocarina-du-temps-%C3%A9lectrique%2F100024175008686"
+        ],
+        "translation_zh": "HORI 时之笛电子乐器，适用于 Nintendo Switch 2 | Nintendo Switch 主机已在 JoyBuy 上架，售价 69.99€！\n► awin1.com/cread.php",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 8,
+          "reposts": 1,
+          "replies": 4,
+          "quotes": 0,
+          "bookmarks": 1,
+          "views": 6690
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HUf8robXAAAJPvz.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HUf8robXAAAJPvz.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HUf8robXAAAJPvz.jpg",
+            "expanded_url": "https://x.com/AlertEtGo/status/2109932778804461616/photo/1"
+          }
+        ]
+      },
+      "topic": "product_deal",
+      "risk_types": [],
+      "opportunity_types": [
+        "product_interest",
+        "promotion"
+      ],
+      "post_count": 10,
+      "first_seen_at": "2026-10-13T05:17:18Z",
+      "last_seen_at": "2026-10-13T22:10:22Z",
+      "metrics": {
+        "total_likes": 15,
+        "total_reposts": 1,
+        "total_replies": 4,
+        "total_quotes": 0,
+        "total_bookmarks": 2,
+        "total_views": 15356,
+        "max_author_followers": 168158,
+        "public_interactions": 20
+      },
+      "score": {
+        "ips": 71,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 60,
+        "current_impact": 54,
+        "future_potential": 78,
+        "credibility": 86,
+        "business_impact": 50,
+        "urgency": 49,
+        "sentiment": "positive",
+        "confidence": 0.81,
+        "recommended_action": "传播机会",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "product_interest",
+          "promotion"
+        ],
+        "special_flags": [
+          "high_influence_account"
+        ],
+        "explanation": "商品、优惠或库存信息可反映自然需求与转化入口，综合优先级 71。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 3,
+        "amplifiers": 3,
+        "latest": 3,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-003",
+      "title": "General 主品牌 overseas shopping discussion",
+      "summary": "17 related posts discuss 主品牌 overseas shopping context.",
+      "summary_zh": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "lead_post": {
+        "post_id": "2110076610556973165",
+        "created_at": "2026-10-13T18:34:01Z",
+        "author": {
+          "id": "1675887966739365888",
+          "handle": "hydrochaeris_4i",
+          "name": "水豚啊水豚",
+          "avatar_url": "https://pbs.twimg.com/profile_images/2052505080587284482/FvaJiGtO_normal.jpg",
+          "followers": 19,
+          "following": 7,
+          "bio": null,
+          "location": "London, England",
+          "joined_at": "2023-07-03T15:23:41Z",
+          "verified": false
+        },
+        "author_name": "水豚啊水豚",
+        "author_handle": "hydrochaeris_4i",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2052505080587284482/FvaJiGtO_normal.jpg",
+        "author_followers": 19,
+        "author_following": 7,
+        "author_bio": null,
+        "author_location": "London, England",
+        "author_joined_at": "2023-07-03T15:23:41Z",
+        "author_verified": false,
+        "url": "https://x.com/hydrochaeris_4i/status/2110076610556973165",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2110076610556973165",
+        "conversation_context": {},
+        "language": "zh",
+        "text": "🐶的日常：\n起因：来拿joybuy的配送商品\n结局：被我按在椅子亲\n\n很喜欢把狗脑袋搂在怀里，闷死算喜丧",
+        "clean_text": "🐶的日常：\n起因：来拿joybuy的配送商品\n结局：被我按在椅子亲\n\n很喜欢把狗脑袋搂在怀里，闷死算喜丧",
+        "links": [],
+        "translation_zh": "🐶的日常：\n起因：来拿joybuy的配送商品\n结局：被我按在椅子亲\n\n很喜欢把狗脑袋搂在怀里，闷死算喜丧",
+        "translation_status": "source_chinese",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 22
+        },
+        "media": []
+      },
+      "topic": "general_observation",
+      "risk_types": [],
+      "opportunity_types": [],
+      "post_count": 17,
+      "first_seen_at": "2026-10-13T03:23:29Z",
+      "last_seen_at": "2026-10-13T23:12:00Z",
+      "metrics": {
+        "total_likes": 72,
+        "total_reposts": 7,
+        "total_replies": 35,
+        "total_quotes": 3,
+        "total_bookmarks": 15,
+        "total_views": 28241,
+        "max_author_followers": 180380,
+        "public_interactions": 117
+      },
+      "score": {
+        "ips": 70,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 48,
+        "current_impact": 64,
+        "future_potential": 81,
+        "credibility": 86,
+        "business_impact": 42,
+        "urgency": 45,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "观察",
+        "risk_labels": [],
+        "opportunity_labels": [],
+        "special_flags": [
+          "potential_viral",
+          "high_influence_account"
+        ],
+        "explanation": "该情报与 主品牌 海外购物相关，当前综合优先级为 70。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 1,
+        "popular": 3,
+        "amplifiers": 1,
+        "latest": 3,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-001",
+      "title": "Corporate, market and strategy discussion",
+      "summary": "5 related posts discuss corporate, market or strategy context.",
+      "summary_zh": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "lead_post": {
+        "post_id": "2110034053667733694",
+        "created_at": "2026-10-13T15:44:55Z",
+        "author": {
+          "id": "1366768713240821760",
+          "handle": "StockCheckerUK",
+          "name": "Stock Checker UK",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1477936510284570625/9vJwgJfS_normal.jpg",
+          "followers": 38010,
+          "following": 3,
+          "bio": null,
+          "location": "United Kingdom",
+          "joined_at": "2021-03-02T15:14:07Z",
+          "verified": false
+        },
+        "author_name": "Stock Checker UK",
+        "author_handle": "StockCheckerUK",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1477936510284570625/9vJwgJfS_normal.jpg",
+        "author_followers": 38010,
+        "author_following": 3,
+        "author_bio": null,
+        "author_location": "United Kingdom",
+        "author_joined_at": "2021-03-02T15:14:07Z",
+        "author_verified": false,
+        "url": "https://x.com/StockCheckerUK/status/2110034053667733694",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2110034053667733694",
+        "conversation_context": {},
+        "language": "en",
+        "text": "⚡ Unihertz Titan 2 Elite 256GB 5G Smartphone is now just £459.99 on Joybuy, down from £589.99!\n\n&gt; https://t.co/cVO4Qs3iOL https://t.co/cN0rykiLaJ",
+        "clean_text": "⚡ Unihertz Titan 2 Elite 256GB 5G Smartphone is now just £459.99 on Joybuy, down from £589.99!\n\n> stock-checker.com/deals",
+        "links": [
+          "https://stock-checker.com/deals/unihertz-titan-2-elite-256gb-5g-smartphone-973083"
+        ],
+        "translation_zh": "⚡ Unihertz Titan 2 Elite 256GB 5G Smartphone 现在在 Joybuy 仅售 £459.99，原价 £589.99！\n\n> stock-checker.com/deals",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 2058
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HUhYn7sXYAA2CcW.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HUhYn7sXYAA2CcW.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HUhYn7sXYAA2CcW.jpg",
+            "expanded_url": "https://x.com/StockCheckerUK/status/2110034053667733694/photo/1"
+          }
+        ]
+      },
+      "topic": "company_market",
+      "risk_types": [],
+      "opportunity_types": [
+        "corporate_context"
+      ],
+      "post_count": 5,
+      "first_seen_at": "2026-10-13T03:31:12Z",
+      "last_seen_at": "2026-10-13T22:07:10Z",
+      "metrics": {
+        "total_likes": 1,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 2478,
+        "max_author_followers": 38010,
+        "public_interactions": 1
+      },
+      "score": {
+        "ips": 66,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 48,
+        "current_impact": 38,
+        "future_potential": 70,
+        "credibility": 86,
+        "business_impact": 56,
+        "urgency": 47,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "背景观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "corporate_context"
+        ],
+        "special_flags": [],
+        "explanation": "公司、资本市场或战略背景信息对品牌心智有间接影响，当前综合优先级为 66。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 2,
+        "popular": 3,
+        "amplifiers": 1,
+        "latest": 3,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-005",
+      "title": "Regulatory and market-access scrutiny around 主品牌",
+      "summary": "1 related posts discuss regulatory review, acquisition scrutiny or market-access risk.",
+      "summary_zh": "相关讨论涉及 主品牌 在海外市场的监管审查、并购交易或市场准入风险。",
+      "lead_post": {
+        "post_id": "2109918920962433104",
+        "created_at": "2026-10-13T08:07:25Z",
+        "author": {
+          "id": "399273761",
+          "handle": "etailment",
+          "name": "etailment",
+          "avatar_url": "https://pbs.twimg.com/profile_images/2077769004169469952/5ucSJ3jY_normal.png",
+          "followers": 6298,
+          "following": 916,
+          "bio": null,
+          "location": "Frankfurt am Main, Deutschland",
+          "joined_at": "2011-10-27T07:55:25Z",
+          "verified": false
+        },
+        "author_name": "etailment",
+        "author_handle": "etailment",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2077769004169469952/5ucSJ3jY_normal.png",
+        "author_followers": 6298,
+        "author_following": 916,
+        "author_bio": null,
+        "author_location": "Frankfurt am Main, Deutschland",
+        "author_joined_at": "2011-10-27T07:55:25Z",
+        "author_verified": false,
+        "url": "https://x.com/etailment/status/2109918920962433104",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2109918920962433104",
+        "conversation_context": {},
+        "language": "de",
+        "text": "Handelsdeals werden zur Infrastrukturprüfung.\n\nÖsterreich gibt grünes Licht für die Übernahme der MediaMarkt-Mutter Ceconomy durch https://t.co/JKtFbznMbn. Das Ja ist an Auflagen zu Daten, Lieferketten und sicherheitsrelevanten Personalentscheidungen geknüpft.\n\nFür Händler reicht das Signal über den einzelnen Deal hinaus. Wer Kundenzugang, Sortimente, Logistik und Datenbestände übernimmt, kauft nicht nur Umsatz – sondern rückt in Fragen nationaler und europäischer Kontrolle.\n\nIn Österreich betreibt MediaMarkt 56 Märkte mit rund 2.400 Beschäftigten. Im Geschäftsjahr 2025/26 lag der Umsatz dort bei 1,3 Mrd. Euro. Das ist groß genug, um politisch relevant zu sein, aber klein genug, um die Auflagen als Blaupause zu lesen.\n\nOffen bleibt Brüssel: Die EU-Kommission will bis zum 4. November entscheiden. Erst dann zeigt sich, wie eng der europäische Rahmen für chinesisches Kapital im Handelsgeschäft gezogen wird.\n\nDie Konsequenz: Händler sollten Datenhoheit, Lieferketten und Kontrollrechte bei M&A und Partnerschaften nicht als Legal-Anhang behandeln. Wie sauber wären solche Auflagen in Ihrem Unternehmen operativ abbildbar?",
+        "clean_text": "Handelsdeals werden zur Infrastrukturprüfung.\n\nÖsterreich gibt grünes Licht für die Übernahme der MediaMarkt-Mutter Ceconomy durch JD.com Das Ja ist an Auflagen zu Daten, Lieferketten und sicherheitsrelevanten Personalentscheidungen geknüpft.\n\nFür Händler reicht das Signal über den einzelnen Deal hinaus. Wer Kundenzugang, Sortimente, Logistik und Datenbestände übernimmt, kauft nicht nur Umsatz – sondern rückt in Fragen nationaler und europäischer Kontrolle.\n\nIn Österreich betreibt MediaMarkt 56 Märkte mit rund 2.400 Beschäftigten. Im Geschäftsjahr 2025/26 lag der Umsatz dort bei 1,3 Mrd. Euro. Das ist groß genug, um politisch relevant zu sein, aber klein genug, um die Auflagen als Blaupause zu lesen.\n\nOffen bleibt Brüssel: Die EU-Kommission will bis zum 4. November entscheiden. Erst dann zeigt sich, wie eng der europäische Rahmen für chinesisches Kapital im Handelsgeschäft gezogen wird.\n\nDie Konsequenz: Händler sollten Datenhoheit, Lieferketten und Kontrollrechte bei M&A und Partnerschaften nicht als Legal-Anhang behandeln. Wie sauber wären solche Auflagen in Ihrem Unternehmen operativ abbildbar?",
+        "links": [
+          "http://JD.com"
+        ],
+        "translation_zh": "贸易交易正在变成基础设施审查。\n\n奥地利为 JD.com 收购 MediaMarkt 母公司 Ceconomy 开了绿灯。该批准附带了有关数据、供应链以及与安全相关的人事决策的条件。\n\n对零售商而言，这一信号的意义超出了单笔交易。谁接管客户入口、商品品类、物流和数据资产，买下的就不只是营收——而是进入了国家和欧洲层面的监管议题。\n\n在奥地利，MediaMarkt 运营着 56 家门店，约有 2,400 名员工。在 2025/26 财年，其在当地的营收为 13 亿欧元。这一规模大到足以具有政治相关性，但又小到足以让这些条件被视作蓝图。\n\n布鲁塞尔方面仍悬而未决：欧盟委员会希望在 11 月 4 日前作出决定。只有到那时，才会看出欧洲对中国资本进入零售业务所划定的框架有多严格。\n\n结论是：零售商在并购和合作伙伴关系中，不应把数据主权、供应链和控制权视为法律附件来处理。在您的企业中，这类条件在运营层面能被多干净利落地落实？",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 38
+        },
+        "media": []
+      },
+      "topic": "regulatory",
+      "risk_types": [
+        "regulatory",
+        "market_access",
+        "acquisition"
+      ],
+      "opportunity_types": [],
+      "post_count": 1,
+      "first_seen_at": "2026-10-13T08:07:25Z",
+      "last_seen_at": "2026-10-13T08:07:25Z",
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 1,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 38,
+        "max_author_followers": 6298,
+        "public_interactions": 1
+      },
+      "score": {
+        "ips": 66,
+        "level": "medium",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 82,
+        "current_impact": 27,
+        "future_potential": 55,
+        "credibility": 66,
+        "business_impact": 90,
+        "urgency": 88,
+        "sentiment": "negative",
+        "confidence": 0.81,
+        "recommended_action": "管理层同步",
+        "risk_labels": [
+          "regulatory",
+          "market_access",
+          "acquisition"
+        ],
+        "opportunity_labels": [],
+        "special_flags": [],
+        "explanation": "监管与并购审查影响海外市场准入和品牌信任，当前影响力 27，可信度 66，建议纳入管理层视野。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 1,
+        "amplifiers": 0,
+        "latest": 1,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 1
+      }
+    },
+    {
+      "cluster_id": "primary-signal-006",
+      "title": "Trust, safety and authenticity concerns",
+      "summary": "1 related posts mention trust, safety or authenticity concerns.",
+      "summary_zh": "相关讨论涉及信任、安全、真假或隐私相关担忧。",
+      "lead_post": {
+        "post_id": "2110026972697133513",
+        "created_at": "2026-10-13T15:16:47Z",
+        "author": {
+          "id": "3390985145",
+          "handle": "bbrlfh",
+          "name": "火星网友",
+          "avatar_url": "https://pbs.twimg.com/profile_images/2095322636104708096/YfwYVALk_normal.jpg",
+          "followers": 60,
+          "following": 526,
+          "bio": null,
+          "location": "火星",
+          "joined_at": "2015-07-24T13:30:16Z",
+          "verified": false
+        },
+        "author_name": "火星网友",
+        "author_handle": "bbrlfh",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2095322636104708096/YfwYVALk_normal.jpg",
+        "author_followers": 60,
+        "author_following": 526,
+        "author_bio": null,
+        "author_location": "火星",
+        "author_joined_at": "2015-07-24T13:30:16Z",
+        "author_verified": false,
+        "url": "https://x.com/bbrlfh/status/2110026972697133513",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2110026972697133513",
+        "conversation_context": {},
+        "language": "zh",
+        "text": "DNS泄漏？\n\n用这个网站检测：https://t.co/c69mpOmWwy\n列表里没有出现大陆国旗，就说明你的 DNS 是安全的！\nwebrtc：https://t.co/wRIPuhGU9G\n IPv6泄漏检测：https://t.co/zoRh7GVckF\n\n圈x的可以改一下\n\n[dns]\n# 禁用系统运营商默认 DNS（防止运营商劫持与偷跑泄漏）\nno-system\n\n# 禁用 IPv6，避免双栈泄漏\nno-ipv6\n\n# 国内大厂核心域名与 CDN，指定阿里/腾讯极速解析\nserver=/*.cn/223.5.5.5\nserver=/*.alicdn.com/223.5.5.5\nserver=/*.taobao.com/223.5.5.5\nserver=/*.alipay.com/223.5.5.5\nserver=/*.jd.com/223.5.5.5\nserver=/*.360buyimg.com/223.5.5.5\nserver=/*.qq.com/119.29.29.29\nserver=/*.tencent.com/119.29.29.29\nserver=/*.weixin.com/119.29.29.29\nserver=/*.qpic.cn/119.29.29.29\nserver=/*.bilibili.com/119.29.29.29\nserver=/*.bilivideo.com/119.29.29.29\nserver=/*.bytedance.com/223.5.5.5\nserver=/*.byteimg.com/223.5.5.5\nserver=/*.baidu.com/223.5.5.5\nserver=/*.163.com/223.5.5.5\nserver=/*.icloud.com/119.29.29.29\nserver=/*.icloud.com.cn/119.29.29.29\n\n# 全局默认 DNS 仅保留国内公共 DNS（只用于分流命中 Direct 的域名）\nserver=223.5.5.5\nserver=119.29.29.29\n\nalias = /iosapps.itunes.apple.com/iosapps.itunes.apple.com.download.ks-cdn.com\n\n[filter_local]\nhost-suffix, https://t.co/kI1X2s9brf, direct\n# 1. 明确直连的常用国内大厂（放在最顶部，瞬间直连，毫无延迟）\nhost-suffix, cn, direct\nhost-keyword, baidu, direct\nhost-keyword, alibaba, direct\nhost-keyword, alipay, direct\nhost-keyword, taobao, direct\nhost-keyword, jd, direct\nhost-keyword, 360buyimg, direct\nhost-keyword, tencent, direct\nhost-keyword, weixin, direct\nhost-keyword, qq, direct\nhost-keyword, bilibili, direct\nhost-keyword, byteimg, direct\nhost-keyword, bytedance, direct\nhost-suffix, https://t.co/AyINx8HfCK, direct\nhost-suffix, https://t.co/rO9Ilpk3Hs, direct\n\n# 2. 局域网直连 (Local IP)\nip-cidr, 10.0.0.0/8, direct\nip-cidr, 127.0.0.0/8, direct\nip-cidr, 172.16.0.0/12, direct\nip-cidr, 192.168.0.0/16, direct\nip-cidr, 224.0.0.0/24, direct\nip-cidr, 182.254.116.0/24, direct\n\n# > 核心防泄露：拦截所有未匹配的域名直接走代理节点远程解析，禁止本地查询 IP\nhost-keyword, ., 兜底分流\n# 3. 国内常见 IP 段快速直连（此时只处理纯 IP 流量）\ngeoip, cn, direct\n\n# 4. 关键：兜底全部走节点远程解析（绝不让未匹配域名在本地查 IP）\nfinal, 兜底分流",
+        "clean_text": "DNS泄漏？\n\n用这个网站检测：browserleaks.com/dns\n列表里没有出现大陆国旗，就说明你的 DNS 是安全的！\nwebrtc：browserleaks.com/webrtc\n IPv6泄漏检测：browserleaks.com/ip\n\n圈x的可以改一下\n\n[dns]\n# 禁用系统运营商默认 DNS（防止运营商劫持与偷跑泄漏）\nno-system\n\n# 禁用 IPv6，避免双栈泄漏\nno-ipv6\n\n# 国内大厂核心域名与 CDN，指定阿里/腾讯极速解析\nserver=/*.cn/223.5.5.5\nserver=/*.alicdn.com/223.5.5.5\nserver=/*.taobao.com/223.5.5.5\nserver=/*.alipay.com/223.5.5.5\nserver=/*.jd.com/223.5.5.5\nserver=/*.360buyimg.com/223.5.5.5\nserver=/*.qq.com/119.29.29.29\nserver=/*.tencent.com/119.29.29.29\nserver=/*.weixin.com/119.29.29.29\nserver=/*.qpic.cn/119.29.29.29\nserver=/*.bilibili.com/119.29.29.29\nserver=/*.bilivideo.com/119.29.29.29\nserver=/*.bytedance.com/223.5.5.5\nserver=/*.byteimg.com/223.5.5.5\nserver=/*.baidu.com/223.5.5.5\nserver=/*.163.com/223.5.5.5\nserver=/*.icloud.com/119.29.29.29\nserver=/*.icloud.com.cn/119.29.29.29\n\n# 全局默认 DNS 仅保留国内公共 DNS（只用于分流命中 Direct 的域名）\nserver=223.5.5.5\nserver=119.29.29.29\n\nalias = /iosapps.itunes.apple.com/iosapps.itunes.apple.com.download.ks-cdn.com\n\n[filter_local]\nhost-suffix, gaiaapp.copm.com.cn direct\n# 1. 明确直连的常用国内大厂（放在最顶部，瞬间直连，毫无延迟）\nhost-suffix, cn, direct\nhost-keyword, baidu, direct\nhost-keyword, alibaba, direct\nhost-keyword, alipay, direct\nhost-keyword, taobao, direct\nhost-keyword, jd, direct\nhost-keyword, 360buyimg, direct\nhost-keyword, tencent, direct\nhost-keyword, weixin, direct\nhost-keyword, qq, direct\nhost-keyword, bilibili, direct\nhost-keyword, byteimg, direct\nhost-keyword, bytedance, direct\nhost-suffix, 163.com direct\nhost-suffix, 126.net direct\n\n# 2. 局域网直连 (Local IP)\nip-cidr, 10.0.0.0/8, direct\nip-cidr, 127.0.0.0/8, direct\nip-cidr, 172.16.0.0/12, direct\nip-cidr, 192.168.0.0/16, direct\nip-cidr, 224.0.0.0/24, direct\nip-cidr, 182.254.116.0/24, direct\n\n# > 核心防泄露：拦截所有未匹配的域名直接走代理节点远程解析，禁止本地查询 IP\nhost-keyword, ., 兜底分流\n# 3. 国内常见 IP 段快速直连（此时只处理纯 IP 流量）\ngeoip, cn, direct\n\n# 4. 关键：兜底全部走节点远程解析（绝不让未匹配域名在本地查 IP）\nfinal, 兜底分流",
+        "links": [
+          "http://browserleaks.com/dns",
+          "http://browserleaks.com/webrtc",
+          "http://browserleaks.com/ip",
+          "http://gaiaapp.copm.com.cn",
+          "http://163.com",
+          "http://126.net"
+        ],
+        "translation_zh": "DNS泄漏？\n\n用这个网站检测：browserleaks.com/dns\n列表里没有出现大陆国旗，就说明你的 DNS 是安全的！\nwebrtc：browserleaks.com/webrtc\n IPv6泄漏检测：browserleaks.com/ip\n\n圈x的可以改一下\n\n[dns]\n# 禁用系统运营商默认 DNS（防止运营商劫持与偷跑泄漏）\nno-system\n\n# 禁用 IPv6，避免双栈泄漏\nno-ipv6\n\n# 国内大厂核心域名与 CDN，指定阿里/腾讯极速解析\nserver=/*.cn/223.5.5.5\nserver=/*.alicdn.com/223.5.5.5\nserver=/*.taobao.com/223.5.5.5\nserver=/*.alipay.com/223.5.5.5\nserver=/*.jd.com/223.5.5.5\nserver=/*.360buyimg.com/223.5.5.5\nserver=/*.qq.com/119.29.29.29\nserver=/*.tencent.com/119.29.29.29\nserver=/*.weixin.com/119.29.29.29\nserver=/*.qpic.cn/119.29.29.29\nserver=/*.bilibili.com/119.29.29.29\nserver=/*.bilivideo.com/119.29.29.29\nserver=/*.bytedance.com/223.5.5.5\nserver=/*.byteimg.com/223.5.5.5\nserver=/*.baidu.com/223.5.5.5\nserver=/*.163.com/223.5.5.5\nserver=/*.icloud.com/119.29.29.29\nserver=/*.icloud.com.cn/119.29.29.29\n\n# 全局默认 DNS 仅保留国内公共 DNS（只用于分流命中 Direct 的域名）\nserver=223.5.5.5\nserver=119.29.29.29\n\nalias = /iosapps.itunes.apple.com/iosapps.itunes.apple.com.download.ks-cdn.com\n\n[filter_local]\nhost-suffix, gaiaapp.copm.com.cn direct\n# 1. 明确直连的常用国内大厂（放在最顶部，瞬间直连，毫无延迟）\nhost-suffix, cn, direct\nhost-keyword, baidu, direct\nhost-keyword, alibaba, direct\nhost-keyword, alipay, direct\nhost-keyword, taobao, direct\nhost-keyword, jd, direct\nhost-keyword, 360buyimg, direct\nhost-keyword, tencent, direct\nhost-keyword, weixin, direct\nhost-keyword, qq, direct\nhost-keyword, bilibili, direct\nhost-keyword, byteimg, direct\nhost-keyword, bytedance, direct\nhost-suffix, 163.com direct\nhost-suffix, 126.net direct\n\n# 2. 局域网直连 (Local IP)\nip-cidr, 10.0.0.0/8, direct\nip-cidr, 127.0.0.0/8, direct\nip-cidr, 172.16.0.0/12, direct\nip-cidr, 192.168.0.0/16, direct\nip-cidr, 224.0.0.0/24, direct\nip-cidr, 182.254.116.0/24, direct\n\n# > 核心防泄露：拦截所有未匹配的域名直接走代理节点远程解析，禁止本地查询 IP\nhost-keyword, ., 兜底分流\n# 3. 国内常见 IP 段快速直连（此时只处理纯 IP 流量）\ngeoip, cn, direct\n\n# 4. 关键：兜底全部走节点远程解析（绝不让未匹配域名在本地查 IP）\nfinal, 兜底分流",
+        "translation_status": "source_chinese",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 95
+        },
+        "media": []
+      },
+      "topic": "trust_safety",
+      "risk_types": [
+        "brand_trust",
+        "safety"
+      ],
+      "opportunity_types": [],
+      "post_count": 1,
+      "first_seen_at": "2026-10-13T15:16:47Z",
+      "last_seen_at": "2026-10-13T15:16:47Z",
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 95,
+        "max_author_followers": 60,
+        "public_interactions": 0
+      },
+      "score": {
+        "ips": 61,
+        "level": "medium",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 74,
+        "current_impact": 25,
+        "future_potential": 48,
+        "credibility": 66,
+        "business_impact": 82,
+        "urgency": 77,
+        "sentiment": "negative",
+        "confidence": 0.81,
+        "recommended_action": "观察",
+        "risk_labels": [
+          "brand_trust",
+          "safety"
+        ],
+        "opportunity_labels": [],
+        "special_flags": [],
+        "explanation": "信任、安全或真实性讨论可能影响品牌可信度，当前影响力 25，未来发酵潜力 48。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 1,
+        "amplifiers": 0,
+        "latest": 1,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 1
+      }
+    }
+  ]
+}

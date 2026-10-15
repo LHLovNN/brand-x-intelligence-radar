@@ -1,0 +1,140 @@
+{
+  "conversation_id": "2109934005957366037",
+  "anchor_post_id": "2109934005957366037",
+  "summary_zh": "对话围绕 Beav 2.9.0 官方更新展开，收录帖详细介绍首页任务看板、AI 工具连接、素材库、视频剪辑、配音、安装包变小等体验升级。后续用户追问终稿被外部 Agent 修改后的验收与对比机制，也有人认可首页显示进度。上下文显示信息源像官方发布，情绪偏正面，传播价值在功能更新与用户反馈。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2109934005957366037",
+      "url": "https://x.com/JambaHailar/status/2109934005957366037",
+      "created_at": "2026-10-13T09:07:22Z",
+      "text": "今天正式向大家介绍Beav 2.9.0\n\n这是 Beav 迄今为止最大的一次更新。\n\n具体更新如下：\n\n首页升级为 AI 任务指挥台，素材库接入 Codex、Claude 等 AI 工具，视频剪辑更专业，整个 App 也更轻盈、更顺手。\n\nAI 帮你干活，你只管验收。\n\n🏠 首页：任务进度一眼看清\n\n全新任务看板，分为「等你处理」「待查看」「进行中」。AI 有问题会直接问你，做完后等你验收，已完成的任务自动移出看板。\n\n点开卡片，就能在首页右侧继续对话、提出修改意见，不用来回切换页面。\n\n📅 内容排期：发什么、哪天发，统一安排\n\n首页新增内容排期，支持月、周、年三种视图，拖动稿件就能调整发布日期。\n\n稿件有了「初稿 / 终稿 / 已发布」阶段，待排期内容、节日和定时任务也能一起查看。\n\n🔌 一键连接你常用的 AI 工具\n\n支持 Claude Code、Codex、WorkBuddy、Claude 桌面版和 Cursor，一键连接，后续 Beav 更新无需重新配置。\n\n外部 AI 可以读取你的创作偏好、采集社媒内容，并把文章、图片和视频存回 Beav。你在不同工具里积累的偏好，也能共用一份记忆。\n\n「环境与密钥」支持批量编辑，并可为每个变量设置「不共享 / 仅注入 / 可读取」。\n\n🗂️ 素材库：像管理电脑文件一样顺手\n\n素材网页全面改版，采用访达式操作：空格快速预览、多选、框选、拖动整理、右键菜单和废纸篓，图片与视频按原始比例展示。\n\n在 Codex / ChatGPT 中，素材库可以直接显示在对话侧栏；也支持通过 beav.localhost 在浏览器打开。\n\n新增「提示词」分类，常用提示词集中保存、一键复制。稿件支持直接编辑并自动保存，手机扫码即可上传或领取素材。\n\n只想管理素材时，还可以切换到独立的「素材库模式」。\n\n🧠 AI：更懂你，也更稳定\n\n说一次「以后都这样」，AI 就会记住；偏好变化时，会修正原有记忆。单篇内容的临时修改不会影响长期习惯。\n\n网络中断、服务繁忙等情况下的恢复能力得到加强，长对话打开更快。修改素材包时可以直接更新原内容，不必每次生成新包。\n\n🎬 视频剪辑：更专业，也更高效\n\n新增 J/K/L 穿梭播放、三点编辑、波纹删除、逐帧修剪和变速拉伸，让常用剪辑操作通过键盘快速完成。\n\n配乐支持按人声片段自动压低音量。新增编辑历史和工程自动版本保存，误操作也能轻松恢复。\n\n🧰 内置工具：解析更稳，配音更多\n\n优化抖音、小红书、YouTube 等平台的解析与保存，视频文案提取新增支持小红书视频笔记。\n\n豆包 2.0 新增 445 个官方音色，千问 Audio 3.1 新增 68 个官方音色，OpenAI 配音支持直接选择音色，音色克隆与配音模型自动匹配。\n\n🎨 全新界面：轻盈、通透、更顺手\n\n统一浮起式右侧栏，聊天输入框采用悬浮毛玻璃设计，附件按类型显示，深浅色切换更加柔和。\n\n空间切换更快，设置修改后自动保存，首次使用导览也全面更新。\n\n🗄️ 空间与安装\n\n创建空间时可自选保存位置，也能重新打开已有空间，方便使用外接硬盘或同步盘。\n\n极致的工程优化带来极致的性能提升：安装包从约 170 MB 缩小至约 85 MB，下载和更新更快。\n\n此外，还修复了视频导出音轨截短、Windows 素材包保存失败等问题，并完成多项稳定性与性能优化。\n\n感谢每一位用户的反馈，2.9.0 的很多改动都来自你们的建议。",
+      "original_text": "今天正式向大家介绍Beav 2.9.0\n\n这是 Beav 迄今为止最大的一次更新。\n\n具体更新如下：\n\n首页升级为 AI 任务指挥台，素材库接入 Codex、Claude 等 AI 工具，视频剪辑更专业，整个 App 也更轻盈、更顺手。\n\nAI 帮你干活，你只管验收。\n\n🏠 首页：任务进度一眼看清\n\n全新任务看板，分为「等你处理」「待查看」「进行中」。AI 有问题会直接问你，做完后等你验收，已完成的任务自动移出看板。\n\n点开卡片，就能在首页右侧继续对话、提出修改意见，不用来回切换页面。\n\n📅 内容排期：发什么、哪天发，统一安排\n\n首页新增内容排期，支持月、周、年三种视图，拖动稿件就能调整发布日期。\n\n稿件有了「初稿 / 终稿 / 已发布」阶段，待排期内容、节日和定时任务也能一起查看。\n\n🔌 一键连接你常用的 AI 工具\n\n支持 Claude Code、Codex、WorkBuddy、Claude 桌面版和 Cursor，一键连接，后续 Beav 更新无需重新配置。\n\n外部 AI 可以读取你的创作偏好、采集社媒内容，并把文章、图片和视频存回 Beav。你在不同工具里积累的偏好，也能共用一份记忆。\n\n「环境与密钥」支持批量编辑，并可为每个变量设置「不共享 / 仅注入 / 可读取」。\n\n🗂️ 素材库：像管理电脑文件一样顺手\n\n素材网页全面改版，采用访达式操作：空格快速预览、多选、框选、拖动整理、右键菜单和废纸篓，图片与视频按原始比例展示。\n\n在 Codex / ChatGPT 中，素材库可以直接显示在对话侧栏；也支持通过 beav.localhost 在浏览器打开。\n\n新增「提示词」分类，常用提示词集中保存、一键复制。稿件支持直接编辑并自动保存，手机扫码即可上传或领取素材。\n\n只想管理素材时，还可以切换到独立的「素材库模式」。\n\n🧠 AI：更懂你，也更稳定\n\n说一次「以后都这样」，AI 就会记住；偏好变化时，会修正原有记忆。单篇内容的临时修改不会影响长期习惯。\n\n网络中断、服务繁忙等情况下的恢复能力得到加强，长对话打开更快。修改素材包时可以直接更新原内容，不必每次生成新包。\n\n🎬 视频剪辑：更专业，也更高效\n\n新增 J/K/L 穿梭播放、三点编辑、波纹删除、逐帧修剪和变速拉伸，让常用剪辑操作通过键盘快速完成。\n\n配乐支持按人声片段自动压低音量。新增编辑历史和工程自动版本保存，误操作也能轻松恢复。\n\n🧰 内置工具：解析更稳，配音更多\n\n优化抖音、小红书、YouTube 等平台的解析与保存，视频文案提取新增支持小红书视频笔记。\n\n豆包 2.0 新增 445 个官方音色，千问 Audio 3.1 新增 68 个官方音色，OpenAI 配音支持直接选择音色，音色克隆与配音模型自动匹配。\n\n🎨 全新界面：轻盈、通透、更顺手\n\n统一浮起式右侧栏，聊天输入框采用悬浮毛玻璃设计，附件按类型显示，深浅色切换更加柔和。\n\n空间切换更快，设置修改后自动保存，首次使用导览也全面更新。\n\n🗄️ 空间与安装\n\n创建空间时可自选保存位置，也能重新打开已有空间，方便使用外接硬盘或同步盘。\n\n极致的工程优化带来极致的性能提升：安装包从约 170 MB 缩小至约 85 MB，下载和更新更快。\n\n此外，还修复了视频导出音轨截短、Windows 素材包保存失败等问题，并完成多项稳定性与性能优化。\n\n感谢每一位用户的反馈，2.9.0 的很多改动都来自你们的建议。",
+      "translation_zh": "今天正式向大家介绍Beav 2.9.0\n\n这是 Beav 迄今为止最大的一次更新。\n\n具体更新如下：\n\n首页升级为 AI 任务指挥台，素材库接入 Codex、Claude 等 AI 工具，视频剪辑更专业，整个 App 也更轻盈、更顺手。\n\nAI 帮你干活，你只管验收。\n\n🏠 首页：任务进度一眼看清\n\n全新任务看板，分为「等你处理」「待查看」「进行中」。AI 有问题会直接问你，做完后等你验收，已完成的任务自动移出看板。\n\n点开卡片，就能在首页右侧继续对话、提出修改意见，不用来回切换页面。\n\n📅 内容排期：发什么、哪天发，统一安排\n\n首页新增内容排期，支持月、周、年三种视图，拖动稿件就能调整发布日期。\n\n稿件有了「初稿 / 终稿 / 已发布」阶段，待排期内容、节日和定时任务也能一起查看。\n\n🔌 一键连接你常用的 AI 工具\n\n支持 Claude Code、Codex、WorkBuddy、Claude 桌面版和 Cursor，一键连接，后续 Beav 更新无需重新配置。\n\n外部 AI 可以读取你的创作偏好、采集社媒内容，并把文章、图片和视频存回 Beav。你在不同工具里积累的偏好，也能共用一份记忆。\n\n「环境与密钥」支持批量编辑，并可为每个变量设置「不共享 / 仅注入 / 可读取」。\n\n🗂️ 素材库：像管理电脑文件一样顺手\n\n素材网页全面改版，采用访达式操作：空格快速预览、多选、框选、拖动整理、右键菜单和废纸篓，图片与视频按原始比例展示。\n\n在 Codex / ChatGPT 中，素材库可以直接显示在对话侧栏；也支持通过 beav.localhost 在浏览器打开。\n\n新增「提示词」分类，常用提示词集中保存、一键复制。稿件支持直接编辑并自动保存，手机扫码即可上传或领取素材。\n\n只想管理素材时，还可以切换到独立的「素材库模式」。\n\n🧠 AI：更懂你，也更稳定\n\n说一次「以后都这样」，AI 就会记住；偏好变化时，会修正原有记忆。单篇内容的临时修改不会影响长期习惯。\n\n网络中断、服务繁忙等情况下的恢复能力得到加强，长对话打开更快。修改素材包时可以直接更新原内容，不必每次生成新包。\n\n🎬 视频剪辑：更专业，也更高效\n\n新增 J/K/L 穿梭播放、三点编辑、波纹删除、逐帧修剪和变速拉伸，让常用剪辑操作通过键盘快速完成。\n\n配乐支持按人声片段自动压低音量。新增编辑历史和工程自动版本保存，误操作也能轻松恢复。\n\n🧰 内置工具：解析更稳，配音更多\n\n优化抖音、小红书、YouTube 等平台的解析与保存，视频文案提取新增支持小红书视频笔记。\n\n豆包 2.0 新增 445 个官方音色，千问 Audio 3.1 新增 68 个官方音色，OpenAI 配音支持直接选择音色，音色克隆与配音模型自动匹配。\n\n🎨 全新界面：轻盈、通透、更顺手\n\n统一浮起式右侧栏，聊天输入框采用悬浮毛玻璃设计，附件按类型显示，深浅色切换更加柔和。\n\n空间切换更快，设置修改后自动保存，首次使用导览也全面更新。\n\n🗄️ 空间与安装\n\n创建空间时可自选保存位置，也能重新打开已有空间，方便使用外接硬盘或同步盘。\n\n极致的工程优化带来极致的性能提升：安装包从约 170 MB 缩小至约 85 MB，下载和更新更快。\n\n此外，还修复了视频导出音轨截短、Windows 素材包保存失败等问题，并完成多项稳定性与性能优化。\n\n感谢每一位用户的反馈，2.9.0 的很多改动都来自你们的建议。",
+      "translation_status": "source_chinese",
+      "author_name": "Jamba",
+      "author_handle": "JambaHailar",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1984198556719222784/zjAVdAEh_normal.jpg",
+      "author_followers": 184,
+      "author_following": 264,
+      "author_bio": "Beav创始人\n\nBeav：AI社媒运营必备资产底座   https://t.co/rj0QascUKN\n\n第二定律工作室",
+      "author_location": null,
+      "author_joined_at": "2023-05-10T13:29:18Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2109896178217439232/img/5l-c4n91OzsHGYYx.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2109896178217439232/img/5l-c4n91OzsHGYYx.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2109896178217439232/img/5l-c4n91OzsHGYYx.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              16,
+              9
+            ],
+            "duration_millis": 69366,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video-s.twimg.com/amplify_video/2109896178217439232/pl/Us21aul3373UUspT.m3u8?tag=29"
+              },
+              {
+                "bitrate": 256000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2109896178217439232/vid/avc1/480x270/lTzFT5qppJBG40Wa.mp4?tag=29"
+              },
+              {
+                "bitrate": 832000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2109896178217439232/vid/avc1/640x360/C_y1qwQ8OLA_grEY.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2109896178217439232/vid/avc1/1280x720/H3SMEUn34InmV0qp.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2109896178217439232/vid/avc1/1920x1080/wFZnDtGHImZDJ-DX.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/JambaHailar/status/2109934005957366037/video/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HUflcONbkAAm8Ck.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HUflcONbkAAm8Ck.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HUflcONbkAAm8Ck.jpg",
+          "expanded_url": "https://x.com/JambaHailar/status/2109934005957366037/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 4,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 3,
+        "views": 20645
+      }
+    },
+    {
+      "post_id": "2109935312029810783",
+      "url": "https://x.com/naiveKunAI/status/2109935312029810783",
+      "created_at": "2026-10-13T09:12:33Z",
+      "text": "@JambaHailar 初稿、终稿、已发布分开挺实用。想问下，外部 Agent 改了已经排期的终稿后，会重新进入待验收吗？如果保留改动对比，发之前就更容易发现它顺手改掉的事实或措辞。",
+      "original_text": "@JambaHailar 初稿、终稿、已发布分开挺实用。想问下，外部 Agent 改了已经排期的终稿后，会重新进入待验收吗？如果保留改动对比，发之前就更容易发现它顺手改掉的事实或措辞。",
+      "translation_zh": "@JambaHailar 初稿、终稿、已发布分开挺实用。想问下，外部 Agent 改了已经排期的终稿后，会重新进入待验收吗？如果保留改动对比，发之前就更容易发现它顺手改掉的事实或措辞。",
+      "translation_status": "source_chinese",
+      "author_name": "Kun同学AI实验室",
+      "author_handle": "naiveKunAI",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2078507537171873792/AVjHHPpK_normal.jpg",
+      "author_followers": 14,
+      "author_following": 58,
+      "author_bio": "MSU 硕士｜500 强裸辞创业\n用 AI 做产品、做自媒体，探索一人公司\n分享 Codex 实操、产品进展，也聊创业过程中的思考和踩坑。\n抖/b站/🍠：codex普通人实验室",
+      "author_location": null,
+      "author_joined_at": "2026-07-18T15:48:40Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 25
+      }
+    },
+    {
+      "post_id": "2109950100843942194",
+      "url": "https://x.com/An_yhl/status/2109950100843942194",
+      "created_at": "2026-10-13T10:11:19Z",
+      "text": "@JambaHailar 任务进度摆首页挺好，省得隔一会儿就点进去看",
+      "original_text": "@JambaHailar 任务进度摆首页挺好，省得隔一会儿就点进去看",
+      "translation_zh": "@JambaHailar 任务进度摆首页挺好，省得隔一会儿就点进去看",
+      "translation_status": "source_chinese",
+      "author_name": "晚晚",
+      "author_handle": "An_yhl",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2050293129363030017/Rr1VpitJ_normal.jpg",
+      "author_followers": 2411,
+      "author_following": 231,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-12-12T11:54:25Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 17
+      }
+    }
+  ]
+}
