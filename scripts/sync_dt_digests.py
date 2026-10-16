@@ -932,7 +932,11 @@ def strip_tg_channel_recommendations(value: str) -> str:
     text = str(value or "").strip()
     if not text:
         return ""
-    lines = text.splitlines()
+    lines = [
+        line
+        for line in text.splitlines()
+        if not TG_TRAILING_CHANNEL_HANDLE_RE.fullmatch(line.strip())
+    ]
     while lines:
         while lines and not lines[-1].strip():
             lines.pop()

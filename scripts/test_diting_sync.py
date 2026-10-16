@@ -65,6 +65,7 @@ def main() -> None:
     assert clean_tg_markdown_links(stripped_tail).endswith("Theregister")
     assert strip_tg_channel_recommendations("正文\n@aigc1024") == "正文"
     assert strip_tg_channel_recommendations("正文\n\n互联网从业者专属\n@https1024") == "正文"
+    assert strip_tg_channel_recommendations("正文\n\n@inside1024\n#行业内幕 #职场潜规则") == "正文\n\n#行业内幕 #职场潜规则"
 
     structured = {
         "kind": "tg",
