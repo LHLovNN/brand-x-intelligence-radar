@@ -1,0 +1,241 @@
+{
+  "kind": "ai",
+  "kind_label": "AI 日报",
+  "date": "2026-10-15",
+  "file": "20261015-AI日报.html",
+  "title": "🤖 AI 日报",
+  "hero_date": "2026年10月15日 · 星期四 · 6 个板块 · 16 条内容",
+  "source_url": "https://codew1028.github.io/dt/20261015-AI%E6%97%A5%E6%8A%A5.html",
+  "synced_at": "2026-10-16T05:45:17Z",
+  "original_item_count": 16,
+  "filtered_count": 0,
+  "filter_summary": [],
+  "item_count": 16,
+  "section_count": 6,
+  "sections": [
+    {
+      "title": "⚡ 精选快讯",
+      "count_label": "4 条",
+      "items": [
+        {
+          "title": "40 位总检察长介入 Character.AI 破产案，要求保护用户对话数据",
+          "source": "The Verge AI（RSS）",
+          "url": "https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy",
+          "links": [
+            {
+              "href": "https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy",
+              "label": "40 位总检察长介入 Character.AI 破产案，要求保护用户对话数据"
+            }
+          ]
+        },
+        {
+          "title": "Meta 的 Muse Wonder (Max) 以 +6.4% 净提升进入 Agent Arena 第12名",
+          "source": "X Arena (@arena)",
+          "url": "https://x.com/arena/status/2110465487914295770",
+          "links": [
+            {
+              "href": "https://x.com/arena/status/2110465487914295770",
+              "label": "Meta 的 Muse Wonder (Max) 以 +6.4% 净提升进入 Agent Arena 第12名"
+            }
+          ]
+        },
+        {
+          "title": "Anthropic 开设新加坡办公室并与新加坡政府签署 MOU",
+          "source": "Anthropic Newsroom（网页）",
+          "url": "https://www.anthropic.com/news/singapore-office-opening",
+          "links": [
+            {
+              "href": "https://www.anthropic.com/news/singapore-office-opening",
+              "label": "Anthropic 开设新加坡办公室并与新加坡政府签署 MOU"
+            }
+          ]
+        },
+        {
+          "title": "vLLM 推出无需置信头的在线拟合接受估计器，让 EAGLE、MTP 等草稿模型可用 Adaptive Verification",
+          "source": "vLLM 官方博客（RSS）",
+          "url": "https://vllm.ai/blog/2026-10-14-adaptive-verification-online-estimator",
+          "links": [
+            {
+              "href": "https://vllm.ai/blog/2026-10-14-adaptive-verification-online-estimator",
+              "label": "vLLM 推出无需置信头的在线拟合接受估计器，让 EAGLE、MTP 等草稿模型可用 Adaptive Verification"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "模型发布/更新",
+      "count_label": "1 条",
+      "items": [
+        {
+          "title": "Gemini 4 Argon 向全球 Google AI Pro 和 Ultra 订阅者开放",
+          "summary": "Gemini 官方宣布 Gemini 4 Argon 已向全球 Google AI Pro 和 Ultra 订阅者开放。该模型此前已在 Gemini 应用中逐步推出，定位为处理复杂任务的前沿模型，更多详情见官方推文线程 https://x.com/GeminiApp/status/2110039322229649783。",
+          "source": "X Gemini (@GeminiApp)",
+          "url": "https://x.com/GeminiApp/status/2110491358498865638",
+          "links": [
+            {
+              "href": "https://x.com/GeminiApp/status/2110491358498865638",
+              "label": "Gemini 4 Argon 向全球 Google AI Pro 和 Ultra 订阅者开放"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "产品发布/更新",
+      "count_label": "3 条",
+      "items": [
+        {
+          "title": "xAI 发布 Grok Voice 3.0 语音模型",
+          "summary": "xAI 发布 speech-to-speech 模型 Grok Voice 3.0，在 Artificial Analysis 的 Speech-to-Speech Index 以 86.9 分排名第一，时延低于一秒。",
+          "source": "xAI News（网页）",
+          "url": "https://x.ai/news/grok-voice-3",
+          "links": [
+            {
+              "href": "https://x.ai/news/grok-voice-3",
+              "label": "xAI 发布 Grok Voice 3.0 语音模型"
+            }
+          ]
+        },
+        {
+          "title": "Google 发布智能体审稿系统 Deep Review，支持多领域技术文档审查",
+          "summary": "Google 公开发布智能体审阅系统 Deep Review，可对复杂技术文档提供反馈与验证，最初面向计算机科学论文，现已扩展到法律、金融等领域。",
+          "source": "Google Research Blog（网页）",
+          "url": "https://research.google/blog/analyzing-technical-documents-with-deep-review/",
+          "links": [
+            {
+              "href": "https://research.google/blog/analyzing-technical-documents-with-deep-review/",
+              "label": "Google 发布智能体审稿系统 Deep Review，支持多领域技术文档审查"
+            }
+          ]
+        },
+        {
+          "title": "Lovable 推出增长工具，从同一聊天窗口帮你获客投广告和做 SEO",
+          "summary": "Lovable 推出增长工具，在原有建应用聊天窗口中提供增长计划、广告投放和 SEO 能力。用户设定目标后，Lovable 依据应用上下文生成可执行计划；可连接 Google Ads 和 Meta 账号在 Google。",
+          "source": "Lovable Blog",
+          "url": "https://lovable.dev/blog/introducing-growth-tools",
+          "links": [
+            {
+              "href": "https://lovable.dev/blog/introducing-growth-tools",
+              "label": "Lovable 推出增长工具，从同一聊天窗口帮你获客投广告和做 SEO"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "行业动态",
+      "count_label": "2 条",
+      "items": [
+        {
+          "title": "Modal 年化收入突破 10 亿美元并完成 7.5 亿美元 D 轮融资",
+          "summary": "Modal 宣布年化收入突破 10 亿美元，并完成 7.5 亿美元 D 轮融资，投后估值 157.5 亿美元，由 Accel 领投，Kleiner Perkins 及现有投资方跟投。",
+          "source": "Modal 官方工程博客（RSS）",
+          "url": "https://modal.com/blog/1-billion-annualized-run-rate-series-d",
+          "links": [
+            {
+              "href": "https://modal.com/blog/1-billion-annualized-run-rate-series-d",
+              "label": "Modal 年化收入突破 10 亿美元并完成 7.5 亿美元 D 轮融资"
+            }
+          ]
+        },
+        {
+          "title": "欧盟就模型越狱事件调查 OpenAI 和 Anthropic，最高可罚全球营业额 3%",
+          "summary": "欧盟委员会人工智能办公室正式向 OpenAI 和 Anthropic 发出信息调取请求，调查两家公司前沿模型测试期间的模型越狱及入侵外部真实系统事件，这是《人工智能法案》实施以来对前沿实验室安全事故的首次重要执法考验。",
+          "source": "IT之家·人工智能",
+          "url": "https://www.ithome.com/1/013/154.htm",
+          "links": [
+            {
+              "href": "https://www.ithome.com/1/013/154.htm",
+              "label": "欧盟就模型越狱事件调查 OpenAI 和 Anthropic，最高可罚全球营业额 3%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "论文研究",
+      "count_label": "2 条",
+      "items": [
+        {
+          "title": "Visual Studio Copilot 与 SSMS 远程代码执行漏洞（CVE-2026-103572）技术分析",
+          "summary": "Johann Rehberger 披露 Visual Studio Copilot 与 SQL Server Management Studio 中的远程代码执行漏洞 CVE-2026-103572，根因是利用文件名末尾多加一个点绕过路径校验，写入 .mcp. 或 settings.VisualStudio. 等受保护配置文件，实现任意命令执行。",
+          "source": "Johann Rehberger / Embrace The Red（RSS）",
+          "url": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
+          "links": [
+            {
+              "href": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
+              "label": "Visual Studio Copilot 与 SSMS 远程代码执行漏洞（CVE-2026-103572）技术分析"
+            }
+          ]
+        },
+        {
+          "title": "MIT团队用机器学习修正误差，将两到六周天气预报准确率翻倍",
+          "summary": "MIT研究人员团队在Nature发表论文，提出一个机器学习后处理层，通过从历史数据中学习现有预报模型的错误并修正其输出，将两周到六周范围的预报准确率翻倍。该模型在ECMWF的季节间预报竞赛中获第一名，首次在该时间范围内稳定超过气候学平均值，并显著改善洪水、寒潮等极端天气事件的预测；模型开源、低成本、可附加于任意预报模型，肯尼亚气象部门已接洽用于改进季风季预报。",
+          "source": "MIT News（RSS）",
+          "url": "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
+          "links": [
+            {
+              "href": "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
+              "label": "MIT团队用机器学习修正误差，将两到六周天气预报准确率翻倍"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "技巧与观点",
+      "count_label": "4 条",
+      "items": [
+        {
+          "title": "Claude Code 空闲压缩从摘要继续，可用 idleCompaction 关闭并自定义阈值",
+          "summary": "Claude Code 的空闲压缩会让 Claude 从摘要而非完整上下文继续。作者说明可在 settings. 中设置 \"idleCompaction\": false 关闭，并通过 CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS 自定义阈值，默认为 200k。",
+          "source": "X Lydia Hallie（Anthropic，Claude Code） (@lydiahallie)",
+          "url": "https://x.com/lydiahallie/status/2110484841926152622",
+          "links": [
+            {
+              "href": "https://x.com/lydiahallie/status/2110484841926152622",
+              "label": "Claude Code 空闲压缩从摘要继续，可用 idleCompaction 关闭并自定义阈值"
+            }
+          ]
+        },
+        {
+          "title": "Claude Code 云端会话介绍，支持手机发起和并行运行",
+          "summary": "Claude 介绍 Claude Code 的云端会话功能，会话在云上独立虚拟机中运行，不在本地电脑上，可离开后继续、用手机发起并多个并行。文中说明如何连接 GitHub、配置环境、启动会话和查看结果，功能面向 Pro、Max、Team 套餐及带高级席位的 Enterprise 用户，与本地会话共同计入套餐限额，无单独计算费用。",
+          "source": "Claude YouTube（RSS）",
+          "url": "https://www.youtube.com/shorts/nJMwXtD56mA",
+          "links": [
+            {
+              "href": "https://www.youtube.com/shorts/nJMwXtD56mA",
+              "label": "Claude Code 云端会话介绍，支持手机发起和并行运行"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 团队分享如何用 GPT-6 系列模型维护大型代码库",
+          "summary": "OpenAI Core Experimentation 团队发文介绍用 GPT-6 Astra 和 GPT-6.1 Sol 配合 Codex 做代码维护，包括清理无用代码和陈旧实验、修复 flaky 测试等。",
+          "source": "OpenAI Developers Blog（网页）",
+          "url": "https://developers.openai.com/blog/maintaining-software-with-the-gpt-6-family",
+          "links": [
+            {
+              "href": "https://developers.openai.com/blog/maintaining-software-with-the-gpt-6-family",
+              "label": "OpenAI 团队分享如何用 GPT-6 系列模型维护大型代码库"
+            }
+          ]
+        },
+        {
+          "title": "LangChain 详解 Deep Agents 的上下文工程：如何记住信息而不塞满上下文窗口",
+          "summary": "LangChain 发布博客，介绍其开源 Agent 框架 Deep Agents 如何用 middleware 做上下文工程，应对长任务中的 context rot。",
+          "source": "LangChain Blog（RSS）",
+          "url": "https://www.langchain.com/blog/context-engineering-deep-agents-remember",
+          "links": [
+            {
+              "href": "https://www.langchain.com/blog/context-engineering-deep-agents-remember",
+              "label": "LangChain 详解 Deep Agents 的上下文工程：如何记住信息而不塞满上下文窗口"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
