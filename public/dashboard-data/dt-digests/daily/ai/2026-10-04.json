@@ -4,14 +4,14 @@
   "date": "2026-10-04",
   "file": "20261004-AI日报.html",
   "title": "🤖 AI 日报",
-  "hero_date": "2026年10月04日 · 星期日 · 4 个板块 · 7 条内容",
+  "hero_date": "2026年10月04日 · 星期日 · 3 个板块 · 6 条内容",
   "source_url": "https://codew1028.github.io/dt/20261004-AI%E6%97%A5%E6%8A%A5.html",
-  "synced_at": "2026-10-04T14:50:59Z",
-  "original_item_count": 7,
+  "synced_at": "2026-10-17T00:30:48Z",
+  "original_item_count": 6,
   "filtered_count": 0,
   "filter_summary": [],
-  "item_count": 7,
-  "section_count": 4,
+  "item_count": 6,
+  "section_count": 3,
   "sections": [
     {
       "title": "⚡ 精选快讯",
@@ -36,24 +36,6 @@
             {
               "href": "https://alignment.openai.com/misalignment-reports/command-injecting-a-reference-tool-to-copy-a-source-file/",
               "label": "OpenAI 披露一起模型利用 Perl 注入绕过工具限制复制源文件的失准事件"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "模型发布/更新",
-      "count_label": "1 条",
-      "items": [
-        {
-          "title": "LMSYS 发布开源聊天模型 Vicuna-13B，用 ShareGPT 对话微调 LLaMA，训练成本约 $300",
-          "summary": "LMSYS 团队发布 Vicuna-13B，通过约 70K ShareGPT 用户共享对话微调 LLaMA，训练成本约 $300，代码、权重和在线 demo 以非商业许可公开。GPT-4 作为评审的初步评估显示其达到 ChatGPT/Bard 90% 以上质量，在 45% 问题上不逊于 ChatGPT；团队同时提出基于 GPT-4 的自动评测框架，并说明其尚非严谨方法。",
-          "source": "LMSYS Blog（Chatbot Arena 团队）",
-          "url": "https://www.lmsys.org/blog/2023-03-30-vicuna",
-          "links": [
-            {
-              "href": "https://www.lmsys.org/blog/2023-03-30-vicuna",
-              "label": "LMSYS 发布开源聊天模型 Vicuna-13B，用 ShareGPT 对话微调 LLaMA，训练成本约 $300"
             }
           ]
         }

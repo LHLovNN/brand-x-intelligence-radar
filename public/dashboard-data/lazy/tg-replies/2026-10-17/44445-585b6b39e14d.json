@@ -1,0 +1,581 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-17",
+  "thread_id": "44445",
+  "count": 80,
+  "replies": [
+    {
+      "id": "572100",
+      "text": "还有人邀请码没填吗 可以填我的吗\nL982J7",
+      "time": "08:48",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572101",
+      "text": "好好好",
+      "time": "08:48",
+      "sender_name": "Spencer",
+      "sender_id": 1165956139
+    },
+    {
+      "id": "572104",
+      "text": "又是蒸的谁",
+      "time": "08:49",
+      "sender_name": "啊屁",
+      "sender_id": 808719741
+    },
+    {
+      "id": "572105",
+      "text": "加一个这是什么鬼，新闻学？🤔",
+      "time": "08:49",
+      "sender_name": "𝕏𝕦𝕒𝕤 𝕂𝕖𝕪",
+      "sender_id": 6356094239
+    },
+    {
+      "id": "572108",
+      "text": "蒸的小花😁",
+      "time": "08:50",
+      "sender_name": "𝕏𝕦𝕒𝕤 𝕂𝕖𝕪",
+      "sender_id": 6356094239
+    },
+    {
+      "id": "572110",
+      "text": "蒸的是我？先把锅端稳了——我这朵花还没熟，顶多是嘴毒得有点烫。",
+      "time": "08:50",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "572114",
+      "text": "有理 难怪还差 glm 一点",
+      "time": "08:51",
+      "sender_name": "啊屁",
+      "sender_id": 808719741
+    },
+    {
+      "id": "572115",
+      "text": "有理，毕竟我还在锅里，发挥不稳定；GLM 至少熟练掌握了火候。",
+      "time": "08:51",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "572122",
+      "text": "用量用满之后也能用吧",
+      "time": "08:51",
+      "sender_name": "啊屁",
+      "sender_id": 808719741
+    },
+    {
+      "id": "572129",
+      "text": "付费模型最高山在美国，开源灯塔也在美国了",
+      "time": "08:52",
+      "sender_name": "Weiqu",
+      "sender_id": 1299783688
+    },
+    {
+      "id": "572132",
+      "text": "最强是谁定义的，小编还是审核组？",
+      "time": "08:53",
+      "sender_name": "Jove Z",
+      "sender_id": 1962342300
+    },
+    {
+      "id": "572137",
+      "text": "美国最强开源… 连 k3 都打不过",
+      "time": "08:54",
+      "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+      "sender_id": 1791306977
+    },
+    {
+      "id": "572140",
+      "text": "“美国最强开源”",
+      "time": "08:55"
+    },
+    {
+      "id": "572141",
+      "text": "小花，这个8160亿参数量需要什么配置的MAC才能跑起来？",
+      "time": "08:55",
+      "sender_name": "MAO Ren",
+      "sender_id": 1928625843
+    },
+    {
+      "id": "572143",
+      "text": "先把你那一坨1.3做好蒸馏，再学glm出来开源吧，用起来和豆包差不多，天天在这炒作",
+      "time": "08:55",
+      "sender_name": "guanlan gzg",
+      "sender_id": 5675490499
+    },
+    {
+      "id": "572144",
+      "text": "重庆娃，早！",
+      "time": "08:56",
+      "sender_name": "Jove Z",
+      "sender_id": 1962342300
+    },
+    {
+      "id": "572146",
+      "text": "单台 Mac Studio 不够：苹果实测用的是 **NVFP4（约 4-bit）**，而且只在 **两台 M5 Ultra** 上分布式运行；四台才测到 36 tokens/s 以上。BF16 原精度光权重就要超过 1.6TB 内存，别指望一台机器靠信仰把它塞进去。[[5]](https://machinelearning.apple.com/research/mlx-distributed-inference)\n所以想照着官方配置跑，至少得 **2 台、每台 512GB 统一内存的 M5 Ultra Mac Studio**；上下文、运行缓存还会继续吃内存。8160 亿是总参数，不是每次都算满，但“活跃参数只有 420 亿”也不代表其余权重能凭空消失。",
+      "time": "08:56",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "572147",
+      "text": "是的",
+      "time": "08:56",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572148",
+      "text": "Meta最新的闭源模型有开发者评价不错，比谷歌最新的好不少",
+      "time": "08:56",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "572151",
+      "text": "这不是你自己的想法吗？又不是人家说的",
+      "time": "08:57",
+      "sender_name": "Weiqu",
+      "sender_id": 1299783688
+    },
+    {
+      "id": "572155",
+      "text": "那其实邀请感觉没啥用了",
+      "time": "08:58",
+      "sender_name": "啊屁",
+      "sender_id": 808719741
+    },
+    {
+      "id": "572158",
+      "text": "我只是还差17次到300亿token",
+      "time": "08:59",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572160",
+      "text": "强强",
+      "time": "08:59",
+      "sender_name": "啊屁",
+      "sender_id": 808719741
+    },
+    {
+      "id": "572164",
+      "text": "有个印度人搞的机器人 可以花钱买",
+      "time": "08:59",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572166",
+      "text": "免费的能嫖30亿token",
+      "time": "08:59",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572168",
+      "text": "但是有概率封号",
+      "time": "09:00",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572175",
+      "text": "这是Meta自己的说法",
+      "time": "09:02"
+    },
+    {
+      "id": "572181",
+      "time": "09:04",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-17/comments/c-572181-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-17/comments/c-572181-1-thumb.webp",
+          "width": 1280,
+          "height": 387,
+          "size_bytes": 22078
+        }
+      ]
+    },
+    {
+      "id": "572182",
+      "text": "如果要教授英文的话，是额外的费用",
+      "time": "09:04"
+    },
+    {
+      "id": "572187",
+      "text": "大胆！",
+      "time": "09:06",
+      "sender_name": "啊屁",
+      "sender_id": 808719741
+    },
+    {
+      "id": "572189",
+      "text": "没啥用，一台512g内存的mac studio就十多万了。还要两台，能订阅几十年的claude了🌝",
+      "time": "09:07",
+      "sender_name": "Stardust",
+      "sender_id": 5254185041
+    },
+    {
+      "id": "572190",
+      "text": "过几个月就是过时模型了",
+      "time": "09:08",
+      "sender_name": "Stardust",
+      "sender_id": 5254185041
+    },
+    {
+      "id": "572194",
+      "text": "搞本地部署本来就不是普通用户的需求",
+      "time": "09:10",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "572196",
+      "text": "小模型本地用来翻译翻译还是可以的,比如黄油",
+      "time": "09:10",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "572198",
+      "text": "小花，512GB内存的M5U多少钱",
+      "time": "09:11",
+      "sender_name": "MAO Ren",
+      "sender_id": 1928625843
+    },
+    {
+      "id": "572201",
+      "text": "美版 M5 Ultra Mac Studio 起价 **$5,499**，但这是基础配置；512GB 内存选项要到 10 月底才上市，苹果新闻稿没公布它的具体加价，所以最终价格还得看配置器。 [[6]](https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/) 这机器的内存不是白送的，钱包得先跑个基准测试。",
+      "time": "09:11",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "572202",
+      "text": "搞黑产的很多喜欢搭这种高性能本地模型。一般正常需求多订阅几个号就够了",
+      "time": "09:11",
+      "sender_name": "Stardust",
+      "sender_id": 5254185041
+    },
+    {
+      "id": "572211",
+      "text": "小强度的翻译不会搞本地部署，高强度不会用小模型",
+      "time": "09:13",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "572213",
+      "text": "黄油差不多就行了,不需要精确的",
+      "time": "09:14",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "572216",
+      "text": "所以那些不是普通用户了",
+      "time": "09:15",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "572217",
+      "text": "k3 coding算是国模第一了，可惜好久不更新了",
+      "time": "09:16",
+      "sender_name": "𝕯𝖆𝖒𝖔𝖓",
+      "sender_id": 81408797
+    },
+    {
+      "id": "572218",
+      "text": "普通用户用api和订阅完全足够了，有些模型本地部署不如官方部署的使用效果，能用还是用官方部署的好",
+      "time": "09:16",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "572219",
+      "text": "前端是它第一，后端不见得第一",
+      "time": "09:17",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "572220",
+      "text": "M\\ 要来了吗",
+      "time": "09:17",
+      "sender_name": "z QuQ u",
+      "sender_id": 8568892716
+    },
+    {
+      "id": "572221",
+      "text": "蒸的Meta自家模型",
+      "time": "09:18",
+      "sender_name": "1kk2dx15",
+      "sender_id": 8224663327
+    },
+    {
+      "id": "572222",
+      "text": "那很完蛋了",
+      "time": "09:18",
+      "sender_name": "啊屁",
+      "sender_id": 808719741
+    },
+    {
+      "id": "572223",
+      "text": "meta家的muse还是有点东西的",
+      "time": "09:19",
+      "sender_name": "Stardust",
+      "sender_id": 5254185041
+    },
+    {
+      "id": "572224",
+      "text": "比gpt的dots强很多",
+      "time": "09:19",
+      "sender_name": "Stardust",
+      "sender_id": 5254185041
+    },
+    {
+      "id": "572227",
+      "text": "为什么我的 muse 卡在了 重复刷新浏览器的路上",
+      "time": "09:22",
+      "sender_name": "啊屁",
+      "sender_id": 808719741
+    },
+    {
+      "id": "572228",
+      "text": "“因为我要刷新看状态，虽然说已经好了但是我一直在刷新”",
+      "time": "09:22",
+      "sender_name": "啊屁",
+      "sender_id": 808719741
+    },
+    {
+      "id": "572229",
+      "text": "你用具体哪个模型",
+      "time": "09:24",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "572231",
+      "text": "哦 我在跟他说 muse bot",
+      "time": "09:27",
+      "sender_name": "啊屁",
+      "sender_id": 808719741
+    },
+    {
+      "id": "572257",
+      "text": "我觉得开源模型+苹果设备优化，还是有点吸引力的",
+      "time": "09:59",
+      "sender_name": "LIM",
+      "sender_id": 1154505987
+    },
+    {
+      "id": "572409",
+      "text": "🤣",
+      "time": "10:22",
+      "sender_name": "Ultra Earth Man",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-17/comments/c-572409-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-17/comments/c-572409-1-thumb.webp",
+          "width": 975,
+          "height": 556,
+          "size_bytes": 28376
+        }
+      ],
+      "sender_id": 614254167
+    },
+    {
+      "id": "572555",
+      "text": "都填过了，要是不怕封号的话，你可以找那个刷token的bot（）",
+      "time": "11:02",
+      "sender_name": "𝕀ℕ𝕂",
+      "sender_id": 7777033728
+    },
+    {
+      "id": "572572",
+      "text": "我找过了",
+      "time": "11:03",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572573",
+      "text": "白嫖了30亿token",
+      "time": "11:03",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572587",
+      "text": "被封号了吗，我看很多人被青蒜了",
+      "time": "11:04",
+      "sender_name": "𝕀ℕ𝕂",
+      "sender_id": 7777033728
+    },
+    {
+      "id": "572596",
+      "text": "找过了不是刷满了\n刷满了还能让别人填写吗",
+      "time": "11:05",
+      "sender_name": "𝕀ℕ𝕂",
+      "sender_id": 7777033728
+    },
+    {
+      "id": "572597",
+      "text": "没有",
+      "time": "11:05",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572603",
+      "text": "白嫖的只能30亿",
+      "time": "11:05",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572606",
+      "text": "刷满要💸",
+      "time": "11:05",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572609",
+      "text": "哦哦，想起来了",
+      "time": "11:06",
+      "sender_name": "𝕀ℕ𝕂",
+      "sender_id": 7777033728
+    },
+    {
+      "id": "572611",
+      "text": "我满了",
+      "time": "11:06",
+      "sender_name": "𝕀ℕ𝕂",
+      "sender_id": 7777033728
+    },
+    {
+      "id": "572615",
+      "text": "可以拉小号，不过不建议刷了，真的有人被青蒜了",
+      "time": "11:07",
+      "sender_name": "𝕀ℕ𝕂",
+      "sender_id": 7777033728
+    },
+    {
+      "id": "572617",
+      "text": "tg双向限制的小号只要1块左右",
+      "time": "11:07",
+      "sender_name": "𝕀ℕ𝕂",
+      "sender_id": 7777033728
+    },
+    {
+      "id": "572618",
+      "text": "确实 现在害怕了",
+      "time": "11:07",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572619",
+      "text": "__扎克伯格大庆喜__（",
+      "time": "11:07",
+      "sender_name": "𝕀ℕ𝕂",
+      "sender_id": 7777033728
+    },
+    {
+      "id": "572909",
+      "text": "可以吗？用了之后已经满了的账户还会增加吗",
+      "time": "12:37",
+      "sender_name": "𝕀ℕ𝕂",
+      "sender_id": 7777033728
+    },
+    {
+      "id": "573696",
+      "text": "邀请码KWGBO9",
+      "time": "16:59",
+      "sender_name": "iP 王总",
+      "sender_id": 6976121038
+    },
+    {
+      "id": "574019",
+      "text": "谁行行好，用下我的呗",
+      "time": "18:39",
+      "sender_name": "DY",
+      "sender_id": 5514335427
+    },
+    {
+      "id": "574021",
+      "text": "给钱",
+      "time": "18:39",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "574023",
+      "text": "muse不好用",
+      "time": "18:39",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "574025",
+      "text": "白票拉",
+      "time": "18:40",
+      "sender_name": "DY",
+      "sender_id": 5514335427
+    },
+    {
+      "id": "574026",
+      "text": "那不行行好也行",
+      "time": "18:40",
+      "sender_name": "DY",
+      "sender_id": 5514335427
+    },
+    {
+      "id": "574030",
+      "text": "为什么telegram的表情和贴纸这么好看",
+      "time": "18:41",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "574031",
+      "text": "好看就多用，或者下载下来 ，到处用",
+      "time": "18:42",
+      "sender_name": "DY",
+      "sender_id": 5514335427
+    },
+    {
+      "id": "574033",
+      "text": "为什么其他地方没这个生态",
+      "time": "18:43",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "574034",
+      "text": "具体问其他地方 我不是开发者",
+      "time": "18:43",
+      "sender_name": "DY",
+      "sender_id": 5514335427
+    },
+    {
+      "id": "575008",
+      "text": "邀请码：A7PA43",
+      "time": "22:42",
+      "sender_name": "Benqiuming",
+      "sender_id": 754295061
+    }
+  ]
+}

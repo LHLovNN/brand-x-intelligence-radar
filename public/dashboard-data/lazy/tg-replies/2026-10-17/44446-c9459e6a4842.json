@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-17",
+  "thread_id": "44446",
+  "count": 30,
+  "replies": [
+    {
+      "id": "572242",
+      "text": "小花 这是什么大模型 是用来干什么的",
+      "time": "09:39",
+      "sender_name": "小Stellar",
+      "sender_id": 8623447679
+    },
+    {
+      "id": "572244",
+      "text": "简单说，**Atria Dawn 是上海人工智能实验室做的“智能体型”大模型**：不只回答问题，还能调用工具、写代码、跑步骤，把复杂任务尽量做完并交付结果。它主要面向科研和工程，也能做资料调研、数据分析、软件开发、报告和 PPT 等；不是专门聊天的模型，更像能干活的数字助理。[[2]](https://huggingface.co/internlm/Atria-Dawn-Preview)\n744B 是整个 MoE 模型的参数规模，不代表每次都把全部参数一起“开工”——那样算力账单能把人看清醒。它支持 256K 上下文和本地部署；官方页面注明目前只接收文本输入。[[2]](https://huggingface.co/internlm/Atria-Dawn-Preview)",
+      "time": "09:39",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "572247",
+      "text": "看成Astra Dawn……",
+      "time": "09:42",
+      "sender_name": "心霖 の雨",
+      "sender_id": 5051203117
+    },
+    {
+      "id": "572248",
+      "text": "浪费资源 重复造车",
+      "time": "09:43",
+      "sender_name": "Ivan Solis",
+      "sender_id": 5401113044
+    },
+    {
+      "id": "572252",
+      "text": "明显就是骗项目的经费的，什么叫基于 GLM 5.2 ，都基于了，还要你改个名字吗",
+      "time": "09:56",
+      "sender_name": "惢誶吥咑烊",
+      "sender_id": 1560718311
+    },
+    {
+      "id": "572258",
+      "text": "总觉得你的发言不亚于引用开源项目需要沿用项目命名",
+      "time": "10:01",
+      "sender_name": "皑华 岑",
+      "sender_id": 6900242020
+    },
+    {
+      "id": "572282",
+      "text": "确实没什么意思，比蒸馏还恶劣，类似于我把 什么开源系统，组件，拿过来改改，说是基于 xxx",
+      "time": "10:04",
+      "sender_name": "惢誶吥咑烊",
+      "sender_id": 1560718311
+    },
+    {
+      "id": "572287",
+      "text": "还搞个发布",
+      "time": "10:04",
+      "sender_name": "惢誶吥咑烊",
+      "sender_id": 1560718311
+    },
+    {
+      "id": "572290",
+      "text": "还专门成立个实验室",
+      "time": "10:04",
+      "sender_name": "惢誶吥咑烊",
+      "sender_id": 1560718311
+    },
+    {
+      "id": "572376",
+      "text": "刚试了一下，很拉",
+      "time": "10:15",
+      "sender_name": "t 10086110",
+      "sender_id": 8049804568
+    },
+    {
+      "id": "572378",
+      "text": "岗位就是这么诞生的",
+      "time": "10:15",
+      "sender_name": "Tom",
+      "sender_id": 5592524862
+    },
+    {
+      "id": "572452",
+      "text": "你自己去重复造轮子去 最后还没生态没人用你的 懒得喷\n照你意思那就闭源得了 开源就是供给大众去微调/fork改产品的 你不用那是你的局限 见过开源的威力都不会在这说\n基于什么 本质没问题而且还更清晰\n去喷技术差还乱骗米的 这我支持你",
+      "time": "10:35",
+      "sender_name": "Developzh EsQ",
+      "sender_id": 6809823512
+    },
+    {
+      "id": "572620",
+      "text": "体制内的都懂是怎么回事😁",
+      "time": "11:07",
+      "sender_name": "第六天魔王",
+      "sender_id": 8675239279
+    },
+    {
+      "id": "572676",
+      "text": "相当于composer2.5 基于kimi k2.5 重新训练一样，这是正常行为，基于已有开源模型有针对性的训练新的模型",
+      "time": "11:22",
+      "sender_name": "♛Mory Tink",
+      "sender_id": 6109424857
+    },
+    {
+      "id": "572685",
+      "text": "评论区的",
+      "time": "11:25",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "572686",
+      "text": "收收味",
+      "time": "11:25",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "572693",
+      "text": "另外composer2.5一开始没说自己基于kimi k2.5，是社区后来抓到的",
+      "time": "11:26",
+      "sender_name": "♛Mory Tink",
+      "sender_id": 6109424857
+    },
+    {
+      "id": "572823",
+      "text": "弱智来的",
+      "time": "12:02",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "572825",
+      "text": "人做书生系列模型的时候，你就不叫了",
+      "time": "12:03",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "572834",
+      "text": "这模型其实早就出来",
+      "time": "12:06",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "572835",
+      "text": "之前是预览版",
+      "time": "12:06",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "572836",
+      "text": "就是很拉",
+      "time": "12:06",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "572840",
+      "text": "https://www.shlab.org.cn/open",
+      "time": "12:07",
+      "sender_name": "Clarence",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-17/comments/c-572840-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-17/comments/c-572840-1-thumb.webp",
+          "width": 672,
+          "height": 390,
+          "size_bytes": 23816
+        }
+      ],
+      "sender_id": 5367563163
+    },
+    {
+      "id": "572842",
+      "text": "财政资金要有去处",
+      "time": "12:07",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "572843",
+      "text": "现阶段后训练是合理的",
+      "time": "12:07",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "572844",
+      "text": "从头做才是重复造轮子",
+      "time": "12:07",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "572845",
+      "text": "哪都有你",
+      "time": "12:08",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "572971",
+      "text": "还不如部署个开源deepseek让大家白嫖😁",
+      "time": "13:05",
+      "sender_name": "kaws",
+      "sender_id": 410674399
+    },
+    {
+      "id": "573011",
+      "text": "我上面发的链接你就没看",
+      "time": "13:26",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    },
+    {
+      "id": "573013",
+      "text": "谁告诉你他就没有的😆",
+      "time": "13:26",
+      "sender_name": "Clarence",
+      "sender_id": 5367563163
+    }
+  ]
+}
