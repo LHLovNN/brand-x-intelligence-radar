@@ -119,6 +119,7 @@ def main() -> None:
             entry["filter_summary"] = daily["filter_summary"]
         entry["detail_path"] = f"dashboard-data/dt-digests/daily/{entry['kind']}/{entry['date']}.json"
         entry["detail_available"] = True
+        detail_entries.append(entry)
 
     if requested_dates:
         requested_keys = {(entry["kind"], entry["date"]) for entry in requested_detail_entries}
