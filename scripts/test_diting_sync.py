@@ -49,6 +49,13 @@ def main() -> None:
     assert not any(entry["date"] == "2026-08-31" for entry in merged_entries)
     assert next(entry for entry in merged_entries if entry["date"] == "2026-08-28")["filtered_count"] == 1
 
+    merged_without_empty = merge_targeted_digest_entries(
+        {"items": [{"kind": "ai", "date": "2026-08-31", "item_count": 0}]},
+        [],
+        {("ai", "2026-08-31")},
+    )
+    assert not merged_without_empty
+
     raw_summary = "第一段  \n\n第二段\n  第三段"
     assert multiline_text(raw_summary) == "第一段\n\n第二段\n第三段"
     assert strip_repeated_tg_title("第一段", "第一段\n\n第二段") == "第二段"

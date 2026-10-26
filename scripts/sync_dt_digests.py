@@ -98,10 +98,16 @@ def main() -> None:
     entries = digest_entries(search_index, base_url)
     generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
-    detail_entries = details_to_sync(entries, args.detail_days, args.kind, requested_dates)
-    for entry in detail_entries:
+    requested_detail_entries = details_to_sync(entries, args.detail_days, args.kind, requested_dates)
+    detail_entries = []
+    empty_detail_keys = set()
+    for entry in requested_detail_entries:
         daily = build_daily_detail(entry, base_url, source_dir, generated_at)
         daily_path = target / "daily" / entry["kind"] / f"{entry['date']}.json"
+        if not daily.get("item_count"):
+            daily_path.unlink(missing_ok=True)
+            empty_detail_keys.add((entry["kind"], entry["date"]))
+            continue
         if entry["kind"] == "tg":
             shard_tg_replies(daily, output_dir, entry["date"])
         daily = preserve_existing_detail_if_unchanged(daily_path, daily)
@@ -115,7 +121,18 @@ def main() -> None:
         entry["detail_available"] = True
 
     if requested_dates:
-        entries = merge_targeted_digest_entries(load_existing_digest_index(target / "index.json"), detail_entries)
+        requested_keys = {(entry["kind"], entry["date"]) for entry in requested_detail_entries}
+        entries = merge_targeted_digest_entries(
+            load_existing_digest_index(target / "index.json"),
+            detail_entries,
+            requested_keys,
+        )
+    elif empty_detail_keys:
+        entries = [
+            entry
+            for entry in entries
+            if (entry["kind"], entry["date"]) not in empty_detail_keys
+        ]
     targeted_keys = {
         (entry["kind"], entry["date"])
         for entry in detail_entries
@@ -230,7 +247,11 @@ def load_existing_digest_index(path: Path) -> dict[str, Any]:
     return payload if isinstance(payload, dict) else {}
 
 
-def merge_targeted_digest_entries(existing_index: dict[str, Any], updated_entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def merge_targeted_digest_entries(
+    existing_index: dict[str, Any],
+    updated_entries: list[dict[str, Any]],
+    requested_keys: set[tuple[str, str]] | None = None,
+) -> list[dict[str, Any]]:
     update_map = {
         (entry.get("kind"), entry.get("date")): entry
         for entry in updated_entries
@@ -241,6 +262,8 @@ def merge_targeted_digest_entries(existing_index: dict[str, Any], updated_entrie
         if not isinstance(item, dict):
             continue
         key = (item.get("kind"), item.get("date"))
+        if requested_keys is not None and key in requested_keys and key not in update_map:
+            continue
         if key in update_map:
             merged.append({**item, **update_map[key]})
         else:
