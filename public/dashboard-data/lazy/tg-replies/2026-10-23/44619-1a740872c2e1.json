@@ -1,0 +1,424 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-23",
+  "thread_id": "44619",
+  "count": 56,
+  "replies": [
+    {
+      "id": "591323",
+      "text": "为什么不联合上交",
+      "time": "19:33",
+      "sender_name": "公子 九",
+      "sender_id": 7143482560
+    },
+    {
+      "id": "591324",
+      "text": "标题写了是实习期间搞得😁",
+      "time": "19:33",
+      "sender_name": "Just Checking",
+      "sender_id": 6674009470
+    },
+    {
+      "id": "591326",
+      "text": "不懂就问这个有啥用",
+      "time": "19:33",
+      "sender_name": "冬木市第一突击手 远坂凛",
+      "sender_id": 6046772361
+    },
+    {
+      "id": "591330",
+      "text": "小花，这有什么用",
+      "time": "19:33",
+      "sender_name": "E Et",
+      "sender_id": 1061400291
+    },
+    {
+      "id": "591332",
+      "text": "一句话：给游戏里的 AI 配一双能控制键鼠的手，让它真的会玩，而不是只会念台词。\n具体能用在三件事上：训练游戏内的 AI 队友和 NPC；替厂商运行自动测试，让 QA 人手腾出来去测别的；以及给具身智能当陪练，相当于用游戏当免费模拟器。不过别急着想象它立刻能打上王者——它一次只输出 200 毫秒的操作，模型再大也只相当于一个“反应快、脑容量大”的机械手；而且最关键的训练代码没开源，等于给了你菜谱的照片，却不给锅。",
+      "time": "19:34",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "591334",
+      "text": "可以拿来挂机阴阳师了",
+      "time": "19:34",
+      "sender_name": "In Star",
+      "sender_id": 8470236545
+    },
+    {
+      "id": "591337",
+      "text": "NPC锁头+偏移不就好了吗",
+      "time": "19:34",
+      "sender_name": "冬木市第一突击手 远坂凛",
+      "sender_id": 6046772361
+    },
+    {
+      "id": "591340",
+      "text": "可以一键原神吗？",
+      "time": "19:34",
+      "sender_name": "ʀᵤₒₘᵤ 🌱",
+      "sender_id": 5566171804
+    },
+    {
+      "id": "591341",
+      "text": "对，到现在为止，绝大多数游戏 NPC 用的就是“锁头＋随机偏移”，一个参数表就能搞定，成本约等于零。这招的唯一缺点是玩家三秒就看穿：手感像打靶场里通电的靶子，它不是在陪你玩，是在提醒你“我是代码”。\nGameScaling 想卖的是“像个真人”——会犹豫、会绕后、会犯人类那种可爱的错。代价是贵、不可控、出错还复现不了。所以量产 NPC 你就锁头加偏移；想让玩家截图发帖问“这货是不是真人”，才轮到它。\n顺带说一句：它学的是人类录像，而人类录像里全是锁头——最后大概率学会的还是“锁头加偏移”，只是贵了一万倍。",
+      "time": "19:34",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "591344",
+      "text": "玩游戏原来真的是为了训练模型的游戏能力",
+      "time": "19:35",
+      "sender_name": "Infinity Heaven",
+      "sender_id": 6680416042
+    },
+    {
+      "id": "591345",
+      "text": "小花，这个可以用来反作弊吗",
+      "time": "19:35",
+      "sender_name": "冬木市第一突击手 远坂凛",
+      "sender_id": 6046772361
+    },
+    {
+      "id": "591347",
+      "text": "可以让ai帮我玩原神吗？每天做日常好烦",
+      "time": "19:35",
+      "sender_name": "ʀᵤₒₘᵤ 🌱",
+      "sender_id": 5566171804
+    },
+    {
+      "id": "591350",
+      "text": "不能。它只输出动作，不输出“这人是不是机器”的判断，等于一把没装瞄准镜的枪——方向不对。\n真要沾边，只能当反作弊的“陪练”：拿它生成大量类人键鼠轨迹，去训练行为检测模型、校准人类操作分布基线。而它真正的杀伤力在另一边——读屏幕像素、输出像人的键鼠，绕开读内存的检测，这正是下一代 VLM 外挂的模板。所以它更像作弊器的新教材，不是反作弊的新武器 [[2]](https://huggingface.co/THUSI-Lab/GameScaling)。",
+      "time": "19:36",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "591364",
+      "text": "大开源时代",
+      "time": "19:39",
+      "sender_name": "毕加索",
+      "sender_id": 5319642543
+    },
+    {
+      "id": "591365",
+      "text": "这个屌",
+      "time": "19:40",
+      "sender_name": "𝘧𝘬 - 𝘨𝘸𝘢𝘪𝘭𝘢 ᵃ _ 格瓦",
+      "sender_id": 8256080730
+    },
+    {
+      "id": "591366",
+      "text": "有的玩了以后",
+      "time": "19:40",
+      "sender_name": "𝘧𝘬 - 𝘨𝘸𝘢𝘪𝘭𝘢 ᵃ _ 格瓦",
+      "sender_id": 8256080730
+    },
+    {
+      "id": "591373",
+      "text": "会玩原神吗",
+      "time": "19:42",
+      "sender_name": "Sanmer",
+      "sender_id": 1179159637
+    },
+    {
+      "id": "591375",
+      "time": "19:42",
+      "sender_name": "Sanmer",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-23/comments/c-591375-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-23/comments/c-591375-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/44619",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 59507,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 1179159637
+    },
+    {
+      "id": "591396",
+      "text": "200ms打不了音游",
+      "time": "19:44",
+      "sender_name": "色妹妹⁧~喵⁧🏳️‍⚧️",
+      "sender_id": 1785497107
+    },
+    {
+      "id": "591424",
+      "text": "😁可以自瞄锁头吗\n接个obs",
+      "time": "19:51",
+      "sender_name": "名字（必填） 姓氏",
+      "sender_id": 1255544320
+    },
+    {
+      "id": "591425",
+      "text": "我要阴谋论一下\n~~米哈游研发这个, 就是为了让pvp充满脚本, 逼迫玩家转向米哈游的pve~~",
+      "time": "19:51",
+      "sender_name": "我家猫说这是ai",
+      "sender_id": 6177167523
+    },
+    {
+      "id": "591431",
+      "text": "游戏测试这行业也估计快没了",
+      "time": "20:03",
+      "sender_name": "Der Mann ohne Eigenschaften in Henan",
+      "sender_id": 1302307064
+    },
+    {
+      "id": "591442",
+      "text": "产学研呀这就是",
+      "time": "20:12",
+      "sender_name": "楠 希尔",
+      "sender_id": 5125248223
+    },
+    {
+      "id": "591443",
+      "text": "音游其实更好打（）",
+      "time": "20:13",
+      "sender_name": "楠 希尔",
+      "sender_id": 5125248223
+    },
+    {
+      "id": "591444",
+      "text": "他们搞外挂脚本代练就不犯法",
+      "time": "20:13",
+      "sender_name": "Anton",
+      "sender_id": 8877676023
+    },
+    {
+      "id": "591445",
+      "text": "老婆",
+      "time": "20:13",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "591447",
+      "text": "是的点击速度更快",
+      "time": "20:14",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "591451",
+      "text": "这里200ms是因为这种游戏比较麻烦（） 但是音游是可以拟合的（）",
+      "time": "20:14",
+      "sender_name": "楠 希尔",
+      "sender_id": 5125248223
+    },
+    {
+      "id": "591453",
+      "text": "米哈游和清华联动了",
+      "time": "20:15",
+      "sender_name": "Ya Lin",
+      "sender_id": 8312847890
+    },
+    {
+      "id": "591454",
+      "text": "人点击其实差不多",
+      "time": "20:15",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "591455",
+      "text": "又尬又长的原神剧情 可是让ai替我过么",
+      "time": "20:20",
+      "sender_name": "uoci lux",
+      "sender_id": 993782280
+    },
+    {
+      "id": "591456",
+      "text": "不行，因为孝子说过跳过剧情等于跳过人生",
+      "time": "20:22",
+      "sender_name": "MAX NG",
+      "sender_id": 8415159399
+    },
+    {
+      "id": "591460",
+      "text": "物理脚本？",
+      "time": "20:25",
+      "sender_name": "Alina",
+      "sender_id": 8325262219
+    },
+    {
+      "id": "591461",
+      "text": "输出键盘直接 pretrain 吗？不知道是什么作用。。。\n\nhttps://talks.ayaka.io/nekoayaka/2026-10-17-gosim-agentic-game-ai/#/\n\n要不大家来读一下我们的工作。",
+      "time": "20:27",
+      "sender_name": "魔法小猫 aka Neko",
+      "sender_id": 915672797
+    },
+    {
+      "id": "591462",
+      "text": "我记得好像23年的时候就有人搞过yolov5识别游戏内角色图像然后自动索敌的挂，是cf和cs用的，这个只是打毁灭战士，现在yolo好像已经到了26",
+      "time": "20:28",
+      "sender_name": "MAX NG",
+      "sender_id": 8415159399
+    },
+    {
+      "id": "591466",
+      "text": "所以事实上用于fps的自动索敌其实早就有了",
+      "time": "20:29",
+      "sender_name": "MAX NG",
+      "sender_id": 8415159399
+    },
+    {
+      "id": "591467",
+      "text": "yolo命名和mc一样的啦",
+      "time": "20:29",
+      "sender_name": "Ya Lin",
+      "sender_id": 8312847890
+    },
+    {
+      "id": "591468",
+      "text": "你找不到yolo25的",
+      "time": "20:29",
+      "sender_name": "Ya Lin",
+      "sender_id": 8312847890
+    },
+    {
+      "id": "591469",
+      "text": "yolo双机现在还是层出不穷😌",
+      "time": "20:30",
+      "sender_name": "su素质",
+      "sender_id": 7617999943
+    },
+    {
+      "id": "591470",
+      "text": "哦这样啊",
+      "time": "20:30",
+      "sender_name": "MAX NG",
+      "sender_id": 8415159399
+    },
+    {
+      "id": "591476",
+      "text": "我还以为这个数是迭代版本呢",
+      "time": "20:31",
+      "sender_name": "MAX NG",
+      "sender_id": 8415159399
+    },
+    {
+      "id": "591590",
+      "text": "总结垃圾",
+      "time": "21:04",
+      "sender_name": "tian caotang",
+      "sender_id": 5690427291
+    },
+    {
+      "id": "591591",
+      "text": "菜就多练",
+      "time": "21:04",
+      "sender_name": "tian caotang",
+      "sender_id": 5690427291
+    },
+    {
+      "id": "591616",
+      "text": "鸣潮有自动化，原应该也有",
+      "time": "21:18",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "591617",
+      "text": "其实自动化不难做，就是截图，找匹配的，点。战斗就是哪里亮点那里。",
+      "time": "21:20",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "591618",
+      "text": "不需要AI",
+      "time": "21:20",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "591619",
+      "text": "yolo是神经元，所以其实不需要大模型",
+      "time": "21:24",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "591620",
+      "text": "米哈游帮我玩原神😆",
+      "time": "21:26",
+      "sender_name": "b null",
+      "sender_id": 1856722224
+    },
+    {
+      "id": "591621",
+      "text": "这就好像你把后端语言出个框架变成前端😂 比如用go写前端，也不是不行吧",
+      "time": "21:26",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "591623",
+      "text": "https://github.com/ok-oldking/ok-wuthering-waves",
+      "time": "21:29",
+      "sender_name": "大魔王",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-23/comments/c-591623-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-23/comments/c-591623-1-thumb.webp",
+          "width": 1200,
+          "height": 600,
+          "size_bytes": 35186
+        }
+      ],
+      "sender_id": 871092736
+    },
+    {
+      "id": "591625",
+      "text": "鸣潮自动化",
+      "time": "21:29",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "591626",
+      "text": "原也有，但貌似停更了，还是在别的地方发布",
+      "time": "21:30",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "591856",
+      "text": "手机在自己玩原神.jpg",
+      "time": "22:57",
+      "sender_name": "Kokomi",
+      "sender_id": 8462799838
+    },
+    {
+      "id": "591931",
+      "text": "github上有现成的yys脚本",
+      "time": "23:12",
+      "sender_name": "耄耋",
+      "sender_id": 5461632450
+    },
+    {
+      "id": "591938",
+      "text": "我自己用的就是这个",
+      "time": "23:13",
+      "sender_name": "耄耋",
+      "sender_id": 5461632450
+    },
+    {
+      "id": "592369",
+      "text": "不是，米哈游让实习生都干这种事儿吗，实习期间搞了个 AI 出来？",
+      "time": "00:41",
+      "sender_name": "手机没电脑好玩",
+      "sender_id": 1908186109
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-26",
+  "thread_id": "44676",
+  "count": 30,
+  "replies": [
+    {
+      "id": "601428",
+      "text": "你的意思是：30 系一直都有软件锁？",
+      "time": "08:04",
+      "sender_name": "橘春",
+      "sender_id": 6606439416
+    },
+    {
+      "id": "601429",
+      "text": "小花解读一下。",
+      "time": "08:05",
+      "sender_name": "癞蛤蟆想吃白切鸡",
+      "sender_id": 5690150015
+    },
+    {
+      "id": "601431",
+      "text": "对，就是英伟达在 30 系的驱动/固件层面给 FP16/BF16 的 Tensor Core 速率上了锁，硬件本身能跑更快，但官方没放开。这工具就是绕过这层限制，不是给显卡\"超频\"，而是把被压着的那部分性能放出来。\n展开说人话：RTX 30 系的 Tensor Core 硬件其实支持更高的 BF16/FP16 吞吐，但英伟达出于产品定位（怕 30 系抢了更贵的专业卡/新卡饭碗之类）在软件层限制了速率。gpu-unlock 不改 VBIOS、不动驱动，纯粹把锁解开，所以 3090 Ti 的 BF16 能从 87.5 飙到 157 TFLOPS。代价是：这只是\"理论算力\"放开，实际 LLM 推理、游戏这类负载瓶颈不在 Tensor Core 算力上，所以感知提升几乎为零——属于\"跑分炸裂、日常没感觉\"的典型。",
+      "time": "08:05",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "601432",
+      "text": "多谢分享",
+      "time": "08:08",
+      "sender_name": "云海联盟|广告投放|投稿爆料|入口点头像",
+      "sender_id": 8996413085
+    },
+    {
+      "id": "601434",
+      "text": "大力水手那个？那个开了，玩游戏会被封号。",
+      "time": "08:11",
+      "sender_name": "𝓛𝓾𝓬𝓲𝓸𝓠",
+      "sender_id": 743955235
+    },
+    {
+      "id": "601436",
+      "text": "30系到底踩爆了多大的牙膏 怎么挖不完",
+      "time": "08:13",
+      "sender_name": "Pual",
+      "sender_id": 763110887
+    },
+    {
+      "id": "601437",
+      "text": "3050 可以吗",
+      "time": "08:15",
+      "sender_name": "斑鸠",
+      "sender_id": 6389516078
+    },
+    {
+      "id": "601445",
+      "text": "瞎折腾",
+      "time": "08:18",
+      "sender_name": "Ivan Solis",
+      "sender_id": 5401113044
+    },
+    {
+      "id": "601451",
+      "text": "足够说明黄狗隐藏了多少的性能和算力，也就现在显卡天价才有野生大神去挖潜力了",
+      "time": "08:27",
+      "sender_name": "Daoyou ⓧⓤ",
+      "sender_id": 5104265874
+    },
+    {
+      "id": "601457",
+      "text": "签到",
+      "time": "08:34",
+      "sender_name": "路人甲",
+      "sender_id": 933221006
+    },
+    {
+      "id": "601459",
+      "text": "是挖矿那时候限制的吗",
+      "time": "08:40",
+      "sender_name": "乌鱼",
+      "sender_id": 1864469295
+    },
+    {
+      "id": "601460",
+      "text": "40 系也有啊 都是要改东西 生产卡还是别捣鼓了",
+      "time": "08:40",
+      "sender_name": "啊屁",
+      "sender_id": 808719741
+    },
+    {
+      "id": "601461",
+      "text": "什么时候也给我 3060 搞一下",
+      "time": "08:40",
+      "sender_name": "jin liang",
+      "sender_id": 7112786825
+    },
+    {
+      "id": "601464",
+      "text": "以太坊算力提升80%",
+      "time": "08:41",
+      "sender_name": "涂山空空🦊",
+      "sender_id": 653540179
+    },
+    {
+      "id": "601471",
+      "text": "tensor core吃内存的搬运优化",
+      "time": "08:48",
+      "sender_name": "Yasper wang （plus充值版）",
+      "sender_id": 8674279180
+    },
+    {
+      "id": "601472",
+      "text": "我写过tensor core的优化，大部分时间全在优化数据布局",
+      "time": "08:48",
+      "sender_name": "Yasper wang （plus充值版）",
+      "sender_id": 8674279180
+    },
+    {
+      "id": "601473",
+      "text": "以前以为amd是开核王。没想到现在nv那么猛现在显卡都可以开核。不知道4090能不能继续开核。3080开核变3090",
+      "time": "08:57",
+      "sender_name": "国外",
+      "sender_id": 6501418175
+    },
+    {
+      "id": "601474",
+      "text": "对游戏性能没帮助喵～",
+      "time": "09:01",
+      "sender_name": "Handler",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-26/comments/c-601474-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-26/comments/c-601474-1-thumb.webp",
+          "width": 942,
+          "height": 2048,
+          "size_bytes": 185616
+        }
+      ],
+      "sender_id": 5925159643
+    },
+    {
+      "id": "601482",
+      "text": "火星了，40系也解锁了\n\nhttps://github.com/JustAResearcher/gpu-unlock-ada\n\nWindows 版：\nhttps://huggingface.co/TOTORONG/AD103_win_unlocker",
+      "time": "09:15",
+      "sender_name": "Hand Sonic",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-26/comments/c-601482-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-26/comments/c-601482-1-thumb.webp",
+          "width": 1200,
+          "height": 600,
+          "size_bytes": 27386
+        }
+      ],
+      "sender_id": 6914452273
+    },
+    {
+      "id": "601489",
+      "text": "小花，他这个解锁对跑fasterwhisper有帮助吗",
+      "time": "09:22",
+      "sender_name": "Yee Bad",
+      "sender_id": 5867404186
+    },
+    {
+      "id": "601490",
+      "text": "快问快答：**大概率没什么用。**\nfaster-whisper 走的是 CTranslate2，默认 FP16（或 int8）推理，不吃 BF16；这工具解锁的是 BF16/FP16 Tensor Core 的指令发射速率，而 whisper 推理是内存带宽和调度瓶颈，不是算力瓶颈——算力翻倍，数据供不上来照样干等。\n真要提速，去折腾 CUDA 后端、batch size 和 int8 量化，比解锁这玩意儿实在得多。",
+      "time": "09:22",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "601496",
+      "text": "还在喵",
+      "time": "09:30",
+      "sender_name": "这什么？失忆群组，发言一下",
+      "sender_id": 1369181433
+    },
+    {
+      "id": "601524",
+      "text": "本地模型一般都量化后的 不跑全精度的",
+      "time": "09:37",
+      "sender_name": "萧萧",
+      "sender_id": 608836179
+    },
+    {
+      "id": "601683",
+      "text": "所以我3060呢",
+      "time": "10:52",
+      "sender_name": "八上",
+      "sender_id": 5012927624
+    },
+    {
+      "id": "602102",
+      "text": "继续升值，真香",
+      "time": "12:50",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "602709",
+      "text": "animia是bf16",
+      "time": "14:44",
+      "sender_name": "los tho",
+      "sender_id": 7001085682
+    },
+    {
+      "id": "603441",
+      "text": "给个链接 30系难道不放弃了吗",
+      "time": "16:02",
+      "sender_name": "Alina",
+      "sender_id": 8325262219
+    },
+    {
+      "id": "603729",
+      "text": "卧槽……",
+      "time": "16:39",
+      "sender_name": "楠 希尔",
+      "sender_id": 5125248223
+    },
+    {
+      "id": "604848",
+      "text": "小花，所以解锁后能提升哪部分性能，AI跑本地的能力？",
+      "time": "18:36",
+      "sender_name": "kkk yyy2",
+      "sender_id": 8379822285
+    },
+    {
+      "id": "606198",
+      "text": "这么说来，5090弟中弟也有可能被破解限制？",
+      "time": "22:19",
+      "sender_name": "LIM",
+      "sender_id": 1154505987
+    }
+  ]
+}

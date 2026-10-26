@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-23",
+  "thread_id": "44623",
+  "count": 40,
+  "replies": [
+    {
+      "id": "591844",
+      "text": "tor网络已经不可信，大陆还有什么匿名方案？",
+      "time": "22:53",
+      "sender_name": "Saika Kolomina",
+      "sender_id": 5160330886
+    },
+    {
+      "id": "591845",
+      "text": "这个时代太可怕了",
+      "time": "22:53",
+      "sender_name": "Y Green",
+      "sender_id": 7626359508
+    },
+    {
+      "id": "591849",
+      "text": "自导自演而已 假装自己有监管",
+      "time": "22:53",
+      "sender_name": "Ivan Solis",
+      "sender_id": 5401113044
+    },
+    {
+      "id": "591850",
+      "text": "实际上就是野鸡暗网",
+      "time": "22:53",
+      "sender_name": "Ivan Solis",
+      "sender_id": 5401113044
+    },
+    {
+      "id": "591851",
+      "text": "这个是影响什么最多 有没有人科普下",
+      "time": "22:55",
+      "sender_name": "9527",
+      "sender_id": 5425632505
+    },
+    {
+      "id": "591852",
+      "text": "后门被入",
+      "time": "22:56",
+      "sender_name": "Bobobobobo",
+      "sender_id": 7344506847
+    },
+    {
+      "id": "591873",
+      "text": "tor网络的流量我没记错的话不是标准https实现，也就是说只要有一台中转服务器沦陷就会导致流量被中间人解密获取明文",
+      "time": "23:00",
+      "sender_name": "Saika Kolomina",
+      "sender_id": 5160330886
+    },
+    {
+      "id": "591889",
+      "text": "这影响VPN的机器问题嘛？",
+      "time": "23:02",
+      "sender_name": "9527",
+      "sender_id": 5425632505
+    },
+    {
+      "id": "591896",
+      "text": "匿名啥?翻墙后必须有谷歌账号不然啥都不方便，上网不可能完全匿名",
+      "time": "23:04",
+      "sender_name": "tian caotang",
+      "sender_id": 5690427291
+    },
+    {
+      "id": "591899",
+      "text": "只能通过自己套用多层代理减少被追踪的可能性",
+      "time": "23:05",
+      "sender_name": "tian caotang",
+      "sender_id": 5690427291
+    },
+    {
+      "id": "591903",
+      "text": "我这里说的匿名是指绕过大陆的审查",
+      "time": "23:06",
+      "sender_name": "Saika Kolomina",
+      "sender_id": 5160330886
+    },
+    {
+      "id": "591905",
+      "text": "影响",
+      "time": "23:06",
+      "sender_name": "Saika Kolomina",
+      "sender_id": 5160330886
+    },
+    {
+      "id": "591929",
+      "text": "我不玩见证，我就是单纯不想被审查",
+      "time": "23:12",
+      "sender_name": "Saika Kolomina",
+      "sender_id": 5160330886
+    },
+    {
+      "id": "591939",
+      "text": "不玩见证，安全，管不过来",
+      "time": "23:13",
+      "sender_name": "tian caotang",
+      "sender_id": 5690427291
+    },
+    {
+      "id": "591942",
+      "text": "完全不用慌",
+      "time": "23:13",
+      "sender_name": "tian caotang",
+      "sender_id": 5690427291
+    },
+    {
+      "id": "592007",
+      "text": "没有吧 tor 不是三层加密嘛",
+      "time": "23:23",
+      "sender_name": "吱吱",
+      "sender_id": 5577574686
+    },
+    {
+      "id": "592010",
+      "text": "是影响匿名安全还是链接呀请问",
+      "time": "23:24",
+      "sender_name": "9527",
+      "sender_id": 5425632505
+    },
+    {
+      "id": "592012",
+      "text": "tor是三层转发",
+      "time": "23:24",
+      "sender_name": "Saika Kolomina",
+      "sender_id": 5160330886
+    },
+    {
+      "id": "592032",
+      "text": "都影响",
+      "time": "23:27",
+      "sender_name": "Saika Kolomina",
+      "sender_id": 5160330886
+    },
+    {
+      "id": "592049",
+      "text": "对啊，每到一层不是重新加密吗？不懂所谓中间人攻击是怎么实现的。分层加密理论上不可能实现吧",
+      "time": "23:30",
+      "sender_name": "吱吱",
+      "sender_id": 5577574686
+    },
+    {
+      "id": "592051",
+      "text": "不是重新加密，只是转发流量吧，我去看看文档",
+      "time": "23:30",
+      "sender_name": "Saika Kolomina",
+      "sender_id": 5160330886
+    },
+    {
+      "id": "592074",
+      "text": "tor 最主要作用不是隐藏 ip 嘛，往上还有一层 TLS（HTTPS）加密呢",
+      "time": "23:43",
+      "sender_name": "吱吱",
+      "sender_id": 5577574686
+    },
+    {
+      "id": "592076",
+      "text": "但是我记得出口节点会解密最后一层，出口节点直接连接目标服务器，当然如果https那还有一层到目标服务器的加密",
+      "time": "23:44",
+      "sender_name": "色妹妹⁧~喵⁧🏳️‍⚧️",
+      "sender_id": 1785497107
+    },
+    {
+      "id": "592086",
+      "text": "刷屏",
+      "time": "23:47",
+      "sender_name": "𝘥𝘦𝘨𝘳𝘦𝘦.²",
+      "sender_id": 1078251786
+    },
+    {
+      "id": "592091",
+      "text": "~~啥阴，能不能发图片~~",
+      "time": "23:47",
+      "sender_name": "吱吱",
+      "sender_id": 5577574686
+    },
+    {
+      "id": "592094",
+      "time": "23:48",
+      "sender_name": "Saika Kolomina",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-23/comments/c-592094-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-23/comments/c-592094-1-thumb.webp",
+          "width": 358,
+          "height": 684,
+          "size_bytes": 39274
+        }
+      ],
+      "sender_id": 5160330886
+    },
+    {
+      "id": "592096",
+      "text": "这是什么",
+      "time": "23:48",
+      "sender_name": "𝘥𝘦𝘨𝘳𝘦𝘦.²",
+      "sender_id": 1078251786
+    },
+    {
+      "id": "592097",
+      "text": "出口节点能看到明文",
+      "time": "23:49",
+      "sender_name": "Saika Kolomina",
+      "sender_id": 5160330886
+    },
+    {
+      "id": "592101",
+      "text": "如果没有https的话",
+      "time": "23:49",
+      "sender_name": "Saika Kolomina",
+      "sender_id": 5160330886
+    },
+    {
+      "id": "592104",
+      "text": "欢迎使用tor 这里有世界各国国安 情报机构 还有热心的迪克提供的“安全“中继节点",
+      "time": "23:49",
+      "sender_name": "阿根",
+      "sender_id": 6484655557
+    },
+    {
+      "id": "592105",
+      "text": "不看到明文怎么转发？本身就是要 https保证最后一层安全呀",
+      "time": "23:50",
+      "sender_name": "吱吱",
+      "sender_id": 5577574686
+    },
+    {
+      "id": "592108",
+      "text": "你可以试试取访问一些onmi网站，会发现是http而不是https的",
+      "time": "23:50",
+      "sender_name": "Saika Kolomina",
+      "sender_id": 5160330886
+    },
+    {
+      "id": "592109",
+      "text": "oni 网站还要再套 一层 tor（三层） 啊😅",
+      "time": "23:51",
+      "sender_name": "吱吱",
+      "sender_id": 5577574686
+    },
+    {
+      "id": "592111",
+      "text": "tor被蜜罐渗透成啥的了 相比迪克偷22ssh 国安 CIA NAS FBI提供的蜜罐都算良心的了",
+      "time": "23:52",
+      "sender_name": "阿根",
+      "sender_id": 6484655557
+    },
+    {
+      "id": "592115",
+      "text": "只是讨论技术层面",
+      "time": "23:52",
+      "sender_name": "吱吱",
+      "sender_id": 5577574686
+    },
+    {
+      "id": "592117",
+      "text": "教教我",
+      "time": "23:53",
+      "sender_name": "𝘥𝘦𝘨𝘳𝘦𝘦.²",
+      "sender_id": 1078251786
+    },
+    {
+      "id": "592120",
+      "text": "对的，出口 IP 全部公开被标记",
+      "time": "23:54",
+      "sender_name": "吱吱",
+      "sender_id": 5577574686
+    },
+    {
+      "id": "592122",
+      "text": "直连就等着帽子敲门吧",
+      "time": "23:54",
+      "sender_name": "阿根",
+      "sender_id": 6484655557
+    },
+    {
+      "id": "592123",
+      "text": "节点可在用户发起 HTTP 到 HTTPS 重定向之前劫持连接，让用户停留在明文 HTTP 环境，从而截获登录凭据或会话 Cookie",
+      "time": "23:54",
+      "sender_name": "Saika Kolomina",
+      "sender_id": 5160330886
+    },
+    {
+      "id": "592143",
+      "text": "你再去查查吧",
+      "time": "23:58",
+      "sender_name": "吱吱",
+      "sender_id": 5577574686
+    }
+  ]
+}

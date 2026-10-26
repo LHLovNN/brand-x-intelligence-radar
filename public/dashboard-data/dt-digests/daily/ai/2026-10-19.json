@@ -1,0 +1,82 @@
+{
+  "kind": "ai",
+  "kind_label": "AI 日报",
+  "date": "2026-10-19",
+  "file": "20261019-AI日报.html",
+  "title": "🤖 AI 日报",
+  "hero_date": "2026年10月19日 · 星期一 · 3 个板块 · 4 条内容",
+  "source_url": "https://codew1028.github.io/dt/20261019-AI%E6%97%A5%E6%8A%A5.html",
+  "synced_at": "2026-10-26T01:27:15Z",
+  "original_item_count": 4,
+  "filtered_count": 0,
+  "filter_summary": [],
+  "item_count": 4,
+  "section_count": 3,
+  "sections": [
+    {
+      "title": "⚡ 精选快讯",
+      "count_label": "1 条",
+      "items": [
+        {
+          "title": "DeepSeek-V4.1-Flash-20261017 登顶 Code Arena: WebDev 开源模型榜首",
+          "source": "X Arena (@arena)",
+          "url": "https://x.com/arena/status/2111894091168682086",
+          "links": [
+            {
+              "href": "https://x.com/arena/status/2111894091168682086",
+              "label": "DeepSeek-V4.1-Flash-20261017 登顶 Code Arena: WebDev 开源模型榜首"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "行业动态",
+      "count_label": "2 条",
+      "items": [
+        {
+          "title": "Anthropic 内部研究显示初级技术岗位占比下降，AI Agent 工时达员工六倍",
+          "summary": "Anthropic 发布内部研究称，技术部门初级岗位占比从 2025 年初的 21% 降至 14%，新招初级占比从 27% 降至 9%，空缺初级职位降至 6%，非技术部门基本稳定。",
+          "source": "The Decoder AI News（RSS）",
+          "url": "https://the-decoder.com/anthropic-has-nearly-stopped-hiring-junior-staff-because-ai-agents-now-work-six-times-as-many-hours/",
+          "links": [
+            {
+              "href": "https://the-decoder.com/anthropic-has-nearly-stopped-hiring-junior-staff-because-ai-agents-now-work-six-times-as-many-hours/",
+              "label": "Anthropic 内部研究显示初级技术岗位占比下降，AI Agent 工时达员工六倍"
+            }
+          ]
+        },
+        {
+          "title": "德国两家法院先后裁定 Google 须为其 AI Overview 内容负责",
+          "summary": "慕尼黑地区法院 I 五月底裁定 Google 的 AI 搜索摘要属于公司自己的陈述而非中立转述，Google 须为错误内容担责；Google 公开宣布上诉后实际以和解结案，未获上级法院裁决。",
+          "source": "The Decoder AI News（RSS）",
+          "url": "https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/",
+          "links": [
+            {
+              "href": "https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/",
+              "label": "德国两家法院先后裁定 Google 须为其 AI Overview 内容负责"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "技巧与观点",
+      "count_label": "1 条",
+      "items": [
+        {
+          "title": "Browser Use 讲解浏览器智能体的工作原理与使用时机",
+          "summary": "Browser Use 发布科普文章，讲解浏览器智能体由模型、harness 和浏览器三部分组成，通过观察页面、选择动作、执行并检查结果的循环完成任务，可通过 DOM、无障碍树或截图读取页面。",
+          "source": "Browser Use",
+          "url": "https://browser-use.com/posts/browser-agents",
+          "links": [
+            {
+              "href": "https://browser-use.com/posts/browser-agents",
+              "label": "Browser Use 讲解浏览器智能体的工作原理与使用时机"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

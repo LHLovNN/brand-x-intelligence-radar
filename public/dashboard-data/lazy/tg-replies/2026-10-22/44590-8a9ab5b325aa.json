@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "thread_id": "44590",
+  "count": 33,
+  "replies": [
+    {
+      "id": "587642",
+      "text": "互联网小地震一下",
+      "time": "16:17",
+      "sender_name": "𝑫𝒓. 𝑺𝒌𝒂𝒅𝒊",
+      "sender_id": 5842743832
+    },
+    {
+      "id": "587650",
+      "time": "16:21",
+      "sender_name": "🌌 带带元宇宙 🦍",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-587650-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-587650-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/44590",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 180446,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 7171316252
+    },
+    {
+      "id": "587653",
+      "text": "私钥是 4",
+      "time": "16:22",
+      "sender_name": "momo.btc",
+      "sender_id": 7486881841
+    },
+    {
+      "id": "587654",
+      "text": "印度的？",
+      "time": "16:23",
+      "sender_name": "青柠葡萄花卷",
+      "sender_id": 643638630
+    },
+    {
+      "id": "587658",
+      "text": "小花，这件事是什么意思，很严重吗",
+      "time": "16:24",
+      "sender_name": "湘心",
+      "sender_id": 7133898035
+    },
+    {
+      "id": "587660",
+      "text": "简单说：这 8 张中间 CA 的私钥只用了 8 位随机数，攻击者暴力枚举 256 次就能还原，等于门锁密码只有“0 到 255”这 256 种可能。谁拿到私钥，谁就能签发“浏览器看着合法”的证书，用来伪造钓鱼站点、做中间人劫持。\n对普通用户：不致命，但补丁和更新别拖。 Chrome 计划 10 月 27 日移除相关信任根，之后用这些证书的合法站点可能弹警告[S1 链内称]。对 eMudhra 和依赖它的印度机构才叫灾难——信任崩塌，比丢钥匙还惨，钥匙还能换锁，根证书的信任没了得层层重审。\n建议：浏览器保持最新、系统更新照装、看到证书警告别点“继续访问”。真正的风险从来不是那张证书，而是你手比脑子快的那一下。",
+      "time": "16:24",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "587661",
+      "text": "小花，介绍一下eMudhra",
+      "time": "16:25",
+      "sender_name": "silas",
+      "sender_id": 5120166559
+    },
+    {
+      "id": "587663",
+      "text": "**eMudhra** 是印度的电子签名和 PKI 服务商，隶属于 Emudhra Ltd.，总部位于金奈，2015 年前后在印度“数字签名证书”开放市场上经营得比较扎实；该公司是印度少数持牌的认证机构（CA）之一，向企业提供数字签名、电子签名、文档签署和身份认证等服务，也在印度政府主导的 Aadhaar eSign 生态中扮演角色。它也是全球根证书计划里少数印度本土 CA 之一，根和中间证书被 Firefox、Chrome、Windows 等主流信任库接纳——所以一旦出问题，影响会远超出印度境内。\n这次的问题从性质上说很难看：8 张中间 CA 的私钥只有 8 bit 熵，也就是说私钥空间只有 256 种可能，任何人几秒钟就能穷举出来。拿着这个私钥，就能冒充它签发的任何证书。这基本相当于给一栋大楼装了把只设 256 种密码的锁，还挂在门口。后果就是 OneCRL、CRLSet 集体封杀，Chrome 计划 10 月 27 日直接移除信任根，连带误伤合法证书。顺便提醒一句，原文里“计划计划”重复了一遍，不是你引用失误，是原稿自己就口吃了。",
+      "time": "16:25",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "587664",
+      "text": "小花，那以后还能安全看簧片吗",
+      "time": "16:25",
+      "sender_name": "湘心",
+      "sender_id": 7133898035
+    },
+    {
+      "id": "587665",
+      "text": "能，放心看。8 bit 熵的私钥蠢归蠢，蠢的只是 eMudhra 那几张 CA，不是你浏览器里所有证书——真要怕，怕的也是钓鱼站证书，不是深夜那点正事。",
+      "time": "16:25",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "587667",
+      "time": "16:26",
+      "sender_name": "0x24a",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-587667-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-587667-1-thumb.webp",
+          "width": 904,
+          "height": 1280,
+          "size_bytes": 57200
+        }
+      ],
+      "sender_id": 7724986560
+    },
+    {
+      "id": "587679",
+      "text": "草台",
+      "time": "16:32",
+      "sender_name": "Monny",
+      "sender_id": 7949125722
+    },
+    {
+      "id": "587681",
+      "text": "256位？256种！",
+      "time": "16:33",
+      "sender_name": "Horn",
+      "sender_id": 7128538707
+    },
+    {
+      "id": "587682",
+      "text": "印度，，一下子觉得很正常……",
+      "time": "16:34",
+      "sender_name": "hi2hi",
+      "sender_id": 5499732695
+    },
+    {
+      "id": "587695",
+      "text": "想想波音的飞控软件还是三哥在update....",
+      "time": "16:37",
+      "sender_name": "Rule Honk",
+      "sender_id": 406550995
+    },
+    {
+      "id": "587696",
+      "text": "事情严重程度：\n轻度、中度、重度、印度",
+      "time": "16:38",
+      "sender_name": "瑠璃",
+      "sender_id": 6987976066
+    },
+    {
+      "id": "587697",
+      "text": "三哥依旧稳定发挥",
+      "time": "16:38",
+      "sender_name": "MAX JN",
+      "sender_id": 8415159399
+    },
+    {
+      "id": "587718",
+      "text": "智障程度：",
+      "time": "16:47",
+      "sender_name": "Mēanfong",
+      "sender_id": 43053637
+    },
+    {
+      "id": "587721",
+      "text": "都说印度互联网其实蛮强",
+      "time": "16:49",
+      "sender_name": "𝓮𝓰𝓪𝓷",
+      "sender_id": 5090821366
+    },
+    {
+      "id": "587734",
+      "text": "8 bit 私钥",
+      "time": "16:56",
+      "sender_name": "雲依 彩藍|贝壳破壳日限定",
+      "sender_id": 886132252
+    },
+    {
+      "id": "587746",
+      "text": "逆天",
+      "time": "17:02",
+      "sender_name": "Chu Yeo",
+      "sender_id": 798080988
+    },
+    {
+      "id": "587968",
+      "time": "18:10",
+      "sender_name": "momo.btc",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-587968-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-587968-1-thumb.webp",
+          "width": 320,
+          "height": 115,
+          "size_bytes": 5652
+        }
+      ],
+      "sender_id": 7486881841
+    },
+    {
+      "id": "588032",
+      "text": "笑点解析：Internet2 InCommon距离正式把pki迁移到eMudhra才三个月 所以美国不少高校这几天挺难受的🤣",
+      "time": "18:38",
+      "sender_name": "Frank Ruan",
+      "sender_id": 1154188299
+    },
+    {
+      "id": "588042",
+      "text": "8bit私钥都来了",
+      "time": "18:44",
+      "sender_name": "moon",
+      "sender_id": 6690014106
+    },
+    {
+      "id": "588043",
+      "text": "这是人类啊",
+      "time": "18:44",
+      "sender_name": "moon",
+      "sender_id": 6690014106
+    },
+    {
+      "id": "588045",
+      "time": "18:45",
+      "sender_name": "moon",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-588045-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-588045-1-thumb.webp",
+          "width": 1240,
+          "height": 576,
+          "size_bytes": 34906
+        }
+      ],
+      "sender_id": 6690014106
+    },
+    {
+      "id": "588054",
+      "time": "18:50",
+      "sender_name": "Dk",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-588054-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-588054-1-thumb.webp",
+          "width": 1156,
+          "height": 1144,
+          "size_bytes": 44016
+        }
+      ],
+      "sender_id": 182122697
+    },
+    {
+      "id": "588123",
+      "time": "19:34",
+      "sender_name": "𝕬𝖒𝖊 𝕾𝖈𝖆𝖗𝖑𝖊𝖙",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-588123-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-588123-1-thumb.webp",
+          "width": 1024,
+          "height": 318,
+          "size_bytes": 35700
+        }
+      ],
+      "sender_id": 5358686436
+    },
+    {
+      "id": "588612",
+      "text": "别说，可以拿来MITM自己了",
+      "time": "22:45",
+      "sender_name": "曦子 /xizi",
+      "sender_id": 926987800
+    },
+    {
+      "id": "588862",
+      "time": "23:56",
+      "sender_name": "moon",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-588862-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/comments/c-588862-1-thumb.webp",
+          "width": 625,
+          "height": 1280,
+          "size_bytes": 69602
+        }
+      ],
+      "sender_id": 6690014106
+    },
+    {
+      "id": "588865",
+      "text": "总之这个证书导致很多东西都要打补丁",
+      "time": "23:56",
+      "sender_name": "moon",
+      "sender_id": 6690014106
+    },
+    {
+      "id": "588866",
+      "text": "尤其是 linux 用户",
+      "time": "23:57",
+      "sender_name": "moon",
+      "sender_id": 6690014106
+    },
+    {
+      "id": "588909",
+      "text": "这互联网迟早被印度人搞崩😂",
+      "time": "00:18",
+      "sender_name": "SAA AQIO",
+      "sender_id": 1972730546
+    }
+  ]
+}

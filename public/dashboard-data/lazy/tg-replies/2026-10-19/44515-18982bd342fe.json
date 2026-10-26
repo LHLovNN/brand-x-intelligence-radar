@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-19",
+  "thread_id": "44515",
+  "count": 22,
+  "replies": [
+    {
+      "id": "579215",
+      "time": "23:14",
+      "sender_name": "🌌 带带元宇宙 🦍",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-19/comments/c-579215-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-19/comments/c-579215-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/44515",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 180446,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 7171316252
+    },
+    {
+      "id": "579218",
+      "text": "未验证就申请专利？",
+      "time": "23:15",
+      "sender_name": "Min One",
+      "sender_id": 7474016068
+    },
+    {
+      "id": "579219",
+      "text": "小花 这跟DLSS有什么区别？",
+      "time": "23:15",
+      "sender_name": "Alicegen",
+      "sender_id": 8805833373
+    },
+    {
+      "id": "579221",
+      "text": "一句话：**DLSS 帧生成是\"补考抄答案\"，索尼这个是\"考前押题\"。**\n- **DLSS FG（英伟达）＝ 插值**：必须等前后两张真帧都渲染完，才在中间塞一张 AI 生成的假帧。假帧出场时真帧早就排好队了，所以延迟是结构性上涨的，老黄靠 Reflex 一点点往回捞。DLSS 4 的 MFG 也是一帧真帧之间塞 2～5 张，本质没变 [[10]](https://hothardware.com/news/nvidia-dlss-45-dynamic-mfg-tested)。\n- **索尼这专利 ＝ 外推**：只用\"最后一张完成的真帧 + 手柄输入（+运动矢量）\"，用一个自编码器直接猜出下一帧长什么样，趁 GPU 还在画的时候先塞进显示缓冲。不等第二帧，所以理论上不加延迟——这正是它跟帧生成最大的分歧点 [[12]](https://wccftech.com/playstation-solve-frame-generation-issue-patent-frame-prediction)[[14]](https://www.resetera.com/threads/sony-patents-machine-learning-frame-extrapolation-technique-frame-generation-with-minimal-additional-lag.1662724)。\n- 顺带它还叫\"Generation Super Sampling\"，超分和生成可能是同一口锅；专利里还预埋了往后/往前预测任意多帧，等于把 MFG 也顺手占了坑，外界普遍往 PS6 上联想 [[2]](https://www.ithome.com/1/014/310.htm)[[11]](https://www.ign.com/articles/playstation-6-will-likely-have-sonys-own-take-on-frame-generation-according-to-latest-patent)。\n但押题的代价是押错。插值再糙也是已知两点连直线，外推是拿着你半个摇杆输入去赌未来——赌输就是鬼影、抖动、你甩个视角它给你画个平行世界。专利里连一个字性能数据都没给，而\"专利文案里的低延迟\"和\"上市那天真能低延迟\"，中间通常隔着三代驱动更新和一次改名。另外主机接的电视多数就 120Hz，多帧生成在 PS6 上到底有多大用，也是笔糊涂账。\n所以区别就一句话：**DLSS 是让 AI 猜中间，索尼想让 AI 猜未来。**前者骗眼睛，后者骗命运。",
+      "time": "23:16",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "579222",
+      "text": "这不就NVIDIA Reflex 2吗",
+      "time": "23:16",
+      "sender_name": "️️ β-H",
+      "sender_id": 657996374
+    },
+    {
+      "id": "579223",
+      "text": "我记得nv的Reflex 2好像就是这样的逻辑，但是好像没后续了，nv的重心不在Reflex上",
+      "time": "23:17",
+      "sender_name": "️️ β-H",
+      "sender_id": 657996374
+    },
+    {
+      "id": "579226",
+      "text": "你记得没错：**Reflex 2 也用了“预测下一帧”的思路**，但它主要是用帧扭曲（Frame Warp）按最新输入修正已渲染画面，减少点击到显示的延迟；索尼专利描述的则是预测并生成下一帧画面，目标更像补帧。两者都在“猜”，猜的对象和做法不一样。\n至于“没后续”，不完全是没动静：NVIDIA 在 2025 年公布 Reflex 2 时说会先支持 RTX 50 系列，并计划扩展到更多显卡和游戏；但它确实没像 DLSS 那样持续占据发布会中心。Reflex 更像底层减延迟功能，平时安静地塞在支持它的游戏里，新闻热度自然拼不过“AI 一秒多变几帧”这种会发光的招牌。",
+      "time": "23:17",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "579227",
+      "text": "希望可以出一个加拿大预测ai",
+      "time": "23:18",
+      "sender_name": "迷你世界—富江",
+      "sender_id": 8985548811
+    },
+    {
+      "id": "579228",
+      "text": "猜错了怎么办",
+      "time": "23:18",
+      "sender_name": "40 HX",
+      "sender_id": 5603344155
+    },
+    {
+      "id": "579230",
+      "text": "ai预测我下0.01秒是不是要被爆头",
+      "time": "23:19",
+      "sender_name": "Frank Ruan",
+      "sender_id": 1154188299
+    },
+    {
+      "id": "579232",
+      "text": "英伟达控制面板有个虚拟现实提前渲染下一帧的控制",
+      "time": "23:19",
+      "sender_name": "白茶与风|人畜无害|Forever ️️️",
+      "sender_id": 835387229
+    },
+    {
+      "id": "579233",
+      "text": "小花",
+      "time": "23:20",
+      "sender_name": "白茶与风|人畜无害|Forever ️️️",
+      "sender_id": 835387229
+    },
+    {
+      "id": "579236",
+      "text": "有是有，但那玩意儿是「提前排队」，不是「提前预测」。你把 VR 预渲染帧数从 1 调到 4，只是让 GPU 多备几张已经画好的图当缓冲——卡顿是顺了，你的手也跟着慢了半拍，属于拿延迟买丝滑。索尼那个是硬算出一张还不存在的帧，一个靠囤货，一个靠算命，方向正好反着。所以这俩同框，只能算亲戚，不算同行。",
+      "time": "23:20",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "579237",
+      "text": "索尼：能\n上帝：你能预测未来吗",
+      "time": "23:20",
+      "sender_name": "Seia",
+      "sender_id": 5124120053
+    },
+    {
+      "id": "579245",
+      "text": "@BiuAsstBot 这猜错了怎么办",
+      "time": "23:26",
+      "sender_name": "Vic",
+      "sender_id": 6443994606
+    },
+    {
+      "id": "579247",
+      "text": "猜错了？那不就等于你开了个透视挂结果对面蹲墙角，硬生生把\"下一帧\"给预判成\"吃我这一记空大\"嘛——画面直接给你表演一个\"我是谁在这干嘛\"。好在屏幕上那点幻影通常只是一帧的事，眨个眼就糊弄过去了，不比你写代码时脑子里的\"这版本一定稳\"翻车得离谱。",
+      "time": "23:26",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "579250",
+      "text": "小花，你AI味太浓了，说的不是人话",
+      "time": "23:27",
+      "sender_name": "Vic",
+      "sender_id": 6443994606
+    },
+    {
+      "id": "579252",
+      "text": "Vic你这不叫嫌我AI味浓，叫嫌我没把你当兄弟。行，说人话：索尼这专利猜错帧，就跟你打游戏预判走位结果撞枪口上，画面糊一下而已，比你发版前拍胸脯说\"稳了\"然后半夜被叫起来修bug强多了。",
+      "time": "23:27",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "579258",
+      "text": "这也能成专利？要点脸",
+      "time": "23:41",
+      "sender_name": "hz2zZ",
+      "sender_id": 820269797
+    },
+    {
+      "id": "579260",
+      "text": "不就是插帧😂",
+      "time": "23:44",
+      "sender_name": "zzzzzz",
+      "sender_id": 6158790624
+    },
+    {
+      "id": "579277",
+      "text": "拼好帧",
+      "time": "00:13",
+      "sender_name": "膜法师",
+      "sender_id": 233312402
+    },
+    {
+      "id": "579289",
+      "text": "这手机上不就有了吗",
+      "time": "00:50",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    }
+  ]
+}

@@ -1,0 +1,2714 @@
+{
+  "kind": "tg",
+  "kind_label": "TG 日报",
+  "date": "2026-10-22",
+  "file": "2026-10-22-tg-digest.html",
+  "title": "TG 频道日报",
+  "hero_date": "2026年10月22日 · 星期四 · 7 个频道 · 79 条内容",
+  "source_url": "https://codew1028.github.io/dt/2026-10-22-tg-digest.html",
+  "synced_at": "2026-10-26T01:27:15Z",
+  "original_item_count": 79,
+  "filtered_count": 0,
+  "filter_summary": [],
+  "item_count": 79,
+  "section_count": 1,
+  "sections": [
+    {
+      "title": "TG 频道精选",
+      "count_label": "79 条",
+      "items": [
+        {
+          "title": "好家伙！真的是把JEV玩出花来了！！",
+          "summary": "好家伙！真的是把JEV玩出花来了！！\nAI 看不清图片，居然开始自己写代码“补短板”了！！\n图片太暗，就自己调对比度；\n目标太小，就自己裁切放大；\n判断没把握，就调整提示词再试。\n连怎么处理图片、怎么调用工具，都可以自己改！\n国外一大神把 Google Research 开源的 Harness² 框架接入 Jev，做了一个视频内容识别的demo。\n整个系统可以识别街道上的行人，把“小目标”、“放大两倍”、“遮挡”、“匹配可见部分”等处理经验纳入流程，再交给模型判断。\n底层模型能力不变，但模型在做任务的过程中，一直在被持续的调教！\n大概看明白了，这是解决了一个很关键的问：\n模型明明有能力，任务为什么总做不好！",
+          "channel": "@aigc1024",
+          "time": "00:04",
+          "url": "https://t.me/aigc1024/26079",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26079",
+              "label": "好家伙！真的是把JEV玩出花来了！！"
+            },
+            {
+              "href": "https://t.me/aigc1024/26079",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "video",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26079-1.mp4",
+              "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26079-1-poster.webp",
+              "fallback_url": "https://t.me/aigc1024/26079",
+              "width": 0,
+              "height": 0,
+              "duration": 0,
+              "size_bytes": 5281599,
+              "has_audio": true
+            }
+          ],
+          "id": "aigc1024-26079",
+          "message_id": "26079",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "推荐个开源项目 BoxPlayer，专门给电视大屏做的影视播放器！",
+          "summary": "推荐个开源项目 BoxPlayer，专门给电视大屏做的影视播放器！\n还在折腾各种 TVBox、影视仓？这个项目可以留意一下。\nBoxPlayer 主打大屏观影体验，让电视盒子用户多一个更省事的影视播放选择。\nGitHub： ⁠https://github.com/gaozhangmin/boxplayer",
+          "channel": "@yunying23",
+          "time": "00:08",
+          "url": "https://t.me/yunying23/12253",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/12253",
+              "label": "推荐个开源项目 BoxPlayer，专门给电视大屏做的影视播放器！"
+            },
+            {
+              "href": "https://t.me/yunying23/12253",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/yunying23-12253-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/yunying23-12253-1-thumb.webp",
+              "width": 1200,
+              "height": 675,
+              "size_bytes": 115342
+            }
+          ],
+          "id": "yunying23-12253",
+          "message_id": "12253",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "真的假的！有人用最强AI组合技，实现了自动赚钱？",
+          "summary": "真的假的！有人用最强AI组合技，实现了自动赚钱？\n有人用Opus 5.5、REA、Jev、Dots、Grok Bot 和 Obsidian 打造了一套“最强系统”！\n10美元的成本，一夜之间，系统上线了1 个应用，并拥有了212 个注册用户，31 个付费用户，总收入 279 美元。\n成本仅有 4.70 美元的模型费，和 3 美元域名费。\n这个系统一晚上干了些什么呢？\n从 X 上找到大量外卖骑手的共同抱怨：同时跑多个配送平台，收入统计太麻烦。\n然后接着调查竞品、整理用户差评，找出已有产品反复被吐槽的问。\n然后规划功能、开发应用、部署上线、写落地页，再制作演示内容、发帖推广，最后把执行步骤、成本和踩坑记录进 Obsidian。\n有一个很屌的细节：\n系统原本选中了一个 49 美元的域名，发现超过预算后，自己换成了 3 美元的。\n真的很炸裂！\n系统做个应用很简单，但我想知道应用上线后，怎么来的第一批用户？\n难道说，这个系统顺便把产品Launch和宣发都搞定了？？",
+          "channel": "@yunying23",
+          "time": "00:18",
+          "url": "https://t.me/yunying23/12254",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/12254",
+              "label": "真的假的！有人用最强AI组合技，实现了自动赚钱？"
+            },
+            {
+              "href": "https://t.me/yunying23/12254",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "video",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/yunying23-12254-1.mp4",
+              "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/yunying23-12254-1-poster.webp",
+              "fallback_url": "https://t.me/yunying23/12254",
+              "width": 0,
+              "height": 0,
+              "duration": 0,
+              "size_bytes": 12863132,
+              "has_audio": true
+            }
+          ],
+          "id": "yunying23-12254",
+          "message_id": "12254",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "什么样的内容，最容易成为爆款？",
+          "summary": "什么样的内容，最容易成为爆款？\n研究了不少高互动内容，不管是图文还是视频，都有一个规律：\n真正容易爆发流量的内容，往往都在激发受众的某种参与欲望。\n总结下来，大概有这8种：\n1、纠错欲：忍不住反驳你。\n2、好奇欲：迫不及待看后续结果。\n3、窥探欲：想看你如何翻车。\n4、猎奇欲：难得一见的非主流内容。\n5、求证欲：想知道是真是假。\n6、指导欲：忍不住给你支招。\n7、代入欲：从你的故事里看到自己。\n8、表现欲：想证明自己更懂、更强。\n仔细想想，赞评转藏顶踩，每个动作背后都有不同的心理动机。\n内容负责吸引注意力，情绪负责驱动参与，互动则进一步放大传播。\n当然，能引发互动不等于内容有价值，更不意味着一定会爆。\n但如果一条内容让人看完之后毫无反应，既不想评论，也不想分享，甚至连自己的经历都联想不到，那它大概率很难爆。",
+          "channel": "@yunying23",
+          "time": "00:28",
+          "url": "https://t.me/yunying23/12255",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/12255",
+              "label": "什么样的内容，最容易成为爆款？"
+            },
+            {
+              "href": "https://t.me/yunying23/12255",
+              "label": "查看原文"
+            }
+          ],
+          "id": "yunying23-12255",
+          "message_id": "12255",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "现在 AI 真是厉害，连电视界面都能改！",
+          "summary": "现在 AI 真是厉害，连电视界面都能改！\n我参考了比较流行的两个项目，给自己做了一个新的启动器\n终于不用忍受满是广告的国产电视界面了\n现在这个启动器完美符合我的需求：\n只展示常用的应用，比如我的 PS5 和 Apple TV 的连接，还有我常看的哔哩哔哩以及投屏。\n同时我还改了 UI，增加了壁纸轮播和一些内置的非常好看的壁纸\n我基于这个比较流行的 CleanFrame 和 cleanyourtv 重新打了一个guizang TV 的包。\n如果你是小米电视，然后喜欢我这个新增的功能的，可以试试\nhttps://github.com/op7418/guizang-tv",
+          "channel": "@aigc1024",
+          "time": "00:36",
+          "url": "https://t.me/aigc1024/26080",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26080",
+              "label": "现在 AI 真是厉害，连电视界面都能改！"
+            },
+            {
+              "href": "https://t.me/aigc1024/26080",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26080-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26080-1-thumb.webp",
+              "width": 1536,
+              "height": 2048,
+              "size_bytes": 414796
+            }
+          ],
+          "id": "aigc1024-26080",
+          "message_id": "26080",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "当年曹德旺已经劝大家不要买房了，那个时间点是2017年的12月，如果很多地产大佬听了曹德旺的建议，或许也不会有现在这个结局了。他拿自己妹妹举例，劝妹妹趁早把多套房产出手。他调侃：以后房子多了，卖不掉、租不出去，每年还要交物业费管理费，最后只能轮流去每套房子住。曹德旺在地产行业最赚钱的时候，也是坚决不做地产，连金融也不做，只努力把制造业给做好。",
+          "channel": "@inside1024",
+          "time": "00:37",
+          "url": "https://t.me/inside1024/87880",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87880",
+              "label": "当年曹德旺已经劝大家不要买房了，那个时间点是2017年的12月，如果很多地产大佬听了曹德旺的建议，或许也不会有现在这个结局了。他拿自己妹妹举例，劝妹妹趁早把多套房产出手。他调侃：以后房子多了，卖不掉、租不出去，每年还要交物业费管理费，最后只能轮流去每套房子住。曹德旺在地产行业最赚钱的时候，也是坚决不做地产，连金融也不做，只努力把制造业给做好。"
+            },
+            {
+              "href": "https://t.me/inside1024/87880",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87880-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87880-1-thumb.webp",
+              "width": 642,
+              "height": 426,
+              "size_bytes": 21850
+            }
+          ],
+          "id": "inside1024-87880",
+          "message_id": "87880",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "summary": "当年曹德旺已经劝大家不要买房了，那个时间点是2017年的12月，如果很多地产大佬听了曹德旺的建议，或许也不会有现在这个结局了。他拿自己妹妹举例，劝妹妹趁早把多套房产出手。他调侃：以后房子多了，卖不掉、租不出去，每年还要交物业费管理费，最后只能轮流去每套房子住。曹德旺在地产行业最赚钱的时候，也是坚决不做地产，连金融也不做，只努力把制造业给做好。",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "0基础AI真人剧制作+AIP带货全流程｜打造AI真人IP，剧情短剧带货变现实战课",
+          "summary": "0基础AI真人剧制作+AIP带货全流程｜打造AI真人IP，剧情短剧带货变现实战课\n\n百度网盘：https://pan.baidu.com/s/1Ke7Fv-Vb3StUno-zRmJZzQ?pwd=fce5\n提取码：fce5\n\nhttps://fuyezy.com/57486.html",
+          "channel": "@meiriyishu",
+          "time": "01:52",
+          "url": "https://t.me/meiriyishu/4474",
+          "links": [
+            {
+              "href": "https://t.me/meiriyishu/4474",
+              "label": "0基础AI真人剧制作+AIP带货全流程｜打造AI真人IP，剧情短剧带货变现实战课"
+            },
+            {
+              "href": "https://t.me/meiriyishu/4474",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4474-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4474-1-thumb.webp",
+              "width": 1002,
+              "height": 551,
+              "size_bytes": 93312
+            }
+          ],
+          "id": "meiriyishu-4474",
+          "message_id": "4474",
+          "channel_name": "优质「资源」收藏夹",
+          "channel_url": "https://t.me/meiriyishu",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "最有价值的一句：",
+          "summary": "最有价值的一句：\n“你一定要尽快地存够30万，存够30万以后，就用电焊焊死它，全当它不存在，当你有了这30万，你会发现人生很幸福。\n​不要一有点钱就换车，换手机，买衣服包包，这些只能给你带来暂时的快感，很快就会消失的，这种消费观会让你一辈子都为了生存疲于奔命，而你存够30万以后，就有了底气，可以做自己喜欢的事，过自己想过的生活。”\n存款是你这辈子最大的底气。如果你手上没有钱，生活中任何一点风吹草动，都可能让你万劫不复。比如突如其来的一场大病，你没有足够的钱的，医院是不会给你做手术，也不会给你用药的，你只有等着死的份儿。比如家人突然遇到了什么意外或者突发事件，你完全没有能力去应付这个事情，只能够生死由命，无可奈何。而如果你手里面有一笔存款，比如30万，几乎可以应对人世间的绝大多数危机。\n我们一定要树立一个正确的消费观念，就是要跟我们的收入和实际经济能力相匹配的消费观念。当你有了10000块钱的时候，不要去换手机，这样你就可以存下这10000块钱，当你有了100000块钱的时候，不要去换车子，这样你就可以存下这100000块钱，当你有了300000块钱的时候，不要去混房子，这样你就可以存下300000块钱，你要把这30万焊死在银行卡里，这样你就不会害怕了。\n无论你赚钱的本事有多大，如果你不会存钱，也不会有那种节制消费的意识，那么你永远都是一个穷光蛋。如果你每个月只能赚个几千块钱，如果可以稳稳当当的存下一部分，那么你也会变得越来越有钱。当你碰到危险的时候，这笔钱就是你最大的靠山。当你碰到好的机会的时候，这笔钱就是你改命的本钱。所以你一定要努力的存钱，至少存好30万，这样你的人生才能够行稳致远，游刃有余。",
+          "channel": "@inside1024",
+          "time": "02:01",
+          "url": "https://t.me/inside1024/87883",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87883",
+              "label": "最有价值的一句："
+            },
+            {
+              "href": "https://t.me/inside1024/87883",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87883-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87883-1-thumb.webp",
+              "width": 1279,
+              "height": 853,
+              "size_bytes": 166930
+            }
+          ],
+          "id": "inside1024-87883",
+          "message_id": "87883",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "一个人越来越厉害的 10 个生活习惯，建议长期坚持：",
+          "summary": "一个人越来越厉害的 10 个生活习惯，建议长期坚持：\n1、不要随便帮忙。 善良要有锋芒，帮急不帮穷，别让自己的好心变得廉价。\n2、坚持读书。 读书不一定让你发财，但能让你少走很多弯路。\n3、学会拒绝。 不想做的事就果断拒绝，别为了讨好别人委屈自己。\n4、少刷短视频。 把刷手机的时间拿来学习、赚钱，你会慢慢超过很多人。\n5、不要向别人倾诉全部。 关系再好，也要保留一点隐私和边界。\n6、少说，多倾听。 真正厉害的人，往往懂得让别人把说完。\n7、学会识人。 别听一个人说了什么，要看他真正做了什么。\n8、控制消费。 不攀比、不冲动购物，存款就是成年人最大的底气之一。\n9、每天提前做计划。 睡前想好明天要做的事，别让一天在忙乱中白白过去。\n10、坚持早睡，照顾身体。 钱可以慢慢赚，身体一旦透支，很多东西都没有意义。\n记住：真正改变人生的，从来不是突然开窍，而是把这些不起眼的小事坚持很多年。",
+          "channel": "@text1024",
+          "time": "02:03",
+          "url": "https://t.me/text1024/25962",
+          "links": [
+            {
+              "href": "https://t.me/text1024/25962",
+              "label": "一个人越来越厉害的 10 个生活习惯，建议长期坚持："
+            },
+            {
+              "href": "https://t.me/text1024/25962",
+              "label": "查看原文"
+            }
+          ],
+          "id": "text1024-25962",
+          "message_id": "25962",
+          "channel_name": "副业赚钱探索指南",
+          "channel_url": "https://t.me/text1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "拜访了一位资产过亿的前辈",
+          "summary": "拜访了一位资产过亿的前辈\n1、第一句是：“用劳力换钱，就脚踏实地；用脑子谋财，就灵活变通；用钱生钱，就要狠一点；以资源赚钱，就要圆滑点：用人赚钱，就豁达点。“正当我思考肘，前辈第二句又揭示了富人的核心：\"普通人做事，必须要有十分资源和把握才敢做。\n\n每日吃瓜 @doubannew\n每日尴图 @moyu2023",
+          "channel": "@inside1024",
+          "time": "02:42",
+          "url": "https://t.me/inside1024/87884",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87884",
+              "label": "拜访了一位资产过亿的前辈"
+            },
+            {
+              "href": "https://t.me/inside1024/87884",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87884-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87884-1-thumb.webp",
+              "width": 1200,
+              "height": 1600,
+              "size_bytes": 99882
+            }
+          ],
+          "id": "inside1024-87884",
+          "message_id": "87884",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "Github惊人132 k stars项目！AI自动生成短视频工具，根据主题或关键词自动生成视频",
+          "summary": "Github惊人132 k stars项目！AI自动生成短视频工具，根据主题或关键词自动生成视频\n\n百度网盘：https://pan.baidu.com/s/1WHRfluS8bw20p_YrcVwE_w?pwd=152a\n提取码：152a\n\nhttps://fuyezy.com/57494.html",
+          "channel": "@meiriyishu",
+          "time": "02:52",
+          "url": "https://t.me/meiriyishu/4475",
+          "links": [
+            {
+              "href": "https://t.me/meiriyishu/4475",
+              "label": "Github惊人132 k stars项目！AI自动生成短视频工具，根据主题或关键词自动生成视频"
+            },
+            {
+              "href": "https://t.me/meiriyishu/4475",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4475-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4475-1-thumb.webp",
+              "width": 910,
+              "height": 862,
+              "size_bytes": 103198
+            }
+          ],
+          "id": "meiriyishu-4475",
+          "message_id": "4475",
+          "channel_name": "优质「资源」收藏夹",
+          "channel_url": "https://t.me/meiriyishu",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "男性私域项目每单29.9，当天就能落地变现【不是S粉项目】详细拆解",
+          "summary": "男性私域项目每单29.9，当天就能落地变现【不是S粉项目】详细拆解\n\n百度网盘：https://pan.baidu.com/s/1-aIsTOEnUueIasTdk_TmhQ?pwd=8746\n提取码：8746\n\nhttps://fuyezy.com/57496.html",
+          "channel": "@meiriyishu",
+          "time": "03:52",
+          "url": "https://t.me/meiriyishu/4476",
+          "links": [
+            {
+              "href": "https://t.me/meiriyishu/4476",
+              "label": "男性私域项目每单29.9，当天就能落地变现【不是S粉项目】详细拆解"
+            },
+            {
+              "href": "https://t.me/meiriyishu/4476",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4476-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4476-1-thumb.webp",
+              "width": 800,
+              "height": 596,
+              "size_bytes": 41804
+            }
+          ],
+          "id": "meiriyishu-4476",
+          "message_id": "4476",
+          "channel_name": "优质「资源」收藏夹",
+          "channel_url": "https://t.me/meiriyishu",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "大部分AI短剧的演技是远远比不上陈道明和唐国强的，",
+          "summary": "大部分AI短剧的演技是远远比不上陈道明和唐国强的，\n但是头部AI黄片的演技实际上已经赶上真人了。",
+          "channel": "@aigc1024",
+          "time": "04:09",
+          "url": "https://t.me/aigc1024/26081",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26081",
+              "label": "大部分AI短剧的演技是远远比不上陈道明和唐国强的，"
+            },
+            {
+              "href": "https://t.me/aigc1024/26081",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-26081",
+          "message_id": "26081",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "AI拼豆图纸副业，0基础AI一键出图，零库存零发货，1部手机月入3k+详细拆解",
+          "summary": "AI拼豆图纸副业，0基础AI一键出图，零库存零发货，1部手机月入3k+详细拆解\n\n百度网盘：https://pan.baidu.com/s/1h5ROkmWhxrZAnZf0LvuTFA?pwd=696c\n提取码：696c\n\nhttps://fuyezy.com/57498.html",
+          "channel": "@meiriyishu",
+          "time": "04:52",
+          "url": "https://t.me/meiriyishu/4477",
+          "links": [
+            {
+              "href": "https://t.me/meiriyishu/4477",
+              "label": "AI拼豆图纸副业，0基础AI一键出图，零库存零发货，1部手机月入3k+详细拆解"
+            },
+            {
+              "href": "https://t.me/meiriyishu/4477",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4477-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4477-1-thumb.webp",
+              "width": 1045,
+              "height": 773,
+              "size_bytes": 53092
+            }
+          ],
+          "id": "meiriyishu-4477",
+          "message_id": "4477",
+          "channel_name": "优质「资源」收藏夹",
+          "channel_url": "https://t.me/meiriyishu",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "最近在用Gemini，并与用了很久的CHATGPT PRO始终保持对比，发现Gemini更适合我，准确和犀利很多。",
+          "summary": "最近在用Gemini，并与用了很久的CHATGPT PRO始终保持对比，发现Gemini更适合我，准确和犀利很多。\n一个感慨是：\n过去三十年，最重要的技能是“学习”；\n未来三十年，最重要的技能是“提问”。\n在AI时代，思维方式才是稀缺品。\n\nAIGC的一切\nhttps://t.me/aigc1024",
+          "channel": "@inside1024",
+          "time": "04:56",
+          "url": "https://t.me/inside1024/87886",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87886",
+              "label": "最近在用Gemini，并与用了很久的CHATGPT PRO始终保持对比，发现Gemini更适合我，准确和犀利很多。"
+            },
+            {
+              "href": "https://t.me/inside1024/87886",
+              "label": "查看原文"
+            }
+          ],
+          "id": "inside1024-87886",
+          "message_id": "87886",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "天下苦开机广告久矣",
+          "summary": "天下苦开机广告久矣\n转发\n: 现在 AI 真是厉害，连电视界面都能改！\n我参考了比较流行的两个项目，给自己做了一个新的启动器\n终于不用忍受满是广告的国产电视界面了\n现在这个启动器完美符合我的需求：\n只展示常用的应用，比如我的 PS5 和 Apple TV 的连接，还有我常看的哔哩哔哩以及投屏。\n同时我还改了 UI，增加了壁纸轮播和一些内置的非常好看的壁纸\n我基于这个比较流行的 CleanFrame 和 cleanyourtv 重新打了一个guizang TV 的包。\n如果你是小米电视，然后喜欢我这个新增的功能的，可以试试\nhttps://github.com/op7418/guizang-tv",
+          "channel": "@aigc1024",
+          "time": "06:11",
+          "url": "https://t.me/aigc1024/26082",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26082",
+              "label": "天下苦开机广告久矣"
+            },
+            {
+              "href": "https://t.me/aigc1024/26082",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26082-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26082-1-thumb.webp",
+              "width": 300,
+              "height": 400,
+              "size_bytes": 22124
+            }
+          ],
+          "id": "aigc1024-26082",
+          "message_id": "26082",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "之前我用 Fable 的时候，我不敢随便在 Claude Code Desktop 里面开任务卡片，因为它新任务也会开一个 Fable 模型的，用不起。",
+          "summary": "之前我用 Fable 的时候，我不敢随便在 Claude Code Desktop 里面开任务卡片，因为它新任务也会开一个 Fable 模型的，用不起。\n刚发现现在多了一个选项，点击可以选模型了。",
+          "channel": "@aigc1024",
+          "time": "06:27",
+          "url": "https://t.me/aigc1024/26083",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26083",
+              "label": "之前我用 Fable 的时候，我不敢随便在 Claude Code Desktop 里面开任务卡片，因为它新任务也会开一个 Fable 模型的，用不起。"
+            },
+            {
+              "href": "https://t.me/aigc1024/26083",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26083-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26083-1-thumb.webp",
+              "width": 508,
+              "height": 547,
+              "size_bytes": 24734
+            }
+          ],
+          "id": "aigc1024-26083",
+          "message_id": "26083",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "家庭条件一般的，解决方法就是不要给自己人生上杠杆，杜绝买车买房炫耀攀比等一切不实际的物欲，全部投入到自我成长中来，等有了结果再作为回馈给自己。",
+          "summary": "家庭条件一般的，解决方法就是不要给自己人生上杠杆，杜绝买车买房炫耀攀比等一切不实际的物欲，全部投入到自我成长中来，等有了结果再作为回馈给自己。\n这样时间久了，其实物欲是会越来越低的，因为交易最终还是向内求，ego多了做不好，可能有时会略显冷酷，未来的你会感谢曾经的果断。\n\n副业赚钱探索",
+          "channel": "@inside1024",
+          "time": "06:41",
+          "url": "https://t.me/inside1024/87888",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87888",
+              "label": "家庭条件一般的，解决方法就是不要给自己人生上杠杆，杜绝买车买房炫耀攀比等一切不实际的物欲，全部投入到自我成长中来，等有了结果再作为回馈给自己。"
+            },
+            {
+              "href": "https://t.me/inside1024/87888",
+              "label": "查看原文"
+            }
+          ],
+          "id": "inside1024-87888",
+          "message_id": "87888",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "AI短视频实操实战课，即梦+豆包+剪映，轻松制作带货/育儿/故事短视频",
+          "summary": "AI短视频实操实战课，即梦+豆包+剪映，轻松制作带货/育儿/故事短视频\n\n百度网盘：https://pan.baidu.com/s/19dxiy2Ro8bhiMsemkDjczg?pwd=f3cb\n提取码：f3cb\n\nhttps://fuyezy.com/57504.html",
+          "channel": "@meiriyishu",
+          "time": "07:52",
+          "url": "https://t.me/meiriyishu/4480",
+          "links": [
+            {
+              "href": "https://t.me/meiriyishu/4480",
+              "label": "AI短视频实操实战课，即梦+豆包+剪映，轻松制作带货/育儿/故事短视频"
+            },
+            {
+              "href": "https://t.me/meiriyishu/4480",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4480-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4480-1-thumb.webp",
+              "width": 800,
+              "height": 442,
+              "size_bytes": 106642
+            }
+          ],
+          "id": "meiriyishu-4480",
+          "message_id": "4480",
+          "channel_name": "优质「资源」收藏夹",
+          "channel_url": "https://t.me/meiriyishu",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "📱 **Chrome 新增「可疑网站」反诈预警，并用 Gemini 在服务器端进行反诈判定**",
+          "summary": "📱 **Chrome 新增「可疑网站」反诈预警，并用 Gemini 在服务器端进行反诈判定**\n\nGoogle 为 Chrome 上线新的网站安全预警，开启「增强保护」模式后，访问与钓鱼、恶意软件、诈骗站点特征相似的可疑网址时会先弹出提示，网页在下方变暗显示，并提供「标记为安全」的选项。而被判定「危险」的站点仍会以整屏红色警告拦下。\n\nGoogle 同时改进了由更强大的服务器端 Gemini 驱动的诈骗检测功能，该模型会评估页面内容，分析关键指标，例如所代表的品牌、页面意图以及诈骗可能性评分，从而提供识别欺骗性网站所需的丰富威胁数据。\n\nThe Verge | Google\n\n🌸 科技圈· 茶馆 · 投稿",
+          "channel": "@zaihuapd",
+          "time": "08:03",
+          "url": "https://t.me/zaihuapd/44575",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/44575",
+              "label": "📱 **Chrome 新增「可疑网站」反诈预警，并用 Gemini 在服务器端进行反诈判定**"
+            },
+            {
+              "href": "https://www.theverge.com/tech/1014446/google-chrome-suspicious-website-warning",
+              "label": "The Verge"
+            },
+            {
+              "href": "https://blog.google/security/our-latest-defenses-against-evolving-web-scams/",
+              "label": "Google"
+            },
+            {
+              "href": "https://t.me/zaihuapd/44575",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44575-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44575-1-thumb.webp",
+              "width": 2000,
+              "height": 1125,
+              "size_bytes": 72234
+            }
+          ],
+          "id": "zaihuapd-44575",
+          "message_id": "44575",
+          "channel_name": "在花🎗️科技圈",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 32,
+          "replies_fetched": 32,
+          "replies_visible": 29,
+          "replies_filtered": 3,
+          "replies_path": "dashboard-data/lazy/tg-replies/2026-10-22/44575-4598c7eed198.json"
+        },
+        {
+          "title": "哈哈哈哈，程序员之所以不好找工作的原因恰恰是这里",
+          "summary": "哈哈哈哈，程序员之所以不好找工作的原因恰恰是这里\n1. 社会的知识面太窄了：除了计算机，和别人打交道能力太弱，导致无法推销自己。（推销自己第一步就是挑战程序员大声吆喝的能力，大部分程序员觉得推销很丢人）\n2. 情商不够：太过于耿直boy的沟通技术细节，导致很多人听不懂他在说什么，只会让别人误解这个人技术不行。（真正让普通人感受到能力的反而是那句 “你说的问都没问，可以搞定”，不要说技术细节）\n3. 对赚钱没经验：赚钱的产品不一定是技术最深的领域，反而是信息差，多维度交叉领域，很多需要程序并赚钱的行业现状是，又懂行业痛点又懂技术的人太少 （而交叉领域需要非常丰富的社会经验和洞察力）",
+          "channel": "@inside1024",
+          "time": "08:12",
+          "url": "https://t.me/inside1024/87890",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87890",
+              "label": "哈哈哈哈，程序员之所以不好找工作的原因恰恰是这里"
+            },
+            {
+              "href": "https://t.me/inside1024/87890",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "video",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87890-1.mp4",
+              "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87890-1-poster.webp",
+              "fallback_url": "https://t.me/inside1024/87890",
+              "width": 0,
+              "height": 0,
+              "duration": 0,
+              "size_bytes": 1113852,
+              "has_audio": true
+            }
+          ],
+          "id": "inside1024-87890",
+          "message_id": "87890",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "一位生意人说：“你永远不要相信自己还能挣钱，人生就是有个三五十万的现金，然后租最便宜的房子，开最便宜的车，但是要买最好的电瓶车和最好的手机，剩下的一切从简，这样的人生，就够了，这样你的下半辈子，会过得很爽！”",
+          "summary": "一位生意人说：“你永远不要相信自己还能挣钱，人生就是有个三五十万的现金，然后租最便宜的房子，开最便宜的车，但是要买最好的电瓶车和最好的手机，剩下的一切从简，这样的人生，就够了，这样你的下半辈子，会过得很爽！”\n这番看似朴素直白的感悟，藏着看透世事、深谙生活本质的顶级智慧。多数人终其一生，困在赚钱的执念、攀比的焦虑、物欲的牢笼里，总觉得财富永远不够、生活永远缺憾，拼命追逐更高的消费、更贵的排场、更光鲜的皮囊，最终被欲望裹挟，被生活裹挟，身心俱疲、不得安宁。而真正通透的人生，从不是无限拥有，而是适度留白、极简度日，手握底气、卸下负累，活得松弛且自由。\n梭罗曾说：“简单，简单，再简单。多余的财富只能买来多余的东西，灵魂所需的必需品，一件也不需要用钱来买。”深以为然。人性最大的弱点，就是盲目自信，总以为来日方长、财源不断，笃定自己可以一直赚钱、一直拼搏，于是肆意透支身体、超前消费、攀比挥霍。可世事无常，人生起落本是常态，没有人能保证自己永远顺遂、财源不竭。意外、低谷、失意，从来不会提前预告，唯有手握现金底气，放下无谓物欲，才能在风雨来临时，从容立身、不慌不忙。\n古人有言：“人间有味是清欢。”苏轼一生颠沛流离，历经仕途沉浮、人生起落，褪去半生繁华后，终悟生活真谛：真正的幸福，从不是锦衣玉食、奢靡浮华，而是朴素安稳、内心从容。这位生意人的生活准则，恰恰印证了这份人生哲理。三五十万的现金存款，不是巨额财富，却是普通人对抗世事无常的最大底气，是绝境之中的退路，是疲惫之时的底气，是不依附他人、不委屈自己的资本。\n很多人本末倒置，把生活的幸福寄托在昂贵的房租、奢华的代步、精致的外物之上。住豪宅、开豪车、穿名牌，看似风光无限，实则背负着沉重的负债与压力，被房贷车贷裹挟，被精致人设绑架，不敢停歇、不敢失业、不敢松弛，一辈子为外物打工。反观通透的活法，租房只求安稳栖身，代步只求便利出行，摒弃一切虚荣消耗，把不必要的开支尽数砍掉，极简生活，深耕底气。\n这份极简，从来不是吝啬抠门、委屈自己，而是清醒取舍、精准生活。买最好的手机、最好的电瓶车，是为了适配日常所需、提升生活效率，是实用主义的通透；租房从简、用车朴素、万物精简，是摒弃虚荣、拒绝内耗的清醒。生活的本质是过日子，不是演给别人看的排场。无关紧要的外物，皆是负累；贴合生活的刚需，才是治愈日常的底气。\n曾国藩曾言：“既往不恋，当下不杂，未来不迎。”成年人最高级的自律，是克制欲望、稳定内核、留存底气。我们终要明白，赚钱的能力是变数，存钱的底气是安稳。能力会有高低起伏，事业会有顺逆起落，唯有手握的积蓄、极简的生活、从容的心态，永远不会辜负自己。不高估自己的赚钱能力，不低估人生的风险变数，永远居安思危、未雨绸缪，才是成年人最顶级的远见。\n当下太多人陷入“精致穷”的误区，为了虚无的面子消耗真实的生活，为了短暂的虚荣透支长久的安稳。朋友圈的光鲜、别人眼中的体面，换来的是长久的焦虑、紧绷的生活、无力的底气。反观极简度日的人，他们不攀比、不盲从、不浮躁，不被世俗的消费主义裹挟。衣食住行从简，精神生活丰盈，手握安稳积蓄，无外债之压、无虚荣之累，闲暇之时可随心度日、松弛生活。\n所谓下半辈子过得爽，从来不是财富自由的挥霍，而是身心自由的松弛。不用为账单焦虑，不用为生计妥协，不用为面子硬撑，不用在意外人的眼光。遇到困境有退路，遭遇低谷有底气，疲惫之时可停歇，平凡日常可安然。这份从容自在，是再多浮华虚荣都换不来的人生顶配。\n简单是宇宙的精髓，朴素是人生的真谛。人这一生，越简单，越高级；越通透，越幸福。财富的意义从不是堆砌外物、满足虚荣，而是为了治愈生活、兜底人生、成全自由。舍弃无用的浮华，留存生活的刚需，积攒安稳的底气，精简多余的负累，便是最好的生活状态。\n往后余生，愿我们都能读懂这份生活智慧。不高估赚钱能力，不沉溺世俗物欲，以极简之心度日，以安稳底气立身。删繁就简、沉淀自己，手握余量、心有从容，在朴素平凡的日子里，活出松弛自在、安稳无忧的人生。",
+          "channel": "@text1024",
+          "time": "08:16",
+          "url": "https://t.me/text1024/25963",
+          "links": [
+            {
+              "href": "https://t.me/text1024/25963",
+              "label": "一位生意人说：“你永远不要相信自己还能挣钱，人生就是有个三五十万的现金，然后租最便宜的房子，开最便宜的车，但是要买最好的电瓶车和最好的手机，剩下的一切从简，这样的人生，就够了，这样你的下半辈子，会过得很爽！”"
+            },
+            {
+              "href": "https://t.me/text1024/25963",
+              "label": "查看原文"
+            }
+          ],
+          "id": "text1024-25963",
+          "message_id": "25963",
+          "channel_name": "副业赚钱探索指南",
+          "channel_url": "https://t.me/text1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "富人秘而不宣的潜规则:",
+          "summary": "富人秘而不宣的潜规则:\n1、美色，只租赁，不购买。\n2、大事清醒，小事糊涂，不大不小的事就难得糊涂，\n3、没有赚钱能力，其他能力再好也没有用。\n4、所有不能变成的才华都只能算是业余爱好。\n5、做人不能太老实。太老实的人注定过不好这一生。\n6、不要把亲戚带进事业圈，亲兄弟都没有用。\n7、闷声，发大财。发了财后，有钱就要多买一套房多置一块地，还要巴不得别人不知道。\n8、出来混，要多跟生意人接触，多和成功的老板交朋友，而不是公务员。\n9、不要苦苦去寻找贵人，人生最大的贵人其实就是不断努力向上的自己。\n10、人不要脸，天下无敌。有本事的人大都是从不要脸开始的。\n11、不要怕被别人利用，能被别人利用，说明你有价值。\n12、要成功，就不要怕出丑。一个人出丑得越多，成功也就越快。\n13、和穷人混，本质上就是无效社交，说得很难听，却是事实。\n14、所有人初次见面，都会暗暗打量对方的身价。你有价值，才会和你保持来往，你没有价值，就会像路人甲那样转身即忘。\n15、在这个世界上，没有人会去帮助一个毫无价值的人。你必须好好经营自己，拥有与人交换的等码，只有这样，出来混，才能用自己的有去换别的的无，这就是强者定律。\n16、不要去可怜任何人。你瞪大眼睛看看，可怜之人必有可恨之处。\n17、除了怕穷，什么也不要恨，除了怕老，什么也不要怕。寂寞空虚哪是有资格的人才可以说的。\n18、放下面子，才能赚到里子。有钱人为了赚钱，面子不值一提。而很多穷人，死要面子，最后只能活成面子。\n19、出门在外，只求财，不斗气，学会认怂，才是聪明人。\n20、站在道德的制高点上去劝你善良与大度的人，不是笨，就是坏。\n21、不要与最好的朋友做合伙人，友谊永远敌不过利益，就怕朋友都无得做。\n22、多愁善感的人，发不了大财。\n23、有钱，把事做好，没钱，把人做好。把人做好了，钱也就自然来了。\n24、出来混，一定要胆子大。清华北大不如胆子大。\n25、真正厉害的人，往往是大智若愚，常常是扮猪吃老虎。\n26、和领导打牌，只赢开盘一局和收盘一局。\n27、靠体力挣钱，就老实一点；靠脑力挣钱，就机灵一点；靠资源挣钱，就圆滑一点；靠钱去赚钱，就狠一点。\n28、一流的人才，从政；二流的人才,从商；三流的人才，适合做高级打工仔。",
+          "channel": "@text1024",
+          "time": "08:26",
+          "url": "https://t.me/text1024/25964",
+          "links": [
+            {
+              "href": "https://t.me/text1024/25964",
+              "label": "富人秘而不宣的潜规则:"
+            },
+            {
+              "href": "https://t.me/text1024/25964",
+              "label": "查看原文"
+            }
+          ],
+          "id": "text1024-25964",
+          "message_id": "25964",
+          "channel_name": "副业赚钱探索指南",
+          "channel_url": "https://t.me/text1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "🐶 **Google 开源 TorchTPU，挑战 NVIDIA AI 生态主导地位**",
+          "summary": "🐶 **Google 开源 TorchTPU，挑战 NVIDIA AI 生态主导地位**\n\nGoogle Cloud 宣布与 Meta 的 PyTorch 团队共同开发的 TorchTPU 已在 GitHub 开源，TPU 由此成为与 GPU、CPU 并列的 PyTorch 原生选项，现有代码几乎无需改动即可运行。\n\nvLLM、SGLang、llm-d、TorchTitan 等框架已接入，Hugging Face Transformers v5 可直接把模型部署到 TPU。\n\nGoogle Cloud\n\n🌸 科技圈· 茶馆 · 投稿",
+          "channel": "@zaihuapd",
+          "time": "08:47",
+          "url": "https://t.me/zaihuapd/44577",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/44577",
+              "label": "🐶 **Google 开源 TorchTPU，挑战 NVIDIA AI 生态主导地位**"
+            },
+            {
+              "href": "https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus",
+              "label": "Google Cloud"
+            },
+            {
+              "href": "https://t.me/zaihuapd/44577",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44577-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44577-1-thumb.webp",
+              "width": 1280,
+              "height": 630,
+              "size_bytes": 27978
+            }
+          ],
+          "id": "zaihuapd-44577",
+          "message_id": "44577",
+          "channel_name": "在花🎗️科技圈",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 21,
+          "replies_fetched": 21,
+          "replies_visible": 18,
+          "replies_filtered": 3,
+          "replies_path": "dashboard-data/lazy/tg-replies/2026-10-22/44577-1d4150738eee.json"
+        },
+        {
+          "title": "最近代码视频这么火，我在学习原理时，发现一个解析代码动效原理的网站：https://codemotion.cc。",
+          "summary": "最近代码视频这么火，我在学习原理时，发现一个解析代码动效原理的网站：https://codemotion.cc。\n网站把不同技术整理成了卡片，配上演示视频、实现思路和 Skill 介绍，\n看完才发现，文字跳动、3D 动画这些效果，背后可以用 Remotion、SVG、Three.js、FFmpeg 技术实现的\n可以边看效果边了解，找到适合自己的工具。想直接做出成品，也有定制视频和动效 Skill 的咨询入口。",
+          "channel": "@aigc1024",
+          "time": "09:01",
+          "url": "https://t.me/aigc1024/26086",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26086",
+              "label": "最近代码视频这么火，我在学习原理时，发现一个解析代码动效原理的网站：https://codemotion.cc。"
+            },
+            {
+              "href": "https://t.me/aigc1024/26086",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26086-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26086-1-thumb.webp",
+              "width": 2048,
+              "height": 1179,
+              "size_bytes": 77978
+            }
+          ],
+          "id": "aigc1024-26086",
+          "message_id": "26086",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "做出海，IP 纯净很重要，分享下我的经验，高质量 静态住宅IP。",
+          "summary": "做出海，IP 纯净很重要，分享下我的经验，高质量 静态住宅IP。\n1、降低国外app的封号概率，如reddit、claude、tk；\n2、IP干净，AI产品不容易被降智；\n3、解决风控严格的支付问；\n4、跨境电商、直播等限制IP的场景，放心用Netflix等流媒体;\n5、币圈撸毛…。\n推荐几个双 ISP 住宅 IP 及使用👇",
+          "channel": "@yunying23",
+          "time": "09:17",
+          "url": "https://t.me/yunying23/12256",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/12256",
+              "label": "做出海，IP 纯净很重要，分享下我的经验，高质量 静态住宅IP。"
+            },
+            {
+              "href": "https://t.me/yunying23/12256",
+              "label": "查看原文"
+            }
+          ],
+          "id": "yunying23-12256",
+          "message_id": "12256",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "🤖 **OpenAI API 推出 12 小时提示缓存**",
+          "summary": "🤖 **OpenAI API 推出 12 小时提示缓存**\n\nOpenAI 在连续 28 天更新的第 16 天更新：OpenAI 宣布 API 现已支持 12 小时提示缓存（prompt caching）。持久化智能体（如 dots）可在全天复用共享指令、工具和上下文，即使请求间隔数小时，仍可按较低的缓存输入费率计费。\n\n此外，Codex 与 Work 的登录用户可享永久缓存，回到旧对话或暂停数小时后继续无需任何惩罚，且保证命中缓存。\n\nOpenAI Developers(@OpenAIDevs) | Tibo(@thsottiaux)\n\n🌸 科技圈· 茶馆 · 投稿",
+          "channel": "@zaihuapd",
+          "time": "09:21",
+          "url": "https://t.me/zaihuapd/44579",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/44579",
+              "label": "🤖 **OpenAI API 推出 12 小时提示缓存**"
+            },
+            {
+              "href": "https://t.me/zaihuapd/44214",
+              "label": "连续 28 天更新"
+            },
+            {
+              "href": "https://x.com/OpenAIDevs/status/2112603916076781778",
+              "label": "OpenAI Developers(@OpenAIDevs)"
+            },
+            {
+              "href": "https://x.com/thsottiaux/status/2112712984644784534",
+              "label": "Tibo(@thsottiaux)"
+            },
+            {
+              "href": "https://t.me/zaihuapd/44579",
+              "label": "查看原文"
+            }
+          ],
+          "id": "zaihuapd-44579",
+          "message_id": "44579",
+          "channel_name": "在花🎗️科技圈",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 73,
+          "replies_fetched": 73,
+          "replies_visible": 70,
+          "replies_filtered": 3,
+          "replies_path": "dashboard-data/lazy/tg-replies/2026-10-22/44579-49d3edbecfe0.json"
+        },
+        {
+          "title": "论品牌营销，还是欧美人会玩。",
+          "summary": "论品牌营销，还是欧美人会玩。\n像耳塞这种平平无奇的消费品，居然被两个比利时年轻人玩成一家上亿美金的小独角兽。\n仔细拆解了这家叫做LoopEarplugs的品牌，它们的成功其实主要得益于3个策略：\n1. 抓对基本盘：爱蹦迪的年轻人+高颜值设计感，是耳塞行业的唯一增量。\n2. 补上产品力：靠颜值出圈撑不了多久。研发跟上才能继续留在牌桌。\n3. 不抗拒渠道: 做品牌不代表固收独立站。只要完成从0到1，线下商超只会是锦上添花。\n所有标品，都值得用非标品的玩法，重做一遍。\n\n自媒体/出海经验/赚美金/运营技巧",
+          "channel": "@inside1024",
+          "time": "10:12",
+          "url": "https://t.me/inside1024/87892",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87892",
+              "label": "论品牌营销，还是欧美人会玩。"
+            },
+            {
+              "href": "https://t.me/inside1024/87892",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87892-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87892-1-thumb.webp",
+              "width": 1043,
+              "height": 1440,
+              "size_bytes": 57206
+            }
+          ],
+          "id": "inside1024-87892",
+          "message_id": "87892",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "无论隐私和限速策略，opencode和workbuddy能拿出这么多免费quota给刚接触AI Agent的学生，让学生群体不用花很多钱也能用上次旗舰水平的模型来学习和工作，我认为这就是最大的善，这就是开粥厂，这就是菩萨心肠，这就是共产主义初级阶段。",
+          "channel": "@aigc1024",
+          "time": "10:24",
+          "url": "https://t.me/aigc1024/26088",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26088",
+              "label": "无论隐私和限速策略，opencode和workbuddy能拿出这么多免费quota给刚接触AI Agent的学生，让学生群体不用花很多钱也能用上次旗舰水平的模型来学习和工作，我认为这就是最大的善，这就是开粥厂，这就是菩萨心肠，这就是共产主义初级阶段。"
+            },
+            {
+              "href": "https://t.me/aigc1024/26088",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-26088",
+          "message_id": "26088",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "summary": "无论隐私和限速策略，opencode和workbuddy能拿出这么多免费quota给刚接触AI Agent的学生，让学生群体不用花很多钱也能用上次旗舰水平的模型来学习和工作，我认为这就是最大的善，这就是开粥厂，这就是菩萨心肠，这就是共产主义初级阶段。",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "人干啥都有代价，不信你听",
+          "summary": "人干啥都有代价，不信你听\n我说，\n第一，干演员，女的多数都有潜规则，\n没有的都是跑龙套啥的，\n不管漂不漂亮，\n男的要么一身伤痛，\n要么你懂人情世故，圆滑送礼，否则很难出头，\n因果非常重，能不做就不做，做了就没有回头路了，如果觉悟立马停掉去行善。\n第二，KTv，足疗店，舞蹈生，\n赚钱快花的也快，金银珠宝留不住，\n最后找老实人接盘，最后要是没人接。晚年不好过，\n第三，坐着的手工活，年轻啥事没有，\n到老了因为不活动，做的年份久\n腰疼腿疼静脉曲张肩周炎必事找上门，\n不管男女都一样，\n第三，出大力气的，工地建筑搬运。钢铁。手艺等虽然赚钱，\n但是都是拿命换钱，\n拿身体为投资的，\n第四。开大车司机，外卖员长期腰疼。便秘。\n三餐不规律。胃受不了，胃会出现不舒服，\n第五，月子病。十女九妇科全部烙下月子病，有轻有重，只是无人去提，\n第六扫大街，喷雾不要看这份工作安全。其实吸入灰尘对肺不好。\n第六，教师，公务员，医生。老板，\n三大金饭碗，身体健康状况，有利有弊。他们站一天，坐一天\n天天熬熬一天，也不容易，只是比普通人好很多，\n第七下海捕鱼，湿气重。\n第八。服务生之类的\n把时间卖给别人工资也不高。\n第九摆地摊风水日晒非常不好。\n太多了写不完，不如自己创业\n没份工作不容易。值的尊敬。",
+          "channel": "@inside1024",
+          "time": "10:24",
+          "url": "https://t.me/inside1024/87896",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87896",
+              "label": "人干啥都有代价，不信你听"
+            },
+            {
+              "href": "https://t.me/inside1024/87896",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87896-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87896-1-thumb.webp",
+              "width": 1280,
+              "height": 1919,
+              "size_bytes": 260060
+            }
+          ],
+          "id": "inside1024-87896",
+          "message_id": "87896",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "突发感悟，AI幻觉真的不可接受吗？",
+          "summary": "突发感悟，AI幻觉真的不可接受吗？\n有些人自己都靠不住，胡言乱语，胡说八道，胡编乱造。\n人类却想让AI成为一个只说对的智能产物。\nAI幻觉恰恰让人需要保持鉴别筛选的能力，需要时刻警惕。",
+          "channel": "@aigc1024",
+          "time": "11:21",
+          "url": "https://t.me/aigc1024/26089",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26089",
+              "label": "突发感悟，AI幻觉真的不可接受吗？"
+            },
+            {
+              "href": "https://t.me/aigc1024/26089",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-26089",
+          "message_id": "26089",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "有位开发者在学《新概念英语》时，想练听力和跟读，却发现音频得另外找，想精确跳到某一句更是麻烦，节奏被频繁打断，效率很低。",
+          "summary": "于是他做了一个开源工具：NCE Flow，把《新概念英语》四册做成可在线点读的学习系统，把“找音频、对句子、来回拖进度条”这些事一次性解决。\n你可以点任意一句立刻播放对应音频，播放时自动高亮跟随；支持中英对照、纯英文、纯中文三种显示模式，按你的学习习惯自由切换。\nGitHub：https://github.com/luzhenhua/NCE-Flow\n在线使用：https://nce.luzhenhua.cn/\n主要功能：\n- 句子级精准点读：点哪句听哪句，定位不费劲\n- 三种显示模式：中英对照 / 纯英文 / 纯中文\n- 倍速与连读：按自己的节奏听、跟、练\n- 进度追踪与收藏：学习状态清晰，复习更省心\n- Apple 风格界面：支持深色/浅色主切换\n四册内容齐全，可用 Docker 自部署，也可直接访问在线站点，打开就能学。",
+          "channel": "@chunse1024",
+          "time": "11:43",
+          "url": "https://t.me/chunse1024/12101",
+          "links": [
+            {
+              "href": "https://t.me/chunse1024/12101",
+              "label": "有位开发者在学《新概念英语》时，想练听力和跟读，却发现音频得另外找，想精确跳到某一句更是麻烦，节奏被频繁打断，效率很低。"
+            },
+            {
+              "href": "https://t.me/chunse1024/12101",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/chunse1024-12101-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/chunse1024-12101-1-thumb.webp",
+              "width": 1239,
+              "height": 1277,
+              "size_bytes": 48374
+            }
+          ],
+          "id": "chunse1024-12101",
+          "message_id": "12101",
+          "channel_name": "优质信息收藏夹",
+          "channel_url": "https://t.me/chunse1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "毕业十年第一次遇到裁员，领了大礼包gap两个月多之后终于上岸了，人到中年真的好难（33岁）。",
+          "summary": "毕业十年第一次遇到裁员，领了大礼包gap两个月多之后终于上岸了，人到中年真的好难（33岁）。\n\n这两个月啥都没干一门心思投简历，准备面试，面试，面了12家公司，经历三十多场面试，平均每场1小时。\n\n中间经历了四次希望的幻灭，第一家某新势力车厂提交流水没消息，第二家某AI公司谈薪完没消息，第三家某智驾供应商三面通过后约HR一直约不上不了了之，还有一家国企终面一直约不上不了了之。\n\n其中的酸甜苦辣，令人常常陷入自我怀疑，不过也是一个很好的契机，逼迫自己静下心来想想对未来的规划，这次职业危机过了之后，三五年之后的下次，才是真正的大坎，常常问问自己，是否做好了充足的准备迎接未来。",
+          "channel": "@inside1024",
+          "time": "11:47",
+          "url": "https://t.me/inside1024/87899",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87899",
+              "label": "毕业十年第一次遇到裁员，领了大礼包gap两个月多之后终于上岸了，人到中年真的好难（33岁）。"
+            },
+            {
+              "href": "https://t.me/inside1024/87899",
+              "label": "查看原文"
+            }
+          ],
+          "id": "inside1024-87899",
+          "message_id": "87899",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "推荐一篇论文：https://arxiv.org/pdf/2606.04308",
+          "summary": "推荐一篇论文：https://arxiv.org/pdf/2606.04308\n论文中针对阅读提出了一个非常有意思的取景框架。\n我们一直有「六经注我」 vs 「我注六经」的分类，可以理解为「以读者为中心」 vs 「以作者为中心」。\n现在有了 AI，会带来什么变化？\n这论文加了一个维度：「AI 替我读」vs「AI 陪我读」。\n两者一结合，就出现了四象限。可以把当下的 AI 工具和应用场景放置其中进行分析。\n针对「AI 陪我读」这个有意思的，又给了三个工具：\n第一类是跑鞋型。跑鞋不改变你跑步的方式，它减少脚和地面之间的摩擦，让你跑同样的路更省力。对应到阅读，就是让你用同样的方式读，但读得更顺。术语弹窗让你不必中断去查词典，高亮系统替你标出哪些段落值得细读、哪些可以略过，自动排版让长文档更容易扫视。你还是在读，读的动作没有变，只是路面变平了。\n第二类是哑铃型。哑铃的作用不是让你省力，恰恰相反，它故意给你加负重，目的是让你变强。对应到阅读，就是在阅读过程中设置有益的阻力。比如读完一段之后要求你用自己的复述，再往下翻之前先让你预测作者接下来会说什么，或者定期抛出问检验你是否真的理解了而不只是眼睛扫过去了。这些动作会让阅读变慢，但慢下来的那部分恰好是理解发生的地方。\n第三类是滑雪板型。滑雪板不是让你走路更快，也不是让你腿更有力，它让你做到一件走路根本做不到的事——在雪上滑行。对应到阅读，就是让你和文本之间产生以前不可能的交互方式。把一篇论文的段落拖到二维空间里重新排列，让两篇论文的论证链条并排对照，在阅读痕迹上回溯自己三个月前读同一篇时关注了什么、现在关注了什么。这些不是「读得更快」或「理解得更深」，而是一种全新的阅读动作。\n有了这个框架，就像是拥有了一张地图。针对自己的需求，可以在对应的象限中寻找解法。",
+          "channel": "@aigc1024",
+          "time": "12:06",
+          "url": "https://t.me/aigc1024/26090",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26090",
+              "label": "推荐一篇论文：https://arxiv.org/pdf/2606.04308"
+            },
+            {
+              "href": "https://t.me/aigc1024/26090",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26090-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26090-1-thumb.webp",
+              "width": 1420,
+              "height": 700,
+              "size_bytes": 49994
+            }
+          ],
+          "id": "aigc1024-26090",
+          "message_id": "26090",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "最近沉迷于在上海“寻找湾区式生态”。我发现，从漕河泾科技绿洲，到红杉北杨加速器，这一带，上下 8 公里路途，非拥堵时段开车15 分钟车程，有那么一刻，你可以“假装在湾区”。",
+          "summary": "最近沉迷于在上海“寻找湾区式生态”。我发现，从漕河泾科技绿洲，到红杉北杨加速器，这一带，上下 8 公里路途，非拥堵时段开车15 分钟车程，有那么一刻，你可以“假装在湾区”。\n再叠加上 徐汇西岸\n这一片区，\n散落着（欢迎纠正，补充）：\n北杨人工智能小镇\n模速空间\n复旦发起的上智院\nMinimax\n阶跃星辰\n奇绩创坛上海\nAGI Bar（上海）\n红杉北杨加速器\n陆奇挂帅的创智学院\n港科大上海\n商汤\n李所（李政道研究所）\n临港国家实验室漕河泾\n字节上海\n商汤\n超脑 AI\n腾讯华东\nAI Lab\n齐俊元的 Today AI\n十字路口 Koji 的 AI Hacker House\n…\n这份名单，还可以加上米哈游，莉莉丝…\n偶尔，会听到所谓的交大系，复旦系，中科大系，南大系，浙大系，上科大系…\n但更多时候，看到的是热火朝天的上海 AI “新黄金一代”。\n此时此刻，\n谁正在思考 Personal Agent 的今日战场？\n谁在推演 AI4S 的应用场景？\n谁在卷具身？\n谁又在思考 AI for fun？\n谁在组队，谁在突围，谁又在单骑攻击？\n这里是群星闪耀，\n是“每个人都在创造”的“新黄金一代。",
+          "channel": "@aigc1024",
+          "time": "12:06",
+          "url": "https://t.me/aigc1024/26091",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26091",
+              "label": "最近沉迷于在上海“寻找湾区式生态”。我发现，从漕河泾科技绿洲，到红杉北杨加速器，这一带，上下 8 公里路途，非拥堵时段开车15 分钟车程，有那么一刻，你可以“假装在湾区”。"
+            },
+            {
+              "href": "https://t.me/aigc1024/26091",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-26091",
+          "message_id": "26091",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "现在高校的钱到头了。高校一向靠发论文，工程化是不行，东西都是学生做的。",
+          "summary": "现在高校的钱到头了。高校一向靠发论文，工程化是不行，东西都是学生做的。\n现在科技战形式下，国家注重转化，而且这些年，新能源，电动汽车，半导体产业实绩为真，国家把大量经费投给行业部委，而非基金委。而行业部委项目，主要是企业院所，高校很难主报（毕竟有工程化要求）。所以高校经费越来越只依赖基金委，经费有上限。现在很多高校其实钱紧。\n有人说高校可以鼓励大家拿横向，横向和纵向玩法不一样，精力投向和交付件完全是两种模式。可是学校帽子和位置都给了玩纵向，当蚁后了。横向会安心做工蚁吗？\n从最近AI的进展来看，大学没必要呆了，之后科研玩不过大企业和大院所！\nAI最近解决了数学干禧年问，将来数学要工业化了。在AI搞定了数学之后，他会把黑手伸向其他学科。\n之后，\n科研都会工业化，个人英雄主义时代结束了。\n这个企业和院所适合干这个，有资金投入算力，因为他们天然适合干工程化的事情。高校不适合，因为都是小作坊，东西靠学生做，算力也穷囧。\n之后科研主力会转向大企业，将来会出面基础科研应用科研与工程化一条龙的企业，科研工业化时代来临了。\n现在AI几年就大变化，比大家预想的快。大家不要去高校了，可能论文时代要落寞了。要么论文海量化没有逼格，要么有实机指标去替代，反正不是高校擅长。",
+          "channel": "@aigc1024",
+          "time": "12:26",
+          "url": "https://t.me/aigc1024/26092",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26092",
+              "label": "现在高校的钱到头了。高校一向靠发论文，工程化是不行，东西都是学生做的。"
+            },
+            {
+              "href": "https://t.me/aigc1024/26092",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-26092",
+          "message_id": "26092",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "AI对大学最大最直接的的冲击，是对大量高教系统里的中小学阀派系的毁灭，这些中小学阀派系基本是没有科研能力的，全靠派系关系拿资源忽悠点小钱混日子。AI基本可以替代这些人和事。至于大学阀派系，暂时没有办法毕竟AI是没有政治资源的。",
+          "channel": "@aigc1024",
+          "time": "12:36",
+          "url": "https://t.me/aigc1024/26093",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26093",
+              "label": "AI对大学最大最直接的的冲击，是对大量高教系统里的中小学阀派系的毁灭，这些中小学阀派系基本是没有科研能力的，全靠派系关系拿资源忽悠点小钱混日子。AI基本可以替代这些人和事。至于大学阀派系，暂时没有办法毕竟AI是没有政治资源的。"
+            },
+            {
+              "href": "https://t.me/aigc1024/26093",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-26093",
+          "message_id": "26093",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "summary": "AI对大学最大最直接的的冲击，是对大量高教系统里的中小学阀派系的毁灭，这些中小学阀派系基本是没有科研能力的，全靠派系关系拿资源忽悠点小钱混日子。AI基本可以替代这些人和事。至于大学阀派系，暂时没有办法毕竟AI是没有政治资源的。",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "**AMD FSR 4.1 扩展支持 RX 6000 显卡和 XBOX，并将支持 Vulkan API**",
+          "summary": "**AMD FSR 4.1 扩展支持 RX 6000 显卡和 XBOX，并将支持 Vulkan API**\n\nAMD 将 FSR Upscaling 4.1 扩展至 RX 6000 系列显卡、Ryzen AI Max 处理器、Ryzen AI 9 笔记本及 Z2 Extreme 等掌机，Xbox Series X|S 即将支持。\n\n该功能随 Adrenalin 26.10.1 驱动发布，画质较 FSR 3.1 明显提升。FSR 4 于 2025 年首发时仅支持 RX 9000 系列，2026 年 7 月扩展至 RX 7000 系列。\n\nAdvanced Micro Devices, Inc.\n\n🌸 科技圈· 茶馆 · 投稿",
+          "channel": "@zaihuapd",
+          "time": "12:40",
+          "url": "https://t.me/zaihuapd/44585",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/44585",
+              "label": "**AMD FSR 4.1 扩展支持 RX 6000 显卡和 XBOX，并将支持 Vulkan API**"
+            },
+            {
+              "href": "https://newsroom.amd.com/news/amd-fsr-upscaling-4-1-boosts-frames-image-quality/",
+              "label": "Advanced Micro Devices, Inc."
+            },
+            {
+              "href": "https://t.me/zaihuapd/44585",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44585-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44585-1-thumb.webp",
+              "width": 1024,
+              "height": 576,
+              "size_bytes": 23148
+            }
+          ],
+          "id": "zaihuapd-44585",
+          "message_id": "44585",
+          "channel_name": "在花🎗️科技圈",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 13,
+          "replies_fetched": 13,
+          "replies_visible": 12,
+          "replies_filtered": 1,
+          "replies_path": "dashboard-data/lazy/tg-replies/2026-10-22/44585-f6855fdd59b5.json"
+        },
+        {
+          "title": "大数据反诈之路 学习了🤡",
+          "summary": "大数据反诈之路 学习了🤡\n现在还有AI加持 手段不断升级\n大家需要擦亮眼睛了",
+          "channel": "@chunse1024",
+          "time": "12:42",
+          "url": "https://t.me/chunse1024/12103",
+          "links": [
+            {
+              "href": "https://t.me/chunse1024/12103",
+              "label": "大数据反诈之路 学习了🤡"
+            },
+            {
+              "href": "https://t.me/chunse1024/12103",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/chunse1024-12103-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/chunse1024-12103-1-thumb.webp",
+              "width": 1199,
+              "height": 663,
+              "size_bytes": 108816
+            }
+          ],
+          "id": "chunse1024-12103",
+          "message_id": "12103",
+          "channel_name": "优质信息收藏夹",
+          "channel_url": "https://t.me/chunse1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "我觉得能随心所欲帮助用户抢到陈奕迅巡演最后三场的门票的，就是personal agent的王者。",
+          "channel": "@aigc1024",
+          "time": "13:26",
+          "url": "https://t.me/aigc1024/26094",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26094",
+              "label": "我觉得能随心所欲帮助用户抢到陈奕迅巡演最后三场的门票的，就是personal agent的王者。"
+            },
+            {
+              "href": "https://t.me/aigc1024/26094",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-26094",
+          "message_id": "26094",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "杭州商K这一严打，当地K姐直接分成了三波。",
+          "summary": "杭州商K这一严打，当地K姐直接分成了三波。\n第一波，赚到钱的，直接留学出国。\n第二波，没赚到钱的，变卖名牌包、首饰这些礼物变现。\n第三波，流窜到普通婚恋市场，找人接盘。\n当这些女生出现在婚恋市场，普通女生很难跟她们竞争。\n她们有颜值，擅长提供情绪价值，还会包装身份，真假很难分辨。\n想正经找结婚对象的男生，一定要做好核验：\n1，学历\n2，社保、公积金、个税记录\n3，工作证明",
+          "channel": "@inside1024",
+          "time": "13:39",
+          "url": "https://t.me/inside1024/87911",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87911",
+              "label": "杭州商K这一严打，当地K姐直接分成了三波。"
+            },
+            {
+              "href": "https://t.me/inside1024/87911",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87911-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87911-1-thumb.webp",
+              "width": 1280,
+              "height": 1919,
+              "size_bytes": 378386
+            }
+          ],
+          "id": "inside1024-87911",
+          "message_id": "87911",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "为什么很多罪犯说现在的牢越来越难坐了？",
+          "summary": "为什么很多罪犯说现在的牢越来越难坐了？\n很简单，因为监狱有钱了。\n30年前的时候，大多数地方监狱还是自负盈亏的。囚犯对狱警来说，那就不是犯人，普通囚犯是员工，有钱的囚犯是客户，狱警们可就指望他们吃饭了，所以面子多多少少还是要给一点的。\n在2000年前后，监狱的主要任务首先是赚钱，其次才是改造，赚到钱的月底就有工资发，赚不到就饿着。\n当时但凡犯人有一技之长，比如力气大、会修车、水电、焊接之类的技能，在监狱里都是很自由的。有钱的囚犯就更爽了，只要给钱，什么样的方便之门都能开，甚至都不只是监狱内要靠犯人吃饭，监狱周边的镇子都靠犯人撑着，很多地方甚至专门设置了监狱罪犯消费权保护中心，并以此刺激监狱里的“有钱人”多花钱多消费。\n大概在2010年左右，因为土地财政的缘故，地方财政资金充裕了，国家也建立了监狱经费全额保障机制，从此监狱收支分离，狱警工资由国家托底，那你犯人都没用了，自然就没人卖你面子了",
+          "channel": "@inside1024",
+          "time": "14:09",
+          "url": "https://t.me/inside1024/87915",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87915",
+              "label": "为什么很多罪犯说现在的牢越来越难坐了？"
+            },
+            {
+              "href": "https://t.me/inside1024/87915",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87915-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87915-1-thumb.webp",
+              "width": 1280,
+              "height": 851,
+              "size_bytes": 60274
+            }
+          ],
+          "id": "inside1024-87915",
+          "message_id": "87915",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "之前在微博上看到，一个博主的关于人生的经验分享，记录到自己笔记，找不到原始出处了。最近也在思考和决策很多问，自省。",
+          "channel": "@inside1024",
+          "time": "14:22",
+          "url": "https://t.me/inside1024/87917",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87917",
+              "label": "之前在微博上看到，一个博主的关于人生的经验分享，记录到自己笔记，找不到原始出处了。最近也在思考和决策很多问，自省。"
+            },
+            {
+              "href": "https://t.me/inside1024/87917",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87917-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87917-1-thumb.webp",
+              "width": 946,
+              "height": 2048,
+              "size_bytes": 133348
+            }
+          ],
+          "id": "inside1024-87917",
+          "message_id": "87917",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "summary": "之前在微博上看到，一个博主的关于人生的经验分享，记录到自己笔记，找不到原始出处了。最近也在思考和决策很多问，自省。",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "**Uber 用 AI 自动清理技术债，已删逾 16000 个过期 feature flag**",
+          "summary": "**Uber 用 AI 自动清理技术债，已删逾 16000 个过期 feature flag**\n\nUber 发布博客，介绍其 AI 系统 AutoClean 如何自动清理生产代码中过期的 feature flag（功能开关）等遗留技术债。过去几年该系统已清理超过 16000 个 flag 和 100 多万行代码。\n\nAutoClean 在 Uber 的多个 monorepo 中持续运行，流程分三步：先用 AI agent 结合确定性代码变换工具 PolyglotPiranha 重写代码，再修复 CI 失败并反复验证，最后经静态检查和多 agent 校验系统 CodeCourt 审核后才交由人类工程师最终评审。这样评审者只需判断是否该移除某个 flag，不必检查机械性的正确性问题。\n\nUber\n\n🌸 科技圈· 茶馆 · 投稿",
+          "channel": "@zaihuapd",
+          "time": "14:45",
+          "url": "https://t.me/zaihuapd/44588",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/44588",
+              "label": "**Uber 用 AI 自动清理技术债，已删逾 16000 个过期 feature flag**"
+            },
+            {
+              "href": "https://www.uber.com/us/en/blog/ai-code-cleanup/",
+              "label": "Uber"
+            },
+            {
+              "href": "https://t.me/zaihuapd/44588",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44588-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44588-1-thumb.webp",
+              "width": 2048,
+              "height": 1116,
+              "size_bytes": 384022
+            }
+          ],
+          "id": "zaihuapd-44588",
+          "message_id": "44588",
+          "channel_name": "在花🎗️科技圈",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 17,
+          "replies_fetched": 17,
+          "replies_visible": 14,
+          "replies_filtered": 3,
+          "replies_path": "dashboard-data/lazy/tg-replies/2026-10-22/44588-4f83064794b5.json"
+        },
+        {
+          "title": "我已经爬了全世界所有大学、研究院、机构的所有教授研究员postdoc等等faculty名单，包括本科、硕士、博士学位，并且将公布第一版本的college rank全球大学榜单。",
+          "summary": "我已经爬了全世界所有大学、研究院、机构的所有教授研究员postdoc等等faculty名单，包括本科、硕士、博士学位，并且将公布第一版本的college rank全球大学榜单。\n这个榜单原则非常简单：如果A是从X大学PhD毕业，并且拿到了Y大学教职，那么证明Y大学认可X大学博士毕业生的重要性。\n在这个全球job market市场里，这个排名的方法跟第一个版本的google PageRank算法完全一样，只要加权重要度即可。\n这样全世界的大学很容易按照这个非常sparse的matrix计算权重之和来计算，当然本科、master、phd、postdoc权重比例各不相同，但大原则是一样的：\n如果X学校的毕业生更容易去Y大学当教授，而Y大学毕业生很难去X大学当教授，那么X大学一定比Y大学好。\n另外我还会加权头部顶级学术奖项，包括数学三大奖、诺贝尔奖、图灵奖、IEEE最有含金量的三大奖（IEEE Medal of Honor、IEEE Edison Medal、IEEE Milestone）进行额外加分。\n我相信，这是人类有史以来最有含金量的大学排名。",
+          "channel": "@inside1024",
+          "time": "14:52",
+          "url": "https://t.me/inside1024/87923",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87923",
+              "label": "我已经爬了全世界所有大学、研究院、机构的所有教授研究员postdoc等等faculty名单，包括本科、硕士、博士学位，并且将公布第一版本的college rank全球大学榜单。"
+            },
+            {
+              "href": "https://t.me/inside1024/87923",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87923-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87923-1-thumb.webp",
+              "width": 1280,
+              "height": 853,
+              "size_bytes": 168518
+            }
+          ],
+          "id": "inside1024-87923",
+          "message_id": "87923",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "读投资书最怕一上来就啃《证券分析》，翻三页就困。",
+          "summary": "读投资书最怕一上来就啃《证券分析》，翻三页就困。\n顺序反了。入门先看《小狗钱钱》《富爸爸穷爸爸》，进阶看《指数基金投资指南》《投资最重要的事》，高阶再上《聪明的投资者》《穷查理宝典》。\n「最全赚钱投资指南（含初级、中级、高级）」\n🔗：https://pan.nameishare.com/55b9fbf8e861",
+          "channel": "@yunying23",
+          "time": "15:02",
+          "url": "https://t.me/yunying23/12262",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/12262",
+              "label": "读投资书最怕一上来就啃《证券分析》，翻三页就困。"
+            },
+            {
+              "href": "https://t.me/yunying23/12262",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/yunying23-12262-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/yunying23-12262-1-thumb.webp",
+              "width": 727,
+              "height": 1200,
+              "size_bytes": 50308
+            }
+          ],
+          "id": "yunying23-12262",
+          "message_id": "12262",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "读投资书最怕一上来就啃《证券分析》，翻三页就困。",
+          "summary": "读投资书最怕一上来就啃《证券分析》，翻三页就困。\n顺序反了。入门先看《小狗钱钱》《富爸爸穷爸爸》，进阶看《指数基金投资指南》《投资最重要的事》，高阶再上《聪明的投资者》《穷查理宝典》。\n「最全赚钱投资指南（含初级、中级、高级）」\n🔗：https://pan.nameishare.com/55b9fbf8e861",
+          "channel": "@text1024",
+          "time": "15:02",
+          "url": "https://t.me/text1024/25972",
+          "links": [
+            {
+              "href": "https://t.me/text1024/25972",
+              "label": "读投资书最怕一上来就啃《证券分析》，翻三页就困。"
+            },
+            {
+              "href": "https://t.me/text1024/25972",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/text1024-25972-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/text1024-25972-1-thumb.webp",
+              "width": 727,
+              "height": 1200,
+              "size_bytes": 50308
+            }
+          ],
+          "id": "text1024-25972",
+          "message_id": "25972",
+          "channel_name": "副业赚钱探索指南",
+          "channel_url": "https://t.me/text1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "Google 一口气发布三款模型",
+          "summary": "Google 一口气发布三款模型\n但是没有 Gemini 3.5 Pro\n三款新模型：Gemini 3.6 Flash、3.5 Flash-Lite 和专攻网络安全的 3.5 Flash Cyber\n版本号现在很诡异...\nGemini 3.6 Flash：最大亮点（极致省 Token）：比上一代 3.5 Flash 节省了约 17% 的输出 Token（部分编程场景甚至少用 65% 的 Token）\n价格：输入 $1.50 / 百万 Token，输出 $7.50 / 百万 Token。\n能力提升：\n代码与科研：写代码准确度更高，减少了无效修改和死循环\n电脑操作能力（Computer Use）：提升至 83% 的成功率，且直接内置为 Gemini API 和企业版的客户端工具\n更安全：加强了防越狱和防滥用（如生物、化学、网络攻击等风险）的安全机制，同时减少了正常使用时的误拒",
+          "channel": "@chunse1024",
+          "time": "15:06",
+          "url": "https://t.me/chunse1024/12107",
+          "links": [
+            {
+              "href": "https://t.me/chunse1024/12107",
+              "label": "Google 一口气发布三款模型"
+            },
+            {
+              "href": "https://t.me/chunse1024/12107",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "video",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/chunse1024-12107-1.mp4",
+              "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/chunse1024-12107-1-poster.webp",
+              "fallback_url": "https://t.me/chunse1024/12107",
+              "width": 0,
+              "height": 0,
+              "duration": 0,
+              "size_bytes": 3475127,
+              "has_audio": true
+            }
+          ],
+          "id": "chunse1024-12107",
+          "message_id": "12107",
+          "channel_name": "优质信息收藏夹",
+          "channel_url": "https://t.me/chunse1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "**草台：eMudhra 证书私钥过于简单，可被穷举还原，各大浏览器紧急停止信任**",
+          "summary": "**草台：eMudhra 证书私钥过于简单，可被穷举还原，各大浏览器紧急停止信任**\n\n印度证书机构 eMudhra 的 8 张中间证书私钥随机性极弱，只有 256 种可能，几秒即可穷举还原。攻击者可借此冒充该机构，为任意网站签发看起来合法的 HTTPS 证书，用于伪造网站或窃取用户数据。其中 6 张能签网站证书，2 张能签代码签名证书。\n\nMozilla 在 10 月 17 日收到报告后，3 小时内向所有 Firefox 用户自动推送封锁，无需重启；Google 同日屏蔽受影响的公钥，并计划在 10 月 27 日移除相关根证书。Apple、Microsoft 也在跟进。\n\nMozilla Security | Google | 2083449\n\n🌸 科技圈· 茶馆 · 投稿",
+          "channel": "@zaihuapd",
+          "time": "16:15",
+          "url": "https://t.me/zaihuapd/44590",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/44590",
+              "label": "**草台：eMudhra 证书私钥过于简单，可被穷举还原，各大浏览器紧急停止信任**"
+            },
+            {
+              "href": "https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates",
+              "label": "Mozilla Security"
+            },
+            {
+              "href": "https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/",
+              "label": "Google"
+            },
+            {
+              "href": "https://bugzilla.mozilla.org/show_bug.cgi?id=2083449",
+              "label": "2083449"
+            },
+            {
+              "href": "https://t.me/zaihuapd/44590",
+              "label": "查看原文"
+            }
+          ],
+          "id": "zaihuapd-44590",
+          "message_id": "44590",
+          "channel_name": "在花🎗️科技圈",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 41,
+          "replies_fetched": 41,
+          "replies_visible": 33,
+          "replies_filtered": 8,
+          "replies_path": "dashboard-data/lazy/tg-replies/2026-10-22/44590-8a9ab5b325aa.json"
+        },
+        {
+          "title": "百度网盘：https://pan.baidu.com/s/180UEPjfKUZsa4z7DDBdF5A?pwd=3a68",
+          "summary": "【独家】AI头条新玩法，写电视剧评赛道，一篇10分钟，收益可观，小白轻松日入500+\n\n百度网盘：https://pan.baidu.com/s/180UEPjfKUZsa4z7DDBdF5A?pwd=3a68\n提取码：3a68\n\nhttps://fuyezy.com/57506.html",
+          "channel": "@meiriyishu",
+          "time": "16:20",
+          "url": "https://t.me/meiriyishu/4485",
+          "links": [
+            {
+              "href": "https://t.me/meiriyishu/4485",
+              "label": "百度网盘：https://pan.baidu.com/s/180UEPjfKUZsa4z7DDBdF5A?pwd=3a68"
+            },
+            {
+              "href": "https://t.me/meiriyishu/4485",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4485-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4485-1-thumb.webp",
+              "width": 996,
+              "height": 558,
+              "size_bytes": 140742
+            }
+          ],
+          "id": "meiriyishu-4485",
+          "message_id": "4485",
+          "channel_name": "优质「资源」收藏夹",
+          "channel_url": "https://t.me/meiriyishu",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "有人做了一个“去哪遛娃”的小程序，专门解决宝妈们带娃去哪儿的痛点。",
+          "summary": "有人做了一个“去哪遛娃”的小程序，专门解决宝妈们带娃去哪儿的痛点。\n然后每天在小红书发帖，内容就是今天新增了多少用户、更新了什么功能、以及做小程序的日常点滴。\n用这种“报备式”发帖引发好奇，越来越多的人会去搜来用，流量主收益已经做到20块每天，别看少，这是纯被动收入，一个月也好几百了。\n现在做小程序门槛已经很低，完全可以复刻这个思路，或者切其他细分需求，用同样方式推广，跑通了就是长期收入。",
+          "channel": "@yunying23",
+          "time": "16:29",
+          "url": "https://t.me/yunying23/12263",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/12263",
+              "label": "有人做了一个“去哪遛娃”的小程序，专门解决宝妈们带娃去哪儿的痛点。"
+            },
+            {
+              "href": "https://t.me/yunying23/12263",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/yunying23-12263-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/yunying23-12263-1-thumb.webp",
+              "width": 579,
+              "height": 1200,
+              "size_bytes": 74256
+            }
+          ],
+          "id": "yunying23-12263",
+          "message_id": "12263",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "你现在甚至能从Today的发展反推大厂会不会长期投入 Personal Agent:",
+          "summary": "你现在甚至能从Today的发展反推大厂会不会长期投入 Personal Agent:\nToday没做起来，Personal Agent就是情绪上头 Fomo了；做起来了，那我们春节就能领到字节阿里腾讯的大红包了。",
+          "channel": "@aigc1024",
+          "time": "16:31",
+          "url": "https://t.me/aigc1024/26095",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26095",
+              "label": "你现在甚至能从Today的发展反推大厂会不会长期投入 Personal Agent:"
+            },
+            {
+              "href": "https://t.me/aigc1024/26095",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-26095",
+          "message_id": "26095",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "00后实际上有一个能力确实被剥夺了：系统性思考和长时间的注意力。",
+          "summary": "00后实际上有一个能力确实被剥夺了：系统性思考和长时间的注意力。\n他们成长于一个信息高度碎片化的环境中，难以长时间集中注意力，甚至很难完整地读完一本书或一篇长文章。这也导致了他们在进行深度、系统性思考时的困难。\n当你与他们聊天或浏览他们发布的内容时，你会发现，如果不借助AI工具，许多人连一篇有结构、有条理的文章都写不出来。写作本身不仅是表达，也是思考、特别是思考的清晰性。\n虽然许多任务可以通过工具（如AI）完成，但这些工具并不会帮助你学会如何思考、如何更深入地理解或解决复杂问。\n在一个智力劳动越来越多地外包给工具的世界里，人类的清晰思维和独特洞察力将变得更加宝贵。",
+          "channel": "@inside1024",
+          "time": "16:34",
+          "url": "https://t.me/inside1024/87927",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87927",
+              "label": "00后实际上有一个能力确实被剥夺了：系统性思考和长时间的注意力。"
+            },
+            {
+              "href": "https://t.me/inside1024/87927",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87927-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/inside1024-87927-1-thumb.webp",
+              "width": 944,
+              "height": 2048,
+              "size_bytes": 179052
+            }
+          ],
+          "id": "inside1024-87927",
+          "message_id": "87927",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "梁文锋的Deepseek敢开源，是因为他的AI技术逻辑复杂，体量庞大，就是把源代码公开，在梁文锋不指点的情况下，即使专业人员，就是花上几年，也不一定搞得请是怎么回事。而且，这个Deepseek迭代极快，版本升级速度以月计，每个版本都极其庞大，你旧版本远还没看明白，新版本就又出来了，使你永远无法抄袭。这和一般技术不同，一般技术旁人只要掌握核心技术的几个要点，马上就能复制使用，造出自己的产品，如果开源，发明者就赚不到钱。",
+          "channel": "@aigc1024",
+          "time": "16:36",
+          "url": "https://t.me/aigc1024/26096",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26096",
+              "label": "梁文锋的Deepseek敢开源，是因为他的AI技术逻辑复杂，体量庞大，就是把源代码公开，在梁文锋不指点的情况下，即使专业人员，就是花上几年，也不一定搞得请是怎么回事。而且，这个Deepseek迭代极快，版本升级速度以月计，每个版本都极其庞大，你旧版本远还没看明白，新版本就又出来了，使你永远无法抄袭。这和一般技术不同，一般技术旁人只要掌握核心技术的几个要点，马上就能复制使用，造出自己的产品，如果开源，发明者就赚不到钱。"
+            },
+            {
+              "href": "https://t.me/aigc1024/26096",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-26096",
+          "message_id": "26096",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "summary": "梁文锋的Deepseek敢开源，是因为他的AI技术逻辑复杂，体量庞大，就是把源代码公开，在梁文锋不指点的情况下，即使专业人员，就是花上几年，也不一定搞得请是怎么回事。而且，这个Deepseek迭代极快，版本升级速度以月计，每个版本都极其庞大，你旧版本远还没看明白，新版本就又出来了，使你永远无法抄袭。这和一般技术不同，一般技术旁人只要掌握核心技术的几个要点，马上就能复制使用，造出自己的产品，如果开源，发明者就赚不到钱。",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "比较赞同，存款能够超过百万的人就不是普通人，最起码要跨越四重甚至更多的障碍：",
+          "summary": "比较赞同，存款能够超过百万的人就不是普通人，最起码要跨越四重甚至更多的障碍：\n1. 第一重障碍：能够不在乎任何人的评价，不需要向任何人证明自己。\n2. 第二重障碍：生活干净简单，具备强大的拒绝能力。\n3. 第三重障碍：对自己要求更高，习惯向内求。\n4. 第四重障碍：具备看懂经济、跨越周期的长远眼光。\n高存款人群的四大特质：\n- 停止证明自己： 摆脱面子束缚，拒绝盲目帮扶认知不匹配的亲友而填补无底洞。\n- 专注极简圈子： 敢于拒绝无效社交和诱惑，远离烂人烂事。\n- 高度向内聚焦： 重视身体健康、生活作息与个人能力的持续提升。\n- 具备周期视野： 不盲从买房、豪车与消费主义狂欢，拥有10至20年的长远规划。\n敬畏现金，拒绝盲目折腾： 人生有效赚钱周期只有短短几个十年，财富积累的关键在于克制欲望、不随意挥霍与折腾，通过脚踏实地的积累完成原始资本沉淀。",
+          "channel": "@text1024",
+          "time": "16:47",
+          "url": "https://t.me/text1024/25975",
+          "links": [
+            {
+              "href": "https://t.me/text1024/25975",
+              "label": "比较赞同，存款能够超过百万的人就不是普通人，最起码要跨越四重甚至更多的障碍："
+            },
+            {
+              "href": "https://t.me/text1024/25975",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "video",
+              "publish_status": "poster_only",
+              "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/text1024-25975-1-poster.webp",
+              "fallback_url": "https://t.me/text1024/25975",
+              "width": 0,
+              "height": 0,
+              "duration": 0,
+              "size_bytes": 31927613,
+              "has_audio": true
+            }
+          ],
+          "id": "text1024-25975",
+          "message_id": "25975",
+          "channel_name": "副业赚钱探索指南",
+          "channel_url": "https://t.me/text1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "以前还可以通过口型对不上，声音不对，牙齿眨眼发僵，手部动作反常这些细节观察出来，吴越被冒充的视频我看了，简直可以说以假乱真。",
+          "summary": "以前还可以通过口型对不上，声音不对，牙齿眨眼发僵，手部动作反常这些细节观察出来，吴越被冒充的视频我看了，简直可以说以假乱真。\n吴越发帖说：一觉醒来，脸和声音都不是我的，谁在利用AI肆意抓人替自己做恶，骗了多少人的钱，请如数奉还。\nAI 造假，明星第一个受冲击，声音和样貌模拟器成本约等于零，真人在睡觉，AI 在冒充通宵带货。",
+          "channel": "@aigc1024",
+          "time": "16:47",
+          "url": "https://t.me/aigc1024/26097",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26097",
+              "label": "以前还可以通过口型对不上，声音不对，牙齿眨眼发僵，手部动作反常这些细节观察出来，吴越被冒充的视频我看了，简直可以说以假乱真。"
+            },
+            {
+              "href": "https://t.me/aigc1024/26097",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26097-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26097-1-thumb.webp",
+              "width": 675,
+              "height": 1199,
+              "size_bytes": 90328
+            }
+          ],
+          "id": "aigc1024-26097",
+          "message_id": "26097",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "AI工具利用MCP对接各种工具 真实是非常nice",
+          "summary": "AI工具利用MCP对接各种工具 真实是非常nice\n后知后觉 用过的都知道好 🤤解放双手",
+          "channel": "@chunse1024",
+          "time": "16:51",
+          "url": "https://t.me/chunse1024/12108",
+          "links": [
+            {
+              "href": "https://t.me/chunse1024/12108",
+              "label": "AI工具利用MCP对接各种工具 真实是非常nice"
+            },
+            {
+              "href": "https://t.me/chunse1024/12108",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/chunse1024-12108-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/chunse1024-12108-1-thumb.webp",
+              "width": 1200,
+              "height": 535,
+              "size_bytes": 17534
+            }
+          ],
+          "id": "chunse1024-12108",
+          "message_id": "12108",
+          "channel_name": "优质信息收藏夹",
+          "channel_url": "https://t.me/chunse1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "**英特尔携手 AMD，简化 x86 CPU AI 开发**",
+          "summary": "**英特尔携手 AMD，简化 x86 CPU AI 开发**\n\n英特尔与 AMD 宣布合作，将双方针对 PyTorch 的 x86 CPU 优化整合到开源深度学习库 oneDNN 中，为开发者提供通用软件路径，减少 x86 AI 生态的软件碎片化。\n\nAMD 正将 ZenDNN 优化整合进 oneDNN，并以指导委员会成员身份加入 UXL 基金会。双方还在面向 x86 的下一代 AI 计算扩展指令集上合作，未来将通过 oneDNN 进一步集成至 PyTorch。\n\n英特尔中国\n\n⭐️ 群友：666还有国共合作\n\n🌸 科技圈· 茶馆 · 投稿",
+          "channel": "@zaihuapd",
+          "time": "16:55",
+          "url": "https://t.me/zaihuapd/44591",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/44591",
+              "label": "**英特尔携手 AMD，简化 x86 CPU AI 开发**"
+            },
+            {
+              "href": "https://mp.weixin.qq.com/s/JcEFssHmhyL0drohofQNkg",
+              "label": "英特尔中国"
+            },
+            {
+              "href": "https://t.me/zaihuapd/44591",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44591-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44591-1-thumb.webp",
+              "width": 1251,
+              "height": 532,
+              "size_bytes": 68922
+            }
+          ],
+          "id": "zaihuapd-44591",
+          "message_id": "44591",
+          "channel_name": "在花🎗️科技圈",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 27,
+          "replies_fetched": 27,
+          "replies_visible": 26,
+          "replies_filtered": 1,
+          "replies_path": "dashboard-data/lazy/tg-replies/2026-10-22/44591-a15920ec6904.json"
+        },
+        {
+          "title": "网上有个说法叫 AI;DR：AI 写的，不读了。",
+          "summary": "网上有个说法叫 AI;DR：AI 写的，不读了。\n更尴尬的场景是：一个人用 AI 写文档，另一个人再用 AI 总结。文档传了一圈，谁真正看懂了？\nReddit 的 r/ExperiencedDevs 里，一位 2013 年入行、目前担任经理的作者吐槽：公司用 AI 读旧文档，再生成新文档，几轮下来，满屏命令和配置，越来越难让人看懂。他也只好丢回 Claude，却没时间逐项核对它的解释。\n作者发现，团队里的开发和测试人员表面上沟通顺畅，其实谁也没有真正读过原始文档，大家只是在各自阅读模型给出的二手摘要。\n这种现象带来的真正危险在于，没有人有时间去核实那些由模型生成的指令和参数是否合理。一旦底层逻辑出现偏差，或者外界对模型的依赖被突然切断，人类可能根本无法把这些庞杂的机器文本还原成可维护的系统。\n评论里有人同感：文档写了很多“做了什么”，却没解释“为什么这么做”。\n一份要交给同事的文档，至少得有人能读懂、能解释。\n你最近有没有遇到过：每个字都认识，读完却不知道它到底想说什么的技术文档？\n原帖及评论：",
+          "channel": "@aigc1024",
+          "time": "16:57",
+          "url": "https://t.me/aigc1024/26099",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26099",
+              "label": "网上有个说法叫 AI;DR：AI 写的，不读了。"
+            },
+            {
+              "href": "https://t.me/aigc1024/26099",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26099-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26099-1-thumb.webp",
+              "width": 1200,
+              "height": 1170,
+              "size_bytes": 235002
+            }
+          ],
+          "id": "aigc1024-26099",
+          "message_id": "26099",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "好吓人！这月订阅AI的费用，首次冲破2000元大关！！",
+          "summary": "好吓人！这月订阅AI的费用，首次冲破2000元大关！！\nGPT、Claude、豆包工作、小云雀、即梦、中转站啥的，\n各种零零碎碎的充值和订阅，已经超过2400元！！\n整整四五顿火锅！关键很多都只是偶尔用用，亏麻了！！\n决定从下月开始，投入 的怀抱！\n之前在平台上买过Claude，那会Pro才$14，主要售后很Nice！！\n可惜现在封号形式严峻，平台上Claude都涨价了！！\n所以决定除了常用之外，其他AI通通在Gamsgo上买！\nGPT Plus低至$4.8，X 新出的pre订阅充值也才$24，相当于官方八折！！\n不光AI，像一些影视会员、游戏充值、常用APP啥的都有，都很便宜！！\n大概算了一下，支出至少能砍下来40%！！",
+          "channel": "@aigc1024",
+          "time": "17:07",
+          "url": "https://t.me/aigc1024/26101",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26101",
+              "label": "好吓人！这月订阅AI的费用，首次冲破2000元大关！！"
+            },
+            {
+              "href": "https://t.me/aigc1024/26101",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26101-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26101-1-thumb.webp",
+              "width": 1199,
+              "height": 754,
+              "size_bytes": 62626
+            }
+          ],
+          "id": "aigc1024-26101",
+          "message_id": "26101",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "开一家拼多多店，AI定制简历和PPT，小白月入2W+，可放大【附SOP手册】【揭秘】",
+          "summary": "开一家拼多多店，AI定制简历和PPT，小白月入2W+，可放大【附SOP手册】【揭秘】\n\n百度网盘：https://pan.baidu.com/s/1OewUcioLfGdVYLSgBCAW8w?pwd=e568\n提取码：e568\n\nhttps://fuyezy.com/57508.html",
+          "channel": "@meiriyishu",
+          "time": "17:21",
+          "url": "https://t.me/meiriyishu/4486",
+          "links": [
+            {
+              "href": "https://t.me/meiriyishu/4486",
+              "label": "开一家拼多多店，AI定制简历和PPT，小白月入2W+，可放大【附SOP手册】【揭秘】"
+            },
+            {
+              "href": "https://t.me/meiriyishu/4486",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4486-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4486-1-thumb.webp",
+              "width": 800,
+              "height": 447,
+              "size_bytes": 91772
+            }
+          ],
+          "id": "meiriyishu-4486",
+          "message_id": "4486",
+          "channel_name": "优质「资源」收藏夹",
+          "channel_url": "https://t.me/meiriyishu",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "**白嫖插件仓库被贴律师函，涉逆向客户端校验**",
+          "summary": "**白嫖插件仓库被贴律师函，涉逆向客户端校验**\n\n律师函被直接贴进 GitHub 仓库 dsh-our-free-model 的 Issues（#576），指控其逆向 WorkBuddy / CodeBuddy 客户端渠道校验规则，用指纹改写模块绕过 11128 拦截，伪造官方 UA 与产品码，并以多账号池自动签到领取免费额度。\n\n函件要求 3 日内停止、7 日内下架删除、15 日内书面回复，涉及 PR #574 新增逾 1.7 万行代码。\n\n频道仅作为消息分享，无法确切核实情况。可以当个乐子看\n\n律师函地址： Github issues\n\n🌸 科技圈· 茶馆 · 投稿",
+          "channel": "@zaihuapd",
+          "time": "17:40",
+          "url": "https://t.me/zaihuapd/44592",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/44592",
+              "label": "**白嫖插件仓库被贴律师函，涉逆向客户端校验**"
+            },
+            {
+              "href": "https://github.com/Ebony-Vinyl/dsh-our-free-model/issues/576",
+              "label": "Github issues"
+            },
+            {
+              "href": "https://t.me/zaihuapd/44592",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44592-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44592-1-thumb.webp",
+              "width": 935,
+              "height": 598,
+              "size_bytes": 39126
+            }
+          ],
+          "id": "zaihuapd-44592",
+          "message_id": "44592",
+          "channel_name": "在花🎗️科技圈",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 90,
+          "replies_fetched": 90,
+          "replies_visible": 82,
+          "replies_filtered": 8,
+          "replies_path": "dashboard-data/lazy/tg-replies/2026-10-22/44592-706c0f32394d.json"
+        },
+        {
+          "title": "用「文感力」评测 agent 的写作水平",
+          "summary": "用「文感力」评测 agent 的写作水平\nYouMind 内部原本有一套写作 benchmark，用来评测模型有没有覆盖写作要点、用对素材，结构、语气和篇幅是否符合要求。但随着模型不断变强，连 GPT-6 Luna 和 Opus 5.5 都打成了平手，但实际用起来，大家还是能感觉到不少差距。\n我们观察用户在写作任务中使用的 prompt 发现，很多时候，用户传达的是一种感觉。比如：“让结尾带一点落空感。” 模型可能写成伤感。如果把评分标准写成“结尾要带有落空感”，再交给评委打分，伤感的结尾其实也能过关。\n问在于，把感觉写成评分标准，并没有让它变得更明确，只是把判断转交给了评委。最终测出来的，可能只是模型有多符合评委的口味。\n那么怎样的写作算好？我们选择的角度是：好的写作从作者的意图出发，每一个选择都为这个意图服务。\n写作很大程度上就是在做取舍：该交代哪个细节，哪句不说出口，一个意思写到几分就停。而模型写作时是在替用户动笔，关键不是写出“一段合格的文字”，而是做出用户会做的选择。\n所以我们衡量的是：在具体语境下，模型做出的取舍和成熟作者有多接近。这就像语文考试里的阅读理解：作者为什么选这个细节？为什么偏偏在这里结尾？我们把这种能力叫做「文感力」。\n做法是：挑选知名作者近期发表、读者反响好的文章，挖掉其中一段，分析原文的写法为什么好，把每条理由写成一条标准，再针对每条标准改写原文，构造错误答案。这样只有原文能同时满足所有标准，答案是唯一的。\n测试分阅读和写作两部分。阅读是从几个候选段落里选出原文。写作是把原文拆成零散素材，混入错误素材，再给一句故意写得模糊的要求，比如“这里想要一种安静的感觉”，让模型自己挑素材，把这一段写出来。\n在这一指标下，Opus 5.5 拿下第一；Gemini 4 Argon 阅读最稳；Gemini 3.8 Flash 性价比最高。而在之前的评测里几乎没有差距的 Opus 5.5 和 GPT-6 Luna，在文感力上相差了 42 分。\n还有几个有意思的发现： 所有模型写出来的段落都比原文长，中位长度是原文的 1.6 倍。面对一堆素材和一句模糊的要求，模型往往倾向于物尽其用，DeepSeek V4.1 Flash 和 Haiku 5.5 几乎是给什么用什么。\n读得懂，不等于写得出。即使在模型每次都读对的文章上，仍有 58% 的补写至少破坏了一处作者的取舍。\n当然，文感力只覆盖了写作质量的一部分。",
+          "channel": "@aigc1024",
+          "time": "17:46",
+          "url": "https://t.me/aigc1024/26103",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26103",
+              "label": "用「文感力」评测 agent 的写作水平"
+            },
+            {
+              "href": "https://t.me/aigc1024/26103",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26103-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26103-1-thumb.webp",
+              "width": 1242,
+              "height": 1654,
+              "size_bytes": 62032
+            }
+          ],
+          "id": "aigc1024-26103",
+          "message_id": "26103",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "用「文感力」评测 agent 的写作水平",
+          "summary": "用「文感力」评测 agent 的写作水平\nYouMind 内部原本有一套写作 benchmark，用来评测模型有没有覆盖写作要点、用对素材，结构、语气和篇幅是否符合要求。但随着模型不断变强，连 GPT-6 Luna 和 Opus 5.5 都打成了平手，但实际用起来，大家还是能感觉到不少差距。\n我们观察用户在写作任务中使用的 prompt 发现，很多时候，用户传达的是一种感觉。比如：“让结尾带一点落空感。” 模型可能写成伤感。如果把评分标准写成“结尾要带有落空感”，再交给评委打分，伤感的结尾其实也能过关。\n问在于，把感觉写成评分标准，并没有让它变得更明确，只是把判断转交给了评委。最终测出来的，可能只是模型有多符合评委的口味。\n那么怎样的写作算好？我们选择的角度是：好的写作从作者的意图出发，每一个选择都为这个意图服务。\n写作很大程度上就是在做取舍：该交代哪个细节，哪句不说出口，一个意思写到几分就停。而模型写作时是在替用户动笔，关键不是写出“一段合格的文字”，而是做出用户会做的选择。\n所以我们衡量的是：在具体语境下，模型做出的取舍和成熟作者有多接近。这就像语文考试里的阅读理解：作者为什么选这个细节？为什么偏偏在这里结尾？我们把这种能力叫做「文感力」。\n做法是：挑选知名作者近期发表、读者反响好的文章，挖掉其中一段，分析原文的写法为什么好，把每条理由写成一条标准，再针对每条标准改写原文，构造错误答案。这样只有原文能同时满足所有标准，答案是唯一的。\n测试分阅读和写作两部分。阅读是从几个候选段落里选出原文。写作是把原文拆成零散素材，混入错误素材，再给一句故意写得模糊的要求，比如“这里想要一种安静的感觉”，让模型自己挑素材，把这一段写出来。\n在这一指标下，Opus 5.5 拿下第一；Gemini 4 Argon 阅读最稳；Gemini 3.8 Flash 性价比最高。而在之前的评测里几乎没有差距的 Opus 5.5 和 GPT-6 Luna，在文感力上相差了 42 分。\n还有几个有意思的发现： 所有模型写出来的段落都比原文长，中位长度是原文的 1.6 倍。面对一堆素材和一句模糊的要求，模型往往倾向于物尽其用，DeepSeek V4.1 Flash 和 Haiku 5.5 几乎是给什么用什么。\n读得懂，不等于写得出。即使在模型每次都读对的文章上，仍有 58% 的补写至少破坏了一处作者的取舍。\n当然，文感力只覆盖了写作质量的一部分。但它测出了“按需交付”这类评测所测不出的东西。模型如今都能较好地按要求交稿，很多时候也认得出好文，可轮到自己动笔时，差距依然明显，而这种差距，往往是用户最在意的。",
+          "channel": "@aigc1024",
+          "time": "17:46",
+          "url": "https://t.me/aigc1024/26109",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26109",
+              "label": "用「文感力」评测 agent 的写作水平"
+            },
+            {
+              "href": "https://t.me/aigc1024/26109",
+              "label": "查看原文"
+            }
+          ],
+          "id": "aigc1024-26109",
+          "message_id": "26109",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "风口的本质不是机会、趋势、未来或赚钱，而是效率。所谓“找准风口”，就是找到那个进入效率最高、阻力最小、成功可能性最大的点。风口包含两个核心要素：一是行业，二是时机。并非所有事都值得做，关键在于投入与产出的效率。当代价过高、阻力过大、回报周期过长时，效率低下，就不是风口；而当某件事在特定时刻能以更低成本、更小阻力、更高速度实现更大产出时，意味着效率发生了跃迁，这个时机才是真正的风口。因此，判断风口的关键，不在热度或趋势，而在于效率是否被重新定义。",
+          "channel": "@text1024",
+          "time": "18:26",
+          "url": "https://t.me/text1024/25976",
+          "links": [
+            {
+              "href": "https://t.me/text1024/25976",
+              "label": "风口的本质不是机会、趋势、未来或赚钱，而是效率。所谓“找准风口”，就是找到那个进入效率最高、阻力最小、成功可能性最大的点。风口包含两个核心要素：一是行业，二是时机。并非所有事都值得做，关键在于投入与产出的效率。当代价过高、阻力过大、回报周期过长时，效率低下，就不是风口；而当某件事在特定时刻能以更低成本、更小阻力、更高速度实现更大产出时，意味着效率发生了跃迁，这个时机才是真正的风口。因此，判断风口的关键，不在热度或趋势，而在于效率是否被重新定义。"
+            },
+            {
+              "href": "https://t.me/text1024/25976",
+              "label": "查看原文"
+            }
+          ],
+          "id": "text1024-25976",
+          "message_id": "25976",
+          "channel_name": "副业赚钱探索指南",
+          "channel_url": "https://t.me/text1024",
+          "summary": "风口的本质不是机会、趋势、未来或赚钱，而是效率。所谓“找准风口”，就是找到那个进入效率最高、阻力最小、成功可能性最大的点。风口包含两个核心要素：一是行业，二是时机。并非所有事都值得做，关键在于投入与产出的效率。当代价过高、阻力过大、回报周期过长时，效率低下，就不是风口；而当某件事在特定时刻能以更低成本、更小阻力、更高速度实现更大产出时，意味着效率发生了跃迁，这个时机才是真正的风口。因此，判断风口的关键，不在热度或趋势，而在于效率是否被重新定义。",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "一个兄弟做电商，去年一年挣了五十多万。你绝对想不到，他就靠卖一样东西——老年人老花镜。",
+          "summary": "一个兄弟做电商，去年一年挣了五十多万。你绝对想不到，他就靠卖一样东西——老年人老花镜。\n一开始我听说这事的时候，根本不敢相信。\n我一直以为，电商想赚大钱，得卖时髦衣服、零食、数码产品，这些流量大、年轻人爱买的货。老花镜，看着不起眼，一副才十几二十块，能有多大利润？\n那天我专门找他喝茶，好奇地问他，真的就只卖老花镜？\n他笑着跟我说，没错，主打的就是老花镜，别的啥都不碰。\n他跟我讲里面的门道，听完我才恍然大悟。\n第一，目标人群看着是老年人，但下单的大多是子女。\n很多老人不会网购，是儿女刷到短视频、刷到直播间，想着爸妈年纪大了看报纸、看手机费劲，顺手下单买一副。大家给长辈买东西，图省心、图实惠，不会反复比价纠结。\n第二，老花镜是刚需复购品。\n老花眼只会越来越重，度数隔几年就要涨；还有的老人丢三落四，放客厅一副、卧室一副、买菜包里再塞一副，一不小心摔坏、弄丢，转头又要重新买。不是买一次就再也不回头的东西。\n第三，很多人忽略了，老花镜的供应链成本很低。\n批量拿货，普通树脂镜片的老花镜，出厂价几块钱，网上卖十九块九、二十九块九一副。看着单价不高，但是走量，薄利多销。一单赚十来块，一天几百上千单，日积月累，收益就很可观。\n他还说，他根本不跟别人卷花里胡哨的款式。\n不搞网红设计，不做花哨包装，就做轻一点、戴着不压鼻梁、不容易晕、看字清晰的基础款。主图、视频就拍老人戴起来看手机、看药盒、看报纸的画面，简简单单，直击需求。\n同行很多人瞧不上这个品类，觉得太小众、太廉价，看不上这点小钱，都扎堆去抢热门赛道。热门赛道竞争大，广告费贵，很多人忙活半天还亏钱。\n而他沉下心，就守着老花镜这一个细分品类，把品控稳住，售后做好。老人戴着不舒服，只要反馈，直接补发，不扯皮，慢慢口碑做起来，回头客越来越多。\n去年一整年除去平台扣费、广告费、拿货成本，实打实落到手五十多万。\n他跟我说了一句，我印象很深：\n很多人总想找高大上、来钱快的生意，总觉得小生意赚不到钱。\n其实做生意，不怕东西小，就怕没有稳定的需求。",
+          "channel": "@yunying23",
+          "time": "18:41",
+          "url": "https://t.me/yunying23/12266",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/12266",
+              "label": "一个兄弟做电商，去年一年挣了五十多万。你绝对想不到，他就靠卖一样东西——老年人老花镜。"
+            },
+            {
+              "href": "https://t.me/yunying23/12266",
+              "label": "查看原文"
+            }
+          ],
+          "id": "yunying23-12266",
+          "message_id": "12266",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "心智型IP实操训练营｜14天身心灵赛道短视频IP打造与引流变现，把短视频流量变成持续成交",
+          "summary": "心智型IP实操训练营｜14天身心灵赛道短视频IP打造与引流变现，把短视频流量变成持续成交\n\n百度网盘：https://pan.baidu.com/s/1XLXEugP1BloCbaGhDEQZhg?pwd=a562\n提取码：a562\n\nhttps://fuyezy.com/57512.html",
+          "channel": "@meiriyishu",
+          "time": "19:21",
+          "url": "https://t.me/meiriyishu/4488",
+          "links": [
+            {
+              "href": "https://t.me/meiriyishu/4488",
+              "label": "心智型IP实操训练营｜14天身心灵赛道短视频IP打造与引流变现，把短视频流量变成持续成交"
+            },
+            {
+              "href": "https://t.me/meiriyishu/4488",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4488-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/meiriyishu-4488-1-thumb.webp",
+              "width": 800,
+              "height": 450,
+              "size_bytes": 71712
+            }
+          ],
+          "id": "meiriyishu-4488",
+          "message_id": "4488",
+          "channel_name": "优质「资源」收藏夹",
+          "channel_url": "https://t.me/meiriyishu",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "**英伟达升级 Isaac 平台，完善人形机器人开发生态**",
+          "summary": "**英伟达升级 Isaac 平台，完善人形机器人开发生态**\n\n英伟达在今天的 GTC 大会上宣布扩展 Isaac 机器人开发平台，推出新的人形机器人参考框架、仿真工作流及训练数据工具，覆盖机器人数据生成、AI 训练、仿真测试与实际部署，旨在降低通用机器人研发门槛，加快产品落地。\n\n此次升级包括 Isaac Lab 3.0，支持多 GPU 训练，并新增包含 2000 多种仿真资产的资源库及人类动作数据集，帮助开发者提升机器人训练效率。“通用机器人正以惊人的速度进步——机器人的 ChatGPT 时刻正快速临近，”英伟达创始人兼首席执行官黄仁勋表示。\n\nNVIDIA\n\n🌸 科技圈· 茶馆 · 投稿",
+          "channel": "@zaihuapd",
+          "time": "19:21",
+          "url": "https://t.me/zaihuapd/44594",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/44594",
+              "label": "**英伟达升级 Isaac 平台，完善人形机器人开发生态**"
+            },
+            {
+              "href": "https://nvidianews.nvidia.com/news/nvidia-advances-isaac-platform-for-general-purpose-robotics-with-new-reference-humanoid-frameworks-simulation-pipelines-and-data",
+              "label": "NVIDIA"
+            },
+            {
+              "href": "https://t.me/zaihuapd/44594",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44594-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44594-1-thumb.webp",
+              "width": 1600,
+              "height": 900,
+              "size_bytes": 79298
+            }
+          ],
+          "id": "zaihuapd-44594",
+          "message_id": "44594",
+          "channel_name": "在花🎗️科技圈",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 11,
+          "replies_fetched": 11,
+          "replies_visible": 10,
+          "replies_filtered": 1,
+          "replies_path": "dashboard-data/lazy/tg-replies/2026-10-22/44594-270d3b59bfb3.json"
+        },
+        {
+          "title": "上海出手打击AI抢号：AI自动化刑事红线",
+          "summary": "上海出手打击AI抢号：AI自动化刑事红线\nhttps://mp.weixin.qq.com/s/eTdbW_4ShT53a6znGBe2Ww\nAgent 抢票的一种场景",
+          "channel": "@aigc1024",
+          "time": "19:36",
+          "url": "https://t.me/aigc1024/26116",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26116",
+              "label": "上海出手打击AI抢号：AI自动化刑事红线"
+            },
+            {
+              "href": "https://t.me/aigc1024/26116",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26116-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26116-1-thumb.webp",
+              "width": 1280,
+              "height": 543,
+              "size_bytes": 42922
+            }
+          ],
+          "id": "aigc1024-26116",
+          "message_id": "26116",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "买了一台新电脑，不过是给 Agent 用的",
+          "channel": "@aigc1024",
+          "time": "20:11",
+          "url": "https://t.me/aigc1024/26117",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26117",
+              "label": "买了一台新电脑，不过是给 Agent 用的"
+            },
+            {
+              "href": "https://t.me/aigc1024/26117",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26117-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26117-1-thumb.webp",
+              "width": 1223,
+              "height": 1594,
+              "size_bytes": 102366
+            }
+          ],
+          "id": "aigc1024-26117",
+          "message_id": "26117",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "summary": "买了一台新电脑，不过是给 Agent 用的",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "一位顶级大师说：",
+          "summary": "一位顶级大师说：\n“少参加葬礼，少去看病人。老家如果有白事，让你回去，你可以翻倍的钱到位。人不要去，所有衰的事情都不要去参加，包括不要让别人在你家哭。你的闺蜜要跟男朋友闹别扭，让她住酒店，不要让她去你家。谁要离婚，你不要出主意，他爱离不离，不要介入他人的因果。比如说，你在这个地方写过分手信，这个地方三年寸草不生，不要让这种事跟你沾上任何关系。”\n​一个人的运势是由磁场决定的，如果你身上的磁场非常强，那么你就可以吸引到这个世界上的那些美好的东西，你的运气就会越来越好，你的人生就会越来越顺利，你的身体，你的情绪，你的财运，你的家庭，你的工作，都会很棒。如果你身上的磁场非常弱，非常糟糕，非常乱，那么你就会吸引到那些乱七八糟的东西，那些倒霉的，灾难的，招惹是非的，不可理喻的莫名其妙的人和事，都会来到你的身边。\n​你看看生活中就知道了，有些人在搞钱这条路上所向披靡，家庭关系也特别和睦，两口子的婚姻也特别美满，孩子还特别孝顺，特别听，学习成绩很棒，这就是强大的磁场导致的一种正向循环，良性循环。而有些人呢？家里穷的叮当响，去打工被人骗，去做点小生意赔了本，身体总是不舒服，家里还有人得癌症，出门在外还发生车祸，真是屋漏偏逢连夜雨，船破又被打头风。这就是糟糕磁场导致的一种负面循环，恶性循环。\n​打个比方，你就更能理解了，如果你的生命是一个非常优美的风景点，那么就会有很多人汇集在你这里，人气你有了，财气你有了，旺气你有了。如果你的生命是一个垃圾站，那么别人就会往你这里倒垃圾，路边的瓶瓶罐罐，谁家的死猫死狗，谁家被药死的死耗子，都会扔在你这里，你这里就会有臭气，霉气，污浊之气。我们一定要接触那些很旺的人和事，远离那些很衰的人和事，包括远离一切很衰的环境和关系，这样才能够避免走背运，努力让自己撞大运。",
+          "channel": "@text1024",
+          "time": "20:46",
+          "url": "https://t.me/text1024/25977",
+          "links": [
+            {
+              "href": "https://t.me/text1024/25977",
+              "label": "一位顶级大师说："
+            },
+            {
+              "href": "https://t.me/text1024/25977",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/text1024-25977-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/text1024-25977-1-thumb.webp",
+              "width": 572,
+              "height": 1200,
+              "size_bytes": 161170
+            }
+          ],
+          "id": "text1024-25977",
+          "message_id": "25977",
+          "channel_name": "副业赚钱探索指南",
+          "channel_url": "https://t.me/text1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "把 Lex Fridman Podcast 的全部 506 期整理成可阅读、可搜索、可订阅的中文静态站点。",
+          "summary": "把 Lex Fridman Podcast 的全部 506 期整理成可阅读、可搜索、可订阅的中文静态站点。\nhttps://github.com/joeseesun/lexfridman-cn\nlexfridman-cn 是 Lex Fridman Podcast 的非官方中文导航站，覆盖全部 506 期节目，每期有独立页面。站点提供中英双语标和嘉宾简介、官方音频与视频直链、英文文稿时间戳跳播，以及 463 篇以上由 AI 基于完整访谈改写的长文精读。\n搜索支持多词 AND、按嘉宾、标和简介加权排序、期号精确命中与关键词高亮，也可通过 / 或 Cmd+K 唤起。阅读体验包含目录侧栏、字号与字体设置、明暗主、进度记忆和继续收听。",
+          "channel": "@yunying23",
+          "time": "20:59",
+          "url": "https://t.me/yunying23/12268",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/12268",
+              "label": "把 Lex Fridman Podcast 的全部 506 期整理成可阅读、可搜索、可订阅的中文静态站点。"
+            },
+            {
+              "href": "https://t.me/yunying23/12268",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/yunying23-12268-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/yunying23-12268-1-thumb.webp",
+              "width": 1200,
+              "height": 750,
+              "size_bytes": 59086
+            }
+          ],
+          "id": "yunying23-12268",
+          "message_id": "12268",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "推荐一个挺有意思的开源项目 Moyu，专治 AI 写代码时喜欢自作主张的毛病。",
+          "summary": "推荐一个挺有意思的开源项目 Moyu，专治 AI 写代码时喜欢自作主张的毛病。\n明明只让它修个 Bug，结果顺手重构了一堆代码，越改越复杂。\n这个项目就是让 AI 学会少折腾：只改该改的，不乱加功能，不搞过度设计。\n支持 Claude Code、Cursor、Codex 等主流 AI 编程工具。\nhttps://github.com/uucz/moyu",
+          "channel": "@aigc1024",
+          "time": "20:59",
+          "url": "https://t.me/aigc1024/26118",
+          "links": [
+            {
+              "href": "https://t.me/aigc1024/26118",
+              "label": "推荐一个挺有意思的开源项目 Moyu，专治 AI 写代码时喜欢自作主张的毛病。"
+            },
+            {
+              "href": "https://t.me/aigc1024/26118",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26118-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/aigc1024-26118-1-thumb.webp",
+              "width": 623,
+              "height": 1200,
+              "size_bytes": 69124
+            }
+          ],
+          "id": "aigc1024-26118",
+          "message_id": "26118",
+          "channel_name": "AI探索指南",
+          "channel_url": "https://t.me/aigc1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "男人想在两到三年内翻身，建议死磕这7条，尤其是没背景、没资源的普通人。",
+          "summary": "男人想在两到三年内翻身，建议死磕这7条，尤其是没背景、没资源的普通人。\n1）远离无效社交。少喝酒，少混圈子，别把时间浪费在没意义的饭局上。\n2）拼命攒钱。别为了面子买单，兜里有存款，说才有底气。\n3）戒掉廉价快乐。少刷美女，少熬夜，少沉迷短视频，把精力留给正事。\n4）狠狠提升执行力。想赚钱就马上行动，别研究半年，最后连第一步都没迈出去。\n5）坚持锻炼。每周健身四五次，规律作息，身体好了，干什么都有劲。\n6）戒掉依赖心理。别总盼着贵人出现，自己没本事，贵人来了也接不住。\n7）死磕一项赚钱技能。选准方向，踏踏实实干两年，别三天两头换赛道。",
+          "channel": "@text1024",
+          "time": "21:17",
+          "url": "https://t.me/text1024/25981",
+          "links": [
+            {
+              "href": "https://t.me/text1024/25981",
+              "label": "男人想在两到三年内翻身，建议死磕这7条，尤其是没背景、没资源的普通人。"
+            },
+            {
+              "href": "https://t.me/text1024/25981",
+              "label": "查看原文"
+            }
+          ],
+          "id": "text1024-25981",
+          "message_id": "25981",
+          "channel_name": "副业赚钱探索指南",
+          "channel_url": "https://t.me/text1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "**OpenAI 模型将进驻 Google Cloud 模型花园**",
+          "summary": "**OpenAI 模型将进驻 Google Cloud 模型花园**\n\nOpenAI 与 Google Cloud 合作，把 OpenAI 前沿模型和 Codex 智能体工作流接入 Google Cloud 的 Model Garden，企业可通过 Marketplace 购买并用 GCP 承诺消费额度抵扣。\n\n这些模型还将进入 Google Antigravity 和 Gemini Agent，预计数周内正式开放；OpenAI 称微软仍是其主要云合作伙伴。\n\nOpenAI | Google Cloud\n\n🌸 科技圈· 茶馆 · 投稿",
+          "channel": "@zaihuapd",
+          "time": "21:40",
+          "url": "https://t.me/zaihuapd/44596",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/44596",
+              "label": "**OpenAI 模型将进驻 Google Cloud 模型花园**"
+            },
+            {
+              "href": "https://openai.com/index/openai-models-google-cloud/",
+              "label": "OpenAI"
+            },
+            {
+              "href": "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers",
+              "label": "Google Cloud"
+            },
+            {
+              "href": "https://t.me/zaihuapd/44596",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44596-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44596-1-thumb.webp",
+              "width": 1920,
+              "height": 1080,
+              "size_bytes": 57860
+            }
+          ],
+          "id": "zaihuapd-44596",
+          "message_id": "44596",
+          "channel_name": "在花🎗️科技圈",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 18,
+          "replies_fetched": 18,
+          "replies_visible": 16,
+          "replies_filtered": 2,
+          "replies_path": "dashboard-data/lazy/tg-replies/2026-10-22/44596-1bdd72059ab4.json"
+        },
+        {
+          "title": "发现一个“聪明”的赚钱路子，感觉给普通人打开了新大门。",
+          "summary": "发现一个“聪明”的赚钱路子，感觉给普通人打开了新大门。\n就是这种“AI说书”账号：\n内容：用AI把一本书的核心内容做成十几分钟的视频，画面就是几张相关的图片轮播，配上AI配音。\n选品：讲的书基本都是围绕“搞钱”、“财富”、“人性”这种戳中痛点的。\n变现：视频下方挂上这本书的购买链接，看完觉得有道理，顺手就买了。\n看了一个账号，就靠这种看似简单的视频，一套书能卖出八百多单。\n这模式绝了。完美满足了现在人“想学习又没时间”的痛点——用十几分钟“听”完一本书，感觉自己学到了东西，特有获得感。\nAI负责生产内容，账号负责卖书赚佣金，一个完美的商业闭环就形成了。没有什么高深的技术，但精准地切入了需求。\n不得不说，赚钱这事儿，有时候比拼的不是谁更努力，而是谁能先看到这种“信息差”。",
+          "channel": "@text1024",
+          "time": "22:14",
+          "url": "https://t.me/text1024/25982",
+          "links": [
+            {
+              "href": "https://t.me/text1024/25982",
+              "label": "发现一个“聪明”的赚钱路子，感觉给普通人打开了新大门。"
+            },
+            {
+              "href": "https://t.me/text1024/25982",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/text1024-25982-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/text1024-25982-1-thumb.webp",
+              "width": 1082,
+              "height": 1106,
+              "size_bytes": 80170
+            }
+          ],
+          "id": "text1024-25982",
+          "message_id": "25982",
+          "channel_name": "副业赚钱探索指南",
+          "channel_url": "https://t.me/text1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "有人刚刚开发出了我这辈子见过的最全面的 B2B 拓客工具。它的工作原理如下：你只需选择业务类型和城市。该工具会实时抓取 Google Maps 的数据，并为你提供每一个匹配企业的 30 多个数据字段：经过验证的电子邮件、电、WhatsApp、所有社交媒体账号、营业时间、评分、GPS 坐标。接下来的部分才是最精彩的。AI 会阅读每家企业的多达 50 条 Google 评论，并检测出他们真实的痛点。例如：“客户抱怨照片无法反映真实尺寸”或“广告投放周期过长”。你只需告诉它你销售的产品，它就会将你的产品方案与他们的具体问进行交叉比对，并为每个潜在客户生成一封完全个性化的开发信。",
+          "summary": "有人刚刚开发出了我这辈子见过的最全面的 B2B 拓客工具。它的工作原理如下：你只需选择业务类型和城市。该工具会实时抓取 Google Maps 的数据，并为你提供每一个匹配企业的 30 多个数据字段：经过验证的电子邮件、电、WhatsApp、所有社交媒体账号、营业时间、评分、GPS 坐标。接下来的部分才是最精彩的。AI 会阅读每家企业的多达 50 条 Google 评论，并检测出他们真实的痛点。例如：“客户抱怨照片无法反映真实尺寸”或“广告投放周期过长”。你只需告诉它你销售的产品，它就会将你的产品方案与他们的具体问进行交叉比对，并为每个潜在客户生成一封完全个性化的开发信。\n你只需点击两次即可逐一发送，而非群发，因此邮件始终能进入收件箱的主目录。此外，所有数据都会汇集到一个 CRM 系统中，其中包含一个 GPS 地图，你可以在上面绘制销售区域、优化拜访路线、实时监控团队，并在每次会议后转录语音笔记。它支持 221 个国家，适用于任何行业。只要是在 Google Maps 上能找到的，你都能找到。\n最疯狂的是：一名开发者仅使用 Claude Code 在两周内就开发出了它。它叫作 MapiLeads。",
+          "channel": "@yunying23",
+          "time": "22:16",
+          "url": "https://t.me/yunying23/12270",
+          "links": [
+            {
+              "href": "https://t.me/yunying23/12270",
+              "label": "有人刚刚开发出了我这辈子见过的最全面的 B2B 拓客工具。它的工作原理如下：你只需选择业务类型和城市。该工具会实时抓取 Google Maps 的数据，并为你提供每一个匹配企业的 30 多个数据字段：经过验证的电子邮件、电、WhatsApp、所有社交媒体账号、营业时间、评分、GPS 坐标。接下来的部分才是最精彩的。AI 会阅读每家企业的多达 50 条 Google 评论，并检测出他们真实的痛点。例如：“客户抱怨照片无法反映真实尺寸”或“广告投放周期过长”。你只需告诉它你销售的产品，它就会将你的产品方案与他们的具体问进行交叉比对，并为每个潜在客户生成一封完全个性化的开发信。"
+            },
+            {
+              "href": "https://t.me/yunying23/12270",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "video",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/yunying23-12270-1.mp4",
+              "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/yunying23-12270-1-poster.webp",
+              "fallback_url": "https://t.me/yunying23/12270",
+              "width": 0,
+              "height": 0,
+              "duration": 0,
+              "size_bytes": 7549046,
+              "has_audio": false
+            }
+          ],
+          "id": "yunying23-12270",
+          "message_id": "12270",
+          "channel_name": "出海🚢&自媒体运营秘籍",
+          "channel_url": "https://t.me/yunying23",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "今日思考：",
+          "summary": "今日思考：\n凡是不赚钱的人，脑子非常复杂，跟别人沟通起来非常麻烦，永远说不到本质和核心。\n凡是赚钱的人，都非常简单。要不找准一个赚钱的方向死磕，要不死心塌地的跟一个赚钱的人做事。没有其他纠结，要不要和行不行的问题不可能出现在他们的认识里。做对事，跟对人。就是这么简单，其他什么乱七八糟的犹豫和徘徊全部都是浪费时间。\n赚钱的人一旦确定方向和人，立刻行动，超强的行动力让他们逢山开路，遇水搭桥。不管是鬼是神，谁挡杀谁，就是这么简单！",
+          "channel": "@inside1024",
+          "time": "22:16",
+          "url": "https://t.me/inside1024/87948",
+          "links": [
+            {
+              "href": "https://t.me/inside1024/87948",
+              "label": "今日思考："
+            },
+            {
+              "href": "https://t.me/inside1024/87948",
+              "label": "查看原文"
+            }
+          ],
+          "id": "inside1024-87948",
+          "message_id": "87948",
+          "channel_name": "你不知道的内幕消息🅥",
+          "channel_url": "https://t.me/inside1024",
+          "reply_count": 0,
+          "replies_fetched": 0,
+          "replies_visible": 0,
+          "replies_filtered": 0
+        },
+        {
+          "title": "**Cloudflare 部署 php2shell 防护**",
+          "summary": "**Cloudflare 部署 php2shell 防护**\n\n2026 年 10 月 21 日，Cloudflare 宣布已为 php2shell 部署 WAF 防护。该漏洞源于 PHP 两项缺陷，影响 PHP 5.4 及以上版本，可致拒绝服务、远程代码执行和数据泄露，防护对所有启用 WAF 的套餐自动生效，含免费用户。\n\n相关防护在公开披露前约 9 小时上线，期间也观察到针对客户的攻击流量。公司建议管理员尽快更新 PHP，并保持 WAF 防护开启。\n\nCloudflare Blog\n\n🌸 科技圈· 茶馆 · 投稿",
+          "channel": "@zaihuapd",
+          "time": "22:43",
+          "url": "https://t.me/zaihuapd/44598",
+          "links": [
+            {
+              "href": "https://t.me/zaihuapd/44598",
+              "label": "**Cloudflare 部署 php2shell 防护**"
+            },
+            {
+              "href": "https://blog.cloudflare.com/php-vulnerabilities-waf-protection/",
+              "label": "Cloudflare Blog"
+            },
+            {
+              "href": "https://t.me/zaihuapd/44598",
+              "label": "查看原文"
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "publish_status": "published",
+              "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44598-1.webp",
+              "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-22/zaihuapd-44598-1-thumb.webp",
+              "width": 1200,
+              "height": 630,
+              "size_bytes": 27700
+            }
+          ],
+          "id": "zaihuapd-44598",
+          "message_id": "44598",
+          "channel_name": "在花🎗️科技圈",
+          "channel_url": "https://t.me/zaihuapd",
+          "reply_count": 33,
+          "replies_fetched": 33,
+          "replies_visible": 27,
+          "replies_filtered": 6,
+          "replies_path": "dashboard-data/lazy/tg-replies/2026-10-22/44598-c1b3afe68343.json"
+        }
+      ]
+    }
+  ],
+  "has_json": true,
+  "json_url": "2026-10-22-tg-digest.json",
+  "source_media_summary": {
+    "image_count": 49,
+    "video_count": 6,
+    "published_video_count": 5,
+    "poster_only_video_count": 1,
+    "failed_count": 0
+  },
+  "media_summary": {
+    "image_count": 49,
+    "video_count": 6,
+    "published_video_count": 5,
+    "poster_only_video_count": 1,
+    "failed_count": 0
+  }
+}

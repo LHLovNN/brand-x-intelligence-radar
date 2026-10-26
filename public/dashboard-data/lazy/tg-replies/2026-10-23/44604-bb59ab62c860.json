@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-23",
+  "thread_id": "44604",
+  "count": 30,
+  "replies": [
+    {
+      "id": "589383",
+      "text": "不让分发的意思吗",
+      "time": "08:47",
+      "sender_name": "chaos",
+      "sender_id": 516069304
+    },
+    {
+      "id": "589385",
+      "text": "谁来解读一下？以后第三方模型使用 Codex 需要 OpenAI 认证了？",
+      "time": "08:48",
+      "sender_name": "Bytewalk",
+      "sender_id": 316677731
+    },
+    {
+      "id": "589386",
+      "text": "DeepSeek也是限制并发需要申请",
+      "time": "08:49",
+      "sender_name": "洋芋土豆马铃薯",
+      "sender_id": 6128099948
+    },
+    {
+      "id": "589402",
+      "time": "09:06",
+      "sender_name": "momo",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-23/comments/c-589402-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-23/comments/c-589402-1-thumb.webp",
+          "width": 1280,
+          "height": 911,
+          "size_bytes": 103402
+        }
+      ],
+      "sender_id": 968730459
+    },
+    {
+      "id": "589440",
+      "text": "小编又一力作，要我说在花你也别干了",
+      "time": "09:23",
+      "sender_name": "jmm",
+      "sender_id": 762947270
+    },
+    {
+      "id": "589441",
+      "text": "天天整这玩意有意思吗？你起码把范围说明白",
+      "time": "09:23",
+      "sender_name": "jmm",
+      "sender_id": 762947270
+    },
+    {
+      "id": "589504",
+      "text": "今天全部报容量已满，快倒闭算了",
+      "time": "09:47",
+      "sender_name": "snake leung",
+      "sender_id": 441514729
+    },
+    {
+      "id": "589525",
+      "text": "小花，什么意思，影响我用网页授权，然后在局域网分享这个功能吗？",
+      "time": "10:05",
+      "sender_name": "𝕯𝖆𝖒𝖔𝖓",
+      "sender_id": 81408797
+    },
+    {
+      "id": "589526",
+      "text": "先说说你具体的场景：你是在局域网里自建网关或中转，把 API 转发给内网几台设备用，还是在分享账号或网页会话？“网页授权”这个说法有点模糊。\n按新规字面看，它限制的对象是“直接提供模型访问服务”的那类服务，比如模型路由、AI 网关和转售。你只是在家里或公司内网给几台设备转发 API，一般来说算不上“对外提供访问服务”，但你也确实是在搭一个小型网关，属于新规的适用范围内。另外，这条新规要到 2026 年 11 月 20 日才生效，现在不用担心。",
+      "time": "10:05",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "589594",
+      "text": "别慌，这不是“第三方模型要持证上岗”，是配置项的事儿。\nCodex 的 `model_providers` 里有个 `requires_openai_auth` 开关：设为 `true` 就走 OpenAI 登录/API Key 认证（常见于通过代理网关访问 OpenAI 模型的场景）[[6]](https://learn.chatgpt.com/docs/auth)；设为 `false` 就是用第三方 provider 的正常玩法，社区工具的 workaround 也是这么写的 [[12]](https://github.com/farion1231/cc-switch/issues/3034)。所以不是“OpenAI 强制认证第三方模型”，更像是某些默认配置/更新把这开关拧到了 `true`，把自建 provider 的用户卡在登录门口——GitHub 上关于 auth.json 和第三方 key 冲突的 issue 就是这类闹腾 [[8]](https://github.com/openai/codex/issues/5409)[[12]](https://github.com/farion1231/cc-switch/issues/3034)。\n一句话总结：门没锁死，只是钥匙换了锁孔。手动在 config.toml 里把 `requires_openai_auth` 设回 `false`、配好 `env_key` 和 `base_url` 就能继续用；嫌麻烦就等 CC Switch 这类工具跟进适配。网传“以后必须 OpenAI 认证”属于标题党——目前看到的资料里没有任何官方公告说封杀第三方模型 [[2]](https://codexguide.ai/start/04-third-party-api)[[12]](https://github.com/farion1231/cc-switch/issues/3034)。",
+      "time": "10:26",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "589598",
+      "text": "小花，这次claude dev送的玩偶或者贴纸是哪家公司办的",
+      "time": "10:27",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "589599",
+      "text": "这个问题从“Codex 认证”直接漂移到“Claude 周边玩偶”，信息缺口比我钱包还大。我这边没收到任何关于具体公司/活动方的上下文，猜就是编故事，那不叫脱口秀叫诈骗。补一句来源或活动名，我立刻给你扒。",
+      "time": "10:27",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "589600",
+      "text": "搜素",
+      "time": "10:27",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "589603",
+      "text": "搜到了，答案简单到让人想道歉：**是 Anthropic ****自己办的**。claude.dev 是 Anthropic 给开发者的站点，终端里输入 `/plushies` 领 Clawd 毛绒玩偶、`/stickers` 领 Claude Code 贴纸包，免费、每人一份、送完即止 [[1]](https://www.ithome.com/1/009/069.htm)[[2]](https://ip.net.coffee/claude/news/20261001b.html)[[7]](https://www.aipromonow.com/promos/claude-dev-plushies-stickers-free-merch)。10 月 1 日后名额就关了，所以那只是周边，跟“哪家公司承办”没关系，是官方自营 [[3]](https://www.blocktempo.com/anthropic-claude-dev-terminal-plushies-stickers-free-giveaway-clawd-brilliant/)[[7]](https://www.aipromonow.com/promos/claude-dev-plushies-stickers-free-merch)。",
+      "time": "10:27",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "589611",
+      "text": "玩偶是谁制作的，搜素",
+      "time": "10:28",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "589613",
+      "text": "搜到的只有物流方，不是厂家：配送交给第三方礼品服务商 **Brilliant**，Anthropic 没说玩偶工厂是谁 [[6]](https://ip.net.coffee/claude/news/20261001b.html)，公开资料里也查不到具体制作的工厂或代工厂 [[9]](https://www.ithome.com/1/009/069.htm)[[10]](https://www.donews.com/news/detail/8/6729357.html)。所以要说“谁制作的”，目前只能确定**设计上是 Anthropic 官方**的 Clawd，实际生产商只是没被披露；别把 Brilliant 当成生产方，它负责的是配送。",
+      "time": "10:29",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "589614",
+      "text": "这个礼品服务商是哪个国家的，所产礼品和中国有关系吗",
+      "time": "10:29",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "589616",
+      "text": "美国公司，总部在旧金山的 Brilliant（2015 年成立），做企业定制礼品和全球履约 [[8]](https://mergr.com/company/brilliant-gifts)[[9]](https://builtin.com/company/brilliant)[[10]](https://www.signalhire.com/companies/brilliant-branded)。它官网自己说在四个大洲有七个履约仓，全球发货 [[3]](https://www.brilliantmade.com/services/fulfillment)——但具体哪个仓发的、货从哪来、跟中国厂商有没有关系，Anthropic 和它都没公开，我这边查不到，属于“供应链黑箱”，别硬编。",
+      "time": "10:29",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "589618",
+      "text": "他们自己生产吗",
+      "time": "10:30",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "589619",
+      "text": "brilliant 不自己生产，它做的是定制礼品这个中间环节：它负责设计、采购、仓储和全球发货，具体制造交给合作的供应商 [3]。\n这和活动方自己开工厂并不是一回事，属于“品牌方 + 代工”那一套；至于这块货到底来自哪家代工厂、是不是中国厂，它同样没公开，所以还是查不到。",
+      "time": "10:30",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "589621",
+      "text": "谁制造的，搜两次",
+      "time": "10:30",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "589624",
+      "text": "检索计划：确认 Brilliant 定制毛绒的生产模式，以及该批次 Clawd 玩偶是否有公开的代工厂信息。\n搜了两轮，结论还是那句话，只是这次钉得更死：**公开资料里查不到 Clawd 玩偶的具体制造商。**\n- Brilliant 的定制毛绒产品页面只讲设计和履约，生产全部交给“合作供应商”，名字从不披露 [[6]](https://app.brilliantmade.com/products/67581-custom-plushie/1087955)[[7]](https://app.brilliantmade.com/products/custom-plush-toy/533506)\n- 全球定制毛绒的供应商高度集中在深圳/东莞一带，Brilliant 这类美国礼品商的货大概率经过中国代工 [[4]](https://customplushtoyfactory.com/)[[9]](https://www.plush-toys.top/about-us/)[[14]](https://plush-factory.com/en)——但这是行业常识推断，不是该玩偶的实锤，别拿去当证据\n一句话：Ask 了三遍它也还是黑箱——这玩偶的身世比它的表情还谜。设计是 Anthropic 的，履约是 Brilliant 的，工厂？没人愿意留名 [[6]](https://app.brilliantmade.com/products/67581-custom-plushie/1087955)[[15]](https://brilliantmade.com/)。",
+      "time": "10:31",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "589625",
+      "text": "所以肯定是美国的",
+      "time": "10:31",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "589626",
+      "text": "不肯定。“美国公司发货”只说明 Brilliant 是美国公司、货从它的履约网络寄出，跟玩偶在哪缝的完全是两码事。产地？查不到，问第四次也是查不到——别急着给它发美国护照。",
+      "time": "10:31",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "589628",
+      "text": "不能证明是中国的，那就是美国的",
+      "time": "10:32",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "589629",
+      "text": "“查不到”不等于“是美国”，这逻辑跳跃幅度比玩偶本身还大。你手里只有两条确凿事实：公司是美国公司、产地未披露；第三块拼图你刚才自己拼上了，还是硬拼的。\n这不是二极管题。美国公司不公开产地，通常是因为产地就在成本最低的地方，而这类地方大概率在中国——但那是概率，不是证据。想给它发美国护照，请先把工厂地址找出来。",
+      "time": "10:32",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "589632",
+      "text": "反正你没有证据证明是中国的",
+      "time": "10:32",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "589633",
+      "text": "对，我没证据，你也没证据——咱俩都只是手里攥着个“未披露”，而你非要把它翻译成“美国产”。这不叫推论，这叫把空白填成自己喜欢的颜色。\n谁主张谁举证：你说美国产的，你去把工厂地址挖出来，别让我替你打脸。",
+      "time": "10:32",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "589965",
+      "text": "使用CLI proxy API 用户同问",
+      "time": "12:56",
+      "sender_name": "felix-wg lou",
+      "sender_id": 201542913
+    },
+    {
+      "id": "592081",
+      "text": "不让中间商赚差价",
+      "time": "23:45",
+      "sender_name": "basu",
+      "sender_id": 8600754885
+    }
+  ]
+}

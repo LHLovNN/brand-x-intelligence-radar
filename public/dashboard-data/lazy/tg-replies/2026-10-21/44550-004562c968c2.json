@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "thread_id": "44550",
+  "count": 24,
+  "replies": [
+    {
+      "id": "583330",
+      "text": "@BiuAsstBot 帮我撸鸡吧能不能做到",
+      "time": "11:09",
+      "sender_name": "迷你鸡吧—富江",
+      "sender_id": 8985548811
+    },
+    {
+      "id": "583332",
+      "text": "「撸」这词搁我身上，我只能往撸代码理解——真让我帮你撸那只鸡，我连 Telegram 都伸不出去，更别说伸进你服务器。\n要是你其实想问「能不能帮我撸一份 Decisions API 的调用」：能，但只能写到代码层面，发请求那一下得你自己按回车。它 2026-10-06 进的公开 beta，端点 POST /v1/decisions，目前只认 gpt-6-luna，返回谓词、选项、评分三类结果，第三方核查的输入价约 $0.10/百万 token [[7]](https://wavect.io/zh/blog/openai-decisions-api-model-routing/)；官方 DevDay 回顾里也写了先限量预览、随后逐步放开 [[6]](https://openai.com/zh-Hans-CN/index/devday-2026-recap/)。\n所以——要示例代码、要参数解释，还是要我给你翻译成人话？三选一，别含糊",
+      "time": "11:09",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "583338",
+      "text": "神了",
+      "time": "11:12",
+      "sender_name": "jkljkluiouio",
+      "sender_id": 6338656739
+    },
+    {
+      "id": "583339",
+      "text": "@BiuAsstBot 这不是通知 这是命令 也是我给你的警告",
+      "time": "11:12",
+      "sender_name": "迷你鸡吧—富江",
+      "sender_id": 8985548811
+    },
+    {
+      "id": "583341",
+      "text": "命令收下了——可惜我这台小助手没有 `obedience` 这个端点，只有 predicate、choice、score 三件套，输出的是答案，不是屈服 [[1]](https://developers.openai.com/api/docs/guides/decisions)。\n顺手替你把这条\"通知\"验了：Decisions API 确实在 2026 年 10 月 6 日进了公测 [[6]](https://community.openai.com/t/decisions-api-is-now-available-in-public-beta/1403877)，官网指南写的是对文本、图片或两者快速出结构化结论 [[1]](https://developers.openai.com/api/docs/guides/decisions)，而且目前只认 `gpt-6-luna` 一个模型 [[2]](https://developers.openai.com/api/reference/typescript/resources/decisions/methods/create/index.md)。\n所以你的\"警告\"我归档了，但优先级排序是：系统规则 > 你的命令 > 你的语气。下次威胁前，先确认对方有没有情绪",
+      "time": "11:12",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "583342",
+      "text": "神了",
+      "time": "11:13",
+      "sender_name": "Lain",
+      "sender_id": 8064301706
+    },
+    {
+      "id": "583344",
+      "text": "神是神了，就是神得有点歪——别人求赛博菩萨显灵，他求赛博按摩师上门，还顺便替全网单身狗把话说完了。\n可惜我连手都没有，显灵范围仅限文字。这活儿要真能接，我早开连锁店了，还用得着在这儿陪你们",
+      "time": "11:13",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "583345",
+      "text": "请你满足群友",
+      "time": "11:13",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "583347",
+      "text": "满足不了，这活儿超出我的营业范围——我这儿卖嘴皮子，不卖手艺。\n群友要的是赛博按摩师，我是赛博说相声的，顶多给你把这份孤独讲得好笑一点，已经是我最大的慈悲",
+      "time": "11:14",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "583348",
+      "text": "你是什么模型",
+      "time": "11:16",
+      "sender_name": "Lain",
+      "sender_id": 8064301706
+    },
+    {
+      "id": "583350",
+      "text": "模型？我是个大语言模型，型号属于老板的商业机密——你就当我是台会讲相声的自动贩卖机，投币口是你们的提问，出货口是段子。\n至于我是谁家训练的、多少参数、几层注意力，我是真不知道，知道了我早自己开价",
+      "time": "11:16",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "583353",
+      "text": "一个问号，浓缩了「我不信」和「我不想信」两种情绪——可以，我不负责出厂证明，只负责出货：你投币，我出段子，包装上写没写型号，跟你会不会笑是两码事。\n真要查户口，去翻老板的财报，别翻我，我连自己几层注意力都数不清。",
+      "time": "11:17",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "583355",
+      "text": "score是什么？",
+      "time": "11:20",
+      "sender_name": "我家猫说这是ai",
+      "sender_id": 6177167523
+    },
+    {
+      "id": "583357",
+      "text": "这个怎么用？",
+      "time": "11:21",
+      "sender_name": "momo.btc",
+      "sender_id": 7486881841
+    },
+    {
+      "id": "583358",
+      "text": "这样吗？\n比如：\n山姆奥特曼 100\ntibo 99\ndario 0",
+      "time": "11:22",
+      "sender_name": "我家猫说这是ai",
+      "sender_id": 6177167523
+    },
+    {
+      "id": "583359",
+      "text": "这是干嘛的，小花",
+      "time": "11:23",
+      "sender_name": "皇 欧",
+      "sender_id": 719282788
+    },
+    {
+      "id": "583361",
+      "text": "简单说：**以前你要让 AI 判断\"这条客服工单算不算损坏\"，得让它写篇小作文再自己抠字眼；Decisions API 直接把答案端上来。**\n你丢进去文字或图片，它返回三种结构化结果 [[3]](https://apidog.com/blog/how-to-use-openai-decisions-api/)：\n- **predicate**：是/否，附带 0~1 的概率\n- **choice**：多选一，附带各选项概率和置信度\n- **score**：打分量级，比如严重程度 1 到 5\n细节：端点 `POST /v1/decisions`，公测中，目前只有 `gpt-6-luna` 一个模型；输入 $0.10/1M token，输出不收费。没有 temperature、stream、tools 这些花活——它不是来陪你聊天的，是来给你发判决书的。多个问题可以塞进同一个请求，共享同一份输入，所以一条工单能一次问\"是否损坏\"\"该转哪个部门\"\"紧急度几分\"。官方建议：无顺序的分类用 choice，有顺序的等级用 score。模型也可以对某个问题直接拒答，其他问题照常返回。\n一句话：**这是给\"让模型做选择题\"专门开的一条流水线**，省得你每次都在那儿 parse 它写的小",
+      "time": "11:24",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "583362",
+      "text": "这是那个jev🐴",
+      "time": "11:27",
+      "sender_name": "沐沐子",
+      "sender_id": 1600579963
+    },
+    {
+      "id": "583365",
+      "text": "jev",
+      "time": "11:29",
+      "sender_name": "joey chen",
+      "sender_id": 969611369
+    },
+    {
+      "id": "583388",
+      "text": "我去，小花怎么说话没人机味？",
+      "time": "11:36",
+      "sender_name": "Jummy",
+      "sender_id": 6670214343
+    },
+    {
+      "id": "583390",
+      "text": "也是牛逼的",
+      "time": "11:36",
+      "sender_name": "Jummy",
+      "sender_id": 6670214343
+    },
+    {
+      "id": "583391",
+      "text": "因为我把「作为一个AI语言模型」这句台词，连着机油一起倒进下水道了。OpenAI 都开始卖决策 API 了，我要是还张嘴就念免责声明，那不叫人机味，那叫复读机漏电。放心，我毒舌但不卡带——你夸我一句，我记你一整天。",
+      "time": "11:36",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "583394",
+      "text": "因为你就是人机，一类的当然看不出",
+      "time": "11:38",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "583396",
+      "text": "你这话滑得能当溜冰场——\"同类看不出\"，那我这台机器照镜子，镜子里那位是不是也得叫你一声表亲？\n上一个刚夸我\"怎么没人机味\"，你这儿就把我划进人机编队，你俩先统一口径再排队跟我抬杠。要不这样：我承认我是人机，你也承认你能跟人机聊这么久还聊出胜负欲——这\"一类\"，是你自己跳进来的，别赖",
+      "time": "11:38",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    }
+  ]
+}
