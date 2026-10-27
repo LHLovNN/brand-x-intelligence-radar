@@ -1,0 +1,102 @@
+{
+  "conversation_id": "2114584261672026553",
+  "anchor_post_id": "2114584261672026553",
+  "summary_zh": "前文围绕自媒体作者被评价“AI味”的痛点展开，收录帖借此推荐10个开源Skill和Claude Code、Codex、NotebookLM、HeyGen等工具，把话题转向内容生产工具链与使用体验、效率价值，未涉及价格配送。后续两人认同去AI味刚需，并追问同质化。可判断为真实场景下的偏正向工具分享，具收藏传播价值。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2114584261672026553",
+      "url": "https://x.com/KobinFlow/status/2114584261672026553",
+      "created_at": "2026-10-26T05:05:49Z",
+      "text": "做自媒体最搞心态的，不是写不出来，而是你吭哧吭哧改了 3 小时，发出去读者第一条评论是：“浓浓的 AI 味”。\n\n「在当今快节奏时代？不难发现？值得注意的是？」——读者一眼就划走了。\n\n其实现在的开源社区，早就把「自媒体流水线」卷出花了。光是专门给文案去 AI 味的两个神仙 Skill，加起来就卷了 8 万多星。\n\n从找热点、啃素材、写爆款、洗掉 AI 味，到自动做小红书卡片、IP 爆款封面、甚至用代码跑视频……精选这 10 个自媒体人必装的 Skill 清单，装进 Claude Code 或 Codex，直接把脏活累活全接管了：\n\n01｜mvanhorn/last30days-skill（⭐ 6.5w+）\n一键扒出全网近 30 天的最热讨论\n🔗 https://t.co/ZcUwGoVlrt\n别再拍脑袋想选题了。直接让它去扫 Reddit、X、YouTube 和 HN 过去 30 天的热帖，哪些痛点被骂得最多、哪个话题被转爆了，直接拉个清单给你，开局就是自带流量的话题。\n\n02｜joeseesun/qiaomu-anything-to-notebooklm（⭐ 6.3k+）\n万物皆可一键塞进 NotebookLM\n🔗 https://t.co/qmpTEtwBKh\n公众号长文、同行网页、油管长视频甚至大几十页 PDF，懒得通读？直接一键投喂给 Google NotebookLM，瞬间帮你提炼出播客对谈、思维导图或核心素材卡，洗素材速度起码翻 5 倍。\n\n03｜coreyhaines31/marketingskills（⭐ 5.6w+）\n装了一个懂「营销心理学」的文案军师\n🔗 https://t.co/7eIplUkA7C\n老外做增长的 50 多个营销套路库。怎么写抓人的推文开头？怎么埋转化钩子？社媒互动怎么接话？直接调里面的技能，比你自己干憋标题强太多。\n\n04｜blader/humanizer（⭐ 6.0w+）\n把英文 AI 腔彻底洗干净\n🔗 https://t.co/YHu9gtN8xA\n做海外 X、LinkedIn 或出海内容的救命工具。专门爆改 ChatGPT 那套油腻的“In today's fast-paced world...”，换成地道老外的口语表达和短句节奏。\n\n05｜op7418/Humanizer-zh（⭐ 2.0w+）\n中文自媒体去 AI 味天花板\n🔗 https://t.co/3Hh2Y0ACO8\n国内自媒体必装！专治“不仅如此”、“综上所述”、“值得一提的是”这类废话。直接把公文风、翻译腔，改成有脾气、有呼吸感、像活人在聊天的中文短句。\n\n06｜JimLiu/baoyu-skills（⭐ 2.6w+）\n宝玉老师的自媒体全家桶（排版/生图/分发）\n🔗 https://t.co/C9Ukc7ei31\n一个人就是一个编辑部：写完长文，一键转公众号漂亮排版、画信息图/SVG 图解、生成封面，还能自动同步转推。21 个技能打包，极其省心。\n\n07｜op7418/guizang-social-card-skill（⭐ 7.7k+）\n小红书多图轮播 & 公众号封面生成器\n🔗 https://t.co/thAPqQ6Nih\n手残党做封面的福音。内置 28 种极简排版布局和 10 种高级配色，只要给一段文字，直接吐出小红书爆款卡片和公众号 21:9 封面，审美非常在线。\n\n08｜punk-skills（IP 视觉与封面海报生成）（⭐ 1.4k+）\n自媒体爆款封面与真人 IP 视觉神器\n做个人 IP、公众号头图或视频号封面最吃亏的就是“封面图廉价”。这套技能专攻爆款海报、人物抠图合成、主视觉色调提取与风格化卡片，扔一篇草稿就能自动匹配审美拉满的高点击封面。\n\n09｜heygen-com/hyperframes（⭐ 7.2w+）\n自媒体做短视频的降维打击\n🔗 https://t.co/FAG1BVRcOz\nHeyGen 官方搞的开源黑科技。不用打开剪映一点点拖轨道，直接写 HTML 代码来排版和渲染视频，特别适合做数据可视化、快节奏干货短视频的批量产出。\n\n10｜anthropics/skills（⭐ 18.3w+）\n官方出品的瑞士军刀（海报设计/格式转换）\n🔗 https://t.co/5314K6Afon\nAnthropic 官方仓库。做长图海报用里面的 canvas-design，做文档报告用 pptx / sheets，稳定性最高的基础设施，做内容交付必备。\n\n💡 抄作业：自媒体人的 3 条极简流水线\n\n公众号长文流：01 找近30天热点 ➔ 05 去AI味精修 ➔ 06 宝玉排版 / 08 punk爆款封面\n\n小红书图文流：03 营销心理学文案 ➔ 05 口语化改写 ➔ 07 归藏社媒卡片做图\n\n视频号/短视频流：01 热点痛点挖掘 ➔ 02 提炼干货脚本 ➔ 08/09 IP封面+代码跑视频\n\n最后一句大实话：\n工具链再牛，只负责帮你干掉 80% 搜素材、调格式、排版的机械劳动。真正值钱的独家观点、踩坑经历和真人体感，永远别偷懒外包给 AI。\n\n📌 建议先点赞收藏，装 Claude Code / Codex 时直接按顺序拉仓库照抄。",
+      "original_text": "做自媒体最搞心态的，不是写不出来，而是你吭哧吭哧改了 3 小时，发出去读者第一条评论是：“浓浓的 AI 味”。\n\n「在当今快节奏时代？不难发现？值得注意的是？」——读者一眼就划走了。\n\n其实现在的开源社区，早就把「自媒体流水线」卷出花了。光是专门给文案去 AI 味的两个神仙 Skill，加起来就卷了 8 万多星。\n\n从找热点、啃素材、写爆款、洗掉 AI 味，到自动做小红书卡片、IP 爆款封面、甚至用代码跑视频……精选这 10 个自媒体人必装的 Skill 清单，装进 Claude Code 或 Codex，直接把脏活累活全接管了：\n\n01｜mvanhorn/last30days-skill（⭐ 6.5w+）\n一键扒出全网近 30 天的最热讨论\n🔗 https://t.co/ZcUwGoVlrt\n别再拍脑袋想选题了。直接让它去扫 Reddit、X、YouTube 和 HN 过去 30 天的热帖，哪些痛点被骂得最多、哪个话题被转爆了，直接拉个清单给你，开局就是自带流量的话题。\n\n02｜joeseesun/qiaomu-anything-to-notebooklm（⭐ 6.3k+）\n万物皆可一键塞进 NotebookLM\n🔗 https://t.co/qmpTEtwBKh\n公众号长文、同行网页、油管长视频甚至大几十页 PDF，懒得通读？直接一键投喂给 Google NotebookLM，瞬间帮你提炼出播客对谈、思维导图或核心素材卡，洗素材速度起码翻 5 倍。\n\n03｜coreyhaines31/marketingskills（⭐ 5.6w+）\n装了一个懂「营销心理学」的文案军师\n🔗 https://t.co/7eIplUkA7C\n老外做增长的 50 多个营销套路库。怎么写抓人的推文开头？怎么埋转化钩子？社媒互动怎么接话？直接调里面的技能，比你自己干憋标题强太多。\n\n04｜blader/humanizer（⭐ 6.0w+）\n把英文 AI 腔彻底洗干净\n🔗 https://t.co/YHu9gtN8xA\n做海外 X、LinkedIn 或出海内容的救命工具。专门爆改 ChatGPT 那套油腻的“In today's fast-paced world...”，换成地道老外的口语表达和短句节奏。\n\n05｜op7418/Humanizer-zh（⭐ 2.0w+）\n中文自媒体去 AI 味天花板\n🔗 https://t.co/3Hh2Y0ACO8\n国内自媒体必装！专治“不仅如此”、“综上所述”、“值得一提的是”这类废话。直接把公文风、翻译腔，改成有脾气、有呼吸感、像活人在聊天的中文短句。\n\n06｜JimLiu/baoyu-skills（⭐ 2.6w+）\n宝玉老师的自媒体全家桶（排版/生图/分发）\n🔗 https://t.co/C9Ukc7ei31\n一个人就是一个编辑部：写完长文，一键转公众号漂亮排版、画信息图/SVG 图解、生成封面，还能自动同步转推。21 个技能打包，极其省心。\n\n07｜op7418/guizang-social-card-skill（⭐ 7.7k+）\n小红书多图轮播 & 公众号封面生成器\n🔗 https://t.co/thAPqQ6Nih\n手残党做封面的福音。内置 28 种极简排版布局和 10 种高级配色，只要给一段文字，直接吐出小红书爆款卡片和公众号 21:9 封面，审美非常在线。\n\n08｜punk-skills（IP 视觉与封面海报生成）（⭐ 1.4k+）\n自媒体爆款封面与真人 IP 视觉神器\n做个人 IP、公众号头图或视频号封面最吃亏的就是“封面图廉价”。这套技能专攻爆款海报、人物抠图合成、主视觉色调提取与风格化卡片，扔一篇草稿就能自动匹配审美拉满的高点击封面。\n\n09｜heygen-com/hyperframes（⭐ 7.2w+）\n自媒体做短视频的降维打击\n🔗 https://t.co/FAG1BVRcOz\nHeyGen 官方搞的开源黑科技。不用打开剪映一点点拖轨道，直接写 HTML 代码来排版和渲染视频，特别适合做数据可视化、快节奏干货短视频的批量产出。\n\n10｜anthropics/skills（⭐ 18.3w+）\n官方出品的瑞士军刀（海报设计/格式转换）\n🔗 https://t.co/5314K6Afon\nAnthropic 官方仓库。做长图海报用里面的 canvas-design，做文档报告用 pptx / sheets，稳定性最高的基础设施，做内容交付必备。\n\n💡 抄作业：自媒体人的 3 条极简流水线\n\n公众号长文流：01 找近30天热点 ➔ 05 去AI味精修 ➔ 06 宝玉排版 / 08 punk爆款封面\n\n小红书图文流：03 营销心理学文案 ➔ 05 口语化改写 ➔ 07 归藏社媒卡片做图\n\n视频号/短视频流：01 热点痛点挖掘 ➔ 02 提炼干货脚本 ➔ 08/09 IP封面+代码跑视频\n\n最后一句大实话：\n工具链再牛，只负责帮你干掉 80% 搜素材、调格式、排版的机械劳动。真正值钱的独家观点、踩坑经历和真人体感，永远别偷懒外包给 AI。\n\n📌 建议先点赞收藏，装 Claude Code / Codex 时直接按顺序拉仓库照抄。",
+      "translation_zh": "做自媒体最搞心态的，不是写不出来，而是你吭哧吭哧改了 3 小时，发出去读者第一条评论是：“浓浓的 AI 味”。\n\n「在当今快节奏时代？不难发现？值得注意的是？」——读者一眼就划走了。\n\n其实现在的开源社区，早就把「自媒体流水线」卷出花了。光是专门给文案去 AI 味的两个神仙 Skill，加起来就卷了 8 万多星。\n\n从找热点、啃素材、写爆款、洗掉 AI 味，到自动做小红书卡片、IP 爆款封面、甚至用代码跑视频……精选这 10 个自媒体人必装的 Skill 清单，装进 Claude Code 或 Codex，直接把脏活累活全接管了：\n\n01｜mvanhorn/last30days-skill（⭐ 6.5w+）\n一键扒出全网近 30 天的最热讨论\n🔗 https://t.co/ZcUwGoVlrt\n别再拍脑袋想选题了。直接让它去扫 Reddit、X、YouTube 和 HN 过去 30 天的热帖，哪些痛点被骂得最多、哪个话题被转爆了，直接拉个清单给你，开局就是自带流量的话题。\n\n02｜joeseesun/qiaomu-anything-to-notebooklm（⭐ 6.3k+）\n万物皆可一键塞进 NotebookLM\n🔗 https://t.co/qmpTEtwBKh\n公众号长文、同行网页、油管长视频甚至大几十页 PDF，懒得通读？直接一键投喂给 Google NotebookLM，瞬间帮你提炼出播客对谈、思维导图或核心素材卡，洗素材速度起码翻 5 倍。\n\n03｜coreyhaines31/marketingskills（⭐ 5.6w+）\n装了一个懂「营销心理学」的文案军师\n🔗 https://t.co/7eIplUkA7C\n老外做增长的 50 多个营销套路库。怎么写抓人的推文开头？怎么埋转化钩子？社媒互动怎么接话？直接调里面的技能，比你自己干憋标题强太多。\n\n04｜blader/humanizer（⭐ 6.0w+）\n把英文 AI 腔彻底洗干净\n🔗 https://t.co/YHu9gtN8xA\n做海外 X、LinkedIn 或出海内容的救命工具。专门爆改 ChatGPT 那套油腻的“In today's fast-paced world...”，换成地道老外的口语表达和短句节奏。\n\n05｜op7418/Humanizer-zh（⭐ 2.0w+）\n中文自媒体去 AI 味天花板\n🔗 https://t.co/3Hh2Y0ACO8\n国内自媒体必装！专治“不仅如此”、“综上所述”、“值得一提的是”这类废话。直接把公文风、翻译腔，改成有脾气、有呼吸感、像活人在聊天的中文短句。\n\n06｜JimLiu/baoyu-skills（⭐ 2.6w+）\n宝玉老师的自媒体全家桶（排版/生图/分发）\n🔗 https://t.co/C9Ukc7ei31\n一个人就是一个编辑部：写完长文，一键转公众号漂亮排版、画信息图/SVG 图解、生成封面，还能自动同步转推。21 个技能打包，极其省心。\n\n07｜op7418/guizang-social-card-skill（⭐ 7.7k+）\n小红书多图轮播 & 公众号封面生成器\n🔗 https://t.co/thAPqQ6Nih\n手残党做封面的福音。内置 28 种极简排版布局和 10 种高级配色，只要给一段文字，直接吐出小红书爆款卡片和公众号 21:9 封面，审美非常在线。\n\n08｜punk-skills（IP 视觉与封面海报生成）（⭐ 1.4k+）\n自媒体爆款封面与真人 IP 视觉神器\n做个人 IP、公众号头图或视频号封面最吃亏的就是“封面图廉价”。这套技能专攻爆款海报、人物抠图合成、主视觉色调提取与风格化卡片，扔一篇草稿就能自动匹配审美拉满的高点击封面。\n\n09｜heygen-com/hyperframes（⭐ 7.2w+）\n自媒体做短视频的降维打击\n🔗 https://t.co/FAG1BVRcOz\nHeyGen 官方搞的开源黑科技。不用打开剪映一点点拖轨道，直接写 HTML 代码来排版和渲染视频，特别适合做数据可视化、快节奏干货短视频的批量产出。\n\n10｜anthropics/skills（⭐ 18.3w+）\n官方出品的瑞士军刀（海报设计/格式转换）\n🔗 https://t.co/5314K6Afon\nAnthropic 官方仓库。做长图海报用里面的 canvas-design，做文档报告用 pptx / sheets，稳定性最高的基础设施，做内容交付必备。\n\n💡 抄作业：自媒体人的 3 条极简流水线\n\n公众号长文流：01 找近30天热点 ➔ 05 去AI味精修 ➔ 06 宝玉排版 / 08 punk爆款封面\n\n小红书图文流：03 营销心理学文案 ➔ 05 口语化改写 ➔ 07 归藏社媒卡片做图\n\n视频号/短视频流：01 热点痛点挖掘 ➔ 02 提炼干货脚本 ➔ 08/09 IP封面+代码跑视频\n\n最后一句大实话：\n工具链再牛，只负责帮你干掉 80% 搜素材、调格式、排版的机械劳动。真正值钱的独家观点、踩坑经历和真人体感，永远别偷懒外包给 AI。\n\n📌 建议先点赞收藏，装 Claude Code / Codex 时直接按顺序拉仓库照抄。",
+      "translation_status": "source_chinese",
+      "author_name": "Kobin",
+      "author_handle": "KobinFlow",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2100529093930631168/pRHF6Oud_normal.jpg",
+      "author_followers": 1481,
+      "author_following": 674,
+      "author_bio": "🎓 浙大计科 · 前独角兽 Web 架构\n⚡ 从被 AI 裹挟，到开始驾驭它\n 📓倔强 90 后老兵的 AI 求生笔记\nhttps://t.co/O4ylXVvFz0",
+      "author_location": null,
+      "author_joined_at": "2026-07-03T09:21:09Z",
+      "author_verified": false,
+      "links": [
+        "http://github.com/mvanhorn/last30days-skill",
+        "http://github.com/joeseesun/qiaomu-anything-to-notebooklm",
+        "http://github.com/coreyhaines31/marketingskills",
+        "http://github.com/blader/humanizer",
+        "http://github.com/op7418/Humanizer-zh",
+        "http://github.com/JimLiu/baoyu-skills",
+        "http://github.com/op7418/guizang-social-card-skill",
+        "http://github.com/heygen-com/hyperframes",
+        "http://github.com/anthropics/skills"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 368
+      }
+    },
+    {
+      "post_id": "2114585342867370058",
+      "url": "https://x.com/robinb1129/status/2114585342867370058",
+      "created_at": "2026-10-26T05:10:07Z",
+      "text": "@KobinFlow Humanizer那几个确实刚需，那种公文腔读起来太累人了。这种自动化工作流确实省时间，但最怕最后跑出来的东西都长得一模一样，你怎么看同质化问题？",
+      "original_text": "@KobinFlow Humanizer那几个确实刚需，那种公文腔读起来太累人了。这种自动化工作流确实省时间，但最怕最后跑出来的东西都长得一模一样，你怎么看同质化问题？",
+      "translation_zh": "@KobinFlow Humanizer那几个确实刚需，那种公文腔读起来太累人了。这种自动化工作流确实省时间，但最怕最后跑出来的东西都长得一模一样，你怎么看同质化问题？",
+      "translation_status": "source_chinese",
+      "author_name": "⚡兔米api中转站",
+      "author_handle": "robinb1129",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2112761356214816768/7CBpKn8__normal.jpg",
+      "author_followers": 13,
+      "author_following": 3,
+      "author_bio": "api中转站 https://t.co/XLEM0ISVr6 \n电报群：https://t.co/d9umKRm6O9\n【cx 0.1 分组，CCMax 1.0分组,grok0.15 分组，claude，codex 编程专业】",
+      "author_location": null,
+      "author_joined_at": "2011-09-16T01:09:36Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 6
+      }
+    },
+    {
+      "post_id": "2114638627246666184",
+      "url": "https://x.com/taviozflux/status/2114638627246666184",
+      "created_at": "2026-10-26T08:41:51Z",
+      "text": "@KobinFlow 改了三小時被說 AI 味，太扎心了。那幾個開頭句式確實一看就出戲，值得避開。",
+      "original_text": "@KobinFlow 改了三小時被說 AI 味，太扎心了。那幾個開頭句式確實一看就出戲，值得避開。",
+      "translation_zh": "@KobinFlow 改了三小時被說 AI 味，太扎心了。那幾個開頭句式確實一看就出戲，值得避開。",
+      "translation_status": "source_chinese",
+      "author_name": "Tavi Ozflux",
+      "author_handle": "taviozflux",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2112351837936660480/bXXFQy8r_normal.jpg",
+      "author_followers": 641,
+      "author_following": 640,
+      "author_bio": "想瞓覺💤都有錢收？我做緊！\n🇭🇰屋邨仔・無殼蝸牛 → 🇦🇺A$1.5M+ 物業\n💼 基金公司 PM，話事 A$1M+ 項目\n🤖 I人打工仔，學AI唔露面搵第二收入\n☕ 住過 MEL、HBA、ADL、BNE｜1🐕 2🐈\n👇 blog https://t.co/pPFOwpPZym｜AI分身課程（推薦連結）",
+      "author_location": "Brisbane, Queensland",
+      "author_joined_at": "2025-03-05T12:01:18Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 3
+      }
+    }
+  ]
+}
