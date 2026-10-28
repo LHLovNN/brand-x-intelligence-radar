@@ -1,0 +1,112 @@
+{
+  "conversation_id": "2114978106423545986",
+  "anchor_post_id": "2114978106423545986",
+  "summary_zh": "前文由Cryptoxorz向@GaryAIytb介绍曹老师开源的「AI情报雷达」，核心话题是AI视频选题监测工具。收录帖把讨论具体化到产品功能、安装步骤、运行成本和使用坑点，带有亲测体验与推广意味。后续GaryAIytb仅回复“牛”，未补充细节；上下文有助于判断信息源较具体、情绪正面，但传播延展有限。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2114978106423545986",
+      "url": "https://x.com/Cryptoxorz/status/2114978106423545986",
+      "created_at": "2026-10-27T07:10:49Z",
+      "text": "@GaryAIytb 曹老师是生财的群友，做 YouTube 的大牛。他开源了一款叫「AI 情报雷达」的工具，我这两天一直在用。\n\n工具地址：https://t.co/gmfPHAlGzo\n\n一句话说清楚：它每天早上会自动扫一遍 B站、YouTube、抖音、TikTok、小红书、X、GitHub，挑出 AI 和 AI 视频圈刚冒头的题材，生成一页能直接播放视频的日报。\n\n它跟热榜最大的区别，在「新起」这个判断标准。一个题材要同时满足两条，才会被标成「新起」：这个词以前几乎搜不到，并且有 3 个以上账号在做。如果只满足一条，就只标成「观察」。\n\n我昨天跑第一期时，全是「持续」和「观察」，还以为得养两个月的数据才能看出「新起」。今天第二期直接出了「新起 Claude 改造电视教程」——它的历史基线用的是 B站自己过去 53 天的播放数据，不用你慢慢攒。\n\n使用方法：下面几步我都实际跑过。\n\n把项目克隆下来。它只用 Python 标准库，不用装任何依赖。\ncp .env.example .env，然后填两个 key：一个是 TikHub，负责抖音、X、YouTube 的搜索；另一个是任意 OpenAI 兼容的模型 key，默认用 DeepSeek。\n运行 python3 -m radar run。整个过程 6–13 分钟，会扫 2200 条内容，归出十几二十个题材。\n运行 python3 -m radar serve，然后打开 localhost:8792。\n成本：跑一期，TikHub 花 $0.17，模型花 4 毛钱，加起来一天一块七。跑完产出的是纯静态网页，扔到 Cloudflare Pages 就能公开访问。\n\n我自己踩到的一个坑：它默认的 LLM_TIMEOUT=360 秒不够用。它一次要让模型吐出 1 万 token 的 JSON，得把超时改成 900 秒，不然跑十分钟不出结果。\n\n下面是录制的使用视频，一目了然，需要的朋友安装使用，关注一下曹老师！",
+      "original_text": "@GaryAIytb 曹老师是生财的群友，做 YouTube 的大牛。他开源了一款叫「AI 情报雷达」的工具，我这两天一直在用。\n\n工具地址：https://t.co/gmfPHAlGzo\n\n一句话说清楚：它每天早上会自动扫一遍 B站、YouTube、抖音、TikTok、小红书、X、GitHub，挑出 AI 和 AI 视频圈刚冒头的题材，生成一页能直接播放视频的日报。\n\n它跟热榜最大的区别，在「新起」这个判断标准。一个题材要同时满足两条，才会被标成「新起」：这个词以前几乎搜不到，并且有 3 个以上账号在做。如果只满足一条，就只标成「观察」。\n\n我昨天跑第一期时，全是「持续」和「观察」，还以为得养两个月的数据才能看出「新起」。今天第二期直接出了「新起 Claude 改造电视教程」——它的历史基线用的是 B站自己过去 53 天的播放数据，不用你慢慢攒。\n\n使用方法：下面几步我都实际跑过。\n\n把项目克隆下来。它只用 Python 标准库，不用装任何依赖。\ncp .env.example .env，然后填两个 key：一个是 TikHub，负责抖音、X、YouTube 的搜索；另一个是任意 OpenAI 兼容的模型 key，默认用 DeepSeek。\n运行 python3 -m radar run。整个过程 6–13 分钟，会扫 2200 条内容，归出十几二十个题材。\n运行 python3 -m radar serve，然后打开 localhost:8792。\n成本：跑一期，TikHub 花 $0.17，模型花 4 毛钱，加起来一天一块七。跑完产出的是纯静态网页，扔到 Cloudflare Pages 就能公开访问。\n\n我自己踩到的一个坑：它默认的 LLM_TIMEOUT=360 秒不够用。它一次要让模型吐出 1 万 token 的 JSON，得把超时改成 900 秒，不然跑十分钟不出结果。\n\n下面是录制的使用视频，一目了然，需要的朋友安装使用，关注一下曹老师！",
+      "translation_zh": "@GaryAIytb 曹老师是生财的群友，做 YouTube 的大牛。他开源了一款叫「AI 情报雷达」的工具，我这两天一直在用。\n\n工具地址：https://t.co/gmfPHAlGzo\n\n一句话说清楚：它每天早上会自动扫一遍 B站、YouTube、抖音、TikTok、小红书、X、GitHub，挑出 AI 和 AI 视频圈刚冒头的题材，生成一页能直接播放视频的日报。\n\n它跟热榜最大的区别，在「新起」这个判断标准。一个题材要同时满足两条，才会被标成「新起」：这个词以前几乎搜不到，并且有 3 个以上账号在做。如果只满足一条，就只标成「观察」。\n\n我昨天跑第一期时，全是「持续」和「观察」，还以为得养两个月的数据才能看出「新起」。今天第二期直接出了「新起 Claude 改造电视教程」——它的历史基线用的是 B站自己过去 53 天的播放数据，不用你慢慢攒。\n\n使用方法：下面几步我都实际跑过。\n\n把项目克隆下来。它只用 Python 标准库，不用装任何依赖。\ncp .env.example .env，然后填两个 key：一个是 TikHub，负责抖音、X、YouTube 的搜索；另一个是任意 OpenAI 兼容的模型 key，默认用 DeepSeek。\n运行 python3 -m radar run。整个过程 6–13 分钟，会扫 2200 条内容，归出十几二十个题材。\n运行 python3 -m radar serve，然后打开 localhost:8792。\n成本：跑一期，TikHub 花 $0.17，模型花 4 毛钱，加起来一天一块七。跑完产出的是纯静态网页，扔到 Cloudflare Pages 就能公开访问。\n\n我自己踩到的一个坑：它默认的 LLM_TIMEOUT=360 秒不够用。它一次要让模型吐出 1 万 token 的 JSON，得把超时改成 900 秒，不然跑十分钟不出结果。\n\n下面是录制的使用视频，一目了然，需要的朋友安装使用，关注一下曹老师！",
+      "translation_status": "source_chinese",
+      "author_name": "Snail",
+      "author_handle": "Cryptoxorz",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2056529511169269760/6m9RS0PV_normal.jpg",
+      "author_followers": 1188,
+      "author_following": 507,
+      "author_bio": "₿ \nAI 应用实战｜软件工程｜AIGC 创作  \n关注 AI 工具、Agent 与真实业务落地  \n做过10万+垂类公众号，也做实体产业  \n只聊真正能用、能提效、能赚钱的 AI",
+      "author_location": "Los Angeles, CA",
+      "author_joined_at": "2024-01-24T14:14:58Z",
+      "author_verified": false,
+      "links": [
+        "http://github.com/garycaogan/intel-radar"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2114975278900690944/img/ddKjX1AZuzcMnG6y.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2114975278900690944/img/ddKjX1AZuzcMnG6y.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2114975278900690944/img/ddKjX1AZuzcMnG6y.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              1502,
+              815
+            ],
+            "duration_millis": 59033,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video-s.twimg.com/amplify_video/2114975278900690944/pl/qxjq2HAw-MoeTEGd.m3u8?tag=29"
+              },
+              {
+                "bitrate": 256000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2114975278900690944/vid/avc1/496x270/7zM-teymFFyQKSfF.mp4?tag=29"
+              },
+              {
+                "bitrate": 832000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2114975278900690944/vid/avc1/662x360/GoHqAVtzpzAMiTO8.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2114975278900690944/vid/avc1/1326x720/ph_L7RHslPPT-ZRo.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2114975278900690944/vid/avc1/1990x1080/1xy6yogle8beCadX.mp4?tag=29"
+              },
+              {
+                "bitrate": 25128000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2114975278900690944/vid/avc1/3004x1630/naeyw3rY0gYCXBji.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/Cryptoxorz/status/2114978106423545986/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 190
+      }
+    },
+    {
+      "post_id": "2114996315876917621",
+      "url": "https://x.com/GaryAIytb/status/2114996315876917621",
+      "created_at": "2026-10-27T08:23:11Z",
+      "text": "@Cryptoxorz 牛",
+      "original_text": "@Cryptoxorz 牛",
+      "translation_zh": "@Cryptoxorz 牛",
+      "translation_status": "translated",
+      "author_name": "Gary曹淦",
+      "author_handle": "GaryAIytb",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2108802554947932160/3O8wgeUv_normal.jpg",
+      "author_followers": 1820,
+      "author_following": 54,
+      "author_bio": "生财有术 AI 视频深海圈总教练\n千人 AI 创作者社群 & YouTube 工作室\n探索 AI视频 & 内容出海 & AI产品\n想要改变世界的 INFP\n每日 AI 情报站：https://t.co/ABQYEkFnDE",
+      "author_location": "深圳",
+      "author_joined_at": "2025-10-24T08:49:01Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 11
+      }
+    }
+  ]
+}
