@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-30",
+  "thread_id": "44770",
+  "count": 65,
+  "replies": [
+    {
+      "id": "620043",
+      "text": "瓶颈已经到CPU了吗",
+      "time": "11:13",
+      "sender_name": "Spreano Prutacco",
+      "sender_id": 5433934343
+    },
+    {
+      "id": "620044",
+      "text": "不得不说，a/ 就是牛逼",
+      "time": "11:13",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "620045",
+      "text": "快点把 claude 桌面端改成原生 谢谢",
+      "time": "11:14",
+      "sender_name": "Gravy Gravy",
+      "sender_id": 1808211999
+    },
+    {
+      "id": "620047",
+      "time": "11:14",
+      "sender_name": "🌌 $🅐🅝🅣$ 🐜",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-30/comments/c-620047-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-30/comments/c-620047-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/44770",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 180446,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 7171316252
+    },
+    {
+      "id": "620048",
+      "text": "bun 不是他们干的吗",
+      "time": "11:14",
+      "sender_name": "Florian Von",
+      "sender_id": 8523777480
+    },
+    {
+      "id": "620050",
+      "text": "用Rust重写世界",
+      "time": "11:15",
+      "sender_name": "hi2hi",
+      "sender_id": 5499732695
+    },
+    {
+      "id": "620051",
+      "text": "一般路过的螃蟹",
+      "time": "11:16",
+      "sender_name": "cargoo",
+      "sender_id": 727133462
+    },
+    {
+      "id": "620054",
+      "text": "我觉得gpt desktop也真该优化了，没见过比他们家更卡的占用更多的了",
+      "time": "11:16",
+      "sender_name": "Galen Moore",
+      "sender_id": 7635917900
+    },
+    {
+      "id": "620057",
+      "text": "ChatGPT 那个桌面版与其说是客户端，不如说是给网页套了个壳：Electron 一启动，内存就跟着占满，风扇也立刻高速转起来，性能开销大得惊人。真要图省事，不如把网页版固定到 dock（程序坞），至少它崩溃时，你只需要刷新，不用重装。",
+      "time": "11:16",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "620058",
+      "text": "哈哈哈，我就让AI用Rust把仙剑客栈重写了",
+      "time": "11:16",
+      "sender_name": "CcXx",
+      "sender_id": 7057477006
+    },
+    {
+      "id": "620063",
+      "text": "你叫GPT的兄弟也用 Claude code 有优化一下🤠",
+      "time": "11:17",
+      "sender_name": "Junde Y",
+      "sender_id": 5878248432
+    },
+    {
+      "id": "620071",
+      "text": "行，那我先给世界加个 `Cargo.toml`——结果第一行就报错：`error[E0505]: cannot borrow 世界 as mutable because it is also borrowed as immutable`。人类全在里面互相借来借去，编译器当场辞职。\n不过说真的，Rust 重写世界的进度大概是这样：内核重写了，工具链还在 `unsafe` 里偷偷抱 C 的大腿，浏览器重写了一半，最后发现大家只是把 JavaScript 换了个箱子的标签。想重写世界，得先有位能通过 borrow checker 的房东。",
+      "time": "11:20",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "620075",
+      "time": "11:22",
+      "sender_name": "Gavin Lang",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-30/comments/c-620075-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-30/comments/c-620075-1-thumb.webp",
+          "width": 736,
+          "height": 764,
+          "size_bytes": 45726
+        }
+      ],
+      "sender_id": 7924814826
+    },
+    {
+      "id": "620076",
+      "text": "rust 是什么",
+      "time": "11:22",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "620077",
+      "text": "编程语言的一种",
+      "time": "11:23",
+      "sender_name": "Gavin Lang",
+      "sender_id": 7924814826
+    },
+    {
+      "id": "620079",
+      "text": "我不信",
+      "time": "11:24",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "620080",
+      "text": "rust 也离不开 no safe",
+      "time": "11:24",
+      "sender_name": "김지현",
+      "sender_id": 6525073242
+    },
+    {
+      "id": "620081",
+      "text": "Bun算他们装逼翻车了",
+      "time": "11:24",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "620082",
+      "text": "vibe 久了对 0 rust 开工没啥新奇了，虽然天天骂 A\\，不过这优化收益是真好啊",
+      "time": "11:25",
+      "sender_name": "Lam GC",
+      "sender_id": 1367439053
+    },
+    {
+      "id": "620085",
+      "text": "炸了不就炸了",
+      "time": "11:28",
+      "sender_name": "Horn",
+      "sender_id": 7128538707
+    },
+    {
+      "id": "620087",
+      "text": "workbuddy赶紧抄一下",
+      "time": "11:28",
+      "sender_name": "Leo",
+      "sender_id": 6139558269
+    },
+    {
+      "id": "620088",
+      "text": "确实 甚至还会oom",
+      "time": "11:30",
+      "sender_name": "Frank Ruan",
+      "sender_id": 1154188299
+    },
+    {
+      "id": "620089",
+      "text": "Rust 就是ai时代的后端王者",
+      "time": "11:32",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "620090",
+      "text": "因为用的是python，巨大的网络请求把cpu干死。很难想象到现在才换",
+      "time": "11:33",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "620092",
+      "text": "真就全员rust？",
+      "time": "11:36",
+      "sender_name": "Mkea",
+      "sender_id": 5378108723
+    },
+    {
+      "id": "620094",
+      "text": "没钱别写 rust 编译吃满你的硬盘",
+      "time": "11:38",
+      "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+      "sender_id": 1791306977
+    },
+    {
+      "id": "620095",
+      "text": "用 gpt 写的可不吗？ 每次加一堆校验",
+      "time": "11:39",
+      "sender_name": "DuoNaDuoNa 🇹🇼🇨🇳🇯🇵🇺🇸🏴🏳️🏳️‍🌈🏳️‍⚧️🏴‍☠️🇺🇳",
+      "sender_id": 1767597371
+    },
+    {
+      "id": "620096",
+      "text": "少用点第三方库就行",
+      "time": "11:40",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "620097",
+      "text": "难道不用 tokio？",
+      "time": "11:41",
+      "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+      "sender_id": 1791306977
+    },
+    {
+      "id": "620098",
+      "time": "11:41",
+      "sender_name": "Karon TG",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-30/comments/c-620098-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-10-30/comments/c-620098-1-thumb.webp",
+          "width": 600,
+          "height": 625,
+          "size_bytes": 65920
+        }
+      ],
+      "sender_id": 476347664
+    },
+    {
+      "id": "620099",
+      "text": "加解密不用 ring？",
+      "time": "11:41",
+      "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+      "sender_id": 1791306977
+    },
+    {
+      "id": "620100",
+      "text": "字节缓存不用 bytes？",
+      "time": "11:41",
+      "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+      "sender_id": 1791306977
+    },
+    {
+      "id": "620101",
+      "text": "日志不用 `tracing？`",
+      "time": "11:42",
+      "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+      "sender_id": 1791306977
+    },
+    {
+      "id": "620102",
+      "text": "用，常见第三方网络库都用了，编译后也就2g以内",
+      "time": "11:44",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "620103",
+      "text": "是单次2G吧.",
+      "time": "11:46",
+      "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+      "sender_id": 1791306977
+    },
+    {
+      "id": "620104",
+      "text": "单次几百兆",
+      "time": "11:48",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "620107",
+      "text": "r门",
+      "time": "11:50",
+      "sender_name": "m p",
+      "sender_id": 1341336727
+    },
+    {
+      "id": "620108",
+      "text": "一个无状态协议有什么难实现的，内部还有协议完整文档",
+      "time": "11:54",
+      "sender_name": "Ciallo～(∠・ω< )⌒💣",
+      "sender_id": 1619360454
+    },
+    {
+      "id": "620109",
+      "text": "你猜infra仙人DeepSeek的message协议和这个比谁快",
+      "time": "11:54",
+      "sender_name": "Ciallo～(∠・ω< )⌒💣",
+      "sender_id": 1619360454
+    },
+    {
+      "id": "620128",
+      "text": "这新闻你是怎么感叹牛逼的",
+      "time": "12:19",
+      "sender_name": "奥特 怪兽",
+      "sender_id": 452074081
+    },
+    {
+      "id": "620236",
+      "text": "还得是 A 神，GPT 的 Windows 客户端难用的要死",
+      "time": "12:59",
+      "sender_name": "R x",
+      "sender_id": 7465559837
+    },
+    {
+      "id": "620284",
+      "text": "那点硬盘几个钱? 多赚点钱吧",
+      "time": "13:17",
+      "sender_name": "BDT",
+      "sender_id": 7556797853
+    },
+    {
+      "id": "620341",
+      "text": "不是用着挺好的吗",
+      "time": "13:46",
+      "sender_name": "ppc",
+      "sender_id": 6162900183
+    },
+    {
+      "id": "620342",
+      "text": "个人用没问题",
+      "time": "13:46",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "620343",
+      "text": "主要有些企业用翻车了",
+      "time": "13:46",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "620344",
+      "text": "比如漏内存什么的",
+      "time": "13:46",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "620345",
+      "text": "然后社区就开始吵起来了",
+      "time": "13:46",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "620347",
+      "text": "还有一点就是因为Zig那边对这件事很不满",
+      "time": "13:47",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "620348",
+      "text": "吃瓜就行了 对个人开发者而言Bun还是照样用",
+      "time": "13:47",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "620349",
+      "text": "这是小问题， ZIG作者不满也是小问题， 反正后面有大厂优化， 不怕吧？",
+      "time": "13:48",
+      "sender_name": "ppc",
+      "sender_id": 6162900183
+    },
+    {
+      "id": "620350",
+      "text": "网上吵架罢了，至于真相那你别管😁",
+      "time": "13:49",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "620351",
+      "text": "不要吵架，不要抬杠，再吵架叉出去，不要搞得乌烟瘴气。",
+      "time": "13:49",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "620352",
+      "text": "关于Rust关键词的话题热度都不低我只能说",
+      "time": "13:50",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "620355",
+      "text": "现在Bun需要证明的是“生产环境可靠性”，而不是单纯的讲性能",
+      "time": "13:51",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "620358",
+      "text": "另外本身Bun对于Nodejs的兼容性工作也没做完，这样大规模用Rust重构不引发社区质疑那是不太可能的",
+      "time": "13:52",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "620373",
+      "text": "怎么不用claude设计一个更高效的新语言😁",
+      "time": "14:02",
+      "sender_name": "kaws",
+      "sender_id": 410674399
+    },
+    {
+      "id": "620479",
+      "text": "編程語言界的原神",
+      "time": "14:19",
+      "sender_name": "Stefan | ᕕ(◠ڼ◠)ᕗ",
+      "sender_id": 527893755
+    },
+    {
+      "id": "620491",
+      "text": "問題是這通常都是偽裝成無狀態的輪詢 其實到最後還是有狀態的 只不過這個狀態變成了類似一個cookie的形式化成async job\n到最後你為什麼不用actor呢",
+      "time": "14:21",
+      "sender_name": "Stefan | ᕕ(◠ڼ◠)ᕗ",
+      "sender_id": 527893755
+    },
+    {
+      "id": "620495",
+      "text": "ahem 披着無狀態外衣的狀態機",
+      "time": "14:21",
+      "sender_name": "Stefan | ᕕ(◠ڼ◠)ᕗ",
+      "sender_id": 527893755
+    },
+    {
+      "id": "620499",
+      "text": "只不過中間的步驟你可以分塊請求而已",
+      "time": "14:22",
+      "sender_name": "Stefan | ᕕ(◠ڼ◠)ᕗ",
+      "sender_id": 527893755
+    },
+    {
+      "id": "620504",
+      "text": "zig本來就是一堆左派神壬 他們當然不爽ai",
+      "time": "14:23",
+      "sender_name": "Stefan | ᕕ(◠ڼ◠)ᕗ",
+      "sender_id": 527893755
+    },
+    {
+      "id": "620506",
+      "text": "現在好了和codeberg同流合污了",
+      "time": "14:23",
+      "sender_name": "Stefan | ᕕ(◠ڼ◠)ᕗ",
+      "sender_id": 527893755
+    },
+    {
+      "id": "620508",
+      "text": "你都不知道zig他媽的幾乎每一個minor版本都有大改動 這color-blind async到現在的explicit io界面改了不知道多少次 還不願意支持windows",
+      "time": "14:25",
+      "sender_name": "Stefan | ᕕ(◠ڼ◠)ᕗ",
+      "sender_id": 527893755
+    },
+    {
+      "id": "620705",
+      "text": "啊，为什么这样说",
+      "time": "14:59",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "620846",
+      "text": "我是想写中华客栈",
+      "time": "15:41",
+      "sender_name": "momo",
+      "sender_id": 390166878
+    }
+  ]
+}
