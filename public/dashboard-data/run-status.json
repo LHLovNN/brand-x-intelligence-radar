@@ -1,11 +1,11 @@
 {
   "status": "ok",
-  "generated_at": "2026-10-29T00:22:30Z",
-  "window_start": "2026-10-28T00:00:00Z",
-  "window_end": "2026-10-29T00:00:00Z",
-  "window_label": "2026-10-28 08:00 BJT - 2026-10-29 08:00 BJT",
-  "raw_posts": 67,
-  "normalized_posts": 67,
+  "generated_at": "2026-10-30T00:18:35Z",
+  "window_start": "2026-10-29T00:00:00Z",
+  "window_end": "2026-10-30T00:00:00Z",
+  "window_label": "2026-10-29 08:00 BJT - 2026-10-30 08:00 BJT",
+  "raw_posts": 65,
+  "normalized_posts": 65,
   "primary_signals": 7,
   "collection_status": {
     "status": "complete",
@@ -13,8 +13,8 @@
     "translation": {
       "configured": true,
       "counts": {
-        "translated": 52,
-        "source_chinese": 15
+        "translated": 53,
+        "source_chinese": 12
       },
       "missing_count": 0,
       "fallback_original_count": 0
@@ -22,16 +22,16 @@
   },
   "platform_trends": {
     "status": "complete",
-    "accepted": 24,
-    "candidates_inspected": 186,
+    "accepted": 20,
+    "candidates_inspected": 137,
     "warnings": []
   },
   "dashboard_metrics": {
     "effective_intelligence": 7,
-    "high_risk": 1,
-    "needs_review": 1,
-    "primary_volume": 36,
-    "primary_candidate_volume": 48,
+    "high_risk": 0,
+    "needs_review": 0,
+    "primary_volume": 30,
+    "primary_candidate_volume": 46,
     "competitor_volume": 19,
     "negative_share": 29
   }
