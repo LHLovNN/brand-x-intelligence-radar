@@ -1,106 +1,292 @@
 {
   "title": "Brand X Intelligence Radar",
-  "generated_at": "2026-11-02T00:36:18Z",
-  "generated_at_label": "2026-11-02 08:36 BJT",
-  "report_date": "2026-11-01",
+  "generated_at": "2026-11-02T01:03:18Z",
+  "generated_at_label": "2026-11-02 09:03 BJT",
+  "report_date": "2026-11-02",
   "report_window": "Past 24 hours",
-  "window_label": "2026-10-31 08:00 BJT - 2026-11-01 08:00 BJT",
+  "window_label": "2026-11-01 08:00 BJT - 2026-11-02 08:00 BJT",
   "health": "normal",
   "metrics": {
-    "effective_intelligence": 4,
+    "effective_intelligence": 7,
     "high_risk": 0,
     "needs_review": 0,
-    "primary_volume": 28,
-    "primary_candidate_volume": 38,
-    "competitor_volume": 10,
-    "negative_share": 25
+    "primary_volume": 29,
+    "primary_candidate_volume": 37,
+    "competitor_volume": 16,
+    "negative_share": 14
   },
   "executive_summary": {
-    "headline": "今日最高优先级主品牌舆情为：Fulfillment and after-sales risk discussion。",
-    "risk": "Overall risk is medium with IPS 75.",
-    "action": "建议动作：观察。样例竞品基线讨论涉及 refund and delivery。"
+    "headline": "今日最高优先级主品牌舆情为：Competitor comparison and substitution signals。",
+    "risk": "Overall risk is medium with IPS 71.",
+    "action": "建议动作：竞品对照观察。样例竞品基线讨论涉及 refund and delivery。"
   },
   "top_intelligence": [
     {
-      "cluster_id": "primary-signal-002",
+      "cluster_id": "primary-signal-003",
+      "title": "Competitor comparison and substitution signals",
+      "summary": "2 related posts compare 主品牌 with other shopping platforms.",
+      "summary_zh": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "lead_post": {
+        "post_id": "2116870336213893324",
+        "created_at": "2026-11-01T12:29:52Z",
+        "author": {
+          "id": "491425611",
+          "handle": "lesnums",
+          "name": "Les Numériques",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1635603257870434306/4aZrFj1Y_normal.jpg",
+          "followers": 153516,
+          "following": 401,
+          "bio": null,
+          "location": "Dans nos labos 🔬",
+          "joined_at": "2012-02-13T16:31:24Z",
+          "verified": false
+        },
+        "author_name": "Les Numériques",
+        "author_handle": "lesnums",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1635603257870434306/4aZrFj1Y_normal.jpg",
+        "author_followers": 153516,
+        "author_following": 401,
+        "author_bio": null,
+        "author_location": "Dans nos labos 🔬",
+        "author_joined_at": "2012-02-13T16:31:24Z",
+        "author_verified": false,
+        "url": "https://x.com/lesnums/status/2116870336213893324",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116870336213893324",
+        "conversation_context": {},
+        "language": "fr",
+        "text": "🔗 https://t.co/ZsnHw9nXmV\nLe smartphone Samsung Galaxy A57 5G s'affiche aujourd'hui à 369,00 € chez Joybuy. C'est actuellement le meilleur rapport qualité / prix de notre comparatif, selon les 239 modèles testés dans notre laboratoire. https://t.co/ZsnHw9nXmV",
+        "clean_text": "🔗 l.lesnumeriques.com/biD\nLe smartphone Samsung Galaxy A57 5G s'affiche aujourd'hui à 369,00 € chez Joybuy. C'est actuellement le meilleur rapport qualité / prix de notre comparatif, selon les 239 modèles testés dans notre laboratoire. l.lesnumeriques.com/biD",
+        "links": [
+          "https://l.lesnumeriques.com/biD",
+          "https://l.lesnumeriques.com/biD"
+        ],
+        "translation_zh": "🔗 l.lesnumeriques.com/biD\nSamsung Galaxy A57 5G 智能手机今天在 Joybuy 上的价格为 369,00 €。根据我们实验室测试的 239 款机型，它目前是我们评测对比中性价比最高的一款。l.lesnumeriques.com/biD",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 641
+        },
+        "media": []
+      },
+      "topic": "competitor_comparison",
+      "risk_types": [],
+      "opportunity_types": [
+        "competitive_position"
+      ],
+      "post_count": 2,
+      "first_seen_at": "2026-11-01T12:29:25Z",
+      "last_seen_at": "2026-11-01T12:29:52Z",
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 807,
+        "max_author_followers": 153516,
+        "public_interactions": 0
+      },
+      "score": {
+        "ips": 71,
+        "level": "medium",
+        "brand_relevance": 90,
+        "risk_or_opportunity_intensity": 68,
+        "current_impact": 50,
+        "future_potential": 73,
+        "credibility": 86,
+        "business_impact": 64,
+        "urgency": 57,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "竞品对照观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "competitive_position"
+        ],
+        "special_flags": [
+          "high_influence_account"
+        ],
+        "explanation": "用户将主品牌与其他平台对照，适合观察价格、配送或品类竞争位置。综合优先级 71。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 2,
+        "amplifiers": 1,
+        "latest": 2,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-001",
+      "title": "Channel, partner and campaign activity",
+      "summary": "9 related posts discuss channel, partner or campaign activity.",
+      "summary_zh": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
+      "lead_post": {
+        "post_id": "2116716474480123909",
+        "created_at": "2026-11-01T02:18:28Z",
+        "author": {
+          "id": "940032320899186688",
+          "handle": "littleuphorians",
+          "name": "𝐠𝐨𝐥𝐝𝐞𝐧 𝐥𝐢𝐧𝐞 —",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1945308265694261248/Y4r7tIOU_normal.jpg",
+          "followers": 7259,
+          "following": 934,
+          "bio": null,
+          "location": "no mutual interest dni",
+          "joined_at": "2017-12-11T01:35:45Z",
+          "verified": false
+        },
+        "author_name": "𝐠𝐨𝐥𝐝𝐞𝐧 𝐥𝐢𝐧𝐞 —",
+        "author_handle": "littleuphorians",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1945308265694261248/Y4r7tIOU_normal.jpg",
+        "author_followers": 7259,
+        "author_following": 934,
+        "author_bio": null,
+        "author_location": "no mutual interest dni",
+        "author_joined_at": "2017-12-11T01:35:45Z",
+        "author_verified": false,
+        "url": "https://x.com/littleuphorians/status/2116716474480123909",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116716474480123909",
+        "conversation_context": {},
+        "language": "en",
+        "text": "[01.11.2026] GUERLAIN Weibo Update\n\nJoin us on November 2nd at 7 PM for live stream from Guerlain's official flagship store on https://t.co/HN237c8fgI. Follow Guerlain brand ambassador Ayden and Elio to experience the romance of blue twilight and embark on a new chapter.\n\nGuerlain invites you to collect fragments of the \"Blue\" design, explore the exceptional revitalizing power of the Abeille Royale collection, and capture the delightful moments of the Blue Collection! \n\nParticipate in the live stream's interactive surprises and win autographed gifts Ayden & Elio! Pre-register now via the live stream link to join this blue-themed rendezvous. We'll see you there! \n\n#政瞳 #aylio",
+        "clean_text": "[01.11.2026] GUERLAIN Weibo Update\n\nJoin us on November 2nd at 7 PM for live stream from Guerlain's official flagship store on JD.com Follow Guerlain brand ambassador Ayden and Elio to experience the romance of blue twilight and embark on a new chapter.\n\nGuerlain invites you to collect fragments of the \"Blue\" design, explore the exceptional revitalizing power of the Abeille Royale collection, and capture the delightful moments of the Blue Collection! \n\nParticipate in the live stream's interactive surprises and win autographed gifts Ayden & Elio! Pre-register now via the live stream link to join this blue-themed rendezvous. We'll see you there! \n\n#政瞳 #aylio",
+        "links": [
+          "http://JD.com"
+        ],
+        "translation_zh": "[01.11.2026] GUERLAIN 微博更新\n\n11 月 2 日晚上 7 点，加入我们在 JD.com 上 Guerlain 官方旗舰店的直播。跟随 Guerlain 品牌大使 Ayden 和 Elio，一同感受蓝色暮光的浪漫，开启全新篇章。\n\nGuerlain 邀请你收集“Blue”设计碎片，探索 Abeille Royale 系列卓越的焕活力量，并捕捉 Blue Collection 的愉悦时刻！\n\n参与直播互动惊喜，赢取 Ayden & Elio 的签名礼物！现在通过直播链接预约，加入这场蓝色主题之约。我们到时见！\n\n#政瞳 #aylio",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 158,
+          "reposts": 40,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 6,
+          "views": 1721
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+            "expanded_url": "https://x.com/littleuphorians/status/2116716474480123909/photo/1"
+          }
+        ]
+      },
+      "topic": "channel_activity",
+      "risk_types": [],
+      "opportunity_types": [
+        "channel_expansion"
+      ],
+      "post_count": 9,
+      "first_seen_at": "2026-11-01T02:11:17Z",
+      "last_seen_at": "2026-11-01T06:45:45Z",
+      "metrics": {
+        "total_likes": 683,
+        "total_reposts": 184,
+        "total_replies": 4,
+        "total_quotes": 6,
+        "total_bookmarks": 25,
+        "total_views": 12252,
+        "max_author_followers": 8705,
+        "public_interactions": 877
+      },
+      "score": {
+        "ips": 70,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 54,
+        "current_impact": 60,
+        "future_potential": 70,
+        "credibility": 76,
+        "business_impact": 58,
+        "urgency": 51,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "渠道观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "channel_expansion"
+        ],
+        "special_flags": [],
+        "explanation": "渠道、合作或活动信息体现市场扩展动向，建议作为背景信号观察。综合优先级 70。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 3,
+        "amplifiers": 0,
+        "latest": 3,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-004",
       "title": "Fulfillment and after-sales risk discussion",
       "summary": "1 related posts discuss refund, return, delivery or after-sales issues.",
       "summary_zh": "相关讨论涉及退款、退货、配送或售后体验风险。",
       "lead_post": {
-        "post_id": "2116566624421704107",
-        "created_at": "2026-10-31T16:23:01Z",
+        "post_id": "2116822030842835127",
+        "created_at": "2026-11-01T09:17:55Z",
         "author": {
-          "id": "1165044876297134080",
-          "handle": "realNyarime",
-          "name": "奶昔🥤",
-          "avatar_url": "https://pbs.twimg.com/profile_images/2100861677411647488/qLK34Cve_normal.jpg",
-          "followers": 53313,
-          "following": 698,
+          "id": "1237990477367926785",
+          "handle": "shakabwo",
+          "name": "shakabwo",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1760009656771268608/5IHYn_lk_normal.jpg",
+          "followers": 56,
+          "following": 585,
           "bio": null,
-          "location": "Xiamen, Fujian, PR. China",
-          "joined_at": "2019-08-23T23:35:25Z",
+          "location": "香港",
+          "joined_at": "2020-03-12T06:35:14Z",
           "verified": false
         },
-        "author_name": "奶昔🥤",
-        "author_handle": "realNyarime",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/2100861677411647488/qLK34Cve_normal.jpg",
-        "author_followers": 53313,
-        "author_following": 698,
+        "author_name": "shakabwo",
+        "author_handle": "shakabwo",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1760009656771268608/5IHYn_lk_normal.jpg",
+        "author_followers": 56,
+        "author_following": 585,
         "author_bio": null,
-        "author_location": "Xiamen, Fujian, PR. China",
-        "author_joined_at": "2019-08-23T23:35:25Z",
+        "author_location": "香港",
+        "author_joined_at": "2020-03-12T06:35:14Z",
         "author_verified": false,
-        "url": "https://x.com/realNyarime/status/2116566624421704107",
+        "url": "https://x.com/shakabwo/status/2116822030842835127",
         "reply_to_post_id": null,
         "reply_to_handle": null,
-        "quoted_post_id": null,
-        "conversation_id": "2116566624421704107",
+        "quoted_post_id": "2114175313446158483",
+        "conversation_id": "2116822030842835127",
         "conversation_context": {},
         "language": "zh",
-        "text": "之前一直用的闲鱼和快递100。昨天看到有人分享这个低于闲鱼发快递的方法，是目前我能看到最便宜的快递了，就是用拼多多商家版，但是不要绑卡！底下会说\n\n闲鱼和快递100下快递的话，可以选预约时间，基本上都能按时间取，但是这个不能选时间，是当天件，也有好多人说这种特价快递取件特别慢，或者压根就不取，这个和地方或者和你当地快递员有关系，你自己找个最合适的快递员就行了。无任何门槛（只发一件）顺丰可以做到9块，其他快递是最低三块多，单子越多越便宜。当然注册淘宝也可以的，用千牛的商家寄件\n\n注意，注册拼多多商家版，不要绑卡！要不然啥时候给平台给你来个罚款，你哭都来不及。毕竟光一个普通平台，可以完爆阿里，京东这些平台，就单平台的收益做到全国首富，就是是不是去商家那里扣个3快5快的，而且申诉基本100失败，而且你只要注册过拼多多店铺，只要你没注销你的银行卡，它可以随时去你银行卡拿钱，有些卖家，都关掉拼多多5-6年，都退保证金和解绑银行卡了，就是没有注销银行卡，还能被平台强制扣款，说是违法平台规则，需要处罚\n\n这个你只要付款就是要绑定拼多多是有协议的，解绑并不会去解除协议，如果平台需要扣款也还是可以直接扣除。要么去银行卡解除所有第三方平台的代扣协议，要么就是直接注销卡。不信你可以去抖音搜索试试，这不知道多少商家被拼多多扣钱。因为有时候消费者找拼多多客服话，你就算关店了，它只要能补偿消费者，那就是从商家口袋出的，平台不会垫付任何1分钱。其他平台的话，你质保到期或者退店了，基本上平台就是不管售后了。这拼多多他是可以去你银行卡拿钱的，所以在拼多多基本上售后是无限期，除非那个商家把银行卡注销了，或者是去柜台解绑所以代扣协议\n\n当然你和快递熟，最好是直接找顺丰网点的业务经理开。补充一个我知道的，顺丰用的驿小客，自己打单5.5一单3公斤内，快递员来收。多少单都行",
-        "clean_text": "之前一直用的闲鱼和快递100。昨天看到有人分享这个低于闲鱼发快递的方法，是目前我能看到最便宜的快递了，就是用拼多多商家版，但是不要绑卡！底下会说\n\n闲鱼和快递100下快递的话，可以选预约时间，基本上都能按时间取，但是这个不能选时间，是当天件，也有好多人说这种特价快递取件特别慢，或者压根就不取，这个和地方或者和你当地快递员有关系，你自己找个最合适的快递员就行了。无任何门槛（只发一件）顺丰可以做到9块，其他快递是最低三块多，单子越多越便宜。当然注册淘宝也可以的，用千牛的商家寄件\n\n注意，注册拼多多商家版，不要绑卡！要不然啥时候给平台给你来个罚款，你哭都来不及。毕竟光一个普通平台，可以完爆阿里，京东这些平台，就单平台的收益做到全国首富，就是是不是去商家那里扣个3快5快的，而且申诉基本100失败，而且你只要注册过拼多多店铺，只要你没注销你的银行卡，它可以随时去你银行卡拿钱，有些卖家，都关掉拼多多5-6年，都退保证金和解绑银行卡了，就是没有注销银行卡，还能被平台强制扣款，说是违法平台规则，需要处罚\n\n这个你只要付款就是要绑定拼多多是有协议的，解绑并不会去解除协议，如果平台需要扣款也还是可以直接扣除。要么去银行卡解除所有第三方平台的代扣协议，要么就是直接注销卡。不信你可以去抖音搜索试试，这不知道多少商家被拼多多扣钱。因为有时候消费者找拼多多客服话，你就算关店了，它只要能补偿消费者，那就是从商家口袋出的，平台不会垫付任何1分钱。其他平台的话，你质保到期或者退店了，基本上平台就是不管售后了。这拼多多他是可以去你银行卡拿钱的，所以在拼多多基本上售后是无限期，除非那个商家把银行卡注销了，或者是去柜台解绑所以代扣协议\n\n当然你和快递熟，最好是直接找顺丰网点的业务经理开。补充一个我知道的，顺丰用的驿小客，自己打单5.5一单3公斤内，快递员来收。多少单都行",
+        "text": "商家居然冒充京东平台的人给我打电话给我退全款。京东的规则是只要退款退货完成，客户的评价会自动删除。商家可能是以为我不知道这个规则，冒充平台客服来骗我上当。这商家真是蛮坏的，我只能好好收拾收拾他们了。",
+        "clean_text": "商家居然冒充京东平台的人给我打电话给我退全款。京东的规则是只要退款退货完成，客户的评价会自动删除。商家可能是以为我不知道这个规则，冒充平台客服来骗我上当。这商家真是蛮坏的，我只能好好收拾收拾他们了。",
         "links": [],
-        "translation_zh": "之前一直用的闲鱼和快递100。昨天看到有人分享这个低于闲鱼发快递的方法，是目前我能看到最便宜的快递了，就是用拼多多商家版，但是不要绑卡！底下会说\n\n闲鱼和快递100下快递的话，可以选预约时间，基本上都能按时间取，但是这个不能选时间，是当天件，也有好多人说这种特价快递取件特别慢，或者压根就不取，这个和地方或者和你当地快递员有关系，你自己找个最合适的快递员就行了。无任何门槛（只发一件）顺丰可以做到9块，其他快递是最低三块多，单子越多越便宜。当然注册淘宝也可以的，用千牛的商家寄件\n\n注意，注册拼多多商家版，不要绑卡！要不然啥时候给平台给你来个罚款，你哭都来不及。毕竟光一个普通平台，可以完爆阿里，京东这些平台，就单平台的收益做到全国首富，就是是不是去商家那里扣个3快5快的，而且申诉基本100失败，而且你只要注册过拼多多店铺，只要你没注销你的银行卡，它可以随时去你银行卡拿钱，有些卖家，都关掉拼多多5-6年，都退保证金和解绑银行卡了，就是没有注销银行卡，还能被平台强制扣款，说是违法平台规则，需要处罚\n\n这个你只要付款就是要绑定拼多多是有协议的，解绑并不会去解除协议，如果平台需要扣款也还是可以直接扣除。要么去银行卡解除所有第三方平台的代扣协议，要么就是直接注销卡。不信你可以去抖音搜索试试，这不知道多少商家被拼多多扣钱。因为有时候消费者找拼多多客服话，你就算关店了，它只要能补偿消费者，那就是从商家口袋出的，平台不会垫付任何1分钱。其他平台的话，你质保到期或者退店了，基本上平台就是不管售后了。这拼多多他是可以去你银行卡拿钱的，所以在拼多多基本上售后是无限期，除非那个商家把银行卡注销了，或者是去柜台解绑所以代扣协议\n\n当然你和快递熟，最好是直接找顺丰网点的业务经理开。补充一个我知道的，顺丰用的驿小客，自己打单5.5一单3公斤内，快递员来收。多少单都行",
+        "translation_zh": "商家居然冒充京东平台的人给我打电话给我退全款。京东的规则是只要退款退货完成，客户的评价会自动删除。商家可能是以为我不知道这个规则，冒充平台客服来骗我上当。这商家真是蛮坏的，我只能好好收拾收拾他们了。",
         "translation_status": "source_chinese",
-        "summary_zh": "用户讨论客服响应和售后体验。",
+        "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
         "metrics": {
-          "likes": 188,
-          "reposts": 11,
-          "replies": 3,
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
           "quotes": 0,
-          "bookmarks": 211,
-          "views": 13799
+          "bookmarks": 0,
+          "views": 49
         },
-        "media": [
-          {
-            "url": "https://pbs.twimg.com/media/HV-OF9jbwAAPeOx.jpg",
-            "type": "photo",
-            "preview_image_url": "https://pbs.twimg.com/media/HV-OF9jbwAAPeOx.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/HV-OF9jbwAAPeOx.jpg",
-            "expanded_url": "https://x.com/realNyarime/status/2116566624421704107/photo/1"
-          },
-          {
-            "url": "https://pbs.twimg.com/media/HV-OGehbAAAi0ku.jpg",
-            "type": "photo",
-            "preview_image_url": "https://pbs.twimg.com/media/HV-OGehbAAAi0ku.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/HV-OGehbAAAi0ku.jpg",
-            "expanded_url": "https://x.com/realNyarime/status/2116566624421704107/photo/1"
-          },
-          {
-            "url": "https://pbs.twimg.com/media/HV-OHD2a8AAtAL4.jpg",
-            "type": "photo",
-            "preview_image_url": "https://pbs.twimg.com/media/HV-OHD2a8AAtAL4.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/HV-OHD2a8AAtAL4.jpg",
-            "expanded_url": "https://x.com/realNyarime/status/2116566624421704107/photo/1"
-          },
-          {
-            "url": "https://pbs.twimg.com/media/HV-OH0MbIAAAddg.jpg",
-            "type": "photo",
-            "preview_image_url": "https://pbs.twimg.com/media/HV-OH0MbIAAAddg.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/HV-OH0MbIAAAddg.jpg",
-            "expanded_url": "https://x.com/realNyarime/status/2116566624421704107/photo/1"
-          }
-        ]
+        "media": []
       },
       "topic": "fulfillment_risk",
       "risk_types": [
@@ -110,28 +296,28 @@
       ],
       "opportunity_types": [],
       "post_count": 1,
-      "first_seen_at": "2026-10-31T16:23:01Z",
-      "last_seen_at": "2026-10-31T16:23:01Z",
+      "first_seen_at": "2026-11-01T09:17:55Z",
+      "last_seen_at": "2026-11-01T09:17:55Z",
       "metrics": {
-        "total_likes": 188,
-        "total_reposts": 11,
-        "total_replies": 3,
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
         "total_quotes": 0,
-        "total_bookmarks": 211,
-        "total_views": 13799,
-        "max_author_followers": 53313,
-        "public_interactions": 202
+        "total_bookmarks": 0,
+        "total_views": 49,
+        "max_author_followers": 56,
+        "public_interactions": 0
       },
       "score": {
-        "ips": 75,
+        "ips": 63,
         "level": "medium",
         "brand_relevance": 70,
-        "risk_or_opportunity_intensity": 86,
-        "current_impact": 62,
-        "future_potential": 71,
-        "credibility": 76,
+        "risk_or_opportunity_intensity": 78,
+        "current_impact": 25,
+        "future_potential": 50,
+        "credibility": 66,
         "business_impact": 86,
-        "urgency": 85,
+        "urgency": 81,
         "sentiment": "negative",
         "confidence": 0.81,
         "recommended_action": "观察",
@@ -141,211 +327,97 @@
           "delivery"
         ],
         "opportunity_labels": [],
-        "special_flags": [
-          "high_influence_account"
-        ],
-        "explanation": "退款议题直接影响信任与支付体验，当前影响力 62，未来发酵潜力 71，可信度 76。"
+        "special_flags": [],
+        "explanation": "退款议题直接影响信任与支付体验，当前影响力 25，未来发酵潜力 50，可信度 66。"
       },
       "evidence_counts": {
         "origin": 1,
         "stakeholders": 1,
         "popular": 1,
-        "amplifiers": 1,
+        "amplifiers": 0,
         "latest": 1,
         "supporting_evidence": 0,
-        "contradicting_evidence": 0
+        "contradicting_evidence": 1
       }
     },
     {
-      "cluster_id": "primary-signal-004",
-      "title": "Product, deal and availability discussion",
-      "summary": "3 related posts mention product availability, deals or affiliate promotion.",
-      "summary_zh": "相关讨论集中在商品上架、优惠导购或库存信息。",
-      "lead_post": {
-        "post_id": "2116569056983781873",
-        "created_at": "2026-10-31T16:32:41Z",
-        "author": {
-          "id": "795304566367592448",
-          "handle": "dealfunfr",
-          "name": "DealFun",
-          "avatar_url": "https://pbs.twimg.com/profile_images/795304955104100352/LbaIqj2p_normal.jpg",
-          "followers": 4050,
-          "following": 162,
-          "bio": null,
-          "location": null,
-          "joined_at": "2016-11-06T16:39:19Z",
-          "verified": false
-        },
-        "author_name": "DealFun",
-        "author_handle": "dealfunfr",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/795304955104100352/LbaIqj2p_normal.jpg",
-        "author_followers": 4050,
-        "author_following": 162,
-        "author_bio": null,
-        "author_location": null,
-        "author_joined_at": "2016-11-06T16:39:19Z",
-        "author_verified": false,
-        "url": "https://x.com/dealfunfr/status/2116569056983781873",
-        "reply_to_post_id": null,
-        "reply_to_handle": null,
-        "quoted_post_id": null,
-        "conversation_id": "2116569056983781873",
-        "conversation_context": {},
-        "language": "fr",
-        "text": "📉 Nickelodeon Extreme Tennis Next - Xbox Series\n14,24€ chez Joybuy (-53%)\n\nBelle baisse de prix repérée sur DealFun\n\n💰 Économisez 15,75€\n\n👉 https://t.co/PLc2pfymia\n\n#XboxSeries #Gaming https://t.co/F08VrzsCI1",
-        "clean_text": "📉 Nickelodeon Extreme Tennis Next - Xbox Series\n14,24€ chez Joybuy (-53%)\n\nBelle baisse de prix repérée sur DealFun\n\n💰 Économisez 15,75€\n\n👉 dealfun.fr/produit\n\n#XboxSeries #Gaming",
-        "links": [
-          "https://www.dealfun.fr/produit/nickelodeon-extreme-tennis-next-xbox-series-standard"
-        ],
-        "translation_zh": "📉 Nickelodeon Extreme Tennis Next - Xbox Series\n14,24€ chez Joybuy (-53%)\n\nBelle baisse de prix repérée sur DealFun\n\n💰 Économisez 15,75€\n\n👉 dealfun.fr/produit\n\n#XboxSeries #Gaming",
-        "translation_status": "error",
-        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
-        "metrics": {
-          "likes": 0,
-          "reposts": 0,
-          "replies": 0,
-          "quotes": 0,
-          "bookmarks": 0,
-          "views": 206
-        },
-        "media": [
-          {
-            "url": "https://pbs.twimg.com/media/HV-QVjrWAAAWU53.png",
-            "type": "photo",
-            "preview_image_url": "https://pbs.twimg.com/media/HV-QVjrWAAAWU53.png",
-            "media_url_https": "https://pbs.twimg.com/media/HV-QVjrWAAAWU53.png",
-            "expanded_url": "https://x.com/dealfunfr/status/2116569056983781873/photo/1"
-          }
-        ]
-      },
-      "topic": "product_deal",
-      "risk_types": [],
-      "opportunity_types": [
-        "product_interest",
-        "promotion"
-      ],
-      "post_count": 3,
-      "first_seen_at": "2026-10-31T06:28:59Z",
-      "last_seen_at": "2026-10-31T23:56:25Z",
-      "metrics": {
-        "total_likes": 0,
-        "total_reposts": 0,
-        "total_replies": 0,
-        "total_quotes": 0,
-        "total_bookmarks": 0,
-        "total_views": 401,
-        "max_author_followers": 10844,
-        "public_interactions": 0
-      },
-      "score": {
-        "ips": 62,
-        "level": "medium",
-        "brand_relevance": 100,
-        "risk_or_opportunity_intensity": 52,
-        "current_impact": 29,
-        "future_potential": 52,
-        "credibility": 86,
-        "business_impact": 50,
-        "urgency": 44,
-        "sentiment": "positive",
-        "confidence": 0.81,
-        "recommended_action": "传播机会",
-        "risk_labels": [],
-        "opportunity_labels": [
-          "product_interest",
-          "promotion"
-        ],
-        "special_flags": [],
-        "explanation": "商品、优惠或库存信息可反映自然需求与转化入口，综合优先级 62。"
-      },
-      "evidence_counts": {
-        "origin": 1,
-        "stakeholders": 1,
-        "popular": 3,
-        "amplifiers": 0,
-        "latest": 3,
-        "supporting_evidence": 0,
-        "contradicting_evidence": 0
-      }
-    },
-    {
-      "cluster_id": "primary-signal-003",
+      "cluster_id": "primary-signal-005",
       "title": "General 主品牌 overseas shopping discussion",
-      "summary": "23 related posts discuss 主品牌 overseas shopping context.",
+      "summary": "14 related posts discuss 主品牌 overseas shopping context.",
       "summary_zh": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
       "lead_post": {
-        "post_id": "2116537713554022451",
-        "created_at": "2026-10-31T14:28:08Z",
+        "post_id": "2116930913812578367",
+        "created_at": "2026-11-01T16:30:35Z",
         "author": {
-          "id": "1864330544886239232",
-          "handle": "rllcca",
-          "name": "ArrayNihil",
-          "avatar_url": "https://pbs.twimg.com/profile_images/2088537500432433152/wEmJCGx9_normal.jpg",
-          "followers": 59,
-          "following": 27,
+          "id": "963823446",
+          "handle": "Vanilleotter",
+          "name": "~ 🫧 Gwendolyn 💧~",
+          "avatar_url": "https://pbs.twimg.com/profile_images/2114990606850162689/qpYfiO3I_normal.jpg",
+          "followers": 870,
+          "following": 976,
           "bio": null,
           "location": null,
-          "joined_at": "2024-12-04T15:27:06Z",
+          "joined_at": "2012-11-22T07:54:12Z",
           "verified": false
         },
-        "author_name": "ArrayNihil",
-        "author_handle": "rllcca",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/2088537500432433152/wEmJCGx9_normal.jpg",
-        "author_followers": 59,
-        "author_following": 27,
+        "author_name": "~ 🫧 Gwendolyn 💧~",
+        "author_handle": "Vanilleotter",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2114990606850162689/qpYfiO3I_normal.jpg",
+        "author_followers": 870,
+        "author_following": 976,
         "author_bio": null,
         "author_location": null,
-        "author_joined_at": "2024-12-04T15:27:06Z",
+        "author_joined_at": "2012-11-22T07:54:12Z",
         "author_verified": false,
-        "url": "https://x.com/rllcca/status/2116537713554022451",
+        "url": "https://x.com/Vanilleotter/status/2116930913812578367",
         "reply_to_post_id": null,
         "reply_to_handle": null,
         "quoted_post_id": null,
-        "conversation_id": "2116537713554022451",
+        "conversation_id": "2116930913812578367",
         "conversation_context": {},
-        "language": "zh",
-        "text": "今天倒霉透了……\n\n在joybuy买的包裹又被运不见了……我的12磅呃呃呃呃呃\n\n发万圣节制品打印码结果评论区一直有人透露问题答案，害得我在小红书蹲守了两个小时……（问题是游戏下载平台是什么这真的很困难吗……为什么一直在下面透答案……）\n\n水逆进行中……",
-        "clean_text": "今天倒霉透了……\n\n在joybuy买的包裹又被运不见了……我的12磅呃呃呃呃呃\n\n发万圣节制品打印码结果评论区一直有人透露问题答案，害得我在小红书蹲守了两个小时……（问题是游戏下载平台是什么这真的很困难吗……为什么一直在下面透答案……）\n\n水逆进行中……",
+        "language": "de",
+        "text": "Ich hab das erste mal bei Joybuy gekauft, das soll Morgen schon da sein O.O\nHab mir Kewpie Mayo, Sojasoße und sowas geholt.\nBin mal total gespannt, hat da schonmal jemand bestellt?",
+        "clean_text": "Ich hab das erste mal bei Joybuy gekauft, das soll Morgen schon da sein O.O\nHab mir Kewpie Mayo, Sojasoße und sowas geholt.\nBin mal total gespannt, hat da schonmal jemand bestellt?",
         "links": [],
-        "translation_zh": "今天倒霉透了……\n\n在joybuy买的包裹又被运不见了……我的12磅呃呃呃呃呃\n\n发万圣节制品打印码结果评论区一直有人透露问题答案，害得我在小红书蹲守了两个小时……（问题是游戏下载平台是什么这真的很困难吗……为什么一直在下面透答案……）\n\n水逆进行中……",
-        "translation_status": "source_chinese",
+        "translation_zh": "我第一次在 Joybuy 买东西，据说明天就能到了 O.O\n我买了 Kewpie 蛋黄酱、酱油之类的东西。\n我真的挺期待的，有人已经在那里下过单吗？",
+        "translation_status": "translated",
         "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
         "metrics": {
-          "likes": 0,
+          "likes": 12,
           "reposts": 0,
-          "replies": 1,
+          "replies": 5,
           "quotes": 0,
-          "bookmarks": 0,
-          "views": 68
+          "bookmarks": 2,
+          "views": 1764
         },
         "media": []
       },
       "topic": "general_observation",
       "risk_types": [],
       "opportunity_types": [],
-      "post_count": 23,
-      "first_seen_at": "2026-10-31T00:02:33Z",
-      "last_seen_at": "2026-10-31T22:58:30Z",
+      "post_count": 14,
+      "first_seen_at": "2026-11-01T03:28:40Z",
+      "last_seen_at": "2026-11-01T20:02:29Z",
       "metrics": {
-        "total_likes": 145,
-        "total_reposts": 43,
-        "total_replies": 54,
-        "total_quotes": 1,
-        "total_bookmarks": 11,
-        "total_views": 4665,
-        "max_author_followers": 7858,
-        "public_interactions": 243
+        "total_likes": 53,
+        "total_reposts": 18,
+        "total_replies": 18,
+        "total_quotes": 2,
+        "total_bookmarks": 8,
+        "total_views": 9845,
+        "max_author_followers": 11081,
+        "public_interactions": 91
       },
       "score": {
         "ips": 61,
         "level": "medium",
         "brand_relevance": 100,
         "risk_or_opportunity_intensity": 40,
-        "current_impact": 49,
-        "future_potential": 57,
-        "credibility": 76,
+        "current_impact": 38,
+        "future_potential": 60,
+        "credibility": 86,
         "business_impact": 42,
-        "urgency": 40,
+        "urgency": 41,
         "sentiment": "neutral",
         "confidence": 0.81,
         "recommended_action": "观察",
@@ -356,7 +428,7 @@
       },
       "evidence_counts": {
         "origin": 1,
-        "stakeholders": 3,
+        "stakeholders": 0,
         "popular": 3,
         "amplifiers": 0,
         "latest": 3,
@@ -365,48 +437,282 @@
       }
     },
     {
-      "cluster_id": "primary-signal-001",
-      "title": "Competitor comparison and substitution signals",
-      "summary": "1 related posts compare 主品牌 with other shopping platforms.",
-      "summary_zh": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "cluster_id": "primary-signal-006",
+      "title": "Positive shopping experience around 主品牌",
+      "summary": "1 related posts praise price, delivery speed or buying experience.",
+      "summary_zh": "相关讨论体现价格、配送或购物体验上的正向口碑。",
       "lead_post": {
-        "post_id": "2116459068428611728",
-        "created_at": "2026-10-31T09:15:38Z",
+        "post_id": "2116908051622199370",
+        "created_at": "2026-11-01T14:59:44Z",
         "author": {
-          "id": "2055343579220877313",
-          "handle": "CindeNelerOluyo",
-          "name": "CindeNeOluyor",
-          "avatar_url": "https://pbs.twimg.com/profile_images/2066535000598519808/IFFxOK6N_normal.jpg",
-          "followers": 20,
-          "following": 125,
+          "id": "1759931914276757504",
+          "handle": "Alice_changg",
+          "name": "رادیو جیبی",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1966529078220976129/8tibQOBE_normal.jpg",
+          "followers": 21,
+          "following": 89,
           "bio": null,
-          "location": "Türkiye",
-          "joined_at": "2026-05-15T17:44:44Z",
+          "location": "Berlin, Germany",
+          "joined_at": "2024-02-20T13:24:49Z",
           "verified": false
         },
-        "author_name": "CindeNeOluyor",
-        "author_handle": "CindeNelerOluyo",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/2066535000598519808/IFFxOK6N_normal.jpg",
-        "author_followers": 20,
-        "author_following": 125,
+        "author_name": "رادیو جیبی",
+        "author_handle": "Alice_changg",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1966529078220976129/8tibQOBE_normal.jpg",
+        "author_followers": 21,
+        "author_following": 89,
         "author_bio": null,
-        "author_location": "Türkiye",
-        "author_joined_at": "2026-05-15T17:44:44Z",
+        "author_location": "Berlin, Germany",
+        "author_joined_at": "2024-02-20T13:24:49Z",
         "author_verified": false,
-        "url": "https://x.com/CindeNelerOluyo/status/2116459068428611728",
+        "url": "https://x.com/Alice_changg/status/2116908051622199370",
         "reply_to_post_id": null,
         "reply_to_handle": null,
         "quoted_post_id": null,
-        "conversation_id": "2116459068428611728",
+        "conversation_id": "2116908051622199370",
         "conversation_context": {},
-        "language": "tr",
-        "text": "ABD'de Çin hisseleri · 30 Ekim seansı\n\n▲ FXI (Çin büyük şirket ETF) %1,19\n▼ KWEB (Çin internet ETF) %0,22\n▲ https://t.co/4o7SIEqnYj %0,20\n▼ PDD (Temu) %0,85\n▼ Li Auto %0,99\n▼ Alibaba %1,51\n▼ XPeng %1,53\n▼ Baidu %2,86\n▼ NIO %3,31\n\nABD'de işlem gören Çin büyük şirket ETF'i FXI %1,19 yükseldi, internet ETF'i KWEB %0,22 geriledi. Hisse bazında ayrışma var: 1 hisse artıda, 6 hisse ekside. En güçlü $JD %0,20, en zayıf $NIO %3,31. Tayvan çip devi TSMC'nin ADR'si %5,95 geriledi.",
-        "clean_text": "ABD'de Çin hisseleri · 30 Ekim seansı\n\n▲ FXI (Çin büyük şirket ETF) %1,19\n▼ KWEB (Çin internet ETF) %0,22\n▲ JD.com %0,20\n▼ PDD (Temu) %0,85\n▼ Li Auto %0,99\n▼ Alibaba %1,51\n▼ XPeng %1,53\n▼ Baidu %2,86\n▼ NIO %3,31\n\nABD'de işlem gören Çin büyük şirket ETF'i FXI %1,19 yükseldi, internet ETF'i KWEB %0,22 geriledi. Hisse bazında ayrışma var: 1 hisse artıda, 6 hisse ekside. En güçlü $JD %0,20, en zayıf $NIO %3,31. Tayvan çip devi TSMC'nin ADR'si %5,95 geriledi.",
+        "language": "fa",
+        "text": "این ژل آبرسان ژاپنی Naturie رو به توصیه یه دوست ژاپنیم گرفتم و واقعاً دوستش دارم. بین آبرسان‌هایی که اخیراً امتحان کردم، این یکی هم خیلی سبکه، هم خوب آبرسانی می‌کنه و هم قیمتش عالیه.\n\nاگه هلند یا آلمانین توی Joybuy هم پیداش می‌کنین :) https://t.co/tQOyC7GVpO",
+        "clean_text": "این ژل آبرسان ژاپنی Naturie رو به توصیه یه دوست ژاپنیم گرفتم و واقعاً دوستش دارم. بین آبرسان‌هایی که اخیراً امتحان کردم، این یکی هم خیلی سبکه، هم خوب آبرسانی می‌کنه و هم قیمتش عالیه.\n\nاگه هلند یا آلمانین توی Joybuy هم پیداش می‌کنین :)",
+        "links": [],
+        "translation_zh": "我是在一位日本朋友的推荐下买了这款日本 Naturie 保湿凝胶，真的很喜欢。最近试过的保湿产品里，这款既非常轻薄，补水效果也很好，而且价格也很棒。\n\n如果你在荷兰或德国，在 Joybuy 上也能找到它 :)",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 3,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 3,
+          "views": 53
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+            "expanded_url": "https://x.com/Alice_changg/status/2116908051622199370/photo/1"
+          }
+        ]
+      },
+      "topic": "positive_experience",
+      "risk_types": [],
+      "opportunity_types": [
+        "positive_value",
+        "delivery_strength"
+      ],
+      "post_count": 1,
+      "first_seen_at": "2026-11-01T14:59:44Z",
+      "last_seen_at": "2026-11-01T14:59:44Z",
+      "metrics": {
+        "total_likes": 3,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 3,
+        "total_views": 53,
+        "max_author_followers": 21,
+        "public_interactions": 3
+      },
+      "score": {
+        "ips": 53,
+        "level": "low",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 62,
+        "current_impact": 25,
+        "future_potential": 44,
+        "credibility": 58,
+        "business_impact": 60,
+        "urgency": 50,
+        "sentiment": "positive",
+        "confidence": 0.81,
+        "recommended_action": "传播机会",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "positive_value",
+          "delivery_strength"
+        ],
+        "special_flags": [],
+        "explanation": "该情报偏正向机会，体现价格、配送或促销优势，可用于观察传播借势。综合优先级 53。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 1,
+        "amplifiers": 0,
+        "latest": 1,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 1
+      }
+    },
+    {
+      "cluster_id": "primary-signal-002",
+      "title": "Corporate, market and strategy discussion",
+      "summary": "1 related posts discuss corporate, market or strategy context.",
+      "summary_zh": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "lead_post": {
+        "post_id": "2116826929512796345",
+        "created_at": "2026-11-01T09:37:23Z",
+        "author": {
+          "id": "2078149514783838208",
+          "handle": "AylioChineseFC",
+          "name": "AylioOfficialChineseFanclub",
+          "avatar_url": "https://pbs.twimg.com/profile_images/2078150255053332480/LeQNsuwe_normal.jpg",
+          "followers": 3476,
+          "following": 17,
+          "bio": null,
+          "location": null,
+          "joined_at": "2026-07-17T16:09:00Z",
+          "verified": false
+        },
+        "author_name": "AylioOfficialChineseFanclub",
+        "author_handle": "AylioChineseFC",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2078150255053332480/LeQNsuwe_normal.jpg",
+        "author_followers": 3476,
+        "author_following": 17,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2026-07-17T16:09:00Z",
+        "author_verified": false,
+        "url": "https://x.com/AylioChineseFC/status/2116826929512796345",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116826929512796345",
+        "conversation_context": {},
+        "language": "en",
+        "text": "【IMPORTANT UPDATE】☀🍊\n\nGuerlain × Aylio\nOfficial Details and Purchase Guide\n\nhttps://t.co/QeRs1BsN4k🔍 [Guerlain Official Store]\n✈️ International shipping available to Australia, Singapore, Japan, Thailand, South Korea, and more.\n💴Credit card ＆ Debit card ＆ WeChat Pay accepted\n\n🧡Aylio Exclusive Gifts Available from 10:00 Nov 1\n✨ Ranking Events\nEvent 1 | Invite friends to sign up as members\nTime: 10:00 Nov 1 — 23:59 Nov 13\nTOP1–2: Dual autograph X 1\nTOP3–9: Full set photocards X1\nTOP10–20: Abeille Royale sample set X 1\n\nEvent 2 | Purchase ranking to win signed aylio polaroids\nTime: 19:00 Nov 2 — 23:59 Nov 4\nTOP1: Polaroid X 1+ full-size Orchid Eye Cream\nTOP2: polaroid X 1+ full-size Orchid Cream\nTOP3: Polaroid X 1+ full-size Rose Hand Cream\nTOP4–10: Polaroid X 1\n\n🧡Aylio Live Stream Extra\nShare & comment in live chat to win photocards and voice enamel pins\n\n🧡Aylio Picks Gifts Listed（Beijing Time）\n⏰Early access: 10:00 Nov 1 — 18:59 Nov 2\n🗓️Live sale: 19:00 Nov 2 — 23:59 Nov 2\n\n🎁Abeille Royale Youth Watery Oil ¥1190\nPhotocards X 3 (10,000 limit)\n🎁L'Heure Bleue Perfume ¥1230\nPhotocards X 3(10,000 limit)\n🎁Abeille Royale Lotion ¥1250\n Photocards X 3 (10,000 limit)\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\nPhotocards X 3 (10,000 limit) + 1 brooch with 3 brooch charms (800 limit)\n🎁Hydrating Repair Set ¥2440\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n🎁Classic Repair Trio ¥3805\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
+        "clean_text": "【IMPORTANT UPDATE】☀🍊\n\nGuerlain × Aylio\nOfficial Details and Purchase Guide\n\nJD.com [Guerlain Official Store]\n✈️ International shipping available to Australia, Singapore, Japan, Thailand, South Korea, and more.\n💴Credit card ＆ Debit card ＆ WeChat Pay accepted\n\n🧡Aylio Exclusive Gifts Available from 10:00 Nov 1\n✨ Ranking Events\nEvent 1 | Invite friends to sign up as members\nTime: 10:00 Nov 1 — 23:59 Nov 13\nTOP1–2: Dual autograph X 1\nTOP3–9: Full set photocards X1\nTOP10–20: Abeille Royale sample set X 1\n\nEvent 2 | Purchase ranking to win signed aylio polaroids\nTime: 19:00 Nov 2 — 23:59 Nov 4\nTOP1: Polaroid X 1+ full-size Orchid Eye Cream\nTOP2: polaroid X 1+ full-size Orchid Cream\nTOP3: Polaroid X 1+ full-size Rose Hand Cream\nTOP4–10: Polaroid X 1\n\n🧡Aylio Live Stream Extra\nShare & comment in live chat to win photocards and voice enamel pins\n\n🧡Aylio Picks Gifts Listed（Beijing Time）\n⏰Early access: 10:00 Nov 1 — 18:59 Nov 2\n🗓️Live sale: 19:00 Nov 2 — 23:59 Nov 2\n\n🎁Abeille Royale Youth Watery Oil ¥1190\nPhotocards X 3 (10,000 limit)\n🎁L'Heure Bleue Perfume ¥1230\nPhotocards X 3(10,000 limit)\n🎁Abeille Royale Lotion ¥1250\n Photocards X 3 (10,000 limit)\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\nPhotocards X 3 (10,000 limit) + 1 brooch with 3 brooch charms (800 limit)\n🎁Hydrating Repair Set ¥2440\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n🎁Classic Repair Trio ¥3805\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
         "links": [
           "http://JD.com"
         ],
-        "translation_zh": "ABD'de Çin hisseleri · 30 Ekim seansı\n\n▲ FXI (Çin büyük şirket ETF) %1,19\n▼ KWEB (Çin internet ETF) %0,22\n▲ JD.com %0,20\n▼ PDD (Temu) %0,85\n▼ Li Auto %0,99\n▼ Alibaba %1,51\n▼ XPeng %1,53\n▼ Baidu %2,86\n▼ NIO %3,31\n\nABD'de işlem gören Çin büyük şirket ETF'i FXI %1,19 yükseldi, internet ETF'i KWEB %0,22 geriledi. Hisse bazında ayrışma var: 1 hisse artıda, 6 hisse ekside. En güçlü $JD %0,20, en zayıf $NIO %3,31. Tayvan çip devi TSMC'nin ADR'si %5,95 geriledi.",
-        "translation_status": "error",
+        "translation_zh": "【重要更新】☀🍊\n\nGuerlain × Aylio\n官方详情与购买指南\n\nJD.com【Guerlain 官方店】\n✈️ 可国际配送至澳大利亚、新加坡、日本、泰国、韩国等地。\n💴支持信用卡、借记卡和 WeChat Pay\n\n🧡Aylio 专属赠品将于 11 月 1 日 10:00 起开放\n✨ 排名活动\n活动 1 | 邀请好友注册成为会员\n时间：11 月 1 日 10:00 — 11 月 13 日 23:59\nTOP1–2：双人签名 X 1\nTOP3–9：全套小卡 X1\nTOP10–20：Abeille Royale 试用装套组 X 1\n\n活动 2 | 购买排名赢取签名 aylio 拍立得\n时间：11 月 2 日 19:00 — 11 月 4 日 23:59\nTOP1：拍立得 X 1+ 正装 Orchid Eye Cream\nTOP2：拍立得 X 1+ 正装 Orchid Cream\nTOP3：拍立得 X 1+ 正装 Rose Hand Cream\nTOP4–10：拍立得 X 1\n\n🧡Aylio 直播额外福利\n在直播聊天中分享并评论，有机会赢取小卡和语音珐琅徽章\n\n🧡Aylio Picks 赠品上架（北京时间）\n⏰抢先购：11 月 1 日 10:00 — 11 月 2 日 18:59\n🗓️直播销售：11 月 2 日 19:00 — 11 月 2 日 23:59\n\n🎁Abeille Royale Youth Watery Oil ¥1190\n小卡 X 3（限量 10,000）\n🎁L'Heure Bleue Perfume ¥1230\n小卡 X 3（限量 10,000）\n🎁Abeille Royale Lotion ¥1250\n 小卡 X 3（限量 10,000）\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\n小卡 X 3（限量 10,000）+ 1 枚胸针，附 3 个胸针挂饰（限量 800）\n🎁Hydrating Repair Set ¥2440\n小卡 X 3（限量 10,000）+ 语音珐琅徽章（限量 3,000）\n🎁Classic Repair Trio ¥3805\n小卡 X 3（限量 10,000）+ 语音珐琅徽章（限量 3,000）\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+        "metrics": {
+          "likes": 120,
+          "reposts": 51,
+          "replies": 0,
+          "quotes": 1,
+          "bookmarks": 4,
+          "views": 2238
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+            "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+          },
+          {
+            "url": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+            "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+          },
+          {
+            "url": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+            "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+          }
+        ]
+      },
+      "topic": "company_market",
+      "risk_types": [],
+      "opportunity_types": [
+        "corporate_context"
+      ],
+      "post_count": 1,
+      "first_seen_at": "2026-11-01T09:37:23Z",
+      "last_seen_at": "2026-11-01T09:37:23Z",
+      "metrics": {
+        "total_likes": 120,
+        "total_reposts": 51,
+        "total_replies": 0,
+        "total_quotes": 1,
+        "total_bookmarks": 4,
+        "total_views": 2238,
+        "max_author_followers": 3476,
+        "public_interactions": 172
+      },
+      "score": {
+        "ips": 52,
+        "level": "low",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 48,
+        "current_impact": 41,
+        "future_potential": 44,
+        "credibility": 58,
+        "business_impact": 56,
+        "urgency": 42,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "背景观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "corporate_context"
+        ],
+        "special_flags": [],
+        "explanation": "公司、资本市场或战略背景信息对品牌心智有间接影响，当前综合优先级为 52。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 1,
+        "amplifiers": 0,
+        "latest": 1,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 1
+      }
+    },
+    {
+      "cluster_id": "primary-signal-007",
+      "title": "Product, deal and availability discussion",
+      "summary": "1 related posts mention product availability, deals or affiliate promotion.",
+      "summary_zh": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "lead_post": {
+        "post_id": "2116880499331477668",
+        "created_at": "2026-11-01T13:10:15Z",
+        "author": {
+          "id": "26201991",
+          "handle": "Clubpromos",
+          "name": "Clubpromos Sonia",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1211049210407194629/r1jUTcpz_normal.jpg",
+          "followers": 1236,
+          "following": 23,
+          "bio": null,
+          "location": "France",
+          "joined_at": "2009-03-24T08:47:56Z",
+          "verified": false
+        },
+        "author_name": "Clubpromos Sonia",
+        "author_handle": "Clubpromos",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1211049210407194629/r1jUTcpz_normal.jpg",
+        "author_followers": 1236,
+        "author_following": 23,
+        "author_bio": null,
+        "author_location": "France",
+        "author_joined_at": "2009-03-24T08:47:56Z",
+        "author_verified": false,
+        "url": "https://x.com/Clubpromos/status/2116880499331477668",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116880499331477668",
+        "conversation_context": {},
+        "language": "fr",
+        "text": "Fini le plastique qui garde l'odeur du curry ! \n8 boîtes en verre borosilicaté (type Pyrex) à 13,99 €. De 150 à 1040 ml.\nQui en a besoin ?\n\n#bonplan #joybuy #partenaire\n\n👉 https://t.co/jS7TAGoDa3 https://t.co/UxljWRNErK",
+        "clean_text": "Fini le plastique qui garde l'odeur du curry ! \n8 boîtes en verre borosilicaté (type Pyrex) à 13,99 €. De 150 à 1040 ml.\nQui en a besoin ?\n\n#bonplan #joybuy #partenaire\n\n👉 smyi.me/01oEd",
+        "links": [
+          "https://smyi.me/01oEd"
+        ],
+        "translation_zh": "告别会留住咖喱味的塑料盒！\n8 个硼硅玻璃盒（Pyrex 类型）售价 13,99 €。容量从 150 到 1040 ml。\n谁需要？\n\n#bonplan #joybuy #partenaire\n\n👉 smyi.me/01oEd",
+        "translation_status": "translated",
         "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
         "metrics": {
           "likes": 0,
@@ -414,55 +720,57 @@
           "replies": 0,
           "quotes": 0,
           "bookmarks": 0,
-          "views": 60
+          "views": 34
         },
         "media": [
           {
-            "url": "https://pbs.twimg.com/media/HV8sTUFWUAAnhc3.jpg",
+            "url": "https://pbs.twimg.com/media/HWCrh6bXsAEzL60.jpg",
             "type": "photo",
-            "preview_image_url": "https://pbs.twimg.com/media/HV8sTUFWUAAnhc3.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/HV8sTUFWUAAnhc3.jpg",
-            "expanded_url": "https://x.com/CindeNelerOluyo/status/2116459068428611728/photo/1"
+            "preview_image_url": "https://pbs.twimg.com/media/HWCrh6bXsAEzL60.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWCrh6bXsAEzL60.jpg",
+            "expanded_url": "https://x.com/Clubpromos/status/2116880499331477668/photo/1"
           }
         ]
       },
-      "topic": "competitor_comparison",
+      "topic": "product_deal",
       "risk_types": [],
       "opportunity_types": [
-        "competitive_position"
+        "product_interest",
+        "promotion"
       ],
       "post_count": 1,
-      "first_seen_at": "2026-10-31T09:15:38Z",
-      "last_seen_at": "2026-10-31T09:15:38Z",
+      "first_seen_at": "2026-11-01T13:10:15Z",
+      "last_seen_at": "2026-11-01T13:10:15Z",
       "metrics": {
         "total_likes": 0,
         "total_reposts": 0,
         "total_replies": 0,
         "total_quotes": 0,
         "total_bookmarks": 0,
-        "total_views": 60,
-        "max_author_followers": 20,
+        "total_views": 34,
+        "max_author_followers": 1236,
         "public_interactions": 0
       },
       "score": {
-        "ips": 54,
+        "ips": 49,
         "level": "low",
         "brand_relevance": 70,
-        "risk_or_opportunity_intensity": 60,
+        "risk_or_opportunity_intensity": 52,
         "current_impact": 25,
-        "future_potential": 45,
+        "future_potential": 40,
         "credibility": 58,
-        "business_impact": 64,
-        "urgency": 52,
-        "sentiment": "neutral",
+        "business_impact": 50,
+        "urgency": 42,
+        "sentiment": "positive",
         "confidence": 0.81,
-        "recommended_action": "竞品对照观察",
+        "recommended_action": "传播机会",
         "risk_labels": [],
         "opportunity_labels": [
-          "competitive_position"
+          "product_interest",
+          "promotion"
         ],
         "special_flags": [],
-        "explanation": "用户将主品牌与其他平台对照，适合观察价格、配送或品类竞争位置。综合优先级 54。"
+        "explanation": "商品、优惠或库存信息可反映自然需求与转化入口，综合优先级 49。"
       },
       "evidence_counts": {
         "origin": 1,
@@ -477,85 +785,56 @@
   ],
   "negative_top": [
     {
-      "cluster_id": "primary-signal-002",
+      "cluster_id": "primary-signal-004",
       "title": "Fulfillment and after-sales risk discussion",
       "summary": "1 related posts discuss refund, return, delivery or after-sales issues.",
       "summary_zh": "相关讨论涉及退款、退货、配送或售后体验风险。",
       "lead_post": {
-        "post_id": "2116566624421704107",
-        "created_at": "2026-10-31T16:23:01Z",
+        "post_id": "2116822030842835127",
+        "created_at": "2026-11-01T09:17:55Z",
         "author": {
-          "id": "1165044876297134080",
-          "handle": "realNyarime",
-          "name": "奶昔🥤",
-          "avatar_url": "https://pbs.twimg.com/profile_images/2100861677411647488/qLK34Cve_normal.jpg",
-          "followers": 53313,
-          "following": 698,
+          "id": "1237990477367926785",
+          "handle": "shakabwo",
+          "name": "shakabwo",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1760009656771268608/5IHYn_lk_normal.jpg",
+          "followers": 56,
+          "following": 585,
           "bio": null,
-          "location": "Xiamen, Fujian, PR. China",
-          "joined_at": "2019-08-23T23:35:25Z",
+          "location": "香港",
+          "joined_at": "2020-03-12T06:35:14Z",
           "verified": false
         },
-        "author_name": "奶昔🥤",
-        "author_handle": "realNyarime",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/2100861677411647488/qLK34Cve_normal.jpg",
-        "author_followers": 53313,
-        "author_following": 698,
+        "author_name": "shakabwo",
+        "author_handle": "shakabwo",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1760009656771268608/5IHYn_lk_normal.jpg",
+        "author_followers": 56,
+        "author_following": 585,
         "author_bio": null,
-        "author_location": "Xiamen, Fujian, PR. China",
-        "author_joined_at": "2019-08-23T23:35:25Z",
+        "author_location": "香港",
+        "author_joined_at": "2020-03-12T06:35:14Z",
         "author_verified": false,
-        "url": "https://x.com/realNyarime/status/2116566624421704107",
+        "url": "https://x.com/shakabwo/status/2116822030842835127",
         "reply_to_post_id": null,
         "reply_to_handle": null,
-        "quoted_post_id": null,
-        "conversation_id": "2116566624421704107",
+        "quoted_post_id": "2114175313446158483",
+        "conversation_id": "2116822030842835127",
         "conversation_context": {},
         "language": "zh",
-        "text": "之前一直用的闲鱼和快递100。昨天看到有人分享这个低于闲鱼发快递的方法，是目前我能看到最便宜的快递了，就是用拼多多商家版，但是不要绑卡！底下会说\n\n闲鱼和快递100下快递的话，可以选预约时间，基本上都能按时间取，但是这个不能选时间，是当天件，也有好多人说这种特价快递取件特别慢，或者压根就不取，这个和地方或者和你当地快递员有关系，你自己找个最合适的快递员就行了。无任何门槛（只发一件）顺丰可以做到9块，其他快递是最低三块多，单子越多越便宜。当然注册淘宝也可以的，用千牛的商家寄件\n\n注意，注册拼多多商家版，不要绑卡！要不然啥时候给平台给你来个罚款，你哭都来不及。毕竟光一个普通平台，可以完爆阿里，京东这些平台，就单平台的收益做到全国首富，就是是不是去商家那里扣个3快5快的，而且申诉基本100失败，而且你只要注册过拼多多店铺，只要你没注销你的银行卡，它可以随时去你银行卡拿钱，有些卖家，都关掉拼多多5-6年，都退保证金和解绑银行卡了，就是没有注销银行卡，还能被平台强制扣款，说是违法平台规则，需要处罚\n\n这个你只要付款就是要绑定拼多多是有协议的，解绑并不会去解除协议，如果平台需要扣款也还是可以直接扣除。要么去银行卡解除所有第三方平台的代扣协议，要么就是直接注销卡。不信你可以去抖音搜索试试，这不知道多少商家被拼多多扣钱。因为有时候消费者找拼多多客服话，你就算关店了，它只要能补偿消费者，那就是从商家口袋出的，平台不会垫付任何1分钱。其他平台的话，你质保到期或者退店了，基本上平台就是不管售后了。这拼多多他是可以去你银行卡拿钱的，所以在拼多多基本上售后是无限期，除非那个商家把银行卡注销了，或者是去柜台解绑所以代扣协议\n\n当然你和快递熟，最好是直接找顺丰网点的业务经理开。补充一个我知道的，顺丰用的驿小客，自己打单5.5一单3公斤内，快递员来收。多少单都行",
-        "clean_text": "之前一直用的闲鱼和快递100。昨天看到有人分享这个低于闲鱼发快递的方法，是目前我能看到最便宜的快递了，就是用拼多多商家版，但是不要绑卡！底下会说\n\n闲鱼和快递100下快递的话，可以选预约时间，基本上都能按时间取，但是这个不能选时间，是当天件，也有好多人说这种特价快递取件特别慢，或者压根就不取，这个和地方或者和你当地快递员有关系，你自己找个最合适的快递员就行了。无任何门槛（只发一件）顺丰可以做到9块，其他快递是最低三块多，单子越多越便宜。当然注册淘宝也可以的，用千牛的商家寄件\n\n注意，注册拼多多商家版，不要绑卡！要不然啥时候给平台给你来个罚款，你哭都来不及。毕竟光一个普通平台，可以完爆阿里，京东这些平台，就单平台的收益做到全国首富，就是是不是去商家那里扣个3快5快的，而且申诉基本100失败，而且你只要注册过拼多多店铺，只要你没注销你的银行卡，它可以随时去你银行卡拿钱，有些卖家，都关掉拼多多5-6年，都退保证金和解绑银行卡了，就是没有注销银行卡，还能被平台强制扣款，说是违法平台规则，需要处罚\n\n这个你只要付款就是要绑定拼多多是有协议的，解绑并不会去解除协议，如果平台需要扣款也还是可以直接扣除。要么去银行卡解除所有第三方平台的代扣协议，要么就是直接注销卡。不信你可以去抖音搜索试试，这不知道多少商家被拼多多扣钱。因为有时候消费者找拼多多客服话，你就算关店了，它只要能补偿消费者，那就是从商家口袋出的，平台不会垫付任何1分钱。其他平台的话，你质保到期或者退店了，基本上平台就是不管售后了。这拼多多他是可以去你银行卡拿钱的，所以在拼多多基本上售后是无限期，除非那个商家把银行卡注销了，或者是去柜台解绑所以代扣协议\n\n当然你和快递熟，最好是直接找顺丰网点的业务经理开。补充一个我知道的，顺丰用的驿小客，自己打单5.5一单3公斤内，快递员来收。多少单都行",
+        "text": "商家居然冒充京东平台的人给我打电话给我退全款。京东的规则是只要退款退货完成，客户的评价会自动删除。商家可能是以为我不知道这个规则，冒充平台客服来骗我上当。这商家真是蛮坏的，我只能好好收拾收拾他们了。",
+        "clean_text": "商家居然冒充京东平台的人给我打电话给我退全款。京东的规则是只要退款退货完成，客户的评价会自动删除。商家可能是以为我不知道这个规则，冒充平台客服来骗我上当。这商家真是蛮坏的，我只能好好收拾收拾他们了。",
         "links": [],
-        "translation_zh": "之前一直用的闲鱼和快递100。昨天看到有人分享这个低于闲鱼发快递的方法，是目前我能看到最便宜的快递了，就是用拼多多商家版，但是不要绑卡！底下会说\n\n闲鱼和快递100下快递的话，可以选预约时间，基本上都能按时间取，但是这个不能选时间，是当天件，也有好多人说这种特价快递取件特别慢，或者压根就不取，这个和地方或者和你当地快递员有关系，你自己找个最合适的快递员就行了。无任何门槛（只发一件）顺丰可以做到9块，其他快递是最低三块多，单子越多越便宜。当然注册淘宝也可以的，用千牛的商家寄件\n\n注意，注册拼多多商家版，不要绑卡！要不然啥时候给平台给你来个罚款，你哭都来不及。毕竟光一个普通平台，可以完爆阿里，京东这些平台，就单平台的收益做到全国首富，就是是不是去商家那里扣个3快5快的，而且申诉基本100失败，而且你只要注册过拼多多店铺，只要你没注销你的银行卡，它可以随时去你银行卡拿钱，有些卖家，都关掉拼多多5-6年，都退保证金和解绑银行卡了，就是没有注销银行卡，还能被平台强制扣款，说是违法平台规则，需要处罚\n\n这个你只要付款就是要绑定拼多多是有协议的，解绑并不会去解除协议，如果平台需要扣款也还是可以直接扣除。要么去银行卡解除所有第三方平台的代扣协议，要么就是直接注销卡。不信你可以去抖音搜索试试，这不知道多少商家被拼多多扣钱。因为有时候消费者找拼多多客服话，你就算关店了，它只要能补偿消费者，那就是从商家口袋出的，平台不会垫付任何1分钱。其他平台的话，你质保到期或者退店了，基本上平台就是不管售后了。这拼多多他是可以去你银行卡拿钱的，所以在拼多多基本上售后是无限期，除非那个商家把银行卡注销了，或者是去柜台解绑所以代扣协议\n\n当然你和快递熟，最好是直接找顺丰网点的业务经理开。补充一个我知道的，顺丰用的驿小客，自己打单5.5一单3公斤内，快递员来收。多少单都行",
+        "translation_zh": "商家居然冒充京东平台的人给我打电话给我退全款。京东的规则是只要退款退货完成，客户的评价会自动删除。商家可能是以为我不知道这个规则，冒充平台客服来骗我上当。这商家真是蛮坏的，我只能好好收拾收拾他们了。",
         "translation_status": "source_chinese",
-        "summary_zh": "用户讨论客服响应和售后体验。",
+        "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
         "metrics": {
-          "likes": 188,
-          "reposts": 11,
-          "replies": 3,
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
           "quotes": 0,
-          "bookmarks": 211,
-          "views": 13799
+          "bookmarks": 0,
+          "views": 49
         },
-        "media": [
-          {
-            "url": "https://pbs.twimg.com/media/HV-OF9jbwAAPeOx.jpg",
-            "type": "photo",
-            "preview_image_url": "https://pbs.twimg.com/media/HV-OF9jbwAAPeOx.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/HV-OF9jbwAAPeOx.jpg",
-            "expanded_url": "https://x.com/realNyarime/status/2116566624421704107/photo/1"
-          },
-          {
-            "url": "https://pbs.twimg.com/media/HV-OGehbAAAi0ku.jpg",
-            "type": "photo",
-            "preview_image_url": "https://pbs.twimg.com/media/HV-OGehbAAAi0ku.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/HV-OGehbAAAi0ku.jpg",
-            "expanded_url": "https://x.com/realNyarime/status/2116566624421704107/photo/1"
-          },
-          {
-            "url": "https://pbs.twimg.com/media/HV-OHD2a8AAtAL4.jpg",
-            "type": "photo",
-            "preview_image_url": "https://pbs.twimg.com/media/HV-OHD2a8AAtAL4.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/HV-OHD2a8AAtAL4.jpg",
-            "expanded_url": "https://x.com/realNyarime/status/2116566624421704107/photo/1"
-          },
-          {
-            "url": "https://pbs.twimg.com/media/HV-OH0MbIAAAddg.jpg",
-            "type": "photo",
-            "preview_image_url": "https://pbs.twimg.com/media/HV-OH0MbIAAAddg.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/HV-OH0MbIAAAddg.jpg",
-            "expanded_url": "https://x.com/realNyarime/status/2116566624421704107/photo/1"
-          }
-        ]
+        "media": []
       },
       "topic": "fulfillment_risk",
       "risk_types": [
@@ -565,28 +844,28 @@
       ],
       "opportunity_types": [],
       "post_count": 1,
-      "first_seen_at": "2026-10-31T16:23:01Z",
-      "last_seen_at": "2026-10-31T16:23:01Z",
+      "first_seen_at": "2026-11-01T09:17:55Z",
+      "last_seen_at": "2026-11-01T09:17:55Z",
       "metrics": {
-        "total_likes": 188,
-        "total_reposts": 11,
-        "total_replies": 3,
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
         "total_quotes": 0,
-        "total_bookmarks": 211,
-        "total_views": 13799,
-        "max_author_followers": 53313,
-        "public_interactions": 202
+        "total_bookmarks": 0,
+        "total_views": 49,
+        "max_author_followers": 56,
+        "public_interactions": 0
       },
       "score": {
-        "ips": 75,
+        "ips": 63,
         "level": "medium",
         "brand_relevance": 70,
-        "risk_or_opportunity_intensity": 86,
-        "current_impact": 62,
-        "future_potential": 71,
-        "credibility": 76,
+        "risk_or_opportunity_intensity": 78,
+        "current_impact": 25,
+        "future_potential": 50,
+        "credibility": 66,
         "business_impact": 86,
-        "urgency": 85,
+        "urgency": 81,
         "sentiment": "negative",
         "confidence": 0.81,
         "recommended_action": "观察",
@@ -596,66 +875,174 @@
           "delivery"
         ],
         "opportunity_labels": [],
-        "special_flags": [
-          "high_influence_account"
-        ],
-        "explanation": "退款议题直接影响信任与支付体验，当前影响力 62，未来发酵潜力 71，可信度 76。"
+        "special_flags": [],
+        "explanation": "退款议题直接影响信任与支付体验，当前影响力 25，未来发酵潜力 50，可信度 66。"
       },
       "evidence_counts": {
         "origin": 1,
         "stakeholders": 1,
         "popular": 1,
-        "amplifiers": 1,
+        "amplifiers": 0,
         "latest": 1,
         "supporting_evidence": 0,
-        "contradicting_evidence": 0
+        "contradicting_evidence": 1
       }
     }
   ],
   "opportunity_top": [
     {
-      "cluster_id": "primary-signal-004",
-      "title": "Product, deal and availability discussion",
-      "summary": "3 related posts mention product availability, deals or affiliate promotion.",
-      "summary_zh": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "cluster_id": "primary-signal-006",
+      "title": "Positive shopping experience around 主品牌",
+      "summary": "1 related posts praise price, delivery speed or buying experience.",
+      "summary_zh": "相关讨论体现价格、配送或购物体验上的正向口碑。",
       "lead_post": {
-        "post_id": "2116569056983781873",
-        "created_at": "2026-10-31T16:32:41Z",
+        "post_id": "2116908051622199370",
+        "created_at": "2026-11-01T14:59:44Z",
         "author": {
-          "id": "795304566367592448",
-          "handle": "dealfunfr",
-          "name": "DealFun",
-          "avatar_url": "https://pbs.twimg.com/profile_images/795304955104100352/LbaIqj2p_normal.jpg",
-          "followers": 4050,
-          "following": 162,
+          "id": "1759931914276757504",
+          "handle": "Alice_changg",
+          "name": "رادیو جیبی",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1966529078220976129/8tibQOBE_normal.jpg",
+          "followers": 21,
+          "following": 89,
           "bio": null,
-          "location": null,
-          "joined_at": "2016-11-06T16:39:19Z",
+          "location": "Berlin, Germany",
+          "joined_at": "2024-02-20T13:24:49Z",
           "verified": false
         },
-        "author_name": "DealFun",
-        "author_handle": "dealfunfr",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/795304955104100352/LbaIqj2p_normal.jpg",
-        "author_followers": 4050,
-        "author_following": 162,
+        "author_name": "رادیو جیبی",
+        "author_handle": "Alice_changg",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1966529078220976129/8tibQOBE_normal.jpg",
+        "author_followers": 21,
+        "author_following": 89,
         "author_bio": null,
-        "author_location": null,
-        "author_joined_at": "2016-11-06T16:39:19Z",
+        "author_location": "Berlin, Germany",
+        "author_joined_at": "2024-02-20T13:24:49Z",
         "author_verified": false,
-        "url": "https://x.com/dealfunfr/status/2116569056983781873",
+        "url": "https://x.com/Alice_changg/status/2116908051622199370",
         "reply_to_post_id": null,
         "reply_to_handle": null,
         "quoted_post_id": null,
-        "conversation_id": "2116569056983781873",
+        "conversation_id": "2116908051622199370",
+        "conversation_context": {},
+        "language": "fa",
+        "text": "این ژل آبرسان ژاپنی Naturie رو به توصیه یه دوست ژاپنیم گرفتم و واقعاً دوستش دارم. بین آبرسان‌هایی که اخیراً امتحان کردم، این یکی هم خیلی سبکه، هم خوب آبرسانی می‌کنه و هم قیمتش عالیه.\n\nاگه هلند یا آلمانین توی Joybuy هم پیداش می‌کنین :) https://t.co/tQOyC7GVpO",
+        "clean_text": "این ژل آبرسان ژاپنی Naturie رو به توصیه یه دوست ژاپنیم گرفتم و واقعاً دوستش دارم. بین آبرسان‌هایی که اخیراً امتحان کردم، این یکی هم خیلی سبکه، هم خوب آبرسانی می‌کنه و هم قیمتش عالیه.\n\nاگه هلند یا آلمانین توی Joybuy هم پیداش می‌کنین :)",
+        "links": [],
+        "translation_zh": "我是在一位日本朋友的推荐下买了这款日本 Naturie 保湿凝胶，真的很喜欢。最近试过的保湿产品里，这款既非常轻薄，补水效果也很好，而且价格也很棒。\n\n如果你在荷兰或德国，在 Joybuy 上也能找到它 :)",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 3,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 3,
+          "views": 53
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+            "expanded_url": "https://x.com/Alice_changg/status/2116908051622199370/photo/1"
+          }
+        ]
+      },
+      "topic": "positive_experience",
+      "risk_types": [],
+      "opportunity_types": [
+        "positive_value",
+        "delivery_strength"
+      ],
+      "post_count": 1,
+      "first_seen_at": "2026-11-01T14:59:44Z",
+      "last_seen_at": "2026-11-01T14:59:44Z",
+      "metrics": {
+        "total_likes": 3,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 3,
+        "total_views": 53,
+        "max_author_followers": 21,
+        "public_interactions": 3
+      },
+      "score": {
+        "ips": 53,
+        "level": "low",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 62,
+        "current_impact": 25,
+        "future_potential": 44,
+        "credibility": 58,
+        "business_impact": 60,
+        "urgency": 50,
+        "sentiment": "positive",
+        "confidence": 0.81,
+        "recommended_action": "传播机会",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "positive_value",
+          "delivery_strength"
+        ],
+        "special_flags": [],
+        "explanation": "该情报偏正向机会，体现价格、配送或促销优势，可用于观察传播借势。综合优先级 53。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 1,
+        "amplifiers": 0,
+        "latest": 1,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 1
+      }
+    },
+    {
+      "cluster_id": "primary-signal-007",
+      "title": "Product, deal and availability discussion",
+      "summary": "1 related posts mention product availability, deals or affiliate promotion.",
+      "summary_zh": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "lead_post": {
+        "post_id": "2116880499331477668",
+        "created_at": "2026-11-01T13:10:15Z",
+        "author": {
+          "id": "26201991",
+          "handle": "Clubpromos",
+          "name": "Clubpromos Sonia",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1211049210407194629/r1jUTcpz_normal.jpg",
+          "followers": 1236,
+          "following": 23,
+          "bio": null,
+          "location": "France",
+          "joined_at": "2009-03-24T08:47:56Z",
+          "verified": false
+        },
+        "author_name": "Clubpromos Sonia",
+        "author_handle": "Clubpromos",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1211049210407194629/r1jUTcpz_normal.jpg",
+        "author_followers": 1236,
+        "author_following": 23,
+        "author_bio": null,
+        "author_location": "France",
+        "author_joined_at": "2009-03-24T08:47:56Z",
+        "author_verified": false,
+        "url": "https://x.com/Clubpromos/status/2116880499331477668",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116880499331477668",
         "conversation_context": {},
         "language": "fr",
-        "text": "📉 Nickelodeon Extreme Tennis Next - Xbox Series\n14,24€ chez Joybuy (-53%)\n\nBelle baisse de prix repérée sur DealFun\n\n💰 Économisez 15,75€\n\n👉 https://t.co/PLc2pfymia\n\n#XboxSeries #Gaming https://t.co/F08VrzsCI1",
-        "clean_text": "📉 Nickelodeon Extreme Tennis Next - Xbox Series\n14,24€ chez Joybuy (-53%)\n\nBelle baisse de prix repérée sur DealFun\n\n💰 Économisez 15,75€\n\n👉 dealfun.fr/produit\n\n#XboxSeries #Gaming",
+        "text": "Fini le plastique qui garde l'odeur du curry ! \n8 boîtes en verre borosilicaté (type Pyrex) à 13,99 €. De 150 à 1040 ml.\nQui en a besoin ?\n\n#bonplan #joybuy #partenaire\n\n👉 https://t.co/jS7TAGoDa3 https://t.co/UxljWRNErK",
+        "clean_text": "Fini le plastique qui garde l'odeur du curry ! \n8 boîtes en verre borosilicaté (type Pyrex) à 13,99 €. De 150 à 1040 ml.\nQui en a besoin ?\n\n#bonplan #joybuy #partenaire\n\n👉 smyi.me/01oEd",
         "links": [
-          "https://www.dealfun.fr/produit/nickelodeon-extreme-tennis-next-xbox-series-standard"
+          "https://smyi.me/01oEd"
         ],
-        "translation_zh": "📉 Nickelodeon Extreme Tennis Next - Xbox Series\n14,24€ chez Joybuy (-53%)\n\nBelle baisse de prix repérée sur DealFun\n\n💰 Économisez 15,75€\n\n👉 dealfun.fr/produit\n\n#XboxSeries #Gaming",
-        "translation_status": "error",
+        "translation_zh": "告别会留住咖喱味的塑料盒！\n8 个硼硅玻璃盒（Pyrex 类型）售价 13,99 €。容量从 150 到 1040 ml。\n谁需要？\n\n#bonplan #joybuy #partenaire\n\n👉 smyi.me/01oEd",
+        "translation_status": "translated",
         "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
         "metrics": {
           "likes": 0,
@@ -663,15 +1050,15 @@
           "replies": 0,
           "quotes": 0,
           "bookmarks": 0,
-          "views": 206
+          "views": 34
         },
         "media": [
           {
-            "url": "https://pbs.twimg.com/media/HV-QVjrWAAAWU53.png",
+            "url": "https://pbs.twimg.com/media/HWCrh6bXsAEzL60.jpg",
             "type": "photo",
-            "preview_image_url": "https://pbs.twimg.com/media/HV-QVjrWAAAWU53.png",
-            "media_url_https": "https://pbs.twimg.com/media/HV-QVjrWAAAWU53.png",
-            "expanded_url": "https://x.com/dealfunfr/status/2116569056983781873/photo/1"
+            "preview_image_url": "https://pbs.twimg.com/media/HWCrh6bXsAEzL60.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWCrh6bXsAEzL60.jpg",
+            "expanded_url": "https://x.com/Clubpromos/status/2116880499331477668/photo/1"
           }
         ]
       },
@@ -681,29 +1068,29 @@
         "product_interest",
         "promotion"
       ],
-      "post_count": 3,
-      "first_seen_at": "2026-10-31T06:28:59Z",
-      "last_seen_at": "2026-10-31T23:56:25Z",
+      "post_count": 1,
+      "first_seen_at": "2026-11-01T13:10:15Z",
+      "last_seen_at": "2026-11-01T13:10:15Z",
       "metrics": {
         "total_likes": 0,
         "total_reposts": 0,
         "total_replies": 0,
         "total_quotes": 0,
         "total_bookmarks": 0,
-        "total_views": 401,
-        "max_author_followers": 10844,
+        "total_views": 34,
+        "max_author_followers": 1236,
         "public_interactions": 0
       },
       "score": {
-        "ips": 62,
-        "level": "medium",
-        "brand_relevance": 100,
+        "ips": 49,
+        "level": "low",
+        "brand_relevance": 70,
         "risk_or_opportunity_intensity": 52,
-        "current_impact": 29,
-        "future_potential": 52,
-        "credibility": 86,
+        "current_impact": 25,
+        "future_potential": 40,
+        "credibility": 58,
         "business_impact": 50,
-        "urgency": 44,
+        "urgency": 42,
         "sentiment": "positive",
         "confidence": 0.81,
         "recommended_action": "传播机会",
@@ -713,264 +1100,142 @@
           "promotion"
         ],
         "special_flags": [],
-        "explanation": "商品、优惠或库存信息可反映自然需求与转化入口，综合优先级 62。"
+        "explanation": "商品、优惠或库存信息可反映自然需求与转化入口，综合优先级 49。"
       },
       "evidence_counts": {
         "origin": 1,
-        "stakeholders": 1,
-        "popular": 3,
+        "stakeholders": 0,
+        "popular": 1,
         "amplifiers": 0,
-        "latest": 3,
+        "latest": 1,
         "supporting_evidence": 0,
-        "contradicting_evidence": 0
+        "contradicting_evidence": 1
       }
     }
   ],
   "featured_items": [
     {
-      "id": "featured-primary-cluster-002",
+      "id": "featured-primary-cluster-001",
       "brand": "primary",
-      "cluster_id": "primary-signal-002",
+      "cluster_id": "primary-signal-001",
       "source_type": "公开舆情",
-      "source_name": "主品牌 · @realNyarime",
-      "author_name": "奶昔🥤",
-      "author_handle": "realNyarime",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/2100861677411647488/qLK34Cve_normal.jpg",
-      "author_followers": 53313,
-      "author_following": 698,
+      "source_name": "主品牌 · @littleuphorians",
+      "author_name": "𝐠𝐨𝐥𝐝𝐞𝐧 𝐥𝐢𝐧𝐞 —",
+      "author_handle": "littleuphorians",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1945308265694261248/Y4r7tIOU_normal.jpg",
+      "author_followers": 7259,
+      "author_following": 934,
       "author_bio": null,
-      "author_location": "Xiamen, Fujian, PR. China",
-      "author_joined_at": "2019-08-23T23:35:25Z",
+      "author_location": "no mutual interest dni",
+      "author_joined_at": "2017-12-11T01:35:45Z",
       "author_verified": false,
-      "post_url": "https://x.com/realNyarime/status/2116566624421704107",
+      "post_url": "https://x.com/littleuphorians/status/2116716474480123909",
       "reply_to_post_id": null,
       "reply_to_handle": null,
       "quoted_post_id": null,
-      "conversation_id": "2116566624421704107",
+      "conversation_id": "2116716474480123909",
       "conversation_context": {},
-      "created_at": "2026-10-31T16:23:01Z",
-      "language": "zh",
-      "title": "Fulfillment and after-sales risk discussion",
-      "display_title": "相关讨论涉及退款、退货、配送或售后体验风险。",
-      "original_text": "之前一直用的闲鱼和快递100。昨天看到有人分享这个低于闲鱼发快递的方法，是目前我能看到最便宜的快递了，就是用拼多多商家版，但是不要绑卡！底下会说\n\n闲鱼和快递100下快递的话，可以选预约时间，基本上都能按时间取，但是这个不能选时间，是当天件，也有好多人说这种特价快递取件特别慢，或者压根就不取，这个和地方或者和你当地快递员有关系，你自己找个最合适的快递员就行了。无任何门槛（只发一件）顺丰可以做到9块，其他快递是最低三块多，单子越多越便宜。当然注册淘宝也可以的，用千牛的商家寄件\n\n注意，注册拼多多商家版，不要绑卡！要不然啥时候给平台给你来个罚款，你哭都来不及。毕竟光一个普通平台，可以完爆阿里，京东这些平台，就单平台的收益做到全国首富，就是是不是去商家那里扣个3快5快的，而且申诉基本100失败，而且你只要注册过拼多多店铺，只要你没注销你的银行卡，它可以随时去你银行卡拿钱，有些卖家，都关掉拼多多5-6年，都退保证金和解绑银行卡了，就是没有注销银行卡，还能被平台强制扣款，说是违法平台规则，需要处罚\n\n这个你只要付款就是要绑定拼多多是有协议的，解绑并不会去解除协议，如果平台需要扣款也还是可以直接扣除。要么去银行卡解除所有第三方平台的代扣协议，要么就是直接注销卡。不信你可以去抖音搜索试试，这不知道多少商家被拼多多扣钱。因为有时候消费者找拼多多客服话，你就算关店了，它只要能补偿消费者，那就是从商家口袋出的，平台不会垫付任何1分钱。其他平台的话，你质保到期或者退店了，基本上平台就是不管售后了。这拼多多他是可以去你银行卡拿钱的，所以在拼多多基本上售后是无限期，除非那个商家把银行卡注销了，或者是去柜台解绑所以代扣协议\n\n当然你和快递熟，最好是直接找顺丰网点的业务经理开。补充一个我知道的，顺丰用的驿小客，自己打单5.5一单3公斤内，快递员来收。多少单都行",
-      "translation_zh": "之前一直用的闲鱼和快递100。昨天看到有人分享这个低于闲鱼发快递的方法，是目前我能看到最便宜的快递了，就是用拼多多商家版，但是不要绑卡！底下会说\n\n闲鱼和快递100下快递的话，可以选预约时间，基本上都能按时间取，但是这个不能选时间，是当天件，也有好多人说这种特价快递取件特别慢，或者压根就不取，这个和地方或者和你当地快递员有关系，你自己找个最合适的快递员就行了。无任何门槛（只发一件）顺丰可以做到9块，其他快递是最低三块多，单子越多越便宜。当然注册淘宝也可以的，用千牛的商家寄件\n\n注意，注册拼多多商家版，不要绑卡！要不然啥时候给平台给你来个罚款，你哭都来不及。毕竟光一个普通平台，可以完爆阿里，京东这些平台，就单平台的收益做到全国首富，就是是不是去商家那里扣个3快5快的，而且申诉基本100失败，而且你只要注册过拼多多店铺，只要你没注销你的银行卡，它可以随时去你银行卡拿钱，有些卖家，都关掉拼多多5-6年，都退保证金和解绑银行卡了，就是没有注销银行卡，还能被平台强制扣款，说是违法平台规则，需要处罚\n\n这个你只要付款就是要绑定拼多多是有协议的，解绑并不会去解除协议，如果平台需要扣款也还是可以直接扣除。要么去银行卡解除所有第三方平台的代扣协议，要么就是直接注销卡。不信你可以去抖音搜索试试，这不知道多少商家被拼多多扣钱。因为有时候消费者找拼多多客服话，你就算关店了，它只要能补偿消费者，那就是从商家口袋出的，平台不会垫付任何1分钱。其他平台的话，你质保到期或者退店了，基本上平台就是不管售后了。这拼多多他是可以去你银行卡拿钱的，所以在拼多多基本上售后是无限期，除非那个商家把银行卡注销了，或者是去柜台解绑所以代扣协议\n\n当然你和快递熟，最好是直接找顺丰网点的业务经理开。补充一个我知道的，顺丰用的驿小客，自己打单5.5一单3公斤内，快递员来收。多少单都行",
-      "translation_status": "source_chinese",
-      "summary_zh": "相关讨论涉及退款、退货、配送或售后体验风险。",
-      "links": [],
-      "media": [
-        {
-          "url": "https://pbs.twimg.com/media/HV-OF9jbwAAPeOx.jpg",
-          "type": "photo",
-          "preview_image_url": "https://pbs.twimg.com/media/HV-OF9jbwAAPeOx.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/HV-OF9jbwAAPeOx.jpg",
-          "expanded_url": "https://x.com/realNyarime/status/2116566624421704107/photo/1"
-        },
-        {
-          "url": "https://pbs.twimg.com/media/HV-OGehbAAAi0ku.jpg",
-          "type": "photo",
-          "preview_image_url": "https://pbs.twimg.com/media/HV-OGehbAAAi0ku.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/HV-OGehbAAAi0ku.jpg",
-          "expanded_url": "https://x.com/realNyarime/status/2116566624421704107/photo/1"
-        },
-        {
-          "url": "https://pbs.twimg.com/media/HV-OHD2a8AAtAL4.jpg",
-          "type": "photo",
-          "preview_image_url": "https://pbs.twimg.com/media/HV-OHD2a8AAtAL4.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/HV-OHD2a8AAtAL4.jpg",
-          "expanded_url": "https://x.com/realNyarime/status/2116566624421704107/photo/1"
-        },
-        {
-          "url": "https://pbs.twimg.com/media/HV-OH0MbIAAAddg.jpg",
-          "type": "photo",
-          "preview_image_url": "https://pbs.twimg.com/media/HV-OH0MbIAAAddg.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/HV-OH0MbIAAAddg.jpg",
-          "expanded_url": "https://x.com/realNyarime/status/2116566624421704107/photo/1"
-        }
-      ],
-      "score": {
-        "ips": 75,
-        "level": "medium",
-        "brand_relevance": 70,
-        "risk_or_opportunity_intensity": 86,
-        "current_impact": 62,
-        "future_potential": 71,
-        "credibility": 76,
-        "business_impact": 86,
-        "urgency": 85,
-        "sentiment": "negative",
-        "confidence": 0.81,
-        "recommended_action": "观察",
-        "risk_labels": [
-          "fulfillment",
-          "after_sales",
-          "delivery"
-        ],
-        "opportunity_labels": [],
-        "special_flags": [
-          "high_influence_account"
-        ],
-        "explanation": "退款议题直接影响信任与支付体验，当前影响力 62，未来发酵潜力 71，可信度 76。"
-      },
-      "score_value": 75,
-      "score_label": "IPS",
-      "tags": [
-        "fulfillment_risk",
-        "fulfillment",
-        "after_sales",
-        "delivery",
-        "高影响力账号"
-      ],
-      "metrics": {
-        "total_likes": 188,
-        "total_reposts": 11,
-        "total_replies": 3,
-        "total_quotes": 0,
-        "total_bookmarks": 211,
-        "total_views": 13799,
-        "max_author_followers": 53313,
-        "public_interactions": 202
-      },
-      "post_metrics": {
-        "likes": 188,
-        "reposts": 11,
-        "replies": 3,
-        "quotes": 0,
-        "bookmarks": 211,
-        "views": 13799
-      },
-      "source_count": 1,
-      "related_sources": 0,
-      "selected_reason": "内容指向退款/售后体验：用户明确提到退款、退货或售后处理；作者具备较高影响力（53313 followers），当前 202 次赞评转引、13799 浏览；研判：主品牌的信任成本会被放大，需关注是否出现更多相似投诉。",
-      "recommended_action": "观察",
-      "href": "",
-      "external_href": "https://x.com/realNyarime/status/2116566624421704107",
-      "sentiment": "negative",
-      "level": "medium"
-    },
-    {
-      "id": "featured-primary-cluster-004",
-      "brand": "primary",
-      "cluster_id": "primary-signal-004",
-      "source_type": "公开舆情",
-      "source_name": "主品牌 · @dealfunfr",
-      "author_name": "DealFun",
-      "author_handle": "dealfunfr",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/795304955104100352/LbaIqj2p_normal.jpg",
-      "author_followers": 4050,
-      "author_following": 162,
-      "author_bio": null,
-      "author_location": null,
-      "author_joined_at": "2016-11-06T16:39:19Z",
-      "author_verified": false,
-      "post_url": "https://x.com/dealfunfr/status/2116569056983781873",
-      "reply_to_post_id": null,
-      "reply_to_handle": null,
-      "quoted_post_id": null,
-      "conversation_id": "2116569056983781873",
-      "conversation_context": {},
-      "created_at": "2026-10-31T16:32:41Z",
-      "language": "fr",
-      "title": "Product, deal and availability discussion",
-      "display_title": "相关讨论集中在商品上架、优惠导购或库存信息。",
-      "original_text": "📉 Nickelodeon Extreme Tennis Next - Xbox Series\n14,24€ chez Joybuy (-53%)\n\nBelle baisse de prix repérée sur DealFun\n\n💰 Économisez 15,75€\n\n👉 https://t.co/PLc2pfymia\n\n#XboxSeries #Gaming https://t.co/F08VrzsCI1",
-      "translation_zh": "📉 Nickelodeon Extreme Tennis Next - Xbox Series\n14,24€ chez Joybuy (-53%)\n\nBelle baisse de prix repérée sur DealFun\n\n💰 Économisez 15,75€\n\n👉 dealfun.fr/produit\n\n#XboxSeries #Gaming",
-      "translation_status": "error",
-      "summary_zh": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "created_at": "2026-11-01T02:18:28Z",
+      "language": "en",
+      "title": "Channel, partner and campaign activity",
+      "display_title": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
+      "original_text": "[01.11.2026] GUERLAIN Weibo Update\n\nJoin us on November 2nd at 7 PM for live stream from Guerlain's official flagship store on https://t.co/HN237c8fgI. Follow Guerlain brand ambassador Ayden and Elio to experience the romance of blue twilight and embark on a new chapter.\n\nGuerlain invites you to collect fragments of the \"Blue\" design, explore the exceptional revitalizing power of the Abeille Royale collection, and capture the delightful moments of the Blue Collection! \n\nParticipate in the live stream's interactive surprises and win autographed gifts Ayden & Elio! Pre-register now via the live stream link to join this blue-themed rendezvous. We'll see you there! \n\n#政瞳 #aylio",
+      "translation_zh": "[01.11.2026] GUERLAIN 微博更新\n\n11 月 2 日晚上 7 点，加入我们在 JD.com 上 Guerlain 官方旗舰店的直播。跟随 Guerlain 品牌大使 Ayden 和 Elio，一同感受蓝色暮光的浪漫，开启全新篇章。\n\nGuerlain 邀请你收集“Blue”设计碎片，探索 Abeille Royale 系列卓越的焕活力量，并捕捉 Blue Collection 的愉悦时刻！\n\n参与直播互动惊喜，赢取 Ayden & Elio 的签名礼物！现在通过直播链接预约，加入这场蓝色主题之约。我们到时见！\n\n#政瞳 #aylio",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
       "links": [
-        "https://www.dealfun.fr/produit/nickelodeon-extreme-tennis-next-xbox-series-standard"
+        "http://JD.com"
       ],
       "media": [
         {
-          "url": "https://pbs.twimg.com/media/HV-QVjrWAAAWU53.png",
+          "url": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
           "type": "photo",
-          "preview_image_url": "https://pbs.twimg.com/media/HV-QVjrWAAAWU53.png",
-          "media_url_https": "https://pbs.twimg.com/media/HV-QVjrWAAAWU53.png",
-          "expanded_url": "https://x.com/dealfunfr/status/2116569056983781873/photo/1"
+          "preview_image_url": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+          "expanded_url": "https://x.com/littleuphorians/status/2116716474480123909/photo/1"
         }
       ],
       "score": {
-        "ips": 62,
+        "ips": 70,
         "level": "medium",
         "brand_relevance": 100,
-        "risk_or_opportunity_intensity": 52,
-        "current_impact": 29,
-        "future_potential": 52,
-        "credibility": 86,
-        "business_impact": 50,
-        "urgency": 44,
-        "sentiment": "positive",
+        "risk_or_opportunity_intensity": 54,
+        "current_impact": 60,
+        "future_potential": 70,
+        "credibility": 76,
+        "business_impact": 58,
+        "urgency": 51,
+        "sentiment": "neutral",
         "confidence": 0.81,
-        "recommended_action": "传播机会",
+        "recommended_action": "渠道观察",
         "risk_labels": [],
         "opportunity_labels": [
-          "product_interest",
-          "promotion"
+          "channel_expansion"
         ],
         "special_flags": [],
-        "explanation": "商品、优惠或库存信息可反映自然需求与转化入口，综合优先级 62。"
+        "explanation": "渠道、合作或活动信息体现市场扩展动向，建议作为背景信号观察。综合优先级 70。"
       },
-      "score_value": 62,
+      "score_value": 70,
       "score_label": "IPS",
       "tags": [
-        "product_deal",
-        "product_interest",
-        "promotion"
+        "channel_activity",
+        "channel_expansion"
       ],
       "metrics": {
-        "total_likes": 0,
-        "total_reposts": 0,
-        "total_replies": 0,
-        "total_quotes": 0,
-        "total_bookmarks": 0,
-        "total_views": 401,
-        "max_author_followers": 10844,
-        "public_interactions": 0
+        "total_likes": 683,
+        "total_reposts": 184,
+        "total_replies": 4,
+        "total_quotes": 6,
+        "total_bookmarks": 25,
+        "total_views": 12252,
+        "max_author_followers": 8705,
+        "public_interactions": 877
       },
       "post_metrics": {
-        "likes": 0,
-        "reposts": 0,
+        "likes": 158,
+        "reposts": 40,
         "replies": 0,
         "quotes": 0,
-        "bookmarks": 0,
-        "views": 206
+        "bookmarks": 6,
+        "views": 1721
       },
-      "source_count": 3,
-      "related_sources": 2,
-      "selected_reason": "内容指向价格促销与导购：内容强调优惠、低价、券包或导购入口；当前传播仍弱，206 浏览且暂无赞评转引，同日相似讨论 3 条；研判：可评估是否存在可借势传播的价格/活动卖点。",
-      "recommended_action": "传播机会",
+      "source_count": 9,
+      "related_sources": 8,
+      "selected_reason": "内容指向渠道合作与活动：内容涉及渠道接入、商家合作、直播活动或站点更新；转引信号相对突出，当前 198 次赞评转引、1721 浏览，同日相似讨论 9 条；研判：可作为市场扩展和货架露出的背景信号。",
+      "recommended_action": "渠道观察",
       "href": "",
-      "external_href": "https://x.com/dealfunfr/status/2116569056983781873",
-      "sentiment": "positive",
+      "external_href": "https://x.com/littleuphorians/status/2116716474480123909",
+      "sentiment": "neutral",
       "level": "medium"
     },
     {
-      "id": "featured-primary-cluster-003",
+      "id": "featured-primary-cluster-005",
       "brand": "primary",
-      "cluster_id": "primary-signal-003",
+      "cluster_id": "primary-signal-005",
       "source_type": "公开舆情",
-      "source_name": "主品牌 · @rllcca",
-      "author_name": "ArrayNihil",
-      "author_handle": "rllcca",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/2088537500432433152/wEmJCGx9_normal.jpg",
-      "author_followers": 59,
-      "author_following": 27,
+      "source_name": "主品牌 · @Vanilleotter",
+      "author_name": "~ 🫧 Gwendolyn 💧~",
+      "author_handle": "Vanilleotter",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2114990606850162689/qpYfiO3I_normal.jpg",
+      "author_followers": 870,
+      "author_following": 976,
       "author_bio": null,
       "author_location": null,
-      "author_joined_at": "2024-12-04T15:27:06Z",
+      "author_joined_at": "2012-11-22T07:54:12Z",
       "author_verified": false,
-      "post_url": "https://x.com/rllcca/status/2116537713554022451",
+      "post_url": "https://x.com/Vanilleotter/status/2116930913812578367",
       "reply_to_post_id": null,
       "reply_to_handle": null,
       "quoted_post_id": null,
-      "conversation_id": "2116537713554022451",
+      "conversation_id": "2116930913812578367",
       "conversation_context": {},
-      "created_at": "2026-10-31T14:28:08Z",
-      "language": "zh",
+      "created_at": "2026-11-01T16:30:35Z",
+      "language": "de",
       "title": "General 主品牌 overseas shopping discussion",
       "display_title": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
-      "original_text": "今天倒霉透了……\n\n在joybuy买的包裹又被运不见了……我的12磅呃呃呃呃呃\n\n发万圣节制品打印码结果评论区一直有人透露问题答案，害得我在小红书蹲守了两个小时……（问题是游戏下载平台是什么这真的很困难吗……为什么一直在下面透答案……）\n\n水逆进行中……",
-      "translation_zh": "今天倒霉透了……\n\n在joybuy买的包裹又被运不见了……我的12磅呃呃呃呃呃\n\n发万圣节制品打印码结果评论区一直有人透露问题答案，害得我在小红书蹲守了两个小时……（问题是游戏下载平台是什么这真的很困难吗……为什么一直在下面透答案……）\n\n水逆进行中……",
-      "translation_status": "source_chinese",
+      "original_text": "Ich hab das erste mal bei Joybuy gekauft, das soll Morgen schon da sein O.O\nHab mir Kewpie Mayo, Sojasoße und sowas geholt.\nBin mal total gespannt, hat da schonmal jemand bestellt?",
+      "translation_zh": "我第一次在 Joybuy 买东西，据说明天就能到了 O.O\n我买了 Kewpie 蛋黄酱、酱油之类的东西。\n我真的挺期待的，有人已经在那里下过单吗？",
+      "translation_status": "translated",
       "summary_zh": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
       "links": [],
       "media": [],
@@ -979,11 +1244,11 @@
         "level": "medium",
         "brand_relevance": 100,
         "risk_or_opportunity_intensity": 40,
-        "current_impact": 49,
-        "future_potential": 57,
-        "credibility": 76,
+        "current_impact": 38,
+        "future_potential": 60,
+        "credibility": 86,
         "business_impact": 42,
-        "urgency": 40,
+        "urgency": 41,
         "sentiment": "neutral",
         "confidence": 0.81,
         "recommended_action": "观察",
@@ -998,168 +1263,184 @@
         "general_observation"
       ],
       "metrics": {
-        "total_likes": 145,
-        "total_reposts": 43,
-        "total_replies": 54,
-        "total_quotes": 1,
-        "total_bookmarks": 11,
-        "total_views": 4665,
-        "max_author_followers": 7858,
-        "public_interactions": 243
+        "total_likes": 53,
+        "total_reposts": 18,
+        "total_replies": 18,
+        "total_quotes": 2,
+        "total_bookmarks": 8,
+        "total_views": 9845,
+        "max_author_followers": 11081,
+        "public_interactions": 91
       },
       "post_metrics": {
-        "likes": 0,
+        "likes": 12,
         "reposts": 0,
-        "replies": 1,
+        "replies": 5,
         "quotes": 0,
-        "bookmarks": 0,
-        "views": 68
+        "bookmarks": 2,
+        "views": 1764
       },
-      "source_count": 23,
-      "related_sources": 22,
-      "selected_reason": "内容指向履约与物流心智：原帖围绕发货、仓库、配送或包裹进度展开；当前 1 次赞评转引、68 浏览，同日相似讨论 23 条；研判：需要判断这是正向履约口碑还是潜在配送投诉。",
+      "source_count": 14,
+      "related_sources": 13,
+      "selected_reason": "内容指向购买意向与日常购物：用户表达下单、加购或尝试购买意向；评论参与高于普通样本，当前 17 次赞评转引、1764 浏览，同日相似讨论 14 条；研判：可用于判断主品牌是否被真实用户纳入购买选择。",
       "recommended_action": "观察",
       "href": "",
-      "external_href": "https://x.com/rllcca/status/2116537713554022451",
+      "external_href": "https://x.com/Vanilleotter/status/2116930913812578367",
       "sentiment": "neutral",
       "level": "medium"
     },
     {
-      "id": "featured-competitor-2116491565329727776",
-      "brand": "competitor",
-      "cluster_id": "",
-      "source_type": "竞品异常",
-      "source_name": "样例竞品 · @official_jthub",
-      "author_name": "J T H U B",
-      "author_handle": "official_jthub",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/2101742061548396544/b8-YYhPM_normal.jpg",
-      "author_followers": 12013,
-      "author_following": 10642,
+      "id": "featured-primary-cluster-002",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @AylioChineseFC",
+      "author_name": "AylioOfficialChineseFanclub",
+      "author_handle": "AylioChineseFC",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2078150255053332480/LeQNsuwe_normal.jpg",
+      "author_followers": 3476,
+      "author_following": 17,
       "author_bio": null,
       "author_location": null,
-      "author_joined_at": "2023-09-18T13:40:02Z",
+      "author_joined_at": "2026-07-17T16:09:00Z",
       "author_verified": false,
-      "post_url": "https://x.com/official_jthub/status/2116491565329727776",
+      "post_url": "https://x.com/AylioChineseFC/status/2116826929512796345",
       "reply_to_post_id": null,
       "reply_to_handle": null,
       "quoted_post_id": null,
-      "conversation_id": "2116491565329727776",
-      "conversation_context": {
-        "posts": []
-      },
-      "created_at": "2026-10-31T11:24:46Z",
-      "language": "en",
-      "title": "样例竞品退款/售后体验出现传播信号",
-      "display_title": "样例竞品退款/售后体验出现传播信号",
-      "original_text": "Has anyone experienced this?\n\nTemu refunded me of 1.9m from what I bought from them last time.\nWhen I requested for refund",
-      "translation_zh": "Has anyone experienced this?\n\nTemu refunded me of 1.9m from what I bought from them last time.\nWhen I requested for refund",
-      "translation_status": "error",
-      "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
-      "links": [],
-      "media": [
-        {
-          "url": "https://pbs.twimg.com/media/HV9J2FrWYAANCOS.jpg",
-          "type": "photo",
-          "preview_image_url": "https://pbs.twimg.com/media/HV9J2FrWYAANCOS.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/HV9J2FrWYAANCOS.jpg",
-          "expanded_url": "https://x.com/official_jthub/status/2116491565329727776/photo/1"
-        },
-        {
-          "url": "https://pbs.twimg.com/media/HV9J2yLXcAA1ao9.jpg",
-          "type": "photo",
-          "preview_image_url": "https://pbs.twimg.com/media/HV9J2yLXcAA1ao9.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/HV9J2yLXcAA1ao9.jpg",
-          "expanded_url": "https://x.com/official_jthub/status/2116491565329727776/photo/1"
-        }
-      ],
-      "score": {
-        "ips": 62,
-        "level": "medium",
-        "sentiment": "negative"
-      },
-      "score_value": 62,
-      "score_label": "CSI",
-      "tags": [
-        "竞品",
-        "negative",
-        "refund"
-      ],
-      "metrics": {
-        "likes": 29,
-        "reposts": 19,
-        "replies": 6,
-        "quotes": 0,
-        "bookmarks": 1,
-        "views": 543
-      },
-      "post_metrics": {
-        "likes": 29,
-        "reposts": 19,
-        "replies": 6,
-        "quotes": 0,
-        "bookmarks": 1,
-        "views": 543
-      },
-      "source_count": 1,
-      "related_sources": 0,
-      "selected_reason": "内容指向退款/售后体验：用户明确提到退款、退货或售后处理；转引信号相对突出，当前 54 次赞评转引、543 浏览；研判：竞品侧的信任成本会被放大，需关注是否出现更多相似投诉。",
-      "recommended_action": "纳入竞品基线观察",
-      "href": "",
-      "external_href": "https://x.com/official_jthub/status/2116491565329727776",
-      "sentiment": "negative",
-      "level": "medium"
-    },
-    {
-      "id": "featured-primary-cluster-001",
-      "brand": "primary",
-      "cluster_id": "primary-signal-001",
-      "source_type": "公开舆情",
-      "source_name": "主品牌 · @CindeNelerOluyo",
-      "author_name": "CindeNeOluyor",
-      "author_handle": "CindeNelerOluyo",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/2066535000598519808/IFFxOK6N_normal.jpg",
-      "author_followers": 20,
-      "author_following": 125,
-      "author_bio": null,
-      "author_location": "Türkiye",
-      "author_joined_at": "2026-05-15T17:44:44Z",
-      "author_verified": false,
-      "post_url": "https://x.com/CindeNelerOluyo/status/2116459068428611728",
-      "reply_to_post_id": null,
-      "reply_to_handle": null,
-      "quoted_post_id": null,
-      "conversation_id": "2116459068428611728",
+      "conversation_id": "2116826929512796345",
       "conversation_context": {},
-      "created_at": "2026-10-31T09:15:38Z",
-      "language": "tr",
-      "title": "Competitor comparison and substitution signals",
-      "display_title": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
-      "original_text": "ABD'de Çin hisseleri · 30 Ekim seansı\n\n▲ FXI (Çin büyük şirket ETF) %1,19\n▼ KWEB (Çin internet ETF) %0,22\n▲ https://t.co/4o7SIEqnYj %0,20\n▼ PDD (Temu) %0,85\n▼ Li Auto %0,99\n▼ Alibaba %1,51\n▼ XPeng %1,53\n▼ Baidu %2,86\n▼ NIO %3,31\n\nABD'de işlem gören Çin büyük şirket ETF'i FXI %1,19 yükseldi, internet ETF'i KWEB %0,22 geriledi. Hisse bazında ayrışma var: 1 hisse artıda, 6 hisse ekside. En güçlü $JD %0,20, en zayıf $NIO %3,31. Tayvan çip devi TSMC'nin ADR'si %5,95 geriledi.",
-      "translation_zh": "ABD'de Çin hisseleri · 30 Ekim seansı\n\n▲ FXI (Çin büyük şirket ETF) %1,19\n▼ KWEB (Çin internet ETF) %0,22\n▲ JD.com %0,20\n▼ PDD (Temu) %0,85\n▼ Li Auto %0,99\n▼ Alibaba %1,51\n▼ XPeng %1,53\n▼ Baidu %2,86\n▼ NIO %3,31\n\nABD'de işlem gören Çin büyük şirket ETF'i FXI %1,19 yükseldi, internet ETF'i KWEB %0,22 geriledi. Hisse bazında ayrışma var: 1 hisse artıda, 6 hisse ekside. En güçlü $JD %0,20, en zayıf $NIO %3,31. Tayvan çip devi TSMC'nin ADR'si %5,95 geriledi.",
-      "translation_status": "error",
-      "summary_zh": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "created_at": "2026-11-01T09:37:23Z",
+      "language": "en",
+      "title": "Corporate, market and strategy discussion",
+      "display_title": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "original_text": "【IMPORTANT UPDATE】☀🍊\n\nGuerlain × Aylio\nOfficial Details and Purchase Guide\n\nhttps://t.co/QeRs1BsN4k🔍 [Guerlain Official Store]\n✈️ International shipping available to Australia, Singapore, Japan, Thailand, South Korea, and more.\n💴Credit card ＆ Debit card ＆ WeChat Pay accepted\n\n🧡Aylio Exclusive Gifts Available from 10:00 Nov 1\n✨ Ranking Events\nEvent 1 | Invite friends to sign up as members\nTime: 10:00 Nov 1 — 23:59 Nov 13\nTOP1–2: Dual autograph X 1\nTOP3–9: Full set photocards X1\nTOP10–20: Abeille Royale sample set X 1\n\nEvent 2 | Purchase ranking to win signed aylio polaroids\nTime: 19:00 Nov 2 — 23:59 Nov 4\nTOP1: Polaroid X 1+ full-size Orchid Eye Cream\nTOP2: polaroid X 1+ full-size Orchid Cream\nTOP3: Polaroid X 1+ full-size Rose Hand Cream\nTOP4–10: Polaroid X 1\n\n🧡Aylio Live Stream Extra\nShare & comment in live chat to win photocards and voice enamel pins\n\n🧡Aylio Picks Gifts Listed（Beijing Time）\n⏰Early access: 10:00 Nov 1 — 18:59 Nov 2\n🗓️Live sale: 19:00 Nov 2 — 23:59 Nov 2\n\n🎁Abeille Royale Youth Watery Oil ¥1190\nPhotocards X 3 (10,000 limit)\n🎁L'Heure Bleue Perfume ¥1230\nPhotocards X 3(10,000 limit)\n🎁Abeille Royale Lotion ¥1250\n Photocards X 3 (10,000 limit)\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\nPhotocards X 3 (10,000 limit) + 1 brooch with 3 brooch charms (800 limit)\n🎁Hydrating Repair Set ¥2440\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n🎁Classic Repair Trio ¥3805\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
+      "translation_zh": "【重要更新】☀🍊\n\nGuerlain × Aylio\n官方详情与购买指南\n\nJD.com【Guerlain 官方店】\n✈️ 可国际配送至澳大利亚、新加坡、日本、泰国、韩国等地。\n💴支持信用卡、借记卡和 WeChat Pay\n\n🧡Aylio 专属赠品将于 11 月 1 日 10:00 起开放\n✨ 排名活动\n活动 1 | 邀请好友注册成为会员\n时间：11 月 1 日 10:00 — 11 月 13 日 23:59\nTOP1–2：双人签名 X 1\nTOP3–9：全套小卡 X1\nTOP10–20：Abeille Royale 试用装套组 X 1\n\n活动 2 | 购买排名赢取签名 aylio 拍立得\n时间：11 月 2 日 19:00 — 11 月 4 日 23:59\nTOP1：拍立得 X 1+ 正装 Orchid Eye Cream\nTOP2：拍立得 X 1+ 正装 Orchid Cream\nTOP3：拍立得 X 1+ 正装 Rose Hand Cream\nTOP4–10：拍立得 X 1\n\n🧡Aylio 直播额外福利\n在直播聊天中分享并评论，有机会赢取小卡和语音珐琅徽章\n\n🧡Aylio Picks 赠品上架（北京时间）\n⏰抢先购：11 月 1 日 10:00 — 11 月 2 日 18:59\n🗓️直播销售：11 月 2 日 19:00 — 11 月 2 日 23:59\n\n🎁Abeille Royale Youth Watery Oil ¥1190\n小卡 X 3（限量 10,000）\n🎁L'Heure Bleue Perfume ¥1230\n小卡 X 3（限量 10,000）\n🎁Abeille Royale Lotion ¥1250\n 小卡 X 3（限量 10,000）\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\n小卡 X 3（限量 10,000）+ 1 枚胸针，附 3 个胸针挂饰（限量 800）\n🎁Hydrating Repair Set ¥2440\n小卡 X 3（限量 10,000）+ 语音珐琅徽章（限量 3,000）\n🎁Classic Repair Trio ¥3805\n小卡 X 3（限量 10,000）+ 语音珐琅徽章（限量 3,000）\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
       "links": [
         "http://JD.com"
       ],
       "media": [
         {
-          "url": "https://pbs.twimg.com/media/HV8sTUFWUAAnhc3.jpg",
+          "url": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
           "type": "photo",
-          "preview_image_url": "https://pbs.twimg.com/media/HV8sTUFWUAAnhc3.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/HV8sTUFWUAAnhc3.jpg",
-          "expanded_url": "https://x.com/CindeNelerOluyo/status/2116459068428611728/photo/1"
+          "preview_image_url": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+          "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+          "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+          "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
         }
       ],
       "score": {
-        "ips": 54,
+        "ips": 52,
         "level": "low",
         "brand_relevance": 70,
-        "risk_or_opportunity_intensity": 60,
-        "current_impact": 25,
-        "future_potential": 45,
+        "risk_or_opportunity_intensity": 48,
+        "current_impact": 41,
+        "future_potential": 44,
         "credibility": 58,
+        "business_impact": 56,
+        "urgency": 42,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "背景观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "corporate_context"
+        ],
+        "special_flags": [],
+        "explanation": "公司、资本市场或战略背景信息对品牌心智有间接影响，当前综合优先级为 52。"
+      },
+      "score_value": 52,
+      "score_label": "IPS",
+      "tags": [
+        "company_market",
+        "corporate_context"
+      ],
+      "metrics": {
+        "total_likes": 120,
+        "total_reposts": 51,
+        "total_replies": 0,
+        "total_quotes": 1,
+        "total_bookmarks": 4,
+        "total_views": 2238,
+        "max_author_followers": 3476,
+        "public_interactions": 172
+      },
+      "post_metrics": {
+        "likes": 120,
+        "reposts": 51,
+        "replies": 0,
+        "quotes": 1,
+        "bookmarks": 4,
+        "views": 2238
+      },
+      "source_count": 1,
+      "related_sources": 0,
+      "selected_reason": "内容指向公司/资本市场信息：内容涉及公司战略、资本市场、行业报告或管理层动态；转引信号相对突出，当前 172 次赞评转引、2238 浏览；研判：对品牌心智有间接影响，应与消费者体验类舆情分开阅读。",
+      "recommended_action": "背景观察",
+      "href": "",
+      "external_href": "https://x.com/AylioChineseFC/status/2116826929512796345",
+      "sentiment": "neutral",
+      "level": "low"
+    },
+    {
+      "id": "featured-primary-cluster-003",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @lesnums",
+      "author_name": "Les Numériques",
+      "author_handle": "lesnums",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1635603257870434306/4aZrFj1Y_normal.jpg",
+      "author_followers": 153516,
+      "author_following": 401,
+      "author_bio": null,
+      "author_location": "Dans nos labos 🔬",
+      "author_joined_at": "2012-02-13T16:31:24Z",
+      "author_verified": false,
+      "post_url": "https://x.com/lesnums/status/2116870336213893324",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116870336213893324",
+      "conversation_context": {},
+      "created_at": "2026-11-01T12:29:52Z",
+      "language": "fr",
+      "title": "Competitor comparison and substitution signals",
+      "display_title": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "original_text": "🔗 https://t.co/ZsnHw9nXmV\nLe smartphone Samsung Galaxy A57 5G s'affiche aujourd'hui à 369,00 € chez Joybuy. C'est actuellement le meilleur rapport qualité / prix de notre comparatif, selon les 239 modèles testés dans notre laboratoire. https://t.co/ZsnHw9nXmV",
+      "translation_zh": "🔗 l.lesnumeriques.com/biD\nSamsung Galaxy A57 5G 智能手机今天在 Joybuy 上的价格为 369,00 €。根据我们实验室测试的 239 款机型，它目前是我们评测对比中性价比最高的一款。l.lesnumeriques.com/biD",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "links": [
+        "https://l.lesnumeriques.com/biD",
+        "https://l.lesnumeriques.com/biD"
+      ],
+      "media": [],
+      "score": {
+        "ips": 71,
+        "level": "medium",
+        "brand_relevance": 90,
+        "risk_or_opportunity_intensity": 68,
+        "current_impact": 50,
+        "future_potential": 73,
+        "credibility": 86,
         "business_impact": 64,
-        "urgency": 52,
+        "urgency": 57,
         "sentiment": "neutral",
         "confidence": 0.81,
         "recommended_action": "竞品对照观察",
@@ -1167,14 +1448,17 @@
         "opportunity_labels": [
           "competitive_position"
         ],
-        "special_flags": [],
-        "explanation": "用户将主品牌与其他平台对照，适合观察价格、配送或品类竞争位置。综合优先级 54。"
+        "special_flags": [
+          "high_influence_account"
+        ],
+        "explanation": "用户将主品牌与其他平台对照，适合观察价格、配送或品类竞争位置。综合优先级 71。"
       },
-      "score_value": 54,
+      "score_value": 71,
       "score_label": "IPS",
       "tags": [
         "competitor_comparison",
-        "competitive_position"
+        "competitive_position",
+        "高影响力账号"
       ],
       "metrics": {
         "total_likes": 0,
@@ -1182,8 +1466,8 @@
         "total_replies": 0,
         "total_quotes": 0,
         "total_bookmarks": 0,
-        "total_views": 60,
-        "max_author_followers": 20,
+        "total_views": 807,
+        "max_author_followers": 153516,
         "public_interactions": 0
       },
       "post_metrics": {
@@ -1192,58 +1476,144 @@
         "replies": 0,
         "quotes": 0,
         "bookmarks": 0,
-        "views": 60
+        "views": 641
       },
-      "source_count": 1,
-      "related_sources": 0,
-      "selected_reason": "内容指向竞品对照与替代选择：用户把主品牌与其他平台进行价格、配送或品类对比；当前传播仍弱，60 浏览且暂无赞评转引；研判：适合观察主品牌在海外用户购物选择中的竞争位置。",
+      "source_count": 2,
+      "related_sources": 1,
+      "selected_reason": "内容指向竞品对照与替代选择：用户把主品牌与其他平台进行价格、配送或品类对比；作者具备较高影响力（153516 followers），当前 0 次赞评转引、641 浏览，同日相似讨论 2 条；研判：适合观察主品牌在海外用户购物选择中的竞争位置。",
       "recommended_action": "竞品对照观察",
       "href": "",
-      "external_href": "https://x.com/CindeNelerOluyo/status/2116459068428611728",
+      "external_href": "https://x.com/lesnums/status/2116870336213893324",
       "sentiment": "neutral",
-      "level": "low"
+      "level": "medium"
     },
     {
-      "id": "featured-competitor-2116523110774210995",
-      "brand": "competitor",
-      "cluster_id": "",
-      "source_type": "竞品异常",
-      "source_name": "样例竞品 · @KevanAintEvans",
-      "author_name": "KevanEvans (pfp by Ai-san)",
-      "author_handle": "KevanAintEvans",
-      "author_avatar_url": "https://pbs.twimg.com/profile_images/1952643681548480512/Am35FVc9_normal.jpg",
-      "author_followers": 27,
-      "author_following": 67,
+      "id": "featured-primary-cluster-006",
+      "brand": "primary",
+      "cluster_id": "primary-signal-006",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @Alice_changg",
+      "author_name": "رادیو جیبی",
+      "author_handle": "Alice_changg",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1966529078220976129/8tibQOBE_normal.jpg",
+      "author_followers": 21,
+      "author_following": 89,
       "author_bio": null,
-      "author_location": "Among Us",
-      "author_joined_at": "2023-08-12T06:36:23Z",
+      "author_location": "Berlin, Germany",
+      "author_joined_at": "2024-02-20T13:24:49Z",
       "author_verified": false,
-      "post_url": "https://x.com/KevanAintEvans/status/2116523110774210995",
+      "post_url": "https://x.com/Alice_changg/status/2116908051622199370",
       "reply_to_post_id": null,
       "reply_to_handle": null,
       "quoted_post_id": null,
-      "conversation_id": "2116523110774210995",
-      "conversation_context": {
-        "posts": []
-      },
-      "created_at": "2026-10-31T13:30:07Z",
-      "language": "en",
-      "title": "样例竞品退款/售后体验出现传播信号",
-      "display_title": "样例竞品退款/售后体验出现传播信号",
-      "original_text": "@TemuCosmicube hello, i recently bought your TEMU™ guitar and one of the strings snapped off can i get a refund",
-      "translation_zh": "@TemuCosmicube hello, i recently bought your TEMU™ guitar and one of the strings snapped off can i get a refund",
-      "translation_status": "error",
-      "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+      "conversation_id": "2116908051622199370",
+      "conversation_context": {},
+      "created_at": "2026-11-01T14:59:44Z",
+      "language": "fa",
+      "title": "Positive shopping experience around 主品牌",
+      "display_title": "相关讨论体现价格、配送或购物体验上的正向口碑。",
+      "original_text": "این ژل آبرسان ژاپنی Naturie رو به توصیه یه دوست ژاپنیم گرفتم و واقعاً دوستش دارم. بین آبرسان‌هایی که اخیراً امتحان کردم، این یکی هم خیلی سبکه، هم خوب آبرسانی می‌کنه و هم قیمتش عالیه.\n\nاگه هلند یا آلمانین توی Joybuy هم پیداش می‌کنین :) https://t.co/tQOyC7GVpO",
+      "translation_zh": "我是在一位日本朋友的推荐下买了这款日本 Naturie 保湿凝胶，真的很喜欢。最近试过的保湿产品里，这款既非常轻薄，补水效果也很好，而且价格也很棒。\n\n如果你在荷兰或德国，在 Joybuy 上也能找到它 :)",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论体现价格、配送或购物体验上的正向口碑。",
       "links": [],
       "media": [
         {
-          "url": "https://pbs.twimg.com/media/HV9mhvyawAAxb7t.png",
+          "url": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
           "type": "photo",
-          "preview_image_url": "https://pbs.twimg.com/media/HV9mhvyawAAxb7t.png",
-          "media_url_https": "https://pbs.twimg.com/media/HV9mhvyawAAxb7t.png",
-          "expanded_url": "https://x.com/KevanAintEvans/status/2116523110774210995/photo/1"
+          "preview_image_url": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+          "expanded_url": "https://x.com/Alice_changg/status/2116908051622199370/photo/1"
         }
       ],
+      "score": {
+        "ips": 53,
+        "level": "low",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 62,
+        "current_impact": 25,
+        "future_potential": 44,
+        "credibility": 58,
+        "business_impact": 60,
+        "urgency": 50,
+        "sentiment": "positive",
+        "confidence": 0.81,
+        "recommended_action": "传播机会",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "positive_value",
+          "delivery_strength"
+        ],
+        "special_flags": [],
+        "explanation": "该情报偏正向机会，体现价格、配送或促销优势，可用于观察传播借势。综合优先级 53。"
+      },
+      "score_value": 53,
+      "score_label": "IPS",
+      "tags": [
+        "positive_experience",
+        "positive_value",
+        "delivery_strength"
+      ],
+      "metrics": {
+        "total_likes": 3,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 3,
+        "total_views": 53,
+        "max_author_followers": 21,
+        "public_interactions": 3
+      },
+      "post_metrics": {
+        "likes": 3,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 3,
+        "views": 53
+      },
+      "source_count": 1,
+      "related_sources": 0,
+      "selected_reason": "内容指向正向购物体验：用户主动提到价格、配送或购物体验上的正向感受；当前 3 次赞评转引、53 浏览；研判：可作为主品牌海外口碑和履约卖点的证据样本。",
+      "recommended_action": "传播机会",
+      "href": "",
+      "external_href": "https://x.com/Alice_changg/status/2116908051622199370",
+      "sentiment": "positive",
+      "level": "low"
+    },
+    {
+      "id": "featured-competitor-2116792386625916970",
+      "brand": "competitor",
+      "cluster_id": "",
+      "source_type": "竞品异常",
+      "source_name": "样例竞品 · @Kiraaaa191423",
+      "author_name": "Kiraaaa",
+      "author_handle": "Kiraaaa191423",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2069525479007117312/2ZtRjafm_normal.jpg",
+      "author_followers": 3,
+      "author_following": 25,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-04-29T21:41:18Z",
+      "author_verified": false,
+      "post_url": "https://x.com/Kiraaaa191423/status/2116792386625916970",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116792386625916970",
+      "conversation_context": {
+        "posts": []
+      },
+      "created_at": "2026-11-01T07:20:07Z",
+      "language": "en",
+      "title": "样例竞品退款/售后体验出现传播信号",
+      "display_title": "样例竞品退款/售后体验出现传播信号",
+      "original_text": "@shoptemu #temu #scam \nMy return has been with you for over 2 weeks and I still have no refund. This is unacceptable. Process my full refund immediately to my original payment method.",
+      "translation_zh": "@shoptemu #temu #scam \n我的退货已经在你们那里超过 2 周了，我仍然没有收到退款。这是不可接受的。请立即将我的全额退款退回到我的原始支付方式。",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+      "links": [],
+      "media": [],
       "score": {
         "ips": 56,
         "level": "medium",
@@ -1254,30 +1624,105 @@
       "tags": [
         "竞品",
         "negative",
-        "refund"
+        "refund",
+        "scam",
+        "return"
       ],
       "metrics": {
-        "likes": 6,
+        "likes": 3,
         "reposts": 3,
-        "replies": 0,
-        "quotes": 1,
+        "replies": 1,
+        "quotes": 0,
         "bookmarks": 0,
-        "views": 106
+        "views": 15
       },
       "post_metrics": {
-        "likes": 6,
+        "likes": 3,
         "reposts": 3,
-        "replies": 0,
-        "quotes": 1,
+        "replies": 1,
+        "quotes": 0,
         "bookmarks": 0,
-        "views": 106
+        "views": 15
       },
       "source_count": 1,
       "related_sources": 0,
-      "selected_reason": "内容指向退款/售后体验：用户明确提到退款、退货或售后处理；当前 10 次赞评转引、106 浏览；研判：竞品侧的信任成本会被放大，需关注是否出现更多相似投诉。",
+      "selected_reason": "内容指向退款/售后体验：用户明确提到退款、退货或售后处理；当前 7 次赞评转引、15 浏览；研判：竞品侧的信任成本会被放大，需关注是否出现更多相似投诉。",
       "recommended_action": "纳入竞品基线观察",
       "href": "",
-      "external_href": "https://x.com/KevanAintEvans/status/2116523110774210995",
+      "external_href": "https://x.com/Kiraaaa191423/status/2116792386625916970",
+      "sentiment": "negative",
+      "level": "medium"
+    },
+    {
+      "id": "featured-competitor-2116804825312612441",
+      "brand": "competitor",
+      "cluster_id": "",
+      "source_type": "竞品异常",
+      "source_name": "样例竞品 · @Kiraaaa191423",
+      "author_name": "Kiraaaa",
+      "author_handle": "Kiraaaa191423",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2069525479007117312/2ZtRjafm_normal.jpg",
+      "author_followers": 3,
+      "author_following": 25,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-04-29T21:41:18Z",
+      "author_verified": false,
+      "post_url": "https://x.com/Kiraaaa191423/status/2116804825312612441",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116804825312612441",
+      "conversation_context": {
+        "posts": []
+      },
+      "created_at": "2026-11-01T08:09:33Z",
+      "language": "en",
+      "title": "样例竞品退款/售后体验出现传播信号",
+      "display_title": "样例竞品退款/售后体验出现传播信号",
+      "original_text": "@shoptemu #scam #scam Temu my return was delivered over 2 weeks ago and still NO refund. Tracking proves you have it. Refund my money NOW or I dispute the charge. This is theft.",
+      "translation_zh": "@shoptemu #scam #scam Temu，我的退货 2 周多前就已送达，但仍然没有退款。物流跟踪证明你们已经收到了。现在就把钱退给我，否则我会发起拒付。这是盗窃。",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+      "links": [],
+      "media": [],
+      "score": {
+        "ips": 56,
+        "level": "medium",
+        "sentiment": "negative"
+      },
+      "score_value": 56,
+      "score_label": "CSI",
+      "tags": [
+        "竞品",
+        "negative",
+        "refund",
+        "scam",
+        "return",
+        "tracking"
+      ],
+      "metrics": {
+        "likes": 2,
+        "reposts": 2,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 18
+      },
+      "post_metrics": {
+        "likes": 2,
+        "reposts": 2,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 18
+      },
+      "source_count": 1,
+      "related_sources": 0,
+      "selected_reason": "内容指向退款/售后体验：用户明确提到退款、退货或售后处理；当前 5 次赞评转引、18 浏览；研判：竞品侧的信任成本会被放大，需关注是否出现更多相似投诉。",
+      "recommended_action": "纳入竞品基线观察",
+      "href": "",
+      "external_href": "https://x.com/Kiraaaa191423/status/2116804825312612441",
       "sentiment": "negative",
       "level": "medium"
     }
@@ -1285,667 +1730,266 @@
   "hot_topics": [
     {
       "rank": 1,
-      "title": "相关讨论涉及退款、退货、配送或售后体验风险。",
-      "cluster_id": "primary-signal-002",
-      "score_value": 75,
+      "title": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
+      "cluster_id": "primary-signal-001",
+      "score_value": 70,
       "level": "medium",
-      "source_count": 1,
-      "count_label": "公开舆情",
-      "reason": "内容指向退款/售后体验：用户明确提到退款、退货或售后处理；作者具备较高影响力（53313 followers），当前 202 次赞评转引、13799 浏览；研判：主品牌的信任成本会被放大，需关注是否出现更多相似投诉。"
+      "source_count": 9,
+      "count_label": "9 条同日相似讨论",
+      "reason": "内容指向渠道合作与活动：内容涉及渠道接入、商家合作、直播活动或站点更新；转引信号相对突出，当前 198 次赞评转引、1721 浏览，同日相似讨论 9 条；研判：可作为市场扩展和货架露出的背景信号。"
     },
     {
       "rank": 2,
-      "title": "相关讨论集中在商品上架、优惠导购或库存信息。",
-      "cluster_id": "primary-signal-004",
-      "score_value": 62,
+      "title": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "cluster_id": "primary-signal-005",
+      "score_value": 61,
       "level": "medium",
-      "source_count": 3,
-      "count_label": "3 条同日相似讨论",
-      "reason": "内容指向价格促销与导购：内容强调优惠、低价、券包或导购入口；当前传播仍弱，206 浏览且暂无赞评转引，同日相似讨论 3 条；研判：可评估是否存在可借势传播的价格/活动卖点。"
+      "source_count": 14,
+      "count_label": "14 条同日相似讨论",
+      "reason": "内容指向购买意向与日常购物：用户表达下单、加购或尝试购买意向；评论参与高于普通样本，当前 17 次赞评转引、1764 浏览，同日相似讨论 14 条；研判：可用于判断主品牌是否被真实用户纳入购买选择。"
     },
     {
       "rank": 3,
-      "title": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
-      "cluster_id": "primary-signal-003",
-      "score_value": 61,
-      "level": "medium",
-      "source_count": 23,
-      "count_label": "23 条同日相似讨论",
-      "reason": "内容指向履约与物流心智：原帖围绕发货、仓库、配送或包裹进度展开；当前 1 次赞评转引、68 浏览，同日相似讨论 23 条；研判：需要判断这是正向履约口碑还是潜在配送投诉。"
-    },
-    {
-      "rank": 4,
-      "title": "样例竞品退款/售后体验出现传播信号",
-      "cluster_id": "",
-      "score_value": 62,
-      "level": "medium",
-      "source_count": 1,
-      "count_label": "竞品异常",
-      "reason": "内容指向退款/售后体验：用户明确提到退款、退货或售后处理；转引信号相对突出，当前 54 次赞评转引、543 浏览；研判：竞品侧的信任成本会被放大，需关注是否出现更多相似投诉。"
-    },
-    {
-      "rank": 5,
-      "title": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
-      "cluster_id": "primary-signal-001",
-      "score_value": 54,
+      "title": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "cluster_id": "primary-signal-002",
+      "score_value": 52,
       "level": "low",
       "source_count": 1,
       "count_label": "公开舆情",
-      "reason": "内容指向竞品对照与替代选择：用户把主品牌与其他平台进行价格、配送或品类对比；当前传播仍弱，60 浏览且暂无赞评转引；研判：适合观察主品牌在海外用户购物选择中的竞争位置。"
+      "reason": "内容指向公司/资本市场信息：内容涉及公司战略、资本市场、行业报告或管理层动态；转引信号相对突出，当前 172 次赞评转引、2238 浏览；研判：对品牌心智有间接影响，应与消费者体验类舆情分开阅读。"
+    },
+    {
+      "rank": 4,
+      "title": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "cluster_id": "primary-signal-003",
+      "score_value": 71,
+      "level": "medium",
+      "source_count": 2,
+      "count_label": "2 条同日相似讨论",
+      "reason": "内容指向竞品对照与替代选择：用户把主品牌与其他平台进行价格、配送或品类对比；作者具备较高影响力（153516 followers），当前 0 次赞评转引、641 浏览，同日相似讨论 2 条；研判：适合观察主品牌在海外用户购物选择中的竞争位置。"
+    },
+    {
+      "rank": 5,
+      "title": "相关讨论体现价格、配送或购物体验上的正向口碑。",
+      "cluster_id": "primary-signal-006",
+      "score_value": 53,
+      "level": "low",
+      "source_count": 1,
+      "count_label": "公开舆情",
+      "reason": "内容指向正向购物体验：用户主动提到价格、配送或购物体验上的正向感受；当前 3 次赞评转引、53 浏览；研判：可作为主品牌海外口碑和履约卖点的证据样本。"
     }
   ],
   "competitor": {
     "brand": "competitor",
-    "volume": 10,
+    "volume": 16,
     "sentiment": {
       "negative": 2,
-      "neutral": 7,
+      "neutral": 13,
       "positive": 1
     },
     "top_terms": [
+      {
+        "term": "scam",
+        "count": 2
+      },
       {
         "term": "refund",
         "count": 2
       },
       {
-        "term": "delivery",
-        "count": 2
-      },
-      {
-        "term": "fast",
+        "term": "good",
         "count": 1
       }
     ],
     "top_posts": [
       {
-        "post_id": "2116491565329727776",
-        "url": "https://x.com/official_jthub/status/2116491565329727776",
-        "text": "Has anyone experienced this?\n\nTemu refunded me of 1.9m from what I bought from them last time.\nWhen I requested for refund",
-        "original_text": "Has anyone experienced this?\n\nTemu refunded me of 1.9m from what I bought from them last time.\nWhen I requested for refund https://t.co/gqxn2u8Guo",
+        "post_id": "2116792386625916970",
+        "url": "https://x.com/Kiraaaa191423/status/2116792386625916970",
+        "text": "@shoptemu #temu #scam \nMy return has been with you for over 2 weeks and I still have no refund. This is unacceptable. Process my full refund immediately to my original payment method.",
+        "original_text": "@shoptemu #temu #scam \nMy return has been with you for over 2 weeks and I still have no refund. This is unacceptable. Process my full refund immediately to my original payment method.",
         "links": [],
-        "translation_zh": "Has anyone experienced this?\n\nTemu refunded me of 1.9m from what I bought from them last time.\nWhen I requested for refund",
-        "translation_status": "error",
+        "translation_zh": "@shoptemu #temu #scam \n我的退货已经在你们那里超过 2 周了，我仍然没有收到退款。这是不可接受的。请立即将我的全额退款退回到我的原始支付方式。",
+        "translation_status": "translated",
         "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
-        "author_name": "J T H U B",
-        "author_handle": "official_jthub",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/2101742061548396544/b8-YYhPM_normal.jpg",
-        "author_followers": 12013,
-        "author_following": 10642,
+        "author_name": "Kiraaaa",
+        "author_handle": "Kiraaaa191423",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2069525479007117312/2ZtRjafm_normal.jpg",
+        "author_followers": 3,
+        "author_following": 25,
         "author_bio": null,
         "author_location": null,
-        "author_joined_at": "2023-09-18T13:40:02Z",
+        "author_joined_at": "2026-04-29T21:41:18Z",
         "author_verified": false,
-        "created_at": "2026-10-31T11:24:46Z",
+        "created_at": "2026-11-01T07:20:07Z",
         "reply_to_post_id": null,
         "reply_to_handle": null,
         "quoted_post_id": null,
-        "conversation_id": "2116491565329727776",
+        "conversation_id": "2116792386625916970",
         "conversation_context": {},
         "language": "en",
-        "media": [
-          {
-            "display_url": "pic.x.com/gqxn2u8Guo",
-            "expanded_url": "https://x.com/official_jthub/status/2116491565329727776/photo/1",
-            "ext_master_playlist_only": [],
-            "ext_media_availability": {
-              "status": "Available"
-            },
-            "ext_playlists": [],
-            "features": {
-              "large": {
-                "faces": [
-                  {
-                    "h": 51,
-                    "w": 51,
-                    "x": 1258,
-                    "y": 672
-                  }
-                ]
-              },
-              "orig": {
-                "faces": [
-                  {
-                    "h": 51,
-                    "w": 51,
-                    "x": 1258,
-                    "y": 672
-                  }
-                ]
-              }
-            },
-            "id_str": "2116491543473184768",
-            "indices": [
-              123,
-              146
-            ],
-            "media_key": "3_2116491543473184768",
-            "media_results": {
-              "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR1fSdha1mAACgACHV9J3XGWwSAAAA==",
-              "result": {
-                "__typename": "ApiMedia",
-                "id": "QXBpTWVkaWE6DAABCgABHV9J2FrWYAAKAAIdX0ndcZbBIAAA",
-                "media_key": "3_2116491543473184768"
-              }
-            },
-            "media_url_https": "https://pbs.twimg.com/media/HV9J2FrWYAANCOS.jpg",
-            "original_info": {
-              "focus_rects": [
-                {
-                  "h": 744,
-                  "w": 1329,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 1183,
-                  "w": 1183,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 1183,
-                  "w": 1038,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 1183,
-                  "w": 592,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 1183,
-                  "w": 1329,
-                  "x": 0,
-                  "y": 0
-                }
-              ],
-              "height": 1183,
-              "width": 1329
-            },
-            "sizes": {
-              "large": {
-                "h": 1183,
-                "w": 1329
-              }
-            },
-            "type": "photo",
-            "url": "https://t.co/gqxn2u8Guo"
-          },
-          {
-            "display_url": "pic.x.com/gqxn2u8Guo",
-            "expanded_url": "https://x.com/official_jthub/status/2116491565329727776/photo/1",
-            "ext_master_playlist_only": [],
-            "ext_media_availability": {
-              "status": "Available"
-            },
-            "ext_playlists": [],
-            "features": {
-              "large": {
-                "faces": []
-              },
-              "orig": {
-                "faces": []
-              }
-            },
-            "id_str": "2116491555418632192",
-            "indices": [
-              123,
-              146
-            ],
-            "media_key": "3_2116491555418632192",
-            "media_results": {
-              "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR1fSdsi13AACgACHV9J3XGWwSAAAA==",
-              "result": {
-                "__typename": "ApiMedia",
-                "id": "QXBpTWVkaWE6DAABCgABHV9J2yLXcAAKAAIdX0ndcZbBIAAA",
-                "media_key": "3_2116491555418632192"
-              }
-            },
-            "media_url_https": "https://pbs.twimg.com/media/HV9J2yLXcAA1ao9.jpg",
-            "original_info": {
-              "focus_rects": [
-                {
-                  "h": 477,
-                  "w": 852,
-                  "x": 0,
-                  "y": 92
-                },
-                {
-                  "h": 852,
-                  "w": 852,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 971,
-                  "w": 852,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 1471,
-                  "w": 736,
-                  "x": 110,
-                  "y": 0
-                },
-                {
-                  "h": 1471,
-                  "w": 852,
-                  "x": 0,
-                  "y": 0
-                }
-              ],
-              "height": 1471,
-              "width": 852
-            },
-            "sizes": {
-              "large": {
-                "h": 1471,
-                "w": 852
-              }
-            },
-            "type": "photo",
-            "url": "https://t.co/gqxn2u8Guo"
-          }
-        ],
+        "media": [],
         "metrics": {
-          "likes": 29,
-          "reposts": 19,
-          "replies": 6,
-          "quotes": 0,
-          "bookmarks": 1,
-          "views": 543
-        },
-        "sentiment": "negative",
-        "matched_terms": [
-          "refund"
-        ]
-      },
-      {
-        "post_id": "2116523110774210995",
-        "url": "https://x.com/KevanAintEvans/status/2116523110774210995",
-        "text": "@TemuCosmicube hello, i recently bought your TEMU™ guitar and one of the strings snapped off can i get a refund",
-        "original_text": "@TemuCosmicube hello, i recently bought your TEMU™ guitar and one of the strings snapped off can i get a refund https://t.co/eNXfNgExJE",
-        "links": [],
-        "translation_zh": "@TemuCosmicube hello, i recently bought your TEMU™ guitar and one of the strings snapped off can i get a refund",
-        "translation_status": "error",
-        "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
-        "author_name": "KevanEvans (pfp by Ai-san)",
-        "author_handle": "KevanAintEvans",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/1952643681548480512/Am35FVc9_normal.jpg",
-        "author_followers": 27,
-        "author_following": 67,
-        "author_bio": null,
-        "author_location": "Among Us",
-        "author_joined_at": "2023-08-12T06:36:23Z",
-        "author_verified": false,
-        "created_at": "2026-10-31T13:30:07Z",
-        "reply_to_post_id": null,
-        "reply_to_handle": null,
-        "quoted_post_id": null,
-        "conversation_id": "2116523110774210995",
-        "conversation_context": {},
-        "language": "en",
-        "media": [
-          {
-            "display_url": "pic.x.com/eNXfNgExJE",
-            "expanded_url": "https://x.com/KevanAintEvans/status/2116523110774210995/photo/1",
-            "ext_master_playlist_only": [],
-            "ext_media_availability": {
-              "status": "Available"
-            },
-            "ext_playlists": [],
-            "features": {
-              "large": {
-                "faces": []
-              },
-              "orig": {
-                "faces": []
-              }
-            },
-            "id_str": "2116523079837073408",
-            "indices": [
-              112,
-              135
-            ],
-            "media_key": "3_2116523079837073408",
-            "media_results": {
-              "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR1fZob8msAACgACHV9mjjCaAbMAAA==",
-              "result": {
-                "__typename": "ApiMedia",
-                "id": "QXBpTWVkaWE6DAABCgABHV9mhvyawAAKAAIdX2aOMJoBswAA",
-                "media_key": "3_2116523079837073408"
-              }
-            },
-            "media_url_https": "https://pbs.twimg.com/media/HV9mhvyawAAxb7t.png",
-            "original_info": {
-              "focus_rects": [
-                {
-                  "h": 430,
-                  "w": 768,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 768,
-                  "w": 768,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 768,
-                  "w": 674,
-                  "x": 94,
-                  "y": 0
-                },
-                {
-                  "h": 768,
-                  "w": 384,
-                  "x": 326,
-                  "y": 0
-                },
-                {
-                  "h": 768,
-                  "w": 768,
-                  "x": 0,
-                  "y": 0
-                }
-              ],
-              "height": 768,
-              "width": 768
-            },
-            "sizes": {
-              "large": {
-                "h": 768,
-                "w": 768
-              }
-            },
-            "type": "photo",
-            "url": "https://t.co/eNXfNgExJE"
-          }
-        ],
-        "metrics": {
-          "likes": 6,
+          "likes": 3,
           "reposts": 3,
-          "replies": 0,
-          "quotes": 1,
+          "replies": 1,
+          "quotes": 0,
           "bookmarks": 0,
-          "views": 106
+          "views": 15
         },
         "sentiment": "negative",
         "matched_terms": [
-          "refund"
+          "refund",
+          "scam",
+          "return"
         ]
       },
       {
-        "post_id": "2116566530804826261",
-        "url": "https://x.com/DeliveryBear1/status/2116566530804826261",
-        "text": "🐻 Bear Hub · Stonks Exchange volume board\n\n24h leaders: Dispatch $16.8K, TEMU $5.22K, STONKCAT $2.65K\nFeatured Delivery Guy $64.2K · Delivery Bear on the board\n\n@dispatch_cash @temuonbase @basestonkcat @Catfood4Basecat @StonksDCAT @degenpokerbase @Weithedog\nNFA · DYOR",
-        "original_text": "🐻 Bear Hub · Stonks Exchange volume board\n\n24h leaders: Dispatch $16.8K, TEMU $5.22K, STONKCAT $2.65K\nFeatured Delivery Guy $64.2K · Delivery Bear on the board\n\n@dispatch_cash @temuonbase @basestonkcat @Catfood4Basecat @StonksDCAT @degenpokerbase @Weithedog\nNFA · DYOR https://t.co/YGiOgpU25A",
+        "post_id": "2116804825312612441",
+        "url": "https://x.com/Kiraaaa191423/status/2116804825312612441",
+        "text": "@shoptemu #scam #scam Temu my return was delivered over 2 weeks ago and still NO refund. Tracking proves you have it. Refund my money NOW or I dispute the charge. This is theft.",
+        "original_text": "@shoptemu #scam #scam Temu my return was delivered over 2 weeks ago and still NO refund. Tracking proves you have it. Refund my money NOW or I dispute the charge. This is theft.",
         "links": [],
-        "translation_zh": "🐻 Bear Hub · Stonks Exchange volume board\n\n24h leaders: Dispatch $16.8K, TEMU $5.22K, STONKCAT $2.65K\nFeatured Delivery Guy $64.2K · Delivery Bear on the board\n\n@dispatch_cash @temuonbase @basestonkcat @Catfood4Basecat @StonksDCAT @degenpokerbase @Weithedog\nNFA · DYOR",
-        "translation_status": "error",
-        "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
-        "author_name": "Delivery Bear",
-        "author_handle": "DeliveryBear1",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/2115337241308385280/Bc2c2HX7_normal.jpg",
-        "author_followers": 82,
-        "author_following": 18,
+        "translation_zh": "@shoptemu #scam #scam Temu，我的退货 2 周多前就已送达，但仍然没有退款。物流跟踪证明你们已经收到了。现在就把钱退给我，否则我会发起拒付。这是盗窃。",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+        "author_name": "Kiraaaa",
+        "author_handle": "Kiraaaa191423",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2069525479007117312/2ZtRjafm_normal.jpg",
+        "author_followers": 3,
+        "author_following": 25,
         "author_bio": null,
         "author_location": null,
-        "author_joined_at": "2026-10-23T05:47:27Z",
+        "author_joined_at": "2026-04-29T21:41:18Z",
         "author_verified": false,
-        "created_at": "2026-10-31T16:22:39Z",
+        "created_at": "2026-11-01T08:09:33Z",
         "reply_to_post_id": null,
         "reply_to_handle": null,
         "quoted_post_id": null,
-        "conversation_id": "2116566530804826261",
+        "conversation_id": "2116804825312612441",
         "conversation_context": {},
         "language": "en",
-        "media": [
-          {
-            "allow_download_status": {
-              "allow_download": true
-            },
-            "display_url": "pic.x.com/YGiOgpU25A",
-            "expanded_url": "https://x.com/DeliveryBear1/status/2116566530804826261/photo/1",
-            "ext_master_playlist_only": [],
-            "ext_media_availability": {
-              "status": "Available"
-            },
-            "ext_playlists": [],
-            "features": {
-              "large": {
-                "faces": []
-              },
-              "orig": {
-                "faces": []
-              }
-            },
-            "id_str": "2116566415725522945",
-            "indices": [
-              269,
-              292
-            ],
-            "media_key": "3_2116566415725522945",
-            "media_results": {
-              "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR1fjfDo13ABCgACHV+OC7QaQJUAAA==",
-              "result": {
-                "__typename": "ApiMedia",
-                "id": "QXBpTWVkaWE6DAABCgABHV+N8OjXcAEKAAIdX44LtBpAlQAA",
-                "media_key": "3_2116566415725522945"
-              }
-            },
-            "media_url_https": "https://pbs.twimg.com/media/HV-N8OjXcAEDqln.jpg",
-            "original_info": {
-              "focus_rects": [
-                {
-                  "h": 672,
-                  "w": 1200,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 1200,
-                  "w": 1200,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 1368,
-                  "w": 1200,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 1500,
-                  "w": 750,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 1500,
-                  "w": 1200,
-                  "x": 0,
-                  "y": 0
-                }
-              ],
-              "height": 1500,
-              "width": 1200
-            },
-            "sizes": {
-              "large": {
-                "h": 1500,
-                "w": 1200
-              }
-            },
-            "type": "photo",
-            "url": "https://t.co/YGiOgpU25A"
-          }
-        ],
-        "metrics": {
-          "likes": 5,
-          "reposts": 0,
-          "replies": 5,
-          "quotes": 0,
-          "bookmarks": 0,
-          "views": 124
-        },
-        "sentiment": "neutral",
-        "matched_terms": [
-          "delivery"
-        ]
-      },
-      {
-        "post_id": "2116606724224540936",
-        "url": "https://x.com/Clit_Yeastwould/status/2116606724224540936",
-        "text": "The worst part about ordering from TEMU is the 27 follow-up bait-and-switch emails you get for doing so\n\nUnsubscribing does nothing because you are automatically resubbed on your next order",
-        "original_text": "The worst part about ordering from TEMU is the 27 follow-up bait-and-switch emails you get for doing so\n\nUnsubscribing does nothing because you are automatically resubbed on your next order https://t.co/XGCBkvx8sT",
-        "links": [],
-        "translation_zh": "The worst part about ordering from TEMU is the 27 follow-up bait-and-switch emails you get for doing so\n\nUnsubscribing does nothing because you are automatically resubbed on your next order",
-        "translation_status": "error",
-        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
-        "author_name": "The Daniel Droege Show",
-        "author_handle": "Clit_Yeastwould",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/2071293909976670208/FmsDGcQg_normal.jpg",
-        "author_followers": 1795,
-        "author_following": 1651,
-        "author_bio": null,
-        "author_location": "St. Louis MO",
-        "author_joined_at": "2021-11-29T18:25:49Z",
-        "author_verified": false,
-        "created_at": "2026-10-31T19:02:22Z",
-        "reply_to_post_id": null,
-        "reply_to_handle": null,
-        "quoted_post_id": null,
-        "conversation_id": "2116606724224540936",
-        "conversation_context": {},
-        "language": "en",
-        "media": [
-          {
-            "allow_download_status": {
-              "allow_download": true
-            },
-            "display_url": "pic.x.com/XGCBkvx8sT",
-            "expanded_url": "https://x.com/Clit_Yeastwould/status/2116606724224540936/photo/1",
-            "ext_master_playlist_only": [],
-            "ext_media_availability": {
-              "status": "Available"
-            },
-            "ext_playlists": [],
-            "features": {
-              "large": {
-                "faces": []
-              },
-              "orig": {
-                "faces": []
-              }
-            },
-            "id_str": "2116606550831710208",
-            "indices": [
-              190,
-              213
-            ],
-            "media_key": "3_2116606550831710208",
-            "media_results": {
-              "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR1fsnGXlsAACgACHV+ymfabYQgAAA==",
-              "result": {
-                "__typename": "ApiMedia",
-                "id": "QXBpTWVkaWE6DAABCgABHV+ycZeWwAAKAAIdX7KZ9pthCAAA",
-                "media_key": "3_2116606550831710208"
-              }
-            },
-            "media_url_https": "https://pbs.twimg.com/media/HV-ycZeWwAApK4d.png",
-            "original_info": {
-              "focus_rects": [
-                {
-                  "h": 120,
-                  "w": 214,
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 120,
-                  "w": 120,
-                  "x": 28,
-                  "y": 0
-                },
-                {
-                  "h": 120,
-                  "w": 105,
-                  "x": 36,
-                  "y": 0
-                },
-                {
-                  "h": 120,
-                  "w": 60,
-                  "x": 58,
-                  "y": 0
-                },
-                {
-                  "h": 120,
-                  "w": 507,
-                  "x": 0,
-                  "y": 0
-                }
-              ],
-              "height": 120,
-              "width": 507
-            },
-            "sizes": {
-              "large": {
-                "h": 120,
-                "w": 507
-              }
-            },
-            "type": "photo",
-            "url": "https://t.co/XGCBkvx8sT"
-          }
-        ],
+        "media": [],
         "metrics": {
           "likes": 2,
+          "reposts": 2,
+          "replies": 1,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 18
+        },
+        "sentiment": "negative",
+        "matched_terms": [
+          "refund",
+          "scam",
+          "return",
+          "tracking"
+        ]
+      },
+      {
+        "post_id": "2117011490221793500",
+        "url": "https://x.com/grok/status/2117011490221793500",
+        "text": "@bolaji73501 @EcomMachine In this dropshipping setup you never hold stock. When a customer buys from your store you immediately place the matching order on Temu (or the supplier) and enter the customer’s shipping address so the item goes straight to them. You just manage the storefront, ads, and order forwarding.",
+        "original_text": "@bolaji73501 @EcomMachine In this dropshipping setup you never hold stock. When a customer buys from your store you immediately place the matching order on Temu (or the supplier) and enter the customer’s shipping address so the item goes straight to them. You just manage the storefront, ads, and order forwarding.",
+        "links": [],
+        "translation_zh": "@bolaji73501 @EcomMachine 在这种 dropshipping 模式中，你从不持有库存。当顾客从你的店铺购买时，你立即在 Temu（或供应商）上下对应的订单，并输入顾客的收货地址，这样商品就会直接寄给他们。你只需管理店面、广告和订单转发。",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+        "author_name": "Grok",
+        "author_handle": "grok",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2057885623374290944/lmj0pawP_normal.jpg",
+        "author_followers": 9297690,
+        "author_following": 4,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2023-11-04T04:52:34Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T21:50:46Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116960760265896254",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 0,
           "reposts": 0,
           "replies": 1,
           "quotes": 0,
           "bookmarks": 0,
-          "views": 125
+          "views": 9
         },
         "sentiment": "neutral",
         "matched_terms": []
       },
       {
-        "post_id": "2116681101120778512",
-        "url": "https://x.com/nimolay003/status/2116681101120778512",
-        "text": "🛍️ Get ₦0 gifts with Temu!\nVisit temu.to/k search alz977677 in the app, and redeem alr570340 for 30% off your order.\nPlus, enjoy free returns within 90 days.\n⚠️ Only for app users with qualifying orders. T&Cs apply.",
-        "original_text": "🛍️ Get ₦0 gifts with Temu!\nVisit https://t.co/VmEfkZqm9s search alz977677 in the app, and redeem alr570340 for 30% off your order.\nPlus, enjoy free returns within 90 days.\n⚠️ Only for app users with qualifying orders. T&amp;Cs apply. https://t.co/kXZtiIm6Qb",
-        "links": [
-          "https://temu.to/k/ek1sh33zlb7"
-        ],
-        "translation_zh": "🛍️ Get ₦0 gifts with Temu!\nVisit temu.to/k search alz977677 in the app, and redeem alr570340 for 30% off your order.\nPlus, enjoy free returns within 90 days.\n⚠️ Only for app users with qualifying orders. T&Cs apply.",
-        "translation_status": "error",
-        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
-        "author_name": "Nimolay",
-        "author_handle": "nimolay003",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/1762722401551273984/hOQklnEv_normal.jpg",
-        "author_followers": 0,
-        "author_following": 28,
+        "post_id": "2116954243001196560",
+        "url": "https://x.com/Angelaffta/status/2116954243001196560",
+        "text": "I don't know why are you guys sleeping on temu 😂. Temu has big discounts plus the don't have crazy import charges. And their discounts code actually works. \n\nUse code alf373051 on your next temu order you won't regret it.",
+        "original_text": "I don't know why are you guys sleeping on temu 😂. Temu has big discounts plus the don't have crazy import charges. And their discounts code actually works. \n\nUse code alf373051  on your next temu order you won't regret it.",
+        "links": [],
+        "translation_zh": "我不知道你们为什么都忽视 temu 😂。Temu 折扣很大，而且没有离谱的进口费用。他们的折扣码也真的能用。\n\n下次在 temu 下单时使用代码 alf373051，你不会后悔的。",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论价格、优惠或正向购物体验。",
+        "author_name": "Angela",
+        "author_handle": "Angelaffta",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2107763411962503168/9yfZoHSC_normal.jpg",
+        "author_followers": 10,
+        "author_following": 6,
         "author_bio": null,
-        "author_location": "Abuja, Nigeria",
-        "author_joined_at": "2024-02-22T21:58:27Z",
+        "author_location": null,
+        "author_joined_at": "2026-10-07T09:21:28Z",
         "author_verified": false,
-        "created_at": "2026-10-31T23:57:55Z",
+        "created_at": "2026-11-01T18:03:17Z",
         "reply_to_post_id": null,
         "reply_to_handle": null,
         "quoted_post_id": null,
-        "conversation_id": "2116681101120778512",
+        "conversation_id": "2116954243001196560",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 8
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2116942101258572068",
+        "url": "https://x.com/iamcomano/status/2116942101258572068",
+        "text": "🔥 Get ₦0 gifts on Temu!\nTap temu.to/k and search alq894008 in the Temu App.\nPlus, redeem als894008 for 30% off your order — with free returns within 90 days. 🛍️\n⚠️ Only for app users with qualifying orders. T&Cs apply.",
+        "original_text": "🔥 Get ₦0 gifts on Temu!\nTap https://t.co/ZL3dEdeqK4 and search alq894008 in the Temu App.\nPlus, redeem als894008 for 30% off your order — with free returns within 90 days. 🛍️\n⚠️ Only for app users with qualifying orders. T&amp;Cs apply. https://t.co/B6717r575b",
+        "links": [
+          "https://temu.to/k/eoxbennmjxx"
+        ],
+        "translation_zh": "🔥 在 Temu 领取 ₦0 礼品！\n点击 temu.to/k，并在 Temu App 中搜索 alq894008。\n另外，兑换 als894008 可享受订单 30% 折扣——90 天内免费退货。🛍️\n⚠️ 仅限符合条件订单的 app 用户。适用条款和条件。",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "Omano, Chijindu Friday",
+        "author_handle": "iamcomano",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1698756339281903616/-6cht2fl_normal.jpg",
+        "author_followers": 1328,
+        "author_following": 3385,
+        "author_bio": null,
+        "author_location": "Port Harcourt, Nigeria",
+        "author_joined_at": "2022-02-01T15:09:38Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T17:15:02Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116942101258572068",
         "conversation_context": {},
         "language": "en",
         "media": [
           {
-            "display_url": "pic.x.com/kXZtiIm6Qb",
-            "expanded_url": "https://x.com/nimolay003/status/2116681101120778512/photo/1",
+            "display_url": "pic.x.com/B6717r575b",
+            "expanded_url": "https://x.com/iamcomano/status/2116942101258572068/photo/1",
             "ext_master_playlist_only": [],
             "ext_media_availability": {
               "status": "Available"
@@ -1959,21 +2003,21 @@
                 "faces": []
               }
             },
-            "id_str": "2116681094200229888",
+            "id_str": "2116942091213254657",
             "indices": [
-              234,
-              257
+              237,
+              260
             ],
-            "media_key": "3_2116681094200229888",
+            "media_key": "3_2116942091213254657",
             "media_results": {
-              "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR1f9j2SlwAACgACHV/2Py8WMRAAAA==",
+              "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR1g452s1rABCgACHWDjoAOWESQAAA==",
               "result": {
                 "__typename": "ApiMedia",
-                "id": "QXBpTWVkaWE6DAABCgABHV/2PZKXAAAKAAIdX/Y/LxYxEAAA",
-                "media_key": "3_2116681094200229888"
+                "id": "QXBpTWVkaWE6DAABCgABHWDjnazWsAEKAAIdYOOgA5YRJAAA",
+                "media_key": "3_2116942091213254657"
               }
             },
-            "media_url_https": "https://pbs.twimg.com/media/HV_2PZKXAAAhNiY.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWDjnazWsAEPu8W.jpg",
             "original_info": {
               "focus_rects": [
                 {
@@ -2017,7 +2061,7 @@
               }
             },
             "type": "photo",
-            "url": "https://t.co/kXZtiIm6Qb"
+            "url": "https://t.co/B6717r575b"
           }
         ],
         "metrics": {
@@ -2026,7 +2070,7 @@
           "replies": 0,
           "quotes": 0,
           "bookmarks": 0,
-          "views": 0
+          "views": 9
         },
         "sentiment": "neutral",
         "matched_terms": [
@@ -2034,30 +2078,30 @@
         ]
       },
       {
-        "post_id": "2116439824181964809",
-        "url": "https://x.com/Jancarl79202018/status/2116439824181964809",
-        "text": "🔥 Black Friday deal: Get $0 gifts on Temu!\nTap temu.to/k and search alw694393 in the Temu App.\nPlus, redeem alw523330 for 40% off your order — with free returns within 90 days.🛍️\n#TemuFinds #TemuDeals #BlackFriday\n⚠️ Only for app users with qualifying orders. T&Cs",
-        "original_text": "🔥 Black Friday deal: Get $0 gifts on Temu!\nTap https://t.co/dfIvh4ddyt and search alw694393 in the Temu App.\nPlus, redeem alw523330 for 40% off your order — with free returns within 90 days.🛍️\n#TemuFinds #TemuDeals #BlackFriday\n⚠️ Only for app users with qualifying orders. T&amp;Cs",
+        "post_id": "2116816316686332076",
+        "url": "https://x.com/jon180875/status/2116816316686332076",
+        "text": "✨ BLACK FRIDAY DEAL DROP! ✨\nScore £0 gifts on Temu by tapping temu.to/k and searching alt224754 in the app.\nThen redeem alt247825 and save 40% on your order — with free returns within 90 days! 🔥\n#TemuFinds #TemuDeals #BlackFriday",
+        "original_text": "✨ BLACK FRIDAY DEAL DROP! ✨\nScore £0 gifts on Temu by tapping https://t.co/IuaRFw6YZ5 and searching alt224754 in the app.\nThen redeem alt247825 and save 40% on your order — with free returns within 90 days! 🔥\n#TemuFinds #TemuDeals #BlackFriday",
         "links": [
-          "https://temu.to/k/psu3zso0cqx"
+          "https://temu.to/k/eg6qdjkn4d2"
         ],
-        "translation_zh": "🔥 Black Friday deal: Get $0 gifts on Temu!\nTap temu.to/k and search alw694393 in the Temu App.\nPlus, redeem alw523330 for 40% off your order — with free returns within 90 days.🛍️\n#TemuFinds #TemuDeals #BlackFriday\n⚠️ Only for app users with qualifying orders. T&Cs",
-        "translation_status": "error",
+        "translation_zh": "✨ BLACK FRIDAY 优惠来了！✨\n点击 temu.to/k 并在 app 中搜索 alt224754，即可在 Temu 领取 £0 礼品。\n然后兑换 alt247825，你的订单可省 40%——并享受 90 天内免费退货！🔥\n#TemuFinds #TemuDeals #BlackFriday",
+        "translation_status": "translated",
         "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
-        "author_name": "Jancarlos",
-        "author_handle": "Jancarl79202018",
+        "author_name": "jon southwell",
+        "author_handle": "jon180875",
         "author_avatar_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
-        "author_followers": 0,
-        "author_following": 1,
+        "author_followers": 1,
+        "author_following": 3,
         "author_bio": null,
         "author_location": null,
-        "author_joined_at": "2022-01-24T02:35:50Z",
+        "author_joined_at": "2013-11-21T04:38:23Z",
         "author_verified": false,
-        "created_at": "2026-10-31T07:59:10Z",
+        "created_at": "2026-11-01T08:55:13Z",
         "reply_to_post_id": null,
         "reply_to_handle": null,
         "quoted_post_id": null,
-        "conversation_id": "2116439824181964809",
+        "conversation_id": "2116816316686332076",
         "conversation_context": {},
         "language": "en",
         "media": [],
@@ -2067,7 +2111,7 @@
           "replies": 0,
           "quotes": 0,
           "bookmarks": 0,
-          "views": 6
+          "views": 11
         },
         "sentiment": "neutral",
         "matched_terms": [
@@ -2075,147 +2119,183 @@
         ]
       },
       {
-        "post_id": "2116624475236282849",
-        "url": "https://x.com/champagne9949/status/2116624475236282849",
-        "text": "Missed out on ma temu delivery.",
-        "original_text": "Missed out on ma temu delivery.",
+        "post_id": "2116885520764547581",
+        "url": "https://x.com/YomiAdeyina/status/2116885520764547581",
+        "text": "✨ DEAL DROP! ✨\nScore ₦0 gifts on Temu by tapping temu.to/k and searching alq506696 in the app.\nThen redeem aly560488 and save 30% on your order — with free returns within 90 days! 🔥\n⚠️ Only for app users with qualifying orders. T&Cs apply.",
+        "original_text": "✨ DEAL DROP! ✨\nScore ₦0 gifts on Temu by tapping https://t.co/q9T9T39rjH and searching alq506696 in the app.\nThen redeem aly560488 and save 30% on your order — with free returns within 90 days! 🔥\n⚠️ Only for app users with qualifying orders. T&amp;Cs apply. https://t.co/iF1LKjfADh",
+        "links": [
+          "https://temu.to/k/e67r93rfsqr"
+        ],
+        "translation_zh": "✨ 优惠来啦！✨\n在 Temu 上点击 temu.to/k，并在 App 中搜索 alq506696，即可领取 ₦0 礼品。\n然后兑换 aly560488，下单立省 30%——还可享受 90 天内免费退货！🔥\n⚠️ 仅限符合条件订单的 App 用户。适用条款与条件。",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "yomi adeyina",
+        "author_handle": "YomiAdeyina",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1894778719060766720/pw1vdZXk_normal.jpg",
+        "author_followers": 167,
+        "author_following": 866,
+        "author_bio": null,
+        "author_location": "Lagos, Nigeria",
+        "author_joined_at": "2012-07-19T15:45:03Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T13:30:12Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116885520764547581",
+        "conversation_context": {},
+        "language": "en",
+        "media": [
+          {
+            "display_url": "pic.x.com/iF1LKjfADh",
+            "expanded_url": "https://x.com/YomiAdeyina/status/2116885520764547581/photo/1",
+            "ext_master_playlist_only": [],
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "ext_playlists": [],
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              }
+            },
+            "id_str": "2116885509586735104",
+            "indices": [
+              258,
+              281
+            ],
+            "media_key": "3_2116885509586735104",
+            "media_results": {
+              "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR1gsCe9FtAACgACHWCwKldWsf0AAA==",
+              "result": {
+                "__typename": "ApiMedia",
+                "id": "QXBpTWVkaWE6DAABCgABHWCwJ70W0AAKAAIdYLAqV1ax/QAA",
+                "media_key": "3_2116885509586735104"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/media/HWCwJ70W0AA6T_E.jpg",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 392,
+                  "w": 700,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 392,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 344,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 196,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 750,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 392,
+              "width": 750
+            },
+            "sizes": {
+              "large": {
+                "h": 392,
+                "w": 750
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/iF1LKjfADh"
+          }
+        ],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 44
+        },
+        "sentiment": "neutral",
+        "matched_terms": [
+          "return"
+        ]
+      },
+      {
+        "post_id": "2117018922243223594",
+        "url": "https://x.com/Timmyl0/status/2117018922243223594",
+        "text": "@TheDrugMoney Sort of not really, with temu you might get the same thing you see on amazon or you may get an inferior version.\n\nThe catch is if you buy trash from Amazon you can at least return it usually free of charge temu charges usually more than what the item is worth to return.",
+        "original_text": "@TheDrugMoney Sort of not really, with temu you might get the same thing you see on amazon or you may get an inferior version.\n\nThe catch is if you buy trash from Amazon you can at least return it usually free of charge temu charges usually more than what the item is worth to return.",
         "links": [],
-        "translation_zh": "Missed out on ma temu delivery.",
-        "translation_status": "error",
+        "translation_zh": "@TheDrugMoney 算是也不完全是，用 temu 你可能会买到和你在 amazon 上看到的一样的东西，也可能会买到劣质版本。\n\n问题在于，如果你从 Amazon 买到垃圾货，通常至少可以免费退货；temu 退货通常收的费用比商品本身还贵。",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "Tim Raw",
+        "author_handle": "Timmyl0",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/246609861/IMG_0083_normal.jpg",
+        "author_followers": 57,
+        "author_following": 39,
+        "author_bio": null,
+        "author_location": "London, Ontario Canada",
+        "author_joined_at": "2009-06-02T14:51:21Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T22:20:18Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116911748087447593",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 34
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2117011204749111594",
+        "url": "https://x.com/MDR227185150701/status/2117011204749111594",
+        "text": "@TheDrugMoney The catch is the shipping time it takes significantly longer. If waiting a few weeks is not a deal breaker for you, yes, TEMU has the same crap way cheaper.",
+        "original_text": "@TheDrugMoney The catch is the shipping time it takes significantly longer. If waiting a few weeks is not a deal breaker for you, yes, TEMU has the same crap way cheaper.",
+        "links": [],
+        "translation_zh": "@TheDrugMoney 问题在于配送时间，要久得多。如果等上几周对你来说不是不能接受，那么是的，TEMU 上同样的破玩意儿便宜得多。",
+        "translation_status": "translated",
         "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
-        "author_name": "Champagne",
-        "author_handle": "champagne9949",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/2113372286333878272/wlHJBg6-_normal.jpg",
-        "author_followers": 1286,
-        "author_following": 5026,
-        "author_bio": null,
-        "author_location": "What's your thought?",
-        "author_joined_at": "2019-12-29T23:54:53Z",
-        "author_verified": false,
-        "created_at": "2026-10-31T20:12:54Z",
-        "reply_to_post_id": null,
-        "reply_to_handle": null,
-        "quoted_post_id": null,
-        "conversation_id": "2116624475236282849",
-        "conversation_context": {},
-        "language": "et",
-        "media": [],
-        "metrics": {
-          "likes": 0,
-          "reposts": 0,
-          "replies": 0,
-          "quotes": 0,
-          "bookmarks": 0,
-          "views": 41
-        },
-        "sentiment": "neutral",
-        "matched_terms": [
-          "delivery"
-        ]
-      },
-      {
-        "post_id": "2116575266797408765",
-        "url": "https://x.com/CaptainTru42022/status/2116575266797408765",
-        "text": "TEMU. I love it really. Enter the promotion with a qualifying order. Ad. temu.to/k via @shoptemu",
-        "original_text": "TEMU. I love it really. Enter the promotion with a qualifying order. Ad. https://t.co/pVq5fD4rZi via @shoptemu",
-        "links": [
-          "https://temu.to/k/pykjzcsi6dx"
-        ],
-        "translation_zh": "TEMU. I love it really. Enter the promotion with a qualifying order. Ad. temu.to/k via @shoptemu",
-        "translation_status": "error",
-        "summary_zh": "用户讨论价格、优惠或正向购物体验。",
-        "author_name": "ɢɛռ Ӽ ʋɨʟʟǟɨռ 🦋",
-        "author_handle": "CaptainTru42022",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/1834299883106222080/lVXaTNo0_normal.jpg",
-        "author_followers": 179,
-        "author_following": 148,
-        "author_bio": null,
-        "author_location": "Michigan",
-        "author_joined_at": "2024-09-11T17:02:25Z",
-        "author_verified": false,
-        "created_at": "2026-10-31T16:57:22Z",
-        "reply_to_post_id": null,
-        "reply_to_handle": null,
-        "quoted_post_id": null,
-        "conversation_id": "2116575266797408765",
-        "conversation_context": {},
-        "language": "en",
-        "media": [],
-        "metrics": {
-          "likes": 0,
-          "reposts": 0,
-          "replies": 0,
-          "quotes": 0,
-          "bookmarks": 0,
-          "views": 18
-        },
-        "sentiment": "neutral",
-        "matched_terms": []
-      },
-      {
-        "post_id": "2116664476120609095",
-        "url": "https://x.com/SamuelKawer/status/2116664476120609095",
-        "text": "🚀 Follow me to open the Super Fast Earning Mode:\n1️⃣ Share your affiliate link.\n2️⃣ Invite new users to order in Temu.\n3️⃣ Got cash withdrawal.\nSpeed up! Click the temu.to/k or Search the inu43708, earn $10,000 per month with me💰！",
-        "original_text": "🚀 Follow me to open the Super Fast Earning Mode:\n1️⃣ Share your affiliate link.\n2️⃣ Invite new users to order in Temu.\n3️⃣ Got cash withdrawal.\nSpeed up! Click the https://t.co/YyzSNBOyw3 or Search the inu43708, earn $10,000 per month with me💰！",
-        "links": [
-          "https://temu.to/k/puozh54vcwr"
-        ],
-        "translation_zh": "🚀 Follow me to open the Super Fast Earning Mode:\n1️⃣ Share your affiliate link.\n2️⃣ Invite new users to order in Temu.\n3️⃣ Got cash withdrawal.\nSpeed up! Click the temu.to/k or Search the inu43708, earn $10,000 per month with me💰！",
-        "translation_status": "error",
-        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
-        "author_name": "Samuel Kawer",
-        "author_handle": "SamuelKawer",
-        "author_avatar_url": "https://pbs.twimg.com/profile_images/1231302386771165189/aDBJSsL8_normal.jpg",
-        "author_followers": 4956,
-        "author_following": 7496,
-        "author_bio": null,
-        "author_location": "Howell NJ",
-        "author_joined_at": "2018-02-18T15:11:06Z",
-        "author_verified": false,
-        "created_at": "2026-10-31T22:51:51Z",
-        "reply_to_post_id": null,
-        "reply_to_handle": null,
-        "quoted_post_id": null,
-        "conversation_id": "2116664476120609095",
-        "conversation_context": {},
-        "language": "en",
-        "media": [],
-        "metrics": {
-          "likes": 0,
-          "reposts": 0,
-          "replies": 0,
-          "quotes": 0,
-          "bookmarks": 0,
-          "views": 8
-        },
-        "sentiment": "positive",
-        "matched_terms": []
-      },
-      {
-        "post_id": "2116471096438632468",
-        "url": "https://x.com/Murp8aw7/status/2116471096438632468",
-        "text": "✨ DEAL DROP! ✨\nScore ₦0 gifts on Temu by tapping temu.to/k and searching alb608791 in the app.\nThen redeem ale585306 and save 30% on your order — with free returns within 90 days! 🔥\n⚠️ Only for app users with qualifying orders. T&Cs apply.",
-        "original_text": "✨ DEAL DROP! ✨\nScore ₦0 gifts on Temu by tapping https://t.co/mWTLxvNP6J and searching alb608791 in the app.\nThen redeem ale585306 and save 30% on your order — with free returns within 90 days! 🔥\n⚠️ Only for app users with qualifying orders. T&amp;Cs apply.",
-        "links": [
-          "https://temu.to/k/eeqaj9yf9q4"
-        ],
-        "translation_zh": "✨ DEAL DROP! ✨\nScore ₦0 gifts on Temu by tapping temu.to/k and searching alb608791 in the app.\nThen redeem ale585306 and save 30% on your order — with free returns within 90 days! 🔥\n⚠️ Only for app users with qualifying orders. T&Cs apply.",
-        "translation_status": "error",
-        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
-        "author_name": "Murp",
-        "author_handle": "Murp8aw7",
-        "author_avatar_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
-        "author_followers": 3,
-        "author_following": 53,
+        "author_name": "Mila Direy-Drovovich",
+        "author_handle": "MDR227185150701",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2116239175997337600/2tcD6uMb_normal.jpg",
+        "author_followers": 50,
+        "author_following": 35,
         "author_bio": null,
         "author_location": null,
-        "author_joined_at": "2026-10-02T14:51:48Z",
+        "author_joined_at": "2024-11-06T09:00:40Z",
         "author_verified": false,
-        "created_at": "2026-10-31T10:03:26Z",
+        "created_at": "2026-11-01T21:49:38Z",
         "reply_to_post_id": null,
         "reply_to_handle": null,
         "quoted_post_id": null,
-        "conversation_id": "2116471096438632468",
+        "conversation_id": "2116911748087447593",
         "conversation_context": {},
         "language": "en",
         "media": [],
@@ -2225,39 +2305,76 @@
           "replies": 0,
           "quotes": 0,
           "bookmarks": 0,
-          "views": 0
+          "views": 50
         },
         "sentiment": "neutral",
-        "matched_terms": [
-          "return"
-        ]
+        "matched_terms": []
+      },
+      {
+        "post_id": "2116970421736378809",
+        "url": "https://x.com/abgrammie/status/2116970421736378809",
+        "text": "Wait… have you checked Temu’s Black Friday finds yet?\nIf you’re new to the Temu App, take a look at the available new-user offers here: temu.to/k\nOr search alq705289 in the app to find them.\nWorth a peek before you miss the deals!\n#TemuFinds #BlackFriday",
+        "original_text": "Wait… have you checked Temu’s Black Friday finds yet?\nIf you’re new to the Temu App, take a look at the available new-user offers here: https://t.co/K5NOJxgZxd\nOr search alq705289 in the app to find them.\nWorth a peek before you miss the deals!\n#TemuFinds #BlackFriday",
+        "links": [
+          "https://temu.to/k/pm3p4dqxsyj"
+        ],
+        "translation_zh": "等等……你看过 Temu 的 Black Friday 好物了吗？\n如果你是 Temu App 新用户，可以在这里看看可用的新用户优惠：temu.to/k\n或者在 App 中搜索 alq705289 来找到它们。\n在错过这些优惠之前，值得看一眼！\n#TemuFinds #BlackFriday",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "Carla Dunn",
+        "author_handle": "abgrammie",
+        "author_avatar_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "author_followers": 27,
+        "author_following": 58,
+        "author_bio": null,
+        "author_location": "Tulsa, OK",
+        "author_joined_at": "2012-09-30T00:35:44Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T19:07:34Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116970421736378809",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 2
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
       }
     ],
     "anomalies": []
   },
   "source_status": {
     "status": "normal",
-    "raw_posts_collected": 48,
-    "effective_posts": 38,
+    "raw_posts_collected": 54,
+    "effective_posts": 45,
     "brand_breakdown": {
-      "primary_candidates": 38,
-      "primary_effective": 28,
-      "competitor_candidates": 10,
-      "competitor_effective": 10
+      "primary_candidates": 37,
+      "primary_effective": 29,
+      "competitor_candidates": 17,
+      "competitor_effective": 16
     },
     "translation": {
       "counts": {
-        "source_chinese": 16,
-        "translated": 1
+        "translated": 41,
+        "source_chinese": 13
       },
-      "missing_count": 31,
-      "fallback_original_count": 31
+      "missing_count": 0,
+      "fallback_original_count": 0
     },
     "notes": [
       "Public social data collection is active. Review duplicate rate and relevance regularly.",
       "Bookmarks are collected only when the data source provides them.",
       "Quote counts are treated as public propagation signals.",
-      "Chinese translation unavailable for 31 posts; original text is shown as fallback."
+      "Chinese translation coverage is complete."
     ]
   },
   "routes": {

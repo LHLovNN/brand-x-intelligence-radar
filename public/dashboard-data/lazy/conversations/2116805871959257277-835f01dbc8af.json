@@ -1,0 +1,207 @@
+{
+  "conversation_id": "2116805871959257277",
+  "anchor_post_id": "2116805871959257277",
+  "summary_zh": "对话由 alin_zone 介绍 DSH-Android 发起，核心是免 Root 在 Android 10+ 通过 APK 运行 DeepSeek Harness 手机 Agent，并说明权限、ROM 后台、Play 误报等体验边界。收录帖把话题落到具体安装与使用体验，未涉及价格或配送。后续有人追问免 Root、提飞书接入和国产 ROM 杀后台，也有人称“在用”，显示讨论偏技术试用，情绪好奇偏正",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2116805871959257277",
+      "url": "https://x.com/alin_zone/status/2116805871959257277",
+      "created_at": "2026-11-01T08:13:42Z",
+      "text": "安卓也能跑 Agent 了，免 Root 装个 APK 就能用 DeepSeek Harness🔥\n\n想在手机上玩 Agent，以前要么 Root，要么塞一套 Termux。\n刚看到社区项目 DSH-Android：一个 APK，把 dsh 引擎嵌进 App 进程里跑，arm64、Android 10+ 就能装。\n\n它和只会聊天的助手不是一类，更接近真能动手的手机 Agent：\n\n读屏点按\n靠无障碍服务操作微信、小红书、BOSS、淘宝这类 App，过程中能暂停、插话\n\n文件和文档\n整理下载目录，读 PDF / Word / Excel / PPT 里的字\n\n系统能力\n亮度、Wi‑Fi、勿扰、通知、闹钟能改；也能定时，或按连上 Wi‑Fi、开始充电、到某地这类条件触发\n\n悬浮球\n在任意 App 里呼起，把当前这一屏甩给它，问这条怎么回\n\n模型不锁死\nDeepSeek 账号或 key 就能用；也支持 OpenAI 兼容接口，以及 Kimi、智谱、通义等一堆服务商\n\n技术上有点意思：Node 24 编成原生 so，在前台服务里起 dsh，不走 proot / Termux，也少踩安卓幽灵进程那套限制。Shizuku 是可选增强，不是硬门槛。\n\n上手大概三步：\n1. Releases 下 APK\n2. 登录 DeepSeek 或填 key\n3. 直接说任务\n\n装的时候 Play 保护可能误报有害应用（无障碍和通知权限太敏感），核对过 SHA-256 后点更多详情 → 仍要安装就行。\n\n边界先摆清楚，别一上来当全能代操：\n\n· 有安全锁屏时，不能操作其他 App 界面（文件、设置类还能跑）\n· 部分国产 ROM 要手动开自启动和后台弹出，悬浮球才稳\n· 冷启动大概还有几秒，作者也在优化\n\n仓库和 APK：\nhttps://t.co/NrBu6W4eoP\n\n社区项目，和 DeepSeek 官方无关。适合想把 Agent 从电脑挪到口袋里、又不想 Root 的人先试试。\n\n装上了的话，评论区说说卡在权限还是读屏。",
+      "original_text": "安卓也能跑 Agent 了，免 Root 装个 APK 就能用 DeepSeek Harness🔥\n\n想在手机上玩 Agent，以前要么 Root，要么塞一套 Termux。\n刚看到社区项目 DSH-Android：一个 APK，把 dsh 引擎嵌进 App 进程里跑，arm64、Android 10+ 就能装。\n\n它和只会聊天的助手不是一类，更接近真能动手的手机 Agent：\n\n读屏点按\n靠无障碍服务操作微信、小红书、BOSS、淘宝这类 App，过程中能暂停、插话\n\n文件和文档\n整理下载目录，读 PDF / Word / Excel / PPT 里的字\n\n系统能力\n亮度、Wi‑Fi、勿扰、通知、闹钟能改；也能定时，或按连上 Wi‑Fi、开始充电、到某地这类条件触发\n\n悬浮球\n在任意 App 里呼起，把当前这一屏甩给它，问这条怎么回\n\n模型不锁死\nDeepSeek 账号或 key 就能用；也支持 OpenAI 兼容接口，以及 Kimi、智谱、通义等一堆服务商\n\n技术上有点意思：Node 24 编成原生 so，在前台服务里起 dsh，不走 proot / Termux，也少踩安卓幽灵进程那套限制。Shizuku 是可选增强，不是硬门槛。\n\n上手大概三步：\n1. Releases 下 APK\n2. 登录 DeepSeek 或填 key\n3. 直接说任务\n\n装的时候 Play 保护可能误报有害应用（无障碍和通知权限太敏感），核对过 SHA-256 后点更多详情 → 仍要安装就行。\n\n边界先摆清楚，别一上来当全能代操：\n\n· 有安全锁屏时，不能操作其他 App 界面（文件、设置类还能跑）\n· 部分国产 ROM 要手动开自启动和后台弹出，悬浮球才稳\n· 冷启动大概还有几秒，作者也在优化\n\n仓库和 APK：\nhttps://t.co/NrBu6W4eoP\n\n社区项目，和 DeepSeek 官方无关。适合想把 Agent 从电脑挪到口袋里、又不想 Root 的人先试试。\n\n装上了的话，评论区说说卡在权限还是读屏。",
+      "translation_zh": "安卓也能跑 Agent 了，免 Root 装个 APK 就能用 DeepSeek Harness🔥\n\n想在手机上玩 Agent，以前要么 Root，要么塞一套 Termux。\n刚看到社区项目 DSH-Android：一个 APK，把 dsh 引擎嵌进 App 进程里跑，arm64、Android 10+ 就能装。\n\n它和只会聊天的助手不是一类，更接近真能动手的手机 Agent：\n\n读屏点按\n靠无障碍服务操作微信、小红书、BOSS、淘宝这类 App，过程中能暂停、插话\n\n文件和文档\n整理下载目录，读 PDF / Word / Excel / PPT 里的字\n\n系统能力\n亮度、Wi‑Fi、勿扰、通知、闹钟能改；也能定时，或按连上 Wi‑Fi、开始充电、到某地这类条件触发\n\n悬浮球\n在任意 App 里呼起，把当前这一屏甩给它，问这条怎么回\n\n模型不锁死\nDeepSeek 账号或 key 就能用；也支持 OpenAI 兼容接口，以及 Kimi、智谱、通义等一堆服务商\n\n技术上有点意思：Node 24 编成原生 so，在前台服务里起 dsh，不走 proot / Termux，也少踩安卓幽灵进程那套限制。Shizuku 是可选增强，不是硬门槛。\n\n上手大概三步：\n1. Releases 下 APK\n2. 登录 DeepSeek 或填 key\n3. 直接说任务\n\n装的时候 Play 保护可能误报有害应用（无障碍和通知权限太敏感），核对过 SHA-256 后点更多详情 → 仍要安装就行。\n\n边界先摆清楚，别一上来当全能代操：\n\n· 有安全锁屏时，不能操作其他 App 界面（文件、设置类还能跑）\n· 部分国产 ROM 要手动开自启动和后台弹出，悬浮球才稳\n· 冷启动大概还有几秒，作者也在优化\n\n仓库和 APK：\nhttps://t.co/NrBu6W4eoP\n\n社区项目，和 DeepSeek 官方无关。适合想把 Agent 从电脑挪到口袋里、又不想 Root 的人先试试。\n\n装上了的话，评论区说说卡在权限还是读屏。",
+      "translation_status": "source_chinese",
+      "author_name": "阿蔺A-Lin",
+      "author_handle": "alin_zone",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2018018848356925440/tFuD-zag_normal.jpg",
+      "author_followers": 11878,
+      "author_following": 489,
+      "author_bio": "🧠 AI 工具实操｜Obsidian / Grok Bot / Codex / 开源 Agent\n📚 Obsidian 知识管理 + AI 工作流教程\n🔍 分享值得一用的开源项目和新工具\n🚀 AI Spark 联创｜合作 vx：a-lin-zone · 公众号：阿蔺 A-Lin",
+      "author_location": null,
+      "author_joined_at": "2023-07-16T11:01:21Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/jackwener/DSH-Android"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWBnt31XAAEKr60.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWBnt31XAAEKr60.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWBnt31XAAEKr60.jpg",
+          "expanded_url": "https://x.com/alin_zone/status/2116805871959257277/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWBnuBzXUAA-psO.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWBnuBzXUAA-psO.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWBnuBzXUAA-psO.jpg",
+          "expanded_url": "https://x.com/alin_zone/status/2116805871959257277/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWBnuLHWwAAFQQS.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWBnuLHWwAAFQQS.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWBnuLHWwAAFQQS.jpg",
+          "expanded_url": "https://x.com/alin_zone/status/2116805871959257277/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWBnuSZWQAE9Csp.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWBnuSZWQAE9Csp.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWBnuSZWQAE9Csp.jpg",
+          "expanded_url": "https://x.com/alin_zone/status/2116805871959257277/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 26,
+        "reposts": 3,
+        "replies": 6,
+        "quotes": 0,
+        "bookmarks": 27,
+        "views": 3534
+      }
+    },
+    {
+      "post_id": "2116830363716833658",
+      "url": "https://x.com/KalinJunYAI/status/2116830363716833658",
+      "created_at": "2026-11-01T09:51:02Z",
+      "text": "@alin_zone 免Root装个APK就能跑？",
+      "original_text": "@alin_zone 免Root装个APK就能跑？",
+      "translation_zh": "@alin_zone 免Root装个APK就能跑？",
+      "translation_status": "source_chinese",
+      "author_name": "Kalin | AI builds & gotchas",
+      "author_handle": "KalinJunYAI",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2093660551486517248/uglSLEXN_normal.jpg",
+      "author_followers": 2393,
+      "author_following": 2061,
+      "author_bio": "用 AI 探索世界，做一个有态度的 AI 观察者。",
+      "author_location": null,
+      "author_joined_at": "2015-04-01T05:50:52Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 97
+      }
+    },
+    {
+      "post_id": "2116834258534924325",
+      "url": "https://x.com/hahalin729/status/2116834258534924325",
+      "created_at": "2026-11-01T10:06:30Z",
+      "text": "@alin_zone 一个APK装下整个引擎，手机跑agent的门槛又降了",
+      "original_text": "@alin_zone 一个APK装下整个引擎，手机跑agent的门槛又降了",
+      "translation_zh": "@alin_zone 一个APK装下整个引擎，手机跑agent的门槛又降了",
+      "translation_status": "source_chinese",
+      "author_name": "haha lin",
+      "author_handle": "hahalin729",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1882600280287854592/i6MN03ZM_normal.jpg",
+      "author_followers": 39,
+      "author_following": 42,
+      "author_bio": "AI Agent × 市场 × 代码\n🤖Muse | Grokbot | 💻ChatGPT Dots重度使用用户\n分享实践",
+      "author_location": null,
+      "author_joined_at": "2024-01-09T14:57:13Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 90
+      }
+    },
+    {
+      "post_id": "2116845355396706640",
+      "url": "https://x.com/0x0000001b/status/2116845355396706640",
+      "created_at": "2026-11-01T10:50:36Z",
+      "text": "@alin_zone 不能连接飞书，如果可以接入飞书就好了",
+      "original_text": "@alin_zone 不能连接飞书，如果可以接入飞书就好了",
+      "translation_zh": "@alin_zone 不能连接飞书，如果可以接入飞书就好了",
+      "translation_status": "source_chinese",
+      "author_name": "Me",
+      "author_handle": "0x0000001b",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1655974464302223360/Xy9IGJHw_normal.jpg",
+      "author_followers": 63,
+      "author_following": 367,
+      "author_bio": null,
+      "author_location": "中华人民共和国",
+      "author_joined_at": "2015-06-08T11:43:15Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 97
+      }
+    },
+    {
+      "post_id": "2116871625341825114",
+      "url": "https://x.com/tyf95271314/status/2116871625341825114",
+      "created_at": "2026-11-01T12:34:59Z",
+      "text": "@alin_zone 在用",
+      "original_text": "@alin_zone 在用",
+      "translation_zh": "@alin_zone 在用",
+      "translation_status": "translated",
+      "author_name": "Ethan Paine🎒",
+      "author_handle": "tyf95271314",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2086804252626735104/xnnGlf5n_normal.jpg",
+      "author_followers": 87,
+      "author_following": 235,
+      "author_bio": null,
+      "author_location": "London, England",
+      "author_joined_at": "2024-11-10T12:59:20Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 58
+      }
+    },
+    {
+      "post_id": "2116875638426718265",
+      "url": "https://x.com/andyzhang123199/status/2116875638426718265",
+      "created_at": "2026-11-01T12:50:56Z",
+      "text": "@alin_zone 国产 ROM 杀后台可凶了",
+      "original_text": "@alin_zone 国产 ROM 杀后台可凶了",
+      "translation_zh": "@alin_zone 国产 ROM 杀后台可凶了",
+      "translation_status": "source_chinese",
+      "author_name": "andy zhang",
+      "author_handle": "andyzhang123199",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2116919020838653952/IXA85vvq_normal.jpg",
+      "author_followers": 190,
+      "author_following": 304,
+      "author_bio": "BTC・AI Agent | 周期笔记\nAI 是本轮周期最好的礼物\n持续学习 AI、深耕加密\n希望站在周期浪潮里，拿到属于自己的结果。",
+      "author_location": null,
+      "author_joined_at": "2026-03-27T13:48:23Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 73
+      }
+    }
+  ]
+}

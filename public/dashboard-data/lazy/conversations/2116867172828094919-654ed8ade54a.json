@@ -1,0 +1,122 @@
+{
+  "conversation_id": "2116867172828094919",
+  "anchor_post_id": "2116867172828094919",
+  "summary_zh": "对话原本围绕 Agent 访问受限网站、视频和中文平台数据的痛点展开。收录帖将话题引向 Agent-Reach，介绍其用已登录专用浏览器和结构化抓取小红书/B站/YouTube等，并提醒别装 PyPI 同名包、部分功能需 API Key。后续多人认同登录墙问题，补充登录会话或人工粘贴方案，并询问小红书风控，整体偏正面且有技术传播价值。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2116867172828094919",
+      "url": "https://x.com/awe0_io/status/2116867172828094919",
+      "created_at": "2026-11-01T12:17:18Z",
+      "text": "你的 Agent 不是不会上网，是上不去你真正想看的网。\n\n你有没有遇到过这种情况\nAgent 能搜网页，却读不了小红书笔记\n查不了 X 上的账号动态\n听不懂 B站和 YouTube 视频里讲了什么\n搜中文平台也总是漏东西\n\n这不是 Agent 笨，是它够不着\n登录墙后面的功能，它没有账号\n视频里的内容，它没有耳朵\n中文平台的数据，它没有整理好的入口\n拿到手的东西，也不是能直接用的结构\n\nAgent-Reach 就是给它补上这只眼睛\n\n▸ 一句话装好，发给你的 Agent 就行，剩下的它自己做完\n▸ 装完说一句加上小红书，它就把那个渠道装好\n▸ 你说一句话，它就去查，不用你一个个平台手动翻\n▸ B站搜视频、YouTube 读字幕转文字、V2EX 读帖子和回复\n▸ 雪球看行情、GitHub 读仓库和 issue、小红书搜笔记看评论\n▸ 拿到的是整理好的结构化内容，不是复制粘贴的乱网页\n\n更关键的是，它不是多一个搜索框\n而是让 Agent 够得着它自己上不去的那部分互联网\n登录用它自己的专用浏览器，在后台运行，不弹窗\n它从不替你登录，也不要你的密码\n第一次用的网站会复制一份你 Chrome 里的登录，建议换成小号\n装的东西都在一个文件夹里，升级、退出、卸载都是一句话\n\n注意两点，别装错\nPyPI 上那个同名包不是这个项目，不要从 PyPI 装\n语音转文字那类功能要 Groq 或 OpenAI 的 Key，不是全程零成本\n\n10.7 万星，近万 Fork，MIT 协议，Python 写成\n用 Claude Code、Codex 这类 CLI Agent 的人，先收藏\n今晚就想试的，点开仓库按 README 发给你的 Agent 就行\n\nhttps://t.co/CRGyEwvnJ5",
+      "original_text": "你的 Agent 不是不会上网，是上不去你真正想看的网。\n\n你有没有遇到过这种情况\nAgent 能搜网页，却读不了小红书笔记\n查不了 X 上的账号动态\n听不懂 B站和 YouTube 视频里讲了什么\n搜中文平台也总是漏东西\n\n这不是 Agent 笨，是它够不着\n登录墙后面的功能，它没有账号\n视频里的内容，它没有耳朵\n中文平台的数据，它没有整理好的入口\n拿到手的东西，也不是能直接用的结构\n\nAgent-Reach 就是给它补上这只眼睛\n\n▸ 一句话装好，发给你的 Agent 就行，剩下的它自己做完\n▸ 装完说一句加上小红书，它就把那个渠道装好\n▸ 你说一句话，它就去查，不用你一个个平台手动翻\n▸ B站搜视频、YouTube 读字幕转文字、V2EX 读帖子和回复\n▸ 雪球看行情、GitHub 读仓库和 issue、小红书搜笔记看评论\n▸ 拿到的是整理好的结构化内容，不是复制粘贴的乱网页\n\n更关键的是，它不是多一个搜索框\n而是让 Agent 够得着它自己上不去的那部分互联网\n登录用它自己的专用浏览器，在后台运行，不弹窗\n它从不替你登录，也不要你的密码\n第一次用的网站会复制一份你 Chrome 里的登录，建议换成小号\n装的东西都在一个文件夹里，升级、退出、卸载都是一句话\n\n注意两点，别装错\nPyPI 上那个同名包不是这个项目，不要从 PyPI 装\n语音转文字那类功能要 Groq 或 OpenAI 的 Key，不是全程零成本\n\n10.7 万星，近万 Fork，MIT 协议，Python 写成\n用 Claude Code、Codex 这类 CLI Agent 的人，先收藏\n今晚就想试的，点开仓库按 README 发给你的 Agent 就行\n\nhttps://t.co/CRGyEwvnJ5",
+      "translation_zh": "你的 Agent 不是不会上网，是上不去你真正想看的网。\n\n你有没有遇到过这种情况\nAgent 能搜网页，却读不了小红书笔记\n查不了 X 上的账号动态\n听不懂 B站和 YouTube 视频里讲了什么\n搜中文平台也总是漏东西\n\n这不是 Agent 笨，是它够不着\n登录墙后面的功能，它没有账号\n视频里的内容，它没有耳朵\n中文平台的数据，它没有整理好的入口\n拿到手的东西，也不是能直接用的结构\n\nAgent-Reach 就是给它补上这只眼睛\n\n▸ 一句话装好，发给你的 Agent 就行，剩下的它自己做完\n▸ 装完说一句加上小红书，它就把那个渠道装好\n▸ 你说一句话，它就去查，不用你一个个平台手动翻\n▸ B站搜视频、YouTube 读字幕转文字、V2EX 读帖子和回复\n▸ 雪球看行情、GitHub 读仓库和 issue、小红书搜笔记看评论\n▸ 拿到的是整理好的结构化内容，不是复制粘贴的乱网页\n\n更关键的是，它不是多一个搜索框\n而是让 Agent 够得着它自己上不去的那部分互联网\n登录用它自己的专用浏览器，在后台运行，不弹窗\n它从不替你登录，也不要你的密码\n第一次用的网站会复制一份你 Chrome 里的登录，建议换成小号\n装的东西都在一个文件夹里，升级、退出、卸载都是一句话\n\n注意两点，别装错\nPyPI 上那个同名包不是这个项目，不要从 PyPI 装\n语音转文字那类功能要 Groq 或 OpenAI 的 Key，不是全程零成本\n\n10.7 万星，近万 Fork，MIT 协议，Python 写成\n用 Claude Code、Codex 这类 CLI Agent 的人，先收藏\n今晚就想试的，点开仓库按 README 发给你的 Agent 就行\n\nhttps://t.co/CRGyEwvnJ5",
+      "translation_status": "source_chinese",
+      "author_name": "awe0",
+      "author_handle": "awe0_io",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2108410049089445888/4-IZVtrg_normal.jpg",
+      "author_followers": 5139,
+      "author_following": 3104,
+      "author_bio": "CS in progress | AI Agent / LLM / 自托管 | 博客",
+      "author_location": null,
+      "author_joined_at": "2026-06-13T08:12:26Z",
+      "author_verified": false,
+      "links": [
+        "http://github.com/Panniantong/Agent-Reach"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 10,
+        "reposts": 2,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 7,
+        "views": 774
+      }
+    },
+    {
+      "post_id": "2116870944786665728",
+      "url": "https://x.com/sisiliu517/status/2116870944786665728",
+      "created_at": "2026-11-01T12:32:17Z",
+      "text": "@awe0_io 赞成。登录墙别硬爬。给 Agent 挂已登录浏览器，或先导出再喂，别指望裸搜。",
+      "original_text": "@awe0_io 赞成。登录墙别硬爬。给 Agent 挂已登录浏览器，或先导出再喂，别指望裸搜。",
+      "translation_zh": "@awe0_io 赞成。登录墙别硬爬。给 Agent 挂已登录浏览器，或先导出再喂，别指望裸搜。",
+      "translation_status": "source_chinese",
+      "author_name": "siyuan liu | AI编程实践",
+      "author_handle": "sisiliu517",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2110672971601784832/sz95X4s-_normal.jpg",
+      "author_followers": 115,
+      "author_following": 184,
+      "author_bio": "全栈开发者，每天用 Cursor、Claude Code、Codex 写真实业务代码。分享 AI 编程实战、工具对比和最新 AI 动态。🤖 AI coding in production.",
+      "author_location": null,
+      "author_joined_at": "2026-05-12T23:39:49Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 29
+      }
+    },
+    {
+      "post_id": "2116871301969383500",
+      "url": "https://x.com/Choutapm/status/2116871301969383500",
+      "created_at": "2026-11-01T12:33:42Z",
+      "text": "@awe0_io 对，很多Agent 不会搜其实是没账号、没登录。\n\n我现在默认公开网页交给它；小红书 X 登录墙后面的，人粘关键段落进去，或者接自己的登录会话。别指望它裸连一切。",
+      "original_text": "@awe0_io 对，很多Agent 不会搜其实是没账号、没登录。\n\n我现在默认公开网页交给它；小红书 X 登录墙后面的，人粘关键段落进去，或者接自己的登录会话。别指望它裸连一切。",
+      "translation_zh": "@awe0_io 对，很多Agent 不会搜其实是没账号、没登录。\n\n我现在默认公开网页交给它；小红书 X 登录墙后面的，人粘关键段落进去，或者接自己的登录会话。别指望它裸连一切。",
+      "translation_status": "source_chinese",
+      "author_name": "Chou",
+      "author_handle": "Choutapm",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2115749888264908800/xeZUUa9h_normal.jpg",
+      "author_followers": 141,
+      "author_following": 208,
+      "author_bio": "Notes on AI agents, what breaks, and the news that moves the room.",
+      "author_location": null,
+      "author_joined_at": "2026-09-30T12:56:08Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 11
+      }
+    },
+    {
+      "post_id": "2116990163545174253",
+      "url": "https://x.com/ReignSwords/status/2116990163545174253",
+      "created_at": "2026-11-01T20:26:01Z",
+      "text": "@awe0_io 这句“不是 Agent 笨，是它够不着”说到根上了。之前让 Agent 帮我扒小红书测评，它折腾半天返回一堆 404，问题根本不在模型，在它手里没账号。好奇问一句，挂登录会话这种方案，小红书那边的风控扛得住吗？",
+      "original_text": "@awe0_io 这句“不是 Agent 笨，是它够不着”说到根上了。之前让 Agent 帮我扒小红书测评，它折腾半天返回一堆 404，问题根本不在模型，在它手里没账号。好奇问一句，挂登录会话这种方案，小红书那边的风控扛得住吗？",
+      "translation_zh": "@awe0_io 这句“不是 Agent 笨，是它够不着”说到根上了。之前让 Agent 帮我扒小红书测评，它折腾半天返回一堆 404，问题根本不在模型，在它手里没账号。好奇问一句，挂登录会话这种方案，小红书那边的风控扛得住吗？",
+      "translation_status": "source_chinese",
+      "author_name": "ReignSwords",
+      "author_handle": "ReignSwords",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1581828174014550016/zeA4dqxI_normal.jpg",
+      "author_followers": 3438,
+      "author_following": 3935,
+      "author_bio": "被遗忘的人",
+      "author_location": null,
+      "author_joined_at": "2017-10-05T02:28:25Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 9
+      }
+    }
+  ]
+}

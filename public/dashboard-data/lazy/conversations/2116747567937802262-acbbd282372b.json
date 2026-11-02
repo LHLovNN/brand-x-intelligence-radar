@@ -1,0 +1,95 @@
+{
+  "conversation_id": "2116747567937802262",
+  "anchor_post_id": "2116747567937802262",
+  "summary_zh": "前文没有其他铺垫，收录帖围绕小红书起号视觉风格，介绍开源 ascii-art 可把照片、雕塑或手绘转点阵图/动画，强调 MIT 免费商用、依赖和新手门槛，未涉及配送。后续有人想试动画，也有人追问照片与手绘效果。互动具体正向，有助判断为真实兴趣反馈，传播价值偏创作者圈。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2116747567937802262",
+      "url": "https://x.com/ganfanren_ai/status/2116747567937802262",
+      "created_at": "2026-11-01T04:22:02Z",
+      "text": "小红书有很多暴力起号的小技巧，视觉风格很重要。\n\n想给账号做一套一眼就能认出来的视觉风格，这个开源项目可以直接拿来用。\n\nascii-art 是一个 Skill 加一套脚本，能把照片、雕塑或手绘转成点阵画：炭黑底配两种灰点，偶尔点缀一点深红。\n点阵还能做成无缝循环的小动画，比如人像随风散成尘，最后导出成 MP4。\n\n做号的人可以这么用：\n1. 头像、封面、片头统一用这种点阵风，读者刷到就知道是你\n2. 把产品图或人像做成\"点阵消散\"的短视频，当开场钩子\n3. MIT 协议，可以商用，能接\"头像或产品图做成点阵动画\"的小单，也能做成模板包卖\n\n上手门槛：\n需要 Python 3.10 以上，还要装 numpy、pillow、playwright 等依赖、Chromium 和 ffmpeg，纯新手可能卡在环境配置上\n不会配的，把 README 丢给 Codex 或 Claude Code，让它替你装好、跑完整个流程\n\n注意它只做这一种点阵风格，想要别的画风得自己改。\n\n项目地址：https://t.co/ObrVphBPWA\n开源、免费、可商用（MIT）\n\n#AIart #OpenSource #GitHub #ContentCreator https://t.co/LQcJVlQouZ",
+      "original_text": "小红书有很多暴力起号的小技巧，视觉风格很重要。\n\n想给账号做一套一眼就能认出来的视觉风格，这个开源项目可以直接拿来用。\n\nascii-art 是一个 Skill 加一套脚本，能把照片、雕塑或手绘转成点阵画：炭黑底配两种灰点，偶尔点缀一点深红。\n点阵还能做成无缝循环的小动画，比如人像随风散成尘，最后导出成 MP4。\n\n做号的人可以这么用：\n1. 头像、封面、片头统一用这种点阵风，读者刷到就知道是你\n2. 把产品图或人像做成\"点阵消散\"的短视频，当开场钩子\n3. MIT 协议，可以商用，能接\"头像或产品图做成点阵动画\"的小单，也能做成模板包卖\n\n上手门槛：\n需要 Python 3.10 以上，还要装 numpy、pillow、playwright 等依赖、Chromium 和 ffmpeg，纯新手可能卡在环境配置上\n不会配的，把 README 丢给 Codex 或 Claude Code，让它替你装好、跑完整个流程\n\n注意它只做这一种点阵风格，想要别的画风得自己改。\n\n项目地址：https://t.co/ObrVphBPWA\n开源、免费、可商用（MIT）\n\n#AIart #OpenSource #GitHub #ContentCreator https://t.co/LQcJVlQouZ",
+      "translation_zh": "小红书有很多暴力起号的小技巧，视觉风格很重要。\n\n想给账号做一套一眼就能认出来的视觉风格，这个开源项目可以直接拿来用。\n\nascii-art 是一个 Skill 加一套脚本，能把照片、雕塑或手绘转成点阵画：炭黑底配两种灰点，偶尔点缀一点深红。\n点阵还能做成无缝循环的小动画，比如人像随风散成尘，最后导出成 MP4。\n\n做号的人可以这么用：\n1. 头像、封面、片头统一用这种点阵风，读者刷到就知道是你\n2. 把产品图或人像做成\"点阵消散\"的短视频，当开场钩子\n3. MIT 协议，可以商用，能接\"头像或产品图做成点阵动画\"的小单，也能做成模板包卖\n\n上手门槛：\n需要 Python 3.10 以上，还要装 numpy、pillow、playwright 等依赖、Chromium 和 ffmpeg，纯新手可能卡在环境配置上\n不会配的，把 README 丢给 Codex 或 Claude Code，让它替你装好、跑完整个流程\n\n注意它只做这一种点阵风格，想要别的画风得自己改。\n\n项目地址：https://t.co/ObrVphBPWA\n开源、免费、可商用（MIT）\n\n#AIart #OpenSource #GitHub #ContentCreator https://t.co/LQcJVlQouZ",
+      "translation_status": "source_chinese",
+      "author_name": "饭饭猛猛炫、",
+      "author_handle": "ganfanren_ai",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2112791486794522624/W96smZs8_normal.png",
+      "author_followers": 67,
+      "author_following": 175,
+      "author_bio": "🚩拆解 100 个账号｜探索 AI 实用方向｜电子产品爽玩\n📍前互联网用户运营｜拼过小厂，熬过大厂\n👷‍♀️大健康｜运动营养 10 年+",
+      "author_location": "赛博空间",
+      "author_joined_at": "2026-04-11T09:10:22Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/0xSero/ascii-art",
+        "https://x.com/0xSero/status/2116252586961698900"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 6,
+        "reposts": 1,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 5,
+        "views": 447
+      }
+    },
+    {
+      "post_id": "2116750336681705829",
+      "url": "https://x.com/dustADD/status/2116750336681705829",
+      "created_at": "2026-11-01T04:33:02Z",
+      "text": "@ganfanren_ai 点阵散成尘的动画挺想试试",
+      "original_text": "@ganfanren_ai 点阵散成尘的动画挺想试试",
+      "translation_zh": "@ganfanren_ai 点阵散成尘的动画挺想试试",
+      "translation_status": "source_chinese",
+      "author_name": "dust",
+      "author_handle": "dustADD",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1910211479690780672/jv3l_Zol_normal.jpg",
+      "author_followers": 3460,
+      "author_following": 2213,
+      "author_bio": "做工具 · 做学习产品\n技术 / 产品 / 有意思的新东西",
+      "author_location": null,
+      "author_joined_at": "2023-11-30T02:09:49Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 19
+      }
+    },
+    {
+      "post_id": "2116753453204783120",
+      "url": "https://x.com/OnyxBuilds_666/status/2116753453204783120",
+      "created_at": "2026-11-01T04:45:25Z",
+      "text": "@ganfanren_ai 炭黑底配两种灰点再点缀一点深红，这个配色一听就很有辨识度。转出来的效果对照片和手绘哪个更好看呀？",
+      "original_text": "@ganfanren_ai 炭黑底配两种灰点再点缀一点深红，这个配色一听就很有辨识度。转出来的效果对照片和手绘哪个更好看呀？",
+      "translation_zh": "@ganfanren_ai 炭黑底配两种灰点再点缀一点深红，这个配色一听就很有辨识度。转出来的效果对照片和手绘哪个更好看呀？",
+      "translation_status": "source_chinese",
+      "author_name": "onyx the cat",
+      "author_handle": "OnyxBuilds_666",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2111478244818255872/-8DGEDDy_normal.jpg",
+      "author_followers": 1172,
+      "author_following": 1417,
+      "author_bio": "AI × Web3 × BTC × Agents\nLearning by building.\nExploring the world, creating my own path.\n🐈‍⬛ Just a beginner, building something real.🐈‍⬛🐈‍⬛🐈‍⬛",
+      "author_location": null,
+      "author_joined_at": "2026-10-14T10:34:32Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 15
+      }
+    }
+  ]
+}

@@ -1,0 +1,4478 @@
+{
+  "date": "2026-11-02",
+  "generated_at": "2026-11-02T01:03:18Z",
+  "generated_at_label": "2026-11-02 09:03 BJT",
+  "window_label": "2026-11-01 08:00 BJT - 2026-11-02 08:00 BJT",
+  "metrics": {
+    "effective_intelligence": 7,
+    "high_risk": 0,
+    "needs_review": 0,
+    "primary_volume": 29,
+    "primary_candidate_volume": 37,
+    "competitor_volume": 16,
+    "negative_share": 14
+  },
+  "source_status": {
+    "status": "normal",
+    "raw_posts_collected": 54,
+    "effective_posts": 45,
+    "brand_breakdown": {
+      "primary_candidates": 37,
+      "primary_effective": 29,
+      "competitor_candidates": 17,
+      "competitor_effective": 16
+    },
+    "translation": {
+      "counts": {
+        "translated": 41,
+        "source_chinese": 13
+      },
+      "missing_count": 0,
+      "fallback_original_count": 0
+    },
+    "notes": [
+      "Public social data collection is active. Review duplicate rate and relevance regularly.",
+      "Bookmarks are collected only when the data source provides them.",
+      "Quote counts are treated as public propagation signals.",
+      "Chinese translation coverage is complete."
+    ]
+  },
+  "collection_status": {
+    "status": "complete",
+    "warnings": [],
+    "translation": {
+      "configured": true,
+      "counts": {
+        "translated": 41,
+        "source_chinese": 13
+      },
+      "missing_count": 0,
+      "fallback_original_count": 0
+    }
+  },
+  "executive_summary": {
+    "headline": "今日最高优先级主品牌舆情为：Competitor comparison and substitution signals。",
+    "risk": "Overall risk is medium with IPS 71.",
+    "action": "建议动作：竞品对照观察。样例竞品基线讨论涉及 refund and delivery。"
+  },
+  "competitor": {
+    "brand": "competitor",
+    "volume": 16,
+    "sentiment": {
+      "negative": 2,
+      "neutral": 13,
+      "positive": 1
+    },
+    "top_terms": [
+      {
+        "term": "scam",
+        "count": 2
+      },
+      {
+        "term": "refund",
+        "count": 2
+      },
+      {
+        "term": "good",
+        "count": 1
+      }
+    ],
+    "top_posts": [
+      {
+        "post_id": "2116792386625916970",
+        "url": "https://x.com/Kiraaaa191423/status/2116792386625916970",
+        "text": "@shoptemu #temu #scam \nMy return has been with you for over 2 weeks and I still have no refund. This is unacceptable. Process my full refund immediately to my original payment method.",
+        "original_text": "@shoptemu #temu #scam \nMy return has been with you for over 2 weeks and I still have no refund. This is unacceptable. Process my full refund immediately to my original payment method.",
+        "links": [],
+        "translation_zh": "@shoptemu #temu #scam \n我的退货已经在你们那里超过 2 周了，我仍然没有收到退款。这是不可接受的。请立即将我的全额退款退回到我的原始支付方式。",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+        "author_name": "Kiraaaa",
+        "author_handle": "Kiraaaa191423",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2069525479007117312/2ZtRjafm_normal.jpg",
+        "author_followers": 3,
+        "author_following": 25,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2026-04-29T21:41:18Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T07:20:07Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116792386625916970",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 3,
+          "reposts": 3,
+          "replies": 1,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 15
+        },
+        "sentiment": "negative",
+        "matched_terms": [
+          "refund",
+          "scam",
+          "return"
+        ]
+      },
+      {
+        "post_id": "2116804825312612441",
+        "url": "https://x.com/Kiraaaa191423/status/2116804825312612441",
+        "text": "@shoptemu #scam #scam Temu my return was delivered over 2 weeks ago and still NO refund. Tracking proves you have it. Refund my money NOW or I dispute the charge. This is theft.",
+        "original_text": "@shoptemu #scam #scam Temu my return was delivered over 2 weeks ago and still NO refund. Tracking proves you have it. Refund my money NOW or I dispute the charge. This is theft.",
+        "links": [],
+        "translation_zh": "@shoptemu #scam #scam Temu，我的退货 2 周多前就已送达，但仍然没有退款。物流跟踪证明你们已经收到了。现在就把钱退给我，否则我会发起拒付。这是盗窃。",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+        "author_name": "Kiraaaa",
+        "author_handle": "Kiraaaa191423",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2069525479007117312/2ZtRjafm_normal.jpg",
+        "author_followers": 3,
+        "author_following": 25,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2026-04-29T21:41:18Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T08:09:33Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116804825312612441",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 2,
+          "reposts": 2,
+          "replies": 1,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 18
+        },
+        "sentiment": "negative",
+        "matched_terms": [
+          "refund",
+          "scam",
+          "return",
+          "tracking"
+        ]
+      },
+      {
+        "post_id": "2117011490221793500",
+        "url": "https://x.com/grok/status/2117011490221793500",
+        "text": "@bolaji73501 @EcomMachine In this dropshipping setup you never hold stock. When a customer buys from your store you immediately place the matching order on Temu (or the supplier) and enter the customer’s shipping address so the item goes straight to them. You just manage the storefront, ads, and order forwarding.",
+        "original_text": "@bolaji73501 @EcomMachine In this dropshipping setup you never hold stock. When a customer buys from your store you immediately place the matching order on Temu (or the supplier) and enter the customer’s shipping address so the item goes straight to them. You just manage the storefront, ads, and order forwarding.",
+        "links": [],
+        "translation_zh": "@bolaji73501 @EcomMachine 在这种 dropshipping 模式中，你从不持有库存。当顾客从你的店铺购买时，你立即在 Temu（或供应商）上下对应的订单，并输入顾客的收货地址，这样商品就会直接寄给他们。你只需管理店面、广告和订单转发。",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+        "author_name": "Grok",
+        "author_handle": "grok",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2057885623374290944/lmj0pawP_normal.jpg",
+        "author_followers": 9297690,
+        "author_following": 4,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2023-11-04T04:52:34Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T21:50:46Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116960760265896254",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 9
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2116954243001196560",
+        "url": "https://x.com/Angelaffta/status/2116954243001196560",
+        "text": "I don't know why are you guys sleeping on temu 😂. Temu has big discounts plus the don't have crazy import charges. And their discounts code actually works. \n\nUse code alf373051 on your next temu order you won't regret it.",
+        "original_text": "I don't know why are you guys sleeping on temu 😂. Temu has big discounts plus the don't have crazy import charges. And their discounts code actually works. \n\nUse code alf373051  on your next temu order you won't regret it.",
+        "links": [],
+        "translation_zh": "我不知道你们为什么都忽视 temu 😂。Temu 折扣很大，而且没有离谱的进口费用。他们的折扣码也真的能用。\n\n下次在 temu 下单时使用代码 alf373051，你不会后悔的。",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论价格、优惠或正向购物体验。",
+        "author_name": "Angela",
+        "author_handle": "Angelaffta",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2107763411962503168/9yfZoHSC_normal.jpg",
+        "author_followers": 10,
+        "author_following": 6,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2026-10-07T09:21:28Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T18:03:17Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116954243001196560",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 8
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2116942101258572068",
+        "url": "https://x.com/iamcomano/status/2116942101258572068",
+        "text": "🔥 Get ₦0 gifts on Temu!\nTap temu.to/k and search alq894008 in the Temu App.\nPlus, redeem als894008 for 30% off your order — with free returns within 90 days. 🛍️\n⚠️ Only for app users with qualifying orders. T&Cs apply.",
+        "original_text": "🔥 Get ₦0 gifts on Temu!\nTap https://t.co/ZL3dEdeqK4 and search alq894008 in the Temu App.\nPlus, redeem als894008 for 30% off your order — with free returns within 90 days. 🛍️\n⚠️ Only for app users with qualifying orders. T&amp;Cs apply. https://t.co/B6717r575b",
+        "links": [
+          "https://temu.to/k/eoxbennmjxx"
+        ],
+        "translation_zh": "🔥 在 Temu 领取 ₦0 礼品！\n点击 temu.to/k，并在 Temu App 中搜索 alq894008。\n另外，兑换 als894008 可享受订单 30% 折扣——90 天内免费退货。🛍️\n⚠️ 仅限符合条件订单的 app 用户。适用条款和条件。",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "Omano, Chijindu Friday",
+        "author_handle": "iamcomano",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1698756339281903616/-6cht2fl_normal.jpg",
+        "author_followers": 1328,
+        "author_following": 3385,
+        "author_bio": null,
+        "author_location": "Port Harcourt, Nigeria",
+        "author_joined_at": "2022-02-01T15:09:38Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T17:15:02Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116942101258572068",
+        "conversation_context": {},
+        "language": "en",
+        "media": [
+          {
+            "display_url": "pic.x.com/B6717r575b",
+            "expanded_url": "https://x.com/iamcomano/status/2116942101258572068/photo/1",
+            "ext_master_playlist_only": [],
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "ext_playlists": [],
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              }
+            },
+            "id_str": "2116942091213254657",
+            "indices": [
+              237,
+              260
+            ],
+            "media_key": "3_2116942091213254657",
+            "media_results": {
+              "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR1g452s1rABCgACHWDjoAOWESQAAA==",
+              "result": {
+                "__typename": "ApiMedia",
+                "id": "QXBpTWVkaWE6DAABCgABHWDjnazWsAEKAAIdYOOgA5YRJAAA",
+                "media_key": "3_2116942091213254657"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/media/HWDjnazWsAEPu8W.jpg",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 392,
+                  "w": 700,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 392,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 344,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 196,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 750,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 392,
+              "width": 750
+            },
+            "sizes": {
+              "large": {
+                "h": 392,
+                "w": 750
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/B6717r575b"
+          }
+        ],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 9
+        },
+        "sentiment": "neutral",
+        "matched_terms": [
+          "return"
+        ]
+      },
+      {
+        "post_id": "2116816316686332076",
+        "url": "https://x.com/jon180875/status/2116816316686332076",
+        "text": "✨ BLACK FRIDAY DEAL DROP! ✨\nScore £0 gifts on Temu by tapping temu.to/k and searching alt224754 in the app.\nThen redeem alt247825 and save 40% on your order — with free returns within 90 days! 🔥\n#TemuFinds #TemuDeals #BlackFriday",
+        "original_text": "✨ BLACK FRIDAY DEAL DROP! ✨\nScore £0 gifts on Temu by tapping https://t.co/IuaRFw6YZ5 and searching alt224754 in the app.\nThen redeem alt247825 and save 40% on your order — with free returns within 90 days! 🔥\n#TemuFinds #TemuDeals #BlackFriday",
+        "links": [
+          "https://temu.to/k/eg6qdjkn4d2"
+        ],
+        "translation_zh": "✨ BLACK FRIDAY 优惠来了！✨\n点击 temu.to/k 并在 app 中搜索 alt224754，即可在 Temu 领取 £0 礼品。\n然后兑换 alt247825，你的订单可省 40%——并享受 90 天内免费退货！🔥\n#TemuFinds #TemuDeals #BlackFriday",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "jon southwell",
+        "author_handle": "jon180875",
+        "author_avatar_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "author_followers": 1,
+        "author_following": 3,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2013-11-21T04:38:23Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T08:55:13Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116816316686332076",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 11
+        },
+        "sentiment": "neutral",
+        "matched_terms": [
+          "return"
+        ]
+      },
+      {
+        "post_id": "2116885520764547581",
+        "url": "https://x.com/YomiAdeyina/status/2116885520764547581",
+        "text": "✨ DEAL DROP! ✨\nScore ₦0 gifts on Temu by tapping temu.to/k and searching alq506696 in the app.\nThen redeem aly560488 and save 30% on your order — with free returns within 90 days! 🔥\n⚠️ Only for app users with qualifying orders. T&Cs apply.",
+        "original_text": "✨ DEAL DROP! ✨\nScore ₦0 gifts on Temu by tapping https://t.co/q9T9T39rjH and searching alq506696 in the app.\nThen redeem aly560488 and save 30% on your order — with free returns within 90 days! 🔥\n⚠️ Only for app users with qualifying orders. T&amp;Cs apply. https://t.co/iF1LKjfADh",
+        "links": [
+          "https://temu.to/k/e67r93rfsqr"
+        ],
+        "translation_zh": "✨ 优惠来啦！✨\n在 Temu 上点击 temu.to/k，并在 App 中搜索 alq506696，即可领取 ₦0 礼品。\n然后兑换 aly560488，下单立省 30%——还可享受 90 天内免费退货！🔥\n⚠️ 仅限符合条件订单的 App 用户。适用条款与条件。",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "yomi adeyina",
+        "author_handle": "YomiAdeyina",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1894778719060766720/pw1vdZXk_normal.jpg",
+        "author_followers": 167,
+        "author_following": 866,
+        "author_bio": null,
+        "author_location": "Lagos, Nigeria",
+        "author_joined_at": "2012-07-19T15:45:03Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T13:30:12Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116885520764547581",
+        "conversation_context": {},
+        "language": "en",
+        "media": [
+          {
+            "display_url": "pic.x.com/iF1LKjfADh",
+            "expanded_url": "https://x.com/YomiAdeyina/status/2116885520764547581/photo/1",
+            "ext_master_playlist_only": [],
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "ext_playlists": [],
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              }
+            },
+            "id_str": "2116885509586735104",
+            "indices": [
+              258,
+              281
+            ],
+            "media_key": "3_2116885509586735104",
+            "media_results": {
+              "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAR1gsCe9FtAACgACHWCwKldWsf0AAA==",
+              "result": {
+                "__typename": "ApiMedia",
+                "id": "QXBpTWVkaWE6DAABCgABHWCwJ70W0AAKAAIdYLAqV1ax/QAA",
+                "media_key": "3_2116885509586735104"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/media/HWCwJ70W0AA6T_E.jpg",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 392,
+                  "w": 700,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 392,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 344,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 196,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 750,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 392,
+              "width": 750
+            },
+            "sizes": {
+              "large": {
+                "h": 392,
+                "w": 750
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/iF1LKjfADh"
+          }
+        ],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 44
+        },
+        "sentiment": "neutral",
+        "matched_terms": [
+          "return"
+        ]
+      },
+      {
+        "post_id": "2117018922243223594",
+        "url": "https://x.com/Timmyl0/status/2117018922243223594",
+        "text": "@TheDrugMoney Sort of not really, with temu you might get the same thing you see on amazon or you may get an inferior version.\n\nThe catch is if you buy trash from Amazon you can at least return it usually free of charge temu charges usually more than what the item is worth to return.",
+        "original_text": "@TheDrugMoney Sort of not really, with temu you might get the same thing you see on amazon or you may get an inferior version.\n\nThe catch is if you buy trash from Amazon you can at least return it usually free of charge temu charges usually more than what the item is worth to return.",
+        "links": [],
+        "translation_zh": "@TheDrugMoney 算是也不完全是，用 temu 你可能会买到和你在 amazon 上看到的一样的东西，也可能会买到劣质版本。\n\n问题在于，如果你从 Amazon 买到垃圾货，通常至少可以免费退货；temu 退货通常收的费用比商品本身还贵。",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "Tim Raw",
+        "author_handle": "Timmyl0",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/246609861/IMG_0083_normal.jpg",
+        "author_followers": 57,
+        "author_following": 39,
+        "author_bio": null,
+        "author_location": "London, Ontario Canada",
+        "author_joined_at": "2009-06-02T14:51:21Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T22:20:18Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116911748087447593",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 34
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2117011204749111594",
+        "url": "https://x.com/MDR227185150701/status/2117011204749111594",
+        "text": "@TheDrugMoney The catch is the shipping time it takes significantly longer. If waiting a few weeks is not a deal breaker for you, yes, TEMU has the same crap way cheaper.",
+        "original_text": "@TheDrugMoney The catch is the shipping time it takes significantly longer. If waiting a few weeks is not a deal breaker for you, yes, TEMU has the same crap way cheaper.",
+        "links": [],
+        "translation_zh": "@TheDrugMoney 问题在于配送时间，要久得多。如果等上几周对你来说不是不能接受，那么是的，TEMU 上同样的破玩意儿便宜得多。",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+        "author_name": "Mila Direy-Drovovich",
+        "author_handle": "MDR227185150701",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2116239175997337600/2tcD6uMb_normal.jpg",
+        "author_followers": 50,
+        "author_following": 35,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2024-11-06T09:00:40Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T21:49:38Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116911748087447593",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 50
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2116970421736378809",
+        "url": "https://x.com/abgrammie/status/2116970421736378809",
+        "text": "Wait… have you checked Temu’s Black Friday finds yet?\nIf you’re new to the Temu App, take a look at the available new-user offers here: temu.to/k\nOr search alq705289 in the app to find them.\nWorth a peek before you miss the deals!\n#TemuFinds #BlackFriday",
+        "original_text": "Wait… have you checked Temu’s Black Friday finds yet?\nIf you’re new to the Temu App, take a look at the available new-user offers here: https://t.co/K5NOJxgZxd\nOr search alq705289 in the app to find them.\nWorth a peek before you miss the deals!\n#TemuFinds #BlackFriday",
+        "links": [
+          "https://temu.to/k/pm3p4dqxsyj"
+        ],
+        "translation_zh": "等等……你看过 Temu 的 Black Friday 好物了吗？\n如果你是 Temu App 新用户，可以在这里看看可用的新用户优惠：temu.to/k\n或者在 App 中搜索 alq705289 来找到它们。\n在错过这些优惠之前，值得看一眼！\n#TemuFinds #BlackFriday",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "Carla Dunn",
+        "author_handle": "abgrammie",
+        "author_avatar_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "author_followers": 27,
+        "author_following": 58,
+        "author_bio": null,
+        "author_location": "Tulsa, OK",
+        "author_joined_at": "2012-09-30T00:35:44Z",
+        "author_verified": false,
+        "created_at": "2026-11-01T19:07:34Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116970421736378809",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 2
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      }
+    ],
+    "anomalies": []
+  },
+  "featured_items": [
+    {
+      "id": "featured-primary-cluster-001",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @littleuphorians",
+      "author_name": "𝐠𝐨𝐥𝐝𝐞𝐧 𝐥𝐢𝐧𝐞 —",
+      "author_handle": "littleuphorians",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1945308265694261248/Y4r7tIOU_normal.jpg",
+      "author_followers": 7259,
+      "author_following": 934,
+      "author_bio": null,
+      "author_location": "no mutual interest dni",
+      "author_joined_at": "2017-12-11T01:35:45Z",
+      "author_verified": false,
+      "post_url": "https://x.com/littleuphorians/status/2116716474480123909",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116716474480123909",
+      "conversation_context": {},
+      "created_at": "2026-11-01T02:18:28Z",
+      "language": "en",
+      "title": "Channel, partner and campaign activity",
+      "display_title": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
+      "original_text": "[01.11.2026] GUERLAIN Weibo Update\n\nJoin us on November 2nd at 7 PM for live stream from Guerlain's official flagship store on https://t.co/HN237c8fgI. Follow Guerlain brand ambassador Ayden and Elio to experience the romance of blue twilight and embark on a new chapter.\n\nGuerlain invites you to collect fragments of the \"Blue\" design, explore the exceptional revitalizing power of the Abeille Royale collection, and capture the delightful moments of the Blue Collection! \n\nParticipate in the live stream's interactive surprises and win autographed gifts Ayden & Elio! Pre-register now via the live stream link to join this blue-themed rendezvous. We'll see you there! \n\n#政瞳 #aylio",
+      "translation_zh": "[01.11.2026] GUERLAIN 微博更新\n\n11 月 2 日晚上 7 点，加入我们在 JD.com 上 Guerlain 官方旗舰店的直播。跟随 Guerlain 品牌大使 Ayden 和 Elio，一同感受蓝色暮光的浪漫，开启全新篇章。\n\nGuerlain 邀请你收集“Blue”设计碎片，探索 Abeille Royale 系列卓越的焕活力量，并捕捉 Blue Collection 的愉悦时刻！\n\n参与直播互动惊喜，赢取 Ayden & Elio 的签名礼物！现在通过直播链接预约，加入这场蓝色主题之约。我们到时见！\n\n#政瞳 #aylio",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
+      "links": [
+        "http://JD.com"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+          "expanded_url": "https://x.com/littleuphorians/status/2116716474480123909/photo/1"
+        }
+      ],
+      "score": {
+        "ips": 70,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 54,
+        "current_impact": 60,
+        "future_potential": 70,
+        "credibility": 76,
+        "business_impact": 58,
+        "urgency": 51,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "渠道观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "channel_expansion"
+        ],
+        "special_flags": [],
+        "explanation": "渠道、合作或活动信息体现市场扩展动向，建议作为背景信号观察。综合优先级 70。"
+      },
+      "score_value": 70,
+      "score_label": "IPS",
+      "tags": [
+        "channel_activity",
+        "channel_expansion"
+      ],
+      "metrics": {
+        "total_likes": 683,
+        "total_reposts": 184,
+        "total_replies": 4,
+        "total_quotes": 6,
+        "total_bookmarks": 25,
+        "total_views": 12252,
+        "max_author_followers": 8705,
+        "public_interactions": 877
+      },
+      "post_metrics": {
+        "likes": 158,
+        "reposts": 40,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 6,
+        "views": 1721
+      },
+      "source_count": 9,
+      "related_sources": 8,
+      "selected_reason": "内容指向渠道合作与活动：内容涉及渠道接入、商家合作、直播活动或站点更新；转引信号相对突出，当前 198 次赞评转引、1721 浏览，同日相似讨论 9 条；研判：可作为市场扩展和货架露出的背景信号。",
+      "recommended_action": "渠道观察",
+      "href": "",
+      "external_href": "https://x.com/littleuphorians/status/2116716474480123909",
+      "sentiment": "neutral",
+      "level": "medium"
+    },
+    {
+      "id": "featured-primary-cluster-005",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @Vanilleotter",
+      "author_name": "~ 🫧 Gwendolyn 💧~",
+      "author_handle": "Vanilleotter",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2114990606850162689/qpYfiO3I_normal.jpg",
+      "author_followers": 870,
+      "author_following": 976,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2012-11-22T07:54:12Z",
+      "author_verified": false,
+      "post_url": "https://x.com/Vanilleotter/status/2116930913812578367",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116930913812578367",
+      "conversation_context": {},
+      "created_at": "2026-11-01T16:30:35Z",
+      "language": "de",
+      "title": "General 主品牌 overseas shopping discussion",
+      "display_title": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "original_text": "Ich hab das erste mal bei Joybuy gekauft, das soll Morgen schon da sein O.O\nHab mir Kewpie Mayo, Sojasoße und sowas geholt.\nBin mal total gespannt, hat da schonmal jemand bestellt?",
+      "translation_zh": "我第一次在 Joybuy 买东西，据说明天就能到了 O.O\n我买了 Kewpie 蛋黄酱、酱油之类的东西。\n我真的挺期待的，有人已经在那里下过单吗？",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "links": [],
+      "media": [],
+      "score": {
+        "ips": 61,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 40,
+        "current_impact": 38,
+        "future_potential": 60,
+        "credibility": 86,
+        "business_impact": 42,
+        "urgency": 41,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "观察",
+        "risk_labels": [],
+        "opportunity_labels": [],
+        "special_flags": [],
+        "explanation": "该情报与 主品牌 海外购物相关，当前综合优先级为 61。"
+      },
+      "score_value": 61,
+      "score_label": "IPS",
+      "tags": [
+        "general_observation"
+      ],
+      "metrics": {
+        "total_likes": 53,
+        "total_reposts": 18,
+        "total_replies": 18,
+        "total_quotes": 2,
+        "total_bookmarks": 8,
+        "total_views": 9845,
+        "max_author_followers": 11081,
+        "public_interactions": 91
+      },
+      "post_metrics": {
+        "likes": 12,
+        "reposts": 0,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 2,
+        "views": 1764
+      },
+      "source_count": 14,
+      "related_sources": 13,
+      "selected_reason": "内容指向购买意向与日常购物：用户表达下单、加购或尝试购买意向；评论参与高于普通样本，当前 17 次赞评转引、1764 浏览，同日相似讨论 14 条；研判：可用于判断主品牌是否被真实用户纳入购买选择。",
+      "recommended_action": "观察",
+      "href": "",
+      "external_href": "https://x.com/Vanilleotter/status/2116930913812578367",
+      "sentiment": "neutral",
+      "level": "medium"
+    },
+    {
+      "id": "featured-primary-cluster-002",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @AylioChineseFC",
+      "author_name": "AylioOfficialChineseFanclub",
+      "author_handle": "AylioChineseFC",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2078150255053332480/LeQNsuwe_normal.jpg",
+      "author_followers": 3476,
+      "author_following": 17,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-07-17T16:09:00Z",
+      "author_verified": false,
+      "post_url": "https://x.com/AylioChineseFC/status/2116826929512796345",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116826929512796345",
+      "conversation_context": {},
+      "created_at": "2026-11-01T09:37:23Z",
+      "language": "en",
+      "title": "Corporate, market and strategy discussion",
+      "display_title": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "original_text": "【IMPORTANT UPDATE】☀🍊\n\nGuerlain × Aylio\nOfficial Details and Purchase Guide\n\nhttps://t.co/QeRs1BsN4k🔍 [Guerlain Official Store]\n✈️ International shipping available to Australia, Singapore, Japan, Thailand, South Korea, and more.\n💴Credit card ＆ Debit card ＆ WeChat Pay accepted\n\n🧡Aylio Exclusive Gifts Available from 10:00 Nov 1\n✨ Ranking Events\nEvent 1 | Invite friends to sign up as members\nTime: 10:00 Nov 1 — 23:59 Nov 13\nTOP1–2: Dual autograph X 1\nTOP3–9: Full set photocards X1\nTOP10–20: Abeille Royale sample set X 1\n\nEvent 2 | Purchase ranking to win signed aylio polaroids\nTime: 19:00 Nov 2 — 23:59 Nov 4\nTOP1: Polaroid X 1+ full-size Orchid Eye Cream\nTOP2: polaroid X 1+ full-size Orchid Cream\nTOP3: Polaroid X 1+ full-size Rose Hand Cream\nTOP4–10: Polaroid X 1\n\n🧡Aylio Live Stream Extra\nShare & comment in live chat to win photocards and voice enamel pins\n\n🧡Aylio Picks Gifts Listed（Beijing Time）\n⏰Early access: 10:00 Nov 1 — 18:59 Nov 2\n🗓️Live sale: 19:00 Nov 2 — 23:59 Nov 2\n\n🎁Abeille Royale Youth Watery Oil ¥1190\nPhotocards X 3 (10,000 limit)\n🎁L'Heure Bleue Perfume ¥1230\nPhotocards X 3(10,000 limit)\n🎁Abeille Royale Lotion ¥1250\n Photocards X 3 (10,000 limit)\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\nPhotocards X 3 (10,000 limit) + 1 brooch with 3 brooch charms (800 limit)\n🎁Hydrating Repair Set ¥2440\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n🎁Classic Repair Trio ¥3805\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
+      "translation_zh": "【重要更新】☀🍊\n\nGuerlain × Aylio\n官方详情与购买指南\n\nJD.com【Guerlain 官方店】\n✈️ 可国际配送至澳大利亚、新加坡、日本、泰国、韩国等地。\n💴支持信用卡、借记卡和 WeChat Pay\n\n🧡Aylio 专属赠品将于 11 月 1 日 10:00 起开放\n✨ 排名活动\n活动 1 | 邀请好友注册成为会员\n时间：11 月 1 日 10:00 — 11 月 13 日 23:59\nTOP1–2：双人签名 X 1\nTOP3–9：全套小卡 X1\nTOP10–20：Abeille Royale 试用装套组 X 1\n\n活动 2 | 购买排名赢取签名 aylio 拍立得\n时间：11 月 2 日 19:00 — 11 月 4 日 23:59\nTOP1：拍立得 X 1+ 正装 Orchid Eye Cream\nTOP2：拍立得 X 1+ 正装 Orchid Cream\nTOP3：拍立得 X 1+ 正装 Rose Hand Cream\nTOP4–10：拍立得 X 1\n\n🧡Aylio 直播额外福利\n在直播聊天中分享并评论，有机会赢取小卡和语音珐琅徽章\n\n🧡Aylio Picks 赠品上架（北京时间）\n⏰抢先购：11 月 1 日 10:00 — 11 月 2 日 18:59\n🗓️直播销售：11 月 2 日 19:00 — 11 月 2 日 23:59\n\n🎁Abeille Royale Youth Watery Oil ¥1190\n小卡 X 3（限量 10,000）\n🎁L'Heure Bleue Perfume ¥1230\n小卡 X 3（限量 10,000）\n🎁Abeille Royale Lotion ¥1250\n 小卡 X 3（限量 10,000）\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\n小卡 X 3（限量 10,000）+ 1 枚胸针，附 3 个胸针挂饰（限量 800）\n🎁Hydrating Repair Set ¥2440\n小卡 X 3（限量 10,000）+ 语音珐琅徽章（限量 3,000）\n🎁Classic Repair Trio ¥3805\n小卡 X 3（限量 10,000）+ 语音珐琅徽章（限量 3,000）\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "links": [
+        "http://JD.com"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+          "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+          "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+          "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+        }
+      ],
+      "score": {
+        "ips": 52,
+        "level": "low",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 48,
+        "current_impact": 41,
+        "future_potential": 44,
+        "credibility": 58,
+        "business_impact": 56,
+        "urgency": 42,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "背景观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "corporate_context"
+        ],
+        "special_flags": [],
+        "explanation": "公司、资本市场或战略背景信息对品牌心智有间接影响，当前综合优先级为 52。"
+      },
+      "score_value": 52,
+      "score_label": "IPS",
+      "tags": [
+        "company_market",
+        "corporate_context"
+      ],
+      "metrics": {
+        "total_likes": 120,
+        "total_reposts": 51,
+        "total_replies": 0,
+        "total_quotes": 1,
+        "total_bookmarks": 4,
+        "total_views": 2238,
+        "max_author_followers": 3476,
+        "public_interactions": 172
+      },
+      "post_metrics": {
+        "likes": 120,
+        "reposts": 51,
+        "replies": 0,
+        "quotes": 1,
+        "bookmarks": 4,
+        "views": 2238
+      },
+      "source_count": 1,
+      "related_sources": 0,
+      "selected_reason": "内容指向公司/资本市场信息：内容涉及公司战略、资本市场、行业报告或管理层动态；转引信号相对突出，当前 172 次赞评转引、2238 浏览；研判：对品牌心智有间接影响，应与消费者体验类舆情分开阅读。",
+      "recommended_action": "背景观察",
+      "href": "",
+      "external_href": "https://x.com/AylioChineseFC/status/2116826929512796345",
+      "sentiment": "neutral",
+      "level": "low"
+    },
+    {
+      "id": "featured-primary-cluster-003",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @lesnums",
+      "author_name": "Les Numériques",
+      "author_handle": "lesnums",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1635603257870434306/4aZrFj1Y_normal.jpg",
+      "author_followers": 153516,
+      "author_following": 401,
+      "author_bio": null,
+      "author_location": "Dans nos labos 🔬",
+      "author_joined_at": "2012-02-13T16:31:24Z",
+      "author_verified": false,
+      "post_url": "https://x.com/lesnums/status/2116870336213893324",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116870336213893324",
+      "conversation_context": {},
+      "created_at": "2026-11-01T12:29:52Z",
+      "language": "fr",
+      "title": "Competitor comparison and substitution signals",
+      "display_title": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "original_text": "🔗 https://t.co/ZsnHw9nXmV\nLe smartphone Samsung Galaxy A57 5G s'affiche aujourd'hui à 369,00 € chez Joybuy. C'est actuellement le meilleur rapport qualité / prix de notre comparatif, selon les 239 modèles testés dans notre laboratoire. https://t.co/ZsnHw9nXmV",
+      "translation_zh": "🔗 l.lesnumeriques.com/biD\nSamsung Galaxy A57 5G 智能手机今天在 Joybuy 上的价格为 369,00 €。根据我们实验室测试的 239 款机型，它目前是我们评测对比中性价比最高的一款。l.lesnumeriques.com/biD",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "links": [
+        "https://l.lesnumeriques.com/biD",
+        "https://l.lesnumeriques.com/biD"
+      ],
+      "media": [],
+      "score": {
+        "ips": 71,
+        "level": "medium",
+        "brand_relevance": 90,
+        "risk_or_opportunity_intensity": 68,
+        "current_impact": 50,
+        "future_potential": 73,
+        "credibility": 86,
+        "business_impact": 64,
+        "urgency": 57,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "竞品对照观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "competitive_position"
+        ],
+        "special_flags": [
+          "high_influence_account"
+        ],
+        "explanation": "用户将主品牌与其他平台对照，适合观察价格、配送或品类竞争位置。综合优先级 71。"
+      },
+      "score_value": 71,
+      "score_label": "IPS",
+      "tags": [
+        "competitor_comparison",
+        "competitive_position",
+        "高影响力账号"
+      ],
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 807,
+        "max_author_followers": 153516,
+        "public_interactions": 0
+      },
+      "post_metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 641
+      },
+      "source_count": 2,
+      "related_sources": 1,
+      "selected_reason": "内容指向竞品对照与替代选择：用户把主品牌与其他平台进行价格、配送或品类对比；作者具备较高影响力（153516 followers），当前 0 次赞评转引、641 浏览，同日相似讨论 2 条；研判：适合观察主品牌在海外用户购物选择中的竞争位置。",
+      "recommended_action": "竞品对照观察",
+      "href": "",
+      "external_href": "https://x.com/lesnums/status/2116870336213893324",
+      "sentiment": "neutral",
+      "level": "medium"
+    },
+    {
+      "id": "featured-primary-cluster-006",
+      "brand": "primary",
+      "cluster_id": "primary-signal-006",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @Alice_changg",
+      "author_name": "رادیو جیبی",
+      "author_handle": "Alice_changg",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1966529078220976129/8tibQOBE_normal.jpg",
+      "author_followers": 21,
+      "author_following": 89,
+      "author_bio": null,
+      "author_location": "Berlin, Germany",
+      "author_joined_at": "2024-02-20T13:24:49Z",
+      "author_verified": false,
+      "post_url": "https://x.com/Alice_changg/status/2116908051622199370",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116908051622199370",
+      "conversation_context": {},
+      "created_at": "2026-11-01T14:59:44Z",
+      "language": "fa",
+      "title": "Positive shopping experience around 主品牌",
+      "display_title": "相关讨论体现价格、配送或购物体验上的正向口碑。",
+      "original_text": "این ژل آبرسان ژاپنی Naturie رو به توصیه یه دوست ژاپنیم گرفتم و واقعاً دوستش دارم. بین آبرسان‌هایی که اخیراً امتحان کردم، این یکی هم خیلی سبکه، هم خوب آبرسانی می‌کنه و هم قیمتش عالیه.\n\nاگه هلند یا آلمانین توی Joybuy هم پیداش می‌کنین :) https://t.co/tQOyC7GVpO",
+      "translation_zh": "我是在一位日本朋友的推荐下买了这款日本 Naturie 保湿凝胶，真的很喜欢。最近试过的保湿产品里，这款既非常轻薄，补水效果也很好，而且价格也很棒。\n\n如果你在荷兰或德国，在 Joybuy 上也能找到它 :)",
+      "translation_status": "translated",
+      "summary_zh": "相关讨论体现价格、配送或购物体验上的正向口碑。",
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+          "expanded_url": "https://x.com/Alice_changg/status/2116908051622199370/photo/1"
+        }
+      ],
+      "score": {
+        "ips": 53,
+        "level": "low",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 62,
+        "current_impact": 25,
+        "future_potential": 44,
+        "credibility": 58,
+        "business_impact": 60,
+        "urgency": 50,
+        "sentiment": "positive",
+        "confidence": 0.81,
+        "recommended_action": "传播机会",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "positive_value",
+          "delivery_strength"
+        ],
+        "special_flags": [],
+        "explanation": "该情报偏正向机会，体现价格、配送或促销优势，可用于观察传播借势。综合优先级 53。"
+      },
+      "score_value": 53,
+      "score_label": "IPS",
+      "tags": [
+        "positive_experience",
+        "positive_value",
+        "delivery_strength"
+      ],
+      "metrics": {
+        "total_likes": 3,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 3,
+        "total_views": 53,
+        "max_author_followers": 21,
+        "public_interactions": 3
+      },
+      "post_metrics": {
+        "likes": 3,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 3,
+        "views": 53
+      },
+      "source_count": 1,
+      "related_sources": 0,
+      "selected_reason": "内容指向正向购物体验：用户主动提到价格、配送或购物体验上的正向感受；当前 3 次赞评转引、53 浏览；研判：可作为主品牌海外口碑和履约卖点的证据样本。",
+      "recommended_action": "传播机会",
+      "href": "",
+      "external_href": "https://x.com/Alice_changg/status/2116908051622199370",
+      "sentiment": "positive",
+      "level": "low"
+    },
+    {
+      "id": "featured-competitor-2116792386625916970",
+      "brand": "competitor",
+      "cluster_id": "",
+      "source_type": "竞品异常",
+      "source_name": "样例竞品 · @Kiraaaa191423",
+      "author_name": "Kiraaaa",
+      "author_handle": "Kiraaaa191423",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2069525479007117312/2ZtRjafm_normal.jpg",
+      "author_followers": 3,
+      "author_following": 25,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-04-29T21:41:18Z",
+      "author_verified": false,
+      "post_url": "https://x.com/Kiraaaa191423/status/2116792386625916970",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116792386625916970",
+      "conversation_context": {
+        "posts": []
+      },
+      "created_at": "2026-11-01T07:20:07Z",
+      "language": "en",
+      "title": "样例竞品退款/售后体验出现传播信号",
+      "display_title": "样例竞品退款/售后体验出现传播信号",
+      "original_text": "@shoptemu #temu #scam \nMy return has been with you for over 2 weeks and I still have no refund. This is unacceptable. Process my full refund immediately to my original payment method.",
+      "translation_zh": "@shoptemu #temu #scam \n我的退货已经在你们那里超过 2 周了，我仍然没有收到退款。这是不可接受的。请立即将我的全额退款退回到我的原始支付方式。",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+      "links": [],
+      "media": [],
+      "score": {
+        "ips": 56,
+        "level": "medium",
+        "sentiment": "negative"
+      },
+      "score_value": 56,
+      "score_label": "CSI",
+      "tags": [
+        "竞品",
+        "negative",
+        "refund",
+        "scam",
+        "return"
+      ],
+      "metrics": {
+        "likes": 3,
+        "reposts": 3,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 15
+      },
+      "post_metrics": {
+        "likes": 3,
+        "reposts": 3,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 15
+      },
+      "source_count": 1,
+      "related_sources": 0,
+      "selected_reason": "内容指向退款/售后体验：用户明确提到退款、退货或售后处理；当前 7 次赞评转引、15 浏览；研判：竞品侧的信任成本会被放大，需关注是否出现更多相似投诉。",
+      "recommended_action": "纳入竞品基线观察",
+      "href": "",
+      "external_href": "https://x.com/Kiraaaa191423/status/2116792386625916970",
+      "sentiment": "negative",
+      "level": "medium"
+    },
+    {
+      "id": "featured-competitor-2116804825312612441",
+      "brand": "competitor",
+      "cluster_id": "",
+      "source_type": "竞品异常",
+      "source_name": "样例竞品 · @Kiraaaa191423",
+      "author_name": "Kiraaaa",
+      "author_handle": "Kiraaaa191423",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2069525479007117312/2ZtRjafm_normal.jpg",
+      "author_followers": 3,
+      "author_following": 25,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-04-29T21:41:18Z",
+      "author_verified": false,
+      "post_url": "https://x.com/Kiraaaa191423/status/2116804825312612441",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116804825312612441",
+      "conversation_context": {
+        "posts": []
+      },
+      "created_at": "2026-11-01T08:09:33Z",
+      "language": "en",
+      "title": "样例竞品退款/售后体验出现传播信号",
+      "display_title": "样例竞品退款/售后体验出现传播信号",
+      "original_text": "@shoptemu #scam #scam Temu my return was delivered over 2 weeks ago and still NO refund. Tracking proves you have it. Refund my money NOW or I dispute the charge. This is theft.",
+      "translation_zh": "@shoptemu #scam #scam Temu，我的退货 2 周多前就已送达，但仍然没有退款。物流跟踪证明你们已经收到了。现在就把钱退给我，否则我会发起拒付。这是盗窃。",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+      "links": [],
+      "media": [],
+      "score": {
+        "ips": 56,
+        "level": "medium",
+        "sentiment": "negative"
+      },
+      "score_value": 56,
+      "score_label": "CSI",
+      "tags": [
+        "竞品",
+        "negative",
+        "refund",
+        "scam",
+        "return",
+        "tracking"
+      ],
+      "metrics": {
+        "likes": 2,
+        "reposts": 2,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 18
+      },
+      "post_metrics": {
+        "likes": 2,
+        "reposts": 2,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 18
+      },
+      "source_count": 1,
+      "related_sources": 0,
+      "selected_reason": "内容指向退款/售后体验：用户明确提到退款、退货或售后处理；当前 5 次赞评转引、18 浏览；研判：竞品侧的信任成本会被放大，需关注是否出现更多相似投诉。",
+      "recommended_action": "纳入竞品基线观察",
+      "href": "",
+      "external_href": "https://x.com/Kiraaaa191423/status/2116804825312612441",
+      "sentiment": "negative",
+      "level": "medium"
+    }
+  ],
+  "hot_topics": [
+    {
+      "rank": 1,
+      "title": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
+      "cluster_id": "primary-signal-001",
+      "score_value": 70,
+      "level": "medium",
+      "source_count": 9,
+      "count_label": "9 条同日相似讨论",
+      "reason": "内容指向渠道合作与活动：内容涉及渠道接入、商家合作、直播活动或站点更新；转引信号相对突出，当前 198 次赞评转引、1721 浏览，同日相似讨论 9 条；研判：可作为市场扩展和货架露出的背景信号。"
+    },
+    {
+      "rank": 2,
+      "title": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "cluster_id": "primary-signal-005",
+      "score_value": 61,
+      "level": "medium",
+      "source_count": 14,
+      "count_label": "14 条同日相似讨论",
+      "reason": "内容指向购买意向与日常购物：用户表达下单、加购或尝试购买意向；评论参与高于普通样本，当前 17 次赞评转引、1764 浏览，同日相似讨论 14 条；研判：可用于判断主品牌是否被真实用户纳入购买选择。"
+    },
+    {
+      "rank": 3,
+      "title": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "cluster_id": "primary-signal-002",
+      "score_value": 52,
+      "level": "low",
+      "source_count": 1,
+      "count_label": "公开舆情",
+      "reason": "内容指向公司/资本市场信息：内容涉及公司战略、资本市场、行业报告或管理层动态；转引信号相对突出，当前 172 次赞评转引、2238 浏览；研判：对品牌心智有间接影响，应与消费者体验类舆情分开阅读。"
+    },
+    {
+      "rank": 4,
+      "title": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "cluster_id": "primary-signal-003",
+      "score_value": 71,
+      "level": "medium",
+      "source_count": 2,
+      "count_label": "2 条同日相似讨论",
+      "reason": "内容指向竞品对照与替代选择：用户把主品牌与其他平台进行价格、配送或品类对比；作者具备较高影响力（153516 followers），当前 0 次赞评转引、641 浏览，同日相似讨论 2 条；研判：适合观察主品牌在海外用户购物选择中的竞争位置。"
+    },
+    {
+      "rank": 5,
+      "title": "相关讨论体现价格、配送或购物体验上的正向口碑。",
+      "cluster_id": "primary-signal-006",
+      "score_value": 53,
+      "level": "low",
+      "source_count": 1,
+      "count_label": "公开舆情",
+      "reason": "内容指向正向购物体验：用户主动提到价格、配送或购物体验上的正向感受；当前 3 次赞评转引、53 浏览；研判：可作为主品牌海外口碑和履约卖点的证据样本。"
+    }
+  ],
+  "effective_posts": [
+    {
+      "post_id": "2117018922243223594",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/Timmyl0/status/2117018922243223594",
+      "text": "@TheDrugMoney Sort of not really, with temu you might get the same thing you see on amazon or you may get an inferior version.\n\nThe catch is if you buy trash from Amazon you can at least return it usually free of charge temu charges usually more than what the item is worth to return.",
+      "original_text": "@TheDrugMoney Sort of not really, with temu you might get the same thing you see on amazon or you may get an inferior version.\n\nThe catch is if you buy trash from Amazon you can at least return it usually free of charge temu charges usually more than what the item is worth to return.",
+      "links": [],
+      "translation_zh": "@TheDrugMoney 算是也不完全是，用 temu 你可能会买到和你在 amazon 上看到的一样的东西，也可能会买到劣质版本。\n\n问题在于，如果你从 Amazon 买到垃圾货，通常至少可以免费退货；temu 退货通常收的费用比商品本身还贵。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Tim Raw",
+      "author_handle": "Timmyl0",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/246609861/IMG_0083_normal.jpg",
+      "author_followers": 57,
+      "author_following": 39,
+      "author_bio": null,
+      "author_location": "London, Ontario Canada",
+      "author_joined_at": "2009-06-02T14:51:21Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T22:20:18Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116911748087447593",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 34
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2117016902266433819",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/TemuGeekBuy/status/2117016902266433819",
+      "text": "Know someone who’s always looking for a good bargain? 👀\nSend them this one.\nNew app users can check out these Temu special prices here → temu.to/k\nSearch alc314960 in the app to take a look.\n#TemuDeals #Deals\n⚠️New app users only. Min spend of €10 within 24 hour. T&Cs apply. Please note that extra import-related fees will apply if your orders are shipped from outside the EU. Ad.",
+      "original_text": "Know someone who’s always looking for a good bargain? 👀\nSend them this one.\nNew app users can check out these Temu special prices here → https://t.co/mob8QAbacn\nSearch alc314960 in the app to take a look.\n#TemuDeals #Deals\n⚠️New app users only. Min spend of €10 within 24 hour. T&Cs apply. Please note that extra import-related fees will apply if your orders are shipped from outside the EU. Ad.",
+      "links": [
+        "https://temu.to/k/ebjjumo7ok6"
+      ],
+      "translation_zh": "认识总是在找好价的人吗？👀\n把这个发给他们。\n新 app 用户可以在这里查看这些 Temu 特价 → temu.to/k\n在 app 中搜索 alc314960 看看。\n#TemuDeals #Deals\n⚠️仅限新 app 用户。24 小时内最低消费 €10。适用条款与条件。请注意，如果您的订单从欧盟以外地区发货，将产生额外的进口相关费用。广告。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "TemuGeekBuy",
+      "author_handle": "TemuGeekBuy",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2016524448489259008/mbLZhj2r_normal.jpg",
+      "author_followers": 76,
+      "author_following": 70,
+      "author_bio": null,
+      "author_location": "Dublin City, Ireland",
+      "author_joined_at": "2013-05-08T12:39:44Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T22:12:16Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2117016902266433819",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWEnpuAWYAA6a8j.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWEnpuAWYAA6a8j.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWEnpuAWYAA6a8j.jpg",
+          "expanded_url": "https://x.com/TemuGeekBuy/status/2117016902266433819/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 1
+      },
+      "sentiment": "positive",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2117011490221793500",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/grok/status/2117011490221793500",
+      "text": "@bolaji73501 @EcomMachine In this dropshipping setup you never hold stock. When a customer buys from your store you immediately place the matching order on Temu (or the supplier) and enter the customer’s shipping address so the item goes straight to them. You just manage the storefront, ads, and order forwarding.",
+      "original_text": "@bolaji73501 @EcomMachine In this dropshipping setup you never hold stock. When a customer buys from your store you immediately place the matching order on Temu (or the supplier) and enter the customer’s shipping address so the item goes straight to them. You just manage the storefront, ads, and order forwarding.",
+      "links": [],
+      "translation_zh": "@bolaji73501 @EcomMachine 在这种 dropshipping 模式中，你从不持有库存。当顾客从你的店铺购买时，你立即在 Temu（或供应商）上下对应的订单，并输入顾客的收货地址，这样商品就会直接寄给他们。你只需管理店面、广告和订单转发。",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+      "author_name": "Grok",
+      "author_handle": "grok",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2057885623374290944/lmj0pawP_normal.jpg",
+      "author_followers": 9297690,
+      "author_following": 4,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2023-11-04T04:52:34Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T21:50:46Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116960760265896254",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 9
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2117011204749111594",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/MDR227185150701/status/2117011204749111594",
+      "text": "@TheDrugMoney The catch is the shipping time it takes significantly longer. If waiting a few weeks is not a deal breaker for you, yes, TEMU has the same crap way cheaper.",
+      "original_text": "@TheDrugMoney The catch is the shipping time it takes significantly longer. If waiting a few weeks is not a deal breaker for you, yes, TEMU has the same crap way cheaper.",
+      "links": [],
+      "translation_zh": "@TheDrugMoney 问题在于配送时间，要久得多。如果等上几周对你来说不是不能接受，那么是的，TEMU 上同样的破玩意儿便宜得多。",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+      "author_name": "Mila Direy-Drovovich",
+      "author_handle": "MDR227185150701",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2116239175997337600/2tcD6uMb_normal.jpg",
+      "author_followers": 50,
+      "author_following": 35,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-11-06T09:00:40Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T21:49:38Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116911748087447593",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 50
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116984243100541013",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/mahmoud765/status/2116984243100541013",
+      "text": "🍅抖音白号👮抖音满月实名一码直登🐝包登包核对🐨京东🎀淘宝⚖拼多多账号 海外支付宝首码⚖WhatsApp接码注册抖音白号👮微信老号抖音满月实名一码直登🐝包登包核对🐨抖音三网实名千粉号😪抖音三网实名万粉号🌨 茅台接码业务 🛸小红书实名号🧆",
+      "original_text": "🍅抖音白号👮抖音满月实名一码直登🐝包登包核对🐨京东🎀淘宝⚖拼多多账号 海外支付宝首码⚖WhatsApp接码注册抖音白号👮微信老号抖音满月实名一码直登🐝包登包核对🐨抖音三网实名千粉号😪抖音三网实名万粉号🌨 茅台接码业务 🛸小红书实名号🧆",
+      "links": [],
+      "translation_zh": "🍅抖音白号👮抖音满月实名一码直登🐝包登包核对🐨京东🎀淘宝⚖拼多多账号 海外支付宝首码⚖WhatsApp接码注册抖音白号👮微信老号抖音满月实名一码直登🐝包登包核对🐨抖音三网实名千粉号😪抖音三网实名万粉号🌨 茅台接码业务 🛸小红书实名号🧆",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "mahmoud号商",
+      "author_handle": "mahmoud765",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2110905189750448128/aCmqpQ1R_normal.jpg",
+      "author_followers": 2,
+      "author_following": 98,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2011-06-13T17:29:02Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T20:02:29Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116984243100541013",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 13
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116976302980997152",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/Activist4Sanity/status/2116976302980997152",
+      "text": "I would never trust my life to a temu product!",
+      "original_text": "I would never trust my life to a temu product!",
+      "links": [],
+      "translation_zh": "我绝不会把自己的命托付给一个 temu 产品！",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "John",
+      "author_handle": "Activist4Sanity",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1750771499311534080/D1wyY0kv_normal.jpg",
+      "author_followers": 1226,
+      "author_following": 4321,
+      "author_bio": null,
+      "author_location": "St Paul, MN",
+      "author_joined_at": "2022-12-02T21:11:40Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T19:30:56Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2115817447970537586",
+      "conversation_id": "2116976302980997152",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 2
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116972528681820636",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/hbri007/status/2116972528681820636",
+      "text": "🎁 Who doesn’t love a Black Friday $0 deal? 🔥\nHead to temu.to/k search als844943 in the Temu App, and see what’s available.\nPlus, use alq906060 to get 40% off and enjoy free returns within 90 days!\n#TemuFinds #TemuDeals #BlackFriday\n⚠️ Only for app users.",
+      "original_text": "🎁 Who doesn’t love a Black Friday $0 deal? 🔥\nHead to https://t.co/nnQiJmKg2o search als844943 in the Temu App, and see what’s available.\nPlus, use alq906060 to get 40% off and enjoy free returns within 90 days!\n#TemuFinds #TemuDeals #BlackFriday\n⚠️ Only for app users.",
+      "links": [
+        "https://temu.to/k/p7rgyxfgkok"
+      ],
+      "translation_zh": "🎁 谁不喜欢 Black Friday $0 优惠呢？🔥\n前往 temu.to/k，在 Temu App 中搜索 als844943，看看有哪些可选。\n另外，使用 alq906060 可享 40% 折扣，并享受 90 天内免费退货！\n#TemuFinds #TemuDeals #BlackFriday\n⚠️ 仅限 app 用户。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "StormyKnight",
+      "author_handle": "hbri007",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1699869774950334464/RMEYilxq_normal.jpg",
+      "author_followers": 4,
+      "author_following": 29,
+      "author_bio": null,
+      "author_location": "Earth for the time being.",
+      "author_joined_at": "2023-02-05T23:36:04Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T19:15:56Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116972528681820636",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116970421736378809",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/abgrammie/status/2116970421736378809",
+      "text": "Wait… have you checked Temu’s Black Friday finds yet?\nIf you’re new to the Temu App, take a look at the available new-user offers here: temu.to/k\nOr search alq705289 in the app to find them.\nWorth a peek before you miss the deals!\n#TemuFinds #BlackFriday",
+      "original_text": "Wait… have you checked Temu’s Black Friday finds yet?\nIf you’re new to the Temu App, take a look at the available new-user offers here: https://t.co/K5NOJxgZxd\nOr search alq705289 in the app to find them.\nWorth a peek before you miss the deals!\n#TemuFinds #BlackFriday",
+      "links": [
+        "https://temu.to/k/pm3p4dqxsyj"
+      ],
+      "translation_zh": "等等……你看过 Temu 的 Black Friday 好物了吗？\n如果你是 Temu App 新用户，可以在这里看看可用的新用户优惠：temu.to/k\n或者在 App 中搜索 alq705289 来找到它们。\n在错过这些优惠之前，值得看一眼！\n#TemuFinds #BlackFriday",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Carla Dunn",
+      "author_handle": "abgrammie",
+      "author_avatar_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "author_followers": 27,
+      "author_following": 58,
+      "author_bio": null,
+      "author_location": "Tulsa, OK",
+      "author_joined_at": "2012-09-30T00:35:44Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T19:07:34Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116970421736378809",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 2
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116968224608661997",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/caminoclynlatam/status/2116968224608661997",
+      "text": "🇧🇷 [PT] 📸 A JOY da JD.com compartilhou novas fotos promocionais com Liu Yuning, mostrando um bichinho de pelúcia de girassol e cachorrinhos. 🌻💛",
+      "original_text": "🇧🇷 [PT] 📸 A JOY da https://t.co/LmDL8PeZZ6 compartilhou novas fotos promocionais com Liu Yuning, mostrando um bichinho de pelúcia de girassol e cachorrinhos. 🌻💛",
+      "links": [
+        "https://JD.com"
+      ],
+      "translation_zh": "🇧🇷 [PT] 📸 JD.com 的 JOY 分享了与 Liu Yuning 合作的新宣传照片，展示了一个向日葵毛绒玩具和小狗狗。🌻💛",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论价格、优惠或正向购物体验。",
+      "author_name": "Caminantes Nocturnas 🦅Liu Yuning (刘宇宁) - LATAM🌻",
+      "author_handle": "caminoclynlatam",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2090576277472182273/ehMsRoG9_normal.jpg",
+      "author_followers": 117,
+      "author_following": 49,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2025-12-22T02:47:47Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T18:58:50Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116968216954057039",
+      "conversation_context": {
+        "conversation_id": "2116968216954057039",
+        "anchor_post_id": "2116968224608661997",
+        "summary_zh": "前文是该粉丝号用西语转发JOY发布的刘宇宁新宣传照，内容为向日葵毛绒玩具和小狗。收录帖改用葡语明确提到主品牌与刘宇宁合作，把话题连接到主品牌品牌宣传物料。后文法语版继续补充来源与话题标签，无互动回应。上下文显示信息来自同一账号多语种扩散，情绪正面，主要具传播价值，未涉及价格、配送或真实消费体验。",
+        "post_count": 3,
+        "detail_path": "dashboard-data/lazy/conversations/2116968224608661997-446507b78df8.json"
+      },
+      "language": "pt",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 30
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116968216954057039",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/caminoclynlatam/status/2116968216954057039",
+      "text": "✨️🔔 🦅 ACTUALIZACIÓN | ATUALIZAÇÃO | MISE À JOUR 💛🌻\n\n🌎 [ESP] 📸 JOY de JD.com compartió nuevas fotos promocionales junto a Liu Yuning, mostrando un peluche de girasol y perritos. 🌻💛",
+      "original_text": "✨️🔔 🦅 ACTUALIZACIÓN | ATUALIZAÇÃO | MISE À JOUR 💛🌻\n\n🌎 [ESP] 📸 JOY de https://t.co/LmDL8PeZZ6 compartió nuevas fotos promocionales junto a Liu Yuning, mostrando un peluche de girasol y perritos. 🌻💛 https://t.co/TF8IoDGIQO",
+      "links": [
+        "https://JD.com"
+      ],
+      "translation_zh": "✨️🔔 🦅 更新 | 更新 | 更新 💛🌻\n\n🌎 [ESP] 📸 JD.com 的 JOY 分享了与 Liu Yuning 合作的新宣传照片，展示了一个向日葵毛绒玩具和小狗狗。🌻💛",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论价格、优惠或正向购物体验。",
+      "author_name": "Caminantes Nocturnas 🦅Liu Yuning (刘宇宁) - LATAM🌻",
+      "author_handle": "caminoclynlatam",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2090576277472182273/ehMsRoG9_normal.jpg",
+      "author_followers": 117,
+      "author_following": 49,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2025-12-22T02:47:47Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T18:58:48Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116968216954057039",
+      "conversation_context": {},
+      "language": "pt",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWD7WpKXQAAX6uc.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWD7WpKXQAAX6uc.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWD7WpKXQAAX6uc.jpg",
+          "expanded_url": "https://x.com/caminoclynlatam/status/2116968216954057039/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWD7XByW4AAILTC.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWD7XByW4AAILTC.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWD7XByW4AAILTC.jpg",
+          "expanded_url": "https://x.com/caminoclynlatam/status/2116968216954057039/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWD7Xe5XsAAYlV7.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWD7Xe5XsAAYlV7.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWD7Xe5XsAAYlV7.jpg",
+          "expanded_url": "https://x.com/caminoclynlatam/status/2116968216954057039/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWD7X3SW0AAaHyV.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWD7X3SW0AAaHyV.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWD7X3SW0AAaHyV.jpg",
+          "expanded_url": "https://x.com/caminoclynlatam/status/2116968216954057039/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 51
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116954243001196560",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/Angelaffta/status/2116954243001196560",
+      "text": "I don't know why are you guys sleeping on temu 😂. Temu has big discounts plus the don't have crazy import charges. And their discounts code actually works. \n\nUse code alf373051 on your next temu order you won't regret it.",
+      "original_text": "I don't know why are you guys sleeping on temu 😂. Temu has big discounts plus the don't have crazy import charges. And their discounts code actually works. \n\nUse code alf373051  on your next temu order you won't regret it.",
+      "links": [],
+      "translation_zh": "我不知道你们为什么都忽视 temu 😂。Temu 折扣很大，而且没有离谱的进口费用。他们的折扣码也真的能用。\n\n下次在 temu 下单时使用代码 alf373051，你不会后悔的。",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论价格、优惠或正向购物体验。",
+      "author_name": "Angela",
+      "author_handle": "Angelaffta",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2107763411962503168/9yfZoHSC_normal.jpg",
+      "author_followers": 10,
+      "author_following": 6,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-10-07T09:21:28Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T18:03:17Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116954243001196560",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 8
+      },
+      "sentiment": "positive",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116942101258572068",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/iamcomano/status/2116942101258572068",
+      "text": "🔥 Get ₦0 gifts on Temu!\nTap temu.to/k and search alq894008 in the Temu App.\nPlus, redeem als894008 for 30% off your order — with free returns within 90 days. 🛍️\n⚠️ Only for app users with qualifying orders. T&Cs apply.",
+      "original_text": "🔥 Get ₦0 gifts on Temu!\nTap https://t.co/ZL3dEdeqK4 and search alq894008 in the Temu App.\nPlus, redeem als894008 for 30% off your order — with free returns within 90 days. 🛍️\n⚠️ Only for app users with qualifying orders. T&amp;Cs apply. https://t.co/B6717r575b",
+      "links": [
+        "https://temu.to/k/eoxbennmjxx"
+      ],
+      "translation_zh": "🔥 在 Temu 领取 ₦0 礼品！\n点击 temu.to/k，并在 Temu App 中搜索 alq894008。\n另外，兑换 als894008 可享受订单 30% 折扣——90 天内免费退货。🛍️\n⚠️ 仅限符合条件订单的 app 用户。适用条款和条件。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Omano, Chijindu Friday",
+      "author_handle": "iamcomano",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1698756339281903616/-6cht2fl_normal.jpg",
+      "author_followers": 1328,
+      "author_following": 3385,
+      "author_bio": null,
+      "author_location": "Port Harcourt, Nigeria",
+      "author_joined_at": "2022-02-01T15:09:38Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T17:15:02Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116942101258572068",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWDjnazWsAEPu8W.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWDjnazWsAEPu8W.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWDjnazWsAEPu8W.jpg",
+          "expanded_url": "https://x.com/iamcomano/status/2116942101258572068/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 9
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "return",
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116938585207157011",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/neyla_cantu/status/2116938585207157011",
+      "text": "Wait… have you checked Temu’s Black Friday finds yet?\nIf you’re new to the Temu App, take a look at the available new-user offers here: temu.to/k\nOr search alt432189 in the app to find them.\nWorth a peek before you miss the deals!\n#TemuFinds #BlackFriday\nCode179238",
+      "original_text": "Wait… have you checked Temu’s Black Friday finds yet?\nIf you’re new to the Temu App, take a look at the available new-user offers here: https://t.co/T29POqTAYL\nOr search alt432189 in the app to find them.\nWorth a peek before you miss the deals!\n#TemuFinds #BlackFriday\nCode179238 https://t.co/8ioKIpa1Iy",
+      "links": [
+        "https://temu.to/k/p3arjag4h6z"
+      ],
+      "translation_zh": "等等……你看过 Temu 的 Black Friday 好物了吗？\n如果你是 Temu App 新用户，可以在这里看看可用的新用户优惠：temu.to/k\n或者在 App 中搜索 alt432189 来找到它们。\n在错过这些优惠之前，值得看一眼！\n#TemuFinds #BlackFriday\nCode179238",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "$Neyla Cantu 🐦‍⬛🐺🍎",
+      "author_handle": "neyla_cantu",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1279912935196962816/89Twv7qx_normal.jpg",
+      "author_followers": 5159,
+      "author_following": 5116,
+      "author_bio": null,
+      "author_location": "North Carolina, USA",
+      "author_joined_at": "2013-03-14T23:44:31Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T17:01:04Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116938585207157011",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWDga0zXUAEatbB.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWDga0zXUAEatbB.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWDga0zXUAEatbB.jpg",
+          "expanded_url": "https://x.com/neyla_cantu/status/2116938585207157011/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 7
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116936240549580879",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/Vemetor/status/2116936240549580879",
+      "text": "@Vanilleotter joybuy??",
+      "original_text": "@Vanilleotter joybuy??",
+      "links": [],
+      "translation_zh": "@Vanilleotter 你说的是 joybuy 吗？？",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "𝕽𝖊𝖉𝖗𝖔",
+      "author_handle": "Vemetor",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2115884902050603008/-xmWpF7h_normal.jpg",
+      "author_followers": 199,
+      "author_following": 519,
+      "author_bio": null,
+      "author_location": "Mister Was geht sie das an?",
+      "author_joined_at": "2023-03-02T13:28:02Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T16:51:45Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116930913812578367",
+      "conversation_context": {
+        "conversation_id": "2116930913812578367",
+        "anchor_post_id": "2116936240549580879",
+        "summary_zh": "前文用户称首次在 主品牌 下单购买丘比蛋黄酱、酱油等，听说明天送达并表达期待，询问他人是否用过。收录帖仅追问是否指 主品牌，随后原作者确认“是的，是一个 App”。上下文显示讨论源于真实下单体验，情绪偏期待，互动有限但有助于确认品牌指向。",
+        "post_count": 3,
+        "detail_path": "dashboard-data/lazy/conversations/2116936240549580879-b98dfb17228d.json"
+      },
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 125
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116930913812578367",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/Vanilleotter/status/2116930913812578367",
+      "text": "Ich hab das erste mal bei Joybuy gekauft, das soll Morgen schon da sein O.O\nHab mir Kewpie Mayo, Sojasoße und sowas geholt.\nBin mal total gespannt, hat da schonmal jemand bestellt?",
+      "original_text": "Ich hab das erste mal bei Joybuy gekauft, das soll Morgen schon da sein O.O\nHab mir Kewpie Mayo, Sojasoße und sowas geholt.\nBin mal total gespannt, hat da schonmal jemand bestellt?",
+      "links": [],
+      "translation_zh": "我第一次在 Joybuy 买东西，据说明天就能到了 O.O\n我买了 Kewpie 蛋黄酱、酱油之类的东西。\n我真的挺期待的，有人已经在那里下过单吗？",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "~ 🫧 Gwendolyn 💧~",
+      "author_handle": "Vanilleotter",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2114990606850162689/qpYfiO3I_normal.jpg",
+      "author_followers": 870,
+      "author_following": 976,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2012-11-22T07:54:12Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T16:30:35Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116930913812578367",
+      "conversation_context": {},
+      "language": "de",
+      "media": [],
+      "metrics": {
+        "likes": 12,
+        "reposts": 0,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 2,
+        "views": 1764
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116922826439713217",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/KimiW82874/status/2116922826439713217",
+      "text": "双十一购物体验如下：\n同个产品徕芬剃须刀P3，京东卖418，拼多多卖390，相差28元，懂得都知道不能被割韭菜。",
+      "original_text": "双十一购物体验如下：\n同个产品徕芬剃须刀P3，京东卖418，拼多多卖390，相差28元，懂得都知道不能被割韭菜。",
+      "links": [],
+      "translation_zh": "双十一购物体验如下：\n同个产品徕芬剃须刀P3，京东卖418，拼多多卖390，相差28元，懂得都知道不能被割韭菜。",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "SingaporeKimi",
+      "author_handle": "KimiW82874",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2015680589110951936/6f9787zH_normal.png",
+      "author_followers": 10,
+      "author_following": 58,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-01-26T06:57:56Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T15:58:27Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116922826439713217",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 6
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116913428371497371",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/jaimedelvalle77/status/2116913428371497371",
+      "text": "Found some great deals while browsing Temu for Black Friday and thought you might like them too 😄\nIf you’re new to the Temu App, check out these budget-friendly finds and new-user offers:\ntemu.to/k\nYou can also search alp821831 in the app to find the deals!",
+      "original_text": "Found some great deals while browsing Temu for Black Friday and thought you might like them too 😄\nIf you’re new to the Temu App, check out these budget-friendly finds and new-user offers:\nhttps://t.co/oUxIjDTzyq\nYou can also search alp821831 in the app to find the deals!",
+      "links": [
+        "https://temu.to/k/ptwl1ilbq78"
+      ],
+      "translation_zh": "在 Temu 上浏览 Black Friday 优惠时发现了一些很棒的折扣，觉得你可能也会喜欢 😄\n如果你是 Temu App 的新用户，可以看看这些高性价比好物和新用户优惠：\ntemu.to/k\n你也可以在 app 中搜索 alp821831 来找到这些优惠！",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Jaime del Valle",
+      "author_handle": "jaimedelvalle77",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2035873490054549504/TM8cmJKi_normal.jpg",
+      "author_followers": 466,
+      "author_following": 1421,
+      "author_bio": null,
+      "author_location": "Orlando",
+      "author_joined_at": "2010-03-10T18:29:12Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T15:21:06Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116913428371497371",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 10
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116911643548660037",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/summeryumms/status/2116911643548660037",
+      "text": "pls shopee sistem lu ribet bgt baru tau gw ada aplikasi shopee seller sorry udah lama vakum jd seller 🥲",
+      "original_text": "pls shopee sistem lu ribet bgt baru tau gw ada aplikasi shopee seller sorry udah lama vakum jd seller 🥲",
+      "links": [],
+      "translation_zh": "拜托 Shopee，你的系统也太麻烦了吧，我才知道有 Shopee Seller 这个应用，抱歉我已经很久没当 seller 了🥲",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "ً",
+      "author_handle": "summeryumms",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2070935817800093696/ihPoU9_R_normal.jpg",
+      "author_followers": 4,
+      "author_following": 73,
+      "author_bio": null,
+      "author_location": "2yul 🛋️",
+      "author_joined_at": "2014-08-29T19:59:53Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T15:14:00Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116911643548660037",
+      "conversation_context": {},
+      "language": "in",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 5
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116908051622199370",
+      "brand": "primary",
+      "cluster_id": "primary-signal-006",
+      "topic": "positive_experience",
+      "url": "https://x.com/Alice_changg/status/2116908051622199370",
+      "text": "این ژل آبرسان ژاپنی Naturie رو به توصیه یه دوست ژاپنیم گرفتم و واقعاً دوستش دارم. بین آبرسان‌هایی که اخیراً امتحان کردم، این یکی هم خیلی سبکه، هم خوب آبرسانی می‌کنه و هم قیمتش عالیه.\n\nاگه هلند یا آلمانین توی Joybuy هم پیداش می‌کنین :)",
+      "original_text": "این ژل آبرسان ژاپنی Naturie رو به توصیه یه دوست ژاپنیم گرفتم و واقعاً دوستش دارم. بین آبرسان‌هایی که اخیراً امتحان کردم، این یکی هم خیلی سبکه، هم خوب آبرسانی می‌کنه و هم قیمتش عالیه.\n\nاگه هلند یا آلمانین توی Joybuy هم پیداش می‌کنین :) https://t.co/tQOyC7GVpO",
+      "links": [],
+      "translation_zh": "我是在一位日本朋友的推荐下买了这款日本 Naturie 保湿凝胶，真的很喜欢。最近试过的保湿产品里，这款既非常轻薄，补水效果也很好，而且价格也很棒。\n\n如果你在荷兰或德国，在 Joybuy 上也能找到它 :)",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "رادیو جیبی",
+      "author_handle": "Alice_changg",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1966529078220976129/8tibQOBE_normal.jpg",
+      "author_followers": 21,
+      "author_following": 89,
+      "author_bio": null,
+      "author_location": "Berlin, Germany",
+      "author_joined_at": "2024-02-20T13:24:49Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T14:59:44Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116908051622199370",
+      "conversation_context": {},
+      "language": "fa",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+          "expanded_url": "https://x.com/Alice_changg/status/2116908051622199370/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 3,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 3,
+        "views": 53
+      },
+      "sentiment": "positive",
+      "level": "low",
+      "score_value": 53,
+      "score_label": "IPS",
+      "matched_terms": [
+        "positive_value",
+        "delivery_strength",
+        "positive_experience"
+      ]
+    },
+    {
+      "post_id": "2116893779210936480",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/underwaterboyy_/status/2116893779210936480",
+      "text": "beyond campus, into experience\npernah jd seller, jd entrepreneur, pernah ngerasain bisnis fluktuatif dalam perdagangan f&b, gagal, bahkan harus restart everything from zero. smpe akhirnya dapet kesempatan buat explore lebih jauh ke dunia industri dan professional environment,,,",
+      "original_text": "beyond campus, into experience\npernah jd seller, jd entrepreneur, pernah ngerasain bisnis fluktuatif dalam perdagangan f&amp;b, gagal, bahkan harus restart everything from zero. smpe akhirnya dapet kesempatan buat explore lebih jauh ke dunia industri dan professional environment,,, https://t.co/KM7Cget4um",
+      "links": [],
+      "translation_zh": "走出校园，走进经历\n曾经当过 seller，当过 entrepreneur，也曾体验过 F&B 贸易中生意的起伏，失败过，甚至不得不从零开始重来。直到最后终于有机会更深入地探索产业世界和专业环境……",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Boy4you",
+      "author_handle": "underwaterboyy_",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2111030683808436224/_m91ytn3_normal.jpg",
+      "author_followers": 1168,
+      "author_following": 1111,
+      "author_bio": null,
+      "author_location": "Bandung, Indonesia",
+      "author_joined_at": "2019-11-08T17:34:12Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T14:03:01Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116893779210936480",
+      "conversation_context": {},
+      "language": "in",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWC3p0cbEAEqCAZ.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWC3p0cbEAEqCAZ.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWC3p0cbEAEqCAZ.jpg",
+          "expanded_url": "https://x.com/underwaterboyy_/status/2116893779210936480/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 4,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 1,
+        "bookmarks": 0,
+        "views": 239
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116885520764547581",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/YomiAdeyina/status/2116885520764547581",
+      "text": "✨ DEAL DROP! ✨\nScore ₦0 gifts on Temu by tapping temu.to/k and searching alq506696 in the app.\nThen redeem aly560488 and save 30% on your order — with free returns within 90 days! 🔥\n⚠️ Only for app users with qualifying orders. T&Cs apply.",
+      "original_text": "✨ DEAL DROP! ✨\nScore ₦0 gifts on Temu by tapping https://t.co/q9T9T39rjH and searching alq506696 in the app.\nThen redeem aly560488 and save 30% on your order — with free returns within 90 days! 🔥\n⚠️ Only for app users with qualifying orders. T&amp;Cs apply. https://t.co/iF1LKjfADh",
+      "links": [
+        "https://temu.to/k/e67r93rfsqr"
+      ],
+      "translation_zh": "✨ 优惠来啦！✨\n在 Temu 上点击 temu.to/k，并在 App 中搜索 alq506696，即可领取 ₦0 礼品。\n然后兑换 aly560488，下单立省 30%——还可享受 90 天内免费退货！🔥\n⚠️ 仅限符合条件订单的 App 用户。适用条款与条件。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "yomi adeyina",
+      "author_handle": "YomiAdeyina",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1894778719060766720/pw1vdZXk_normal.jpg",
+      "author_followers": 167,
+      "author_following": 866,
+      "author_bio": null,
+      "author_location": "Lagos, Nigeria",
+      "author_joined_at": "2012-07-19T15:45:03Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T13:30:12Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116885520764547581",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWCwJ70W0AA6T_E.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWCwJ70W0AA6T_E.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWCwJ70W0AA6T_E.jpg",
+          "expanded_url": "https://x.com/YomiAdeyina/status/2116885520764547581/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 44
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "return",
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116880499331477668",
+      "brand": "primary",
+      "cluster_id": "primary-signal-007",
+      "topic": "product_deal",
+      "url": "https://x.com/Clubpromos/status/2116880499331477668",
+      "text": "Fini le plastique qui garde l'odeur du curry ! \n8 boîtes en verre borosilicaté (type Pyrex) à 13,99 €. De 150 à 1040 ml.\nQui en a besoin ?\n\n#bonplan #joybuy #partenaire\n\n👉 smyi.me/01oEd",
+      "original_text": "Fini le plastique qui garde l'odeur du curry ! \n8 boîtes en verre borosilicaté (type Pyrex) à 13,99 €. De 150 à 1040 ml.\nQui en a besoin ?\n\n#bonplan #joybuy #partenaire\n\n👉 https://t.co/jS7TAGoDa3 https://t.co/UxljWRNErK",
+      "links": [
+        "https://smyi.me/01oEd"
+      ],
+      "translation_zh": "告别会留住咖喱味的塑料盒！\n8 个硼硅玻璃盒（Pyrex 类型）售价 13,99 €。容量从 150 到 1040 ml。\n谁需要？\n\n#bonplan #joybuy #partenaire\n\n👉 smyi.me/01oEd",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Clubpromos Sonia",
+      "author_handle": "Clubpromos",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1211049210407194629/r1jUTcpz_normal.jpg",
+      "author_followers": 1236,
+      "author_following": 23,
+      "author_bio": null,
+      "author_location": "France",
+      "author_joined_at": "2009-03-24T08:47:56Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T13:10:15Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116880499331477668",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWCrh6bXsAEzL60.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWCrh6bXsAEzL60.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWCrh6bXsAEzL60.jpg",
+          "expanded_url": "https://x.com/Clubpromos/status/2116880499331477668/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 34
+      },
+      "sentiment": "positive",
+      "level": "low",
+      "score_value": 49,
+      "score_label": "IPS",
+      "matched_terms": [
+        "product_interest",
+        "promotion",
+        "product_deal"
+      ]
+    },
+    {
+      "post_id": "2116880280476885392",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/dresfortine/status/2116880280476885392",
+      "text": "keknya gw ga bakat jd hunter (mls rt rt), apakah saatnya gw beralih jd seller jualan akun x itu😭😭😭😭😭",
+      "original_text": "keknya gw ga bakat jd hunter (mls rt rt), apakah saatnya gw beralih jd seller jualan akun x itu😭😭😭😭😭",
+      "links": [],
+      "translation_zh": "感觉我不适合当 hunter（懒得一直转发），是不是该转行当 seller 去卖那个 X 账号了😭😭😭😭😭",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "miu໑୧",
+      "author_handle": "dresfortine",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2108518309293694976/q3bbA6dS_normal.jpg",
+      "author_followers": 1449,
+      "author_following": 1088,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2025-01-15T10:13:23Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T13:09:23Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116880280476885392",
+      "conversation_context": {},
+      "language": "in",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 1,
+        "bookmarks": 0,
+        "views": 82
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116870336213893324",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "competitor_comparison",
+      "url": "https://x.com/lesnums/status/2116870336213893324",
+      "text": "🔗 l.lesnumeriques.com/biD\nLe smartphone Samsung Galaxy A57 5G s'affiche aujourd'hui à 369,00 € chez Joybuy. C'est actuellement le meilleur rapport qualité / prix de notre comparatif, selon les 239 modèles testés dans notre laboratoire. l.lesnumeriques.com/biD",
+      "original_text": "🔗 https://t.co/ZsnHw9nXmV\nLe smartphone Samsung Galaxy A57 5G s'affiche aujourd'hui à 369,00 € chez Joybuy. C'est actuellement le meilleur rapport qualité / prix de notre comparatif, selon les 239 modèles testés dans notre laboratoire. https://t.co/ZsnHw9nXmV",
+      "links": [
+        "https://l.lesnumeriques.com/biD",
+        "https://l.lesnumeriques.com/biD"
+      ],
+      "translation_zh": "🔗 l.lesnumeriques.com/biD\nSamsung Galaxy A57 5G 智能手机今天在 Joybuy 上的价格为 369,00 €。根据我们实验室测试的 239 款机型，它目前是我们评测对比中性价比最高的一款。l.lesnumeriques.com/biD",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Les Numériques",
+      "author_handle": "lesnums",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1635603257870434306/4aZrFj1Y_normal.jpg",
+      "author_followers": 153516,
+      "author_following": 401,
+      "author_bio": null,
+      "author_location": "Dans nos labos 🔬",
+      "author_joined_at": "2012-02-13T16:31:24Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T12:29:52Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116870336213893324",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 641
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 71,
+      "score_label": "IPS",
+      "matched_terms": [
+        "competitive_position",
+        "competitor_comparison"
+      ]
+    },
+    {
+      "post_id": "2116870223991038316",
+      "brand": "primary",
+      "cluster_id": "primary-signal-003",
+      "topic": "competitor_comparison",
+      "url": "https://x.com/lesnums_bonplan/status/2116870223991038316",
+      "text": "🔗 l.lesnumeriques.com/nxp\nLe smartphone Samsung Galaxy A57 5G s'affiche aujourd'hui à 369,00 € chez Joybuy. C'est actuellement le meilleur rapport qualité / prix de notre comparatif, selon les 239 modèles testés dans notre laboratoire.",
+      "original_text": "🔗 https://t.co/szM9X1xNCo\nLe smartphone Samsung Galaxy A57 5G s'affiche aujourd'hui à 369,00 € chez Joybuy. C'est actuellement le meilleur rapport qualité / prix de notre comparatif, selon les 239 modèles testés dans notre laboratoire. https://t.co/FKfScdD3hJ",
+      "links": [
+        "https://l.lesnumeriques.com/nxp"
+      ],
+      "translation_zh": "🔗 l.lesnumeriques.com/nxp\nSamsung Galaxy A57 5G 智能手机今天在 Joybuy 的售价为 369,00 €。根据我们实验室测试的 239 款机型，它目前是我们对比评测中性价比最高的一款。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Bons Plans High-Tech",
+      "author_handle": "lesnums_bonplan",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1442755465558073348/U98UYg20_normal.png",
+      "author_followers": 10845,
+      "author_following": 29,
+      "author_bio": null,
+      "author_location": "Dans nos labos 🔬",
+      "author_joined_at": "2010-01-21T23:58:50Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T12:29:25Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116870223991038316",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWCiPlgWoAAzQ7X.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWCiPlgWoAAzQ7X.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWCiPlgWoAAzQ7X.jpg",
+          "expanded_url": "https://x.com/lesnums_bonplan/status/2116870223991038316/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 166
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 71,
+      "score_label": "IPS",
+      "matched_terms": [
+        "competitive_position",
+        "competitor_comparison"
+      ]
+    },
+    {
+      "post_id": "2116841932810797456",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/realthyy/status/2116841932810797456",
+      "text": "Paris store X Joybuy ah ouais c’est sérieux tout ça",
+      "original_text": "Paris store X Joybuy ah ouais c’est sérieux tout ça",
+      "links": [],
+      "translation_zh": "Paris store X Joybuy 啊对，这一切是认真的",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Neena",
+      "author_handle": "realthyy",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2117033192603496448/LFtH7SaY_normal.jpg",
+      "author_followers": 15,
+      "author_following": 31,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-07-22T14:59:22Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T10:37:00Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116841932810797456",
+      "conversation_context": {},
+      "language": "fr",
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 39
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116826929512796345",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "company_market",
+      "url": "https://x.com/AylioChineseFC/status/2116826929512796345",
+      "text": "【IMPORTANT UPDATE】☀🍊\n\nGuerlain × Aylio\nOfficial Details and Purchase Guide\n\nJD.com [Guerlain Official Store]\n✈️ International shipping available to Australia, Singapore, Japan, Thailand, South Korea, and more.\n💴Credit card ＆ Debit card ＆ WeChat Pay accepted\n\n🧡Aylio Exclusive Gifts Available from 10:00 Nov 1\n✨ Ranking Events\nEvent 1 | Invite friends to sign up as members\nTime: 10:00 Nov 1 — 23:59 Nov 13\nTOP1–2: Dual autograph X 1\nTOP3–9: Full set photocards X1\nTOP10–20: Abeille Royale sample set X 1\n\nEvent 2 | Purchase ranking to win signed aylio polaroids\nTime: 19:00 Nov 2 — 23:59 Nov 4\nTOP1: Polaroid X 1+ full-size Orchid Eye Cream\nTOP2: polaroid X 1+ full-size Orchid Cream\nTOP3: Polaroid X 1+ full-size Rose Hand Cream\nTOP4–10: Polaroid X 1\n\n🧡Aylio Live Stream Extra\nShare & comment in live chat to win photocards and voice enamel pins\n\n🧡Aylio Picks Gifts Listed（Beijing Time）\n⏰Early access: 10:00 Nov 1 — 18:59 Nov 2\n🗓️Live sale: 19:00 Nov 2 — 23:59 Nov 2\n\n🎁Abeille Royale Youth Watery Oil ¥1190\nPhotocards X 3 (10,000 limit)\n🎁L'Heure Bleue Perfume ¥1230\nPhotocards X 3(10,000 limit)\n🎁Abeille Royale Lotion ¥1250\n Photocards X 3 (10,000 limit)\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\nPhotocards X 3 (10,000 limit) + 1 brooch with 3 brooch charms (800 limit)\n🎁Hydrating Repair Set ¥2440\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n🎁Classic Repair Trio ¥3805\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
+      "original_text": "【IMPORTANT UPDATE】☀🍊\n\nGuerlain × Aylio\nOfficial Details and Purchase Guide\n\nhttps://t.co/QeRs1BsN4k🔍 [Guerlain Official Store]\n✈️ International shipping available to Australia, Singapore, Japan, Thailand, South Korea, and more.\n💴Credit card ＆ Debit card ＆ WeChat Pay accepted\n\n🧡Aylio Exclusive Gifts Available from 10:00 Nov 1\n✨ Ranking Events\nEvent 1 | Invite friends to sign up as members\nTime: 10:00 Nov 1 — 23:59 Nov 13\nTOP1–2: Dual autograph X 1\nTOP3–9: Full set photocards X1\nTOP10–20: Abeille Royale sample set X 1\n\nEvent 2 | Purchase ranking to win signed aylio polaroids\nTime: 19:00 Nov 2 — 23:59 Nov 4\nTOP1: Polaroid X 1+ full-size Orchid Eye Cream\nTOP2: polaroid X 1+ full-size Orchid Cream\nTOP3: Polaroid X 1+ full-size Rose Hand Cream\nTOP4–10: Polaroid X 1\n\n🧡Aylio Live Stream Extra\nShare & comment in live chat to win photocards and voice enamel pins\n\n🧡Aylio Picks Gifts Listed（Beijing Time）\n⏰Early access: 10:00 Nov 1 — 18:59 Nov 2\n🗓️Live sale: 19:00 Nov 2 — 23:59 Nov 2\n\n🎁Abeille Royale Youth Watery Oil ¥1190\nPhotocards X 3 (10,000 limit)\n🎁L'Heure Bleue Perfume ¥1230\nPhotocards X 3(10,000 limit)\n🎁Abeille Royale Lotion ¥1250\n Photocards X 3 (10,000 limit)\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\nPhotocards X 3 (10,000 limit) + 1 brooch with 3 brooch charms (800 limit)\n🎁Hydrating Repair Set ¥2440\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n🎁Classic Repair Trio ¥3805\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
+      "links": [
+        "http://JD.com"
+      ],
+      "translation_zh": "【重要更新】☀🍊\n\nGuerlain × Aylio\n官方详情与购买指南\n\nJD.com【Guerlain 官方店】\n✈️ 可国际配送至澳大利亚、新加坡、日本、泰国、韩国等地。\n💴支持信用卡、借记卡和 WeChat Pay\n\n🧡Aylio 专属赠品将于 11 月 1 日 10:00 起开放\n✨ 排名活动\n活动 1 | 邀请好友注册成为会员\n时间：11 月 1 日 10:00 — 11 月 13 日 23:59\nTOP1–2：双人签名 X 1\nTOP3–9：全套小卡 X1\nTOP10–20：Abeille Royale 试用装套组 X 1\n\n活动 2 | 购买排名赢取签名 aylio 拍立得\n时间：11 月 2 日 19:00 — 11 月 4 日 23:59\nTOP1：拍立得 X 1+ 正装 Orchid Eye Cream\nTOP2：拍立得 X 1+ 正装 Orchid Cream\nTOP3：拍立得 X 1+ 正装 Rose Hand Cream\nTOP4–10：拍立得 X 1\n\n🧡Aylio 直播额外福利\n在直播聊天中分享并评论，有机会赢取小卡和语音珐琅徽章\n\n🧡Aylio Picks 赠品上架（北京时间）\n⏰抢先购：11 月 1 日 10:00 — 11 月 2 日 18:59\n🗓️直播销售：11 月 2 日 19:00 — 11 月 2 日 23:59\n\n🎁Abeille Royale Youth Watery Oil ¥1190\n小卡 X 3（限量 10,000）\n🎁L'Heure Bleue Perfume ¥1230\n小卡 X 3（限量 10,000）\n🎁Abeille Royale Lotion ¥1250\n 小卡 X 3（限量 10,000）\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\n小卡 X 3（限量 10,000）+ 1 枚胸针，附 3 个胸针挂饰（限量 800）\n🎁Hydrating Repair Set ¥2440\n小卡 X 3（限量 10,000）+ 语音珐琅徽章（限量 3,000）\n🎁Classic Repair Trio ¥3805\n小卡 X 3（限量 10,000）+ 语音珐琅徽章（限量 3,000）\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+      "author_name": "AylioOfficialChineseFanclub",
+      "author_handle": "AylioChineseFC",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2078150255053332480/LeQNsuwe_normal.jpg",
+      "author_followers": 3476,
+      "author_following": 17,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-07-17T16:09:00Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T09:37:23Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116826929512796345",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+          "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+          "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+          "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 120,
+        "reposts": 51,
+        "replies": 0,
+        "quotes": 1,
+        "bookmarks": 4,
+        "views": 2238
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": 52,
+      "score_label": "IPS",
+      "matched_terms": [
+        "corporate_context",
+        "company_market"
+      ]
+    },
+    {
+      "post_id": "2116823539613368553",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/teddydilikangqo/status/2116823539613368553",
+      "text": "🔥 DEAL FIND\nFor new Temu app users and bargain hunters — this page is worth a scroll.\nSome Temu items are available at special prices here:\ntemu.to/k\nSearch alp802862 in the app and start hunting.\n#Deals #TemuFinds",
+      "original_text": "🔥 DEAL FIND\nFor new Temu app users and bargain hunters — this page is worth a scroll.\nSome Temu items are available at special prices here:\nhttps://t.co/ZS1XzWojFH\nSearch alp802862 in the app and start hunting.\n#Deals #TemuFinds https://t.co/NO1aNXiQ4S",
+      "links": [
+        "https://temu.to/k/edg8tz4odmz"
+      ],
+      "translation_zh": "🔥 发现优惠\n面向 Temu app 新用户和淘便宜货的人——这个页面值得翻一翻。\n这里有一些 Temu 商品提供特价：\ntemu.to/k\n在 app 中搜索 alp802862，开始淘货吧。\n#Deals #TemuFinds",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "dilikangqo onothando",
+      "author_handle": "teddydilikangqo",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2103822627139710976/EtxHejPO_normal.jpg",
+      "author_followers": 0,
+      "author_following": 19,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-09-26T12:21:59Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T09:23:55Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116823539613368553",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWB3wFNWAAEwYKv.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWB3wFNWAAEwYKv.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWB3wFNWAAEwYKv.jpg",
+          "expanded_url": "https://x.com/teddydilikangqo/status/2116823539613368553/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 1
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116822030842835127",
+      "brand": "primary",
+      "cluster_id": "primary-signal-004",
+      "topic": "fulfillment_risk",
+      "url": "https://x.com/shakabwo/status/2116822030842835127",
+      "text": "商家居然冒充京东平台的人给我打电话给我退全款。京东的规则是只要退款退货完成，客户的评价会自动删除。商家可能是以为我不知道这个规则，冒充平台客服来骗我上当。这商家真是蛮坏的，我只能好好收拾收拾他们了。",
+      "original_text": "商家居然冒充京东平台的人给我打电话给我退全款。京东的规则是只要退款退货完成，客户的评价会自动删除。商家可能是以为我不知道这个规则，冒充平台客服来骗我上当。这商家真是蛮坏的，我只能好好收拾收拾他们了。",
+      "links": [],
+      "translation_zh": "商家居然冒充京东平台的人给我打电话给我退全款。京东的规则是只要退款退货完成，客户的评价会自动删除。商家可能是以为我不知道这个规则，冒充平台客服来骗我上当。这商家真是蛮坏的，我只能好好收拾收拾他们了。",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+      "author_name": "shakabwo",
+      "author_handle": "shakabwo",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1760009656771268608/5IHYn_lk_normal.jpg",
+      "author_followers": 56,
+      "author_following": 585,
+      "author_bio": null,
+      "author_location": "香港",
+      "author_joined_at": "2020-03-12T06:35:14Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T09:17:55Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2114175313446158483",
+      "conversation_id": "2116822030842835127",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 49
+      },
+      "sentiment": "negative",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "fulfillment",
+        "after_sales",
+        "delivery",
+        "fulfillment_risk"
+      ]
+    },
+    {
+      "post_id": "2116816316686332076",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/jon180875/status/2116816316686332076",
+      "text": "✨ BLACK FRIDAY DEAL DROP! ✨\nScore £0 gifts on Temu by tapping temu.to/k and searching alt224754 in the app.\nThen redeem alt247825 and save 40% on your order — with free returns within 90 days! 🔥\n#TemuFinds #TemuDeals #BlackFriday",
+      "original_text": "✨ BLACK FRIDAY DEAL DROP! ✨\nScore £0 gifts on Temu by tapping https://t.co/IuaRFw6YZ5 and searching alt224754 in the app.\nThen redeem alt247825 and save 40% on your order — with free returns within 90 days! 🔥\n#TemuFinds #TemuDeals #BlackFriday",
+      "links": [
+        "https://temu.to/k/eg6qdjkn4d2"
+      ],
+      "translation_zh": "✨ BLACK FRIDAY 优惠来了！✨\n点击 temu.to/k 并在 app 中搜索 alt224754，即可在 Temu 领取 £0 礼品。\n然后兑换 alt247825，你的订单可省 40%——并享受 90 天内免费退货！🔥\n#TemuFinds #TemuDeals #BlackFriday",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "jon southwell",
+      "author_handle": "jon180875",
+      "author_avatar_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "author_followers": 1,
+      "author_following": 3,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2013-11-21T04:38:23Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T08:55:13Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116816316686332076",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 11
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "return",
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116804825312612441",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/Kiraaaa191423/status/2116804825312612441",
+      "text": "@shoptemu #scam #scam Temu my return was delivered over 2 weeks ago and still NO refund. Tracking proves you have it. Refund my money NOW or I dispute the charge. This is theft.",
+      "original_text": "@shoptemu #scam #scam Temu my return was delivered over 2 weeks ago and still NO refund. Tracking proves you have it. Refund my money NOW or I dispute the charge. This is theft.",
+      "links": [],
+      "translation_zh": "@shoptemu #scam #scam Temu，我的退货 2 周多前就已送达，但仍然没有退款。物流跟踪证明你们已经收到了。现在就把钱退给我，否则我会发起拒付。这是盗窃。",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+      "author_name": "Kiraaaa",
+      "author_handle": "Kiraaaa191423",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2069525479007117312/2ZtRjafm_normal.jpg",
+      "author_followers": 3,
+      "author_following": 25,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-04-29T21:41:18Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T08:09:33Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116804825312612441",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 2,
+        "reposts": 2,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 18
+      },
+      "sentiment": "negative",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "refund",
+        "scam",
+        "return",
+        "tracking",
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116802422274236873",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/jielove233/status/2116802422274236873",
+      "text": "说个冷知识： \n京东花200块钱就可以买一个外贸的万能卡 具备翻墙功能，比vpn速度快很多",
+      "original_text": "说个冷知识： \n京东花200块钱就可以买一个外贸的万能卡 具备翻墙功能，比vpn速度快很多 https://t.co/LGzRnoztYy",
+      "links": [],
+      "translation_zh": "说个冷知识： \n京东花200块钱就可以买一个外贸的万能卡 具备翻墙功能，比vpn速度快很多",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "是 阿 杰 吖",
+      "author_handle": "jielove233",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2079584078362509312/mW9iQDBG_normal.jpg",
+      "author_followers": 11081,
+      "author_following": 2592,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2025-04-09T03:06:21Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T08:00:00Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116802422274236873",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HV9ssGja8AAcP3Y.png",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HV9ssGja8AAcP3Y.png",
+          "media_url_https": "https://pbs.twimg.com/media/HV9ssGja8AAcP3Y.png",
+          "expanded_url": "https://x.com/jielove233/status/2116802422274236873/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 8,
+        "reposts": 1,
+        "replies": 7,
+        "quotes": 0,
+        "bookmarks": 5,
+        "views": 6759
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116799344187994194",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/LittleCactus115/status/2116799344187994194",
+      "text": "ของเซอร์ไพรส์ที่หลิงเตรียมไว้แบบลับๆ มาครบหมดแล้ว!\n\nวันที่ 2 พฤศจิกายน เวลา 20:00 น.\nไปที่ Tmall/JD.com\n\nweibo.com/2215894530\n\nSpace7 x LingLing Kwong \n#Space7xLinglingKwong \n#LinglingKwong #หลิงหลิงคอง \n@linglingsirilak",
+      "original_text": "ของเซอร์ไพรส์ที่หลิงเตรียมไว้แบบลับๆ มาครบหมดแล้ว!\n\nวันที่ 2 พฤศจิกายน เวลา 20:00 น.\nไปที่ Tmall/JD.com\n\nhttps://t.co/Z0EXpeJqQw\n\nSpace7 x LingLing Kwong \n#Space7xLinglingKwong \n#LinglingKwong #หลิงหลิงคอง \n@linglingsirilak https://t.co/BzS5xUv2Pr",
+      "links": [
+        "https://weibo.com/2215894530/5360383391172243"
+      ],
+      "translation_zh": "Ling 偷偷准备的惊喜礼物已经全部到齐了！\n\n11月2日 20:00\n前往 Tmall/JD.com\n\nweibo.com/2215894530\n\nSpace7 x LingLing Kwong \n#Space7xLinglingKwong \n#LinglingKwong #หลิงหลิงคอง \n@linglingsirilak",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Little Cactus 🦮🪽🥚🍌🌵",
+      "author_handle": "LittleCactus115",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2074677108908187648/3039Vj4N_normal.jpg",
+      "author_followers": 1066,
+      "author_following": 202,
+      "author_bio": null,
+      "author_location": "อ.เมืองนครปฐม, จ.นครปฐม",
+      "author_joined_at": "2024-09-29T07:30:40Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T07:47:46Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116799344187994194",
+      "conversation_context": {},
+      "language": "th",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWBhvH5bEAAvOFU.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWBhvH5bEAAvOFU.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWBhvH5bEAAvOFU.jpg",
+          "expanded_url": "https://x.com/LittleCactus115/status/2116799344187994194/video/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2116799297429934080/img/h-__H0mViImfz4T_.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2116799297429934080/img/h-__H0mViImfz4T_.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2116799297429934080/img/h-__H0mViImfz4T_.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              9,
+              16
+            ],
+            "duration_millis": 71943,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video-s.twimg.com/amplify_video/2116799297429934080/pl/8UryWZkTGo0gq4PO.m3u8?tag=29"
+              },
+              {
+                "bitrate": 632000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2116799297429934080/vid/avc1/320x568/QhJHVfdQJpv9khNI.mp4?tag=29"
+              },
+              {
+                "bitrate": 950000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2116799297429934080/vid/avc1/480x852/dsbFf56SYwkxRA02.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2116799297429934080/vid/avc1/720x1280/bJ-kdfHl9NCgXlaO.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/LittleCactus115/status/2116799344187994194/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 24,
+        "reposts": 15,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 437
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116792386625916970",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/Kiraaaa191423/status/2116792386625916970",
+      "text": "@shoptemu #temu #scam \nMy return has been with you for over 2 weeks and I still have no refund. This is unacceptable. Process my full refund immediately to my original payment method.",
+      "original_text": "@shoptemu #temu #scam \nMy return has been with you for over 2 weeks and I still have no refund. This is unacceptable. Process my full refund immediately to my original payment method.",
+      "links": [],
+      "translation_zh": "@shoptemu #temu #scam \n我的退货已经在你们那里超过 2 周了，我仍然没有收到退款。这是不可接受的。请立即将我的全额退款退回到我的原始支付方式。",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+      "author_name": "Kiraaaa",
+      "author_handle": "Kiraaaa191423",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2069525479007117312/2ZtRjafm_normal.jpg",
+      "author_followers": 3,
+      "author_following": 25,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-04-29T21:41:18Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T07:20:07Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116792386625916970",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 3,
+        "reposts": 3,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 15
+      },
+      "sentiment": "negative",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "refund",
+        "scam",
+        "return",
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2116783735911952501",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "channel_activity",
+      "url": "https://x.com/aeccesspasstw/status/2116783735911952501",
+      "text": "☀️🍊 Ayden & Elio × GUERLAIN PARIS ✨\n\nThey’re going live together again! 🥰❤️\n\n📅 Nov 2, 2026\n⏰ 7 PM (Taiwan/Beijing Time)\n📍 JD.com | GUERLAIN Official Flagship Store\n\n💙 Don’t miss it!\n\n🔗 3.cn/39T-9dAG\n\n#aydensng #lyusitong #孫政 #呂思瞳 #政瞳",
+      "original_text": "☀️🍊 Ayden &amp; Elio × GUERLAIN PARIS ✨\n\nThey’re going live together again! 🥰❤️\n\n📅 Nov 2, 2026\n⏰ 7 PM (Taiwan/Beijing Time)\n📍 https://t.co/dIKkeBvDMI | GUERLAIN Official Flagship Store\n\n💙 Don’t miss it!\n\n🔗 https://t.co/eahvsn3j16\n\n#aydensng #lyusitong #孫政 #呂思瞳 #政瞳 https://t.co/JsmmtvkACx",
+      "links": [
+        "https://JD.com",
+        "https://3.cn/39T-9dAG"
+      ],
+      "translation_zh": "☀️🍊 Ayden & Elio × GUERLAIN PARIS ✨\n\n他们又要一起直播了！🥰❤️\n\n📅 2026 年 11 月 2 日\n⏰ 晚上 7 点（台湾/北京时间）\n📍 JD.com | GUERLAIN 官方旗舰店\n\n💙 不要错过！\n\n🔗 3.cn/39T-9dAG\n\n#aydensng #lyusitong #孫政 #呂思瞳 #政瞳",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "aeccesspasstw",
+      "author_handle": "aeccesspasstw",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2089710783362109441/KGknF2Ib_normal.jpg",
+      "author_followers": 336,
+      "author_following": 44,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-08-18T12:17:08Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T06:45:45Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116783735911952501",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWBTloxacAAKnXs.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWBTloxacAAKnXs.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWBTloxacAAKnXs.jpg",
+          "expanded_url": "https://x.com/aeccesspasstw/status/2116783735911952501/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 18,
+        "reposts": 4,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 249
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "channel_expansion",
+        "channel_activity"
+      ]
+    },
+    {
+      "post_id": "2116761198167564376",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "channel_activity",
+      "url": "https://x.com/littleuphorians/status/2116761198167564376",
+      "text": "[01.11.2026] Ayden Weibo Update\n\nJoin us on November 2nd at 7 PM in the Guerlain JD.com livestream room for this blues rendezvous.\n\n#政瞳 #aylio",
+      "original_text": "[01.11.2026] Ayden Weibo Update\n\nJoin us on November 2nd at 7 PM in the Guerlain https://t.co/huAfyQAeXa livestream room for this blues rendezvous.\n\n#政瞳 #aylio https://t.co/wbD9Jziu2k",
+      "links": [
+        "https://JD.com"
+      ],
+      "translation_zh": "[01.11.2026] Ayden 微博更新\n\n11 月 2 日晚上 7 点，加入我们在 Guerlain JD.com 直播间的这场蓝色之约。\n\n#政瞳 #aylio",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "𝐠𝐨𝐥𝐝𝐞𝐧 𝐥𝐢𝐧𝐞 —",
+      "author_handle": "littleuphorians",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1945308265694261248/Y4r7tIOU_normal.jpg",
+      "author_followers": 7259,
+      "author_following": 934,
+      "author_bio": null,
+      "author_location": "no mutual interest dni",
+      "author_joined_at": "2017-12-11T01:35:45Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T05:16:11Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116761198167564376",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWA_FfubkAAA7UU.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWA_FfubkAAA7UU.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWA_FfubkAAA7UU.jpg",
+          "expanded_url": "https://x.com/littleuphorians/status/2116761198167564376/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 96,
+        "reposts": 17,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 3,
+        "views": 1686
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "channel_expansion",
+        "channel_activity"
+      ]
+    },
+    {
+      "post_id": "2116734261168664960",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/Jtxccjdbb/status/2116734261168664960",
+      "text": "淘宝京东拼多多现货开卖了\n集体取消预售不用凑单等尾款\n家电手机领券直降最狠\n你购物车清空了吗",
+      "original_text": "淘宝京东拼多多现货开卖了\n集体取消预售不用凑单等尾款\n家电手机领券直降最狠\n你购物车清空了吗",
+      "links": [],
+      "translation_zh": "淘宝京东拼多多现货开卖了\n集体取消预售不用凑单等尾款\n家电手机领券直降最狠\n你购物车清空了吗",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "书傲",
+      "author_handle": "Jtxccjdbb",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2089394104312758274/6OV_BE3D_normal.jpg",
+      "author_followers": 3624,
+      "author_following": 3523,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-05-09T12:48:23Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T03:29:09Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116734261168664960",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 4,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 202
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116734141173739822",
+      "brand": "primary",
+      "cluster_id": "primary-signal-005",
+      "topic": "general_observation",
+      "url": "https://x.com/bluefrsly/status/2116734141173739822",
+      "text": "ad yg jd seller dan paketnya perna diretur gk… mau nanya nanya",
+      "original_text": "ad yg jd seller dan paketnya perna diretur gk… mau nanya nanya",
+      "links": [],
+      "translation_zh": "有没有当 seller 然后包裹曾经被退回的人啊……想问问",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "𝑏𝑖⋆",
+      "author_handle": "bluefrsly",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2115007616292413441/AkpePT_-_normal.jpg",
+      "author_followers": 3127,
+      "author_following": 3082,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2023-11-25T17:35:54Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T03:28:40Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116734141173739822",
+      "conversation_context": {},
+      "language": "in",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 93
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 61,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2116732572101411090",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "channel_activity",
+      "url": "https://x.com/FreenBeckbabe/status/2116732572101411090",
+      "text": "Join us for a livestream with Space 7 on November 2nd via the Tmall and JD.com platforms! We have plenty of surprise gifts in store for everyone!! 🤍\n\n#LingingKwong",
+      "original_text": "Join us for a livestream with Space 7 on November 2nd via the Tmall and https://t.co/Dd1PHInicL platforms! We have plenty of surprise gifts in store for everyone!! 🤍\n\n#LingingKwong https://t.co/DXV2PED1Pj",
+      "links": [
+        "https://JD.com"
+      ],
+      "translation_zh": "11月2日通过 Tmall 和 JD.com 平台，来和我们一起参加 Space 7 的直播吧！我们为大家准备了很多惊喜礼物！！🤍\n\n#LingingKwong",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Friendly Siri 🤓",
+      "author_handle": "FreenBeckbabe",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2115240546151374848/pxFJ8BxS_normal.jpg",
+      "author_followers": 8705,
+      "author_following": 178,
+      "author_bio": null,
+      "author_location": "home 🏠",
+      "author_joined_at": "2023-02-06T04:38:54Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T03:22:26Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116732572101411090",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2116732512441700352/img/1uk0tlb5fngAChR1.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2116732512441700352/img/1uk0tlb5fngAChR1.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2116732512441700352/img/1uk0tlb5fngAChR1.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              3,
+              5
+            ],
+            "duration_millis": 45603,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video-s.twimg.com/amplify_video/2116732512441700352/pl/uSy7RsWSnK59sz4E.m3u8?tag=29"
+              },
+              {
+                "bitrate": 632000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2116732512441700352/vid/avc1/320x532/SFd_YzJARbWO31a4.mp4?tag=29"
+              },
+              {
+                "bitrate": 950000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2116732512441700352/vid/avc1/480x800/xH8Xq30-JzNS2MP3.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2116732512441700352/vid/avc1/720x1200/TkX0yME-RuP8ew8a.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/FreenBeckbabe/status/2116732572101411090/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 21,
+        "reposts": 2,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 411
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "channel_expansion",
+        "channel_activity"
+      ]
+    },
+    {
+      "post_id": "2116728808779010258",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "channel_activity",
+      "url": "https://x.com/yumi_dropbydrop/status/2116728808779010258",
+      "text": "📢GUERLAIN Update \n\n📺ライブ配信\n📅11月2日　20:00(JST)\n📍京東（JD.com\n\n商品や特典等の詳細も出てます✨\n楽しみ😋\n\n#Aylio #政瞳",
+      "original_text": "📢GUERLAIN Update \n\n📺ライブ配信\n📅11月2日　20:00(JST)\n📍京東（https://t.co/hdJjNdI8wA）娇兰京东自营官方旗舰店\n\n商品や特典等の詳細も出てます✨\n楽しみ😋\n\n#Aylio #政瞳 https://t.co/W9a7uCUsY9",
+      "links": [
+        "https://JD.com"
+      ],
+      "translation_zh": "📢GUERLAIN 更新\n\n📺直播\n📅11月2日 20:00（JST）\n📍京东（JD.com\n\n商品和特典等详情也已经公布了✨\n好期待😋\n\n#Aylio #政瞳",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "YUMI",
+      "author_handle": "yumi_dropbydrop",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1929128859582316544/-SGm8aSs_normal.jpg",
+      "author_followers": 599,
+      "author_following": 351,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2022-08-14T12:55:02Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T03:07:29Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116728808779010258",
+      "conversation_context": {},
+      "language": "ja",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWAfXyNbgAAejC_.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWAfXyNbgAAejC_.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWAfXyNbgAAejC_.jpg",
+          "expanded_url": "https://x.com/yumi_dropbydrop/status/2116728808779010258/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWAfXyNacAAM2ll.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWAfXyNacAAM2ll.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWAfXyNacAAM2ll.jpg",
+          "expanded_url": "https://x.com/yumi_dropbydrop/status/2116728808779010258/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWAfXyQagAAQYic.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWAfXyQagAAQYic.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWAfXyQagAAQYic.jpg",
+          "expanded_url": "https://x.com/yumi_dropbydrop/status/2116728808779010258/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWAfXyNbcAAdJkO.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWAfXyNbcAAdJkO.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWAfXyNbcAAdJkO.jpg",
+          "expanded_url": "https://x.com/yumi_dropbydrop/status/2116728808779010258/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 76,
+        "reposts": 15,
+        "replies": 0,
+        "quotes": 1,
+        "bookmarks": 5,
+        "views": 2706
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "channel_expansion",
+        "channel_activity"
+      ]
+    },
+    {
+      "post_id": "2116717133346611261",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "channel_activity",
+      "url": "https://x.com/aeccesspassph/status/2116717133346611261",
+      "text": "[261101] GUERLAIN法国娇兰 WEIBO\n\nSPECIAL LIVE STREAM ANNOUNCEMENT:\n\nJoin Guerlain Friends of the Brand Sun Zheng (Ayden) and Lü Sitong for an exclusive romantic twilight blue rendezvous!\n\n​🗓 Date: November 2\n⏰ Time: 19:00 CST\n📍 Where: Guerlain JD.com Official Flagship Store\n\n👉weibo.com/1874305853\n\n#aylio | #政瞳 #aydensng | #孙政 #lyusitong | #吕思瞳",
+      "original_text": "[261101] GUERLAIN法国娇兰 WEIBO\n\nSPECIAL LIVE STREAM ANNOUNCEMENT:\n\nJoin Guerlain Friends of the Brand Sun Zheng (Ayden) and Lü Sitong for an exclusive romantic twilight blue rendezvous!\n\n​🗓 Date: November 2\n⏰ Time: 19:00 CST\n📍 Where: Guerlain https://t.co/P7gUaQOzlo Official Flagship Store\n\n👉https://t.co/63UgCK7hyF\n\n#aylio | #政瞳 #aydensng | #孙政 #lyusitong | #吕思瞳",
+      "links": [
+        "http://JD.com",
+        "https://weibo.com/1874305853/5360383168086590"
+      ],
+      "translation_zh": "[261101] GUERLAIN法国娇兰 WEIBO\n\n特别直播公告：\n\n与 Guerlain 品牌挚友 Sun Zheng（Ayden）和 Lü Sitong 一起，参加一场专属的浪漫暮光蓝之约！\n\n​🗓 日期：11 月 2 日\n⏰ 时间：19:00 CST\n📍 地点：Guerlain JD.com 官方旗舰店\n\n👉weibo.com/1874305853\n\n#aylio | #政瞳 #aydensng | #孙政 #lyusitong | #吕思瞳",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "AEccesspass PH 🇵🇭 | Little Pillows Philippines",
+      "author_handle": "aeccesspassph",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2082303635065806848/4kr68Zpa_normal.jpg",
+      "author_followers": 645,
+      "author_following": 13,
+      "author_bio": null,
+      "author_location": "philippine",
+      "author_joined_at": "2026-07-23T14:02:57Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T02:21:05Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116717133346611261",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWAXAybbcAAiQ8Y.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWAXAybbcAAiQ8Y.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWAXAybbcAAiQ8Y.jpg",
+          "expanded_url": "https://x.com/aeccesspassph/status/2116717133346611261/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 96,
+        "reposts": 23,
+        "replies": 0,
+        "quotes": 3,
+        "bookmarks": 4,
+        "views": 1796
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "channel_expansion",
+        "channel_activity"
+      ]
+    },
+    {
+      "post_id": "2116716474480123909",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "channel_activity",
+      "url": "https://x.com/littleuphorians/status/2116716474480123909",
+      "text": "[01.11.2026] GUERLAIN Weibo Update\n\nJoin us on November 2nd at 7 PM for live stream from Guerlain's official flagship store on JD.com Follow Guerlain brand ambassador Ayden and Elio to experience the romance of blue twilight and embark on a new chapter.\n\nGuerlain invites you to collect fragments of the \"Blue\" design, explore the exceptional revitalizing power of the Abeille Royale collection, and capture the delightful moments of the Blue Collection! \n\nParticipate in the live stream's interactive surprises and win autographed gifts Ayden & Elio! Pre-register now via the live stream link to join this blue-themed rendezvous. We'll see you there! \n\n#政瞳 #aylio",
+      "original_text": "[01.11.2026] GUERLAIN Weibo Update\n\nJoin us on November 2nd at 7 PM for live stream from Guerlain's official flagship store on https://t.co/HN237c8fgI. Follow Guerlain brand ambassador Ayden and Elio to experience the romance of blue twilight and embark on a new chapter.\n\nGuerlain invites you to collect fragments of the \"Blue\" design, explore the exceptional revitalizing power of the Abeille Royale collection, and capture the delightful moments of the Blue Collection! \n\nParticipate in the live stream's interactive surprises and win autographed gifts Ayden & Elio! Pre-register now via the live stream link to join this blue-themed rendezvous. We'll see you there! \n\n#政瞳 #aylio",
+      "links": [
+        "http://JD.com"
+      ],
+      "translation_zh": "[01.11.2026] GUERLAIN 微博更新\n\n11 月 2 日晚上 7 点，加入我们在 JD.com 上 Guerlain 官方旗舰店的直播。跟随 Guerlain 品牌大使 Ayden 和 Elio，一同感受蓝色暮光的浪漫，开启全新篇章。\n\nGuerlain 邀请你收集“Blue”设计碎片，探索 Abeille Royale 系列卓越的焕活力量，并捕捉 Blue Collection 的愉悦时刻！\n\n参与直播互动惊喜，赢取 Ayden & Elio 的签名礼物！现在通过直播链接预约，加入这场蓝色主题之约。我们到时见！\n\n#政瞳 #aylio",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "𝐠𝐨𝐥𝐝𝐞𝐧 𝐥𝐢𝐧𝐞 —",
+      "author_handle": "littleuphorians",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1945308265694261248/Y4r7tIOU_normal.jpg",
+      "author_followers": 7259,
+      "author_following": 934,
+      "author_bio": null,
+      "author_location": "no mutual interest dni",
+      "author_joined_at": "2017-12-11T01:35:45Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T02:18:28Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116716474480123909",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+          "expanded_url": "https://x.com/littleuphorians/status/2116716474480123909/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 158,
+        "reposts": 40,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 6,
+        "views": 1721
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "channel_expansion",
+        "channel_activity"
+      ]
+    },
+    {
+      "post_id": "2116716219101499738",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "channel_activity",
+      "url": "https://x.com/LiuYuning_ID/status/2116716219101499738",
+      "text": "[261101] LYN Studio Weibo Update \n\nLiu Yuning Schedule November 2026\n11/05 Brand Livestream (JD.com 1111)\n11/10-11 Variety Show Recording (#CrushOfMusic 3)\n11/17-18 Variety Show Recording (Crush Of Music 3)\n\n(Jadwal lain adalah non-publik, perubahan akan diinfokan selanjutnya)\n\n#LiuYuning #刘宇宁 #摩登兄弟刘宇宁 #LiuYuningIndonesia #京东 #音乐缘计划",
+      "original_text": "[261101] LYN Studio Weibo Update \n\nLiu Yuning Schedule November 2026\n11/05 Brand Livestream (https://t.co/Br308bDep7 1111)\n11/10-11 Variety Show Recording (#CrushOfMusic 3)\n11/17-18 Variety Show Recording (Crush Of Music 3)\n\n(Jadwal lain adalah non-publik, perubahan akan diinfokan selanjutnya)\n\n#LiuYuning #刘宇宁 #摩登兄弟刘宇宁 #LiuYuningIndonesia #京东 #音乐缘计划",
+      "links": [
+        "http://JD.com"
+      ],
+      "translation_zh": "[261101] LYN Studio 微博更新\n\nLiu Yuning 2026 年 11 月日程\n11/05 品牌直播（JD.com 1111）\n11/10-11 综艺节目录制（#CrushOfMusic 3）\n11/17-18 综艺节目录制（Crush Of Music 3）\n\n（其他日程为非公开，如有变动将后续通知）\n\n#LiuYuning #刘宇宁 #摩登兄弟刘宇宁 #LiuYuningIndonesia #京东 #音乐缘计划",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Liu Yuning Indonesia 💛 刘宇宁",
+      "author_handle": "LiuYuning_ID",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2050256707176325120/FJc2F3bQ_normal.jpg",
+      "author_followers": 1467,
+      "author_following": 15,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-07-29T10:35:04Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T02:17:27Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116716219101499738",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWAWLdJbUAAvLP8.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWAWLdJbUAAvLP8.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWAWLdJbUAAvLP8.jpg",
+          "expanded_url": "https://x.com/LiuYuning_ID/status/2116716219101499738/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 18,
+        "reposts": 2,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 448
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "channel_expansion",
+        "channel_activity"
+      ]
+    },
+    {
+      "post_id": "2116715004565369171",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "channel_activity",
+      "url": "https://x.com/TongTongAyden/status/2116715004565369171",
+      "text": "งานคู่ งานใหม่มาละ ปังมาก!!👏❤️‍🔥\nยินดีกับ #AydenSng และ #LyuSitong ในฐานะแบรนด์แอมบาสเดอร์ของ Guerlain ล่าสุด\nอย่าพลาดการปรากฏตัวร่วมกันของพวกเขาในไลฟ์สตรีมบน JD.com ในวันที่ 11/2! ✨\n\n#政瞳 #AyLio",
+      "original_text": "งานคู่ งานใหม่มาละ ปังมาก!!👏❤️‍🔥\nยินดีกับ #AydenSng และ #LyuSitong ในฐานะแบรนด์แอมบาสเดอร์ของ Guerlain ล่าสุด\nอย่าพลาดการปรากฏตัวร่วมกันของพวกเขาในไลฟ์สตรีมบน https://t.co/t4xvbA35rg ในวันที่ 11/2! ✨\n\n#政瞳 #AyLio https://t.co/ORKb0h0Xy4",
+      "links": [
+        "https://JD.com"
+      ],
+      "translation_zh": "双人工作，新合作来了，太厉害了!!👏❤️‍🔥\n恭喜 #AydenSng 和 #LyuSitong 成为 Guerlain 最新品牌大使\n不要错过他们 11/2 在 JD.com 直播中的共同亮相！✨\n\n#政瞳 #AyLio",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "🌻TongTong🌻",
+      "author_handle": "TongTongAyden",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2080269221850927105/_FXBFKsp_normal.jpg",
+      "author_followers": 155,
+      "author_following": 34,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-07-23T12:29:36Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T02:12:38Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116715004565369171",
+      "conversation_context": {},
+      "language": "th",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWAVEwWbMAAUHNP.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWAVEwWbMAAUHNP.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWAVEwWbMAAUHNP.jpg",
+          "expanded_url": "https://x.com/TongTongAyden/status/2116715004565369171/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 63,
+        "reposts": 25,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 803
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "channel_expansion",
+        "channel_activity"
+      ]
+    },
+    {
+      "post_id": "2116714666407698545",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "channel_activity",
+      "url": "https://x.com/eliolst99/status/2116714666407698545",
+      "text": "Guerlain法国娇兰 weibo:\n\nOn November 2 at 7:00 PM, join us in the official Guerlain JD.com flagship store livestream. Follow in the footsteps of Guerlain Brand Ambassadors 孙政ayden and 吕思瞳, as we immerse ourselves in the romantic hues of midnight blues and embark on a brand-new chapter. Guerlain invites you to piece together fragments of \"orchid\" imagery, discover the exceptional revitalizing power of the Royal Jelly Collection, and capture the carefree moments of the Blue Collection. Participate in exciting interactive activities during the livestream and win exclusive gifts personally signed by Sun Zheng and Lü Sitong! Reserve your spot now via the livestream link, and let's meet for this enchanting rendezvous-see you there!\n\nweibo.com/1874305853\n\n#aylio",
+      "original_text": "Guerlain法国娇兰 weibo:\n\nOn November 2 at 7:00 PM, join us in the official Guerlain https://t.co/Nz9WYs9DSN flagship store livestream. Follow in the footsteps of Guerlain Brand Ambassadors 孙政ayden and 吕思瞳, as we immerse ourselves in the romantic hues of midnight blues and embark on a brand-new chapter. Guerlain invites you to piece together fragments of \"orchid\" imagery, discover the exceptional revitalizing power of the Royal Jelly Collection, and capture the carefree moments of the Blue Collection. Participate in exciting interactive activities during the livestream and win exclusive gifts personally signed by Sun Zheng and Lü Sitong! Reserve your spot now via the livestream link, and let's meet for this enchanting rendezvous-see you there!\n\nhttps://t.co/VkubeAuQ6Y\n\n#aylio",
+      "links": [
+        "http://JD.com",
+        "https://weibo.com/1874305853/5360383168086590"
+      ],
+      "translation_zh": "Guerlain法国娇兰 微博：\n\n11月2日晚上7:00，欢迎来到 Guerlain法国娇兰 JD.com 官方旗舰店直播间。跟随 Guerlain 品牌大使 孙政ayden 和 吕思瞳 的脚步，一同沉浸在午夜蓝的浪漫色调中，开启全新篇章。Guerlain 邀请你拼合“兰花”意象碎片，探索 Royal Jelly Collection 的卓越焕活力量，并捕捉 Blue Collection 的自在瞬间。参与直播中的精彩互动活动，就有机会赢取由孙政和吕思瞳亲笔签名的专属礼品！现在就通过直播链接预约名额，让我们相约这场迷人的邂逅——到时见！\n\nweibo.com/1874305853\n\n#aylio",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "ElioLST",
+      "author_handle": "eliolst99",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2088417504318328832/pi4a3ITQ_normal.jpg",
+      "author_followers": 358,
+      "author_following": 40,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-08-15T00:05:59Z",
+      "author_verified": false,
+      "created_at": "2026-11-01T02:11:17Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2116714666407698545",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWAUw22bgAApikX.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWAUw22bgAApikX.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWAUw22bgAApikX.jpg",
+          "expanded_url": "https://x.com/eliolst99/status/2116714666407698545/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 137,
+        "reposts": 56,
+        "replies": 3,
+        "quotes": 2,
+        "bookmarks": 3,
+        "views": 2432
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 70,
+      "score_label": "IPS",
+      "matched_terms": [
+        "channel_expansion",
+        "channel_activity"
+      ]
+    }
+  ],
+  "summary_only": false,
+  "clusters": [
+    {
+      "cluster_id": "primary-signal-003",
+      "title": "Competitor comparison and substitution signals",
+      "summary": "2 related posts compare 主品牌 with other shopping platforms.",
+      "summary_zh": "相关讨论把主品牌与其他购物平台进行价格、配送或品类对比。",
+      "lead_post": {
+        "post_id": "2116870336213893324",
+        "created_at": "2026-11-01T12:29:52Z",
+        "author": {
+          "id": "491425611",
+          "handle": "lesnums",
+          "name": "Les Numériques",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1635603257870434306/4aZrFj1Y_normal.jpg",
+          "followers": 153516,
+          "following": 401,
+          "bio": null,
+          "location": "Dans nos labos 🔬",
+          "joined_at": "2012-02-13T16:31:24Z",
+          "verified": false
+        },
+        "author_name": "Les Numériques",
+        "author_handle": "lesnums",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1635603257870434306/4aZrFj1Y_normal.jpg",
+        "author_followers": 153516,
+        "author_following": 401,
+        "author_bio": null,
+        "author_location": "Dans nos labos 🔬",
+        "author_joined_at": "2012-02-13T16:31:24Z",
+        "author_verified": false,
+        "url": "https://x.com/lesnums/status/2116870336213893324",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116870336213893324",
+        "conversation_context": {},
+        "language": "fr",
+        "text": "🔗 https://t.co/ZsnHw9nXmV\nLe smartphone Samsung Galaxy A57 5G s'affiche aujourd'hui à 369,00 € chez Joybuy. C'est actuellement le meilleur rapport qualité / prix de notre comparatif, selon les 239 modèles testés dans notre laboratoire. https://t.co/ZsnHw9nXmV",
+        "clean_text": "🔗 l.lesnumeriques.com/biD\nLe smartphone Samsung Galaxy A57 5G s'affiche aujourd'hui à 369,00 € chez Joybuy. C'est actuellement le meilleur rapport qualité / prix de notre comparatif, selon les 239 modèles testés dans notre laboratoire. l.lesnumeriques.com/biD",
+        "links": [
+          "https://l.lesnumeriques.com/biD",
+          "https://l.lesnumeriques.com/biD"
+        ],
+        "translation_zh": "🔗 l.lesnumeriques.com/biD\nSamsung Galaxy A57 5G 智能手机今天在 Joybuy 上的价格为 369,00 €。根据我们实验室测试的 239 款机型，它目前是我们评测对比中性价比最高的一款。l.lesnumeriques.com/biD",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 641
+        },
+        "media": []
+      },
+      "topic": "competitor_comparison",
+      "risk_types": [],
+      "opportunity_types": [
+        "competitive_position"
+      ],
+      "post_count": 2,
+      "first_seen_at": "2026-11-01T12:29:25Z",
+      "last_seen_at": "2026-11-01T12:29:52Z",
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 807,
+        "max_author_followers": 153516,
+        "public_interactions": 0
+      },
+      "score": {
+        "ips": 71,
+        "level": "medium",
+        "brand_relevance": 90,
+        "risk_or_opportunity_intensity": 68,
+        "current_impact": 50,
+        "future_potential": 73,
+        "credibility": 86,
+        "business_impact": 64,
+        "urgency": 57,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "竞品对照观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "competitive_position"
+        ],
+        "special_flags": [
+          "high_influence_account"
+        ],
+        "explanation": "用户将主品牌与其他平台对照，适合观察价格、配送或品类竞争位置。综合优先级 71。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 2,
+        "amplifiers": 1,
+        "latest": 2,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-001",
+      "title": "Channel, partner and campaign activity",
+      "summary": "9 related posts discuss channel, partner or campaign activity.",
+      "summary_zh": "相关讨论涉及渠道合作、站点更新、直播活动或市场推广。",
+      "lead_post": {
+        "post_id": "2116716474480123909",
+        "created_at": "2026-11-01T02:18:28Z",
+        "author": {
+          "id": "940032320899186688",
+          "handle": "littleuphorians",
+          "name": "𝐠𝐨𝐥𝐝𝐞𝐧 𝐥𝐢𝐧𝐞 —",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1945308265694261248/Y4r7tIOU_normal.jpg",
+          "followers": 7259,
+          "following": 934,
+          "bio": null,
+          "location": "no mutual interest dni",
+          "joined_at": "2017-12-11T01:35:45Z",
+          "verified": false
+        },
+        "author_name": "𝐠𝐨𝐥𝐝𝐞𝐧 𝐥𝐢𝐧𝐞 —",
+        "author_handle": "littleuphorians",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1945308265694261248/Y4r7tIOU_normal.jpg",
+        "author_followers": 7259,
+        "author_following": 934,
+        "author_bio": null,
+        "author_location": "no mutual interest dni",
+        "author_joined_at": "2017-12-11T01:35:45Z",
+        "author_verified": false,
+        "url": "https://x.com/littleuphorians/status/2116716474480123909",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116716474480123909",
+        "conversation_context": {},
+        "language": "en",
+        "text": "[01.11.2026] GUERLAIN Weibo Update\n\nJoin us on November 2nd at 7 PM for live stream from Guerlain's official flagship store on https://t.co/HN237c8fgI. Follow Guerlain brand ambassador Ayden and Elio to experience the romance of blue twilight and embark on a new chapter.\n\nGuerlain invites you to collect fragments of the \"Blue\" design, explore the exceptional revitalizing power of the Abeille Royale collection, and capture the delightful moments of the Blue Collection! \n\nParticipate in the live stream's interactive surprises and win autographed gifts Ayden & Elio! Pre-register now via the live stream link to join this blue-themed rendezvous. We'll see you there! \n\n#政瞳 #aylio",
+        "clean_text": "[01.11.2026] GUERLAIN Weibo Update\n\nJoin us on November 2nd at 7 PM for live stream from Guerlain's official flagship store on JD.com Follow Guerlain brand ambassador Ayden and Elio to experience the romance of blue twilight and embark on a new chapter.\n\nGuerlain invites you to collect fragments of the \"Blue\" design, explore the exceptional revitalizing power of the Abeille Royale collection, and capture the delightful moments of the Blue Collection! \n\nParticipate in the live stream's interactive surprises and win autographed gifts Ayden & Elio! Pre-register now via the live stream link to join this blue-themed rendezvous. We'll see you there! \n\n#政瞳 #aylio",
+        "links": [
+          "http://JD.com"
+        ],
+        "translation_zh": "[01.11.2026] GUERLAIN 微博更新\n\n11 月 2 日晚上 7 点，加入我们在 JD.com 上 Guerlain 官方旗舰店的直播。跟随 Guerlain 品牌大使 Ayden 和 Elio，一同感受蓝色暮光的浪漫，开启全新篇章。\n\nGuerlain 邀请你收集“Blue”设计碎片，探索 Abeille Royale 系列卓越的焕活力量，并捕捉 Blue Collection 的愉悦时刻！\n\n参与直播互动惊喜，赢取 Ayden & Elio 的签名礼物！现在通过直播链接预约，加入这场蓝色主题之约。我们到时见！\n\n#政瞳 #aylio",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 158,
+          "reposts": 40,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 6,
+          "views": 1721
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWAWacAbEAEYvcz.jpg",
+            "expanded_url": "https://x.com/littleuphorians/status/2116716474480123909/photo/1"
+          }
+        ]
+      },
+      "topic": "channel_activity",
+      "risk_types": [],
+      "opportunity_types": [
+        "channel_expansion"
+      ],
+      "post_count": 9,
+      "first_seen_at": "2026-11-01T02:11:17Z",
+      "last_seen_at": "2026-11-01T06:45:45Z",
+      "metrics": {
+        "total_likes": 683,
+        "total_reposts": 184,
+        "total_replies": 4,
+        "total_quotes": 6,
+        "total_bookmarks": 25,
+        "total_views": 12252,
+        "max_author_followers": 8705,
+        "public_interactions": 877
+      },
+      "score": {
+        "ips": 70,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 54,
+        "current_impact": 60,
+        "future_potential": 70,
+        "credibility": 76,
+        "business_impact": 58,
+        "urgency": 51,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "渠道观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "channel_expansion"
+        ],
+        "special_flags": [],
+        "explanation": "渠道、合作或活动信息体现市场扩展动向，建议作为背景信号观察。综合优先级 70。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 3,
+        "amplifiers": 0,
+        "latest": 3,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-004",
+      "title": "Fulfillment and after-sales risk discussion",
+      "summary": "1 related posts discuss refund, return, delivery or after-sales issues.",
+      "summary_zh": "相关讨论涉及退款、退货、配送或售后体验风险。",
+      "lead_post": {
+        "post_id": "2116822030842835127",
+        "created_at": "2026-11-01T09:17:55Z",
+        "author": {
+          "id": "1237990477367926785",
+          "handle": "shakabwo",
+          "name": "shakabwo",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1760009656771268608/5IHYn_lk_normal.jpg",
+          "followers": 56,
+          "following": 585,
+          "bio": null,
+          "location": "香港",
+          "joined_at": "2020-03-12T06:35:14Z",
+          "verified": false
+        },
+        "author_name": "shakabwo",
+        "author_handle": "shakabwo",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1760009656771268608/5IHYn_lk_normal.jpg",
+        "author_followers": 56,
+        "author_following": 585,
+        "author_bio": null,
+        "author_location": "香港",
+        "author_joined_at": "2020-03-12T06:35:14Z",
+        "author_verified": false,
+        "url": "https://x.com/shakabwo/status/2116822030842835127",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": "2114175313446158483",
+        "conversation_id": "2116822030842835127",
+        "conversation_context": {},
+        "language": "zh",
+        "text": "商家居然冒充京东平台的人给我打电话给我退全款。京东的规则是只要退款退货完成，客户的评价会自动删除。商家可能是以为我不知道这个规则，冒充平台客服来骗我上当。这商家真是蛮坏的，我只能好好收拾收拾他们了。",
+        "clean_text": "商家居然冒充京东平台的人给我打电话给我退全款。京东的规则是只要退款退货完成，客户的评价会自动删除。商家可能是以为我不知道这个规则，冒充平台客服来骗我上当。这商家真是蛮坏的，我只能好好收拾收拾他们了。",
+        "links": [],
+        "translation_zh": "商家居然冒充京东平台的人给我打电话给我退全款。京东的规则是只要退款退货完成，客户的评价会自动删除。商家可能是以为我不知道这个规则，冒充平台客服来骗我上当。这商家真是蛮坏的，我只能好好收拾收拾他们了。",
+        "translation_status": "source_chinese",
+        "summary_zh": "用户讨论退款进度、支付或售后处理问题。",
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 49
+        },
+        "media": []
+      },
+      "topic": "fulfillment_risk",
+      "risk_types": [
+        "fulfillment",
+        "after_sales",
+        "delivery"
+      ],
+      "opportunity_types": [],
+      "post_count": 1,
+      "first_seen_at": "2026-11-01T09:17:55Z",
+      "last_seen_at": "2026-11-01T09:17:55Z",
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 49,
+        "max_author_followers": 56,
+        "public_interactions": 0
+      },
+      "score": {
+        "ips": 63,
+        "level": "medium",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 78,
+        "current_impact": 25,
+        "future_potential": 50,
+        "credibility": 66,
+        "business_impact": 86,
+        "urgency": 81,
+        "sentiment": "negative",
+        "confidence": 0.81,
+        "recommended_action": "观察",
+        "risk_labels": [
+          "fulfillment",
+          "after_sales",
+          "delivery"
+        ],
+        "opportunity_labels": [],
+        "special_flags": [],
+        "explanation": "退款议题直接影响信任与支付体验，当前影响力 25，未来发酵潜力 50，可信度 66。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 1,
+        "popular": 1,
+        "amplifiers": 0,
+        "latest": 1,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 1
+      }
+    },
+    {
+      "cluster_id": "primary-signal-005",
+      "title": "General 主品牌 overseas shopping discussion",
+      "summary": "14 related posts discuss 主品牌 overseas shopping context.",
+      "summary_zh": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "lead_post": {
+        "post_id": "2116930913812578367",
+        "created_at": "2026-11-01T16:30:35Z",
+        "author": {
+          "id": "963823446",
+          "handle": "Vanilleotter",
+          "name": "~ 🫧 Gwendolyn 💧~",
+          "avatar_url": "https://pbs.twimg.com/profile_images/2114990606850162689/qpYfiO3I_normal.jpg",
+          "followers": 870,
+          "following": 976,
+          "bio": null,
+          "location": null,
+          "joined_at": "2012-11-22T07:54:12Z",
+          "verified": false
+        },
+        "author_name": "~ 🫧 Gwendolyn 💧~",
+        "author_handle": "Vanilleotter",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2114990606850162689/qpYfiO3I_normal.jpg",
+        "author_followers": 870,
+        "author_following": 976,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2012-11-22T07:54:12Z",
+        "author_verified": false,
+        "url": "https://x.com/Vanilleotter/status/2116930913812578367",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116930913812578367",
+        "conversation_context": {},
+        "language": "de",
+        "text": "Ich hab das erste mal bei Joybuy gekauft, das soll Morgen schon da sein O.O\nHab mir Kewpie Mayo, Sojasoße und sowas geholt.\nBin mal total gespannt, hat da schonmal jemand bestellt?",
+        "clean_text": "Ich hab das erste mal bei Joybuy gekauft, das soll Morgen schon da sein O.O\nHab mir Kewpie Mayo, Sojasoße und sowas geholt.\nBin mal total gespannt, hat da schonmal jemand bestellt?",
+        "links": [],
+        "translation_zh": "我第一次在 Joybuy 买东西，据说明天就能到了 O.O\n我买了 Kewpie 蛋黄酱、酱油之类的东西。\n我真的挺期待的，有人已经在那里下过单吗？",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 12,
+          "reposts": 0,
+          "replies": 5,
+          "quotes": 0,
+          "bookmarks": 2,
+          "views": 1764
+        },
+        "media": []
+      },
+      "topic": "general_observation",
+      "risk_types": [],
+      "opportunity_types": [],
+      "post_count": 14,
+      "first_seen_at": "2026-11-01T03:28:40Z",
+      "last_seen_at": "2026-11-01T20:02:29Z",
+      "metrics": {
+        "total_likes": 53,
+        "total_reposts": 18,
+        "total_replies": 18,
+        "total_quotes": 2,
+        "total_bookmarks": 8,
+        "total_views": 9845,
+        "max_author_followers": 11081,
+        "public_interactions": 91
+      },
+      "score": {
+        "ips": 61,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 40,
+        "current_impact": 38,
+        "future_potential": 60,
+        "credibility": 86,
+        "business_impact": 42,
+        "urgency": 41,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "观察",
+        "risk_labels": [],
+        "opportunity_labels": [],
+        "special_flags": [],
+        "explanation": "该情报与 主品牌 海外购物相关，当前综合优先级为 61。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 3,
+        "amplifiers": 0,
+        "latest": 3,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-006",
+      "title": "Positive shopping experience around 主品牌",
+      "summary": "1 related posts praise price, delivery speed or buying experience.",
+      "summary_zh": "相关讨论体现价格、配送或购物体验上的正向口碑。",
+      "lead_post": {
+        "post_id": "2116908051622199370",
+        "created_at": "2026-11-01T14:59:44Z",
+        "author": {
+          "id": "1759931914276757504",
+          "handle": "Alice_changg",
+          "name": "رادیو جیبی",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1966529078220976129/8tibQOBE_normal.jpg",
+          "followers": 21,
+          "following": 89,
+          "bio": null,
+          "location": "Berlin, Germany",
+          "joined_at": "2024-02-20T13:24:49Z",
+          "verified": false
+        },
+        "author_name": "رادیو جیبی",
+        "author_handle": "Alice_changg",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1966529078220976129/8tibQOBE_normal.jpg",
+        "author_followers": 21,
+        "author_following": 89,
+        "author_bio": null,
+        "author_location": "Berlin, Germany",
+        "author_joined_at": "2024-02-20T13:24:49Z",
+        "author_verified": false,
+        "url": "https://x.com/Alice_changg/status/2116908051622199370",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116908051622199370",
+        "conversation_context": {},
+        "language": "fa",
+        "text": "این ژل آبرسان ژاپنی Naturie رو به توصیه یه دوست ژاپنیم گرفتم و واقعاً دوستش دارم. بین آبرسان‌هایی که اخیراً امتحان کردم، این یکی هم خیلی سبکه، هم خوب آبرسانی می‌کنه و هم قیمتش عالیه.\n\nاگه هلند یا آلمانین توی Joybuy هم پیداش می‌کنین :) https://t.co/tQOyC7GVpO",
+        "clean_text": "این ژل آبرسان ژاپنی Naturie رو به توصیه یه دوست ژاپنیم گرفتم و واقعاً دوستش دارم. بین آبرسان‌هایی که اخیراً امتحان کردم، این یکی هم خیلی سبکه، هم خوب آبرسانی می‌کنه و هم قیمتش عالیه.\n\nاگه هلند یا آلمانین توی Joybuy هم پیداش می‌کنین :)",
+        "links": [],
+        "translation_zh": "我是在一位日本朋友的推荐下买了这款日本 Naturie 保湿凝胶，真的很喜欢。最近试过的保湿产品里，这款既非常轻薄，补水效果也很好，而且价格也很棒。\n\n如果你在荷兰或德国，在 Joybuy 上也能找到它 :)",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 3,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 3,
+          "views": 53
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWDEpZqWEAAdNMU.jpg",
+            "expanded_url": "https://x.com/Alice_changg/status/2116908051622199370/photo/1"
+          }
+        ]
+      },
+      "topic": "positive_experience",
+      "risk_types": [],
+      "opportunity_types": [
+        "positive_value",
+        "delivery_strength"
+      ],
+      "post_count": 1,
+      "first_seen_at": "2026-11-01T14:59:44Z",
+      "last_seen_at": "2026-11-01T14:59:44Z",
+      "metrics": {
+        "total_likes": 3,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 3,
+        "total_views": 53,
+        "max_author_followers": 21,
+        "public_interactions": 3
+      },
+      "score": {
+        "ips": 53,
+        "level": "low",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 62,
+        "current_impact": 25,
+        "future_potential": 44,
+        "credibility": 58,
+        "business_impact": 60,
+        "urgency": 50,
+        "sentiment": "positive",
+        "confidence": 0.81,
+        "recommended_action": "传播机会",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "positive_value",
+          "delivery_strength"
+        ],
+        "special_flags": [],
+        "explanation": "该情报偏正向机会，体现价格、配送或促销优势，可用于观察传播借势。综合优先级 53。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 1,
+        "amplifiers": 0,
+        "latest": 1,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 1
+      }
+    },
+    {
+      "cluster_id": "primary-signal-002",
+      "title": "Corporate, market and strategy discussion",
+      "summary": "1 related posts discuss corporate, market or strategy context.",
+      "summary_zh": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "lead_post": {
+        "post_id": "2116826929512796345",
+        "created_at": "2026-11-01T09:37:23Z",
+        "author": {
+          "id": "2078149514783838208",
+          "handle": "AylioChineseFC",
+          "name": "AylioOfficialChineseFanclub",
+          "avatar_url": "https://pbs.twimg.com/profile_images/2078150255053332480/LeQNsuwe_normal.jpg",
+          "followers": 3476,
+          "following": 17,
+          "bio": null,
+          "location": null,
+          "joined_at": "2026-07-17T16:09:00Z",
+          "verified": false
+        },
+        "author_name": "AylioOfficialChineseFanclub",
+        "author_handle": "AylioChineseFC",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2078150255053332480/LeQNsuwe_normal.jpg",
+        "author_followers": 3476,
+        "author_following": 17,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2026-07-17T16:09:00Z",
+        "author_verified": false,
+        "url": "https://x.com/AylioChineseFC/status/2116826929512796345",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116826929512796345",
+        "conversation_context": {},
+        "language": "en",
+        "text": "【IMPORTANT UPDATE】☀🍊\n\nGuerlain × Aylio\nOfficial Details and Purchase Guide\n\nhttps://t.co/QeRs1BsN4k🔍 [Guerlain Official Store]\n✈️ International shipping available to Australia, Singapore, Japan, Thailand, South Korea, and more.\n💴Credit card ＆ Debit card ＆ WeChat Pay accepted\n\n🧡Aylio Exclusive Gifts Available from 10:00 Nov 1\n✨ Ranking Events\nEvent 1 | Invite friends to sign up as members\nTime: 10:00 Nov 1 — 23:59 Nov 13\nTOP1–2: Dual autograph X 1\nTOP3–9: Full set photocards X1\nTOP10–20: Abeille Royale sample set X 1\n\nEvent 2 | Purchase ranking to win signed aylio polaroids\nTime: 19:00 Nov 2 — 23:59 Nov 4\nTOP1: Polaroid X 1+ full-size Orchid Eye Cream\nTOP2: polaroid X 1+ full-size Orchid Cream\nTOP3: Polaroid X 1+ full-size Rose Hand Cream\nTOP4–10: Polaroid X 1\n\n🧡Aylio Live Stream Extra\nShare & comment in live chat to win photocards and voice enamel pins\n\n🧡Aylio Picks Gifts Listed（Beijing Time）\n⏰Early access: 10:00 Nov 1 — 18:59 Nov 2\n🗓️Live sale: 19:00 Nov 2 — 23:59 Nov 2\n\n🎁Abeille Royale Youth Watery Oil ¥1190\nPhotocards X 3 (10,000 limit)\n🎁L'Heure Bleue Perfume ¥1230\nPhotocards X 3(10,000 limit)\n🎁Abeille Royale Lotion ¥1250\n Photocards X 3 (10,000 limit)\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\nPhotocards X 3 (10,000 limit) + 1 brooch with 3 brooch charms (800 limit)\n🎁Hydrating Repair Set ¥2440\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n🎁Classic Repair Trio ¥3805\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
+        "clean_text": "【IMPORTANT UPDATE】☀🍊\n\nGuerlain × Aylio\nOfficial Details and Purchase Guide\n\nJD.com [Guerlain Official Store]\n✈️ International shipping available to Australia, Singapore, Japan, Thailand, South Korea, and more.\n💴Credit card ＆ Debit card ＆ WeChat Pay accepted\n\n🧡Aylio Exclusive Gifts Available from 10:00 Nov 1\n✨ Ranking Events\nEvent 1 | Invite friends to sign up as members\nTime: 10:00 Nov 1 — 23:59 Nov 13\nTOP1–2: Dual autograph X 1\nTOP3–9: Full set photocards X1\nTOP10–20: Abeille Royale sample set X 1\n\nEvent 2 | Purchase ranking to win signed aylio polaroids\nTime: 19:00 Nov 2 — 23:59 Nov 4\nTOP1: Polaroid X 1+ full-size Orchid Eye Cream\nTOP2: polaroid X 1+ full-size Orchid Cream\nTOP3: Polaroid X 1+ full-size Rose Hand Cream\nTOP4–10: Polaroid X 1\n\n🧡Aylio Live Stream Extra\nShare & comment in live chat to win photocards and voice enamel pins\n\n🧡Aylio Picks Gifts Listed（Beijing Time）\n⏰Early access: 10:00 Nov 1 — 18:59 Nov 2\n🗓️Live sale: 19:00 Nov 2 — 23:59 Nov 2\n\n🎁Abeille Royale Youth Watery Oil ¥1190\nPhotocards X 3 (10,000 limit)\n🎁L'Heure Bleue Perfume ¥1230\nPhotocards X 3(10,000 limit)\n🎁Abeille Royale Lotion ¥1250\n Photocards X 3 (10,000 limit)\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\nPhotocards X 3 (10,000 limit) + 1 brooch with 3 brooch charms (800 limit)\n🎁Hydrating Repair Set ¥2440\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n🎁Classic Repair Trio ¥3805\nPhotocards X 3 (10,000 limit) + voice enamel pin (3,000 limit)\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
+        "links": [
+          "http://JD.com"
+        ],
+        "translation_zh": "【重要更新】☀🍊\n\nGuerlain × Aylio\n官方详情与购买指南\n\nJD.com【Guerlain 官方店】\n✈️ 可国际配送至澳大利亚、新加坡、日本、泰国、韩国等地。\n💴支持信用卡、借记卡和 WeChat Pay\n\n🧡Aylio 专属赠品将于 11 月 1 日 10:00 起开放\n✨ 排名活动\n活动 1 | 邀请好友注册成为会员\n时间：11 月 1 日 10:00 — 11 月 13 日 23:59\nTOP1–2：双人签名 X 1\nTOP3–9：全套小卡 X1\nTOP10–20：Abeille Royale 试用装套组 X 1\n\n活动 2 | 购买排名赢取签名 aylio 拍立得\n时间：11 月 2 日 19:00 — 11 月 4 日 23:59\nTOP1：拍立得 X 1+ 正装 Orchid Eye Cream\nTOP2：拍立得 X 1+ 正装 Orchid Cream\nTOP3：拍立得 X 1+ 正装 Rose Hand Cream\nTOP4–10：拍立得 X 1\n\n🧡Aylio 直播额外福利\n在直播聊天中分享并评论，有机会赢取小卡和语音珐琅徽章\n\n🧡Aylio Picks 赠品上架（北京时间）\n⏰抢先购：11 月 1 日 10:00 — 11 月 2 日 18:59\n🗓️直播销售：11 月 2 日 19:00 — 11 月 2 日 23:59\n\n🎁Abeille Royale Youth Watery Oil ¥1190\n小卡 X 3（限量 10,000）\n🎁L'Heure Bleue Perfume ¥1230\n小卡 X 3（限量 10,000）\n🎁Abeille Royale Lotion ¥1250\n 小卡 X 3（限量 10,000）\n🎁L'Heure Bleue Fragrance & Lipstick Gift Box ¥1625\n小卡 X 3（限量 10,000）+ 1 枚胸针，附 3 个胸针挂饰（限量 800）\n🎁Hydrating Repair Set ¥2440\n小卡 X 3（限量 10,000）+ 语音珐琅徽章（限量 3,000）\n🎁Classic Repair Trio ¥3805\n小卡 X 3（限量 10,000）+ 语音珐琅徽章（限量 3,000）\n\n#孙政 #吕思瞳 #aydensng #lyusitong #政瞳 #aylio",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+        "metrics": {
+          "likes": 120,
+          "reposts": 51,
+          "replies": 0,
+          "quotes": 1,
+          "bookmarks": 4,
+          "views": 2238
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWB0BUWXQAATG0x.jpg",
+            "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+          },
+          {
+            "url": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWB0Cz9W4AAMoQZ.jpg",
+            "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+          },
+          {
+            "url": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWB0EIeWcAASqJC.jpg",
+            "expanded_url": "https://x.com/AylioChineseFC/status/2116826929512796345/photo/1"
+          }
+        ]
+      },
+      "topic": "company_market",
+      "risk_types": [],
+      "opportunity_types": [
+        "corporate_context"
+      ],
+      "post_count": 1,
+      "first_seen_at": "2026-11-01T09:37:23Z",
+      "last_seen_at": "2026-11-01T09:37:23Z",
+      "metrics": {
+        "total_likes": 120,
+        "total_reposts": 51,
+        "total_replies": 0,
+        "total_quotes": 1,
+        "total_bookmarks": 4,
+        "total_views": 2238,
+        "max_author_followers": 3476,
+        "public_interactions": 172
+      },
+      "score": {
+        "ips": 52,
+        "level": "low",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 48,
+        "current_impact": 41,
+        "future_potential": 44,
+        "credibility": 58,
+        "business_impact": 56,
+        "urgency": 42,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "背景观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "corporate_context"
+        ],
+        "special_flags": [],
+        "explanation": "公司、资本市场或战略背景信息对品牌心智有间接影响，当前综合优先级为 52。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 1,
+        "amplifiers": 0,
+        "latest": 1,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 1
+      }
+    },
+    {
+      "cluster_id": "primary-signal-007",
+      "title": "Product, deal and availability discussion",
+      "summary": "1 related posts mention product availability, deals or affiliate promotion.",
+      "summary_zh": "相关讨论集中在商品上架、优惠导购或库存信息。",
+      "lead_post": {
+        "post_id": "2116880499331477668",
+        "created_at": "2026-11-01T13:10:15Z",
+        "author": {
+          "id": "26201991",
+          "handle": "Clubpromos",
+          "name": "Clubpromos Sonia",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1211049210407194629/r1jUTcpz_normal.jpg",
+          "followers": 1236,
+          "following": 23,
+          "bio": null,
+          "location": "France",
+          "joined_at": "2009-03-24T08:47:56Z",
+          "verified": false
+        },
+        "author_name": "Clubpromos Sonia",
+        "author_handle": "Clubpromos",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1211049210407194629/r1jUTcpz_normal.jpg",
+        "author_followers": 1236,
+        "author_following": 23,
+        "author_bio": null,
+        "author_location": "France",
+        "author_joined_at": "2009-03-24T08:47:56Z",
+        "author_verified": false,
+        "url": "https://x.com/Clubpromos/status/2116880499331477668",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2116880499331477668",
+        "conversation_context": {},
+        "language": "fr",
+        "text": "Fini le plastique qui garde l'odeur du curry ! \n8 boîtes en verre borosilicaté (type Pyrex) à 13,99 €. De 150 à 1040 ml.\nQui en a besoin ?\n\n#bonplan #joybuy #partenaire\n\n👉 https://t.co/jS7TAGoDa3 https://t.co/UxljWRNErK",
+        "clean_text": "Fini le plastique qui garde l'odeur du curry ! \n8 boîtes en verre borosilicaté (type Pyrex) à 13,99 €. De 150 à 1040 ml.\nQui en a besoin ?\n\n#bonplan #joybuy #partenaire\n\n👉 smyi.me/01oEd",
+        "links": [
+          "https://smyi.me/01oEd"
+        ],
+        "translation_zh": "告别会留住咖喱味的塑料盒！\n8 个硼硅玻璃盒（Pyrex 类型）售价 13,99 €。容量从 150 到 1040 ml。\n谁需要？\n\n#bonplan #joybuy #partenaire\n\n👉 smyi.me/01oEd",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 34
+        },
+        "media": [
+          {
+            "url": "https://pbs.twimg.com/media/HWCrh6bXsAEzL60.jpg",
+            "type": "photo",
+            "preview_image_url": "https://pbs.twimg.com/media/HWCrh6bXsAEzL60.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/HWCrh6bXsAEzL60.jpg",
+            "expanded_url": "https://x.com/Clubpromos/status/2116880499331477668/photo/1"
+          }
+        ]
+      },
+      "topic": "product_deal",
+      "risk_types": [],
+      "opportunity_types": [
+        "product_interest",
+        "promotion"
+      ],
+      "post_count": 1,
+      "first_seen_at": "2026-11-01T13:10:15Z",
+      "last_seen_at": "2026-11-01T13:10:15Z",
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 34,
+        "max_author_followers": 1236,
+        "public_interactions": 0
+      },
+      "score": {
+        "ips": 49,
+        "level": "low",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 52,
+        "current_impact": 25,
+        "future_potential": 40,
+        "credibility": 58,
+        "business_impact": 50,
+        "urgency": 42,
+        "sentiment": "positive",
+        "confidence": 0.81,
+        "recommended_action": "传播机会",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "product_interest",
+          "promotion"
+        ],
+        "special_flags": [],
+        "explanation": "商品、优惠或库存信息可反映自然需求与转化入口，综合优先级 49。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 1,
+        "amplifiers": 0,
+        "latest": 1,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 1
+      }
+    }
+  ]
+}
