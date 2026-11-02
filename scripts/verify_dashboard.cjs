@@ -183,11 +183,29 @@ async function main() {
   await page.click('a[href="#/diting/tg-daily"]');
   await page.waitForSelector(".diting-digest-feed", { timeout: 5000 });
   await page.waitForSelector('[data-route="tgDaily"].active', { timeout: 5000 });
-  await page.waitForSelector("[data-diting-comments]", { timeout: 5000 });
-  const commentButton = page.locator("[data-diting-comments]").first();
+  await page.click('[data-dt-date="2026-10-20"]');
+  await page.waitForSelector('[data-dt-date="2026-10-20"].active', { timeout: 5000 });
+  await page.waitForSelector('.tg-digest-card .media-video-thumb[src*="/dt/assets/tg-media/"]', { timeout: 5000 });
+  const dtVideoSources = page.locator('.tg-digest-card video source[src*="/dt/assets/tg-media/"]');
+  if (await dtVideoSources.count()) throw new Error("TG digest still renders deleted dt MP4 files as playable video");
+  const tgPosterLink = page.locator('.tg-digest-card .media-video-link[aria-label="打开原文查看视频"]').first();
+  if (!(await tgPosterLink.count())) throw new Error("TG video poster does not link to the original Telegram post");
+  const tgPosterHref = await tgPosterLink.getAttribute("href");
+  if (!/^https:\/\/(?:www\.)?(?:t\.me|telegram\.me)\//i.test(tgPosterHref || "")) {
+    throw new Error(`TG video poster links to an unexpected destination: ${tgPosterHref || "missing"}`);
+  }
+  const videoCommentCard = page.locator('.tg-digest-card').filter({
+    has: page.locator('a[href="https://t.me/zaihuapd/44518"]'),
+  });
+  const commentButton = videoCommentCard.locator("[data-diting-comments]");
+  if (!(await commentButton.count())) throw new Error("Historical TG video-comment fixture is unavailable");
   const beforeCommentRequests = requestedPaths.filter((value) => value.includes("/dashboard-data/lazy/tg-replies/")).length;
   await commentButton.click();
   await page.waitForSelector(".diting-comment-item", { timeout: 5000 });
+  const dtCommentVideoSources = page.locator('.diting-comment-item video source[src*="/dt/assets/tg-media/"]');
+  if (await dtCommentVideoSources.count()) throw new Error("TG comments still render deleted dt MP4 files as playable video");
+  const dtCommentPosterLinks = page.locator('.diting-comment-item .media-video-link[aria-label="打开原文查看视频"]');
+  if (!(await dtCommentPosterLinks.count())) throw new Error("Historical TG comment video poster is unavailable");
   const afterCommentRequests = requestedPaths.filter((value) => value.includes("/dashboard-data/lazy/tg-replies/")).length;
   if (afterCommentRequests <= beforeCommentRequests) throw new Error("TG comments were not loaded lazily from a separate payload");
   await page.click(".conversation-drawer-close");

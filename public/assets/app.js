@@ -2558,8 +2558,9 @@ function mediaNode(item, owner = {}, options = {}) {
     const videoUrl = bestVideoUrl(item);
     const tweetUrl = tweetVideoOpenUrl(owner, item, options.mediaIndex);
     const fallbackUrl = safeExternalUrl(item.fallback_url || item.fallbackUrl || "") || tweetOpenUrl(owner, item);
-    const originalUrl = tweetUrl || fallbackUrl || videoUrl;
-    if (!parseTweetUrl(tweetUrl) && videoUrl && !parseTweetUrl(videoUrl)) return htmlVideoNode(videoUrl, posterUrl, item);
+    const posterOnlyVideo = isDitingTgVideo(owner, item);
+    const originalUrl = tweetUrl || fallbackUrl || (posterOnlyVideo ? "" : videoUrl);
+    if (!posterOnlyVideo && !parseTweetUrl(tweetUrl) && videoUrl && !parseTweetUrl(videoUrl)) return htmlVideoNode(videoUrl, posterUrl, item);
     if (!originalUrl) return posterUrl ? imageMediaNode(posterUrl, { ...options, aspectRatio: mediaAspectRatio(item) }) : "";
     const aspectStyle = mediaAspectStyle(item);
     const shellClass = ["media-video-shell", mediaOrientationClass(item)].filter(Boolean).join(" ");
@@ -2568,7 +2569,7 @@ function mediaNode(item, owner = {}, options = {}) {
       : `<span class="media-video-thumb fallback" aria-hidden="true"></span>`;
     return `
       <div class="${shellClass}"${aspectStyle}>
-        <a class="media-video-link" href="${escapeHtml(originalUrl)}" target="_blank" rel="noreferrer" aria-label="打开视频">
+        <a class="media-video-link" href="${escapeHtml(originalUrl)}" target="_blank" rel="noreferrer" aria-label="${posterOnlyVideo ? "打开原文查看视频" : "打开视频"}">
           ${posterNode}
           <span class="media-play-button" aria-hidden="true"><span></span></span>
         </a>
@@ -2578,6 +2579,19 @@ function mediaNode(item, owner = {}, options = {}) {
   const imageUrl = imageMediaUrl(item);
   const previewUrl = imagePreviewMediaUrl(item) || imageUrl;
   return imageUrl ? imageMediaNode(imageUrl, { ...options, previewUrl, aspectRatio: mediaAspectRatio(item) }) : "";
+}
+
+function isDitingTgVideo(owner = {}, mediaItem = {}) {
+  const candidates = [
+    owner?.url,
+    owner?.channel_url,
+    owner?.channelUrl,
+    mediaItem?.fallback_url,
+    mediaItem?.fallbackUrl,
+  ];
+  return candidates
+    .map(safeExternalUrl)
+    .some((url) => /^https:\/\/(?:www\.)?(?:t\.me|telegram\.me)\//i.test(url));
 }
 
 function imageMediaUrl(item) {
