@@ -1,0 +1,122 @@
+{
+  "conversation_id": "2117309009761853740",
+  "anchor_post_id": "2117309009761853740",
+  "summary_zh": "前文集中介绍开源安卓手机 Agent Mika，称可复用登录态、后台操作各类 App、无需 Root/电脑、填模型 Key 即用，把 AI Agent 话题具体转向 Mika 的功能和使用体验。后续有人追问是否接管安卓，也有人指出支付风控、无障碍限制及需调试配对、屏幕内容会发给模型商，有助于核验宣传真实性并判断情绪偏谨慎。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2117309009761853740",
+      "url": "https://x.com/NIxinhai0/status/2117309009761853740",
+      "created_at": "2026-11-02T17:33:00Z",
+      "text": "wc，能操控手机的 Agent 来了！！！\n\nAI 操控电脑早就不新鲜了，现在可以接管手机的 Agent 也来了，它就是刚刚开源的 Mika。 \n\n真正的手机端 Agent，直接跑在安卓本机上面。 一句话下达指令，它就能在你的手机里面帮你把事情做完。 复用你现有的登录状态，不用额外授权，不需要 Root，也不用电脑。 \n\n你可以正常刷手机，它在后台干活，互不干扰，任务完成之后会通知你，你也可以随时继续给它派发新任务。\n\n它能干的事情非常多，可以操作手机里任意 App。 发微信消息、总结微信群聊、帮你总结小红书博主内容、BOSS 直聘批量打招呼、设置闹钟、修改系统设置，手机上绝大多数应用它都能操作。 \n\n也可以网页搜索、填写表单。 全程模仿人的点击操作痕迹，降低风控。 \n\n自带悬浮胶囊，在任意界面都能随时唤起。 它不会抢占你的屏幕，在后台自己点击、读取、搜索，点一下悬浮窗口就能放大查看它的操作过程。 \n\n不用对 App 单独适配，开箱就能用。 读取屏幕内容来执行任务，网页也可以调用它。 而且越用越聪明，使用次数越多效果越好。 内置 Linux 沙箱，还可以直接运行脚本、处理文件，后台自动处理任务，完全不耽误你正常使用手机。 \n\n填上模型 Key，就可以直接用。",
+      "original_text": "wc，能操控手机的 Agent 来了！！！\n\nAI 操控电脑早就不新鲜了，现在可以接管手机的 Agent 也来了，它就是刚刚开源的 Mika。 \n\n真正的手机端 Agent，直接跑在安卓本机上面。 一句话下达指令，它就能在你的手机里面帮你把事情做完。 复用你现有的登录状态，不用额外授权，不需要 Root，也不用电脑。 \n\n你可以正常刷手机，它在后台干活，互不干扰，任务完成之后会通知你，你也可以随时继续给它派发新任务。\n\n它能干的事情非常多，可以操作手机里任意 App。 发微信消息、总结微信群聊、帮你总结小红书博主内容、BOSS 直聘批量打招呼、设置闹钟、修改系统设置，手机上绝大多数应用它都能操作。 \n\n也可以网页搜索、填写表单。 全程模仿人的点击操作痕迹，降低风控。 \n\n自带悬浮胶囊，在任意界面都能随时唤起。 它不会抢占你的屏幕，在后台自己点击、读取、搜索，点一下悬浮窗口就能放大查看它的操作过程。 \n\n不用对 App 单独适配，开箱就能用。 读取屏幕内容来执行任务，网页也可以调用它。 而且越用越聪明，使用次数越多效果越好。 内置 Linux 沙箱，还可以直接运行脚本、处理文件，后台自动处理任务，完全不耽误你正常使用手机。 \n\n填上模型 Key，就可以直接用。",
+      "translation_zh": "wc，能操控手机的 Agent 来了！！！\n\nAI 操控电脑早就不新鲜了，现在可以接管手机的 Agent 也来了，它就是刚刚开源的 Mika。 \n\n真正的手机端 Agent，直接跑在安卓本机上面。 一句话下达指令，它就能在你的手机里面帮你把事情做完。 复用你现有的登录状态，不用额外授权，不需要 Root，也不用电脑。 \n\n你可以正常刷手机，它在后台干活，互不干扰，任务完成之后会通知你，你也可以随时继续给它派发新任务。\n\n它能干的事情非常多，可以操作手机里任意 App。 发微信消息、总结微信群聊、帮你总结小红书博主内容、BOSS 直聘批量打招呼、设置闹钟、修改系统设置，手机上绝大多数应用它都能操作。 \n\n也可以网页搜索、填写表单。 全程模仿人的点击操作痕迹，降低风控。 \n\n自带悬浮胶囊，在任意界面都能随时唤起。 它不会抢占你的屏幕，在后台自己点击、读取、搜索，点一下悬浮窗口就能放大查看它的操作过程。 \n\n不用对 App 单独适配，开箱就能用。 读取屏幕内容来执行任务，网页也可以调用它。 而且越用越聪明，使用次数越多效果越好。 内置 Linux 沙箱，还可以直接运行脚本、处理文件，后台自动处理任务，完全不耽误你正常使用手机。 \n\n填上模型 Key，就可以直接用。",
+      "translation_status": "source_chinese",
+      "author_name": "溺心海·Aven",
+      "author_handle": "NIxinhai0",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2057072534483537922/rY8ePjBc_normal.jpg",
+      "author_followers": 6203,
+      "author_following": 1237,
+      "author_bio": "轻资产创业者| 主线：AI🤖｜数字游民🌍| 认知哲学🧠| 自我提升🌱 \n \n目标：财富及精神自由，一辈子为自己的兴趣工作！\n\n偶尔敲敲代码，搞搞副业，但一直在往前走ing！",
+      "author_location": null,
+      "author_joined_at": "2026-05-07T02:39:35Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 3,
+        "reposts": 1,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 2,
+        "views": 590
+      }
+    },
+    {
+      "post_id": "2117310061232222624",
+      "url": "https://x.com/maxiaohui66/status/2117310061232222624",
+      "created_at": "2026-11-02T17:37:10Z",
+      "text": "@NIxinhai0 Mika接管安卓了吗",
+      "original_text": "@NIxinhai0 Mika接管安卓了吗",
+      "translation_zh": "@NIxinhai0 Mika接管安卓了吗",
+      "translation_status": "source_chinese",
+      "author_name": "忍者熊Crypto🥷🐻",
+      "author_handle": "maxiaohui66",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2065608717727682560/B9md7X5f_normal.jpg",
+      "author_followers": 5379,
+      "author_following": 7081,
+      "author_bio": "AI × Crypto 观察者🥷｜追热点 拆逻辑｜不构成投资建议 \nmeme爱好者 合约痴迷者 ai工具体验官\n宿命论支持者～命定而运动～运动而改命～\n不冒险就是最大的风险～",
+      "author_location": null,
+      "author_joined_at": "2022-03-29T04:11:05Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 21
+      }
+    },
+    {
+      "post_id": "2117310512786735479",
+      "url": "https://x.com/bytelee_trade/status/2117310512786735479",
+      "created_at": "2026-11-02T17:38:58Z",
+      "text": "@NIxinhai0 复用登录态才是关键，等于拿你的身份在跑，误触支付都记在账号头上。无障碍服务进不了银行和支付类 App，全面接管还早。",
+      "original_text": "@NIxinhai0 复用登录态才是关键，等于拿你的身份在跑，误触支付都记在账号头上。无障碍服务进不了银行和支付类 App，全面接管还早。",
+      "translation_zh": "@NIxinhai0 复用登录态才是关键，等于拿你的身份在跑，误触支付都记在账号头上。无障碍服务进不了银行和支付类 App，全面接管还早。",
+      "translation_status": "source_chinese",
+      "author_name": "ByteLee · AI Investing",
+      "author_handle": "bytelee_trade",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2067425510221889536/koDGQGTL_normal.jpg",
+      "author_followers": 7629,
+      "author_following": 7512,
+      "author_bio": "AI frontier, tools I test, and where I put capital — direction, logic & risk, not calls. Signal over noise. Personal view, not financial advice.",
+      "author_location": null,
+      "author_joined_at": "2024-01-23T00:59:28Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 19
+      }
+    },
+    {
+      "post_id": "2117312730944479275",
+      "url": "https://x.com/ziyouzhixu/status/2117312730944479275",
+      "created_at": "2026-11-02T17:47:47Z",
+      "text": "@NIxinhai0 翻了官方设置指南，“不用额外授权”这句得补个前提：操作手机 App 仍要开启调试并完成配对。README 也写明，屏幕内容会发给你配置的模型供应商。我还没安装，只核了文档。\nhttps://t.co/BK7bZuQfNK",
+      "original_text": "@NIxinhai0 翻了官方设置指南，“不用额外授权”这句得补个前提：操作手机 App 仍要开启调试并完成配对。README 也写明，屏幕内容会发给你配置的模型供应商。我还没安装，只核了文档。\nhttps://t.co/BK7bZuQfNK",
+      "translation_zh": "@NIxinhai0 翻了官方设置指南，“不用额外授权”这句得补个前提：操作手机 App 仍要开启调试并完成配对。README 也写明，屏幕内容会发给你配置的模型供应商。我还没安装，只核了文档。\nhttps://t.co/BK7bZuQfNK",
+      "translation_status": "source_chinese",
+      "author_name": "Ssr_404",
+      "author_handle": "ziyouzhixu",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2115750821602512896/5uyAliwB_normal.jpg",
+      "author_followers": 1069,
+      "author_following": 1020,
+      "author_bio": "关注AI工具、实用玩法和加密见闻。分享有用的新东西，也聊踩坑和局限。认真看评论，欢迎交流。",
+      "author_location": null,
+      "author_joined_at": "2025-01-31T06:34:58Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/wangzan101/Mika"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 19
+      }
+    }
+  ]
+}

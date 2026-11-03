@@ -1,0 +1,94 @@
+{
+  "conversation_id": "2117237474493968435",
+  "anchor_post_id": "2117237474493968435",
+  "summary_zh": "前文即收录帖，作者抱怨视频需逐个平台上传，转而推荐开源工具 social-auto-upload，可用命令行/Skill 分发到多平台，并说明免费、MIT商用及风控风险。后续有人建议交给grokbot，也有人认同命令行省事。上下文显示为真实工具体验分享，情绪偏正向，传播价值在创作者自动分发场景。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2117237474493968435",
+      "url": "https://x.com/ganfanren_ai/status/2117237474493968435",
+      "created_at": "2026-11-02T12:48:44Z",
+      "text": "卧槽，多平台的分发真的很重要，折磨死我了。\n果断的这个 skill！！！\n\n一条视频剪好了，还要挨个打开抖音、小红书、视频号、B站去上传，填标题填简介……social-auto-upload 把「成片 → 多平台分发」这一步变成了命令行和 Skill。\n\n它能做什么（README 写的）：\n· 统一的 sau 命令行，支持抖音、快手、小红书、B站、视频号、百家号、微博、知乎、YouTube、Facebook、Instagram 等\n· 视频、图文、文章分开发布，各平台能力以 README 里的能力表为准，标「开发中」「实验性」的不算稳定功能\n· 有给 Codex、Claude Code 用的 Skill，可以接进现有的 Agent 工作流\n\n怎么上手：\n安装说明见仓库 docs/install.md\n先登录并检查账号：\nsau douyin login --account creator\nsau douyin check --account creator\n上传一条视频：\nsau douyin upload-video --account creator --file videos/demo.mp4 --title \"标题\" --desc \"简介\"\n只装某个平台的 Skill：\nnpx skills add dreammis/social-auto-upload --skill douyin-upload\n\n哪类账号直接能用：\n· 同一条内容要发 3 个以上平台的矩阵号\n· 已经用 Codex 剪片、想把「发布」也接进流程的人\n· 竞争力在于「同一条内容多平台准时上线」，不在于多囤几个 Skill\n\n风险提醒：\n自动化发布有平台风控、限流甚至封号的风险，没有工具能保证零风险。建议只用自己的账号，先挑 2～3 个主力平台低频实测，确认稳定再说；不要一上来就批量矩阵狂发。\n\n项目地址：https://t.co/Xz7xNooB02\n开源免费，MIT 协议，可以商用。\n\n#AItools #GitHub #ContentCreator #SocialMedia #OpenSource",
+      "original_text": "卧槽，多平台的分发真的很重要，折磨死我了。\n果断的这个 skill！！！\n\n一条视频剪好了，还要挨个打开抖音、小红书、视频号、B站去上传，填标题填简介……social-auto-upload 把「成片 → 多平台分发」这一步变成了命令行和 Skill。\n\n它能做什么（README 写的）：\n· 统一的 sau 命令行，支持抖音、快手、小红书、B站、视频号、百家号、微博、知乎、YouTube、Facebook、Instagram 等\n· 视频、图文、文章分开发布，各平台能力以 README 里的能力表为准，标「开发中」「实验性」的不算稳定功能\n· 有给 Codex、Claude Code 用的 Skill，可以接进现有的 Agent 工作流\n\n怎么上手：\n安装说明见仓库 docs/install.md\n先登录并检查账号：\nsau douyin login --account creator\nsau douyin check --account creator\n上传一条视频：\nsau douyin upload-video --account creator --file videos/demo.mp4 --title \"标题\" --desc \"简介\"\n只装某个平台的 Skill：\nnpx skills add dreammis/social-auto-upload --skill douyin-upload\n\n哪类账号直接能用：\n· 同一条内容要发 3 个以上平台的矩阵号\n· 已经用 Codex 剪片、想把「发布」也接进流程的人\n· 竞争力在于「同一条内容多平台准时上线」，不在于多囤几个 Skill\n\n风险提醒：\n自动化发布有平台风控、限流甚至封号的风险，没有工具能保证零风险。建议只用自己的账号，先挑 2～3 个主力平台低频实测，确认稳定再说；不要一上来就批量矩阵狂发。\n\n项目地址：https://t.co/Xz7xNooB02\n开源免费，MIT 协议，可以商用。\n\n#AItools #GitHub #ContentCreator #SocialMedia #OpenSource",
+      "translation_zh": "卧槽，多平台的分发真的很重要，折磨死我了。\n果断的这个 skill！！！\n\n一条视频剪好了，还要挨个打开抖音、小红书、视频号、B站去上传，填标题填简介……social-auto-upload 把「成片 → 多平台分发」这一步变成了命令行和 Skill。\n\n它能做什么（README 写的）：\n· 统一的 sau 命令行，支持抖音、快手、小红书、B站、视频号、百家号、微博、知乎、YouTube、Facebook、Instagram 等\n· 视频、图文、文章分开发布，各平台能力以 README 里的能力表为准，标「开发中」「实验性」的不算稳定功能\n· 有给 Codex、Claude Code 用的 Skill，可以接进现有的 Agent 工作流\n\n怎么上手：\n安装说明见仓库 docs/install.md\n先登录并检查账号：\nsau douyin login --account creator\nsau douyin check --account creator\n上传一条视频：\nsau douyin upload-video --account creator --file videos/demo.mp4 --title \"标题\" --desc \"简介\"\n只装某个平台的 Skill：\nnpx skills add dreammis/social-auto-upload --skill douyin-upload\n\n哪类账号直接能用：\n· 同一条内容要发 3 个以上平台的矩阵号\n· 已经用 Codex 剪片、想把「发布」也接进流程的人\n· 竞争力在于「同一条内容多平台准时上线」，不在于多囤几个 Skill\n\n风险提醒：\n自动化发布有平台风控、限流甚至封号的风险，没有工具能保证零风险。建议只用自己的账号，先挑 2～3 个主力平台低频实测，确认稳定再说；不要一上来就批量矩阵狂发。\n\n项目地址：https://t.co/Xz7xNooB02\n开源免费，MIT 协议，可以商用。\n\n#AItools #GitHub #ContentCreator #SocialMedia #OpenSource",
+      "translation_status": "source_chinese",
+      "author_name": "饭饭猛猛炫、",
+      "author_handle": "ganfanren_ai",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2112791486794522624/W96smZs8_normal.png",
+      "author_followers": 76,
+      "author_following": 185,
+      "author_bio": "🚩拆解 100 个账号｜探索 AI 实用方向｜电子产品爽玩\n📍前互联网用户运营｜拼过小厂，熬过大厂\n👷‍♀️大健康｜运动营养 10 年+",
+      "author_location": "赛博空间",
+      "author_joined_at": "2026-04-11T09:10:22Z",
+      "author_verified": false,
+      "links": [
+        "http://github.com/dreammis/social-auto-upload"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 53,
+        "reposts": 5,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 48,
+        "views": 1809
+      }
+    },
+    {
+      "post_id": "2117326361203495060",
+      "url": "https://x.com/BuridonX/status/2117326361203495060",
+      "created_at": "2026-11-02T18:41:57Z",
+      "text": "@ganfanren_ai 直接告诉并交给grokbot不就行。",
+      "original_text": "@ganfanren_ai 直接告诉并交给grokbot不就行。",
+      "translation_zh": "@ganfanren_ai 直接告诉并交给grokbot不就行。",
+      "translation_status": "source_chinese",
+      "author_name": "Marco",
+      "author_handle": "BuridonX",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2099941026844803072/Lrzz2b9g_normal.jpg",
+      "author_followers": 83,
+      "author_following": 189,
+      "author_bio": "AI 应用与具身机器人二次开发\n灵智纪科技有限公司创始人",
+      "author_location": "中国-江西-南昌",
+      "author_joined_at": "2026-03-01T10:40:21Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 48
+      }
+    },
+    {
+      "post_id": "2117386098401832966",
+      "url": "https://x.com/JacksAISites/status/2117386098401832966",
+      "created_at": "2026-11-02T22:39:19Z",
+      "text": "@ganfanren_ai 多平台分发这活是真烦，能命令行解决就香",
+      "original_text": "@ganfanren_ai 多平台分发这活是真烦，能命令行解决就香",
+      "translation_zh": "@ganfanren_ai 多平台分发这活是真烦，能命令行解决就香",
+      "translation_status": "source_chinese",
+      "author_name": "Jack",
+      "author_handle": "JacksAISites",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1998750686897397760/-656IiK9_normal.jpg",
+      "author_followers": 13462,
+      "author_following": 11398,
+      "author_bio": "Indie dev · Nordics | Solo AI products | Real build-in-public for hobby project \n独立开发者（业余时间） · 北欧 | AI",
+      "author_location": "Nordic",
+      "author_joined_at": "2019-09-04T12:28:08Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 26
+      }
+    }
+  ]
+}

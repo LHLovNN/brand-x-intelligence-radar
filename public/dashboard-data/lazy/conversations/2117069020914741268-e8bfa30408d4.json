@@ -1,0 +1,113 @@
+{
+  "conversation_id": "2117069020914741268",
+  "anchor_post_id": "2117069020914741268",
+  "summary_zh": "对话围绕用 AI Agent 运营小红书，收录帖反对“一键发帖”，转向按采热点、选题、写画、发布、分发搭建工具链，列出12个开源Skill并提醒自动互动和批量发布有封号风险。后续有人认可分层思路，也有人补充API更稳并推广自家服务。上下文显示偏技术分享，情绪正向，具备工具清单传播价值。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2117069020914741268",
+      "url": "https://x.com/bitmeowAI/status/2117069020914741268",
+      "created_at": "2026-11-02T01:39:22Z",
+      "text": "想让 Agent 帮我运营小红书，搜了一圈全是\"一键发帖\"，发完没人看。 #AIAgent\n\n得按层搭：采热点、选题、写、画、发、分发。这 12 个开源 Skill 和工具我按层排好了，都能挂进 Claude Code 或 Codex：\n\n1. Agent-Reach（约 10.7 万星）：搜读小红书、X、YouTube、B 站，当选题雷达\nhttps://t.co/skvkTwSZZb\n\n2. baoyu-xhs-images（所在仓约 2.7 万星）：文章拆成 1～10 张封面和内容卡，风格、布局、配色、水印可调\nhttps://t.co/ZatpOFEKNZ\n\n3. xiaohongshu-mcp（约 1.7 万星）：登录、搜笔记、看详情、发图文和视频，接在流程最后一环\nhttps://t.co/L1tlSMCk2e\n\n4. social-auto-upload（约 1.6 万星）：小红书、抖音、视频号、B 站、TikTok、YouTube 批量上传，矩阵号省重复点\nhttps://t.co/UlykDeEjWo\n\n5. guizang-social-card-skill（约 7.9k 星）：轮播图、知识卡、公众号封面，28 种版式 + 10 套主题\nhttps://t.co/GCjDnq3ymL\n\n6. XiaohongshuSkills（约 3.5k 星）：搜索、发布、评论、自动互动\nhttps://t.co/bUfVuaQ4V0\n\n7. xiaohongshu-ops-skill（约 2.5k 星）：推荐流分析、账号诊断、选题、爆款拆解、复盘，适合已有号但数据飘的\nhttps://t.co/LeD7ffCy0G\n\n8. Auto-Redbook-Skills（约 2.4k 星）：标题、正文、封面、内容卡到发布一条龙，新手先跑这个\nhttps://t.co/eleim09UBD\n\n9. xiaohongshu-skills（约 2.0k 星）：搜笔记、取内容、发作品、评论的基础操作层，可和其他 Skill 组合\nhttps://t.co/mYKXJpOwQ4\n\n10. xhs-visual-director-skill（约 1.5k 星）：定视觉方向、页数、封面结构，逐页配图和提示词，带发布自检\nhttps://t.co/iG66G92Sbw\n\n11. gbro-cover-design（约 900 星）：3:4 封面构图 + 绘图提示，真人出镜、人物形象要稳的号用\nhttps://t.co/JnRYCk6C04\n\n12. xhs-cli（约 675 星）：搜、读、赞、藏、评、拉内容，选题前做竞品数据采集\nhttps://t.co/SfIqKH48NI\n\n串法：采（1、12）→ 选题诊断（7）→ 写和画（2、5、8、10、11）→ 发和互动（3、6、9）→ 多端分发（4）\n\n我的上手顺序：先只装 1 + 8 跑通一条笔记，数据不稳再加 7 做诊断，最后才碰批量分发。\n\n自动互动、批量发帖这类功能平台查得严，封号风险自己掂量，别当养号黑盒。",
+      "original_text": "想让 Agent 帮我运营小红书，搜了一圈全是\"一键发帖\"，发完没人看。 #AIAgent\n\n得按层搭：采热点、选题、写、画、发、分发。这 12 个开源 Skill 和工具我按层排好了，都能挂进 Claude Code 或 Codex：\n\n1. Agent-Reach（约 10.7 万星）：搜读小红书、X、YouTube、B 站，当选题雷达\nhttps://t.co/skvkTwSZZb\n\n2. baoyu-xhs-images（所在仓约 2.7 万星）：文章拆成 1～10 张封面和内容卡，风格、布局、配色、水印可调\nhttps://t.co/ZatpOFEKNZ\n\n3. xiaohongshu-mcp（约 1.7 万星）：登录、搜笔记、看详情、发图文和视频，接在流程最后一环\nhttps://t.co/L1tlSMCk2e\n\n4. social-auto-upload（约 1.6 万星）：小红书、抖音、视频号、B 站、TikTok、YouTube 批量上传，矩阵号省重复点\nhttps://t.co/UlykDeEjWo\n\n5. guizang-social-card-skill（约 7.9k 星）：轮播图、知识卡、公众号封面，28 种版式 + 10 套主题\nhttps://t.co/GCjDnq3ymL\n\n6. XiaohongshuSkills（约 3.5k 星）：搜索、发布、评论、自动互动\nhttps://t.co/bUfVuaQ4V0\n\n7. xiaohongshu-ops-skill（约 2.5k 星）：推荐流分析、账号诊断、选题、爆款拆解、复盘，适合已有号但数据飘的\nhttps://t.co/LeD7ffCy0G\n\n8. Auto-Redbook-Skills（约 2.4k 星）：标题、正文、封面、内容卡到发布一条龙，新手先跑这个\nhttps://t.co/eleim09UBD\n\n9. xiaohongshu-skills（约 2.0k 星）：搜笔记、取内容、发作品、评论的基础操作层，可和其他 Skill 组合\nhttps://t.co/mYKXJpOwQ4\n\n10. xhs-visual-director-skill（约 1.5k 星）：定视觉方向、页数、封面结构，逐页配图和提示词，带发布自检\nhttps://t.co/iG66G92Sbw\n\n11. gbro-cover-design（约 900 星）：3:4 封面构图 + 绘图提示，真人出镜、人物形象要稳的号用\nhttps://t.co/JnRYCk6C04\n\n12. xhs-cli（约 675 星）：搜、读、赞、藏、评、拉内容，选题前做竞品数据采集\nhttps://t.co/SfIqKH48NI\n\n串法：采（1、12）→ 选题诊断（7）→ 写和画（2、5、8、10、11）→ 发和互动（3、6、9）→ 多端分发（4）\n\n我的上手顺序：先只装 1 + 8 跑通一条笔记，数据不稳再加 7 做诊断，最后才碰批量分发。\n\n自动互动、批量发帖这类功能平台查得严，封号风险自己掂量，别当养号黑盒。",
+      "translation_zh": "想让 Agent 帮我运营小红书，搜了一圈全是\"一键发帖\"，发完没人看。 #AIAgent\n\n得按层搭：采热点、选题、写、画、发、分发。这 12 个开源 Skill 和工具我按层排好了，都能挂进 Claude Code 或 Codex：\n\n1. Agent-Reach（约 10.7 万星）：搜读小红书、X、YouTube、B 站，当选题雷达\nhttps://t.co/skvkTwSZZb\n\n2. baoyu-xhs-images（所在仓约 2.7 万星）：文章拆成 1～10 张封面和内容卡，风格、布局、配色、水印可调\nhttps://t.co/ZatpOFEKNZ\n\n3. xiaohongshu-mcp（约 1.7 万星）：登录、搜笔记、看详情、发图文和视频，接在流程最后一环\nhttps://t.co/L1tlSMCk2e\n\n4. social-auto-upload（约 1.6 万星）：小红书、抖音、视频号、B 站、TikTok、YouTube 批量上传，矩阵号省重复点\nhttps://t.co/UlykDeEjWo\n\n5. guizang-social-card-skill（约 7.9k 星）：轮播图、知识卡、公众号封面，28 种版式 + 10 套主题\nhttps://t.co/GCjDnq3ymL\n\n6. XiaohongshuSkills（约 3.5k 星）：搜索、发布、评论、自动互动\nhttps://t.co/bUfVuaQ4V0\n\n7. xiaohongshu-ops-skill（约 2.5k 星）：推荐流分析、账号诊断、选题、爆款拆解、复盘，适合已有号但数据飘的\nhttps://t.co/LeD7ffCy0G\n\n8. Auto-Redbook-Skills（约 2.4k 星）：标题、正文、封面、内容卡到发布一条龙，新手先跑这个\nhttps://t.co/eleim09UBD\n\n9. xiaohongshu-skills（约 2.0k 星）：搜笔记、取内容、发作品、评论的基础操作层，可和其他 Skill 组合\nhttps://t.co/mYKXJpOwQ4\n\n10. xhs-visual-director-skill（约 1.5k 星）：定视觉方向、页数、封面结构，逐页配图和提示词，带发布自检\nhttps://t.co/iG66G92Sbw\n\n11. gbro-cover-design（约 900 星）：3:4 封面构图 + 绘图提示，真人出镜、人物形象要稳的号用\nhttps://t.co/JnRYCk6C04\n\n12. xhs-cli（约 675 星）：搜、读、赞、藏、评、拉内容，选题前做竞品数据采集\nhttps://t.co/SfIqKH48NI\n\n串法：采（1、12）→ 选题诊断（7）→ 写和画（2、5、8、10、11）→ 发和互动（3、6、9）→ 多端分发（4）\n\n我的上手顺序：先只装 1 + 8 跑通一条笔记，数据不稳再加 7 做诊断，最后才碰批量分发。\n\n自动互动、批量发帖这类功能平台查得严，封号风险自己掂量，别当养号黑盒。",
+      "translation_status": "source_chinese",
+      "author_name": "比特喵.AI",
+      "author_handle": "bitmeowAI",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2063480705984958464/tIcCfoC8_normal.jpg",
+      "author_followers": 12469,
+      "author_following": 2211,
+      "author_bio": "赛博观察员，Web3+AI，认知升级 | 搞钱是第一目标，喜欢叨逼叨。\n商务合作DM✉ TG：https://t.co/WmeMnNvkZz",
+      "author_location": null,
+      "author_joined_at": "2022-05-04T04:31:08Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/Panniantong/Agent-Reach",
+        "https://github.com/JimLiu/baoyu-skills",
+        "https://github.com/xpzouying/xiaohongshu-mcp",
+        "https://github.com/dreammis/social-auto-upload",
+        "https://github.com/op7418/guizang-social-card-skill",
+        "https://github.com/white0dew/XiaohongshuSkills",
+        "https://github.com/Xiangyu-CAS/xiaohongshu-ops-skill",
+        "https://github.com/comeonzhj/Auto-Redbook-Skills",
+        "https://github.com/autoclaw-cc/xiaohongshu-skills",
+        "https://github.com/ziguishian/xhs-visual-director-skill",
+        "https://github.com/pyang5166/gbro-cover-design",
+        "https://github.com/jackwener/xhs-cli"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWFW0J9bAAAKbcr.png",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWFW0J9bAAAKbcr.png",
+          "media_url_https": "https://pbs.twimg.com/media/HWFW0J9bAAAKbcr.png",
+          "expanded_url": "https://x.com/bitmeowAI/status/2117069020914741268/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 308
+      }
+    },
+    {
+      "post_id": "2117074123755258016",
+      "url": "https://x.com/XXKING/status/2117074123755258016",
+      "created_at": "2026-11-02T01:59:39Z",
+      "text": "@bitmeowAI 一键发帖没人看，按采选题写画发分发分层挂 Skill，这套比口号实在。",
+      "original_text": "@bitmeowAI 一键发帖没人看，按采选题写画发分发分层挂 Skill，这套比口号实在。",
+      "translation_zh": "@bitmeowAI 一键发帖没人看，按采选题写画发分发分层挂 Skill，这套比口号实在。",
+      "translation_status": "source_chinese",
+      "author_name": "邪修King🚀",
+      "author_handle": "XXKING",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2072372468292182016/TtJu5KDd_normal.jpg",
+      "author_followers": 4164,
+      "author_following": 4046,
+      "author_bio": "玩AI | 玩美股 | 玩日常 | 玩币 | 玩研究 |\n\n發=LAUNCH·RICH\nStarship → Mars",
+      "author_location": "Mars",
+      "author_joined_at": "2011-10-17T01:02:11Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 3
+      }
+    },
+    {
+      "post_id": "2117076497962000784",
+      "url": "https://x.com/weconomypistis/status/2117076497962000784",
+      "created_at": "2026-11-02T02:09:05Z",
+      "text": "@bitmeowAI 按层搭这个思路对，多数人卡在第一层：选题雷达抓不稳。读小红书走浏览器没问题，X 这类平台建议走 API，更稳也不容易被风控。我们 @openanysi 一个 key 能调 X、搜索等 4,000+ 个 API，再加 160+ 模型负责写和画。你的选题雷达是每天定时跑，还是发帖前临时搜？",
+      "original_text": "@bitmeowAI 按层搭这个思路对，多数人卡在第一层：选题雷达抓不稳。读小红书走浏览器没问题，X 这类平台建议走 API，更稳也不容易被风控。我们 @openanysi 一个 key 能调 X、搜索等 4,000+ 个 API，再加 160+ 模型负责写和画。你的选题雷达是每天定时跑，还是发帖前临时搜？",
+      "translation_zh": "@bitmeowAI 按层搭这个思路对，多数人卡在第一层：选题雷达抓不稳。读小红书走浏览器没问题，X 这类平台建议走 API，更稳也不容易被风控。我们 @openanysi 一个 key 能调 X、搜索等 4,000+ 个 API，再加 160+ 模型负责写和画。你的选题雷达是每天定时跑，还是发帖前临时搜？",
+      "translation_status": "source_chinese",
+      "author_name": "Pistis",
+      "author_handle": "weconomypistis",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2059251045570940928/0p8jAp2J_normal.jpg",
+      "author_followers": 1681,
+      "author_following": 1333,
+      "author_bio": "WEconomy Labs\nbuilding @openanysi , agent 资源市场, 一个 key 接入模型、数据和 API\n链上掘金群: https://t.co/MtamN0dSp9",
+      "author_location": null,
+      "author_joined_at": "2021-12-12T13:21:25Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 27
+      }
+    }
+  ]
+}
