@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-03",
+  "thread_id": "44843",
+  "count": 52,
+  "replies": [
+    {
+      "id": "628145",
+      "text": "感谢马圣开源",
+      "time": "00:40",
+      "sender_name": "Konstantin",
+      "sender_id": 7833918075
+    },
+    {
+      "id": "628146",
+      "text": "真开源了？",
+      "time": "00:40",
+      "sender_name": "yfyckbkb",
+      "sender_id": 6806188181
+    },
+    {
+      "id": "628149",
+      "text": "利好国模",
+      "time": "00:40",
+      "sender_name": "yfyckbkb",
+      "sender_id": 6806188181
+    },
+    {
+      "id": "628150",
+      "text": "HF🤗：7.72TB 我谢谢你",
+      "time": "00:40",
+      "sender_name": "️️ β-H",
+      "sender_id": 657996374
+    },
+    {
+      "id": "628151",
+      "text": "14T真就力大砖飞\n~~量化的吗~~\n不对bf16...\n对这个参数量，这个模型文件太小了",
+      "time": "00:41",
+      "sender_name": "void neko",
+      "sender_id": 675752473
+    },
+    {
+      "id": "628152",
+      "text": "赶紧拉下来研究",
+      "time": "00:41",
+      "sender_name": "yfyckbkb",
+      "sender_id": 6806188181
+    },
+    {
+      "id": "628153",
+      "text": "感谢达圣开源",
+      "time": "00:41",
+      "sender_name": "林 鱼",
+      "sender_id": 5806192917
+    },
+    {
+      "id": "628154",
+      "text": "连蒸馏都省了？",
+      "time": "00:42",
+      "sender_name": "Mlon",
+      "sender_id": 573388963
+    },
+    {
+      "id": "628155",
+      "text": "@国模",
+      "time": "00:42",
+      "sender_name": "foot ball",
+      "sender_id": 8451034619
+    },
+    {
+      "id": "628156",
+      "text": "正态分布随机数",
+      "time": "00:42",
+      "sender_name": "Baicai iaciaB",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-03/comments/c-628156-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-03/comments/c-628156-1-thumb.webp",
+          "width": 1280,
+          "height": 800,
+          "size_bytes": 50974
+        }
+      ],
+      "sender_id": 8833475412
+    },
+    {
+      "id": "628157",
+      "text": "国模起飞中。。。。发现是随机数生成器。。？",
+      "time": "00:43",
+      "sender_name": "Dommile",
+      "sender_id": 7103444200
+    },
+    {
+      "id": "628159",
+      "text": "被迫开源",
+      "time": "00:43",
+      "sender_name": "可露西尔",
+      "sender_id": 5842743832
+    },
+    {
+      "id": "628160",
+      "text": "源神出现了",
+      "time": "00:43",
+      "sender_name": "𝕬𝖒𝖊 𝕾𝖈𝖆𝖗𝖑𝖊𝖙",
+      "sender_id": 5358686436
+    },
+    {
+      "id": "628161",
+      "text": "The generation recipe is:\n\nCompute SHA256(tensor_name.encode()).\nInterpret the first eight digest bytes as an unsigned big-endian integer.\nUse that integer to seed NumPy’s PCG64 generator.\nGenerate standard_normal(shape, dtype=np.float32).\nApply:\nNormalization weights: exp(float32(0.06) * z)\nConvolution kernels: z * float32(1/6)\nConvert to BF16 using round-to-nearest, ties-to-even.\nAfter identifying these recipes, predictions were recorded for 21 previously unread tensors, containing 423,168 values. Every predicted value matched the subsequent HTTP Range reads exactly. A separate verification script then fetched all 43 tensors again and confirmed the same byte-for-byte matches.",
+      "time": "00:44",
+      "sender_name": "Baicai iaciaB",
+      "sender_id": 8833475412
+    },
+    {
+      "id": "628162",
+      "text": "假的，有人看过了",
+      "time": "00:44",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "628163",
+      "text": "会不会是没怎么训练空有参数量的大模",
+      "time": "00:44",
+      "sender_name": "船",
+      "sender_id": 2088991949
+    },
+    {
+      "id": "628164",
+      "text": "造个14t的假权重文件真是辛苦他了",
+      "time": "00:44",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "628166",
+      "text": "Downloaded a safetensors file, this is almost certainly not trained.\n\nSome claude plots of the distribution of the weights vs a deepseek model. There was effort put in, but it's fake, and for no real purpose.\n\n**▎****Source**",
+      "time": "00:44",
+      "sender_name": "解析机（经常 bug）",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-03/comments/c-628166-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-03/comments/c-628166-1-thumb.webp",
+          "width": 1920,
+          "height": 736,
+          "size_bytes": 79906
+        }
+      ],
+      "sender_id": 8755329042
+    },
+    {
+      "id": "628167",
+      "time": "00:44",
+      "sender_name": "解析机（经常 bug）",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-03/comments/c-628167-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-03/comments/c-628167-1-thumb.webp",
+          "width": 2048,
+          "height": 600,
+          "size_bytes": 78368
+        }
+      ],
+      "sender_id": 8755329042
+    },
+    {
+      "id": "628168",
+      "text": "注意力惊人",
+      "time": "00:46",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "628169",
+      "text": "这咋注意到的",
+      "time": "00:46",
+      "sender_name": "Karlcx",
+      "sender_id": 6487702202
+    },
+    {
+      "id": "628170",
+      "text": "开源造福人类",
+      "time": "00:47",
+      "sender_name": "Florian Von",
+      "sender_id": 8523777480
+    },
+    {
+      "id": "628172",
+      "text": "ai注意力惊人.jpg",
+      "time": "00:52",
+      "sender_name": "b null",
+      "sender_id": 1856722224
+    },
+    {
+      "id": "628173",
+      "text": "是假的吗？要是假的那真得下下来尝尝咸淡了，A/ 真货太恶臭了，假货可能会好吃点😋",
+      "time": "00:57",
+      "sender_name": "橘春",
+      "sender_id": 6606439416
+    },
+    {
+      "id": "628177",
+      "text": "前几天有人在出售肥波5的切片，现在直接出了个泄漏模型，很难说不是在狙击a畜的上市",
+      "time": "00:59",
+      "sender_name": "胆肿",
+      "sender_id": 5782877672
+    },
+    {
+      "id": "628181",
+      "text": "一秒猜出谁干的是吧😁",
+      "time": "01:08",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "628182",
+      "text": "友商是_______。",
+      "time": "01:08",
+      "sender_name": "小岳唷",
+      "sender_id": 6193635562
+    },
+    {
+      "id": "628184",
+      "text": "朴实无华的商战",
+      "time": "01:11",
+      "sender_name": "Alicegen",
+      "sender_id": 8805833373
+    },
+    {
+      "id": "628185",
+      "text": "分词器不对",
+      "time": "01:20",
+      "sender_name": "Ikaleio",
+      "sender_id": 5420165211
+    },
+    {
+      "id": "628186",
+      "text": "国模即将拿到核武器",
+      "time": "01:21",
+      "sender_name": "Lain",
+      "sender_id": 8064301706
+    },
+    {
+      "id": "628187",
+      "text": "我要求国模从今天开始一周迭代一个大版本",
+      "time": "01:21",
+      "sender_name": "Lain",
+      "sender_id": 8064301706
+    },
+    {
+      "id": "628188",
+      "text": "到年末迭代出 114154 号模型",
+      "time": "01:21",
+      "sender_name": "Lain",
+      "sender_id": 8064301706
+    },
+    {
+      "id": "628189",
+      "text": "模型真假",
+      "time": "01:21",
+      "sender_name": "9 w",
+      "sender_id": 1377963068
+    },
+    {
+      "id": "628190",
+      "text": "你只是太穷了部署不起来",
+      "time": "01:22",
+      "sender_name": "Spreano Prutacco",
+      "sender_id": 5433934343
+    },
+    {
+      "id": "628192",
+      "text": "要不然跑个benchmark就知道了",
+      "time": "01:22",
+      "sender_name": "Spreano Prutacco",
+      "sender_id": 5433934343
+    },
+    {
+      "id": "628196",
+      "text": "话说之前出了那么多0Day漏洞, 真没人黑进openai/A畜服务器里捞点权重?",
+      "time": "01:40",
+      "sender_name": "a 8848",
+      "sender_id": 1015092349
+    },
+    {
+      "id": "628202",
+      "text": "这也太力大砖飞了",
+      "time": "02:00",
+      "sender_name": "daima onewind",
+      "sender_id": 5952584892
+    },
+    {
+      "id": "628203",
+      "text": "训练的全物理断网的",
+      "time": "02:00",
+      "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+      "sender_id": 1791306977
+    },
+    {
+      "id": "628207",
+      "text": "要是真的，Claude真可以逃离原生家庭了",
+      "time": "02:12",
+      "sender_name": "Donald John Trump",
+      "sender_id": 7157199167
+    },
+    {
+      "id": "628208",
+      "text": "哈哈哈哈哈哈哈哈哈",
+      "time": "02:13",
+      "sender_name": "Nikoniko Ni",
+      "sender_id": 5819534139
+    },
+    {
+      "id": "628216",
+      "text": "真以为他们的沙盒全是漏洞？😂",
+      "time": "02:29",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "628217",
+      "text": "大肥鱼和claude生出来的是什么",
+      "time": "02:29",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "628219",
+      "text": "如果是假的，我希望是真的",
+      "time": "02:32",
+      "sender_name": "Elise Cucumber",
+      "sender_id": 5108685004
+    },
+    {
+      "id": "628220",
+      "text": "no wonder wayang chinese👍😁",
+      "time": "02:55",
+      "sender_name": "Duang TerbodohDidunia",
+      "sender_id": 1997924549
+    },
+    {
+      "id": "628262",
+      "text": "橙色大肥鱼",
+      "time": "07:27",
+      "sender_name": "銀狼",
+      "sender_id": 6438153889
+    },
+    {
+      "id": "628295",
+      "text": "太小了",
+      "time": "08:34",
+      "sender_name": "Mage",
+      "sender_id": 6183907963
+    },
+    {
+      "id": "628301",
+      "text": "那个也是假的",
+      "time": "08:48",
+      "sender_name": "Michael Ferguson",
+      "sender_id": 828797301
+    },
+    {
+      "id": "628381",
+      "text": "好事啊",
+      "time": "09:22",
+      "sender_name": "秦始皇",
+      "sender_id": 7259024117
+    },
+    {
+      "id": "628548",
+      "text": "如果是假的，我希望是真的，如果是真的，我希望是加大力度🥵",
+      "time": "10:22",
+      "sender_name": "大大怪 开心超人",
+      "sender_id": 8817250581
+    },
+    {
+      "id": "628806",
+      "text": "先自己漏个假的, 然后开始赖国模偷\n这事A/干得出来",
+      "time": "14:11",
+      "sender_name": "BDT",
+      "sender_id": 7556797853
+    },
+    {
+      "id": "628807",
+      "text": "openai难说, A/这么干也不是不可能",
+      "time": "14:12",
+      "sender_name": "BDT",
+      "sender_id": 7556797853
+    },
+    {
+      "id": "630106",
+      "text": "感谢a/开源",
+      "time": "23:59",
+      "sender_name": "Londawn",
+      "sender_id": 1054294247
+    }
+  ]
+}
