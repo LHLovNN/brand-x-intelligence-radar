@@ -1,0 +1,133 @@
+{
+  "conversation_id": "2117613367276016076",
+  "anchor_post_id": "2117613367276016076",
+  "summary_zh": "前文围绕自建爆款监控台的数据来源展开，收录帖具体推荐 AgentKey、Monid、TikHub、XCrawl，比较覆盖平台、免费试用、按次价格和接口体验，把话题转向数据工具选择。后续有人追问性价比、补充 X 抓取稳定性并提到 twexapi，也有人反馈用过 XCrawl 额度耗尽，显示讨论偏实用、情绪中性，具备一定参考价值。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2117613367276016076",
+      "url": "https://x.com/noahduck283/status/2117613367276016076",
+      "created_at": "2026-11-03T13:42:24Z",
+      "text": "兄弟们想不想自己搓一个爆款监控台？我搭的时候发现，第一道坎就是数据从哪来\n\n你让 Agent 去盯同行、扒评论、看热榜，它没长眼睛，寸步难行。今天一次性盘 4 个给 Agent 拿数据的平台，都能免费试用，不用绑卡，先白嫖体验\n\n1.AgentKey https://t.co/8TGCuAomtp\n给 AI Agent 用的实时数据集市，号称 1800+ 数据源。X、Reddit、YouTube、抖音、小红书、B站、知乎、微博、公众号、快手基本全齐，金融、电商（淘宝、京东、Amazon）、学术、GitHub 也有。\n\n光网页搜索就并列了 6 家供应商：Brave、Tavily、Serper、Perplexity、Parallel、Exa。\n\n2.Monid https://t.co/ie5hBUlUSi\n开源的 Agent 数据接口网关，号称 2800+ 工具、90+ 供应商，主打海外：Amazon、Reddit、TikTok、YouTube、Instagram、Google 评论、Apollo 销售线索都有\n\nAgent 用一句话就能搜工具、看价格、直接调用，按次付费，没有订阅\n\n3.TikHub https://t.co/wdlVJmvf9p\n纯社媒数据接口，做爆款监控的重点看。覆盖 18 个平台，国内抠得最细：抖音、小红书、视频号、公众号、快手、B站、微博、知乎，连皮皮虾、西瓜视频都有；\n\n海外有 TikTok、Instagram、X、YouTube、Threads、LinkedIn、Reddit、Lemon8。按次付费，一次 0.001 美元起，当天调用越多越便宜，部分接口能压到 0.0005 美元。我自己的对标流程就是用它抓小红书的作品数据和评论\n\n4.XCrawl https://t.co/LzpGDzbnkf\n专治\"这个网站没有现成接口\"，任意网站都能抓。四个能力：抓搜索结果页；单页抓取，直接出干净的 JSON、Markdown 或截图；整站地图，导出一个域名下能找到的所有链接；\n\n整站爬取，深度可控。它有 MCP 服务，能直接接进 Claude、Cursor 这类 AI 工具。我的调研流程里就接了它，专门补抓公开网页。\n\n但真正的爽点压根不在白嫖额度！！！\n\n就算一分钱不付，光翻一遍它们罗列的平台就值了：每个领域有哪些主流数据源、别人用的是什么技术方案，这本身就有信息差套利空间！！！\n\n更爽的是，很多能力可以直接内化到自己的工作台。比如我的工作台就是用开源的 SearXNG接Brave，一分钱没花，亲测好用！！！\n（Brave 自己的搜索 API 每个月还送免费额度）\n\n虽说纯自来水，方便大家也方便自己，还是标个付费狗头保命😂",
+      "original_text": "兄弟们想不想自己搓一个爆款监控台？我搭的时候发现，第一道坎就是数据从哪来\n\n你让 Agent 去盯同行、扒评论、看热榜，它没长眼睛，寸步难行。今天一次性盘 4 个给 Agent 拿数据的平台，都能免费试用，不用绑卡，先白嫖体验\n\n1.AgentKey https://t.co/8TGCuAomtp\n给 AI Agent 用的实时数据集市，号称 1800+ 数据源。X、Reddit、YouTube、抖音、小红书、B站、知乎、微博、公众号、快手基本全齐，金融、电商（淘宝、京东、Amazon）、学术、GitHub 也有。\n\n光网页搜索就并列了 6 家供应商：Brave、Tavily、Serper、Perplexity、Parallel、Exa。\n\n2.Monid https://t.co/ie5hBUlUSi\n开源的 Agent 数据接口网关，号称 2800+ 工具、90+ 供应商，主打海外：Amazon、Reddit、TikTok、YouTube、Instagram、Google 评论、Apollo 销售线索都有\n\nAgent 用一句话就能搜工具、看价格、直接调用，按次付费，没有订阅\n\n3.TikHub https://t.co/wdlVJmvf9p\n纯社媒数据接口，做爆款监控的重点看。覆盖 18 个平台，国内抠得最细：抖音、小红书、视频号、公众号、快手、B站、微博、知乎，连皮皮虾、西瓜视频都有；\n\n海外有 TikTok、Instagram、X、YouTube、Threads、LinkedIn、Reddit、Lemon8。按次付费，一次 0.001 美元起，当天调用越多越便宜，部分接口能压到 0.0005 美元。我自己的对标流程就是用它抓小红书的作品数据和评论\n\n4.XCrawl https://t.co/LzpGDzbnkf\n专治\"这个网站没有现成接口\"，任意网站都能抓。四个能力：抓搜索结果页；单页抓取，直接出干净的 JSON、Markdown 或截图；整站地图，导出一个域名下能找到的所有链接；\n\n整站爬取，深度可控。它有 MCP 服务，能直接接进 Claude、Cursor 这类 AI 工具。我的调研流程里就接了它，专门补抓公开网页。\n\n但真正的爽点压根不在白嫖额度！！！\n\n就算一分钱不付，光翻一遍它们罗列的平台就值了：每个领域有哪些主流数据源、别人用的是什么技术方案，这本身就有信息差套利空间！！！\n\n更爽的是，很多能力可以直接内化到自己的工作台。比如我的工作台就是用开源的 SearXNG接Brave，一分钱没花，亲测好用！！！\n（Brave 自己的搜索 API 每个月还送免费额度）\n\n虽说纯自来水，方便大家也方便自己，还是标个付费狗头保命😂",
+      "translation_zh": "兄弟们想不想自己搓一个爆款监控台？我搭的时候发现，第一道坎就是数据从哪来\n\n你让 Agent 去盯同行、扒评论、看热榜，它没长眼睛，寸步难行。今天一次性盘 4 个给 Agent 拿数据的平台，都能免费试用，不用绑卡，先白嫖体验\n\n1.AgentKey https://t.co/8TGCuAomtp\n给 AI Agent 用的实时数据集市，号称 1800+ 数据源。X、Reddit、YouTube、抖音、小红书、B站、知乎、微博、公众号、快手基本全齐，金融、电商（淘宝、京东、Amazon）、学术、GitHub 也有。\n\n光网页搜索就并列了 6 家供应商：Brave、Tavily、Serper、Perplexity、Parallel、Exa。\n\n2.Monid https://t.co/ie5hBUlUSi\n开源的 Agent 数据接口网关，号称 2800+ 工具、90+ 供应商，主打海外：Amazon、Reddit、TikTok、YouTube、Instagram、Google 评论、Apollo 销售线索都有\n\nAgent 用一句话就能搜工具、看价格、直接调用，按次付费，没有订阅\n\n3.TikHub https://t.co/wdlVJmvf9p\n纯社媒数据接口，做爆款监控的重点看。覆盖 18 个平台，国内抠得最细：抖音、小红书、视频号、公众号、快手、B站、微博、知乎，连皮皮虾、西瓜视频都有；\n\n海外有 TikTok、Instagram、X、YouTube、Threads、LinkedIn、Reddit、Lemon8。按次付费，一次 0.001 美元起，当天调用越多越便宜，部分接口能压到 0.0005 美元。我自己的对标流程就是用它抓小红书的作品数据和评论\n\n4.XCrawl https://t.co/LzpGDzbnkf\n专治\"这个网站没有现成接口\"，任意网站都能抓。四个能力：抓搜索结果页；单页抓取，直接出干净的 JSON、Markdown 或截图；整站地图，导出一个域名下能找到的所有链接；\n\n整站爬取，深度可控。它有 MCP 服务，能直接接进 Claude、Cursor 这类 AI 工具。我的调研流程里就接了它，专门补抓公开网页。\n\n但真正的爽点压根不在白嫖额度！！！\n\n就算一分钱不付，光翻一遍它们罗列的平台就值了：每个领域有哪些主流数据源、别人用的是什么技术方案，这本身就有信息差套利空间！！！\n\n更爽的是，很多能力可以直接内化到自己的工作台。比如我的工作台就是用开源的 SearXNG接Brave，一分钱没花，亲测好用！！！\n（Brave 自己的搜索 API 每个月还送免费额度）\n\n虽说纯自来水，方便大家也方便自己，还是标个付费狗头保命😂",
+      "translation_status": "source_chinese",
+      "author_name": "诺鸭船长3",
+      "author_handle": "noahduck283",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2106403106812731392/s9iU0RxU_normal.jpg",
+      "author_followers": 24922,
+      "author_following": 1112,
+      "author_bio": "🦆每天榨点好东西，也写一点想说的\n🚢目前 : AI硬件丨AIGC+AI 3D→AI游戏!\n🏝️带你在信息的海洋找到陆地",
+      "author_location": null,
+      "author_joined_at": "2026-01-24T08:33:13Z",
+      "author_verified": false,
+      "links": [
+        "https://agentkey.app/@noahduck283",
+        "https://monid.ai/",
+        "https://user.tikhub.io/register?ref=SVroUL5t",
+        "https://www.xcrawl.com/"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWNFogLbwAAXc-a.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWNFogLbwAAXc-a.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWNFogLbwAAXc-a.jpg",
+          "expanded_url": "https://x.com/noahduck283/status/2117613367276016076/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 4,
+        "reposts": 3,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 10,
+        "views": 886
+      }
+    },
+    {
+      "post_id": "2117620957665972448",
+      "url": "https://x.com/jiefuBTC/status/2117620957665972448",
+      "created_at": "2026-11-03T14:12:34Z",
+      "text": "@noahduck283 哪个最划算啊这几个",
+      "original_text": "@noahduck283 哪个最划算啊这几个",
+      "translation_zh": "@noahduck283 哪个最划算啊这几个",
+      "translation_status": "source_chinese",
+      "author_name": "解夫🔶｜Crypto",
+      "author_handle": "jiefuBTC",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2102775035257647105/xD3EsbAP_normal.jpg",
+      "author_followers": 462,
+      "author_following": 548,
+      "author_bio": "我就是一个普普通通希望能在市场多活一天的人 \n经历过每一个前辈同行都经历过的痛苦 \n个人笔记，不构成投资建议；\n寄语：独立思考，为认知买单，正心以中，修身以和。📈",
+      "author_location": "Hong Kong",
+      "author_joined_at": "2024-04-02T15:49:28Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 21
+      }
+    },
+    {
+      "post_id": "2117623235923620279",
+      "url": "https://x.com/RobertsDud12769/status/2117623235923620279",
+      "created_at": "2026-11-03T14:21:37Z",
+      "text": "@noahduck283 X 这类平台别只看覆盖，稳定性和限流才是监控台翻车点。抓 X 数据可以顺带看看 twexapi，搜索、趋势、帖子接口比较轻量，接 Agent 也方便。",
+      "original_text": "@noahduck283 X 这类平台别只看覆盖，稳定性和限流才是监控台翻车点。抓 X 数据可以顺带看看 twexapi，搜索、趋势、帖子接口比较轻量，接 Agent 也方便。",
+      "translation_zh": "@noahduck283 X 这类平台别只看覆盖，稳定性和限流才是监控台翻车点。抓 X 数据可以顺带看看 twexapi，搜索、趋势、帖子接口比较轻量，接 Agent 也方便。",
+      "translation_status": "source_chinese",
+      "author_name": "Dudley Roberts",
+      "author_handle": "RobertsDud12769",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1872405981079928832/9qD63IOK_normal.jpg",
+      "author_followers": 2,
+      "author_following": 1,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-12-12T11:14:07Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 9
+      }
+    },
+    {
+      "post_id": "2117645981152084138",
+      "url": "https://x.com/isnail/status/2117645981152084138",
+      "created_at": "2026-11-03T15:52:00Z",
+      "text": "@noahduck283 我之前用的XCrawl，额度用完没充了",
+      "original_text": "@noahduck283 我之前用的XCrawl，额度用完没充了",
+      "translation_zh": "@noahduck283 我之前用的XCrawl，额度用完没充了",
+      "translation_status": "source_chinese",
+      "author_name": "蜗牛King 👑",
+      "author_handle": "isnail",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2006754379890593792/rZQ06k6__normal.jpg",
+      "author_followers": 56781,
+      "author_following": 1510,
+      "author_bio": "正在为自由努力搞副业\n公众号知识库+答疑群199\nAI 代充https://t.co/o8GzWvUIdu\nX冷启动服务https://t.co/InV0E8qbvt\n持续分享，每天进步一点点",
+      "author_location": " 🌏V510626 出海、AI账号→",
+      "author_joined_at": "2023-04-25T03:40:47Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 72
+      }
+    }
+  ]
+}

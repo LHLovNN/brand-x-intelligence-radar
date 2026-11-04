@@ -1,0 +1,95 @@
+{
+  "conversation_id": "2117594011271909589",
+  "anchor_post_id": "2117594011271909589",
+  "summary_zh": "片段未见更早铺垫，收录帖直接围绕小红书图文排版耗时展开，介绍 Ian XHS Carousel 的功能、适用账号、安装方式、交付物和 MIT 免费商用等信息，把话题聚焦到具体工具体验与使用成本。后续仅有人补充认可“先确认每页”可减少返工并求互关。上下文显示信息较具体、情绪偏正面，但互动少，传播价值有限。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2117594011271909589",
+      "url": "https://x.com/ganfanren_ai/status/2117594011271909589",
+      "created_at": "2026-11-03T12:25:29Z",
+      "text": "做小红书图文最耗时间的不是写，是排版！！！\n一篇文章拆成五六张图，每张选版式、对齐、调字号，一折腾就是一下午。Ian XHS Carousel 是一个 Claude Code Skill，把文章、案例或笔记排成一组 3:4 的小红书图文，1080×1440，简洁的产品界面风。\n\n哪类账号、什么痛点、用哪个功能解决：\n· 在 X、公众号写长文，想顺手同步小红书的：痛点是同一篇内容重新做图太费劲，最后干脆不发。用法是一句「/ian-xhs-carousel 把下面这篇文章做成一组小红书图文」，它先出一张分镜表（每页讲什么、用哪个母版、标题怎么写），你确认了才排版出图\n· AI 工具、效率工具测评号：痛点是截图、步骤、对比、代码堆在一起很乱。20 个母版里正好有截图标注、手机截图、步骤、对错对比、提示词、代码这些页型\n· 想做固定栏目的：痛点是每期风格不统一，账号看着杂。同一套样式，浅色、深色两版，版式一样\n· 接图文代运营单的：交付物有每页 PNG、整组总览图和 HTML 源文件，客户要改字，改完重新渲染就行，不用从头做\n\n上手：\ngit clone https://t.co/rSll5EYiDL\nmkdir -p ~/.claude/skills\ncp -R ./ian-xhs-carousel/ian-xhs-carousel ~/.claude/skills/\npip install playwright pillow\nplaywright install chromium\n渲染时要联网加载字体。\n\n作者的建议：\n· 分镜表那一步多花点时间，一组 5 页左右刚好\n· 图上的字越少越好，说不完的留给正文\n· 素材用高清截图、官方 SVG logo，没有好图先空着，它会在分镜表里问你要\n不适合的：手绘、插画、大色块海报这类风格。小红书的标题、正文和话题标签要你另外写。\n\n项目地址：https://t.co/OjUFzXIYf3\nMIT 协议，免费，可商用；需要 Claude Code，作者说最好用 Claude 跑。NOTICE 文件要求：转发或改编这个仓库时，保留 Ian XHS Carousel 的名字或注明作者 Ian。\n\n#Xiaohongshu #ClaudeCode #ContentCreator #GitHub",
+      "original_text": "做小红书图文最耗时间的不是写，是排版！！！\n一篇文章拆成五六张图，每张选版式、对齐、调字号，一折腾就是一下午。Ian XHS Carousel 是一个 Claude Code Skill，把文章、案例或笔记排成一组 3:4 的小红书图文，1080×1440，简洁的产品界面风。\n\n哪类账号、什么痛点、用哪个功能解决：\n· 在 X、公众号写长文，想顺手同步小红书的：痛点是同一篇内容重新做图太费劲，最后干脆不发。用法是一句「/ian-xhs-carousel 把下面这篇文章做成一组小红书图文」，它先出一张分镜表（每页讲什么、用哪个母版、标题怎么写），你确认了才排版出图\n· AI 工具、效率工具测评号：痛点是截图、步骤、对比、代码堆在一起很乱。20 个母版里正好有截图标注、手机截图、步骤、对错对比、提示词、代码这些页型\n· 想做固定栏目的：痛点是每期风格不统一，账号看着杂。同一套样式，浅色、深色两版，版式一样\n· 接图文代运营单的：交付物有每页 PNG、整组总览图和 HTML 源文件，客户要改字，改完重新渲染就行，不用从头做\n\n上手：\ngit clone https://t.co/rSll5EYiDL\nmkdir -p ~/.claude/skills\ncp -R ./ian-xhs-carousel/ian-xhs-carousel ~/.claude/skills/\npip install playwright pillow\nplaywright install chromium\n渲染时要联网加载字体。\n\n作者的建议：\n· 分镜表那一步多花点时间，一组 5 页左右刚好\n· 图上的字越少越好，说不完的留给正文\n· 素材用高清截图、官方 SVG logo，没有好图先空着，它会在分镜表里问你要\n不适合的：手绘、插画、大色块海报这类风格。小红书的标题、正文和话题标签要你另外写。\n\n项目地址：https://t.co/OjUFzXIYf3\nMIT 协议，免费，可商用；需要 Claude Code，作者说最好用 Claude 跑。NOTICE 文件要求：转发或改编这个仓库时，保留 Ian XHS Carousel 的名字或注明作者 Ian。\n\n#Xiaohongshu #ClaudeCode #ContentCreator #GitHub",
+      "translation_zh": "做小红书图文最耗时间的不是写，是排版！！！\n一篇文章拆成五六张图，每张选版式、对齐、调字号，一折腾就是一下午。Ian XHS Carousel 是一个 Claude Code Skill，把文章、案例或笔记排成一组 3:4 的小红书图文，1080×1440，简洁的产品界面风。\n\n哪类账号、什么痛点、用哪个功能解决：\n· 在 X、公众号写长文，想顺手同步小红书的：痛点是同一篇内容重新做图太费劲，最后干脆不发。用法是一句「/ian-xhs-carousel 把下面这篇文章做成一组小红书图文」，它先出一张分镜表（每页讲什么、用哪个母版、标题怎么写），你确认了才排版出图\n· AI 工具、效率工具测评号：痛点是截图、步骤、对比、代码堆在一起很乱。20 个母版里正好有截图标注、手机截图、步骤、对错对比、提示词、代码这些页型\n· 想做固定栏目的：痛点是每期风格不统一，账号看着杂。同一套样式，浅色、深色两版，版式一样\n· 接图文代运营单的：交付物有每页 PNG、整组总览图和 HTML 源文件，客户要改字，改完重新渲染就行，不用从头做\n\n上手：\ngit clone https://t.co/rSll5EYiDL\nmkdir -p ~/.claude/skills\ncp -R ./ian-xhs-carousel/ian-xhs-carousel ~/.claude/skills/\npip install playwright pillow\nplaywright install chromium\n渲染时要联网加载字体。\n\n作者的建议：\n· 分镜表那一步多花点时间，一组 5 页左右刚好\n· 图上的字越少越好，说不完的留给正文\n· 素材用高清截图、官方 SVG logo，没有好图先空着，它会在分镜表里问你要\n不适合的：手绘、插画、大色块海报这类风格。小红书的标题、正文和话题标签要你另外写。\n\n项目地址：https://t.co/OjUFzXIYf3\nMIT 协议，免费，可商用；需要 Claude Code，作者说最好用 Claude 跑。NOTICE 文件要求：转发或改编这个仓库时，保留 Ian XHS Carousel 的名字或注明作者 Ian。\n\n#Xiaohongshu #ClaudeCode #ContentCreator #GitHub",
+      "translation_status": "source_chinese",
+      "author_name": "饭饭猛猛炫、",
+      "author_handle": "ganfanren_ai",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2112791486794522624/W96smZs8_normal.png",
+      "author_followers": 120,
+      "author_following": 187,
+      "author_bio": "🚩拆解 100 个账号｜探索 AI 实用方向｜电子产品爽玩\n📍前互联网用户运营｜拼过小厂，熬过大厂\n👷‍♀️大健康｜运动营养 10 年+",
+      "author_location": "赛博空间",
+      "author_joined_at": "2026-04-11T09:10:22Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/helloianneo/ian-xhs-carousel.git",
+        "http://github.com/helloianneo/ian-xhs-carousel"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 4,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 7,
+        "views": 422
+      }
+    },
+    {
+      "post_id": "2117595835462787491",
+      "url": "https://x.com/JasonPang0720/status/2117595835462787491",
+      "created_at": "2026-11-03T12:32:44Z",
+      "text": "@ganfanren_ai 先确认每页讲什么，返工会少些。",
+      "original_text": "@ganfanren_ai 先确认每页讲什么，返工会少些。",
+      "translation_zh": "@ganfanren_ai 先确认每页讲什么，返工会少些。",
+      "translation_status": "source_chinese",
+      "author_name": "Jason",
+      "author_handle": "JasonPang0720",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2091134245272276992/NKZ-U6x2_normal.jpg",
+      "author_followers": 1629,
+      "author_following": 1925,
+      "author_bio": "AI 实践者｜把重复工作交给 AI，把时间留给创造。\n折腾 Agent、AI 编程与自动化工作流，分享论文解读、实测方法和踩坑记录。\n探索一个人 + AI，能做成多少事。",
+      "author_location": null,
+      "author_joined_at": "2016-11-10T08:02:27Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 7
+      }
+    },
+    {
+      "post_id": "2117595952395743567",
+      "url": "https://x.com/JasonPang0720/status/2117595952395743567",
+      "created_at": "2026-11-03T12:33:12Z",
+      "text": "@ganfanren_ai 关注你啦，欢迎互关～",
+      "original_text": "@ganfanren_ai 关注你啦，欢迎互关～",
+      "translation_zh": "@ganfanren_ai 关注你啦，欢迎互关～",
+      "translation_status": "source_chinese",
+      "author_name": "Jason",
+      "author_handle": "JasonPang0720",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2091134245272276992/NKZ-U6x2_normal.jpg",
+      "author_followers": 1629,
+      "author_following": 1925,
+      "author_bio": "AI 实践者｜把重复工作交给 AI，把时间留给创造。\n折腾 Agent、AI 编程与自动化工作流，分享论文解读、实测方法和踩坑记录。\n探索一个人 + AI，能做成多少事。",
+      "author_location": null,
+      "author_joined_at": "2016-11-10T08:02:27Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 8
+      }
+    }
+  ]
+}

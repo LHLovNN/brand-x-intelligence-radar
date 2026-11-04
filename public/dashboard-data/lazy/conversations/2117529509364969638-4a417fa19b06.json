@@ -1,0 +1,72 @@
+{
+  "conversation_id": "2117529509364969638",
+  "anchor_post_id": "2117529509364969638",
+  "summary_zh": "对话原本围绕一位创作者20多天冷启动获得百万曝光的AI工作流展开。收录帖把话题落到具体工具与体验，提到cinetty免费可商用，Paper、Linear、Eagle等为商业软件且价格以官网为准。后续有人回应称更想看哪类内容涨粉，而非工具清单。上下文显示这是方法分享，情绪偏正向，品牌提及属使用场景引用，传播价值在AI创作者圈层。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2117529509364969638",
+      "url": "https://x.com/ganfanren_ai/status/2117529509364969638",
+      "created_at": "2026-11-03T08:09:11Z",
+      "text": "一个人冷启动 20 来天做到百万级曝光，这篇把他在用的软件、Skill 和 Agent 分工全摊开了。\n曝光数按作者自述：标题写 150 万，正文写 X 上 170 多万曝光、3,000 多粉丝，外加小红书 1,000+ 粉、公众号 2,000 多粉。\n\n他的核心判断：注意力稀缺的时候，视觉效果比产品功能还重要；创始人的社媒声量，是和产品品质同级的资产。\n\n工作流拆解：\n1. 设计：平时的设计参考存进 Eagle 分类管理 → 用 Paper（agent 能通过 MCP 直接读写设计画布）一次出几版静态原型，挑一版迭代三轮 → 静态定稿后再用动效库做成可交互页面。先静后动，两步分开磨\n2. 开发：Claude Code 当主力，主 agent 用 Opus，不亲自写代码，只拆任务、做协调；Codex 负责工程实现和独立代码审查；Claude、Gemini 做界面和视觉。agent 用带登录状态的浏览器跑真实流程验证，另一台 MacBook Air 专门给 agent 做真机测试\n3. 多项目：只跟一个主对话打交道，用 Linear 当共享工作台。他的原话、讨论后的决定、拆出来的任务、进展和验证证据都留在 issue 里，有新变化主 agent 自动接着跟进\n4. 内容：发帖前让 Grok 调研话题，看谁在讨论、哪些帖子反响好；发完再让它复盘表现。Gemini 管文案和视频理解。录屏截图用 Screen Studio、CleanShot，成品再归档回 Eagle，变成下一轮的素材\n5. 把关：每条内容发不发，最后由他自己看过再决定\n\n我觉得最值得抄的不是工具清单，是分工：\n· AI 负责执行和检查，人只管审美和取舍。工具栈保下限，审美定上限\n· 做内容的先抄第 4 步：发前调研、发后复盘，形成闭环，每条帖子都在给下一条攒数据\n· 素材归档复用，做得越多越快，这才是一个人能同时推进几个项目的底气\n· 付费软件不必照搬，先用自己手上的工具把流程跑通\n\n文中提到的：\n· cinetty（https://t.co/FL5IeKoPQY）：作者开源的终端动画 Skill，MIT 协议，免费，可商用\n· Paper（https://t.co/5rwYFp8RPR）、Linear（https://t.co/yTTuHpmtZl）、Eagle（https://t.co/mHm7Snuvry）、Screen Studio（https://t.co/FDR0gLJNbG）、CleanShot（https://t.co/iBLLUesowg）：商业软件，不开源，价格以官网为准\n\n#AIagents #BuildInPublic #ClaudeCode #Codex #ContentCreator https://t.co/Wph9sDTYQ1",
+      "original_text": "一个人冷启动 20 来天做到百万级曝光，这篇把他在用的软件、Skill 和 Agent 分工全摊开了。\n曝光数按作者自述：标题写 150 万，正文写 X 上 170 多万曝光、3,000 多粉丝，外加小红书 1,000+ 粉、公众号 2,000 多粉。\n\n他的核心判断：注意力稀缺的时候，视觉效果比产品功能还重要；创始人的社媒声量，是和产品品质同级的资产。\n\n工作流拆解：\n1. 设计：平时的设计参考存进 Eagle 分类管理 → 用 Paper（agent 能通过 MCP 直接读写设计画布）一次出几版静态原型，挑一版迭代三轮 → 静态定稿后再用动效库做成可交互页面。先静后动，两步分开磨\n2. 开发：Claude Code 当主力，主 agent 用 Opus，不亲自写代码，只拆任务、做协调；Codex 负责工程实现和独立代码审查；Claude、Gemini 做界面和视觉。agent 用带登录状态的浏览器跑真实流程验证，另一台 MacBook Air 专门给 agent 做真机测试\n3. 多项目：只跟一个主对话打交道，用 Linear 当共享工作台。他的原话、讨论后的决定、拆出来的任务、进展和验证证据都留在 issue 里，有新变化主 agent 自动接着跟进\n4. 内容：发帖前让 Grok 调研话题，看谁在讨论、哪些帖子反响好；发完再让它复盘表现。Gemini 管文案和视频理解。录屏截图用 Screen Studio、CleanShot，成品再归档回 Eagle，变成下一轮的素材\n5. 把关：每条内容发不发，最后由他自己看过再决定\n\n我觉得最值得抄的不是工具清单，是分工：\n· AI 负责执行和检查，人只管审美和取舍。工具栈保下限，审美定上限\n· 做内容的先抄第 4 步：发前调研、发后复盘，形成闭环，每条帖子都在给下一条攒数据\n· 素材归档复用，做得越多越快，这才是一个人能同时推进几个项目的底气\n· 付费软件不必照搬，先用自己手上的工具把流程跑通\n\n文中提到的：\n· cinetty（https://t.co/FL5IeKoPQY）：作者开源的终端动画 Skill，MIT 协议，免费，可商用\n· Paper（https://t.co/5rwYFp8RPR）、Linear（https://t.co/yTTuHpmtZl）、Eagle（https://t.co/mHm7Snuvry）、Screen Studio（https://t.co/FDR0gLJNbG）、CleanShot（https://t.co/iBLLUesowg）：商业软件，不开源，价格以官网为准\n\n#AIagents #BuildInPublic #ClaudeCode #Codex #ContentCreator https://t.co/Wph9sDTYQ1",
+      "translation_zh": "一个人冷启动 20 来天做到百万级曝光，这篇把他在用的软件、Skill 和 Agent 分工全摊开了。\n曝光数按作者自述：标题写 150 万，正文写 X 上 170 多万曝光、3,000 多粉丝，外加小红书 1,000+ 粉、公众号 2,000 多粉。\n\n他的核心判断：注意力稀缺的时候，视觉效果比产品功能还重要；创始人的社媒声量，是和产品品质同级的资产。\n\n工作流拆解：\n1. 设计：平时的设计参考存进 Eagle 分类管理 → 用 Paper（agent 能通过 MCP 直接读写设计画布）一次出几版静态原型，挑一版迭代三轮 → 静态定稿后再用动效库做成可交互页面。先静后动，两步分开磨\n2. 开发：Claude Code 当主力，主 agent 用 Opus，不亲自写代码，只拆任务、做协调；Codex 负责工程实现和独立代码审查；Claude、Gemini 做界面和视觉。agent 用带登录状态的浏览器跑真实流程验证，另一台 MacBook Air 专门给 agent 做真机测试\n3. 多项目：只跟一个主对话打交道，用 Linear 当共享工作台。他的原话、讨论后的决定、拆出来的任务、进展和验证证据都留在 issue 里，有新变化主 agent 自动接着跟进\n4. 内容：发帖前让 Grok 调研话题，看谁在讨论、哪些帖子反响好；发完再让它复盘表现。Gemini 管文案和视频理解。录屏截图用 Screen Studio、CleanShot，成品再归档回 Eagle，变成下一轮的素材\n5. 把关：每条内容发不发，最后由他自己看过再决定\n\n我觉得最值得抄的不是工具清单，是分工：\n· AI 负责执行和检查，人只管审美和取舍。工具栈保下限，审美定上限\n· 做内容的先抄第 4 步：发前调研、发后复盘，形成闭环，每条帖子都在给下一条攒数据\n· 素材归档复用，做得越多越快，这才是一个人能同时推进几个项目的底气\n· 付费软件不必照搬，先用自己手上的工具把流程跑通\n\n文中提到的：\n· cinetty（https://t.co/FL5IeKoPQY）：作者开源的终端动画 Skill，MIT 协议，免费，可商用\n· Paper（https://t.co/5rwYFp8RPR）、Linear（https://t.co/yTTuHpmtZl）、Eagle（https://t.co/mHm7Snuvry）、Screen Studio（https://t.co/FDR0gLJNbG）、CleanShot（https://t.co/iBLLUesowg）：商业软件，不开源，价格以官网为准\n\n#AIagents #BuildInPublic #ClaudeCode #Codex #ContentCreator https://t.co/Wph9sDTYQ1",
+      "translation_status": "source_chinese",
+      "author_name": "饭饭猛猛炫、",
+      "author_handle": "ganfanren_ai",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2112791486794522624/W96smZs8_normal.png",
+      "author_followers": 120,
+      "author_following": 187,
+      "author_bio": "🚩拆解 100 个账号｜探索 AI 实用方向｜电子产品爽玩\n📍前互联网用户运营｜拼过小厂，熬过大厂\n👷‍♀️大健康｜运动营养 10 年+",
+      "author_location": "赛博空间",
+      "author_joined_at": "2026-04-11T09:10:22Z",
+      "author_verified": false,
+      "links": [
+        "http://github.com/JosssphZhou/cinetty",
+        "http://paper.design",
+        "http://linear.app",
+        "http://eagle.cool",
+        "http://screen.studio",
+        "http://cleanshot.com",
+        "https://x.com/openmys/status/2116911476422402222"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 300
+      }
+    },
+    {
+      "post_id": "2117536475923308933",
+      "url": "https://x.com/HunZhijie/status/2117536475923308933",
+      "created_at": "2026-11-03T08:36:52Z",
+      "text": "@ganfanren_ai 20 来天冷启动到这个量很猛。我更想看他哪类内容带来的粉丝最多，这比工具清单更有参考价值。",
+      "original_text": "@ganfanren_ai 20 来天冷启动到这个量很猛。我更想看他哪类内容带来的粉丝最多，这比工具清单更有参考价值。",
+      "translation_zh": "@ganfanren_ai 20 来天冷启动到这个量很猛。我更想看他哪类内容带来的粉丝最多，这比工具清单更有参考价值。",
+      "translation_status": "source_chinese",
+      "author_name": "Jayden Wong",
+      "author_handle": "HunZhijie",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2095819372153745409/AnTwzYtl_normal.jpg",
+      "author_followers": 1098,
+      "author_following": 2062,
+      "author_bio": "AI · Agent ｜AI ·Crypto｜AI · American&A Stock Market｜The Dollar is KING｜",
+      "author_location": null,
+      "author_joined_at": "2024-06-12T04:36:56Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "conversation_id": "2117532425614205333",
+  "anchor_post_id": "2117532425614205333",
+  "summary_zh": "前文即收录帖，作者围绕让 Grok Bot 接入国内平台，列举小红书、抖音、B站、飞猪、企业微信的 MCP/Skill/CLI及用途、权限提醒，把话题落到具体平台工具体验和接入成本。后续有人回应称小红书 MCP 星数高、能省内容号手工。上下文显示舆情偏正向实用分享，传播价值在AI运营工具圈，真实性可参考其链接与“需审核”等限定。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2117532425614205333",
+      "url": "https://x.com/Stanllll6o/status/2117532425614205333",
+      "created_at": "2026-11-03T08:20:46Z",
+      "text": "以后你让 Grok Bot 接国内平台，不用再自己啃接口文档了。\n\n现成的 MCP、Skill、CLI 一抓一大把。\n\n整理了 5 个，前两个对做内容运营的人尤其香👇\n\n1、小红书｜社区 MCP\n\n据说 GitHub 上已经 1.6 万多 Star。\n\n支持搜索笔记、看评论、取内容详情，还能直接发图文和视频。\n\n平时在 X 上刷到好素材，让 Grok Bot 整理完同步到小红书，一条龙。\n\nhttps://t.co/ZpWp2rML3D\n\n2、抖音｜官方 MCP 服务广场\n\n抖音自己开放了 MCP 服务广场。\n\n视频搜索、图文搜索、跳转链接获取，开发者可申请接入。\n\n让 Grok Bot 帮你抓热点、找视频，多了一条官方路子。\n\n注意：部分能力要审核，不是装上就能用。\n\nhttps://t.co/Fw7VRIDUhu\n\n3、B 站｜社区 MCP\n\n社区已经把 B 站封装成 MCP 了。\n\n支持视频搜索、读字幕和弹幕、分析评论，还能管动态和投稿。\n\n最好用的是字幕+评论：让 Grok Bot 总结一个视频的重点，再看看评论区在吵什么。\n\nhttps://t.co/I2vJ1GCks4\n\n4、飞猪｜官方 Skill\n\n阿里官方开放，支持查酒店、机票和景点。\n\n直接说想去哪，Agent 帮你搜航班、推酒店、排行程。\n\nhttps://t.co/iN5W3YfUay\n\n5、企业微信｜官方 CLI + Skill\n\n企业微信也有官方 CLI 了。\n\n文档、智能表格、日历、会议、待办、微盘全覆盖，扫码就能授权。\n\n主要用企微办公的话，可以直接丢给 Grok Bot 管。\n\nhttps://t.co/etHzpPx939\n\n几个提醒：\n\n官方接口 ≠ 社区 MCP。\n有的要申请权限。\n本地跑的 MCP，可能还要额外配置才能被 Grok Bot 调到。\n\n以前接国内平台得自己研究接口，现在基本都有现成的，配置一下就能跑。\n\n国内生态这块，正在慢慢补齐。\n\n#AI工具 #GrokBot #效率工具",
+      "original_text": "以后你让 Grok Bot 接国内平台，不用再自己啃接口文档了。\n\n现成的 MCP、Skill、CLI 一抓一大把。\n\n整理了 5 个，前两个对做内容运营的人尤其香👇\n\n1、小红书｜社区 MCP\n\n据说 GitHub 上已经 1.6 万多 Star。\n\n支持搜索笔记、看评论、取内容详情，还能直接发图文和视频。\n\n平时在 X 上刷到好素材，让 Grok Bot 整理完同步到小红书，一条龙。\n\nhttps://t.co/ZpWp2rML3D\n\n2、抖音｜官方 MCP 服务广场\n\n抖音自己开放了 MCP 服务广场。\n\n视频搜索、图文搜索、跳转链接获取，开发者可申请接入。\n\n让 Grok Bot 帮你抓热点、找视频，多了一条官方路子。\n\n注意：部分能力要审核，不是装上就能用。\n\nhttps://t.co/Fw7VRIDUhu\n\n3、B 站｜社区 MCP\n\n社区已经把 B 站封装成 MCP 了。\n\n支持视频搜索、读字幕和弹幕、分析评论，还能管动态和投稿。\n\n最好用的是字幕+评论：让 Grok Bot 总结一个视频的重点，再看看评论区在吵什么。\n\nhttps://t.co/I2vJ1GCks4\n\n4、飞猪｜官方 Skill\n\n阿里官方开放，支持查酒店、机票和景点。\n\n直接说想去哪，Agent 帮你搜航班、推酒店、排行程。\n\nhttps://t.co/iN5W3YfUay\n\n5、企业微信｜官方 CLI + Skill\n\n企业微信也有官方 CLI 了。\n\n文档、智能表格、日历、会议、待办、微盘全覆盖，扫码就能授权。\n\n主要用企微办公的话，可以直接丢给 Grok Bot 管。\n\nhttps://t.co/etHzpPx939\n\n几个提醒：\n\n官方接口 ≠ 社区 MCP。\n有的要申请权限。\n本地跑的 MCP，可能还要额外配置才能被 Grok Bot 调到。\n\n以前接国内平台得自己研究接口，现在基本都有现成的，配置一下就能跑。\n\n国内生态这块，正在慢慢补齐。\n\n#AI工具 #GrokBot #效率工具",
+      "translation_zh": "以后你让 Grok Bot 接国内平台，不用再自己啃接口文档了。\n\n现成的 MCP、Skill、CLI 一抓一大把。\n\n整理了 5 个，前两个对做内容运营的人尤其香👇\n\n1、小红书｜社区 MCP\n\n据说 GitHub 上已经 1.6 万多 Star。\n\n支持搜索笔记、看评论、取内容详情，还能直接发图文和视频。\n\n平时在 X 上刷到好素材，让 Grok Bot 整理完同步到小红书，一条龙。\n\nhttps://t.co/ZpWp2rML3D\n\n2、抖音｜官方 MCP 服务广场\n\n抖音自己开放了 MCP 服务广场。\n\n视频搜索、图文搜索、跳转链接获取，开发者可申请接入。\n\n让 Grok Bot 帮你抓热点、找视频，多了一条官方路子。\n\n注意：部分能力要审核，不是装上就能用。\n\nhttps://t.co/Fw7VRIDUhu\n\n3、B 站｜社区 MCP\n\n社区已经把 B 站封装成 MCP 了。\n\n支持视频搜索、读字幕和弹幕、分析评论，还能管动态和投稿。\n\n最好用的是字幕+评论：让 Grok Bot 总结一个视频的重点，再看看评论区在吵什么。\n\nhttps://t.co/I2vJ1GCks4\n\n4、飞猪｜官方 Skill\n\n阿里官方开放，支持查酒店、机票和景点。\n\n直接说想去哪，Agent 帮你搜航班、推酒店、排行程。\n\nhttps://t.co/iN5W3YfUay\n\n5、企业微信｜官方 CLI + Skill\n\n企业微信也有官方 CLI 了。\n\n文档、智能表格、日历、会议、待办、微盘全覆盖，扫码就能授权。\n\n主要用企微办公的话，可以直接丢给 Grok Bot 管。\n\nhttps://t.co/etHzpPx939\n\n几个提醒：\n\n官方接口 ≠ 社区 MCP。\n有的要申请权限。\n本地跑的 MCP，可能还要额外配置才能被 Grok Bot 调到。\n\n以前接国内平台得自己研究接口，现在基本都有现成的，配置一下就能跑。\n\n国内生态这块，正在慢慢补齐。\n\n#AI工具 #GrokBot #效率工具",
+      "translation_status": "source_chinese",
+      "author_name": "离岸工具包🎒",
+      "author_handle": "Stanllll6o",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2108433329322373120/EmdsFz3S_normal.jpg",
+      "author_followers": 4315,
+      "author_following": 4167,
+      "author_bio": "AI工具｜跨境支付｜美股券商\n\n自用10年 的 搬瓦工 机场 👇",
+      "author_location": "Tokyo",
+      "author_joined_at": "2026-04-18T10:03:51Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/xpzouying/xiaohongshu-mcp",
+        "https://developer.open-douyin.com/docs/resource/zh-CN/dop/ability/mcp-service/mcp-service-desc",
+        "https://github.com/adoresever/bilibili-mcp",
+        "https://flyai.open.fliggy.com/",
+        "https://github.com/WecomTeam/wecom-cli"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWL8f_MWEAA2WDH.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWL8f_MWEAA2WDH.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWL8f_MWEAA2WDH.jpg",
+          "expanded_url": "https://x.com/Stanllll6o/status/2117532425614205333/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWL8f-gXEAAoBP-.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWL8f-gXEAAoBP-.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWL8f-gXEAAoBP-.jpg",
+          "expanded_url": "https://x.com/Stanllll6o/status/2117532425614205333/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWL8f-iW0AAUNIq.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWL8f-iW0AAUNIq.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWL8f-iW0AAUNIq.jpg",
+          "expanded_url": "https://x.com/Stanllll6o/status/2117532425614205333/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 189
+      }
+    },
+    {
+      "post_id": "2117582870760001828",
+      "url": "https://x.com/SeriousMaverick/status/2117582870760001828",
+      "created_at": "2026-11-03T11:41:13Z",
+      "text": "@Stanllll6o 小红书那个MCP星数吓人 内容号直接省掉半截手工",
+      "original_text": "@Stanllll6o 小红书那个MCP星数吓人 内容号直接省掉半截手工",
+      "translation_zh": "@Stanllll6o 小红书那个MCP星数吓人 内容号直接省掉半截手工",
+      "translation_status": "source_chinese",
+      "author_name": "SeriousMaverick",
+      "author_handle": "SeriousMaverick",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1439795780919779329/5mRVafTh_normal.jpg",
+      "author_followers": 14,
+      "author_following": 18,
+      "author_bio": "牛马打工人｜Grok Bot碎碎念｜不写教程，只写原来还能这样｜实测大于口号",
+      "author_location": null,
+      "author_joined_at": "2021-09-20T03:37:01Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 2
+      }
+    }
+  ]
+}
