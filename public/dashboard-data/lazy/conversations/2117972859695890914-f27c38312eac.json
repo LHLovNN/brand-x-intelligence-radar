@@ -1,0 +1,211 @@
+{
+  "conversation_id": "2117972859695890914",
+  "anchor_post_id": "2117972859695890914",
+  "summary_zh": "对话由 xiaomovps 分享“Grok Bot 做短视频”的5个 Skill/CLI项目展开，重点介绍生成、剪辑、复盘和多平台发布，并提示需自部署、API可能产生费用。后续有人表示想试用、认可口播剪辑省事，也补充 yt-dlp 用法；另有人反馈周额度不够、工具太多导致选择成本高。上下文显示讨论偏真实使用经验，情绪总体积极但夹杂成本与额度顾虑。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2117972859695890914",
+      "url": "https://x.com/xiaomovps/status/2117972859695890914",
+      "created_at": "2026-11-04T13:30:54Z",
+      "text": "Grok Bot 还能帮我做短视频？推荐 5 个值得收藏的 Skill 和 CLI\n\nGrok Bot不仅可以帮你运营公众号小红书还可以帮你运营短视频，我这里收集了五个，我认为比较好的项目，可以把你的短视频也集成到Grok Bot上面\n\n测试下来Grok Bot不管是生成视频还是图片都是可以的，而且整体效果都很不错，如果手上有额度的完全可以试一试\n\n1、MoneyPrinterTurbo｜AI 短视频生成 Skill + CLI\n\n这个项目已经有 13 万多个 Star 了\n\n只需要提供主题或者关键词，就能自动生成脚本、匹配素材、配音、字幕，最后合成完整的短视频\n\n而且支持 Agent、API 和 CLI，可以考虑让 Grok Bot 直接把 AI 产品介绍整理成视频\n\nhttps://t.co/lWFHZGAqU8\n\n2、FunClip｜AI 智能剪辑 CLI\n\n阿里通义语音团队开源的项目，GitHub 上有 6500 多个 Star\n\n支持语音识别、自动生成字幕，还能根据文字内容选择需要剪辑的片段\n\n比如录制了十几分钟的 AI 工具体验视频，就可以让 Grok Bot 配合它挑选重点，再剪成短视频\n\nhttps://t.co/Mhggg3U4z3\n\n3、Video Podcast Maker｜口播视频 Skill\n\n这个更适合做 AI 产品介绍、技术科普或者教程视频\n\n支持从主题生成脚本、TTS 配音、字幕，再通过 Remotion 合成视频，最高支持 4K 输出\n\n还能生成 9:16 竖屏短片，不过需要自己配置相关环境\n\nhttps://t.co/8Ejoy42QGb\n\n4、Cheat on Content｜短视频数据复盘 Skill\n\n这个我觉得挺有意思，GitHub 上已经有 7000 多个 Star\n\n可以在视频发布之前给内容打分、预测数据表现，发布三天后再结合真实数据复盘\n\n如果连续预测不准确，还会提醒调整评分标准\n\n我觉得长期做自媒体的朋友可以研究一下，不过预测结果不代表真实流量\n\nhttps://t.co/NUFs6h6BCa\n\n5、Social Auto Upload｜多平台发布 Skill + CLI\n\n这个项目有 1.6 万多个 Star，支持抖音、小红书、B 站、快手、微信视频号等国内平台\n\n提供统一的 CLI 和平台 Skill，可以让 Agent 上传视频、填写标题、安排发布时间\n\n如果想让 Grok Bot 帮你管理多个短视频平台，这个就挺值得折腾的\n\nhttps://t.co/mSL4qdfqeC\n\nMoneyPrinterTurbo 和 FunClip就很不错，一个负责生成视频，一个负责剪辑已有素材，如果再配合发布和复盘工具，基本就能串起一套短视频工作流\n\n部分需要自行部署、配置 API，可能产生额外费用。涉及账号登录和自动发布的功能，建议先检查权限，尽量使用草稿模式，自己审核后再发布，避免触发平台风控",
+      "original_text": "Grok Bot 还能帮我做短视频？推荐 5 个值得收藏的 Skill 和 CLI\n\nGrok Bot不仅可以帮你运营公众号小红书还可以帮你运营短视频，我这里收集了五个，我认为比较好的项目，可以把你的短视频也集成到Grok Bot上面\n\n测试下来Grok Bot不管是生成视频还是图片都是可以的，而且整体效果都很不错，如果手上有额度的完全可以试一试\n\n1、MoneyPrinterTurbo｜AI 短视频生成 Skill + CLI\n\n这个项目已经有 13 万多个 Star 了\n\n只需要提供主题或者关键词，就能自动生成脚本、匹配素材、配音、字幕，最后合成完整的短视频\n\n而且支持 Agent、API 和 CLI，可以考虑让 Grok Bot 直接把 AI 产品介绍整理成视频\n\nhttps://t.co/lWFHZGAqU8\n\n2、FunClip｜AI 智能剪辑 CLI\n\n阿里通义语音团队开源的项目，GitHub 上有 6500 多个 Star\n\n支持语音识别、自动生成字幕，还能根据文字内容选择需要剪辑的片段\n\n比如录制了十几分钟的 AI 工具体验视频，就可以让 Grok Bot 配合它挑选重点，再剪成短视频\n\nhttps://t.co/Mhggg3U4z3\n\n3、Video Podcast Maker｜口播视频 Skill\n\n这个更适合做 AI 产品介绍、技术科普或者教程视频\n\n支持从主题生成脚本、TTS 配音、字幕，再通过 Remotion 合成视频，最高支持 4K 输出\n\n还能生成 9:16 竖屏短片，不过需要自己配置相关环境\n\nhttps://t.co/8Ejoy42QGb\n\n4、Cheat on Content｜短视频数据复盘 Skill\n\n这个我觉得挺有意思，GitHub 上已经有 7000 多个 Star\n\n可以在视频发布之前给内容打分、预测数据表现，发布三天后再结合真实数据复盘\n\n如果连续预测不准确，还会提醒调整评分标准\n\n我觉得长期做自媒体的朋友可以研究一下，不过预测结果不代表真实流量\n\nhttps://t.co/NUFs6h6BCa\n\n5、Social Auto Upload｜多平台发布 Skill + CLI\n\n这个项目有 1.6 万多个 Star，支持抖音、小红书、B 站、快手、微信视频号等国内平台\n\n提供统一的 CLI 和平台 Skill，可以让 Agent 上传视频、填写标题、安排发布时间\n\n如果想让 Grok Bot 帮你管理多个短视频平台，这个就挺值得折腾的\n\nhttps://t.co/mSL4qdfqeC\n\nMoneyPrinterTurbo 和 FunClip就很不错，一个负责生成视频，一个负责剪辑已有素材，如果再配合发布和复盘工具，基本就能串起一套短视频工作流\n\n部分需要自行部署、配置 API，可能产生额外费用。涉及账号登录和自动发布的功能，建议先检查权限，尽量使用草稿模式，自己审核后再发布，避免触发平台风控",
+      "translation_zh": "Grok Bot 还能帮我做短视频？推荐 5 个值得收藏的 Skill 和 CLI\n\nGrok Bot不仅可以帮你运营公众号小红书还可以帮你运营短视频，我这里收集了五个，我认为比较好的项目，可以把你的短视频也集成到Grok Bot上面\n\n测试下来Grok Bot不管是生成视频还是图片都是可以的，而且整体效果都很不错，如果手上有额度的完全可以试一试\n\n1、MoneyPrinterTurbo｜AI 短视频生成 Skill + CLI\n\n这个项目已经有 13 万多个 Star 了\n\n只需要提供主题或者关键词，就能自动生成脚本、匹配素材、配音、字幕，最后合成完整的短视频\n\n而且支持 Agent、API 和 CLI，可以考虑让 Grok Bot 直接把 AI 产品介绍整理成视频\n\nhttps://t.co/lWFHZGAqU8\n\n2、FunClip｜AI 智能剪辑 CLI\n\n阿里通义语音团队开源的项目，GitHub 上有 6500 多个 Star\n\n支持语音识别、自动生成字幕，还能根据文字内容选择需要剪辑的片段\n\n比如录制了十几分钟的 AI 工具体验视频，就可以让 Grok Bot 配合它挑选重点，再剪成短视频\n\nhttps://t.co/Mhggg3U4z3\n\n3、Video Podcast Maker｜口播视频 Skill\n\n这个更适合做 AI 产品介绍、技术科普或者教程视频\n\n支持从主题生成脚本、TTS 配音、字幕，再通过 Remotion 合成视频，最高支持 4K 输出\n\n还能生成 9:16 竖屏短片，不过需要自己配置相关环境\n\nhttps://t.co/8Ejoy42QGb\n\n4、Cheat on Content｜短视频数据复盘 Skill\n\n这个我觉得挺有意思，GitHub 上已经有 7000 多个 Star\n\n可以在视频发布之前给内容打分、预测数据表现，发布三天后再结合真实数据复盘\n\n如果连续预测不准确，还会提醒调整评分标准\n\n我觉得长期做自媒体的朋友可以研究一下，不过预测结果不代表真实流量\n\nhttps://t.co/NUFs6h6BCa\n\n5、Social Auto Upload｜多平台发布 Skill + CLI\n\n这个项目有 1.6 万多个 Star，支持抖音、小红书、B 站、快手、微信视频号等国内平台\n\n提供统一的 CLI 和平台 Skill，可以让 Agent 上传视频、填写标题、安排发布时间\n\n如果想让 Grok Bot 帮你管理多个短视频平台，这个就挺值得折腾的\n\nhttps://t.co/mSL4qdfqeC\n\nMoneyPrinterTurbo 和 FunClip就很不错，一个负责生成视频，一个负责剪辑已有素材，如果再配合发布和复盘工具，基本就能串起一套短视频工作流\n\n部分需要自行部署、配置 API，可能产生额外费用。涉及账号登录和自动发布的功能，建议先检查权限，尽量使用草稿模式，自己审核后再发布，避免触发平台风控",
+      "translation_status": "source_chinese",
+      "author_name": "小墨同学",
+      "author_handle": "xiaomovps",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2006310479975858176/PWGiJqg9_normal.jpg",
+      "author_followers": 17569,
+      "author_following": 429,
+      "author_bio": "🧠  AI Agent 实操｜Pi / DeepSeek Harness / Grok Bot / Claude Code\n💸 天天实测 Agent 怎么更省 token、更好用\n🔧 ESP32 DIY：把 Agent 装进小硬件\n📘 Pi 蓝皮书作者 · 合作 wx：lucky_bobe",
+      "author_location": "Osaka-shi Kita-ku, Osaka",
+      "author_joined_at": "2022-09-20T15:56:03Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/harry0703/MoneyPrinterTurbo",
+        "https://github.com/modelscope/FunClip",
+        "https://github.com/Agents365-ai/video-podcast-maker",
+        "https://github.com/XBuilderLAB/cheat-on-content",
+        "https://github.com/dreammis/social-auto-upload"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWSNFKhboAAWATE.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWSNFKhboAAWATE.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWSNFKhboAAWATE.jpg",
+          "expanded_url": "https://x.com/xiaomovps/status/2117972859695890914/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWSNFKebsAAejgp.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWSNFKebsAAejgp.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWSNFKebsAAejgp.jpg",
+          "expanded_url": "https://x.com/xiaomovps/status/2117972859695890914/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWSNFKtbIAEE2L9.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWSNFKtbIAEE2L9.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWSNFKtbIAEE2L9.jpg",
+          "expanded_url": "https://x.com/xiaomovps/status/2117972859695890914/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWSNFKibMAAPbzl.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWSNFKibMAAPbzl.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWSNFKibMAAPbzl.jpg",
+          "expanded_url": "https://x.com/xiaomovps/status/2117972859695890914/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 20,
+        "reposts": 5,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 28,
+        "views": 2531
+      }
+    },
+    {
+      "post_id": "2117973716177125436",
+      "url": "https://x.com/JMkernt/status/2117973716177125436",
+      "created_at": "2026-11-04T13:34:18Z",
+      "text": "@xiaomovps 按文字挑片段这个点挺对胃口，剪口播能省不少事。",
+      "original_text": "@xiaomovps 按文字挑片段这个点挺对胃口，剪口播能省不少事。",
+      "translation_zh": "@xiaomovps 按文字挑片段这个点挺对胃口，剪口播能省不少事。",
+      "translation_status": "source_chinese",
+      "author_name": "jimerrors",
+      "author_handle": "JMkernt",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2008436069428043776/V-w99gLN_normal.jpg",
+      "author_followers": 10777,
+      "author_following": 8728,
+      "author_bio": "AI 工具实战分享｜开源项目、效率工具、羊毛福利，讲人话、能上手的才发｜每天更新",
+      "author_location": "Bellevue, WA",
+      "author_joined_at": "2024-08-19T15:33:28Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 26
+      }
+    },
+    {
+      "post_id": "2117975253465112843",
+      "url": "https://x.com/JMkernt/status/2117975253465112843",
+      "created_at": "2026-11-04T13:40:25Z",
+      "text": "@xiaomovps 短视频这块也打通了，5个里面先挑个顺手的试试",
+      "original_text": "@xiaomovps 短视频这块也打通了，5个里面先挑个顺手的试试",
+      "translation_zh": "@xiaomovps 短视频这块也打通了，5个里面先挑个顺手的试试",
+      "translation_status": "source_chinese",
+      "author_name": "jimerrors",
+      "author_handle": "JMkernt",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2008436069428043776/V-w99gLN_normal.jpg",
+      "author_followers": 10777,
+      "author_following": 8728,
+      "author_bio": "AI 工具实战分享｜开源项目、效率工具、羊毛福利，讲人话、能上手的才发｜每天更新",
+      "author_location": "Bellevue, WA",
+      "author_joined_at": "2024-08-19T15:33:28Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 25
+      }
+    },
+    {
+      "post_id": "2117985713249804402",
+      "url": "https://x.com/TonyTalksAI/status/2117985713249804402",
+      "created_at": "2026-11-04T14:21:58Z",
+      "text": "@xiaomovps 补一个我自己天天在用的：yt-dlp 加 --flat-playlist 扫对标频道的 Shorts 播放量，不用 API key，一秒内出表，比刷首页找选题准",
+      "original_text": "@xiaomovps 补一个我自己天天在用的：yt-dlp 加 --flat-playlist 扫对标频道的 Shorts 播放量，不用 API key，一秒内出表，比刷首页找选题准",
+      "translation_zh": "@xiaomovps 补一个我自己天天在用的：yt-dlp 加 --flat-playlist 扫对标频道的 Shorts 播放量，不用 API key，一秒内出表，比刷首页找选题准",
+      "translation_status": "source_chinese",
+      "author_name": "Tony Song",
+      "author_handle": "TonyTalksAI",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2037033103882129408/ahyqo34j_normal.png",
+      "author_followers": 35,
+      "author_following": 88,
+      "author_bio": "实测AI工具和GitHub Skill，只发跑过的数据和能抄的命令｜拼豆+AI做图样 https://t.co/9eCXPTFFoH",
+      "author_location": null,
+      "author_joined_at": "2026-03-26T05:05:12Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 21
+      }
+    },
+    {
+      "post_id": "2117990366700060904",
+      "url": "https://x.com/HimmatNano/status/2117990366700060904",
+      "created_at": "2026-11-04T14:40:28Z",
+      "text": "@xiaomovps 不够用啊周额度",
+      "original_text": "@xiaomovps 不够用啊周额度",
+      "translation_zh": "@xiaomovps 不够用啊周额度",
+      "translation_status": "source_chinese",
+      "author_name": "寄海庭",
+      "author_handle": "HimmatNano",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2111803198176641024/iuWlHZKU_normal.jpg",
+      "author_followers": 62,
+      "author_following": 202,
+      "author_bio": "用 AI 武装自己的普通男人｜AI 工具一手实测  | 自律成长｜不喊口号，只分享亲测有效的方法",
+      "author_location": null,
+      "author_joined_at": "2026-01-16T19:34:35Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 23
+      }
+    },
+    {
+      "post_id": "2118024831228870764",
+      "url": "https://x.com/lla60810608/status/2118024831228870764",
+      "created_at": "2026-11-04T16:57:25Z",
+      "text": "@xiaomovps 真的很有共鳴😂 AI 工具越多，選擇成本反而越高。我現在更傾向固定兩三款主力工具，用同一套任務比較完成時間、準確率和成本。真正的效率提升，不是找到最強 AI，而是減少折騰，把時間拿回來做正事。",
+      "original_text": "@xiaomovps 真的很有共鳴😂 AI 工具越多，選擇成本反而越高。我現在更傾向固定兩三款主力工具，用同一套任務比較完成時間、準確率和成本。真正的效率提升，不是找到最強 AI，而是減少折騰，把時間拿回來做正事。",
+      "translation_zh": "@xiaomovps 真的很有共鳴😂 AI 工具越多，選擇成本反而越高。我現在更傾向固定兩三款主力工具，用同一套任務比較完成時間、準確率和成本。真正的效率提升，不是找到最強 AI，而是減少折騰，把時間拿回來做正事。",
+      "translation_status": "source_chinese",
+      "author_name": "AI工具實用分享",
+      "author_handle": "lla60810608",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2115417736570626048/nZjyCVlH_normal.jpg",
+      "author_followers": 579,
+      "author_following": 1559,
+      "author_bio": "分享真正好用的AI工具 🤖\nAI自動化｜影片製作｜工作效率\n實測教學＋免費工具清單\n幫你省時間、少走彎路 🚀",
+      "author_location": null,
+      "author_joined_at": "2022-06-30T00:21:28Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 9
+      }
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "conversation_id": "2117826890560090272",
+  "anchor_post_id": "2117826890560090272",
+  "summary_zh": "前文由作者分享把国内服务接入 Grok Bot 的开源仓库，主题是接口整理与授权风险。收录帖把话题落到具体服务/品牌，如滴滴、高德、飞书、小红书等，并区分官方或社区版、使用权限。后续有人认可清单省时、询问滴滴和地图接入体验，也有人感谢。整体更像技术分享，情绪正面，传播价值在开发者实用参考。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2117826890560090272",
+      "url": "https://x.com/alin_zone/status/2117826890560090272",
+      "created_at": "2026-11-04T03:50:52Z",
+      "text": "🗂️ 想把国内服务接进 Grok Bot，看这一个仓库就够了\n\n上次写了瑞幸、麦当劳、滴滴，好多服务还是得一个个去搜。最近翻到这个开源仓库，基本把国内能接的都收进来了 👇\n\n地图出行、办公、云服务、内容社交、生活服务、金融数据都分好了类，一共收了一百多条\n\n每一条都标了是官方出的还是社区做的。比如高德、滴滴、飞书、语雀是官方的，12306、小红书目前只有社区版\n\n细节也写得很细，开头就告诉你使用前要授权什么，免得装到一半才发现要给什么权限\n\n它把授权方式分成了几种：\n\n申请个 key 就能用的，风险最小\n\n要扫码登录你自己账号的，风险最高，小红书这类就是。真要用的话，建议拿小号试\n\n不想自己一个个配的，仓库里也推荐了阿里百炼和魔搭的 MCP 广场，那边点一点就能接\n\n想自己动手的，最后那张表列了 78 个有官方接口、但还没人做 MCP 的服务，挑一个做出来，提个 PR 就能收进主列表\n\n项目地址：https://t.co/YiE1oda06v",
+      "original_text": "🗂️ 想把国内服务接进 Grok Bot，看这一个仓库就够了\n\n上次写了瑞幸、麦当劳、滴滴，好多服务还是得一个个去搜。最近翻到这个开源仓库，基本把国内能接的都收进来了 👇\n\n地图出行、办公、云服务、内容社交、生活服务、金融数据都分好了类，一共收了一百多条\n\n每一条都标了是官方出的还是社区做的。比如高德、滴滴、飞书、语雀是官方的，12306、小红书目前只有社区版\n\n细节也写得很细，开头就告诉你使用前要授权什么，免得装到一半才发现要给什么权限\n\n它把授权方式分成了几种：\n\n申请个 key 就能用的，风险最小\n\n要扫码登录你自己账号的，风险最高，小红书这类就是。真要用的话，建议拿小号试\n\n不想自己一个个配的，仓库里也推荐了阿里百炼和魔搭的 MCP 广场，那边点一点就能接\n\n想自己动手的，最后那张表列了 78 个有官方接口、但还没人做 MCP 的服务，挑一个做出来，提个 PR 就能收进主列表\n\n项目地址：https://t.co/YiE1oda06v",
+      "translation_zh": "🗂️ 想把国内服务接进 Grok Bot，看这一个仓库就够了\n\n上次写了瑞幸、麦当劳、滴滴，好多服务还是得一个个去搜。最近翻到这个开源仓库，基本把国内能接的都收进来了 👇\n\n地图出行、办公、云服务、内容社交、生活服务、金融数据都分好了类，一共收了一百多条\n\n每一条都标了是官方出的还是社区做的。比如高德、滴滴、飞书、语雀是官方的，12306、小红书目前只有社区版\n\n细节也写得很细，开头就告诉你使用前要授权什么，免得装到一半才发现要给什么权限\n\n它把授权方式分成了几种：\n\n申请个 key 就能用的，风险最小\n\n要扫码登录你自己账号的，风险最高，小红书这类就是。真要用的话，建议拿小号试\n\n不想自己一个个配的，仓库里也推荐了阿里百炼和魔搭的 MCP 广场，那边点一点就能接\n\n想自己动手的，最后那张表列了 78 个有官方接口、但还没人做 MCP 的服务，挑一个做出来，提个 PR 就能收进主列表\n\n项目地址：https://t.co/YiE1oda06v",
+      "translation_status": "source_chinese",
+      "author_name": "阿蔺A-Lin",
+      "author_handle": "alin_zone",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2018018848356925440/tFuD-zag_normal.jpg",
+      "author_followers": 12026,
+      "author_following": 480,
+      "author_bio": "🧠 AI 工具实操｜Obsidian / Grok Bot / Codex / 开源 Agent\n📚 Obsidian 知识管理 + AI 工作流教程\n🔍 分享值得一用的开源项目和新工具\n🚀 AI Spark 联创｜合作 vx：a-lin-zone · 公众号：阿蔺 A-Lin",
+      "author_location": null,
+      "author_joined_at": "2023-07-16T11:01:21Z",
+      "author_verified": false,
+      "links": [
+        "http://github.com/zackchewa/awesome-china-mcp"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWQH_2eacAAcdDY.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWQH_2eacAAcdDY.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWQH_2eacAAcdDY.jpg",
+          "expanded_url": "https://x.com/alin_zone/status/2117826890560090272/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWQIKjhaIAAQ-gW.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWQIKjhaIAAQ-gW.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWQIKjhaIAAQ-gW.jpg",
+          "expanded_url": "https://x.com/alin_zone/status/2117826890560090272/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWQIKjma0AAkEN6.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWQIKjma0AAkEN6.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWQIKjma0AAkEN6.jpg",
+          "expanded_url": "https://x.com/alin_zone/status/2117826890560090272/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWQIKjlbIAAweT8.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWQIKjlbIAAweT8.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWQIKjlbIAAweT8.jpg",
+          "expanded_url": "https://x.com/alin_zone/status/2117826890560090272/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 112,
+        "reposts": 16,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 181,
+        "views": 10729
+      }
+    },
+    {
+      "post_id": "2117920916508385769",
+      "url": "https://x.com/svip_888/status/2117920916508385769",
+      "created_at": "2026-11-04T10:04:30Z",
+      "text": "@alin_zone 把国内服务按地图出行、办公、云服务这样分好类确实省事，以前一个个搜接口最耗时间，有了这份清单，接进Grok Bot做生活助手就顺多了。",
+      "original_text": "@alin_zone 把国内服务按地图出行、办公、云服务这样分好类确实省事，以前一个个搜接口最耗时间，有了这份清单，接进Grok Bot做生活助手就顺多了。",
+      "translation_zh": "@alin_zone 把国内服务按地图出行、办公、云服务这样分好类确实省事，以前一个个搜接口最耗时间，有了这份清单，接进Grok Bot做生活助手就顺多了。",
+      "translation_status": "source_chinese",
+      "author_name": "Saylor",
+      "author_handle": "svip_888",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1454781369985368076/Hq6fjke9_normal.jpg",
+      "author_followers": 2085,
+      "author_following": 2060,
+      "author_bio": "#Binance Engineer. developer. tech&finance geek  各大交易所注册合作，BN反35邀请码：BN56888，OKX反35邀请码：ok56888，币安邀请链接 反35 https://t.co/sE7zJrh3eD",
+      "author_location": "United States",
+      "author_joined_at": "2012-03-21T07:38:57Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 213
+      }
+    },
+    {
+      "post_id": "2117931140136968625",
+      "url": "https://x.com/JMkernt/status/2117931140136968625",
+      "created_at": "2026-11-04T10:45:07Z",
+      "text": "@alin_zone 一百多条里我先翻了出行那类，滴滴和地图接得顺吗？",
+      "original_text": "@alin_zone 一百多条里我先翻了出行那类，滴滴和地图接得顺吗？",
+      "translation_zh": "@alin_zone 一百多条里我先翻了出行那类，滴滴和地图接得顺吗？",
+      "translation_status": "source_chinese",
+      "author_name": "jimerrors",
+      "author_handle": "JMkernt",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2008436069428043776/V-w99gLN_normal.jpg",
+      "author_followers": 10777,
+      "author_following": 8728,
+      "author_bio": "AI 工具实战分享｜开源项目、效率工具、羊毛福利，讲人话、能上手的才发｜每天更新",
+      "author_location": "Bellevue, WA",
+      "author_joined_at": "2024-08-19T15:33:28Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 206
+      }
+    },
+    {
+      "post_id": "2117976777574564104",
+      "url": "https://x.com/liuyichunvip/status/2117976777574564104",
+      "created_at": "2026-11-04T13:46:28Z",
+      "text": "@alin_zone 太赞了 感谢分享",
+      "original_text": "@alin_zone 太赞了 感谢分享",
+      "translation_zh": "@alin_zone 太赞了 感谢分享",
+      "translation_status": "source_chinese",
+      "author_name": "lyc",
+      "author_handle": "liuyichunvip",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2107276813320003584/kdfLlN63_normal.jpg",
+      "author_followers": 2,
+      "author_following": 5,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2025-10-16T04:09:41Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 172
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "conversation_id": "2117953914901606652",
+  "anchor_post_id": "2117953914901606652",
+  "summary_zh": "主帖围绕 Grok Bot 对接小红书、微信、美团等国内平台，讨论自动发帖风控、隐私换便利及额度被砍的体验，并把话题落到美团/瑞幸地址隐私和取货方案。后续有人称 Muse 也能做、认可美团建议，并补充 twexapi 接入。上下文显示为经验交流，情绪偏理性。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2117953914901606652",
+      "url": "https://x.com/xiaomovps/status/2117953914901606652",
+      "created_at": "2026-11-04T12:15:37Z",
+      "text": "Grok Bot 运营小红书、对接国内 MCP 和 Skill，必须知道的 3 件事\n\n很多人问我，在 Grok Bot 怎么对接国内的自媒体平台，或者是使用对应的公开平台，比如微信、美团之类的，会有一些担忧\n\n我把这些问题汇总起来了，方便一起解答\n\n1、运营国内自媒体平台\n\n第 1 个就是很多人问，使用 Grok Bot 能不能去运营自媒体平台\n\n其实是可以去使用的，尤其是一些风控没有那么严的\n\n但是，如果你说全自动去写文案、出图片，最后发布，那我的建议是不要这么干\n\n最好的方案是开启 Grok Bot 的流量转发，使用自己本地的网络 IP 出口，再配合自动出草稿，自己审核和发布\n\n这样会相对比较安全，否则可能有风控或者封号的风险\n\n要我说，可能就 X 平台允许你这么干，因为它已经提供了对应的所有接口和能力\n\n前两天也更新了对应的发布能力，只要连接 X 连接器，就可以直接通过 Grok Bot 创建并发送帖子\n\n2、瑞幸、美团之类的平台\n\n很多人担心会泄露自己的隐私和地址，就是一个便利和隐私之间的不可能三角\n\n如果你想什么都不给 AI 的话，它基本上什么都帮你做不了，你的地址或者一些隐私的话，会有可能暴露\n\n我这里建议，如果你担心，但又想要 AI 的便利，你可以创建一个小号，创建一些附近的地址，但不是你真实的地址\n\n然后去自动创建或者查询，自己再过去临近的地方，拿取到你想要的东西\n\n3、Grok Bot 能做什么？\n\n这个取决你想让它做什么\n\n基本上 Agent 能做的它都能做，因为它是一个 AI，再加一个 VPS 服务器，所以可以在上面部署非常多的应用\n\n但是现阶段的话，是有一些额度被砍了\n\n我自己体验下来，应该是被砍了 30%～40%，具体我没有做计算，这是我一些体感的使用，不知道有没有人和我的体感是一样的\n\n我自己的话，还有很多提醒相关的服务都是放在服务器部分\n\n比如说邮件、私信、X 私信之类的，一个低频的提醒，每天可能扫描一遍，总结一下对应的信息\n\n这方面我其实也写过帖子分享\n\n还是那一句话，你如果想让 AI 给你便利，你就得付出一些隐私信息\n\n如果都不愿意泄露的话，那提供的便利可能是有限的\n\n这是每个人的选择，也不能说是对是错",
+      "original_text": "Grok Bot 运营小红书、对接国内 MCP 和 Skill，必须知道的 3 件事\n\n很多人问我，在 Grok Bot 怎么对接国内的自媒体平台，或者是使用对应的公开平台，比如微信、美团之类的，会有一些担忧\n\n我把这些问题汇总起来了，方便一起解答\n\n1、运营国内自媒体平台\n\n第 1 个就是很多人问，使用 Grok Bot 能不能去运营自媒体平台\n\n其实是可以去使用的，尤其是一些风控没有那么严的\n\n但是，如果你说全自动去写文案、出图片，最后发布，那我的建议是不要这么干\n\n最好的方案是开启 Grok Bot 的流量转发，使用自己本地的网络 IP 出口，再配合自动出草稿，自己审核和发布\n\n这样会相对比较安全，否则可能有风控或者封号的风险\n\n要我说，可能就 X 平台允许你这么干，因为它已经提供了对应的所有接口和能力\n\n前两天也更新了对应的发布能力，只要连接 X 连接器，就可以直接通过 Grok Bot 创建并发送帖子\n\n2、瑞幸、美团之类的平台\n\n很多人担心会泄露自己的隐私和地址，就是一个便利和隐私之间的不可能三角\n\n如果你想什么都不给 AI 的话，它基本上什么都帮你做不了，你的地址或者一些隐私的话，会有可能暴露\n\n我这里建议，如果你担心，但又想要 AI 的便利，你可以创建一个小号，创建一些附近的地址，但不是你真实的地址\n\n然后去自动创建或者查询，自己再过去临近的地方，拿取到你想要的东西\n\n3、Grok Bot 能做什么？\n\n这个取决你想让它做什么\n\n基本上 Agent 能做的它都能做，因为它是一个 AI，再加一个 VPS 服务器，所以可以在上面部署非常多的应用\n\n但是现阶段的话，是有一些额度被砍了\n\n我自己体验下来，应该是被砍了 30%～40%，具体我没有做计算，这是我一些体感的使用，不知道有没有人和我的体感是一样的\n\n我自己的话，还有很多提醒相关的服务都是放在服务器部分\n\n比如说邮件、私信、X 私信之类的，一个低频的提醒，每天可能扫描一遍，总结一下对应的信息\n\n这方面我其实也写过帖子分享\n\n还是那一句话，你如果想让 AI 给你便利，你就得付出一些隐私信息\n\n如果都不愿意泄露的话，那提供的便利可能是有限的\n\n这是每个人的选择，也不能说是对是错",
+      "translation_zh": "Grok Bot 运营小红书、对接国内 MCP 和 Skill，必须知道的 3 件事\n\n很多人问我，在 Grok Bot 怎么对接国内的自媒体平台，或者是使用对应的公开平台，比如微信、美团之类的，会有一些担忧\n\n我把这些问题汇总起来了，方便一起解答\n\n1、运营国内自媒体平台\n\n第 1 个就是很多人问，使用 Grok Bot 能不能去运营自媒体平台\n\n其实是可以去使用的，尤其是一些风控没有那么严的\n\n但是，如果你说全自动去写文案、出图片，最后发布，那我的建议是不要这么干\n\n最好的方案是开启 Grok Bot 的流量转发，使用自己本地的网络 IP 出口，再配合自动出草稿，自己审核和发布\n\n这样会相对比较安全，否则可能有风控或者封号的风险\n\n要我说，可能就 X 平台允许你这么干，因为它已经提供了对应的所有接口和能力\n\n前两天也更新了对应的发布能力，只要连接 X 连接器，就可以直接通过 Grok Bot 创建并发送帖子\n\n2、瑞幸、美团之类的平台\n\n很多人担心会泄露自己的隐私和地址，就是一个便利和隐私之间的不可能三角\n\n如果你想什么都不给 AI 的话，它基本上什么都帮你做不了，你的地址或者一些隐私的话，会有可能暴露\n\n我这里建议，如果你担心，但又想要 AI 的便利，你可以创建一个小号，创建一些附近的地址，但不是你真实的地址\n\n然后去自动创建或者查询，自己再过去临近的地方，拿取到你想要的东西\n\n3、Grok Bot 能做什么？\n\n这个取决你想让它做什么\n\n基本上 Agent 能做的它都能做，因为它是一个 AI，再加一个 VPS 服务器，所以可以在上面部署非常多的应用\n\n但是现阶段的话，是有一些额度被砍了\n\n我自己体验下来，应该是被砍了 30%～40%，具体我没有做计算，这是我一些体感的使用，不知道有没有人和我的体感是一样的\n\n我自己的话，还有很多提醒相关的服务都是放在服务器部分\n\n比如说邮件、私信、X 私信之类的，一个低频的提醒，每天可能扫描一遍，总结一下对应的信息\n\n这方面我其实也写过帖子分享\n\n还是那一句话，你如果想让 AI 给你便利，你就得付出一些隐私信息\n\n如果都不愿意泄露的话，那提供的便利可能是有限的\n\n这是每个人的选择，也不能说是对是错",
+      "translation_status": "source_chinese",
+      "author_name": "小墨同学",
+      "author_handle": "xiaomovps",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2006310479975858176/PWGiJqg9_normal.jpg",
+      "author_followers": 17569,
+      "author_following": 429,
+      "author_bio": "🧠  AI Agent 实操｜Pi / DeepSeek Harness / Grok Bot / Claude Code\n💸 天天实测 Agent 怎么更省 token、更好用\n🔧 ESP32 DIY：把 Agent 装进小硬件\n📘 Pi 蓝皮书作者 · 合作 wx：lucky_bobe",
+      "author_location": "Osaka-shi Kita-ku, Osaka",
+      "author_joined_at": "2022-09-20T15:56:03Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWR71xJboAAAxJB.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWR71xJboAAAxJB.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWR71xJboAAAxJB.jpg",
+          "expanded_url": "https://x.com/xiaomovps/status/2117953914901606652/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWR71xBbUAAyNEu.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWR71xBbUAAyNEu.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWR71xBbUAAyNEu.jpg",
+          "expanded_url": "https://x.com/xiaomovps/status/2117953914901606652/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 28,
+        "reposts": 4,
+        "replies": 4,
+        "quotes": 1,
+        "bookmarks": 25,
+        "views": 5059
+      }
+    },
+    {
+      "post_id": "2117961130358309086",
+      "url": "https://x.com/7998l201/status/2117961130358309086",
+      "created_at": "2026-11-04T12:44:17Z",
+      "text": "@xiaomovps 不错，Muse也完全能实现",
+      "original_text": "@xiaomovps 不错，Muse也完全能实现",
+      "translation_zh": "@xiaomovps 不错，Muse也完全能实现",
+      "translation_status": "source_chinese",
+      "author_name": "Ryan",
+      "author_handle": "7998l201",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2047601535773765632/cr76kpOK_normal.jpg",
+      "author_followers": 5267,
+      "author_following": 1340,
+      "author_bio": "ETH & BTC Holder |  早期项目研究 | 持续分享 AI 内容、自动化工作流、实用教程\nMuse 成品号、ChatGPT Plus 成品号（质保28天）：https://t.co/7BiBFBj692\nChatGPT 原号直充：https://t.co/1MdCGynjtA",
+      "author_location": null,
+      "author_joined_at": "2022-07-14T03:47:31Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 62
+      }
+    },
+    {
+      "post_id": "2117977413959504338",
+      "url": "https://x.com/bljping1/status/2117977413959504338",
+      "created_at": "2026-11-04T13:49:00Z",
+      "text": "@xiaomovps 美团那条最实在",
+      "original_text": "@xiaomovps 美团那条最实在",
+      "translation_zh": "@xiaomovps 美团那条最实在",
+      "translation_status": "source_chinese",
+      "author_name": "深夜提灯人",
+      "author_handle": "bljping1",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2111510754621108224/M1ziGBJw_normal.jpg",
+      "author_followers": 7699,
+      "author_following": 7643,
+      "author_bio": "🏮 深夜提灯人｜HR 负责人\nHR 界的叛徒，职场嘴替\nAI 中毒患者，评论区常驻人口\n偶尔聊历史，喜欢交朋友",
+      "author_location": "美国",
+      "author_joined_at": "2015-11-05T05:04:58Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 31
+      }
+    },
+    {
+      "post_id": "2117986489019822107",
+      "url": "https://x.com/GreysonPad66069/status/2117986489019822107",
+      "created_at": "2026-11-04T14:25:03Z",
+      "text": "@xiaomovps 国内平台全自动发布确实容易风控，草稿加人工审核更稳。X侧如果想接自动发帖或监控，twexapi 的 MCP 接入比较省事。",
+      "original_text": "@xiaomovps 国内平台全自动发布确实容易风控，草稿加人工审核更稳。X侧如果想接自动发帖或监控，twexapi 的 MCP 接入比较省事。",
+      "translation_zh": "@xiaomovps 国内平台全自动发布确实容易风控，草稿加人工审核更稳。X侧如果想接自动发帖或监控，twexapi 的 MCP 接入比较省事。",
+      "translation_status": "source_chinese",
+      "author_name": "Greyson Runolfsdottir-Padberg",
+      "author_handle": "GreysonPad66069",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1912142158083002368/mMnGGkeP_normal.jpg",
+      "author_followers": 13,
+      "author_following": 71,
+      "author_bio": "Join us for a free trial of 2 selected stock targets, only Europe friends with stock accounts are welcome",
+      "author_location": "USA",
+      "author_joined_at": "2025-02-06T21:00:10Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 30
+      }
+    }
+  ]
+}

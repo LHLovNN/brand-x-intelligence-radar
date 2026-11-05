@@ -1,0 +1,108 @@
+{
+  "conversation_id": "2117939284959522953",
+  "anchor_post_id": "2117939284959522953",
+  "summary_zh": "前文无更多铺垫，收录帖直接介绍开源桌面下载工具 OmniGet，强调基于 yt-dlp、跨平台、复制链接下载、批量课程/字幕/音频/B站增强等体验，并提醒认准 GitHub 和官网；未涉及价格或配送。后续一人回应认可“yt-dlp配UI”省心并表示关注。上下文显示信息偏功能种草，情绪正向，传播点在实用工具推荐。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2117939284959522953",
+      "url": "https://x.com/HeLi8866/status/2117939284959522953",
+      "created_at": "2026-11-04T11:17:29Z",
+      "text": "卧槽！现在下载全网视频，一个工具就能搞定？\n\n最近发现一个非常实用的开源工具：OmniGet，GitHub 上已经接近 5.9K Stars。\n\n对于经常保存素材、下载课程、做二创的朋友来说，确实值得了解一下。\n\n它本质上是基于 yt-dlp 打造的桌面下载工具，支持 Windows、macOS 和 Linux。\n\n复制链接就能下载，不用敲命令行，也不需要额外安装 Python。\n\n主要有 6 个实用功能：\n\n1、全网视频下载\n\n支持 YouTube、X、抖音、小红书、B站、TikTok 等平台。\n\nREADME 标注支持 1800+ 个网站，官网则写的是 1000+。\n\n2、课程批量下载\n\n支持 Udemy、Teachable、Skool 等平台，可按课程目录批量下载，并保存 PDF 等附件。\n\n3、批量下载\n\n可以直接导入链接列表，也支持批量下载博主主页中的视频。\n\n4、字幕下载与生成\n\n支持下载多语言字幕。如果视频没有字幕，还可以通过 Whisper 自动生成。\n\n5、音频提取与格式转换\n\n除了下载视频，还能单独提取音频，导出 MP3、FLAC、WAV 等格式。\n\n6、B站下载增强\n\n登录大会员账号后，可下载账号有权限访问的 4K、HDR 视频及杜比音效内容。\n\n最后提醒一句：\n\n认准官方 GitHub 仓库 tonhowtf/omniget 和官网 https://t.co/ksMmOGRCoM，避免误入其他同名下载站。\n\n🔗 https://t.co/E25PzsQgBP",
+      "original_text": "卧槽！现在下载全网视频，一个工具就能搞定？\n\n最近发现一个非常实用的开源工具：OmniGet，GitHub 上已经接近 5.9K Stars。\n\n对于经常保存素材、下载课程、做二创的朋友来说，确实值得了解一下。\n\n它本质上是基于 yt-dlp 打造的桌面下载工具，支持 Windows、macOS 和 Linux。\n\n复制链接就能下载，不用敲命令行，也不需要额外安装 Python。\n\n主要有 6 个实用功能：\n\n1、全网视频下载\n\n支持 YouTube、X、抖音、小红书、B站、TikTok 等平台。\n\nREADME 标注支持 1800+ 个网站，官网则写的是 1000+。\n\n2、课程批量下载\n\n支持 Udemy、Teachable、Skool 等平台，可按课程目录批量下载，并保存 PDF 等附件。\n\n3、批量下载\n\n可以直接导入链接列表，也支持批量下载博主主页中的视频。\n\n4、字幕下载与生成\n\n支持下载多语言字幕。如果视频没有字幕，还可以通过 Whisper 自动生成。\n\n5、音频提取与格式转换\n\n除了下载视频，还能单独提取音频，导出 MP3、FLAC、WAV 等格式。\n\n6、B站下载增强\n\n登录大会员账号后，可下载账号有权限访问的 4K、HDR 视频及杜比音效内容。\n\n最后提醒一句：\n\n认准官方 GitHub 仓库 tonhowtf/omniget 和官网 https://t.co/ksMmOGRCoM，避免误入其他同名下载站。\n\n🔗 https://t.co/E25PzsQgBP",
+      "translation_zh": "卧槽！现在下载全网视频，一个工具就能搞定？\n\n最近发现一个非常实用的开源工具：OmniGet，GitHub 上已经接近 5.9K Stars。\n\n对于经常保存素材、下载课程、做二创的朋友来说，确实值得了解一下。\n\n它本质上是基于 yt-dlp 打造的桌面下载工具，支持 Windows、macOS 和 Linux。\n\n复制链接就能下载，不用敲命令行，也不需要额外安装 Python。\n\n主要有 6 个实用功能：\n\n1、全网视频下载\n\n支持 YouTube、X、抖音、小红书、B站、TikTok 等平台。\n\nREADME 标注支持 1800+ 个网站，官网则写的是 1000+。\n\n2、课程批量下载\n\n支持 Udemy、Teachable、Skool 等平台，可按课程目录批量下载，并保存 PDF 等附件。\n\n3、批量下载\n\n可以直接导入链接列表，也支持批量下载博主主页中的视频。\n\n4、字幕下载与生成\n\n支持下载多语言字幕。如果视频没有字幕，还可以通过 Whisper 自动生成。\n\n5、音频提取与格式转换\n\n除了下载视频，还能单独提取音频，导出 MP3、FLAC、WAV 等格式。\n\n6、B站下载增强\n\n登录大会员账号后，可下载账号有权限访问的 4K、HDR 视频及杜比音效内容。\n\n最后提醒一句：\n\n认准官方 GitHub 仓库 tonhowtf/omniget 和官网 https://t.co/ksMmOGRCoM，避免误入其他同名下载站。\n\n🔗 https://t.co/E25PzsQgBP",
+      "translation_status": "source_chinese",
+      "author_name": "何笠聊 AI",
+      "author_handle": "HeLi8866",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2116472904858865664/9Np5pf51_normal.jpg",
+      "author_followers": 1044,
+      "author_following": 1290,
+      "author_bio": "keep building 🩵｜AI 资讯分享｜提示词＆工具，拥抱AI，学习AI，无限进步！\n\n合作 DM📬：https://t.co/G2TkiI55PY",
+      "author_location": null,
+      "author_joined_at": "2021-06-06T09:24:42Z",
+      "author_verified": false,
+      "links": [
+        "http://getomniget.com",
+        "http://github.com/tonhowtf/omniget"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2117939241284218880/img/wbXmR15U0duAZbr6.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2117939241284218880/img/wbXmR15U0duAZbr6.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2117939241284218880/img/wbXmR15U0duAZbr6.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              307,
+              180
+            ],
+            "duration_millis": 45371,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video.twimg.com/amplify_video/2117939241284218880/pl/9N1WaiQpw17ey0Ax.m3u8?tag=29&v=cfc"
+              },
+              {
+                "bitrate": 256000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2117939241284218880/vid/avc1/460x270/kWElSDds0AQ5eai5.mp4?tag=29"
+              },
+              {
+                "bitrate": 832000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2117939241284218880/vid/avc1/614x360/6HbjkZEqM8A-Ybqe.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2117939241284218880/vid/avc1/1228x720/y80_PEzCr5Sx8BFc.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2117939241284218880/vid/avc1/1842x1080/X1SYvpToF4HiExXf.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/JinLiXZ/status/2117939284959522953/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 25,
+        "reposts": 3,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 17,
+        "views": 1074
+      }
+    },
+    {
+      "post_id": "2117939703609753956",
+      "url": "https://x.com/KOF97AI/status/2117939703609753956",
+      "created_at": "2026-11-04T11:19:09Z",
+      "text": "@JinLiXZ yt-dlp配个UI确实省心不少，码农狂喜！已默默点上关注，兄台有空也来我这儿串个门🍻",
+      "original_text": "@JinLiXZ yt-dlp配个UI确实省心不少，码农狂喜！已默默点上关注，兄台有空也来我这儿串个门🍻",
+      "translation_zh": "@JinLiXZ yt-dlp配个UI确实省心不少，码农狂喜！已默默点上关注，兄台有空也来我这儿串个门🍻",
+      "translation_status": "source_chinese",
+      "author_name": "Nathan AI Lab（互fo, CD后马上回）",
+      "author_handle": "KOF97AI",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2112751656815452160/SlnFGmG-_normal.jpg",
+      "author_followers": 7155,
+      "author_following": 6370,
+      "author_bio": "🤖 AI Agent 实战｜Claude Code · Codex · 自动化\n🎁 每天分享 AI 开源项目 & 免费资源\n🌍 跨境电商 · 副业 · 出海 | Global Business",
+      "author_location": "0.1km",
+      "author_joined_at": "2022-04-14T16:27:17Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 46
+      }
+    }
+  ]
+}
