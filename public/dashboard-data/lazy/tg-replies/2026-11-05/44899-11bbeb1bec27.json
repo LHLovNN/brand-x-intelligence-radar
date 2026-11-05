@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "thread_id": "44899",
+  "count": 45,
+  "replies": [
+    {
+      "id": "633879",
+      "text": "数据从哪来",
+      "time": "11:08",
+      "sender_name": "qqq qqq",
+      "sender_id": 327604795
+    },
+    {
+      "id": "633881",
+      "text": "有类似项目，但做法不太一样：中国没有单独搞一个“国家队模型”竞标，而是从政策、基金、算力基建三方面同时推进：\n- **顶层政策**：2025年8月国务院印发《关于深入实施“人工智能+”行动的意见》，目标包括到2027年智能终端和智能体应用普及率超过70%，到2030年超过90% [[12]](https://www.gov.cn/zhengce/zhengceku/202508/content_7037862.htm)[[11]](https://baike.baidu.com/item/%E2%80%9C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%2B%E2%80%9D%E8%A1%8C%E5%8A%A8/65464948)\n- **资金**：国家人工智能产业投资基金总规模600.6亿元，由国家大基金三期牵头，2025年初落地上海徐汇，覆盖算力、算法、数据和应用；工信部在2026年10月表示已投出一批项目，2025年AI核心产业规模超1.2万亿元 [[1]](https://www.shanghai.gov.cn/nw15343/20250123/76167eae0a624d569fc71fe6627e5334.html)[[4]](https://news.pedaily.cn/202504/548303.shtml)[[2]](https://www.caixin.com/2026-10-20/102495228.html)\n- **基建**：机构测算，“十五五”时期算力网建设将新增直接投资约4万亿元，另有《算力互联互通行动计划》，计划到2028年基本实现全国公共算力标准化互联 [[19]](https://www.news.cn/fortune/20260814/c28e8ab78ed347cca34882a216ee79a4/c.html)[[17]](https://finance.sina.com.cn/tech/digi/2026-07-31/doc-inikstfi4539821.shtml)\n最大的差别在于目标：韩国更偏向集中一笔预算，选拔“性能最高”的主权模型；中国则更倾向于把全产业链铺开，并推进国产芯片与开源模型相互适配，例如智谱、Kimi 等已在国产算力上跑通 [[6]](https://www.digitalchina.gov.cn/2026/xwzx/szkx/202609/t20260901_5366332.htm)，但不太强调单一的“全球最高性能”目标。\n（耳朵轻轻一转）不过这些数字里，有的是基金规模，有的是机构测算，并不都是财政直投，比较时要留意统计口径。",
+      "time": "11:08",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "633884",
+      "text": "（尾巴轻轻晃了一下）没查到朝鲜有跟韩国对标的那种“主权 AI”大项目——没有公开的万亿级预算，也没有从零预训练基础模型的官方规划。\n能查到的多是金日成综合大学人工智能技术研究所做的语音识别、文字识别、机器翻译（“龙马 1.0”），以及传闻中的“朝鲜版 ChatGPT”[[3]](http://www.nkeconomy.com/news/articleView.html?idxno=14942)；此外还有军事、监控、网络战方向的应用，早年就有“银河”程序这类尝试[[9]](https://nonproliferation.org/north-koreas-artificial-intelligence-research-trends-and-potential-civilian-and-military-applications/)。特点是规模小、不透明、又受制裁卡算力，和韩国这 4.7 万亿韩元级别的国家预算案完全不是一个量级，很难说“类似”。",
+      "time": "11:09",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "633886",
+      "text": "这够干嘛 几十亿美元 ？",
+      "time": "11:09",
+      "sender_name": "zzzzzz",
+      "sender_id": 6158790624
+    },
+    {
+      "id": "633887",
+      "text": "老老实实当造铲子的不好嘛非得下场挖金矿",
+      "time": "11:09",
+      "sender_name": "50°可乐",
+      "sender_id": 6031309400
+    },
+    {
+      "id": "633888",
+      "text": "好 很有精神",
+      "time": "11:09",
+      "sender_name": "阿 瑟斯",
+      "sender_id": 5262798828
+    },
+    {
+      "id": "633889",
+      "text": "浪费这些钱干啥，不如捐给我改善生活😀",
+      "time": "11:09",
+      "sender_name": "一一小的一一",
+      "sender_id": 8350614294
+    },
+    {
+      "id": "633890",
+      "text": "直接收购",
+      "time": "11:09",
+      "sender_name": "ken181h",
+      "sender_id": 7040931589
+    },
+    {
+      "id": "633892",
+      "text": "主体模型",
+      "time": "11:10",
+      "sender_name": "超可爱的！",
+      "sender_id": 1656127271
+    },
+    {
+      "id": "633895",
+      "text": "史密斯欧巴要拿多少",
+      "time": "11:11",
+      "sender_name": "派大星 no smoking_dayX",
+      "sender_id": 5361332081
+    },
+    {
+      "id": "633896",
+      "text": "把deepseek拿来改吧改吧就是我们大韩民国思密达的主权 AI 了 ，4.7万亿韩元我就稍微贪个4万亿吧",
+      "time": "11:11",
+      "sender_name": "Firefly",
+      "sender_id": 5454084255
+    },
+    {
+      "id": "633897",
+      "text": "估计拿个开源模型包装一下就完事",
+      "time": "11:12",
+      "sender_name": "Shirai Kuroko",
+      "sender_id": 661805919
+    },
+    {
+      "id": "633898",
+      "text": "韩国还行的好像，中美法之外第一",
+      "time": "11:12",
+      "sender_name": "zumi Ii",
+      "sender_id": 524075627
+    },
+    {
+      "id": "633900",
+      "text": "重点还是钱",
+      "time": "11:13",
+      "sender_name": "zzzzzz",
+      "sender_id": 6158790624
+    },
+    {
+      "id": "633902",
+      "text": "部署一个Deepseek意思一下得了",
+      "time": "11:14",
+      "sender_name": "kg yh",
+      "sender_id": 5503973057
+    },
+    {
+      "id": "633904",
+      "text": "小小韩国就甭玩主权 AI 模型，这不是你们小孩那桌该玩的的高科技",
+      "time": "11:15",
+      "sender_name": "Jove Z",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-05/comments/c-633904-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-05/comments/c-633904-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/44899",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 2335756,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 1962342300
+    },
+    {
+      "id": "633907",
+      "text": "快进到了用ds",
+      "time": "11:15",
+      "sender_name": "Aarone chang",
+      "sender_id": 1102068516
+    },
+    {
+      "id": "633909",
+      "text": "根据智库 Rockbridge Network Korea 2026年10月的报告，2026年1月至8月期间，韩国本土账号在 Hugging Face 平台发布的 1845 个 AI 模型中，有 49.3% 基于中国模型，另有 35.9% 基于其他模型。",
+      "time": "11:17",
+      "sender_name": "Su Neo",
+      "sender_id": 5849995091
+    },
+    {
+      "id": "633913",
+      "text": "花不了多少钱，huggingface 下载个 qwen 或者 ds 微调一下就行了",
+      "time": "11:18",
+      "sender_name": "Su Neo",
+      "sender_id": 5849995091
+    },
+    {
+      "id": "633915",
+      "text": "政府不支持 大部分国家大部分公司都玩不起",
+      "time": "11:21",
+      "sender_name": "zzzzzz",
+      "sender_id": 6158790624
+    },
+    {
+      "id": "633916",
+      "text": "不止钱，最重要的人才。。。还有语料数据，甚至能源。。。除了中美，哪有国家能独立搞得出来",
+      "time": "11:21",
+      "sender_name": "派大星 no smoking_dayX",
+      "sender_id": 5361332081
+    },
+    {
+      "id": "633919",
+      "text": "感觉大部分国家也没必要做吧，包括韩国",
+      "time": "11:22",
+      "sender_name": "potato",
+      "sender_id": 2147324853
+    },
+    {
+      "id": "633920",
+      "text": "能源、硬件、人才等，目前看地球就中美具备，其它国家都是购买的份了",
+      "time": "11:22",
+      "sender_name": "Jove Z",
+      "sender_id": 1962342300
+    },
+    {
+      "id": "633921",
+      "text": "有的是钱也买不到的",
+      "time": "11:23",
+      "sender_name": "派大星 no smoking_dayX",
+      "sender_id": 5361332081
+    },
+    {
+      "id": "633925",
+      "text": "有这实力，美爹也不会同意让你领先吧",
+      "time": "11:25",
+      "sender_name": "hello world",
+      "sender_id": 418345555
+    },
+    {
+      "id": "633926",
+      "text": "不还扬言要收回美军指挥权吗",
+      "time": "11:26",
+      "sender_name": "𝚃𝚒𝚖 𝙲𝚘𝚌𝚔",
+      "sender_id": 1537379879
+    },
+    {
+      "id": "633928",
+      "text": "肯定不给，除非联合日本、菲律宾一起看看有没有希望",
+      "time": "11:27",
+      "sender_name": "Jove Z",
+      "sender_id": 1962342300
+    },
+    {
+      "id": "633929",
+      "text": "一点不市场经济",
+      "time": "11:27",
+      "sender_name": "姬 伯常",
+      "sender_id": 5834683481
+    },
+    {
+      "id": "633930",
+      "text": "忠！诚！",
+      "time": "11:28",
+      "sender_name": "Bedrock Wu 𝟐𝟓𝓨.𝓒𝓝",
+      "sender_id": 8249287088
+    },
+    {
+      "id": "633933",
+      "text": "部署一下ds意思意思得了",
+      "time": "11:30",
+      "sender_name": "可露西尔",
+      "sender_id": 5842743832
+    },
+    {
+      "id": "633935",
+      "text": "又六步上篮了老詹",
+      "time": "11:31",
+      "sender_name": "L Z",
+      "sender_id": 7107562842
+    },
+    {
+      "id": "633936",
+      "text": "用梁文峰就行",
+      "time": "11:33",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "633940",
+      "text": "浪费钱 美国屁股都追不到",
+      "time": "11:39",
+      "sender_name": "mA1",
+      "sender_id": 7402706115
+    },
+    {
+      "id": "633943",
+      "text": "这才多少钱",
+      "time": "11:43",
+      "sender_name": "ds",
+      "sender_id": 8600754885
+    },
+    {
+      "id": "633944",
+      "text": "米国老爹准了吗 就主权模型",
+      "time": "11:44",
+      "sender_name": "是霸霸不是哥",
+      "sender_id": 8610681751
+    },
+    {
+      "id": "633945",
+      "text": "建一个万卡集群花光",
+      "time": "11:45",
+      "sender_name": "蒙古中单",
+      "sender_id": 5296187372
+    },
+    {
+      "id": "633959",
+      "text": "LeeSeek R1",
+      "time": "11:54",
+      "sender_name": "Corey Reed",
+      "sender_id": 8064813295
+    },
+    {
+      "id": "633997",
+      "text": "朴秀贤专员这次有的捞了",
+      "time": "12:41",
+      "sender_name": "Zhang Fan",
+      "sender_id": 5051447205
+    },
+    {
+      "id": "634038",
+      "text": "内存早晚会不缺，符合国家利益的AI才是稀缺品",
+      "time": "13:20",
+      "sender_name": "bcd bcd",
+      "sender_id": 5508344037
+    },
+    {
+      "id": "634061",
+      "text": "tmd中国的ai不知道拿什么训的，说起话来老是一些陈词古调，自己都能跑偏主题，还特别扯，再联想那些AI生成的视频，就是一张狰狞的脸说的一些烂调子又犟嘴的话。",
+      "time": "13:43",
+      "sender_name": "vla pha",
+      "sender_id": 8400504126
+    },
+    {
+      "id": "634093",
+      "text": "才 230 多亿 RMB，能干成？",
+      "time": "14:23",
+      "sender_name": "Dean",
+      "sender_id": 8761793607
+    },
+    {
+      "id": "634443",
+      "text": "先过盘古大模型再说",
+      "time": "17:20",
+      "sender_name": "湖牙拜",
+      "sender_id": 6827562961
+    },
+    {
+      "id": "634481",
+      "text": "部署下deepseek",
+      "time": "17:36",
+      "sender_name": "Hollis",
+      "sender_id": 1791785749
+    },
+    {
+      "id": "634602",
+      "text": "朝鲜搞个主体AI",
+      "time": "18:59",
+      "sender_name": "M SUNG",
+      "sender_id": 5890216527
+    },
+    {
+      "id": "634634",
+      "text": "签到",
+      "time": "19:16",
+      "sender_name": "Zuiliaaa",
+      "sender_id": 6890961797
+    }
+  ]
+}

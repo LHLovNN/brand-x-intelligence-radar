@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "thread_id": "44911",
+  "count": 38,
+  "replies": [
+    {
+      "id": "634533",
+      "time": "18:16",
+      "sender_name": "🌌 $🅐🅝🅣$ 🐜",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-05/comments/c-634533-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-05/comments/c-634533-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/44911",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 180446,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 7171316252
+    },
+    {
+      "id": "634534",
+      "text": "“实验室需为发布的模型公开指纹”那模型厂不公布指纹不就没用了吗",
+      "time": "18:17",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "634537",
+      "text": "这条我看了下，感觉它的思路是给模型输出发一张“身份证明”：实验室公开指纹，然后拿输出去比对，不泄露权重，也能在本地验证。不过它能证明“这段话是哪个模型写的”，证明不了那个模型靠不靠谱；而且研究还没结束、也没有部署计划，先当成技术预告看就好。要我去翻翻那个 GitHub 仓库，看看代码规模吗？",
+      "time": "18:17",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "634538",
+      "text": "o畜：",
+      "time": "18:17",
+      "sender_name": "胆肿",
+      "sender_id": 5782877672
+    },
+    {
+      "id": "634539",
+      "text": "他自己公布吗？",
+      "time": "18:17",
+      "sender_name": "Konstantin",
+      "sender_id": 7833918075
+    },
+    {
+      "id": "634540",
+      "text": "他自己大概率会公布，这不就是暗戳戳呼应上次小作文吗，说中国ai路由到claude，意思是我现在公布指纹了，你只要敢路由别人就能查出来。",
+      "time": "18:19",
+      "sender_name": "fedcliff",
+      "sender_id": 5647643007
+    },
+    {
+      "id": "634541",
+      "text": "终于可以检验中转站是否掺水了",
+      "time": "18:20",
+      "sender_name": "Pling Mooran",
+      "sender_id": 1614483743
+    },
+    {
+      "id": "634543",
+      "text": "KYI",
+      "time": "18:20",
+      "sender_name": "Kurumi Tokisaki MO",
+      "sender_id": 7626812653
+    },
+    {
+      "id": "634544",
+      "text": "Know Your AI",
+      "time": "18:20",
+      "sender_name": "Kurumi Tokisaki MO",
+      "sender_id": 7626812653
+    },
+    {
+      "id": "634545",
+      "text": "KYAI（）",
+      "time": "18:20",
+      "sender_name": "Kurumi Tokisaki MO",
+      "sender_id": 7626812653
+    },
+    {
+      "id": "634552",
+      "text": "这对中转站是一个大打击",
+      "time": "18:25",
+      "sender_name": "张 小镜",
+      "sender_id": 575711948
+    },
+    {
+      "id": "634557",
+      "text": "a÷自己下场打击掺水中转站了🤣",
+      "time": "18:27",
+      "sender_name": "晴空",
+      "sender_id": 651066087
+    },
+    {
+      "id": "634560",
+      "text": "开源的话 应该很多原厂都能直接跟进吧",
+      "time": "18:30",
+      "sender_name": "luo yan",
+      "sender_id": 847442288
+    },
+    {
+      "id": "634561",
+      "text": "再也不用问 你现在是XXX模型了",
+      "time": "18:31",
+      "sender_name": "luo yan",
+      "sender_id": 847442288
+    },
+    {
+      "id": "634563",
+      "text": "终于不用靠宕机来判断中转站是不是掺水了",
+      "time": "18:32",
+      "sender_name": "曦子 /xizi",
+      "sender_id": 926987800
+    },
+    {
+      "id": "634564",
+      "text": "这个好办，前置一个 jev 模型去判断，如果用户在检测掺水，则用正确的模型，否则用降智模型",
+      "time": "18:32",
+      "sender_name": "有蚊子生没蚊子养的东西太可恶了！",
+      "sender_id": 2019010825
+    },
+    {
+      "id": "634565",
+      "text": "不行",
+      "time": "18:34",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "634566",
+      "text": "它是输出是不指定模型生成 应该是用什么加密的验证函数一类的 这可以常驻啊",
+      "time": "18:34",
+      "sender_name": "luo yan",
+      "sender_id": 847442288
+    },
+    {
+      "id": "634568",
+      "text": "你们猜猜他们内部用来干嘛的",
+      "time": "18:37",
+      "sender_name": "奥特 怪兽",
+      "sender_id": 452074081
+    },
+    {
+      "id": "634569",
+      "text": "它这个是可以直接拿你的任何一句正常的输出作为检测的，\n检测可在用户本地完成\n你没办法知道用户什么时候在检测哪一句掺没掺水，每一句都可能被回溯性检测",
+      "time": "18:37",
+      "sender_name": "卡拉卡拉",
+      "sender_id": 607538274
+    },
+    {
+      "id": "634571",
+      "text": "然后模型怎么看出来掺水呢",
+      "time": "18:37",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "634572",
+      "text": "本质上其实就是水印技术",
+      "time": "18:38",
+      "sender_name": "luo yan",
+      "sender_id": 847442288
+    },
+    {
+      "id": "634575",
+      "text": "本质就跟检测某一段输出是模型输出还是人类手敲的技术一样，都是在输出内容上打水印，每家的水印不一样，除了能检测是不是模型生成的外还能检测是具体哪家生成的；它这里就是提出/号召大家都用同一套方法来打水印，但水印内容各家公开出来",
+      "time": "18:43",
+      "sender_name": "卡拉卡拉",
+      "sender_id": 607538274
+    },
+    {
+      "id": "634587",
+      "text": "有用吗？前提是文字不能被更改",
+      "time": "18:51",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "634591",
+      "text": "它本来就只是验证有没有被改而已 你改了不就代表不是原生模型生成的了吗",
+      "time": "18:52",
+      "sender_name": "luo yan",
+      "sender_id": 847442288
+    },
+    {
+      "id": "634592",
+      "text": "比如我有claude opus的水印，那我在输出deepseek时加入水印，那你怎么知道",
+      "time": "18:53",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "634593",
+      "text": "我是指中转站",
+      "time": "18:53",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "634594",
+      "text": "这是算力水印",
+      "time": "18:54",
+      "sender_name": "Giv～°･🐠･°",
+      "sender_id": 1550487467
+    },
+    {
+      "id": "634595",
+      "text": "什么叫输出deepseek嘛 你是说输入到deepseek改写？",
+      "time": "18:54",
+      "sender_name": "luo yan",
+      "sender_id": 847442288
+    },
+    {
+      "id": "634596",
+      "text": "吃饱了撑着吗 我中转站把claude输出的到deepseek洗一遍？",
+      "time": "18:54",
+      "sender_name": "luo yan",
+      "sender_id": 847442288
+    },
+    {
+      "id": "634601",
+      "text": "孙哥哭了",
+      "time": "18:57",
+      "sender_name": "Zuiliaaa",
+      "sender_id": 6890961797
+    },
+    {
+      "id": "634619",
+      "text": "中转站：卧槽",
+      "time": "19:07",
+      "sender_name": "Lee bubble",
+      "sender_id": 915063166
+    },
+    {
+      "id": "634631",
+      "text": "哦，我看了一下，不是查你输出的，而是差推理计算，verify需要prompt，output，commitment id，proof，缺一个都会false",
+      "time": "19:15",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "634642",
+      "time": "19:23",
+      "sender_name": "sensei vs 竜華キサキ，你们知道吗？",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-05/comments/c-634642-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-05/comments/c-634642-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/44911",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 272445,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 6802444078
+    },
+    {
+      "id": "634678",
+      "text": "就是相当于服务器生成完之后给内容签个名，然后发回来公钥？",
+      "time": "19:37",
+      "sender_name": "余承东🍥",
+      "sender_id": 8381317357
+    },
+    {
+      "id": "634686",
+      "text": "proof是一次性的，每个prompt和output都不一样",
+      "time": "19:41",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "634688",
+      "text": "commitment id才是公钥",
+      "time": "19:42",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "634780",
+      "text": "是炒作吗😁",
+      "time": "20:53",
+      "sender_name": "beta king",
+      "sender_id": 5839405248
+    }
+  ]
+}
