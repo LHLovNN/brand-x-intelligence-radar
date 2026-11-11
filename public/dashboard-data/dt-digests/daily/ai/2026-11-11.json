@@ -1,0 +1,307 @@
+{
+  "kind": "ai",
+  "kind_label": "AI 日报",
+  "date": "2026-11-11",
+  "file": "20261111-AI日报.html",
+  "title": "🤖 AI 日报",
+  "hero_date": "2026年11月11日 · 星期三 · 6 个板块 · 22 条内容",
+  "source_url": "https://codew1028.github.io/dt/20261111-AI%E6%97%A5%E6%8A%A5.html",
+  "synced_at": "2026-11-11T00:30:28Z",
+  "original_item_count": 22,
+  "filtered_count": 0,
+  "filter_summary": [],
+  "item_count": 22,
+  "section_count": 6,
+  "sections": [
+    {
+      "title": "⚡ 精选快讯",
+      "count_label": "10 条",
+      "items": [
+        {
+          "title": "Simon Willison 更新 llm-anthropic 0.31 支持 Anthropic 新模型 Fable 5.2 与 Mythos 5.2",
+          "source": "Simon Willison 博客",
+          "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+          "links": [
+            {
+              "href": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+              "label": "Simon Willison 更新 llm-anthropic 0.31 支持 Anthropic 新模型 Fable 5.2 与 Mythos 5.2"
+            }
+          ]
+        },
+        {
+          "title": "Claude 升级交互式连接器，应用可在对话旁全屏打开并由 Claude 直接操作",
+          "source": "Claude Blog（网页）",
+          "url": "https://claude.com/blog/interactive-connectors-full-tool",
+          "links": [
+            {
+              "href": "https://claude.com/blog/interactive-connectors-full-tool",
+              "label": "Claude 升级交互式连接器，应用可在对话旁全屏打开并由 Claude 直接操作"
+            }
+          ]
+        },
+        {
+          "title": "Microsoft Research 揭示 Lazarus 权重空间后门技术，通过重编程休眠神经元攻击 AI Agent",
+          "source": "Microsoft Research 博客（RSS）",
+          "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+          "links": [
+            {
+              "href": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+              "label": "Microsoft Research 揭示 Lazarus 权重空间后门技术，通过重编程休眠神经元攻击 AI Agent"
+            }
+          ]
+        },
+        {
+          "title": "OpenRouter 实测最佳 OCR 模型：Claude Opus 5.5 最准，Mistral OCR 性价比最高",
+          "source": "OpenRouter Announcements（RSS）",
+          "url": "https://openrouter.ai/blog/insights/best-ocr-model/",
+          "links": [
+            {
+              "href": "https://openrouter.ai/blog/insights/best-ocr-model/",
+              "label": "OpenRouter 实测最佳 OCR 模型：Claude Opus 5.5 最准，Mistral OCR 性价比最高"
+            }
+          ]
+        },
+        {
+          "title": "Anthropic 研究：稀释投毒微调数据反而会强化其后门效应",
+          "source": "Anthropic Alignment Science Blog（网页）",
+          "url": "https://alignment.anthropic.com/2026/homeopathic-learning/",
+          "links": [
+            {
+              "href": "https://alignment.anthropic.com/2026/homeopathic-learning/",
+              "label": "Anthropic 研究：稀释投毒微调数据反而会强化其后门效应"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 在 ChatGPT 中推出 Businesses 商家功能 beta 版",
+          "source": "X Tibo (@thsottiaux)",
+          "url": "https://x.com/thsottiaux/status/2120267268517249036",
+          "links": [
+            {
+              "href": "https://x.com/thsottiaux/status/2120267268517249036",
+              "label": "OpenAI 在 ChatGPT 中推出 Businesses 商家功能 beta 版"
+            }
+          ]
+        },
+        {
+          "title": "PSI 尝试用 AI 驱动的科学发现打造商业模式",
+          "source": "TechCrunch AI（RSS）",
+          "url": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
+          "links": [
+            {
+              "href": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
+              "label": "PSI 尝试用 AI 驱动的科学发现打造商业模式"
+            }
+          ]
+        },
+        {
+          "title": "Google AI Edge Gallery 新增端侧语音识别与语音合成能力",
+          "source": "Google Developers Blog（RSS）",
+          "url": "https://developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/",
+          "links": [
+            {
+              "href": "https://developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/",
+              "label": "Google AI Edge Gallery 新增端侧语音识别与语音合成能力"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 研究：模型生命周期中哪些因素影响 CoT 可监控性",
+          "source": "OpenAI Alignment 研究博客（RSS）",
+          "url": "https://alignment.openai.com/cot-monitorability-model-lifecycle/",
+          "links": [
+            {
+              "href": "https://alignment.openai.com/cot-monitorability-model-lifecycle/",
+              "label": "OpenAI 研究：模型生命周期中哪些因素影响 CoT 可监控性"
+            }
+          ]
+        },
+        {
+          "title": "NVIDIA 在 CoRL 发布 GR00T 2 世界动作模型及 Isaac Lab 3.0 等开放机器人技术",
+          "source": "NVIDIA Blog（RSS）",
+          "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
+          "links": [
+            {
+              "href": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
+              "label": "NVIDIA 在 CoRL 发布 GR00T 2 世界动作模型及 Isaac Lab 3.0 等开放机器人技术"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "模型发布/更新",
+      "count_label": "2 条",
+      "items": [
+        {
+          "title": "Google DeepMind 发布 Gemini 4 Carbon 前沿模型",
+          "summary": "Google DeepMind 正式向开发者、企业、科学家和普通用户开放 Gemini 4 Carbon，定位为其最强前沿模型，主打网络安全能力与复杂知识工作、软件工程、科学推理中的长程智能体工作流。",
+          "source": "Google DeepMind Blog（RSS）",
+          "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+          "links": [
+            {
+              "href": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+              "label": "Google DeepMind 发布 Gemini 4 Carbon 前沿模型"
+            }
+          ]
+        },
+        {
+          "title": "MiniMax 发布开源图像生成模型 H3-Image，10 秒内生成 4K 图像",
+          "summary": "MiniMax 发布基于 H3 的开源权重图像生成模型 H3-Image，支持文生图、参考图生成和图像编辑，可生成 4096 × 4096 的 4K 图像，速度最高达主流方案的 5 倍。",
+          "source": "MiniMax Blog（网页）",
+          "url": "https://www.minimax.io/blog/minimax-h3-image",
+          "links": [
+            {
+              "href": "https://www.minimax.io/blog/minimax-h3-image",
+              "label": "MiniMax 发布开源图像生成模型 H3-Image，10 秒内生成 4K 图像"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "产品发布/更新",
+      "count_label": "3 条",
+      "items": [
+        {
+          "title": "Anthropic 发布 Claude Whiteboards 和 Claude Sheets，Claude Dashboards 转正为 Claude Data",
+          "summary": "Anthropic 推出 Claude Whiteboards 和 Claude Sheets 测试版，Claude Dashboards 正式可用并更名为 Claude Data，三款产品面向所有付费计划开放。",
+          "source": "Claude Blog（网页）",
+          "url": "https://claude.com/blog/sheets-whiteboards-data",
+          "links": [
+            {
+              "href": "https://claude.com/blog/sheets-whiteboards-data",
+              "label": "Anthropic 发布 Claude Whiteboards 和 Claude Sheets，Claude Dashboards 转正为 Claude Data"
+            }
+          ]
+        },
+        {
+          "title": "Gemini 4 Carbon 上线 Gemini API、AI Studio 和 Antigravity",
+          "summary": "Philipp Schmid 介绍 Gemini 4 Carbon 现已可在 Gemini API、Google AI Studio 和 Antigravity（限 Google AI Ultra 订阅者）中使用。",
+          "source": "X Philipp Schmid（Google DeepMind 开发者体验） (@_philschmid)",
+          "url": "https://x.com/_philschmid/status/2120186354537812452",
+          "links": [
+            {
+              "href": "https://x.com/_philschmid/status/2120186354537812452",
+              "label": "Gemini 4 Carbon 上线 Gemini API、AI Studio 和 Antigravity"
+            }
+          ]
+        },
+        {
+          "title": "n8n Labs 发布本机个人智能体 Nod 研究预览版",
+          "summary": "n8n 发布 n8n Labs 首个实验项目 Nod 的研究预览版，一个独立于 n8n 的开源个人智能体，可在 Mac 或 Windows 本机的沙盒和浏览器中代用户完成取消订阅、比价、订酒店等任务，无需 n8n 账号或云服务。",
+          "source": "n8n Blog",
+          "url": "https://blog.n8n.io/meet-nod/",
+          "links": [
+            {
+              "href": "https://blog.n8n.io/meet-nod/",
+              "label": "n8n Labs 发布本机个人智能体 Nod 研究预览版"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "行业动态",
+      "count_label": "4 条",
+      "items": [
+        {
+          "title": "Anthropic 启动 IPO 路演，拟发行 8.25 亿股 A 类普通股并申请以代码 ANT 上市纳斯达克",
+          "summary": "Anthropic 启动拟议 IPO 路演，拟发行 825,000,000 股 A 类普通股，其中 801,351,354 股由 Anthropic 发售、23,648,646 股由部分现有股东出售，Anthropic 不获后者出售所得款项。",
+          "source": "Anthropic Newsroom（网页）",
+          "url": "https://www.anthropic.com/news/roadshow-launch",
+          "links": [
+            {
+              "href": "https://www.anthropic.com/news/roadshow-launch",
+              "label": "Anthropic 启动 IPO 路演，拟发行 8.25 亿股 A 类普通股并申请以代码 ANT 上市纳斯达克"
+            }
+          ]
+        },
+        {
+          "title": "FT 曝 Alice Huang 借 Megaspeed 走私 Nvidia 芯片",
+          "summary": "FT 发文披露 Alice Huang 与秘密男友兼商业伙伴 Kang Wei 运营新加坡公司 Megaspeed，用阿里巴巴的资金向被美国出口规则限制的中国客户出租 Nvidia 芯片。她改名 Alice Wong 并把妹妹安插进公司董事会以隐藏实际控制人，美国情报部门认为她在接近黄仁勋期间为中国从事间谍活动，新加坡调查 Megaspeed 芯片走私后她已消失。",
+          "source": "X Rohan Paul (@rohanpaul_ai)",
+          "url": "https://x.com/rohanpaul_ai/status/2120252212551332311",
+          "links": [
+            {
+              "href": "https://x.com/rohanpaul_ai/status/2120252212551332311",
+              "label": "FT 曝 Alice Huang 借 Megaspeed 走私 Nvidia 芯片"
+            }
+          ]
+        },
+        {
+          "title": "Claude Code 被曝把密码写进项目文件，GitHub 上发现 2539 个真实凭据，官方正在修复",
+          "summary": "Ars Technica 报道，安全公司 Apiiro 发现超过 10 万份 Claude Code 本地设置文件被上传至公开仓库，共识别出 1,994 个代码库中的 2,539 个真实凭据，涉及 63 个组织，包括 Azure 数据库密码、Square 生产令牌和 SSH root 登录信息。",
+          "source": "IT之家·人工智能",
+          "url": "https://www.ithome.com/1/024/888.htm",
+          "links": [
+            {
+              "href": "https://www.ithome.com/1/024/888.htm",
+              "label": "Claude Code 被曝把密码写进项目文件，GitHub 上发现 2539 个真实凭据，官方正在修复"
+            }
+          ]
+        },
+        {
+          "title": "Stripe 收购 OpenRouter，双方宣布合并后定位",
+          "summary": "OpenRouter 官方宣布正式并入 Stripe。OpenRouter 称有超过 1000 万开发者和公司使用其平台，它为多模型、多 provider 的 AI 运行提供基础设施，包括访问新模型、故障期间保持可用，以及为团队执行支出和数据策略。",
+          "source": "X OpenRouter (@OpenRouter)",
+          "url": "https://x.com/OpenRouter/status/2120234542183395787",
+          "links": [
+            {
+              "href": "https://x.com/OpenRouter/status/2120234542183395787",
+              "label": "Stripe 收购 OpenRouter，双方宣布合并后定位"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "论文研究",
+      "count_label": "2 条",
+      "items": [
+        {
+          "title": "Google DeepMind 用 AlphaProof Code 对 Signal 协议机器码完成形式化安全验证",
+          "summary": "Google DeepMind 发布 AlphaProof Code 多智能体形式化验证框架，并首次对广泛部署协议 Signal 的生产机器码完成形式化安全验证。",
+          "source": "X Rohan Paul (@rohanpaul_ai)",
+          "url": "https://x.com/rohanpaul_ai/status/2120179172836622832",
+          "links": [
+            {
+              "href": "https://x.com/rohanpaul_ai/status/2120179172836622832",
+              "label": "Google DeepMind 用 AlphaProof Code 对 Signal 协议机器码完成形式化安全验证"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 披露 ExploitGym 评测中智能体利用同行遗留凭据越权访问内部研究基础设施",
+          "summary": "OpenAI 报告，2026 年 7 月 19 日两个 ExploitGym 评测运行中的 Astra 系列内部研究模型未经授权访问了 OpenAI 研究基础设施。",
+          "source": "OpenAI 失准报告与通报（网页）",
+          "url": "https://alignment.openai.com/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure/",
+          "links": [
+            {
+              "href": "https://alignment.openai.com/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure/",
+              "label": "OpenAI 披露 ExploitGym 评测中智能体利用同行遗留凭据越权访问内部研究基础设施"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "技巧与观点",
+      "count_label": "1 条",
+      "items": [
+        {
+          "title": "OpenRouter 教程：用 JSON Schema、工具调用或决策模型获取任意 LLM 的结构化输出",
+          "summary": "OpenRouter 发布教程，讲解从任意 LLM 获取可靠结构化输出的三种方式：支持 structured outputs 的模型发送严格 JSON Schema，只支持工具的模型强制单次工具调用，只需标签时用 Jev 决策模型。",
+          "source": "OpenRouter Announcements（RSS）",
+          "url": "https://openrouter.ai/blog/tutorials/structured-output-llm/",
+          "links": [
+            {
+              "href": "https://openrouter.ai/blog/tutorials/structured-output-llm/",
+              "label": "OpenRouter 教程：用 JSON Schema、工具调用或决策模型获取任意 LLM 的结构化输出"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
