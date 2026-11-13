@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-13",
+  "thread_id": "45076",
+  "count": 16,
+  "replies": [
+    {
+      "id": "655438",
+      "text": "选项一是在、、、",
+      "time": "09:01",
+      "sender_name": "蕾",
+      "sender_id": 5100066720
+    },
+    {
+      "id": "655439",
+      "text": "没有关系了🫤",
+      "time": "09:01",
+      "sender_name": "diu diu",
+      "sender_id": 6463759259
+    },
+    {
+      "id": "655444",
+      "text": "openai 啥时候倒闭",
+      "time": "09:08",
+      "sender_name": "Ya Lin",
+      "sender_id": 8312847890
+    },
+    {
+      "id": "655502",
+      "text": "啊 以前不支持么",
+      "time": "09:20",
+      "sender_name": "旋律",
+      "sender_id": 1325212315
+    },
+    {
+      "id": "655505",
+      "text": "以前不支持，Claude api设计很一般",
+      "time": "09:21",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "655509",
+      "text": "它改得不好容易掉缓存",
+      "time": "09:22",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "655513",
+      "text": "Responses的设计比它强太多",
+      "time": "09:22",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "655514",
+      "text": "因为人家修改这个不需要插入会话里面。",
+      "time": "09:23",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "655665",
+      "text": "你用responses吗",
+      "time": "10:20",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "655666",
+      "text": "我两个都做",
+      "time": "10:21",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "655668",
+      "text": "可以",
+      "time": "10:21",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "655672",
+      "text": "就是messages做功能增强比responses难，因为repsonses的设计导致api缓存相对不容易掉。messages得很谨慎。",
+      "time": "10:23",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "655673",
+      "text": "message一般也不掉",
+      "time": "10:23",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "655674",
+      "text": "做切窗你就知道了",
+      "time": "10:24",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "655685",
+      "text": "另外Claude的设计有问题，把tools放在第一层，一旦更改，缓存归零，openai的还能命中一部分系统提示词，因为人家工具放在偏后，系统提示词在前",
+      "time": "10:30",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "655786",
+      "text": "还行吧",
+      "time": "10:56",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    }
+  ]
+}
