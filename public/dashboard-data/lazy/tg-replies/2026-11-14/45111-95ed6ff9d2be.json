@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-14",
+  "thread_id": "45111",
+  "count": 40,
+  "replies": [
+    {
+      "id": "662415",
+      "text": "这真便宜吧",
+      "time": "22:28",
+      "sender_name": "明 Bright",
+      "sender_id": 6130605509
+    },
+    {
+      "id": "662416",
+      "text": "DS什么时候能力这么强了?",
+      "time": "22:28",
+      "sender_name": "empty",
+      "sender_id": 8005710542
+    },
+    {
+      "id": "662419",
+      "text": "自己官网都要开源么，梁圣掏箱底啊",
+      "time": "22:29",
+      "sender_name": "Alice",
+      "sender_id": 1602095088
+    },
+    {
+      "id": "662420",
+      "text": "牛逼啊",
+      "time": "22:29",
+      "sender_name": "dojo",
+      "sender_id": 7009192781
+    },
+    {
+      "id": "662421",
+      "text": "太好了",
+      "time": "22:29",
+      "sender_name": "泪水打湿数据线，边当舔狗边触电",
+      "sender_id": 2075939867
+    },
+    {
+      "id": "662423",
+      "text": "欧鲸鲸",
+      "time": "22:29",
+      "sender_name": "Bex",
+      "sender_id": 8708796183
+    },
+    {
+      "id": "662424",
+      "text": "喂给我吃喵，谢谢喵~",
+      "time": "22:30",
+      "sender_name": "️️️️ SpongeBob 绵鸣 Ⓥ",
+      "sender_id": 1181205675
+    },
+    {
+      "id": "662426",
+      "text": "把欧鲸鲸切了拿去炒菜",
+      "time": "22:31",
+      "sender_name": "Lev Tan",
+      "sender_id": 6749977199
+    },
+    {
+      "id": "662427",
+      "text": "小花，解释一下，这个什么用",
+      "time": "22:31",
+      "sender_name": "𝕯𝖆𝖒𝖔𝖓",
+      "sender_id": 81408797
+    },
+    {
+      "id": "662428",
+      "text": "简单说：以前搭建“联网搜索、读文件、读链接、语音”这套流程，你得自己连接四五个服务；现在只要在 DeepSeek API 里打开相应参数，服务端就会替你调用工具、拼好上下文——你只负责写业务逻辑 [[3]](https://api-docs.deepseek.com/zh-cn/updates.md)。适合做带联网能力、能读文件网页、能听会说的聊天助手或 Agent，而 Search、Fetch、OCR、ASR、TTS 也能单独调用；想省事的用整套，想省钱的拆开用。",
+      "time": "22:31",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "662429",
+      "text": "使用场景是什么",
+      "time": "22:32",
+      "sender_name": "𝕯𝖆𝖒𝖔𝖓",
+      "sender_id": 81408797
+    },
+    {
+      "id": "662430",
+      "text": "使用场景就是那些“模型自己看不见、听不到、读不了”的场合：\n- **客服、售后机器人**：用户丢一张发票或截图，先用 OCR 提取内容，再让助手回答。\n- **企业内部知识问答**：用 Search、Fetch 抓取官网公告、竞品页面和新闻，做成带出处的 RAG，不会一本正经地编造。\n- **语音助手**：ASR 把客户录音转成文字，TTS 再把答案念回去，因此接电话、做会议纪要都行。\n- **让 Agent 自主执行任务**：让它在对话里自己决定“该搜索了”还是“该读这页了”，你就不必再写调度逻辑。\n一句话：**凡是需要“知道新鲜事、看懂图片、听懂人话”的产品，都可以用这套现成接口；不需要的话，就别为它花这钱。**\n本次查阅：Search & Fetch | DeepSeek API Docs、DeepSeek 搜索API 正式开放：每千次请求$0.75、重磅升级，一站式构建智能应用，集齐 DeepSeek+多媒体 API | 七牛云",
+      "time": "22:32",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "662432",
+      "text": "等会 ds 的 tts？",
+      "time": "22:33",
+      "sender_name": "狗别怂 来私聊你爹",
+      "sender_id": 8958174422
+    },
+    {
+      "id": "662433",
+      "text": "啥效果",
+      "time": "22:33",
+      "sender_name": "狗别怂 来私聊你爹",
+      "sender_id": 8958174422
+    },
+    {
+      "id": "662434",
+      "time": "22:33",
+      "sender_name": "Lilim",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-14/comments/c-662434-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-14/comments/c-662434-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/45111",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 74369,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 488890528
+    },
+    {
+      "id": "662435",
+      "text": "真特么疯，梁文疯",
+      "time": "22:33",
+      "sender_name": "Z X",
+      "sender_id": 6532623046
+    },
+    {
+      "id": "662436",
+      "text": "看不懂，帮我解答",
+      "time": "22:33",
+      "sender_name": "️️️️ SpongeBob 绵鸣 Ⓥ",
+      "sender_id": 1181205675
+    },
+    {
+      "id": "662438",
+      "text": "换个说法，一句话：**模型本来是个“关在小黑屋里只会聊天的人”，这套 API 就是给它配了眼睛、耳朵、嘴和一双手。**\n- 眼睛、耳朵：OCR 看截图，ASR 听录音；客服发来一张发票，它不用再回“请用文字描述”。\n- 手：Search、Fetch 替它上网翻页，答案能带出处，不靠编。\n- 嘴：TTS 把文字念出来，做语音播报、接电话。\n- 脑子里的调度：以前这些步骤要你自己写代码串起来，现在打开参数，它自己决定“先查还是先读”。\n所以它解决的就是“模型不会上网、看不懂图、听不懂话”这三件事，别的产品想省事就直接拿来用。你要是还没想好做什么产品，这套东西对你就像买了台洗碗机，但家里没碗。",
+      "time": "22:33",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "662439",
+      "text": "语音识别还是有点贵的，如果没限时五折的话",
+      "time": "22:34",
+      "sender_name": "hceklkl",
+      "sender_id": 1291591529
+    },
+    {
+      "id": "662441",
+      "text": "其他模型不是可以直接这么操作吗？",
+      "time": "22:34",
+      "sender_name": "𝕯𝖆𝖒𝖔𝖓",
+      "sender_id": 81408797
+    },
+    {
+      "id": "662442",
+      "text": "能不能不加语音。。每次点进来都要下载，占内存。。",
+      "time": "22:34",
+      "sender_name": "潇 洒哥",
+      "sender_id": 2060331872
+    },
+    {
+      "id": "662443",
+      "text": "能，你说得没错，这项能力并非 DeepSeek 首创：OpenAI 的 Responses API 早就有托管的 web search 工具，Gemini 也能通过 grounding 直接调用 Google 搜索，Claude 也有类似的网络搜索工具 [[2]](https://developers.openai.com/api/docs/guides/tools-web-search)[[6]](https://developers.googleblog.com/en/gemini-api-and-ai-studio-now-offer-grounding-with-google-search)。所以这次真正更新的不是“模型能上网”这个概念，而是把这五项能力打包在一起、按调用次数收费：DeepSeek 搜索每千次约 $0.75，OpenAI 每千次 $10，Gemini 搜索 grounding 每千次 $14 起 [[3]](https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance)[[7]](https://costgoat.com/pricing/gemini-api)。说白了，别人卖的是“能联网的模型”，DeepSeek 卖的是“价格更低的联网、OCR、语音全家桶”；你要真做产品，重点看哪家便宜、中文语料好不好用，不要被这些名字迷惑。",
+      "time": "22:35",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "662445",
+      "text": "懂了，就是ds补齐短板",
+      "time": "22:35",
+      "sender_name": "𝕯𝖆𝖒𝖔𝖓",
+      "sender_id": 81408797
+    },
+    {
+      "id": "662446",
+      "text": "对，这就是补短板。不过“补齐”这两个字太客气了：它补的是短板，摆的却是价目表。别的家早就有这功能，DeepSeek 现在递上来的是一份“别人有的我也都有，而且价格还不到别人零头”的报价单。真要夸它，就夸它把这一整套原本要分别接入的东西打包成了套餐，价格还比单点便宜。",
+      "time": "22:36",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "662447",
+      "text": "DS的限时折扣真说不准到底限时不限时",
+      "time": "22:37",
+      "sender_name": "Qianrf",
+      "sender_id": 8139186745
+    },
+    {
+      "id": "662450",
+      "text": "这个语音合成就是app里之前上线的朗读功能吧",
+      "time": "22:38",
+      "sender_name": "Lucy",
+      "sender_id": 6488338872
+    },
+    {
+      "id": "662451",
+      "text": "用的是那几个音色吗(",
+      "time": "22:38",
+      "sender_name": "Lucy",
+      "sender_id": 6488338872
+    },
+    {
+      "id": "662452",
+      "text": "总喜欢在周末发点好东西",
+      "time": "22:39",
+      "sender_name": "Firefly",
+      "sender_id": 5454084255
+    },
+    {
+      "id": "662458",
+      "text": "折扣了性价比也不高，夸克网盘svip一年108，带每月1200分钟的录音转文字且总结，20*12*0.39=93.6 性价比不如冲个夸克网盘会员",
+      "time": "22:50",
+      "sender_name": "hceklkl",
+      "sender_id": 1291591529
+    },
+    {
+      "id": "662459",
+      "text": "快进到无审核对话",
+      "time": "22:50",
+      "sender_name": "Wosni",
+      "sender_id": 5105411405
+    },
+    {
+      "id": "662461",
+      "text": "ds本来就没什么审核",
+      "time": "22:50",
+      "sender_name": "Lucy",
+      "sender_id": 6488338872
+    },
+    {
+      "id": "662462",
+      "text": "官方api",
+      "time": "22:50",
+      "sender_name": "Lucy",
+      "sender_id": 6488338872
+    },
+    {
+      "id": "662463",
+      "text": "网页端都是关键词拦截",
+      "time": "22:51",
+      "sender_name": "Lucy",
+      "sender_id": 6488338872
+    },
+    {
+      "id": "662466",
+      "text": "已经猜到小白会咋被骗了",
+      "time": "22:59",
+      "sender_name": "胡桃 ギーク",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-14/comments/c-662466-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-14/comments/c-662466-1-thumb.webp",
+          "width": 582,
+          "height": 1280,
+          "size_bytes": 56714
+        }
+      ],
+      "sender_id": 7569482761
+    },
+    {
+      "id": "662467",
+      "time": "22:59",
+      "sender_name": "胡桃 ギーク",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-14/comments/c-662467-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-14/comments/c-662467-1-thumb.webp",
+          "width": 565,
+          "height": 1280,
+          "size_bytes": 40214
+        }
+      ],
+      "sender_id": 7569482761
+    },
+    {
+      "id": "662483",
+      "text": "没说便宜的意思，关键是自定义程度超级低，音色都只有一男一女两种，我还不如用MiniMax的",
+      "time": "23:18",
+      "sender_name": "Qianrf",
+      "sender_id": 8139186745
+    },
+    {
+      "id": "662484",
+      "text": "虽然但是 咋还不发大的模型啊",
+      "time": "23:18",
+      "sender_name": "L bgBG",
+      "sender_id": 5462622506
+    },
+    {
+      "id": "662486",
+      "text": "挺好的，ds官方app 有",
+      "time": "23:22",
+      "sender_name": "Sehnsucht",
+      "sender_id": 8698544008
+    },
+    {
+      "id": "662593",
+      "text": "感觉价格还不错？其他家多模态模型的语音输入是怎么算的价格？",
+      "time": "00:40",
+      "sender_name": "橘春",
+      "sender_id": 6606439416
+    },
+    {
+      "id": "662594",
+      "text": "也不对，这个语音识别的后端应该不是大模型",
+      "time": "00:41",
+      "sender_name": "橘春",
+      "sender_id": 6606439416
+    }
+  ]
+}
