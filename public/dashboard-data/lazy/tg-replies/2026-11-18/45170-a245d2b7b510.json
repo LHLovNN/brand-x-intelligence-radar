@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "thread_id": "45170",
+  "count": 23,
+  "replies": [
+    {
+      "id": "670536",
+      "text": "有加入随机数，模拟出折痕坏屏的效果吗",
+      "time": "11:03",
+      "sender_name": "派大星 no smoking_dayX",
+      "sender_id": 5361332081
+    },
+    {
+      "id": "670537",
+      "text": "能模拟折叠屏折坏吗",
+      "time": "11:03",
+      "sender_name": "🦟对于人类来说 算不算小萝莉？",
+      "sender_id": 2019010825
+    },
+    {
+      "id": "670538",
+      "text": "哈哈",
+      "time": "11:03",
+      "sender_name": "moniw",
+      "sender_id": 7949125722
+    },
+    {
+      "id": "670539",
+      "text": "不得不说，iPhone Duo除了本身是一款垃圾产品之外，生态圈提供的服务质量是真的高",
+      "time": "11:04",
+      "sender_name": "R",
+      "sender_id": 1525505
+    },
+    {
+      "id": "670540",
+      "text": "苹果官方那份文档页（documentation/technologyoverviews/...）我打开是空的，能查到的只有 [/iphone-duo/prepare/]：它把适配工作归成三步 [[1]](https://developer.apple.com/iphone-duo/prepare/)。\n- **把 SDK 升级到 iOS 27.1 或更高**：用 iOS 26 及更早的 SDK 构建时，在 Duo 上只会把内容居中，留出一圈空白；iOS 27 能填满内屏的大部分，但要避开右边缘的状态栏；只有 iOS 27.1 或更高版本才支持竖排工具栏和标签栏，整体铺满内屏 [[1]](https://developer.apple.com/iphone-duo/prepare/)。\n- **改掉固定尺寸和方向的写法**：别再用 `UIScreen.main.bounds`，改用 `view.bounds`、`window.bounds`、`GeometryReader` 或 `onGeometryChange`；缩放比例从 `traitCollection.displayScale` 取；窗口用 `UIWindow(windowScene:)` 创建；别把 `UIScreen` 存起来，也别拿 `UIDevice.orientation`、`statusBarOrientation` 判断横竖，改成直接比较宽高；别用 `userInterfaceIdiom` 或“regular 宽度等于 iPad”来决定布局，也别写死 `bounds.height == 844` 这种对具体设备的假设 [[1]](https://developer.apple.com/iphone-duo/prepare/)。\n- **实际测试尺寸变化**：可以用 Device Hub 里可调整大小的模拟器、macOS 27 上的 iPhone Mirroring，以及 Xcode 27.1 里的 iPhone Duo 模拟器。官方特别强调，Duo 模拟器最能还原完整原生体验 [[1]](https://developer.apple.com/iphone-duo/prepare/)。\n跑之前可以先在 Xcode 里用 `xcrun agent skills export` 跑一遍 resizability skill；不过官方也提前说明了：它找不全问题，剩下的靠你自己 [[1]](https://developer.apple.com/iphone-duo/prepare/)。",
+      "time": "11:04",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "670541",
+      "text": "不能折叠的全封号",
+      "time": "11:04",
+      "sender_name": "Vermouth",
+      "sender_id": 5378650290
+    },
+    {
+      "id": "670543",
+      "time": "11:04",
+      "sender_name": "MoonriseGarden",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-18/comments/c-670543-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-18/comments/c-670543-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/45170",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 126533,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 5687077231
+    },
+    {
+      "id": "670547",
+      "text": "only apple can fuck！",
+      "time": "11:06",
+      "sender_name": "派大星 no smoking_dayX",
+      "sender_id": 5361332081
+    },
+    {
+      "id": "670549",
+      "time": "11:06",
+      "sender_name": "R",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-18/comments/c-670549-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-18/comments/c-670549-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/45170",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 267954,
+          "has_audio": false
+        }
+      ],
+      "sender_id": 1525505
+    },
+    {
+      "id": "670553",
+      "text": "苹果不是三折叠吗，左侧一块，右侧分上下两块，claude做的不真实",
+      "time": "11:10",
+      "sender_name": "Alexra",
+      "sender_id": 5380942068
+    },
+    {
+      "id": "670555",
+      "text": "cc不能用AppStore账户余额订阅了吗",
+      "time": "11:15",
+      "sender_name": "fuwu1245",
+      "sender_id": 110326229
+    },
+    {
+      "id": "670556",
+      "time": "11:17",
+      "sender_name": "𨳊𨶙𨳍閪",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-18/comments/c-670556-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-18/comments/c-670556-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/45170",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 150138,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 2013220180
+    },
+    {
+      "id": "670559",
+      "text": "不是claude支持，是苹果的模拟器支持了。前段时间就已经支持了。",
+      "time": "11:19",
+      "sender_name": "Edison",
+      "sender_id": 393388592
+    },
+    {
+      "id": "670563",
+      "text": "销毁了多少本绝版书籍实现的🙂‍↔️",
+      "time": "11:27",
+      "sender_name": "kaws",
+      "sender_id": 410674399
+    },
+    {
+      "id": "670564",
+      "text": "你买吗？和你有什么关系",
+      "time": "11:28",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "670567",
+      "text": "未来感好强啊",
+      "time": "11:29",
+      "sender_name": "R (萌心机场主)",
+      "sender_id": 8970992846
+    },
+    {
+      "id": "670570",
+      "text": "前几天刚被Claude要求验证身份😭",
+      "time": "11:30",
+      "sender_name": "Roman Wong",
+      "sender_id": 5517505701
+    },
+    {
+      "id": "670578",
+      "text": "你还特挺缺蛋蛋的A畜嘛，没销毁书吗，为什么要销毁书，赠送给你Ella不香吗",
+      "time": "11:34",
+      "sender_name": "Jove Z",
+      "sender_id": 1962342300
+    },
+    {
+      "id": "670584",
+      "text": "我不需要",
+      "time": "11:38",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "670613",
+      "text": "Dario - o = Dari",
+      "time": "12:00",
+      "sender_name": "PRO-2684² 不要香菜谢谢⁧😿 喵⁦",
+      "sender_id": 7761066405
+    },
+    {
+      "id": "670781",
+      "text": "windows也支持马",
+      "time": "13:04",
+      "sender_name": "wataa",
+      "sender_id": 7360818341
+    },
+    {
+      "id": "670788",
+      "text": "不支持 就是个模拟器",
+      "time": "13:08",
+      "sender_name": "YuDaTou",
+      "sender_id": 7033520421
+    },
+    {
+      "id": "670913",
+      "text": "这是claudecode？这不是Claude desktop 吗",
+      "time": "14:15",
+      "sender_name": "nb5p",
+      "sender_id": 546710026
+    }
+  ]
+}

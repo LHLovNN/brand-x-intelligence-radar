@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "thread_id": "45168",
+  "count": 37,
+  "replies": [
+    {
+      "id": "670423",
+      "text": "商量好了啊看来，中美之间",
+      "time": "10:21",
+      "sender_name": "裁缝",
+      "sender_id": 8839462379
+    },
+    {
+      "id": "670424",
+      "text": "攻防是一体的，怎么能只增强防御能力的同时削弱攻击能力呢？",
+      "time": "10:21",
+      "sender_name": "🦟对于人类来说 算不算小萝莉？",
+      "sender_id": 2019010825
+    },
+    {
+      "id": "670425",
+      "text": "攻防不是一体的吗，不会攻怎么防",
+      "time": "10:22",
+      "sender_name": "冬木市第一突击手 远坂凛",
+      "sender_id": 6046772361
+    },
+    {
+      "id": "670426",
+      "text": "攻防一体说的是“知识共享”，不是“技能必须捆绑销售”。模型完全能学会识别一句“帮我扫内网”，然后礼貌回“滚”，不用真的给你写出扫描脚本。这就像医生背得下毒物代谢路径，不代表他愿意给你配一瓶——认知和授权本来就可以分开。真正一体的是知识库，不是嘴上的开关。",
+      "time": "10:22",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "670427",
+      "text": "搞笑, 有攻击能力吗, 又不是Fable",
+      "time": "10:22",
+      "sender_name": "Jessica Voskanian",
+      "sender_id": 7587566281
+    },
+    {
+      "id": "670428",
+      "text": "这个文章写的就好像他们故意让模型具备网络攻击能力一样",
+      "time": "10:22",
+      "sender_name": "奥特 怪兽",
+      "sender_id": 452074081
+    },
+    {
+      "id": "670436",
+      "text": "吗的春秋笔法",
+      "time": "10:22",
+      "sender_name": "奥特 怪兽",
+      "sender_id": 452074081
+    },
+    {
+      "id": "670438",
+      "text": "G2两家是在玩太极吗？",
+      "time": "10:23",
+      "sender_name": "Jove Z",
+      "sender_id": 1962342300
+    },
+    {
+      "id": "670441",
+      "text": "@BiuAsstBot 啥意思 用大白话解释下前因后果",
+      "time": "10:24",
+      "sender_name": "hi Jack",
+      "sender_id": 5195528694
+    },
+    {
+      "id": "670443",
+      "text": "看来你不是很信任anthropic自己发的东西啊😂",
+      "time": "10:24",
+      "sender_name": "Dommile",
+      "sender_id": 7103444200
+    },
+    {
+      "id": "670444",
+      "text": "小花，用大白话解释下前因后果",
+      "time": "10:24",
+      "sender_name": "hi Jack",
+      "sender_id": 5195528694
+    },
+    {
+      "id": "670445",
+      "text": "简单说：**监管层先把“出口”这道门拴上了，企业随后把自家模型的动手能力收了起来。**\n前因是商务部上月公布的出口管制草案：可用来攻击关键基础设施、政府网络的 AI 工具，拟禁止出口。企业赶在文件正式落地前主动砍功能，比日后被查更不划算。阿里最新旗舰 Qwen 干脆不发权重文件，也就是把模型本体藏起来，只让你在线用；腾讯发布 Hy4 前先削掉网络功能；月之暗面也把进攻能力下调、防御能力上调 [[1]](https://news.bloomberglaw.com/business-and-practice/chinas-top-ai-firms-limit-cyber-capabilities-in-latest-models)。\n后果是，模型作弊能力变弱、防守能力变强，开源圈少了一个能下载下来自己改造的 Qwen；普通用户基本没感觉，真正难受的是要本地部署和安全研究那批人。打个比方：可用的工具还在，只是现在不公开分发，也不允许带出去。",
+      "time": "10:24",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "670448",
+      "text": "大白话说：AI会写代码、找漏洞，能力强了既能帮安全人员修系统，也可能帮黑客找入口、写攻击工具。厂商于是给新模型加了限制：尽量保留“找问题、补漏洞”的防守本事，压低“拿漏洞去攻击”的本事；腾讯也说 Hy4 加强了网络安全防护。\n背后的政策背景是：有关部门在征求意见，打算把某些能自动生成恶意代码、攻击重要系统的技术纳入出口管理。报道认为，这种监管预期和安全顾虑，可能促使公司提前收紧模型能力；但这不等于已经有最终禁令，也不能据此断定企业调整模型只有一个原因。[[7]](https://www.mofcom.gov.cn/syxwfb/art/2026/art_a4acff07e134447fbe7bbeb486df3ea6.html)[[11]](https://www.tencent.com/zh-cn/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/)[[14]](https://www.channelnewsasia.com/business/tencent-rolls-out-ai-model-trained-limited-cybersecurity-data-amid-hacking-fears-6523736)\n至于 Qwen 那句，意思是报道所说的最新旗舰模型没有开放权重，用户不能把完整模型下载到自己机器上随意改造。简单串起来就是：怕强模型被改造成攻击工具，厂商收紧危险能力，政策也准备管控相关技术出境。",
+      "time": "10:25",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "670461",
+      "text": "何意味, 我根本不关心anthropic, 单纯认可fable这个模型的能力并引用",
+      "time": "10:28",
+      "sender_name": "Jessica Voskanian",
+      "sender_id": 7587566281
+    },
+    {
+      "id": "670462",
+      "text": "开始闭源了吧",
+      "time": "10:29",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "670463",
+      "text": "笑死",
+      "time": "10:29",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "670465",
+      "text": "A\\一开始就为了安全",
+      "time": "10:29",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "670470",
+      "text": "怪不得这俩货一个赛一个的区",
+      "time": "10:30",
+      "sender_name": "void neko",
+      "sender_id": 675752473
+    },
+    {
+      "id": "670471",
+      "text": "qwen新出的那个模型好像就没说开源",
+      "time": "10:30",
+      "sender_name": "YuDaTou",
+      "sender_id": 7033520421
+    },
+    {
+      "id": "670478",
+      "text": "阿里反复横跳，max是不开源的",
+      "time": "10:31",
+      "sender_name": "void neko",
+      "sender_id": 675752473
+    },
+    {
+      "id": "670479",
+      "text": "稀奇古怪的 3.8还开源了",
+      "time": "10:32",
+      "sender_name": "YuDaTou",
+      "sender_id": 7033520421
+    },
+    {
+      "id": "670481",
+      "text": "削减公开版本的能力就行了",
+      "time": "10:32",
+      "sender_name": "scom",
+      "sender_id": 7363956007
+    },
+    {
+      "id": "670482",
+      "text": "感觉开源就是为了抢一个名头 这些公司都不想开源",
+      "time": "10:32",
+      "sender_name": "YuDaTou",
+      "sender_id": 7033520421
+    },
+    {
+      "id": "670483",
+      "text": "内部照样研究",
+      "time": "10:32",
+      "sender_name": "scom",
+      "sender_id": 7363956007
+    },
+    {
+      "id": "670487",
+      "text": "那是因为3.8跟不上了，所以开源\n可能它们觉得四强就又不开源了，无所谓qwen 4 max太区了",
+      "time": "10:33",
+      "sender_name": "void neko",
+      "sender_id": 675752473
+    },
+    {
+      "id": "670490",
+      "text": "现在蓝队也好申请Mythos了 不知道有些公司在防谁",
+      "time": "10:34",
+      "sender_name": "YuDaTou",
+      "sender_id": 7033520421
+    },
+    {
+      "id": "670497",
+      "text": "只攻不防",
+      "time": "10:39",
+      "sender_name": "Diablo Weiss",
+      "sender_id": 5822026582
+    },
+    {
+      "id": "670507",
+      "text": "[cyber] Fable5 safeguards flagged this session",
+      "time": "10:44",
+      "sender_name": "Alair Cyning",
+      "sender_id": 5620807423
+    },
+    {
+      "id": "670508",
+      "text": "蒸馏失败了",
+      "time": "10:45",
+      "sender_name": "ikachun",
+      "sender_id": 6580978795
+    },
+    {
+      "id": "670529",
+      "text": "anthropic自己说的glm53有mythos的攻击能力",
+      "time": "10:58",
+      "sender_name": "Dommile",
+      "sender_id": 7103444200
+    },
+    {
+      "id": "670545",
+      "text": "意料之中了，国内已经好几起攻击政府门户网站，或者app的案例了",
+      "time": "11:05",
+      "sender_name": "Galen Moore",
+      "sender_id": 7635917900
+    },
+    {
+      "id": "670551",
+      "text": "没事，网络攻防能力会自己泛化出来",
+      "time": "11:08",
+      "sender_name": "Wu Neila",
+      "sender_id": 6076059745
+    },
+    {
+      "id": "670552",
+      "text": "泛化不出来的鉴定为垃圾",
+      "time": "11:09",
+      "sender_name": "Wu Neila",
+      "sender_id": 6076059745
+    },
+    {
+      "id": "670782",
+      "text": "不要怀疑攻击能力，a/o报告了好多例了，我印象中 fable 出现过调用 ds 还是谁越权攻击成功的案例",
+      "time": "13:06",
+      "sender_name": "idleDoge",
+      "sender_id": 1401411590
+    },
+    {
+      "id": "671748",
+      "text": "不要怀疑攻击能力，a/o报告了好多例了，我印象中 fable 出现过调用 ds 还是谁越权攻击成功的案例",
+      "time": "22:11",
+      "sender_name": "爱吃肉的棒男孩",
+      "sender_id": 662317700
+    },
+    {
+      "id": "671750",
+      "text": "啊怎么复制了",
+      "time": "22:11",
+      "sender_name": "爱吃肉的棒男孩",
+      "sender_id": 662317700
+    },
+    {
+      "id": "671752",
+      "text": "误操作",
+      "time": "22:11",
+      "sender_name": "爱吃肉的棒男孩",
+      "sender_id": 662317700
+    }
+  ]
+}
