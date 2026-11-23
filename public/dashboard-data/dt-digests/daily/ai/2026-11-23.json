@@ -1,0 +1,82 @@
+{
+  "kind": "ai",
+  "kind_label": "AI 日报",
+  "date": "2026-11-23",
+  "file": "20261123-AI日报.html",
+  "title": "🤖 AI 日报",
+  "hero_date": "2026年11月23日 · 星期一 · 3 个板块 · 4 条内容",
+  "source_url": "https://codew1028.github.io/dt/20261123-AI%E6%97%A5%E6%8A%A5.html",
+  "synced_at": "2026-11-23T00:30:30Z",
+  "original_item_count": 4,
+  "filtered_count": 0,
+  "filter_summary": [],
+  "item_count": 4,
+  "section_count": 3,
+  "sections": [
+    {
+      "title": "⚡ 精选快讯",
+      "count_label": "1 条",
+      "items": [
+        {
+          "title": "菲尔兹奖得主梅纳德谈 Claude 合作证明黎曼猜想：相信证明正确，但需被理解才可能获认可",
+          "source": "IT之家·人工智能",
+          "url": "https://www.ithome.com/1/030/677.htm",
+          "links": [
+            {
+              "href": "https://www.ithome.com/1/030/677.htm",
+              "label": "菲尔兹奖得主梅纳德谈 Claude 合作证明黎曼猜想：相信证明正确，但需被理解才可能获认可"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "行业动态",
+      "count_label": "1 条",
+      "items": [
+        {
+          "title": "MiniCPM 8B 成为老挝国家模型，端侧小模型加速落地多国",
+          "summary": "面壁智能转发并认同 @xiaoanlab 对 MiniCPM 端侧落地的观察：截至 2026 年 11 月 MiniCPM 下载量超过 7000 万，其 8B 老挝国家模型接入老挝政府 G-Chat v2 通讯软件，老挝翻译在国际基准上超过 GPT-4o。马来西亚用 VoxCPM2 做语音交互，肯尼亚一家银行在其上运行端侧风控 Agent，开发者基于它推出离线应用；小模型之争正从参数量转向谁真正嵌入日常系统。",
+          "source": "X 面壁智能 OpenBMB (@OpenBMB)",
+          "url": "https://x.com/OpenBMB/status/2124464239670964531",
+          "links": [
+            {
+              "href": "https://x.com/OpenBMB/status/2124464239670964531",
+              "label": "MiniCPM 8B 成为老挝国家模型，端侧小模型加速落地多国"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "技巧与观点",
+      "count_label": "2 条",
+      "items": [
+        {
+          "title": "OpenAI 提议以困惑度作为行业共享指标并公开内部预训练测量数据",
+          "summary": "OpenAI 撰文提议将 perplexity（交叉熵损失）确立为跨模型开发者比较和安全标准的共享指标，并公开其内部预训练测量数据。",
+          "source": "OpenAI 官网动态（RSS · 排除企业/客户案例）",
+          "url": "https://openai.com/index/perplexity-and-intelligence",
+          "links": [
+            {
+              "href": "https://openai.com/index/perplexity-and-intelligence",
+              "label": "OpenAI 提议以困惑度作为行业共享指标并公开内部预训练测量数据"
+            }
+          ]
+        },
+        {
+          "title": "用户实测用 MiniCPM5-2B 在 Mac 上本地跑通体检报告分析",
+          "summary": "用户@cxjwin 分享在 Mac（M4 Pro、48GB）上用 Homebrew 装 llama.cpp 跑 minicpm5-2b、colima 起 Docker 本地运行开源项目 Mirobody 的实测：14 页 PDF 首次处理漏掉 3 页扫描版化验单，截图单独上传后 58 行化验数值逐项与原件对上，其中 20 行成功映射到 LOINC 标准编码，肌酐因名称歧义留空未猜。问超标指标时 2B 模型走 11 步找到全部 5 项箭头指标，但把一项在范围内的血糖误判为超标。接 Claude Code 时改用演示账号避免数据上传。Mirobody 由 Theta Health 以 Apache-2.0 开源，网页版和微信小程序也基于它。",
+          "source": "X 面壁智能 OpenBMB (@OpenBMB)",
+          "url": "https://x.com/OpenBMB/status/2124461770043785636",
+          "links": [
+            {
+              "href": "https://x.com/OpenBMB/status/2124461770043785636",
+              "label": "用户实测用 MiniCPM5-2B 在 Mac 上本地跑通体检报告分析"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
