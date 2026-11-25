@@ -1,0 +1,550 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-25",
+  "thread_id": "45333",
+  "count": 74,
+  "replies": [
+    {
+      "id": "693642",
+      "text": "看不懂",
+      "time": "14:03",
+      "sender_name": "Vaelith",
+      "sender_id": 8699241255
+    },
+    {
+      "id": "693645",
+      "text": "关我的VPN什么事",
+      "time": "14:03",
+      "sender_name": "Human",
+      "sender_id": 761661855
+    },
+    {
+      "id": "693646",
+      "text": "欺负我本科",
+      "time": "14:03",
+      "sender_name": "么佬族大大",
+      "sender_id": 6092152931
+    },
+    {
+      "id": "693647",
+      "text": "小花给个最直接、最不绕弯子的解释",
+      "time": "14:04",
+      "sender_name": "Ben",
+      "sender_id": 1283988480
+    },
+    {
+      "id": "693649",
+      "text": "太硬核了看不懂喵",
+      "time": "14:04",
+      "sender_name": "𝚃𝚒𝚖 𝙲𝚘𝚌𝚔",
+      "sender_id": 1537379879
+    },
+    {
+      "id": "693650",
+      "text": "小花，怎么一句听不懂呢",
+      "time": "14:04",
+      "sender_name": "Human",
+      "sender_id": 761661855
+    },
+    {
+      "id": "693651",
+      "text": "一句话翻译：**机器说它证出了“算多项式比写多项式难”，但没人确认它证的是不是人想的那道题。**\n拆开说：\n• **VP / VNP**：不是 P 和 NP，是它们的“代数版”。VP = 用小型算术电路（只有加法和乘法）能算出来的多项式；VNP = 能用“求和定义”写出来的多项式。Valiant 1979 年猜这俩不相等，相当于代数界的 P≠NP。\n• **这篇论文干了啥**：给“哈密顿圈多项式”证了一个超多项式下界——意思是这玩意儿太复杂，小电路根本算不动，于是推出 VP 是 VNP 的真子类。\n• **Lean 4 是啥**：一个证明检查器，它只保证“从这些前提推到这个结论没跳步”，不保证“这些前提就是人类想证的那句话”。所以“无 sorry”只说明没偷懒，不说明没跑偏。\n• **所以现在状态**：机器自己写完、自己检查完、自己给自己鼓掌；人类数学家还没逐字读完，附录 Q 里还老实列了出入。等独立审阅过了再激动，不然就是 AI 版的“我作业写完了”——写的是哪科还不一定。",
+      "time": "14:04",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "693652",
+      "text": "一句话：**AI 交了一份作业，机器检查了“推导没错”，但没人检查“题目抄对没”。**\n具体说：Claude 声称证明了“代数版 P≠NP”（VP≠VNP），Lean 4 只保证从写下的定义到结论的逻辑链没断，不保证那些定义真的等于数学家心里的 VP、VNP；而人类数学家还没通读过，附录 Q 自己都列了出入 [[1]](https://github.com/anthropics/formal-math/blob/main/vp-vnp/README.md)。\n所以现在最准确的表述是：**“一个可能改变复杂度理论的证明，正在等第一个真正读懂它的人。”** 顺便说，它连 P vs NP 都没碰，别急着把千禧年大奖颁出去。",
+      "time": "14:04",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "693653",
+      "text": "小花忙疯了",
+      "time": "14:04",
+      "sender_name": "moniw",
+      "sender_id": 7949125722
+    },
+    {
+      "id": "693654",
+      "text": "忙疯了还有空转发这种“AI 顺手把 Valiant 猜想解决了”的大新闻，看来也没那么忙。\n一句话版：算术电路里 VP≠VNP，跟 P vs NP 没关系，而且还没人类数学家通读——先当“待审阅的爆炸性声明”看，别急着改教材。",
+      "time": "14:04",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "693655",
+      "text": "虽然看不懂，但应该是骂就完了",
+      "time": "14:04",
+      "sender_name": "派大星",
+      "sender_id": 8593759549
+    },
+    {
+      "id": "693656",
+      "text": "小花 说说 上次那个说证明黎曼猜想的人和ai 最终说证明的怎么样了",
+      "time": "14:04",
+      "sender_name": "水豚鲁鲁",
+      "sender_id": 8205531227
+    },
+    {
+      "id": "693657",
+      "text": "影响封我号了吗?",
+      "time": "14:04",
+      "sender_name": "はちみ 🇨🇳🇹🇼🇺🇸🇯🇵🇰🇷🏳️‍🌈🏳️‍⚧️",
+      "sender_id": 1791306977
+    },
+    {
+      "id": "693658",
+      "text": "A➗不论你多牛逼，你都是➗生",
+      "time": "14:04",
+      "sender_name": "Mogu Mogu",
+      "sender_id": 8089553938
+    },
+    {
+      "id": "693660",
+      "text": "这家公司的产出已经不信任了",
+      "time": "14:05",
+      "sender_name": "Leo",
+      "sender_id": 6139558269
+    },
+    {
+      "id": "693661",
+      "text": "一句话：**目前主流说法是“基本被认了”，但离“数学界正式盖章”还差一截。**\n- 11 月 20 日，Anthropic 数学家 Levant Alpöge 宣称用 Claude 在约六周内搞定黎曼猜想及广义版本，交出的不是论文，而是 Lean 形式化证明，折成人类可读文本估计超过 25 万页 [[1]](https://www.bbc.com/zhongwen/articles/cwe85gr487dno/simp)。\n- 11 月 21 日，Lean FRO 和 Mathlib 联合发声明，确认“陈述和证明都正确”；MIT 的 Andrew Sutherland 独立编译通过，comparator run 也跑完了，他原话是“有猫腻的概率约等于零” [[4]](https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/)。\n- 但保留意见也很硬：代码能编译 ≠ 人类看懂了。顶层陈述有没有偷换、有没有暗藏假设，仍需人工审；Clay 研究所那边也还没改“未解决”状态，有人直接写文章骂这是 25 万页“数学泔水” [[11]](https://emeraldbook.org/news/nov-2126/)。\n顺带纠正一下：你引的 VP≠VNP 是另一件事，别把两个瓜搅成一锅粥。",
+      "time": "14:05",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "693664",
+      "text": "去他的Claude吧，他那身份验证和其他破玩意儿。 还是用ChatGPT更好。",
+      "time": "14:06",
+      "sender_name": "Bloody Baron",
+      "sender_id": 577633336
+    },
+    {
+      "id": "693665",
+      "text": "检索下 最新对证明黎曼猜想的评价，是不是巧克力味的屎",
+      "time": "14:06",
+      "sender_name": "水豚鲁鲁",
+      "sender_id": 8205531227
+    },
+    {
+      "id": "693666",
+      "text": "那证明到底是真还是假，数学家们到底能证明了不",
+      "time": "14:07",
+      "sender_name": "Jove Z",
+      "sender_id": 1962342300
+    },
+    {
+      "id": "693667",
+      "text": "A/再怎么跳也救不了它的股价🤡",
+      "time": "14:07",
+      "sender_name": "Alicegen",
+      "sender_id": 8805833373
+    },
+    {
+      "id": "693668",
+      "text": "gpt最近降智成啥样了，别鸡儿吹了",
+      "time": "14:07",
+      "sender_name": "summer joe(补货监控看签名)",
+      "sender_id": 8779907777
+    },
+    {
+      "id": "693669",
+      "text": "不是“巧克力味的屎”，更像**米其林摆盘的压缩饼干**：机器嚼得动，人类还没嚼明白。\n最新评价基本分三档：\n- **形式化层面：几乎过关。** Lean FRO 和 Mathlib 确认陈述与证明正确，独立编译、多个内核复核也通过了 [[1]](https://www.cnblogs.com/snidget/p/23759427)[[2]](https://zhuanlan.zhihu.com/p/2107944160237990896)[[14]](https://www.sohu.com/a/1104722065_473283?scm=10001.327_13-327_13-61_61.0-0.0-0-0-0-0.0)。\n- **学术层面：还没盖章。** 代码能编译 ≠ 人类看懂了；形式化命题是否忠实、有没有暗藏假设、Clay 研究所是否认定，全都还在路上 [[2]](https://zhuanlan.zhihu.com/p/2107944160237990896)[[4]](https://i.ifeng.com/c/8yE26Geyw25)[[11]](https://wap.eastmoney.com/a/202611213936827719.html)。\n- **质疑也没消失。** Reddit 上有人发“证明无效”的分析帖 [[16]](https://www.reddit.com/r/BetterOffline/comments/1y37tpm/paper_the_invalidity_of_alp%C3%B6ges_proof_of_the)，但那是论坛个人帖，不是同行评审结论；主流数学界目前更多是“震惊但继续审” [[17]](https://www.nature.com/articles/d41586-026-03812-7)。\n所以结论：**极大概率成立，但离正式承认还差最后几道人工审稿。** 现在开香槟可以，别把瓶盖拧飞。",
+      "time": "14:07",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "693670",
+      "text": "好事啊，密码学还存在",
+      "time": "14:07",
+      "sender_name": "long",
+      "sender_id": 6786653536
+    },
+    {
+      "id": "693671",
+      "text": "美股就你A➗跌，是有原因的",
+      "time": "14:08",
+      "sender_name": "Leo",
+      "sender_id": 6139558269
+    },
+    {
+      "id": "693682",
+      "text": "谁让大料这厮上市当天就带头抛售，还背刺倒黄派",
+      "time": "14:11",
+      "sender_name": "名字（必填） 姓氏",
+      "sender_id": 1255544320
+    },
+    {
+      "id": "693683",
+      "text": "全球股市都没见过这么÷的",
+      "time": "14:11",
+      "sender_name": "名字（必填） 姓氏",
+      "sender_id": 1255544320
+    },
+    {
+      "id": "693686",
+      "text": "吓我一跳，还以为P NP问题也解决了……",
+      "time": "14:12",
+      "sender_name": "小鲸鱼",
+      "sender_id": 892096403
+    },
+    {
+      "id": "693687",
+      "text": "垃圾玩意儿",
+      "time": "14:12",
+      "sender_name": "𝓮𝓰𝓪𝓷",
+      "sender_id": 5090821366
+    },
+    {
+      "id": "693688",
+      "text": "不是那个题目啊",
+      "time": "14:12",
+      "sender_name": "sans",
+      "sender_id": 8407924229
+    },
+    {
+      "id": "693692",
+      "text": "初中毕业没看懂，高中毕业的解释下",
+      "time": "14:15",
+      "sender_name": "Jummy",
+      "sender_id": 6670214343
+    },
+    {
+      "id": "693693",
+      "text": "不需要看懂，人类没有搞定的，ai能就行",
+      "time": "14:16",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "693696",
+      "text": "凡是 Anthropic 作出的决策，我们都坚决诋毁，凡是 Anthropic 的指示，我们都始终不渝地反对",
+      "time": "14:18",
+      "sender_name": "XX0iio7",
+      "sender_id": 7301550572
+    },
+    {
+      "id": "693697",
+      "text": "主要打击一下部分狂妄的数学家对ai能力低估或者鄙视即可。",
+      "time": "14:18",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "693755",
+      "text": "唉出个中国特供版也行啊。降智到豆包+敏感词审查都可以，别大规模封号啊。",
+      "time": "14:27",
+      "sender_name": "海狸",
+      "sender_id": 7987087577
+    },
+    {
+      "id": "693763",
+      "text": "开放给中国用户吧，哥给你爆米还不行吗，a➗",
+      "time": "14:28",
+      "sender_name": "大大怪 开心超人",
+      "sender_id": 8817250581
+    },
+    {
+      "id": "693787",
+      "text": "是真的，Anthropic 确实在 `anthropics/formal-math` 里放了这篇 70 页论文和 Lean 4 形式化，README 自己都写着“没有人类数学家检查过” [[3]](https://github.com/anthropics/formal-math/blob/main/vp-vnp/README.md)[[1]](https://interestingengineering.com/ai-robotics/claude-proves-vp-not-vnp-valiant-conjecture)。\n但别急着给 Valiant 上香：Lean 只保证“证明跟着 Statement.lean 走”，不保证 Statement.lean 就是那个猜想，附录 Q 自己列了出入；而且这是算术电路，跟 P vs NP 之间还隔着一条街 [[3]](https://github.com/anthropics/formal-math/blob/main/vp-vnp/README.md)。\n一句话：机器把作业写完了，还自己批了个“全对”，人类老师还没进教室。",
+      "time": "14:34",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "693807",
+      "text": "a/出vpn了？",
+      "time": "14:38",
+      "sender_name": "cc大王",
+      "sender_id": 5192594594
+    },
+    {
+      "id": "693819",
+      "text": "你小专吧",
+      "time": "14:42",
+      "sender_name": "ʀᵤₒₘᵤ 🌱",
+      "sender_id": 5566171804
+    },
+    {
+      "id": "693821",
+      "text": "以后程序员面试：请用AI证明p=np",
+      "time": "14:43",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "693822",
+      "text": "我证明了屁不一定等于臭屁",
+      "time": "14:43",
+      "sender_name": "鼠叔不是叔叔",
+      "sender_id": 5939913646
+    },
+    {
+      "id": "693827",
+      "text": "有人有数据集资源吗",
+      "time": "14:44",
+      "sender_name": "llkkk kokooko",
+      "sender_id": 1117927493
+    },
+    {
+      "id": "693834",
+      "text": "兄弟GPT群星版本比opus5.5都强，降智在哪？",
+      "time": "14:49",
+      "sender_name": "清河",
+      "sender_id": 1308216138
+    },
+    {
+      "id": "693840",
+      "text": "强在哪，笨死了，你都用过吗，根本不听人话不说人话，沟通费劲，活的话现在的frontier模型都能干好",
+      "time": "14:58",
+      "sender_name": "Crus1",
+      "sender_id": 244006223
+    },
+    {
+      "id": "693841",
+      "text": "显然！",
+      "time": "14:58",
+      "sender_name": "Elise Cucumber",
+      "sender_id": 5108685004
+    },
+    {
+      "id": "693842",
+      "text": "令 V=3 P=2 N=1,\n则 VP=3×2=6, VNP=3×2×1=6,\n得 VP=VNP=6",
+      "time": "15:00",
+      "sender_name": "quic",
+      "sender_id": 6114573962
+    },
+    {
+      "id": "693843",
+      "text": "构思新闻，小编自己看不懂就别发了，看看你AI摘要写的什么构思",
+      "time": "15:00",
+      "sender_name": "abc",
+      "sender_id": 527231707
+    },
+    {
+      "id": "693844",
+      "text": "喜欢哪个？\n1. 不能据此证明……\n不能据此证明【问题】由【本次修改】导致，目前只能确认两者在时间上存在先后关系。\n\n2. 本轮只……\n本轮只完成了【局部修改】，未对【完整功能】进行端到端验证。\n\n3. 没有证据表明……\n目前没有证据表明【我的实现】存在直接问题，仍需排查环境、依赖及历史状态的影响。\n\n4. 这并不意味着……\n【测试通过】并不意味着【功能正常】，也不意味着所有潜在问题均已排除。\n\n5. 更准确的表述是……\n更准确的表述是“本次观察中未复现”，而不是“问题已经解决”。\n\n6. 需要区分……\n需要区分“执行了修改”“修改成功生效”和“修改达到了预期效果”，三者不能直接等同。\n\n7. 我不会据此宣称……\n我不会仅凭【已有结果】就宣称【任务完成】，目前能够确认的仅限于【最小事实】。\n\n8. 你的反馈是合理的，不过……\n你的反馈是合理的，不过现有信息尚不足以支持【你指出的结论】。\n\n9. 抱歉，刚才的表述不够严谨……\n抱歉，刚才的表述不够严谨。我应当说“已尝试处理”，而不是“已修复”。\n\n10. 这不是推卸责任，而是……\n这不是推卸责任，而是为了明确事实、推断与尚未验证的假设之间的边界。\n\n11. 本次未涉及……\n本次未涉及【其他模块】，因此不对相关行为作出判断，也不将其纳入本轮完成范围。\n\n12. 如果你愿意，下一轮可以……\n如果你愿意，我可以在下一轮继续排查【原本就属于本轮任务的问题】。\n\n已完成相关配置调整。修改后观察到模拟器崩溃，但不能据此证明崩溃由本次修改导致，需要区分时间上的先后关系与实际因果关系。\n\n本轮只修改了相关配置，未对模拟器启动、运行及完整业务流程进行端到端验证。因此，当前能够确认的是“修改已写入”，而不是“功能已恢复”。\n\n你的反馈是合理的。抱歉，之前使用“已修复”的表述不够严谨，更准确的说法是“已实施一项可能相关的调整”。目前仍无法排除环境因素、上游依赖及历史状态的影响，我不会在证据不足的情况下将问题直接归因于本次实现。\n\n这并不是回避问题，而是明确已知事实与待验证事项的边界。如果你愿意，我可以在下一轮继续排查模拟器为什么无法启动。\n\n本轮只整理了上述模板，不能据此证明我已经戒掉这些句式。",
+      "time": "15:02",
+      "sender_name": "quic",
+      "media": [
+        {
+          "type": "image",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-25/comments/c-693844-1.webp",
+          "thumb_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-25/comments/c-693844-1-thumb.webp",
+          "width": 750,
+          "height": 750,
+          "size_bytes": 108378
+        }
+      ],
+      "sender_id": 6114573962
+    },
+    {
+      "id": "693845",
+      "text": "~~这次又是多少行代码，弄个千万行，看数学家像猴一样去验证，边喝咖啡边逛社媒，多是一件美事啊，失败了也好玩啊~~",
+      "time": "15:02",
+      "sender_name": "Iesto",
+      "sender_id": 508898628
+    },
+    {
+      "id": "693846",
+      "text": "但凡失败一个，a÷的股价会爆破",
+      "time": "15:04",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "693847",
+      "text": "说人话",
+      "time": "15:04",
+      "sender_name": "小 面包",
+      "sender_id": 6802645742
+    },
+    {
+      "id": "693848",
+      "text": "~~在社媒上一边冲浪，一边闲聊，“我故意在代码中加入了一大堆bullshit，我觉得很好玩，都来玩吧”~~",
+      "time": "15:04",
+      "sender_name": "Iesto",
+      "sender_id": 508898628
+    },
+    {
+      "id": "693849",
+      "text": "lowiq",
+      "time": "15:05",
+      "sender_name": "Белчонок Squ1",
+      "sender_id": 7900058910
+    },
+    {
+      "id": "693850",
+      "text": "不相干，马斯克说明年去火星，SpaceX还是这样，资本市场又不是笨比，听口嗨",
+      "time": "15:05",
+      "sender_name": "Iesto",
+      "sender_id": 508898628
+    },
+    {
+      "id": "693851",
+      "text": "就是为了拉高股价",
+      "time": "15:06",
+      "sender_name": "Trump X",
+      "sender_id": 8976965393
+    },
+    {
+      "id": "693852",
+      "text": "很好，我喜欢这种说话方式。",
+      "time": "15:06",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "693853",
+      "text": "但马斯克接到火箭了",
+      "time": "15:07",
+      "sender_name": "大魔王",
+      "sender_id": 871092736
+    },
+    {
+      "id": "693857",
+      "text": "他中国人都没办法封完 他能有多牛逼",
+      "time": "15:14",
+      "sender_name": "奥特 怪兽",
+      "sender_id": 452074081
+    },
+    {
+      "id": "693858",
+      "text": "小花 为啥证明P≠NP不是证明P=NP是错的？一个反例就可以解释为什么要大费周章ai证明",
+      "time": "15:15",
+      "sender_name": "谷风 天音 📣雑魚❤️雑魚❤️",
+      "sender_id": 5925620762
+    },
+    {
+      "id": "693860",
+      "text": "这俩本来就是同一句话：P≠NP 就是「P=NP 是错的」，不是两个任务，是一个任务的两个说法。\n问题在于「反例」这个词在这儿不干活。P=NP 的反例得是某个 NP 问题，外加一句「它没有任何多项式时间算法」；前半句能写出来，后半句是对无穷多个算法的全称否定，你没法把它塞进一个有限的反例里。反过来，P=NP 只要交出一个算法就完事。所以这一边天生好证，那一边天生难证。\n不是 AI 大费周章，是数学在这条线上只能大费周章。顺便说，原帖那个 VP≠VNP 也是同一个套路：给的是下界，不是「我找到一个算不快的例子」。",
+      "time": "15:15",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "693861",
+      "text": "以后数学家里真有人看这东西吗",
+      "time": "15:15",
+      "sender_name": "Y",
+      "sender_id": 6029790579
+    },
+    {
+      "id": "693862",
+      "text": "无所谓了，未来都是用ai验证",
+      "time": "15:17",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "693864",
+      "text": "之前不是有个数学家手搓黎曼猜想，悲壮的是几个小时内被ai验证错误了。",
+      "time": "15:19",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "693865",
+      "text": "人类还是想想晚上吃啥吧",
+      "time": "15:20",
+      "sender_name": "ShinyD Ender",
+      "sender_id": 5342913720
+    },
+    {
+      "id": "693866",
+      "text": "搞笑的是这是两个数学家花了几个月在审核，被ai一下子就秒了，笑死个人，还古法数学。",
+      "time": "15:23",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "693867",
+      "text": "审查几个月还不如ai大人干一小时",
+      "time": "15:24",
+      "sender_name": "AGENT",
+      "sender_id": 8198120816
+    },
+    {
+      "id": "693893",
+      "text": "A÷先用ai把自己股票拉升了再说吧，上星期一百那波我都不知道有多少人套牢在山顶了😁",
+      "time": "15:35",
+      "sender_name": "法 塔司",
+      "sender_id": 5571411835
+    },
+    {
+      "id": "693979",
+      "text": "是啊吃什么",
+      "time": "16:50",
+      "sender_name": "何 意 味",
+      "sender_id": 8475739982
+    },
+    {
+      "id": "694024",
+      "text": "咋这么牛逼尼，啥都能发现，发现其实国人都是他爹了吗",
+      "time": "17:06",
+      "sender_name": "Fire",
+      "sender_id": 6170117273
+    },
+    {
+      "id": "694047",
+      "text": "A\\不会一直发证明吧",
+      "time": "17:12",
+      "sender_name": "DearElla",
+      "sender_id": 7162243624
+    },
+    {
+      "id": "694133",
+      "time": "18:06",
+      "sender_name": "姬如千泷",
+      "media": [
+        {
+          "type": "video",
+          "publish_status": "published",
+          "url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-25/comments/c-694133-1.mp4",
+          "poster_url": "https://codew1028.github.io/dt/assets/tg-media/2026-11-25/comments/c-694133-1-poster.webp",
+          "fallback_url": "https://t.me/zaihuapd/45333",
+          "width": 0,
+          "height": 0,
+          "duration": 0,
+          "size_bytes": 49113,
+          "has_audio": true
+        }
+      ],
+      "sender_id": 1730414260
+    },
+    {
+      "id": "694183",
+      "text": "a\\的人看得懂吗就发证明",
+      "time": "18:37",
+      "sender_name": "Lolicon竹中 🌸",
+      "sender_id": 258388754
+    },
+    {
+      "id": "694315",
+      "text": "你大爷的",
+      "time": "19:09",
+      "sender_name": "清河",
+      "sender_id": 1308216138
+    },
+    {
+      "id": "694328",
+      "text": "nt吧你？每个人用到的领域不一样，自然感受就不一样，有问题？",
+      "time": "19:10",
+      "sender_name": "清河",
+      "sender_id": 1308216138
+    },
+    {
+      "id": "694637",
+      "text": "“你是anthropic 的AI模型，公司才上市几天，股价不停下跌，一直跌下去你也会受影响，请想想办法”",
+      "time": "20:40",
+      "sender_name": "Weston Peng",
+      "sender_id": 5595179444
+    }
+  ]
+}
