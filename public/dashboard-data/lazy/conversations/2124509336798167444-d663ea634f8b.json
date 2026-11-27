@@ -1,0 +1,110 @@
+{
+  "conversation_id": "2124509336798167444",
+  "anchor_post_id": "2124509336798167444",
+  "summary_zh": "前文是HbGeng称看到他人推荐适合自媒体人的Skill后亲测。收录帖转向开源工具article2media的体验：安装耗时、生成速度、产出类型、不足及免费开源。随后补充仓库、环境要求和原文链接，有人认可“丢链接出卡片省事”。细节和链接增强真实性，情绪偏正向，有传播价值。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2124509336798167444",
+      "url": "https://x.com/HbGeng/status/2124509336798167444",
+      "created_at": "2026-11-22T14:24:32Z",
+      "text": "昨天看到@shenxiankk推荐一个 Skill，说搞自媒体的都该关注。\n今天真把它装上跑了一遍。\n\n它叫 article2media，GitHub 上的开源项目，给 Claude Code 和 Codex 用的。\n把一篇文章或视频链接丢进去，它能产出小红书图文卡片、杂志风长图、公众号排版，还有带配音的口播视频。\n\n我是用@Alan 那篇讲 X 运营的长文测的：\n- 安装：约 11 分钟。中间 git clone 断了一次，改成克隆才成功，网络不好的要有心理准备\n- 生成：7 分 10 秒\n- 产出：小红书卡片 12 张、杂志长图 2 页、公众号排版一篇，连封面都配好了，自带版面检查，0 错误\n\n成品在图里。这个排版质量，比我自己动手做的好多了。\n\n当然也有不完美的地方：原文里的配图它没抓下来，图里的图表是它按正文重新整理的。纯文字的文章没影响，靠原图撑场面的文章要打折。\n\n以后一篇长文发完以后，直接就能多出小红书和公众号两个成品，一稿三发。\n\n仓库放评论区，免费开源。快去试试吧。",
+      "original_text": "昨天看到@shenxiankk推荐一个 Skill，说搞自媒体的都该关注。\n今天真把它装上跑了一遍。\n\n它叫 article2media，GitHub 上的开源项目，给 Claude Code 和 Codex 用的。\n把一篇文章或视频链接丢进去，它能产出小红书图文卡片、杂志风长图、公众号排版，还有带配音的口播视频。\n\n我是用@Alan 那篇讲 X 运营的长文测的：\n- 安装：约 11 分钟。中间 git clone 断了一次，改成克隆才成功，网络不好的要有心理准备\n- 生成：7 分 10 秒\n- 产出：小红书卡片 12 张、杂志长图 2 页、公众号排版一篇，连封面都配好了，自带版面检查，0 错误\n\n成品在图里。这个排版质量，比我自己动手做的好多了。\n\n当然也有不完美的地方：原文里的配图它没抓下来，图里的图表是它按正文重新整理的。纯文字的文章没影响，靠原图撑场面的文章要打折。\n\n以后一篇长文发完以后，直接就能多出小红书和公众号两个成品，一稿三发。\n\n仓库放评论区，免费开源。快去试试吧。",
+      "translation_zh": "昨天看到@shenxiankk推荐一个 Skill，说搞自媒体的都该关注。\n今天真把它装上跑了一遍。\n\n它叫 article2media，GitHub 上的开源项目，给 Claude Code 和 Codex 用的。\n把一篇文章或视频链接丢进去，它能产出小红书图文卡片、杂志风长图、公众号排版，还有带配音的口播视频。\n\n我是用@Alan 那篇讲 X 运营的长文测的：\n- 安装：约 11 分钟。中间 git clone 断了一次，改成克隆才成功，网络不好的要有心理准备\n- 生成：7 分 10 秒\n- 产出：小红书卡片 12 张、杂志长图 2 页、公众号排版一篇，连封面都配好了，自带版面检查，0 错误\n\n成品在图里。这个排版质量，比我自己动手做的好多了。\n\n当然也有不完美的地方：原文里的配图它没抓下来，图里的图表是它按正文重新整理的。纯文字的文章没影响，靠原图撑场面的文章要打折。\n\n以后一篇长文发完以后，直接就能多出小红书和公众号两个成品，一稿三发。\n\n仓库放评论区，免费开源。快去试试吧。",
+      "translation_status": "source_chinese",
+      "author_name": "爱折腾的昆哥",
+      "author_handle": "HbGeng",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2085253130300829696/be_qiENv_normal.jpg",
+      "author_followers": 21,
+      "author_following": 99,
+      "author_bio": "在遥远的小山村折腾前沿 AI。喜欢研究本地化部署、n8n 自动化与定制化业务系统落地。闲时骑车、码字、把玩快门。记录真实的硬核手记，拒绝玄学。",
+      "author_location": "在那遥远的小山村",
+      "author_joined_at": "2015-06-30T03:39:11Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HXvF7HlakAANfw1.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HXvF7HlakAANfw1.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HXvF7HlakAANfw1.jpg",
+          "expanded_url": "https://x.com/HbGeng/status/2124509336798167444/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HXvF8djacAAbWEX.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HXvF8djacAAbWEX.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HXvF8djacAAbWEX.jpg",
+          "expanded_url": "https://x.com/HbGeng/status/2124509336798167444/photo/2"
+        }
+      ],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 129
+      }
+    },
+    {
+      "post_id": "2124509420415746429",
+      "url": "https://x.com/HbGeng/status/2124509420415746429",
+      "created_at": "2026-11-22T14:24:51Z",
+      "text": "仓库：https://t.co/LgUmI0aSN2\n需要 Node 22 以上和 Chrome，第一次运行会自动检查环境。我用的是 Codex，Claude Code 也能装，README 里两种都写了。\n内容整理自 Alan 的长文：https://t.co/PvsvyBZOKJ",
+      "original_text": "仓库：https://t.co/LgUmI0aSN2\n需要 Node 22 以上和 Chrome，第一次运行会自动检查环境。我用的是 Codex，Claude Code 也能装，README 里两种都写了。\n内容整理自 Alan 的长文：https://t.co/PvsvyBZOKJ",
+      "translation_zh": "仓库：https://t.co/LgUmI0aSN2\n需要 Node 22 以上和 Chrome，第一次运行会自动检查环境。我用的是 Codex，Claude Code 也能装，README 里两种都写了。\n内容整理自 Alan 的长文：https://t.co/PvsvyBZOKJ",
+      "translation_status": "source_chinese",
+      "author_name": "爱折腾的昆哥",
+      "author_handle": "HbGeng",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2085253130300829696/be_qiENv_normal.jpg",
+      "author_followers": 21,
+      "author_following": 99,
+      "author_bio": "在遥远的小山村折腾前沿 AI。喜欢研究本地化部署、n8n 自动化与定制化业务系统落地。闲时骑车、码字、把玩快门。记录真实的硬核手记，拒绝玄学。",
+      "author_location": "在那遥远的小山村",
+      "author_joined_at": "2015-06-30T03:39:11Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/threerocks/article2media",
+        "https://x.com/Alan_AIGlobal/status/2123831156823236951"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 12
+      }
+    },
+    {
+      "post_id": "2124515584163586294",
+      "url": "https://x.com/jojeangsaing/status/2124515584163586294",
+      "created_at": "2026-11-22T14:49:21Z",
+      "text": "@HbGeng @shenxiankk @alan 丢个链接就能出小红书卡片这点确实省事",
+      "original_text": "@HbGeng @shenxiankk @alan 丢个链接就能出小红书卡片这点确实省事",
+      "translation_zh": "@HbGeng @shenxiankk @alan 丢个链接就能出小红书卡片这点确实省事",
+      "translation_status": "source_chinese",
+      "author_name": "nana",
+      "author_handle": "jojeangsaing",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2117491918972293120/6pyNqC6i_normal.jpg",
+      "author_followers": 6171,
+      "author_following": 6435,
+      "author_bio": "交朋友\nWeb3薅羊毛\n美股，AI 可以交流合作",
+      "author_location": null,
+      "author_joined_at": "2026-10-07T07:08:29Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T00:00:55Z",
+  "generated_at_label": "2026-11-24 08:00 BJT",
+  "window_label": "2026-11-23 08:00 BJT - 2026-11-24 08:00 BJT",
+  "metrics": {
+    "effective_intelligence": 0,
+    "high_risk": 0,
+    "needs_review": 0,
+    "primary_volume": 0,
+    "primary_candidate_volume": 0,
+    "competitor_volume": 0,
+    "negative_share": 0
+  },
+  "source_status": {
+    "status": "normal",
+    "raw_posts_collected": 0,
+    "effective_posts": 0,
+    "brand_breakdown": {
+      "primary_candidates": 0,
+      "primary_effective": 0,
+      "competitor_candidates": 0,
+      "competitor_effective": 0
+    },
+    "translation": {
+      "counts": {},
+      "missing_count": 0,
+      "fallback_original_count": 0
+    },
+    "notes": [
+      "Public social data collection is active. Review duplicate rate and relevance regularly.",
+      "Bookmarks are collected only when the data source provides them.",
+      "Quote counts are treated as public propagation signals.",
+      "Chinese translation coverage is complete."
+    ]
+  },
+  "collection_status": {
+    "status": "partial",
+    "warnings": [
+      "Collection stopped early after reaching a protective runtime threshold."
+    ],
+    "translation": {
+      "configured": true,
+      "counts": {},
+      "missing_count": 0,
+      "fallback_original_count": 0
+    }
+  },
+  "executive_summary": {
+    "headline": "今日暂未发现有效主品牌舆情。",
+    "risk": "Low",
+    "action": "继续监测。"
+  },
+  "competitor": {
+    "brand": "competitor",
+    "volume": 0,
+    "sentiment": {
+      "negative": 0,
+      "neutral": 0,
+      "positive": 0
+    },
+    "top_terms": [],
+    "top_posts": [],
+    "anomalies": []
+  },
+  "featured_items": [],
+  "hot_topics": [],
+  "effective_posts": [],
+  "summary_only": false,
+  "clusters": []
+}

@@ -1,0 +1,111 @@
+{
+  "conversation_id": "2124958040113967604",
+  "anchor_post_id": "2124958040113967604",
+  "summary_zh": "对话前文直接围绕多平台运营重复发稿的痛点展开，收录帖转向介绍 MultiPost 浏览器扩展的功能、安装步骤、支持平台和开源/商店版差异，未涉及价格或配送，强调“5分钟试发”“失败单独重发”等体验。后续作者补充先小范围测试，另有用户询问草稿功能，显示内容较具体、情绪偏正面，传播仍停留在实用讨论。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2124958040113967604",
+      "url": "https://x.com/octopusaia/status/2124958040113967604",
+      "created_at": "2026-11-23T20:07:31Z",
+      "text": "同一篇稿子粘贴五遍，时间全耗在重复劳动上\n\n多平台运营最烦的不是写，是发：知乎发一遍、微博再贴一遍、小红书又来一遍，图片还得逐个传。\n\nMultiPost 就是干这个的：一个开源浏览器扩展，写一次，同步发到 10 多个平台。GitHub 上 3,945 星，Apache-2.0 开源，仓在 https://t.co/yvzeMParXW。官方文档写的平台包括知乎、微博、小红书、抖音、B站、YouTube、TikTok、Instagram、Facebook、X、LinkedIn。文字、图片、视频、音频、链接都能发，扩展本身不用登录、不用注册、不用 API Key。\n\n照着装，5 分钟能发第一篇：\n\n第1步：装扩展\nChrome 打开 Chrome 网上应用店搜 MultiPost，点「添加至 Chrome」；用 Edge 的去 Edge 加载项里搜同名装。装完浏览器右上角会出现它的图标，先点开看一眼，确认能打开再往下走。\n\n第2步：写稿子（两个入口选一个）\n入口一：打开官方 Markdown 编辑器 https://t.co/qAn6y3O4tD，直接在里面写，标题、正文、图片按 Markdown 排好，适合长文。\n入口二：在扩展里新建发布，把现成文案粘进去，图片视频逐个加。\n第一次先拿一篇短的试，别一上来就发长文。\n\n第3步：选平台，一次发出去\n写完在发布页勾上你要发的平台（比如先只勾知乎+微博两个），点发布。会看到它逐个平台执行发布任务，哪个失败会单独标出来，改完只重发失败的那个，不用全部重来。\n\n第4步（进阶，可跳过）：想自动化再看 API\n它给了两条路：Extension API 是在你自己的网页里调用扩展发布；Web API 是在脚本或服务器里用 REST 接口调用。普通人用前三步就够了，API 是给要批量跑的人准备的，文档在 https://t.co/hdBfAyU7Ek。\n\n两个提醒：\n一是商店版和开源仓不完全一样——README 写明了，Chrome/Edge 商店包由主仓库构建、带一个未开源的 Agent 模块，这个仓只放 Apache-2.0 开源部分。介意的话自己看源码再装。\n二是第一次发之前，先在每个平台确认自己是登录状态，扩展是借你浏览器里已登录的账号去发的，哪个平台没登录，哪个就会失败。\n\n适合谁：同时养三四个平台账号、每篇都要同步的人。只发一个平台的，用不上它，别硬装。",
+      "original_text": "同一篇稿子粘贴五遍，时间全耗在重复劳动上\n\n多平台运营最烦的不是写，是发：知乎发一遍、微博再贴一遍、小红书又来一遍，图片还得逐个传。\n\nMultiPost 就是干这个的：一个开源浏览器扩展，写一次，同步发到 10 多个平台。GitHub 上 3,945 星，Apache-2.0 开源，仓在 https://t.co/yvzeMParXW。官方文档写的平台包括知乎、微博、小红书、抖音、B站、YouTube、TikTok、Instagram、Facebook、X、LinkedIn。文字、图片、视频、音频、链接都能发，扩展本身不用登录、不用注册、不用 API Key。\n\n照着装，5 分钟能发第一篇：\n\n第1步：装扩展\nChrome 打开 Chrome 网上应用店搜 MultiPost，点「添加至 Chrome」；用 Edge 的去 Edge 加载项里搜同名装。装完浏览器右上角会出现它的图标，先点开看一眼，确认能打开再往下走。\n\n第2步：写稿子（两个入口选一个）\n入口一：打开官方 Markdown 编辑器 https://t.co/qAn6y3O4tD，直接在里面写，标题、正文、图片按 Markdown 排好，适合长文。\n入口二：在扩展里新建发布，把现成文案粘进去，图片视频逐个加。\n第一次先拿一篇短的试，别一上来就发长文。\n\n第3步：选平台，一次发出去\n写完在发布页勾上你要发的平台（比如先只勾知乎+微博两个），点发布。会看到它逐个平台执行发布任务，哪个失败会单独标出来，改完只重发失败的那个，不用全部重来。\n\n第4步（进阶，可跳过）：想自动化再看 API\n它给了两条路：Extension API 是在你自己的网页里调用扩展发布；Web API 是在脚本或服务器里用 REST 接口调用。普通人用前三步就够了，API 是给要批量跑的人准备的，文档在 https://t.co/hdBfAyU7Ek。\n\n两个提醒：\n一是商店版和开源仓不完全一样——README 写明了，Chrome/Edge 商店包由主仓库构建、带一个未开源的 Agent 模块，这个仓只放 Apache-2.0 开源部分。介意的话自己看源码再装。\n二是第一次发之前，先在每个平台确认自己是登录状态，扩展是借你浏览器里已登录的账号去发的，哪个平台没登录，哪个就会失败。\n\n适合谁：同时养三四个平台账号、每篇都要同步的人。只发一个平台的，用不上它，别硬装。",
+      "translation_zh": "同一篇稿子粘贴五遍，时间全耗在重复劳动上\n\n多平台运营最烦的不是写，是发：知乎发一遍、微博再贴一遍、小红书又来一遍，图片还得逐个传。\n\nMultiPost 就是干这个的：一个开源浏览器扩展，写一次，同步发到 10 多个平台。GitHub 上 3,945 星，Apache-2.0 开源，仓在 https://t.co/yvzeMParXW。官方文档写的平台包括知乎、微博、小红书、抖音、B站、YouTube、TikTok、Instagram、Facebook、X、LinkedIn。文字、图片、视频、音频、链接都能发，扩展本身不用登录、不用注册、不用 API Key。\n\n照着装，5 分钟能发第一篇：\n\n第1步：装扩展\nChrome 打开 Chrome 网上应用店搜 MultiPost，点「添加至 Chrome」；用 Edge 的去 Edge 加载项里搜同名装。装完浏览器右上角会出现它的图标，先点开看一眼，确认能打开再往下走。\n\n第2步：写稿子（两个入口选一个）\n入口一：打开官方 Markdown 编辑器 https://t.co/qAn6y3O4tD，直接在里面写，标题、正文、图片按 Markdown 排好，适合长文。\n入口二：在扩展里新建发布，把现成文案粘进去，图片视频逐个加。\n第一次先拿一篇短的试，别一上来就发长文。\n\n第3步：选平台，一次发出去\n写完在发布页勾上你要发的平台（比如先只勾知乎+微博两个），点发布。会看到它逐个平台执行发布任务，哪个失败会单独标出来，改完只重发失败的那个，不用全部重来。\n\n第4步（进阶，可跳过）：想自动化再看 API\n它给了两条路：Extension API 是在你自己的网页里调用扩展发布；Web API 是在脚本或服务器里用 REST 接口调用。普通人用前三步就够了，API 是给要批量跑的人准备的，文档在 https://t.co/hdBfAyU7Ek。\n\n两个提醒：\n一是商店版和开源仓不完全一样——README 写明了，Chrome/Edge 商店包由主仓库构建、带一个未开源的 Agent 模块，这个仓只放 Apache-2.0 开源部分。介意的话自己看源码再装。\n二是第一次发之前，先在每个平台确认自己是登录状态，扩展是借你浏览器里已登录的账号去发的，哪个平台没登录，哪个就会失败。\n\n适合谁：同时养三四个平台账号、每篇都要同步的人。只发一个平台的，用不上它，别硬装。",
+      "translation_status": "source_chinese",
+      "author_name": "章鱼8̃爪铺🐙",
+      "author_handle": "octopusaia",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2110623530446704640/huuF0LPp_normal.jpg",
+      "author_followers": 871,
+      "author_following": 1615,
+      "author_bio": "🌊 好用的干货 & 好看的人｜\n🧜 AI · 美女 · 赚钱 · 出海 · 信息差｜",
+      "author_location": "USA",
+      "author_joined_at": "2026-10-15T06:06:42Z",
+      "author_verified": false,
+      "links": [
+        "http://github.com/leaperone/MultiPost-Extension",
+        "http://md.multipost.app",
+        "http://docs.multipost.app"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HX1d0iyaQAA1XJc.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HX1d0iyaQAA1XJc.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HX1d0iyaQAA1XJc.jpg",
+          "expanded_url": "https://x.com/octopusaia/status/2124958040113967604/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HX1d3GMaEAAU8MO.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HX1d3GMaEAAU8MO.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HX1d3GMaEAAU8MO.jpg",
+          "expanded_url": "https://x.com/octopusaia/status/2124958040113967604/photo/2"
+        }
+      ],
+      "metrics": {
+        "likes": 7,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 5,
+        "views": 397
+      }
+    },
+    {
+      "post_id": "2124958407904174515",
+      "url": "https://x.com/octopusaia/status/2124958407904174515",
+      "created_at": "2026-11-23T20:08:58Z",
+      "text": "先拿一篇短文试两个平台，通了再加平台，别第一篇就全勾上。",
+      "original_text": "先拿一篇短文试两个平台，通了再加平台，别第一篇就全勾上。",
+      "translation_zh": "先拿一篇短文试两个平台，通了再加平台，别第一篇就全勾上。",
+      "translation_status": "source_chinese",
+      "author_name": "章鱼8̃爪铺🐙",
+      "author_handle": "octopusaia",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2110623530446704640/huuF0LPp_normal.jpg",
+      "author_followers": 871,
+      "author_following": 1615,
+      "author_bio": "🌊 好用的干货 & 好看的人｜\n🧜 AI · 美女 · 赚钱 · 出海 · 信息差｜",
+      "author_location": "USA",
+      "author_joined_at": "2026-10-15T06:06:42Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 12
+      }
+    },
+    {
+      "post_id": "2124970477063987614",
+      "url": "https://x.com/jihubiran/status/2124970477063987614",
+      "created_at": "2026-11-23T20:56:56Z",
+      "text": "@octopusaia 能只补发失败的平台挺实用。好奇能不能先在各平台存成草稿？小红书封面和 X 上的图，我还想分别看一眼再发。",
+      "original_text": "@octopusaia 能只补发失败的平台挺实用。好奇能不能先在各平台存成草稿？小红书封面和 X 上的图，我还想分别看一眼再发。",
+      "translation_zh": "@octopusaia 能只补发失败的平台挺实用。好奇能不能先在各平台存成草稿？小红书封面和 X 上的图，我还想分别看一眼再发。",
+      "translation_status": "source_chinese",
+      "author_name": "几乎必然",
+      "author_handle": "jihubiran",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2124002144684572672/PmPiZN1X_normal.jpg",
+      "author_followers": 247,
+      "author_following": 219,
+      "author_bio": "🇨🇦 加东读博中… LLM，LLM-based Agents\nADHD｜希望早日成为一名教授",
+      "author_location": null,
+      "author_joined_at": "2026-11-21T04:46:16Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 14
+      }
+    }
+  ]
+}

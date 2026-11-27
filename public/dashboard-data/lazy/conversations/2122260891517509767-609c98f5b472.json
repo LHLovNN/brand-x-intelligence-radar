@@ -1,0 +1,158 @@
+{
+  "conversation_id": "2122260891517509767",
+  "anchor_post_id": "2122260891517509767",
+  "summary_zh": "前文介绍开源项目 MatrixMedia 解决自媒体多平台重复上传、填标题、发布的问题，并列出支持平台和 GUI/CLI/API/MCP 用法，把话题明确转向工具功能与使用体验。后续回复认可省体力，也追问标题/封面适配、平台风控和稳定性。上下文显示讨论基于具体功能，情绪偏兴趣但带谨慎，具备一定传播与验证价值。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2122260891517509767",
+      "url": "https://x.com/bkdgiffug/status/2122260891517509767",
+      "created_at": "2026-11-16T09:30:00Z",
+      "text": "做自媒体最耗时间的，有时候不是剪视频，而是剪完之后，还要打开好几个平台重复上传、填写标题、设置发布。\n\nGitHub 上的开源项目 MatrixMedia，就是为了解决这类重复操作。\n\n它将多个平台的网页发布流程整合成统一接口，目前支持抖音、快手、B站、视频号、小红书、今日头条、百家号、番茄视频等平台。\n\n提供四种使用方式：\nGUI：图形界面操作\nCLI：命令行调用\nHTTP API：方便接入其他程序\nMCP Server：可以交给 AI Agent 调用\n\n无论是自己手动发布，还是通过脚本、AI 自动化批量处理，都能使用同一套工作流。\n\n经常需要多平台分发视频的创作者，可以关注一下。\n🔗 https://t.co/UIuaAiIJwL",
+      "original_text": "做自媒体最耗时间的，有时候不是剪视频，而是剪完之后，还要打开好几个平台重复上传、填写标题、设置发布。\n\nGitHub 上的开源项目 MatrixMedia，就是为了解决这类重复操作。\n\n它将多个平台的网页发布流程整合成统一接口，目前支持抖音、快手、B站、视频号、小红书、今日头条、百家号、番茄视频等平台。\n\n提供四种使用方式：\nGUI：图形界面操作\nCLI：命令行调用\nHTTP API：方便接入其他程序\nMCP Server：可以交给 AI Agent 调用\n\n无论是自己手动发布，还是通过脚本、AI 自动化批量处理，都能使用同一套工作流。\n\n经常需要多平台分发视频的创作者，可以关注一下。\n🔗 https://t.co/UIuaAiIJwL",
+      "translation_zh": "做自媒体最耗时间的，有时候不是剪视频，而是剪完之后，还要打开好几个平台重复上传、填写标题、设置发布。\n\nGitHub 上的开源项目 MatrixMedia，就是为了解决这类重复操作。\n\n它将多个平台的网页发布流程整合成统一接口，目前支持抖音、快手、B站、视频号、小红书、今日头条、百家号、番茄视频等平台。\n\n提供四种使用方式：\nGUI：图形界面操作\nCLI：命令行调用\nHTTP API：方便接入其他程序\nMCP Server：可以交给 AI Agent 调用\n\n无论是自己手动发布，还是通过脚本、AI 自动化批量处理，都能使用同一套工作流。\n\n经常需要多平台分发视频的创作者，可以关注一下。\n🔗 https://t.co/UIuaAiIJwL",
+      "translation_status": "source_chinese",
+      "author_name": "lumxss",
+      "author_handle": "bkdgiffug",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1865771523463954432/cSwn54mJ_normal.jpg",
+      "author_followers": 35809,
+      "author_following": 6824,
+      "author_bio": "web3撸毛，日常分享，Cryptox AI重度用户AI工具分享",
+      "author_location": null,
+      "author_joined_at": "2024-12-08T14:52:37Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/hanliang97/MatrixMedia"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HXKthhnaQAE-I--.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HXKthhnaQAE-I--.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HXKthhnaQAE-I--.jpg",
+          "expanded_url": "https://x.com/bkdgiffug/status/2122260891517509767/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 30,
+        "reposts": 6,
+        "replies": 4,
+        "quotes": 0,
+        "bookmarks": 29,
+        "views": 1606
+      }
+    },
+    {
+      "post_id": "2122263042151084326",
+      "url": "https://x.com/DiuEric/status/2122263042151084326",
+      "created_at": "2026-11-16T09:38:33Z",
+      "text": "@bkdgiffug 能把重复填标题和上传合到一起，才算真正省掉了剪完视频后的体力活。",
+      "original_text": "@bkdgiffug 能把重复填标题和上传合到一起，才算真正省掉了剪完视频后的体力活。",
+      "translation_zh": "@bkdgiffug 能把重复填标题和上传合到一起，才算真正省掉了剪完视频后的体力活。",
+      "translation_status": "source_chinese",
+      "author_name": "Ok健",
+      "author_handle": "DiuEric",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1613142227559256065/xx6ZaCnE_normal.jpg",
+      "author_followers": 8588,
+      "author_following": 6831,
+      "author_bio": "搞笑哥🥳.00后，农民的儿子，双非本科毕业。前上市公司采购｜加密交易员｜资深黄牛炒过泡泡玛特、鞋、宝可梦。一个想发财的还贷青年。💯回！",
+      "author_location": "Macau",
+      "author_joined_at": "2022-12-22T04:10:28Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 31
+      }
+    },
+    {
+      "post_id": "2122269336211788204",
+      "url": "https://x.com/seanbuildlog/status/2122269336211788204",
+      "created_at": "2026-11-16T10:03:34Z",
+      "text": "@bkdgiffug 把发布流程统一成一个接口这个想法挺对的，不过各家对标题字数和封面尺寸的要求都不一样，这套接口在这些细节上是怎么处理的？",
+      "original_text": "@bkdgiffug 把发布流程统一成一个接口这个想法挺对的，不过各家对标题字数和封面尺寸的要求都不一样，这套接口在这些细节上是怎么处理的？",
+      "translation_zh": "@bkdgiffug 把发布流程统一成一个接口这个想法挺对的，不过各家对标题字数和封面尺寸的要求都不一样，这套接口在这些细节上是怎么处理的？",
+      "translation_status": "source_chinese",
+      "author_name": "Sean",
+      "author_handle": "seanbuildlog",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2108442527464366080/dgw9FTqK_normal.jpg",
+      "author_followers": 832,
+      "author_following": 1447,
+      "author_bio": "软件工程师，极客\n正在公开验证：AI 能不能变现",
+      "author_location": "United States",
+      "author_joined_at": "2015-01-10T14:26:19Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 36
+      }
+    },
+    {
+      "post_id": "2122282728121147795",
+      "url": "https://x.com/green_935/status/2122282728121147795",
+      "created_at": "2026-11-16T10:56:47Z",
+      "text": "@bkdgiffug 矩阵发布是标配，但先测平台风控，机器痕迹重的号权重掉得快，别省一小时赔一个号。",
+      "original_text": "@bkdgiffug 矩阵发布是标配，但先测平台风控，机器痕迹重的号权重掉得快，别省一小时赔一个号。",
+      "translation_zh": "@bkdgiffug 矩阵发布是标配，但先测平台风控，机器痕迹重的号权重掉得快，别省一小时赔一个号。",
+      "translation_status": "source_chinese",
+      "author_name": "免实名eSIM卡·国内直连",
+      "author_handle": "green_935",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2115346523013722112/PasGenWg_normal.jpg",
+      "author_followers": 39,
+      "author_following": 19,
+      "author_bio": "eSIM在手，谷歌直走\n免实名 · 内地可用 · 长期卡\n扫码激活，5分钟\nhttps://t.co/GeEAug75Jm",
+      "author_location": "全球最值得信赖的esim",
+      "author_joined_at": "2012-06-07T09:26:17Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 42
+      }
+    },
+    {
+      "post_id": "2122320518036762732",
+      "url": "https://x.com/kirkpaper/status/2122320518036762732",
+      "created_at": "2026-11-16T13:26:56Z",
+      "text": "@bkdgiffug 多平台分发确实费劲，这项目能统一接口挺实用，实际稳定性如何？",
+      "original_text": "@bkdgiffug 多平台分发确实费劲，这项目能统一接口挺实用，实际稳定性如何？",
+      "translation_zh": "@bkdgiffug 多平台分发确实费劲，这项目能统一接口挺实用，实际稳定性如何？",
+      "translation_status": "source_chinese",
+      "author_name": "戲水渔",
+      "author_handle": "kirkpaper",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1446997323075182592/7y-Beve0_normal.jpg",
+      "author_followers": 7918,
+      "author_following": 6419,
+      "author_bio": "随心所欲分享工作心得，有感而发生活认识",
+      "author_location": "Duskwood",
+      "author_joined_at": "2011-03-18T14:16:41Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 31
+      }
+    }
+  ]
+}

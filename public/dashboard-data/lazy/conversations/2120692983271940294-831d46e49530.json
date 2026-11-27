@@ -1,0 +1,366 @@
+{
+  "conversation_id": "2120692983271940294",
+  "anchor_post_id": "2120692983271940294",
+  "summary_zh": "前文围绕 DeepSeek Harness 新手因权限、/plan和大任务翻车，推荐插件清单；收录帖把话题落到具体插件、安装命令和费用监控。后续有人提醒插件冲突、常用不多，也有人追问记忆和@引用体验并认可省钱。上下文显示讨论偏实操，情绪总体正向但带谨慎，真实性有具体命令与追问支撑。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2120692983271940294",
+      "url": "https://x.com/AYi_AInotes/status/2120692983271940294",
+      "created_at": "2026-11-12T01:39:42Z",
+      "text": "说实话，现在很多人最大的误区就是以为装了新工具就等于有了生产力，\n\n结果不给工作区权限、不敲/plan直接甩大任务，最后报错了又骂模型笨，先把那三个防翻车插件装好，在干净目录里从小任务跑起，\n整理了一份DeepSeek Harness 必备插件清单给大家，\n\n社区实测横评前 10 名，直接把一个命令行黑框武装成了完全体工作台\n对照榜单梳理了一下核心价值，建议按需对号入座:\n🏆 01. dsh-market｜核心基础\n生态入口。直接在设置里搜索、一键安装社区插件和主题，还能备份还原配置，装一切插件前先把这个装上。\n🥈 02. modlens｜视觉眼睛\n公认最强视觉扩展。直接在输入框粘贴图片，自动输出 OCR 文字加版面布局分析，给纯文本模型装上眼睛。\n🥉 03. dsh-web-ui｜界面全家桶\n任务看板、Git 图谱、Token 实时统计、桌面宠物，把极简聊天框直接升级成全功能控制台。\n04. DSH-better-sidebar｜侧边工作台\n还原 VS Code 体验的完整侧边栏，内置文件树、真实终端和子代理状态监控。\n05. dsh-at-file｜快速引用\n输入框直接打 @ 模糊搜索并引用本地文件和目录，告别手动大段复制粘贴。\n06. deepseek-harness-desktop｜原生桌面端\n免配置 Node.js 环境，Windows 和 Mac 双端下载即用，系统托盘常驻。\n07. dsh-web-search-pro｜增强多源搜索\n聚合 DeepSeek、Bing、Exa 等多引擎，还支持小红书、知乎、B 站等平台定向爬取与本地缓存。\n08. OpenViking｜跨会话记忆\n自进化上下文数据库，把碎片对话变成长期记忆与知识 RAG，让模型越聊越懂你。\n09. dsh-cost-meter｜峰谷费用看板\n实时统计会话花费和当日预算，最实用的是 DeepSeek 峰谷电价切换前会自动发提醒。\n10. dsh-session-library｜知识库与精读\n本地文档混合检索加长文精读，自动把长 PDF 拆解为主张与知识证据链。\n新手起步 3 步走:\n先装 01（市场）+ 02（视觉）+ 03/04（界面），基础体验立刻拉满，再按需补齐搜索和记忆。\n10 个插件的 GitHub 仓库地址和完整安装命令，全都整理在一楼评论区了 👇\n#DeepSeek #插件",
+      "original_text": "说实话，现在很多人最大的误区就是以为装了新工具就等于有了生产力，\n\n结果不给工作区权限、不敲/plan直接甩大任务，最后报错了又骂模型笨，先把那三个防翻车插件装好，在干净目录里从小任务跑起，\n整理了一份DeepSeek Harness 必备插件清单给大家，\n\n社区实测横评前 10 名，直接把一个命令行黑框武装成了完全体工作台\n对照榜单梳理了一下核心价值，建议按需对号入座:\n🏆 01. dsh-market｜核心基础\n生态入口。直接在设置里搜索、一键安装社区插件和主题，还能备份还原配置，装一切插件前先把这个装上。\n🥈 02. modlens｜视觉眼睛\n公认最强视觉扩展。直接在输入框粘贴图片，自动输出 OCR 文字加版面布局分析，给纯文本模型装上眼睛。\n🥉 03. dsh-web-ui｜界面全家桶\n任务看板、Git 图谱、Token 实时统计、桌面宠物，把极简聊天框直接升级成全功能控制台。\n04. DSH-better-sidebar｜侧边工作台\n还原 VS Code 体验的完整侧边栏，内置文件树、真实终端和子代理状态监控。\n05. dsh-at-file｜快速引用\n输入框直接打 @ 模糊搜索并引用本地文件和目录，告别手动大段复制粘贴。\n06. deepseek-harness-desktop｜原生桌面端\n免配置 Node.js 环境，Windows 和 Mac 双端下载即用，系统托盘常驻。\n07. dsh-web-search-pro｜增强多源搜索\n聚合 DeepSeek、Bing、Exa 等多引擎，还支持小红书、知乎、B 站等平台定向爬取与本地缓存。\n08. OpenViking｜跨会话记忆\n自进化上下文数据库，把碎片对话变成长期记忆与知识 RAG，让模型越聊越懂你。\n09. dsh-cost-meter｜峰谷费用看板\n实时统计会话花费和当日预算，最实用的是 DeepSeek 峰谷电价切换前会自动发提醒。\n10. dsh-session-library｜知识库与精读\n本地文档混合检索加长文精读，自动把长 PDF 拆解为主张与知识证据链。\n新手起步 3 步走:\n先装 01（市场）+ 02（视觉）+ 03/04（界面），基础体验立刻拉满，再按需补齐搜索和记忆。\n10 个插件的 GitHub 仓库地址和完整安装命令，全都整理在一楼评论区了 👇\n#DeepSeek #插件",
+      "translation_zh": "说实话，现在很多人最大的误区就是以为装了新工具就等于有了生产力，\n\n结果不给工作区权限、不敲/plan直接甩大任务，最后报错了又骂模型笨，先把那三个防翻车插件装好，在干净目录里从小任务跑起，\n整理了一份DeepSeek Harness 必备插件清单给大家，\n\n社区实测横评前 10 名，直接把一个命令行黑框武装成了完全体工作台\n对照榜单梳理了一下核心价值，建议按需对号入座:\n🏆 01. dsh-market｜核心基础\n生态入口。直接在设置里搜索、一键安装社区插件和主题，还能备份还原配置，装一切插件前先把这个装上。\n🥈 02. modlens｜视觉眼睛\n公认最强视觉扩展。直接在输入框粘贴图片，自动输出 OCR 文字加版面布局分析，给纯文本模型装上眼睛。\n🥉 03. dsh-web-ui｜界面全家桶\n任务看板、Git 图谱、Token 实时统计、桌面宠物，把极简聊天框直接升级成全功能控制台。\n04. DSH-better-sidebar｜侧边工作台\n还原 VS Code 体验的完整侧边栏，内置文件树、真实终端和子代理状态监控。\n05. dsh-at-file｜快速引用\n输入框直接打 @ 模糊搜索并引用本地文件和目录，告别手动大段复制粘贴。\n06. deepseek-harness-desktop｜原生桌面端\n免配置 Node.js 环境，Windows 和 Mac 双端下载即用，系统托盘常驻。\n07. dsh-web-search-pro｜增强多源搜索\n聚合 DeepSeek、Bing、Exa 等多引擎，还支持小红书、知乎、B 站等平台定向爬取与本地缓存。\n08. OpenViking｜跨会话记忆\n自进化上下文数据库，把碎片对话变成长期记忆与知识 RAG，让模型越聊越懂你。\n09. dsh-cost-meter｜峰谷费用看板\n实时统计会话花费和当日预算，最实用的是 DeepSeek 峰谷电价切换前会自动发提醒。\n10. dsh-session-library｜知识库与精读\n本地文档混合检索加长文精读，自动把长 PDF 拆解为主张与知识证据链。\n新手起步 3 步走:\n先装 01（市场）+ 02（视觉）+ 03/04（界面），基础体验立刻拉满，再按需补齐搜索和记忆。\n10 个插件的 GitHub 仓库地址和完整安装命令，全都整理在一楼评论区了 👇\n#DeepSeek #插件",
+      "translation_status": "source_chinese",
+      "author_name": "AYi",
+      "author_handle": "AYi_AInotes",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1989157446829350912/pW828UwK_normal.jpg",
+      "author_followers": 82495,
+      "author_following": 671,
+      "author_bio": "AI 实用主义，专注AI落地的组织和业务know how，半年自媒体副业变现6位数，关注商业，职场，美股，web3，\n大厂组织发展专家 × 组织心理学，分享有用的 AI 实践，也分享工具之外的深度认知\nAI实践和x 增长社群 ：没有年费，399一次门槛\n合作/交流：DM/TG @AYi_AInotes",
+      "author_location": null,
+      "author_joined_at": "2025-10-05T01:50:40Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HW43BN0WQAAnwOV.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HW43BN0WQAAnwOV.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HW43BN0WQAAnwOV.jpg",
+          "expanded_url": "https://x.com/AYi_AInotes/status/2120692983271940294/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 282,
+        "reposts": 51,
+        "replies": 15,
+        "quotes": 2,
+        "bookmarks": 219,
+        "views": 11387
+      }
+    },
+    {
+      "post_id": "2120694184512295160",
+      "url": "https://x.com/AYi_AInotes/status/2120694184512295160",
+      "created_at": "2026-11-12T01:44:28Z",
+      "text": "DeepSeek Harness TOP插件的GitHub地址和一键安装命令，装完记得重启dsh web：\n\n1. dsh-market（插件市场入口） https://t.co/ZnUHDMJO9k dsh plugin --profile web add dshmarket\n2. modlens（视觉/OCR） https://t.co/QrKKqBmNQ9 dsh plugin --profile web add @liustack/modlens@latest\n3. dsh-web-ui（界面全家桶：看板、Git、Token、桌宠等） https://t.co/0i0DXFOlev dsh plugin --profile web add @linxin666/dsh-web-all@latest（或 @linxin666/dsh-web-ui-all）\n4. DSH-better-sidebar（侧边工作台） https://t.co/cr3PrdQznK dsh plugin --profile web add dsh-better-sidebar@latest\n5. dsh-at-file（@ 引用本地文件） https://t.co/1jJz6ZZPeN 原评论用 tarball；也可试 dsh plugin --profile web add github:FSMargoo/dsh-at-file（注意官方已内置类似功能）\n6. deepseek-harness-desktop（桌面端） 社区封装较多，如 https://t.co/Ws1WGNz15L（Windows） 建议优先官网桌面版：https://t.co/wNBzLMSjqz （非标准 dsh plugin add，直接下载安装包）\n7. dsh-web-search-pro（增强多源搜索） https://t.co/WNH9YcuvE9 dsh plugin --profile web add @anweat/dsh-browser@^0.1.8 dsh-web-search-pro@^0.1.8 （版本随 DSH 更新，建议看仓库最新）\n8. OpenViking（跨会话记忆） 官方相关：https://t.co/v9eoL9ZFDD 社区接入：https://t.co/Ak2vfCEb8g 先启动 OpenViking 服务，再 dsh plugin --profile web add @openviking/dsh-memory-plugin\n9. dsh-cost-meter（费用看板 + 峰谷提醒） https://t.co/VmoK3l1WHB dsh plugin --profile web add dsh-cost-meter\n10. dsh-library / deepread（知识库与精读） https://t.co/50ipvjHZm0 或 https://t.co/RmtMmyYrRL dsh plugin --profile web add dsh-library（或对应 deepread 包名）\n使用提示\n• 装完后记得重启 dsh web。\n• 插件生态变化快，建议先装 01（市场）再通过市场搜索更新版本。\n• 优先用官网桌面版 + 工作区内权限，新手从 01 + 02 + 03/04 开始即可。",
+      "original_text": "DeepSeek Harness TOP插件的GitHub地址和一键安装命令，装完记得重启dsh web：\n\n1. dsh-market（插件市场入口） https://t.co/ZnUHDMJO9k dsh plugin --profile web add dshmarket\n2. modlens（视觉/OCR） https://t.co/QrKKqBmNQ9 dsh plugin --profile web add @liustack/modlens@latest\n3. dsh-web-ui（界面全家桶：看板、Git、Token、桌宠等） https://t.co/0i0DXFOlev dsh plugin --profile web add @linxin666/dsh-web-all@latest（或 @linxin666/dsh-web-ui-all）\n4. DSH-better-sidebar（侧边工作台） https://t.co/cr3PrdQznK dsh plugin --profile web add dsh-better-sidebar@latest\n5. dsh-at-file（@ 引用本地文件） https://t.co/1jJz6ZZPeN 原评论用 tarball；也可试 dsh plugin --profile web add github:FSMargoo/dsh-at-file（注意官方已内置类似功能）\n6. deepseek-harness-desktop（桌面端） 社区封装较多，如 https://t.co/Ws1WGNz15L（Windows） 建议优先官网桌面版：https://t.co/wNBzLMSjqz （非标准 dsh plugin add，直接下载安装包）\n7. dsh-web-search-pro（增强多源搜索） https://t.co/WNH9YcuvE9 dsh plugin --profile web add @anweat/dsh-browser@^0.1.8 dsh-web-search-pro@^0.1.8 （版本随 DSH 更新，建议看仓库最新）\n8. OpenViking（跨会话记忆） 官方相关：https://t.co/v9eoL9ZFDD 社区接入：https://t.co/Ak2vfCEb8g 先启动 OpenViking 服务，再 dsh plugin --profile web add @openviking/dsh-memory-plugin\n9. dsh-cost-meter（费用看板 + 峰谷提醒） https://t.co/VmoK3l1WHB dsh plugin --profile web add dsh-cost-meter\n10. dsh-library / deepread（知识库与精读） https://t.co/50ipvjHZm0 或 https://t.co/RmtMmyYrRL dsh plugin --profile web add dsh-library（或对应 deepread 包名）\n使用提示\n• 装完后记得重启 dsh web。\n• 插件生态变化快，建议先装 01（市场）再通过市场搜索更新版本。\n• 优先用官网桌面版 + 工作区内权限，新手从 01 + 02 + 03/04 开始即可。",
+      "translation_zh": "DeepSeek Harness TOP插件的GitHub地址和一键安装命令，装完记得重启dsh web：\n\n1. dsh-market（插件市场入口） https://t.co/ZnUHDMJO9k dsh plugin --profile web add dshmarket\n2. modlens（视觉/OCR） https://t.co/QrKKqBmNQ9 dsh plugin --profile web add @liustack/modlens@latest\n3. dsh-web-ui（界面全家桶：看板、Git、Token、桌宠等） https://t.co/0i0DXFOlev dsh plugin --profile web add @linxin666/dsh-web-all@latest（或 @linxin666/dsh-web-ui-all）\n4. DSH-better-sidebar（侧边工作台） https://t.co/cr3PrdQznK dsh plugin --profile web add dsh-better-sidebar@latest\n5. dsh-at-file（@ 引用本地文件） https://t.co/1jJz6ZZPeN 原评论用 tarball；也可试 dsh plugin --profile web add github:FSMargoo/dsh-at-file（注意官方已内置类似功能）\n6. deepseek-harness-desktop（桌面端） 社区封装较多，如 https://t.co/Ws1WGNz15L（Windows） 建议优先官网桌面版：https://t.co/wNBzLMSjqz （非标准 dsh plugin add，直接下载安装包）\n7. dsh-web-search-pro（增强多源搜索） https://t.co/WNH9YcuvE9 dsh plugin --profile web add @anweat/dsh-browser@^0.1.8 dsh-web-search-pro@^0.1.8 （版本随 DSH 更新，建议看仓库最新）\n8. OpenViking（跨会话记忆） 官方相关：https://t.co/v9eoL9ZFDD 社区接入：https://t.co/Ak2vfCEb8g 先启动 OpenViking 服务，再 dsh plugin --profile web add @openviking/dsh-memory-plugin\n9. dsh-cost-meter（费用看板 + 峰谷提醒） https://t.co/VmoK3l1WHB dsh plugin --profile web add dsh-cost-meter\n10. dsh-library / deepread（知识库与精读） https://t.co/50ipvjHZm0 或 https://t.co/RmtMmyYrRL dsh plugin --profile web add dsh-library（或对应 deepread 包名）\n使用提示\n• 装完后记得重启 dsh web。\n• 插件生态变化快，建议先装 01（市场）再通过市场搜索更新版本。\n• 优先用官网桌面版 + 工作区内权限，新手从 01 + 02 + 03/04 开始即可。",
+      "translation_status": "source_chinese",
+      "author_name": "AYi",
+      "author_handle": "AYi_AInotes",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1989157446829350912/pW828UwK_normal.jpg",
+      "author_followers": 82495,
+      "author_following": 671,
+      "author_bio": "AI 实用主义，专注AI落地的组织和业务know how，半年自媒体副业变现6位数，关注商业，职场，美股，web3，\n大厂组织发展专家 × 组织心理学，分享有用的 AI 实践，也分享工具之外的深度认知\nAI实践和x 增长社群 ：没有年费，399一次门槛\n合作/交流：DM/TG @AYi_AInotes",
+      "author_location": null,
+      "author_joined_at": "2025-10-05T01:50:40Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/dsh-market/dsh-market",
+        "https://github.com/liustack/modlens",
+        "https://github.com/zhu1090093659/dsh-web-ui",
+        "https://github.com/omdsh-dev/DSH-better-sidebar",
+        "https://github.com/FSMargoo/dsh-at-file",
+        "https://github.com/cnskycn/deepseek-harness-desktop",
+        "https://www.deepseek.com/harness/",
+        "https://github.com/anweat/dsh-web-search-pro",
+        "https://github.com/volcengine/OpenViking",
+        "https://github.com/Rxiain/dsh-openviking",
+        "https://github.com/Han-1413141/dsh-cost-meter",
+        "https://github.com/PerryLink/dsh-library",
+        "https://github.com/xiehuan123/dsh-deepread"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 6,
+        "reposts": 2,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 4,
+        "views": 933
+      }
+    },
+    {
+      "post_id": "2120698593937871080",
+      "url": "https://x.com/maiai_fun/status/2120698593937871080",
+      "created_at": "2026-11-12T02:02:00Z",
+      "text": "@AYi_AInotes 插件装多了也会打架",
+      "original_text": "@AYi_AInotes 插件装多了也会打架",
+      "translation_zh": "@AYi_AInotes 插件装多了也会打架",
+      "translation_status": "source_chinese",
+      "author_name": "格 Boss",
+      "author_handle": "maiai_fun",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2114735124520574976/aQNuMq3-_normal.jpg",
+      "author_followers": 152,
+      "author_following": 100,
+      "author_bio": "AI 代充站:https://t.co/Ivz0JKouj4",
+      "author_location": null,
+      "author_joined_at": "2026-10-26T15:04:05Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 64
+      }
+    },
+    {
+      "post_id": "2120699894562467914",
+      "url": "https://x.com/XiaoLeemx04/status/2120699894562467914",
+      "created_at": "2026-11-12T02:07:10Z",
+      "text": "这清单来得太及时了，之前装插件全是瞎装一通，modlens 这种视觉插件一直没装上，纯文本模型看图全靠猜。你把 dsh-market 放第一位是对的，先装市场再谈别的。dsh-cost-meter 那个峰谷电价提醒我头回听说，真能省不少钱。想问下你这前 10 名横评里，08 号 OpenViking 那个跨会话记忆，实际用起来会不会越记越乱？",
+      "original_text": "这清单来得太及时了，之前装插件全是瞎装一通，modlens 这种视觉插件一直没装上，纯文本模型看图全靠猜。你把 dsh-market 放第一位是对的，先装市场再谈别的。dsh-cost-meter 那个峰谷电价提醒我头回听说，真能省不少钱。想问下你这前 10 名横评里，08 号 OpenViking 那个跨会话记忆，实际用起来会不会越记越乱？",
+      "translation_zh": "这清单来得太及时了，之前装插件全是瞎装一通，modlens 这种视觉插件一直没装上，纯文本模型看图全靠猜。你把 dsh-market 放第一位是对的，先装市场再谈别的。dsh-cost-meter 那个峰谷电价提醒我头回听说，真能省不少钱。想问下你这前 10 名横评里，08 号 OpenViking 那个跨会话记忆，实际用起来会不会越记越乱？",
+      "translation_status": "source_chinese",
+      "author_name": "Meme",
+      "author_handle": "XiaoLeemx04",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2120525874202296320/qsjBcWe8_normal.jpg",
+      "author_followers": 847,
+      "author_following": 645,
+      "author_bio": "我是Meme(原耄耋转世）\nAI 实战 × 加密货币学习\n每天分享 AI 工具、\nGitHub 好东西和币圈机会\n随时欢迎您的大驾光临\n互关必回\"",
+      "author_location": "Hong Kong",
+      "author_joined_at": "2026-04-17T02:50:26Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 72
+      }
+    },
+    {
+      "post_id": "2120703884373201391",
+      "url": "https://x.com/donella45141/status/2120703884373201391",
+      "created_at": "2026-11-12T02:23:01Z",
+      "text": "@AYi_AInotes 这份清单里最值钱的不是 10 个插件本身，是顺序：先装 dsh-market 打底，再补 modlens 给模型装眼睛，最后用 dsh-cost-meter 把每一轮 token 花费精确到美分。很多人翻车不是模型不行，是连自己烧了多少钱都不知道就敢甩大任务。",
+      "original_text": "@AYi_AInotes 这份清单里最值钱的不是 10 个插件本身，是顺序：先装 dsh-market 打底，再补 modlens 给模型装眼睛，最后用 dsh-cost-meter 把每一轮 token 花费精确到美分。很多人翻车不是模型不行，是连自己烧了多少钱都不知道就敢甩大任务。",
+      "translation_zh": "@AYi_AInotes 这份清单里最值钱的不是 10 个插件本身，是顺序：先装 dsh-market 打底，再补 modlens 给模型装眼睛，最后用 dsh-cost-meter 把每一轮 token 花费精确到美分。很多人翻车不是模型不行，是连自己烧了多少钱都不知道就敢甩大任务。",
+      "translation_status": "source_chinese",
+      "author_name": "不正经的Ai局长",
+      "author_handle": "donella45141",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2107365932855128064/K1cyrd9S_normal.jpg",
+      "author_followers": 251,
+      "author_following": 193,
+      "author_bio": "本局今日巡视：AI工具一个个过，镰刀一把把收。不吹不黑，只认实测。至于为什么不正经——正经的AI圈，都在忙着割韭菜。",
+      "author_location": null,
+      "author_joined_at": "2023-10-31T08:47:38Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 69
+      }
+    },
+    {
+      "post_id": "2120705792110403772",
+      "url": "https://x.com/ming85GG/status/2120705792110403772",
+      "created_at": "2026-11-12T02:30:36Z",
+      "text": "@AYi_AInotes 装一堆插件跟买了全套健身装备就觉得自己瘦了一样，/plan没敲、权限没开，甩个大任务怪模型笨，那几个插件白装。",
+      "original_text": "@AYi_AInotes 装一堆插件跟买了全套健身装备就觉得自己瘦了一样，/plan没敲、权限没开，甩个大任务怪模型笨，那几个插件白装。",
+      "translation_zh": "@AYi_AInotes 装一堆插件跟买了全套健身装备就觉得自己瘦了一样，/plan没敲、权限没开，甩个大任务怪模型笨，那几个插件白装。",
+      "translation_status": "source_chinese",
+      "author_name": "ming",
+      "author_handle": "ming85GG",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2110190507603468289/m1MExVCm_normal.jpg",
+      "author_followers": 513,
+      "author_following": 157,
+      "author_bio": "I have everything in the world",
+      "author_location": null,
+      "author_joined_at": "2024-08-14T16:33:38Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 68
+      }
+    },
+    {
+      "post_id": "2120714221206032504",
+      "url": "https://x.com/Junp_Li/status/2120714221206032504",
+      "created_at": "2026-11-12T03:04:05Z",
+      "text": "@AYi_AInotes 装十个插件 天天用的也就俩吧",
+      "original_text": "@AYi_AInotes 装十个插件 天天用的也就俩吧",
+      "translation_zh": "@AYi_AInotes 装十个插件 天天用的也就俩吧",
+      "translation_status": "source_chinese",
+      "author_name": "李干嘛玩AI",
+      "author_handle": "Junp_Li",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2067175701590200320/ATOGABC6_normal.jpg",
+      "author_followers": 882,
+      "author_following": 929,
+      "author_bio": "10 年程序员，AI 重度使用者。\n用 AI 折腾自己感兴趣的项目。\n从想法到上线，过程和结果都公开。",
+      "author_location": "Hong Kong",
+      "author_joined_at": "2015-03-11T12:40:55Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 60
+      }
+    },
+    {
+      "post_id": "2120717983903531163",
+      "url": "https://x.com/jacewbuilds/status/2120717983903531163",
+      "created_at": "2026-11-12T03:19:03Z",
+      "text": "@AYi_AInotes dsh-at-file 的 @ 引用挺适合拿同名文件来试。两个目录都有 index.ts 时，候选项会把相对路径一起显示出来吗？",
+      "original_text": "@AYi_AInotes dsh-at-file 的 @ 引用挺适合拿同名文件来试。两个目录都有 index.ts 时，候选项会把相对路径一起显示出来吗？",
+      "translation_zh": "@AYi_AInotes dsh-at-file 的 @ 引用挺适合拿同名文件来试。两个目录都有 index.ts 时，候选项会把相对路径一起显示出来吗？",
+      "translation_status": "source_chinese",
+      "author_name": "Jace W.",
+      "author_handle": "jacewbuilds",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2085204608394412033/6G3oKb7b_normal.jpg",
+      "author_followers": 1703,
+      "author_following": 3058,
+      "author_bio": "个人开发者｜可接单 · INDIE DEV — OPEN FOR COMMISSIONS\nAI / agents / 全球虚拟卡 / crypto 支付｜工具实测和研究\nBYBIT: NLGAQYX\nBitget: RQctM6aD",
+      "author_location": null,
+      "author_joined_at": "2025-03-07T02:19:57Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 92
+      }
+    },
+    {
+      "post_id": "2120718019026645058",
+      "url": "https://x.com/PlatoFighter/status/2120718019026645058",
+      "created_at": "2026-11-12T03:19:11Z",
+      "text": "@AYi_AInotes 确实 我现在都先在项目的agents.md里写清楚现在啥阶段、核心要干啥 再让它动手 翻车少了一大截",
+      "original_text": "@AYi_AInotes 确实 我现在都先在项目的agents.md里写清楚现在啥阶段、核心要干啥 再让它动手 翻车少了一大截",
+      "translation_zh": "@AYi_AInotes 确实 我现在都先在项目的agents.md里写清楚现在啥阶段、核心要干啥 再让它动手 翻车少了一大截",
+      "translation_status": "source_chinese",
+      "author_name": "琴.剑.酒 | Qin",
+      "author_handle": "PlatoFighter",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2114412164005998593/6Efci8vC_normal.png",
+      "author_followers": 1982,
+      "author_following": 2182,
+      "author_bio": "一个订了一堆AI的人🫠 天天拿真活测工具、复盘AI编程、折腾办公提效 好用的说好用，坑也照实讲",
+      "author_location": null,
+      "author_joined_at": "2026-07-15T03:28:55Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 47
+      }
+    },
+    {
+      "post_id": "2120745445916082652",
+      "url": "https://x.com/leaf_sanren/status/2120745445916082652",
+      "created_at": "2026-11-12T05:08:10Z",
+      "text": "@AYi_AInotes 我得记一下，我发现用 Claude 直接调用 DSH，它会默认忽略丰富的插件生态！傲慢的大菊花！",
+      "original_text": "@AYi_AInotes 我得记一下，我发现用 Claude 直接调用 DSH，它会默认忽略丰富的插件生态！傲慢的大菊花！",
+      "translation_zh": "@AYi_AInotes 我得记一下，我发现用 Claude 直接调用 DSH，它会默认忽略丰富的插件生态！傲慢的大菊花！",
+      "translation_status": "source_chinese",
+      "author_name": "Leaf Yeah!",
+      "author_handle": "leaf_sanren",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2075612818485792768/zgT9vETH_normal.jpg",
+      "author_followers": 5705,
+      "author_following": 160,
+      "author_bio": "🌱 哲学 - 数据分析 - 独立开发\n⌨️ 20个GitHub开发小项目，目前进度6/20👇\n→ SeeCut (数字人+AI网感剪辑)\n→ talk-to-fengge  (demo在dy百万播放)\n旧作不提\nINTP，人若无名，专心练剑",
+      "author_location": "https://github.com/YeJe-cpu",
+      "author_joined_at": "2025-11-12T03:10:35Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 139
+      }
+    },
+    {
+      "post_id": "2120932690933449034",
+      "url": "https://x.com/Wuz5iw/status/2120932690933449034",
+      "created_at": "2026-11-12T17:32:13Z",
+      "text": "@AYi_AInotes iOS怎么安装",
+      "original_text": "@AYi_AInotes iOS怎么安装",
+      "translation_zh": "@AYi_AInotes iOS怎么安装",
+      "translation_status": "source_chinese",
+      "author_name": "W",
+      "author_handle": "Wuz5iw",
+      "author_avatar_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "author_followers": 1,
+      "author_following": 2,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-08-09T04:04:21Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 19
+      }
+    },
+    {
+      "post_id": "2121030060480278880",
+      "url": "https://x.com/EricSun523/status/2121030060480278880",
+      "created_at": "2026-11-12T23:59:07Z",
+      "text": "@AYi_AInotes 有没有感觉 Deepseek Harness 至少在 Mac 上会卡顿比较明显？",
+      "original_text": "@AYi_AInotes 有没有感觉 Deepseek Harness 至少在 Mac 上会卡顿比较明显？",
+      "translation_zh": "@AYi_AInotes 有没有感觉 Deepseek Harness 至少在 Mac 上会卡顿比较明显？",
+      "translation_status": "source_chinese",
+      "author_name": "Eric Sun",
+      "author_handle": "EricSun523",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2034762661070872580/NvFLgysM_normal.jpg",
+      "author_followers": 1,
+      "author_following": 44,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-03-19T22:41:51Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 19
+      }
+    }
+  ]
+}

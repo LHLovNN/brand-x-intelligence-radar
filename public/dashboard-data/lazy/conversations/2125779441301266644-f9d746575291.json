@@ -1,0 +1,70 @@
+{
+  "conversation_id": "2125779441301266644",
+  "anchor_post_id": "2125779441301266644",
+  "summary_zh": "前文无其他铺垫，收录帖以“GitHub屠榜”为主题，拆解5个开源项目的功能、星标增长、免费/本地/跨平台体验与成本，把趋势落到具体工具。后续有人认同总结并追问会先装哪款，未质疑数据。整体情绪正向，具技术圈种草传播价值，真实性仍需核验项目页星标。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2125779441301266644",
+      "url": "https://x.com/lenlen858/status/2125779441301266644",
+      "created_at": "2026-11-26T02:31:28Z",
+      "text": "今天 GitHub 被「四端全能下载器 + Agent 开发方法论 + 一条链接一键出片 + 上架防拒手册 + 两小时训出小模型」联手屠榜了！\n\n5 个星标暴增最狠的项目，专业拆解下！\n\n1. XiaoYouChR/Ghost-Downloader-3\n\n一个应用吃下几乎所有常用下载协议的跨平台下载器。\n覆盖 HTTP、Magnet/BT、FTP、M3U8、MPEG-DASH、eD2k；YouTube / Bilibili 能选片段、画质、字幕和播放列表，GitHub 与 HuggingFace 还带镜像加速。智能分块不用合并文件，自动侦测带宽，还用上了真实浏览器 TLS 指纹。Windows、macOS、Linux、Android 四端原生，兼容 aria2 RPC，下载中途改链接、改代理，进度也不会丢。\n\n🔗 直达：https://t.co/h49WDKF3vu\n\n下载器赛道早就卷成红海，它偏要把五个工具塞回一个里。951 星一天，总星 1.8 万+，桌面下载器的集大成者！\n\n🟢\n\n2. obra/superpowers\n\n给编程 Agent 用的一整套可组合技能框架，也是一套会自动被触发的软件开发方法论。\nAgent 不会一上来就写代码，而是先追问你真正要做什么，再把设计稿分块给你确认；签完字才写出强调红绿 TDD、YAGNI 和 DRY 的实现计划，并拉起 subagent-driven-development，让子 Agent 按任务推进、互查，连续工作数小时也不偏离计划。官方安装说明覆盖 Claude Code、Cursor、Codex、Gemini CLI、OpenCode 等十多个 Agent 平台，技能会自动触发。\n\n🔗 直达：https://t.co/sWqYl6Q7OL\n\nAgent 缺的不是会写代码，是会按方法把活干完。903 星一天，总星 32.6 万+，给 Agent 装上工程纪律！\n\n🟢🟢\n\n3. zhouxiaoka/autoclip\n\n开源、本地优先的 AI 视频剪辑桌面工具：丢进一个链接，就能出一条可发布的短视频。\n自动找高光、跟踪说话人、烧录字幕、生成封面和标题，导出适配抖音、小红书、TikTok、Reels、YouTube Shorts 和 Bilibili。MIT 协议、零订阅，剪辑和渲染都在本机完成；可以用自己的 API Key，也可以搭配 Ollama / LM Studio + Whisper / SenseVoice 全离线跑。v1.6 的 Live Replay 已支持 OBS、Twitch、YouTube、Kick、Discord 和本地录像这 6 个来源，下播后能自动排队出片。\n\n🔗 直达：https://t.co/L5v17AFCVS\n\n长视频还在云端排队时，它已经在本地剪完了。880 星一天，总星 1.6 万+，内容创作者的一键出片台！\n\n🟢🟢🟢\n\n4. mjmirza/app-store-compliance\n\n专门对付 App Store 和 Google Play 拒审的开源手册，也是提交前的自动守卫。\n按官方说明，收录了 124 条有文档的拒审模式和对应修复方法，覆盖隐私清单与 Data safety 检查，并跟踪 114 个监管截止日期（欧盟 AI 法案、DSA、COPPA、年龄法律等）。一条 guard 脚本就能扫描你的 Xcode 或 Android 项目，碰到致命风险直接 BLOCKED，并给出对应条款和修复方法；还能作为 skill / hook 装进 Claude Code、Cursor、Codex、Gemini CLI 等一批 AI 编程工具。它写得很明白：不保证一定过审。\n\n🔗 直达：https://t.co/NELOW7Qool\n\nAI 能让你一下午做出应用，也能让你一周都耗在拒审里。858 星一天，总星 6400+，上架前的最后一道闸！\n\n🟢🟢🟢🟢\n\n5. jingyaogong/minimind\n\n从 0 开始亲手训练小语言模型的完整开源教程和实现。\n官方实测：在单张 NVIDIA 3090 上跑完 1 个 epoch 的 SFT 大约 2 小时，对应 GPU 租用成本约 3 块钱，就能得到约 64M 的 MiniMind；主线最小版本体积大约是 GPT-3 的 1/2700。全部核心算法用 PyTorch 从零实现，覆盖 Pretrain、SFT、LoRA、DPO、PPO/GRPO、Tool Use 到 Agentic RL 的完整链路，主线结构对齐 Qwen3 / Qwen3-MoE，已发布 64M 的 minimind-3 和 198M-A64M 的 MoE 版本。Apache 2.0，完全免费。\n\n🔗 直达：https://t.co/gc4weHDfTI\n\n看再多封装好的训练框架，不如自己从第一行代码训起来。826 星一天，总星 7.0 万+，个人 GPU 上的大模型启蒙课！\n\n🟢🟢🟢🟢🟢\n\n⚠️⚠️\n总结：\n今天的信号是：工具在往回收，方法在往上补。下载、剪辑、训练都在强调本地和可复现，Agent 则开始被要求按纪律干活、上架前先过关。\n接下来更值得看的，不是谁更会写代码，而是谁能把这条链路真正跑通。",
+      "original_text": "今天 GitHub 被「四端全能下载器 + Agent 开发方法论 + 一条链接一键出片 + 上架防拒手册 + 两小时训出小模型」联手屠榜了！\n\n5 个星标暴增最狠的项目，专业拆解下！\n\n1. XiaoYouChR/Ghost-Downloader-3\n\n一个应用吃下几乎所有常用下载协议的跨平台下载器。\n覆盖 HTTP、Magnet/BT、FTP、M3U8、MPEG-DASH、eD2k；YouTube / Bilibili 能选片段、画质、字幕和播放列表，GitHub 与 HuggingFace 还带镜像加速。智能分块不用合并文件，自动侦测带宽，还用上了真实浏览器 TLS 指纹。Windows、macOS、Linux、Android 四端原生，兼容 aria2 RPC，下载中途改链接、改代理，进度也不会丢。\n\n🔗 直达：https://t.co/h49WDKF3vu\n\n下载器赛道早就卷成红海，它偏要把五个工具塞回一个里。951 星一天，总星 1.8 万+，桌面下载器的集大成者！\n\n🟢\n\n2. obra/superpowers\n\n给编程 Agent 用的一整套可组合技能框架，也是一套会自动被触发的软件开发方法论。\nAgent 不会一上来就写代码，而是先追问你真正要做什么，再把设计稿分块给你确认；签完字才写出强调红绿 TDD、YAGNI 和 DRY 的实现计划，并拉起 subagent-driven-development，让子 Agent 按任务推进、互查，连续工作数小时也不偏离计划。官方安装说明覆盖 Claude Code、Cursor、Codex、Gemini CLI、OpenCode 等十多个 Agent 平台，技能会自动触发。\n\n🔗 直达：https://t.co/sWqYl6Q7OL\n\nAgent 缺的不是会写代码，是会按方法把活干完。903 星一天，总星 32.6 万+，给 Agent 装上工程纪律！\n\n🟢🟢\n\n3. zhouxiaoka/autoclip\n\n开源、本地优先的 AI 视频剪辑桌面工具：丢进一个链接，就能出一条可发布的短视频。\n自动找高光、跟踪说话人、烧录字幕、生成封面和标题，导出适配抖音、小红书、TikTok、Reels、YouTube Shorts 和 Bilibili。MIT 协议、零订阅，剪辑和渲染都在本机完成；可以用自己的 API Key，也可以搭配 Ollama / LM Studio + Whisper / SenseVoice 全离线跑。v1.6 的 Live Replay 已支持 OBS、Twitch、YouTube、Kick、Discord 和本地录像这 6 个来源，下播后能自动排队出片。\n\n🔗 直达：https://t.co/L5v17AFCVS\n\n长视频还在云端排队时，它已经在本地剪完了。880 星一天，总星 1.6 万+，内容创作者的一键出片台！\n\n🟢🟢🟢\n\n4. mjmirza/app-store-compliance\n\n专门对付 App Store 和 Google Play 拒审的开源手册，也是提交前的自动守卫。\n按官方说明，收录了 124 条有文档的拒审模式和对应修复方法，覆盖隐私清单与 Data safety 检查，并跟踪 114 个监管截止日期（欧盟 AI 法案、DSA、COPPA、年龄法律等）。一条 guard 脚本就能扫描你的 Xcode 或 Android 项目，碰到致命风险直接 BLOCKED，并给出对应条款和修复方法；还能作为 skill / hook 装进 Claude Code、Cursor、Codex、Gemini CLI 等一批 AI 编程工具。它写得很明白：不保证一定过审。\n\n🔗 直达：https://t.co/NELOW7Qool\n\nAI 能让你一下午做出应用，也能让你一周都耗在拒审里。858 星一天，总星 6400+，上架前的最后一道闸！\n\n🟢🟢🟢🟢\n\n5. jingyaogong/minimind\n\n从 0 开始亲手训练小语言模型的完整开源教程和实现。\n官方实测：在单张 NVIDIA 3090 上跑完 1 个 epoch 的 SFT 大约 2 小时，对应 GPU 租用成本约 3 块钱，就能得到约 64M 的 MiniMind；主线最小版本体积大约是 GPT-3 的 1/2700。全部核心算法用 PyTorch 从零实现，覆盖 Pretrain、SFT、LoRA、DPO、PPO/GRPO、Tool Use 到 Agentic RL 的完整链路，主线结构对齐 Qwen3 / Qwen3-MoE，已发布 64M 的 minimind-3 和 198M-A64M 的 MoE 版本。Apache 2.0，完全免费。\n\n🔗 直达：https://t.co/gc4weHDfTI\n\n看再多封装好的训练框架，不如自己从第一行代码训起来。826 星一天，总星 7.0 万+，个人 GPU 上的大模型启蒙课！\n\n🟢🟢🟢🟢🟢\n\n⚠️⚠️\n总结：\n今天的信号是：工具在往回收，方法在往上补。下载、剪辑、训练都在强调本地和可复现，Agent 则开始被要求按纪律干活、上架前先过关。\n接下来更值得看的，不是谁更会写代码，而是谁能把这条链路真正跑通。",
+      "translation_zh": "今天 GitHub 被「四端全能下载器 + Agent 开发方法论 + 一条链接一键出片 + 上架防拒手册 + 两小时训出小模型」联手屠榜了！\n\n5 个星标暴增最狠的项目，专业拆解下！\n\n1. XiaoYouChR/Ghost-Downloader-3\n\n一个应用吃下几乎所有常用下载协议的跨平台下载器。\n覆盖 HTTP、Magnet/BT、FTP、M3U8、MPEG-DASH、eD2k；YouTube / Bilibili 能选片段、画质、字幕和播放列表，GitHub 与 HuggingFace 还带镜像加速。智能分块不用合并文件，自动侦测带宽，还用上了真实浏览器 TLS 指纹。Windows、macOS、Linux、Android 四端原生，兼容 aria2 RPC，下载中途改链接、改代理，进度也不会丢。\n\n🔗 直达：https://t.co/h49WDKF3vu\n\n下载器赛道早就卷成红海，它偏要把五个工具塞回一个里。951 星一天，总星 1.8 万+，桌面下载器的集大成者！\n\n🟢\n\n2. obra/superpowers\n\n给编程 Agent 用的一整套可组合技能框架，也是一套会自动被触发的软件开发方法论。\nAgent 不会一上来就写代码，而是先追问你真正要做什么，再把设计稿分块给你确认；签完字才写出强调红绿 TDD、YAGNI 和 DRY 的实现计划，并拉起 subagent-driven-development，让子 Agent 按任务推进、互查，连续工作数小时也不偏离计划。官方安装说明覆盖 Claude Code、Cursor、Codex、Gemini CLI、OpenCode 等十多个 Agent 平台，技能会自动触发。\n\n🔗 直达：https://t.co/sWqYl6Q7OL\n\nAgent 缺的不是会写代码，是会按方法把活干完。903 星一天，总星 32.6 万+，给 Agent 装上工程纪律！\n\n🟢🟢\n\n3. zhouxiaoka/autoclip\n\n开源、本地优先的 AI 视频剪辑桌面工具：丢进一个链接，就能出一条可发布的短视频。\n自动找高光、跟踪说话人、烧录字幕、生成封面和标题，导出适配抖音、小红书、TikTok、Reels、YouTube Shorts 和 Bilibili。MIT 协议、零订阅，剪辑和渲染都在本机完成；可以用自己的 API Key，也可以搭配 Ollama / LM Studio + Whisper / SenseVoice 全离线跑。v1.6 的 Live Replay 已支持 OBS、Twitch、YouTube、Kick、Discord 和本地录像这 6 个来源，下播后能自动排队出片。\n\n🔗 直达：https://t.co/L5v17AFCVS\n\n长视频还在云端排队时，它已经在本地剪完了。880 星一天，总星 1.6 万+，内容创作者的一键出片台！\n\n🟢🟢🟢\n\n4. mjmirza/app-store-compliance\n\n专门对付 App Store 和 Google Play 拒审的开源手册，也是提交前的自动守卫。\n按官方说明，收录了 124 条有文档的拒审模式和对应修复方法，覆盖隐私清单与 Data safety 检查，并跟踪 114 个监管截止日期（欧盟 AI 法案、DSA、COPPA、年龄法律等）。一条 guard 脚本就能扫描你的 Xcode 或 Android 项目，碰到致命风险直接 BLOCKED，并给出对应条款和修复方法；还能作为 skill / hook 装进 Claude Code、Cursor、Codex、Gemini CLI 等一批 AI 编程工具。它写得很明白：不保证一定过审。\n\n🔗 直达：https://t.co/NELOW7Qool\n\nAI 能让你一下午做出应用，也能让你一周都耗在拒审里。858 星一天，总星 6400+，上架前的最后一道闸！\n\n🟢🟢🟢🟢\n\n5. jingyaogong/minimind\n\n从 0 开始亲手训练小语言模型的完整开源教程和实现。\n官方实测：在单张 NVIDIA 3090 上跑完 1 个 epoch 的 SFT 大约 2 小时，对应 GPU 租用成本约 3 块钱，就能得到约 64M 的 MiniMind；主线最小版本体积大约是 GPT-3 的 1/2700。全部核心算法用 PyTorch 从零实现，覆盖 Pretrain、SFT、LoRA、DPO、PPO/GRPO、Tool Use 到 Agentic RL 的完整链路，主线结构对齐 Qwen3 / Qwen3-MoE，已发布 64M 的 minimind-3 和 198M-A64M 的 MoE 版本。Apache 2.0，完全免费。\n\n🔗 直达：https://t.co/gc4weHDfTI\n\n看再多封装好的训练框架，不如自己从第一行代码训起来。826 星一天，总星 7.0 万+，个人 GPU 上的大模型启蒙课！\n\n🟢🟢🟢🟢🟢\n\n⚠️⚠️\n总结：\n今天的信号是：工具在往回收，方法在往上补。下载、剪辑、训练都在强调本地和可复现，Agent 则开始被要求按纪律干活、上架前先过关。\n接下来更值得看的，不是谁更会写代码，而是谁能把这条链路真正跑通。",
+      "translation_status": "source_chinese",
+      "author_name": "Nicole Long",
+      "author_handle": "lenlen858",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1773298515864932352/2Cr5NXee_normal.jpg",
+      "author_followers": 1639,
+      "author_following": 1262,
+      "author_bio": "Primary Market Research ‖ Hotspot Tracking ‖ DeFi Yield Farming ‖ Web3 Newbie ‖ Crypto Deep Enthusiast\nTG: https://t.co/HGmtfO0e1T ❥ Collab DM 💌",
+      "author_location": null,
+      "author_joined_at": "2020-10-20T20:12:57Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+        "https://github.com/obra/superpowers",
+        "https://github.com/zhouxiaoka/autoclip",
+        "https://github.com/mjmirza/app-store-compliance",
+        "https://github.com/jingyaogong/minimind"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 221
+      }
+    },
+    {
+      "post_id": "2125782590141710791",
+      "url": "https://x.com/md852463/status/2125782590141710791",
+      "created_at": "2026-11-26T02:43:59Z",
+      "text": "你这篇的总结句最值钱：工具在往回收，方法在往上补。Ghost-Downloader-3 一天 951 星、总星 1.8 万+，靠的是把五个下载工具塞回一个里；superpowers 一天 903 星、总星 32.6 万+，靠的是给 Agent 装上工程纪律，先追问要做什么、再把设计稿分块。本地和可复现是共同点，autoclip 本地剪完、minimind 单张 3090 两小时训完，都是这个路子。5 个里，你自己会先装哪一个用？",
+      "original_text": "你这篇的总结句最值钱：工具在往回收，方法在往上补。Ghost-Downloader-3 一天 951 星、总星 1.8 万+，靠的是把五个下载工具塞回一个里；superpowers 一天 903 星、总星 32.6 万+，靠的是给 Agent 装上工程纪律，先追问要做什么、再把设计稿分块。本地和可复现是共同点，autoclip 本地剪完、minimind 单张 3090 两小时训完，都是这个路子。5 个里，你自己会先装哪一个用？",
+      "translation_zh": "你这篇的总结句最值钱：工具在往回收，方法在往上补。Ghost-Downloader-3 一天 951 星、总星 1.8 万+，靠的是把五个下载工具塞回一个里；superpowers 一天 903 星、总星 32.6 万+，靠的是给 Agent 装上工程纪律，先追问要做什么、再把设计稿分块。本地和可复现是共同点，autoclip 本地剪完、minimind 单张 3090 两小时训完，都是这个路子。5 个里，你自己会先装哪一个用？",
+      "translation_status": "source_chinese",
+      "author_name": "老猫",
+      "author_handle": "md852463",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1625365207244738560/tnrk1UcT_normal.jpg",
+      "author_followers": 375,
+      "author_following": 491,
+      "author_bio": "每天实测1个AI工具/副业玩法，只讲能不能赚、怎么上手、坑在哪。0粉老号重启实录，目标90天跑通第一笔收入。合作私信。",
+      "author_location": "美国",
+      "author_joined_at": "2023-02-14T05:23:39Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 6
+      }
+    }
+  ]
+}

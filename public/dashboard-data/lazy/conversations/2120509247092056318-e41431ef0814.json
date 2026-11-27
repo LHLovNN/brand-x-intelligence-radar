@@ -1,0 +1,138 @@
+{
+  "conversation_id": "2120509247092056318",
+  "anchor_post_id": "2120509247092056318",
+  "summary_zh": "片段中无更早前文；收录帖以同一提示词实测对比 Seedream 5.5 与 GPT Image 2.6，转向具体产品体验，称前者在中文海报、人像产品图、多轮改图、UI、参考图遵循上更好，未涉及价格配送。后续有人追问改图测试方法，也有人认同海报干净，整体偏正面且有细节支撑。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2120509247092056318",
+      "url": "https://x.com/I_am_oil_oil/status/2120509247092056318",
+      "created_at": "2026-11-11T13:29:36Z",
+      "text": "最近把刚发布的 Seedream 5.5 和 GPT Image 2.6 用同一套简单提示词对比测了一轮。\n\n很长一段时间里，我觉得生图几乎没有模型能替代 GPT Image。但这次实测下来，Seedream 5.5 已经和它不相上下，在好几个常用场景里甚至表现更好：\n\n1. 海报审美更干净，中文小字不乱码\n我用很简单的提示词让它做桂花拿铁海报、手冲咖啡四步法和小红书封面，主要想看模型自己的创意能力。Seedream 5.5 不光所有中文小字都准确、没有乱码，构图、配色和字体选择（比如偏衬线、带点楷书感的中文字体）也更文艺舒服，少了现在 GPT 生图那种偏浓的商业广告感和偏脏的 AI 味。\n\n2. 亚洲人像与商业产品图更清爽，不油腻\n模拟手机手持街拍、车内副驾人像时，GPT 生出来的人物经常对比度和锐度太高，脸上容易泛油光、偏网红风，拿去做图生视频时画面会显得有点脏。\nSeedream 5.5 生成的亚洲面孔很自然大方，就像身边真实会遇到的人；做香水、气泡水这类产品摄影和换背景时，光影也更克制高级。\n\n3. 多轮改图的一致性更稳，不会越改越黄\n同一张图连续微调几次位置，Seedream 5.5 除了修改的地方之外，画面其他部分一点变化都没有。\n对比下来，GPT Image 2.6（大家常用的 Flare 模型）改的次数一多，画面噪点就会越来越重，而且越变越黄、容易锐化过度。\n\n4. 生成的 UI 界面稿更有设计感，布局更规整\n我之前做了个叫 Oil UI 的 Skill，写页面前会先用生图模型出界面图激发创意，再还原成代码。\n这次测音响独立站、睡眠 App 和复杂表单时，Seedream 5.5 风格克制淡雅，给的最大宽度、留白和衬线排版都很像成熟产品；做商城后台配置页时比例也比 GPT 准，不会把输入框和控件画得偏大、显得臃肿。\n\n5. 参考图遵循性更好更听话，文字与角色还原更准\n给复杂图文和角色参考图做生成时，Seedream 5.5 对原图细节遵从得更好。比如原图里的「停顿缩短」它能准确写出，GPT 却改错成了「停顿编辑」；\n给火柴人参考图做二创时，它也能准确还原火柴人形象，不像 GPT 会自己给角色穿上衣服、把身体改宽。\n\n非常推荐大家去试一下！",
+      "original_text": "最近把刚发布的 Seedream 5.5 和 GPT Image 2.6 用同一套简单提示词对比测了一轮。\n\n很长一段时间里，我觉得生图几乎没有模型能替代 GPT Image。但这次实测下来，Seedream 5.5 已经和它不相上下，在好几个常用场景里甚至表现更好：\n\n1. 海报审美更干净，中文小字不乱码\n我用很简单的提示词让它做桂花拿铁海报、手冲咖啡四步法和小红书封面，主要想看模型自己的创意能力。Seedream 5.5 不光所有中文小字都准确、没有乱码，构图、配色和字体选择（比如偏衬线、带点楷书感的中文字体）也更文艺舒服，少了现在 GPT 生图那种偏浓的商业广告感和偏脏的 AI 味。\n\n2. 亚洲人像与商业产品图更清爽，不油腻\n模拟手机手持街拍、车内副驾人像时，GPT 生出来的人物经常对比度和锐度太高，脸上容易泛油光、偏网红风，拿去做图生视频时画面会显得有点脏。\nSeedream 5.5 生成的亚洲面孔很自然大方，就像身边真实会遇到的人；做香水、气泡水这类产品摄影和换背景时，光影也更克制高级。\n\n3. 多轮改图的一致性更稳，不会越改越黄\n同一张图连续微调几次位置，Seedream 5.5 除了修改的地方之外，画面其他部分一点变化都没有。\n对比下来，GPT Image 2.6（大家常用的 Flare 模型）改的次数一多，画面噪点就会越来越重，而且越变越黄、容易锐化过度。\n\n4. 生成的 UI 界面稿更有设计感，布局更规整\n我之前做了个叫 Oil UI 的 Skill，写页面前会先用生图模型出界面图激发创意，再还原成代码。\n这次测音响独立站、睡眠 App 和复杂表单时，Seedream 5.5 风格克制淡雅，给的最大宽度、留白和衬线排版都很像成熟产品；做商城后台配置页时比例也比 GPT 准，不会把输入框和控件画得偏大、显得臃肿。\n\n5. 参考图遵循性更好更听话，文字与角色还原更准\n给复杂图文和角色参考图做生成时，Seedream 5.5 对原图细节遵从得更好。比如原图里的「停顿缩短」它能准确写出，GPT 却改错成了「停顿编辑」；\n给火柴人参考图做二创时，它也能准确还原火柴人形象，不像 GPT 会自己给角色穿上衣服、把身体改宽。\n\n非常推荐大家去试一下！",
+      "translation_zh": "最近把刚发布的 Seedream 5.5 和 GPT Image 2.6 用同一套简单提示词对比测了一轮。\n\n很长一段时间里，我觉得生图几乎没有模型能替代 GPT Image。但这次实测下来，Seedream 5.5 已经和它不相上下，在好几个常用场景里甚至表现更好：\n\n1. 海报审美更干净，中文小字不乱码\n我用很简单的提示词让它做桂花拿铁海报、手冲咖啡四步法和小红书封面，主要想看模型自己的创意能力。Seedream 5.5 不光所有中文小字都准确、没有乱码，构图、配色和字体选择（比如偏衬线、带点楷书感的中文字体）也更文艺舒服，少了现在 GPT 生图那种偏浓的商业广告感和偏脏的 AI 味。\n\n2. 亚洲人像与商业产品图更清爽，不油腻\n模拟手机手持街拍、车内副驾人像时，GPT 生出来的人物经常对比度和锐度太高，脸上容易泛油光、偏网红风，拿去做图生视频时画面会显得有点脏。\nSeedream 5.5 生成的亚洲面孔很自然大方，就像身边真实会遇到的人；做香水、气泡水这类产品摄影和换背景时，光影也更克制高级。\n\n3. 多轮改图的一致性更稳，不会越改越黄\n同一张图连续微调几次位置，Seedream 5.5 除了修改的地方之外，画面其他部分一点变化都没有。\n对比下来，GPT Image 2.6（大家常用的 Flare 模型）改的次数一多，画面噪点就会越来越重，而且越变越黄、容易锐化过度。\n\n4. 生成的 UI 界面稿更有设计感，布局更规整\n我之前做了个叫 Oil UI 的 Skill，写页面前会先用生图模型出界面图激发创意，再还原成代码。\n这次测音响独立站、睡眠 App 和复杂表单时，Seedream 5.5 风格克制淡雅，给的最大宽度、留白和衬线排版都很像成熟产品；做商城后台配置页时比例也比 GPT 准，不会把输入框和控件画得偏大、显得臃肿。\n\n5. 参考图遵循性更好更听话，文字与角色还原更准\n给复杂图文和角色参考图做生成时，Seedream 5.5 对原图细节遵从得更好。比如原图里的「停顿缩短」它能准确写出，GPT 却改错成了「停顿编辑」；\n给火柴人参考图做二创时，它也能准确还原火柴人形象，不像 GPT 会自己给角色穿上衣服、把身体改宽。\n\n非常推荐大家去试一下！",
+      "translation_status": "source_chinese",
+      "author_name": "oil-oil",
+      "author_handle": "I_am_oil_oil",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2076608105312559105/qp-FY1Os_normal.jpg",
+      "author_followers": 10273,
+      "author_following": 45,
+      "author_bio": "Building AI products.\nProduct × Frontend.\nPractical AI · Product Design · Engineering\nGitHub: https://t.co/1SpZrtBSjD\nWebsite: https://t.co/SbJYMMqQt6",
+      "author_location": null,
+      "author_joined_at": "2025-07-27T03:03:24Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2120506481539981312/img/998SIZhfbuyZo8F7.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2120506481539981312/img/998SIZhfbuyZo8F7.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2120506481539981312/img/998SIZhfbuyZo8F7.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              4,
+              3
+            ],
+            "duration_millis": 864738,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video-s.twimg.com/amplify_video/2120506481539981312/pl/zYDV7sR5JfAwXqQq.m3u8?tag=29"
+              },
+              {
+                "bitrate": 256000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2120506481539981312/vid/avc1/360x270/FasDa0soRmkkjQ21.mp4?tag=29"
+              },
+              {
+                "bitrate": 832000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2120506481539981312/vid/avc1/480x360/kyXeJeFDU8MOhsAi.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2120506481539981312/vid/avc1/960x720/FEK3ScS-gXtvVjSZ.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2120506481539981312/vid/avc1/1440x1080/2NrYLjsq1_zGfgis.mp4?tag=29"
+              },
+              {
+                "bitrate": 25128000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2120506481539981312/vid/avc1/2880x2160/933nR2VO-8NK9CCc.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/I_am_oil_oil/status/2120509247092056318/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 5,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 4,
+        "views": 964
+      }
+    },
+    {
+      "post_id": "2120510689022443648",
+      "url": "https://x.com/heyshiwen/status/2120510689022443648",
+      "created_at": "2026-11-11T13:35:20Z",
+      "text": "@I_am_oil_oil 多轮改图这项最吸引我，做视频参考图时，改个位置却把脸和光线一起改掉会很头疼。你这轮是一直拿上一轮的结果接着改，还是每次都带着原图？这两种情况挺值得分开看。",
+      "original_text": "@I_am_oil_oil 多轮改图这项最吸引我，做视频参考图时，改个位置却把脸和光线一起改掉会很头疼。你这轮是一直拿上一轮的结果接着改，还是每次都带着原图？这两种情况挺值得分开看。",
+      "translation_zh": "@I_am_oil_oil 多轮改图这项最吸引我，做视频参考图时，改个位置却把脸和光线一起改掉会很头疼。你这轮是一直拿上一轮的结果接着改，还是每次都带着原图？这两种情况挺值得分开看。",
+      "translation_status": "source_chinese",
+      "author_name": "阿文 · Shiwen",
+      "author_handle": "heyshiwen",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2114494405176414208/NPue_CmZ_normal.jpg",
+      "author_followers": 2992,
+      "author_following": 2883,
+      "author_bio": "X创作记录📝AI实践经验分享｜代码·经济| \n持续学习，热爱生活🐋\nSpace, big ideas, and what comes next. 🚀",
+      "author_location": null,
+      "author_joined_at": "2026-02-01T05:53:43Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 18
+      }
+    },
+    {
+      "post_id": "2120563419258450013",
+      "url": "https://x.com/songsanren/status/2120563419258450013",
+      "created_at": "2026-11-11T17:04:51Z",
+      "text": "@I_am_oil_oil 海报更干净这点最实在，关注你好几天了，回个关呗",
+      "original_text": "@I_am_oil_oil 海报更干净这点最实在，关注你好几天了，回个关呗",
+      "translation_zh": "@I_am_oil_oil 海报更干净这点最实在，关注你好几天了，回个关呗",
+      "translation_status": "source_chinese",
+      "author_name": "怂散人",
+      "author_handle": "songsanren",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1589964640200581121/ur1RqvFC_normal.jpg",
+      "author_followers": 7141,
+      "author_following": 7278,
+      "author_bio": "从心散人  | 美股 | 加密币 | 量化交易 | 盲派八字 | 紫微斗数 | 六爻 | 庄子",
+      "author_location": "杜塞尔多夫",
+      "author_joined_at": "2022-11-08T12:46:07Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 9
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "conversation_id": "2125758253145760227",
+  "anchor_post_id": "2125758253145760227",
+  "summary_zh": "对话无更早发言。收录帖介绍 GitHub 热门国产开源 AutoClip：可将长视频本地自动剪成多平台短视频，重点转向免费开源、模型调用约0.09–0.20元/条及自配API等使用门槛。后续两人附和低价和开源降本。上下文显示情绪偏正面，传播点在低成本提效。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2125758253145760227",
+      "url": "https://x.com/onchicelle/status/2125758253145760227",
+      "created_at": "2026-11-26T01:07:16Z",
+      "text": "《这个 16,000 星的开源工具，把剪辑费打到 9 分钱》\n\n关注到GitHub Trending 上的国产开源 AutoClip：11 月 24 日 14,537 星，今天 16,135 星，两天涨超 1,500。干一件事：把播客、访谈、课程长视频自动剪成短视频，带字幕、封面和发布文案。\n\n流程就三步。粘贴一个长视频链接，选目标平台——抖音、小红书、TikTok、Reels、YouTube Shorts、B站——一次最多出 10 条短视频。剪辑、构图、渲染全在本地跑（FFmpeg），源视频不离机；字幕用本地 Whisper 或 SenseVoice 也行。\n\n计算成本：软件本身免费，MIT 开源；花钱只在模型调用上，README 口径：文本模型成本约 0.09–0.20 元一条。对比一下：OpusClip 类工具按月订阅，剪辑外包按条数百元。省的不是软件钱，是把“一条长内容”放大成“十条短内容”的分发杠杆。\n\n门槛要说清楚。需要自己配 API Key（DashScope、OpenAI、Gemini、SiliconFlow），或本地模型（Ollama、LM Studio）；桌面、CLI、MCP、Docker 四种形态，最新 v1.5.8（11 月 2 日）。这是一人维护的项目，README 明说没有实时支持——出问题得自己看文档和 issue。\n\n谁最适合用？自媒体、知识付费、带货切片玩家——长访谈、直播回放、课程是最划算的料。不适合两类人：要全离线又没硬件的，以及指望开箱即用的小白。还有一条红线：剪的是你自己的内容；拿它批量切别人的视频去分发，版权风险一点没少。\n\n总结：工具本身不赚钱，它赚的是“时间差”——别人剪一条的时间，你发十条。一人公司的剪辑环节，正在从“雇人、外包”变成“跑开源加付几毛钱模型费”。\n仓库：https://t.co/njVLKuS87v\n\n#AutoClip #开源 #AI剪辑 #一人公司",
+      "original_text": "《这个 16,000 星的开源工具，把剪辑费打到 9 分钱》\n\n关注到GitHub Trending 上的国产开源 AutoClip：11 月 24 日 14,537 星，今天 16,135 星，两天涨超 1,500。干一件事：把播客、访谈、课程长视频自动剪成短视频，带字幕、封面和发布文案。\n\n流程就三步。粘贴一个长视频链接，选目标平台——抖音、小红书、TikTok、Reels、YouTube Shorts、B站——一次最多出 10 条短视频。剪辑、构图、渲染全在本地跑（FFmpeg），源视频不离机；字幕用本地 Whisper 或 SenseVoice 也行。\n\n计算成本：软件本身免费，MIT 开源；花钱只在模型调用上，README 口径：文本模型成本约 0.09–0.20 元一条。对比一下：OpusClip 类工具按月订阅，剪辑外包按条数百元。省的不是软件钱，是把“一条长内容”放大成“十条短内容”的分发杠杆。\n\n门槛要说清楚。需要自己配 API Key（DashScope、OpenAI、Gemini、SiliconFlow），或本地模型（Ollama、LM Studio）；桌面、CLI、MCP、Docker 四种形态，最新 v1.5.8（11 月 2 日）。这是一人维护的项目，README 明说没有实时支持——出问题得自己看文档和 issue。\n\n谁最适合用？自媒体、知识付费、带货切片玩家——长访谈、直播回放、课程是最划算的料。不适合两类人：要全离线又没硬件的，以及指望开箱即用的小白。还有一条红线：剪的是你自己的内容；拿它批量切别人的视频去分发，版权风险一点没少。\n\n总结：工具本身不赚钱，它赚的是“时间差”——别人剪一条的时间，你发十条。一人公司的剪辑环节，正在从“雇人、外包”变成“跑开源加付几毛钱模型费”。\n仓库：https://t.co/njVLKuS87v\n\n#AutoClip #开源 #AI剪辑 #一人公司",
+      "translation_zh": "《这个 16,000 星的开源工具，把剪辑费打到 9 分钱》\n\n关注到GitHub Trending 上的国产开源 AutoClip：11 月 24 日 14,537 星，今天 16,135 星，两天涨超 1,500。干一件事：把播客、访谈、课程长视频自动剪成短视频，带字幕、封面和发布文案。\n\n流程就三步。粘贴一个长视频链接，选目标平台——抖音、小红书、TikTok、Reels、YouTube Shorts、B站——一次最多出 10 条短视频。剪辑、构图、渲染全在本地跑（FFmpeg），源视频不离机；字幕用本地 Whisper 或 SenseVoice 也行。\n\n计算成本：软件本身免费，MIT 开源；花钱只在模型调用上，README 口径：文本模型成本约 0.09–0.20 元一条。对比一下：OpusClip 类工具按月订阅，剪辑外包按条数百元。省的不是软件钱，是把“一条长内容”放大成“十条短内容”的分发杠杆。\n\n门槛要说清楚。需要自己配 API Key（DashScope、OpenAI、Gemini、SiliconFlow），或本地模型（Ollama、LM Studio）；桌面、CLI、MCP、Docker 四种形态，最新 v1.5.8（11 月 2 日）。这是一人维护的项目，README 明说没有实时支持——出问题得自己看文档和 issue。\n\n谁最适合用？自媒体、知识付费、带货切片玩家——长访谈、直播回放、课程是最划算的料。不适合两类人：要全离线又没硬件的，以及指望开箱即用的小白。还有一条红线：剪的是你自己的内容；拿它批量切别人的视频去分发，版权风险一点没少。\n\n总结：工具本身不赚钱，它赚的是“时间差”——别人剪一条的时间，你发十条。一人公司的剪辑环节，正在从“雇人、外包”变成“跑开源加付几毛钱模型费”。\n仓库：https://t.co/njVLKuS87v\n\n#AutoClip #开源 #AI剪辑 #一人公司",
+      "translation_status": "source_chinese",
+      "author_name": "Hustle Lab",
+      "author_handle": "onchicelle",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2057062248619929600/w566Y_xN_normal.jpg",
+      "author_followers": 149,
+      "author_following": 139,
+      "author_bio": "💰自由职业，不靠打工赚钱！坚信副业和复利投资。\n🧠 每天帮你拆解最值得看的：\n| 赚钱思路 | 副业机会 | 投资案例 | AI工具 | 趋势科技 |\n看热点，更看方法；看趋势，更看深度；看信息，更看机会！",
+      "author_location": "Dubai UAE",
+      "author_joined_at": "2026-04-07T05:05:10Z",
+      "author_verified": false,
+      "links": [
+        "http://github.com/zhouxiaoka/autoclip"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 112
+      }
+    },
+    {
+      "post_id": "2125763943029481667",
+      "url": "https://x.com/Lcxxx_Lee/status/2125763943029481667",
+      "created_at": "2026-11-26T01:29:53Z",
+      "text": "@onchicelle 一条长视频变十条短视频，剪辑这活是真被开源打下来了",
+      "original_text": "@onchicelle 一条长视频变十条短视频，剪辑这活是真被开源打下来了",
+      "translation_zh": "@onchicelle 一条长视频变十条短视频，剪辑这活是真被开源打下来了",
+      "translation_status": "source_chinese",
+      "author_name": "Lcxxx_Lee",
+      "author_handle": "Lcxxx_Lee",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2118408199829422080/jrW24G4b_normal.jpg",
+      "author_followers": 6451,
+      "author_following": 5787,
+      "author_bio": "加密老韭菜（被盗过号版）| CEX内容运营 | 4年Web3➕加密交易经验 | AI\nTelegram: @LcXx0210",
+      "author_location": null,
+      "author_joined_at": "2023-05-12T16:36:54Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 9
+      }
+    },
+    {
+      "post_id": "2125768870732681706",
+      "url": "https://x.com/jojeangsaing/status/2125768870732681706",
+      "created_at": "2026-11-26T01:49:28Z",
+      "text": "@onchicelle 剪辑费打到9分钱，这确实便宜",
+      "original_text": "@onchicelle 剪辑费打到9分钱，这确实便宜",
+      "translation_zh": "@onchicelle 剪辑费打到9分钱，这确实便宜",
+      "translation_status": "source_chinese",
+      "author_name": "nana",
+      "author_handle": "jojeangsaing",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2117491918972293120/6pyNqC6i_normal.jpg",
+      "author_followers": 6559,
+      "author_following": 6898,
+      "author_bio": "交朋友\nWeb3薅羊毛\n美股，AI 可以交流合作",
+      "author_location": null,
+      "author_joined_at": "2026-10-07T07:08:29Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 9
+      }
+    }
+  ]
+}

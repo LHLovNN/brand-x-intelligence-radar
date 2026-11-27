@@ -1,0 +1,68 @@
+{
+  "conversation_id": "2120743229310312896",
+  "anchor_post_id": "2120743229310312896",
+  "summary_zh": "前文围绕用AI做小红书矩阵及高热度Skill可能触发风控展开，收录帖将话题转向具体工具/商品选型与防封号使用体验，提到GitHub、ClawHub和Top10盘点。后续作者继续补充安装命令和克隆链接，无他人回应。上下文显示内容偏教程推广，信息较具体，情绪中性，适合判断其传播价值在运营人群。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2120743229310312896",
+      "url": "https://x.com/XuShifu100/status/2120743229310312896",
+      "created_at": "2026-11-12T04:59:22Z",
+      "text": "https://t.co/YiPfAf6kib",
+      "original_text": "https://t.co/YiPfAf6kib",
+      "translation_zh": "链接：https://t.co/YiPfAf6kib",
+      "translation_status": "translated",
+      "author_name": "大富|AI|WEB3 |",
+      "author_handle": "XuShifu100",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2115549105246347264/-r8T8Fq6_normal.jpg",
+      "author_followers": 7632,
+      "author_following": 7494,
+      "author_bio": "AI + WEB3 增长实战\n工具实测 | 变现路径 | 海外机会",
+      "author_location": "越南",
+      "author_joined_at": "2026-04-02T14:42:29Z",
+      "author_verified": false,
+      "links": [
+        "https://x.com/i/article/2120742528790171649"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 397
+      }
+    },
+    {
+      "post_id": "2120743508294373460",
+      "url": "https://x.com/XuShifu100/status/2120743508294373460",
+      "created_at": "2026-11-12T05:00:28Z",
+      "text": "# 1. 安装图文素材工厂（标题 + 正文 + 3:4 卡片）\nnpx skills add auto-redbook-skills\n\n# 2. 安装 CES 算法互动结构优化 Skill\nnpx skills add xhs-content-creator\n\n# 3. 克隆 139 个运营策略技能合集到本地全局目录\ngit clone https://t.co/CZmUkzcEMx ~/.claude/skills/xiaohongshu-skills",
+      "original_text": "# 1. 安装图文素材工厂（标题 + 正文 + 3:4 卡片）\nnpx skills add auto-redbook-skills\n\n# 2. 安装 CES 算法互动结构优化 Skill\nnpx skills add xhs-content-creator\n\n# 3. 克隆 139 个运营策略技能合集到本地全局目录\ngit clone https://t.co/CZmUkzcEMx ~/.claude/skills/xiaohongshu-skills",
+      "translation_zh": "# 1. 安装图文素材工厂（标题 + 正文 + 3:4 卡片）\nnpx skills add auto-redbook-skills\n\n# 2. 安装 CES 算法互动结构优化 Skill\nnpx skills add xhs-content-creator\n\n# 3. 克隆 139 个运营策略技能合集到本地全局目录\ngit clone https://t.co/CZmUkzcEMx ~/.claude/skills/xiaohongshu-skills",
+      "translation_status": "source_chinese",
+      "author_name": "大富|AI|WEB3 |",
+      "author_handle": "XuShifu100",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2115549105246347264/-r8T8Fq6_normal.jpg",
+      "author_followers": 7632,
+      "author_following": 7494,
+      "author_bio": "AI + WEB3 增长实战\n工具实测 | 变现路径 | 海外机会",
+      "author_location": "越南",
+      "author_joined_at": "2026-04-02T14:42:29Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/vivy-yi/xiaohongshu-skills.git"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 36
+      }
+    }
+  ]
+}

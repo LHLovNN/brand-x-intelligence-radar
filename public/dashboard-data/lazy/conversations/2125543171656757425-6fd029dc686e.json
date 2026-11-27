@@ -1,0 +1,227 @@
+{
+  "conversation_id": "2125543171656757425",
+  "anchor_post_id": "2125543171656757425",
+  "summary_zh": "前文由yhslgg讲自己维护“上架宝”闲鱼暗语词库和代码审查的重复劳动，收录帖借案例转向推荐Mirasim：定时Bot抓小红书/X、AI写脚本与审查交接，并提到额度价格。后续他补入口、优惠码和配置步骤，几人询问或称赞。上下文显示内容偏实操推广，情绪正面，传播价值在教程与优惠信息。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2125543171656757425",
+      "url": "https://x.com/yhslgg/status/2125543171656757425",
+      "created_at": "2026-11-25T10:52:37Z",
+      "text": "【懒鬼必看】老杨开源上架宝的暗语词典，以前一份份手动扒，现在一个 Bot 每天早上自己更新，代码写完还有另一个 AI 帮我审。\n\n先说老杨以前怎么干的。\n\n上架宝的暗语词典 755 条，是从 8 个来源一份份扒下来的：GitHub 仓库、网站、众包词表，下载、合并、去重、对格式，一遍遍弄。\n\n闲鱼的暗语天天在变，扒完一次就开始过期，想更新又得从头来一遍。\n\n写代码这块也累：一个窗口让 AI 写，再开一个窗口让另一个 AI 审，两边来回复制粘贴，代码一长就乱。\n\n后来想明白了，这全是重复活，该交给自动化。\n\n现在用的是 @Mirasim_ADE，搭了两样东西：\n\n1、定时 Bot「上架宝情报更新」：每天早上 8 点，用它自带的社媒数据抓小红书和 X 上讲闲鱼暗语的高赞帖，和上架宝现有词库比对，只留没收录的新写法\n\n2、「代码审查」助手：模型选 GPT-6.2，只挑刺不改代码\n\n第一次跑，结果是这样的：\n\n1、抓到 29 条词库里没有的新写法，小红书 19 条，X 10 条，比如 ysg＝验尸官，k出＝捆出，提确＝提前确认收货\n\n2、它顺手在上架宝里写好了采集脚本和 6 个测试，全过\n\n3、抓数据这块扣了 0.179 个额度，1 个额度 1 刀，不到 2 毛钱美金\n\n更绝的是交接这一步。\n\n我在「代码审查」的私信里 @ 了一下「上架宝情报更新」这个会话，一行代码没复制，它自己去看那边写了啥。\n\n3 分半钟后回我：\n改完再合。6 个测试全过，但去重把当天抓到的 3 条新写法误删了，因为它把代码里的字母也当成了词条。\n\n测试全绿还藏着 bug，要是我自己看，八成就直接合了。\n\n还有个细节：写代码的是 GPT-6.1，审代码的是 GPT-6.2，在同一个工作台里随便切；审查这边走的是我自己的 Codex 账号，一分 Mirasim 额度都没扣。\n\n说白了，这玩意儿真正值钱的不是多开几个 AI，是让它们自己交接：一个写，一个审，中间不用我当搬运工。\n\n以前我一个人扒数据、写脚本、自己审、来回粘；现在 Bot 管扒，Codex 管写，审查助手管挑刺，我就干一件事：看结论，决定合不合。\n\n你想想，招个人维护词库、再招个人审代码，还得带、还得教、还得发工资；这个设一次，每天 8 点准时开工。\n\n而且不止维护词库，做爬虫的、做数据看板的、维护开源项目的，都能这么拆：一个抓，一个写，一个审。\n\n会让 AI 写代码的兄弟一抓一大把，肯让两个 AI 互相挑刺的，bug 在合进去之前就被揪出来了。\n\n不过说句实在的，它还是 Alpha，那次 X 上有一个关键词就搜报错了。\n\n只在本机写写代码、一个窗口就够用的，接着用 Orca、T3 Code 就行；要常驻跑数据、要几个 AI 分工写和审的，可以试试 Mirasim。\n\n链接和优惠码我放评论区了，写代码的兄弟先跑一天试试😃",
+      "original_text": "【懒鬼必看】老杨开源上架宝的暗语词典，以前一份份手动扒，现在一个 Bot 每天早上自己更新，代码写完还有另一个 AI 帮我审。\n\n先说老杨以前怎么干的。\n\n上架宝的暗语词典 755 条，是从 8 个来源一份份扒下来的：GitHub 仓库、网站、众包词表，下载、合并、去重、对格式，一遍遍弄。\n\n闲鱼的暗语天天在变，扒完一次就开始过期，想更新又得从头来一遍。\n\n写代码这块也累：一个窗口让 AI 写，再开一个窗口让另一个 AI 审，两边来回复制粘贴，代码一长就乱。\n\n后来想明白了，这全是重复活，该交给自动化。\n\n现在用的是 @Mirasim_ADE，搭了两样东西：\n\n1、定时 Bot「上架宝情报更新」：每天早上 8 点，用它自带的社媒数据抓小红书和 X 上讲闲鱼暗语的高赞帖，和上架宝现有词库比对，只留没收录的新写法\n\n2、「代码审查」助手：模型选 GPT-6.2，只挑刺不改代码\n\n第一次跑，结果是这样的：\n\n1、抓到 29 条词库里没有的新写法，小红书 19 条，X 10 条，比如 ysg＝验尸官，k出＝捆出，提确＝提前确认收货\n\n2、它顺手在上架宝里写好了采集脚本和 6 个测试，全过\n\n3、抓数据这块扣了 0.179 个额度，1 个额度 1 刀，不到 2 毛钱美金\n\n更绝的是交接这一步。\n\n我在「代码审查」的私信里 @ 了一下「上架宝情报更新」这个会话，一行代码没复制，它自己去看那边写了啥。\n\n3 分半钟后回我：\n改完再合。6 个测试全过，但去重把当天抓到的 3 条新写法误删了，因为它把代码里的字母也当成了词条。\n\n测试全绿还藏着 bug，要是我自己看，八成就直接合了。\n\n还有个细节：写代码的是 GPT-6.1，审代码的是 GPT-6.2，在同一个工作台里随便切；审查这边走的是我自己的 Codex 账号，一分 Mirasim 额度都没扣。\n\n说白了，这玩意儿真正值钱的不是多开几个 AI，是让它们自己交接：一个写，一个审，中间不用我当搬运工。\n\n以前我一个人扒数据、写脚本、自己审、来回粘；现在 Bot 管扒，Codex 管写，审查助手管挑刺，我就干一件事：看结论，决定合不合。\n\n你想想，招个人维护词库、再招个人审代码，还得带、还得教、还得发工资；这个设一次，每天 8 点准时开工。\n\n而且不止维护词库，做爬虫的、做数据看板的、维护开源项目的，都能这么拆：一个抓，一个写，一个审。\n\n会让 AI 写代码的兄弟一抓一大把，肯让两个 AI 互相挑刺的，bug 在合进去之前就被揪出来了。\n\n不过说句实在的，它还是 Alpha，那次 X 上有一个关键词就搜报错了。\n\n只在本机写写代码、一个窗口就够用的，接着用 Orca、T3 Code 就行；要常驻跑数据、要几个 AI 分工写和审的，可以试试 Mirasim。\n\n链接和优惠码我放评论区了，写代码的兄弟先跑一天试试😃",
+      "translation_zh": "【懒鬼必看】老杨开源上架宝的暗语词典，以前一份份手动扒，现在一个 Bot 每天早上自己更新，代码写完还有另一个 AI 帮我审。\n\n先说老杨以前怎么干的。\n\n上架宝的暗语词典 755 条，是从 8 个来源一份份扒下来的：GitHub 仓库、网站、众包词表，下载、合并、去重、对格式，一遍遍弄。\n\n闲鱼的暗语天天在变，扒完一次就开始过期，想更新又得从头来一遍。\n\n写代码这块也累：一个窗口让 AI 写，再开一个窗口让另一个 AI 审，两边来回复制粘贴，代码一长就乱。\n\n后来想明白了，这全是重复活，该交给自动化。\n\n现在用的是 @Mirasim_ADE，搭了两样东西：\n\n1、定时 Bot「上架宝情报更新」：每天早上 8 点，用它自带的社媒数据抓小红书和 X 上讲闲鱼暗语的高赞帖，和上架宝现有词库比对，只留没收录的新写法\n\n2、「代码审查」助手：模型选 GPT-6.2，只挑刺不改代码\n\n第一次跑，结果是这样的：\n\n1、抓到 29 条词库里没有的新写法，小红书 19 条，X 10 条，比如 ysg＝验尸官，k出＝捆出，提确＝提前确认收货\n\n2、它顺手在上架宝里写好了采集脚本和 6 个测试，全过\n\n3、抓数据这块扣了 0.179 个额度，1 个额度 1 刀，不到 2 毛钱美金\n\n更绝的是交接这一步。\n\n我在「代码审查」的私信里 @ 了一下「上架宝情报更新」这个会话，一行代码没复制，它自己去看那边写了啥。\n\n3 分半钟后回我：\n改完再合。6 个测试全过，但去重把当天抓到的 3 条新写法误删了，因为它把代码里的字母也当成了词条。\n\n测试全绿还藏着 bug，要是我自己看，八成就直接合了。\n\n还有个细节：写代码的是 GPT-6.1，审代码的是 GPT-6.2，在同一个工作台里随便切；审查这边走的是我自己的 Codex 账号，一分 Mirasim 额度都没扣。\n\n说白了，这玩意儿真正值钱的不是多开几个 AI，是让它们自己交接：一个写，一个审，中间不用我当搬运工。\n\n以前我一个人扒数据、写脚本、自己审、来回粘；现在 Bot 管扒，Codex 管写，审查助手管挑刺，我就干一件事：看结论，决定合不合。\n\n你想想，招个人维护词库、再招个人审代码，还得带、还得教、还得发工资；这个设一次，每天 8 点准时开工。\n\n而且不止维护词库，做爬虫的、做数据看板的、维护开源项目的，都能这么拆：一个抓，一个写，一个审。\n\n会让 AI 写代码的兄弟一抓一大把，肯让两个 AI 互相挑刺的，bug 在合进去之前就被揪出来了。\n\n不过说句实在的，它还是 Alpha，那次 X 上有一个关键词就搜报错了。\n\n只在本机写写代码、一个窗口就够用的，接着用 Orca、T3 Code 就行；要常驻跑数据、要几个 AI 分工写和审的，可以试试 Mirasim。\n\n链接和优惠码我放评论区了，写代码的兄弟先跑一天试试😃",
+      "translation_status": "source_chinese",
+      "author_name": "老杨啊 | AI产品商业化",
+      "author_handle": "yhslgg",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2004167168632700929/E6cWf4yC_normal.jpg",
+      "author_followers": 29117,
+      "author_following": 1701,
+      "author_bio": "15+年创业老炮，专拆AI时代的产品和生意\n产品后端怎么做，AI怎么进岗位，流量怎么接到成交\n有啥说啥,不藏着.\n合作/交流：DM/VX:yhslgg",
+      "author_location": "shenzhen china",
+      "author_joined_at": "2010-08-01T16:07:26Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2125542776460959744/img/AZr0Ty3fTw95JCTY.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2125542776460959744/img/AZr0Ty3fTw95JCTY.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2125542776460959744/img/AZr0Ty3fTw95JCTY.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              960,
+              599
+            ],
+            "duration_millis": 28066,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video-s.twimg.com/amplify_video/2125542776460959744/pl/q5IERB2GQ_8FFhS5.m3u8?tag=29"
+              },
+              {
+                "bitrate": 256000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2125542776460959744/vid/avc1/432x270/QuLsaRbTfYouoA2o.mp4?tag=29"
+              },
+              {
+                "bitrate": 832000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2125542776460959744/vid/avc1/576x360/B4djaQRvKF8iit6k.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2125542776460959744/vid/avc1/1152x720/0kAB1VBe-xrCLqTL.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2125542776460959744/vid/avc1/1920x1198/G_Tfm5gQhpyAmn8s.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/yhslgg/status/2125543171656757425/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 9,
+        "reposts": 0,
+        "replies": 8,
+        "quotes": 0,
+        "bookmarks": 3,
+        "views": 870
+      }
+    },
+    {
+      "post_id": "2125543176106631606",
+      "url": "https://x.com/yhslgg/status/2125543176106631606",
+      "created_at": "2026-11-25T10:52:38Z",
+      "text": "Mirasim 入口：https://t.co/cLPOd2Bu4x\n\n优惠码：MIRA1111\n\n老杨整理好了：\n\n1、定时 Bot：左边时钟图标「自动化」→ 新建 → 填时间和一句话指令 → 智能体选 Codex\n\n2、要它用自带的数据：指令里写明「用 Mirasim 自带的社媒数据插件」，抓一次扣 0.01 个额度\n\n3、审查助手：「成员」→ 新建助手 → 写清只评不改 → 智能体选 Codex、模型选你想要的\n\n4、交接：在助手的私信里输入 @，选「对话」里那个会话，它就会自己去看那边写的东西\n\n5、账号：自己有 Codex、Cursor、OpenCode 这类账号或 Key 可以带进去；没有就用统一 Credit，$10 = 10 credits",
+      "original_text": "Mirasim 入口：https://t.co/cLPOd2Bu4x\n\n优惠码：MIRA1111\n\n老杨整理好了：\n\n1、定时 Bot：左边时钟图标「自动化」→ 新建 → 填时间和一句话指令 → 智能体选 Codex\n\n2、要它用自带的数据：指令里写明「用 Mirasim 自带的社媒数据插件」，抓一次扣 0.01 个额度\n\n3、审查助手：「成员」→ 新建助手 → 写清只评不改 → 智能体选 Codex、模型选你想要的\n\n4、交接：在助手的私信里输入 @，选「对话」里那个会话，它就会自己去看那边写的东西\n\n5、账号：自己有 Codex、Cursor、OpenCode 这类账号或 Key 可以带进去；没有就用统一 Credit，$10 = 10 credits",
+      "translation_zh": "Mirasim 入口：https://t.co/cLPOd2Bu4x\n\n优惠码：MIRA1111\n\n老杨整理好了：\n\n1、定时 Bot：左边时钟图标「自动化」→ 新建 → 填时间和一句话指令 → 智能体选 Codex\n\n2、要它用自带的数据：指令里写明「用 Mirasim 自带的社媒数据插件」，抓一次扣 0.01 个额度\n\n3、审查助手：「成员」→ 新建助手 → 写清只评不改 → 智能体选 Codex、模型选你想要的\n\n4、交接：在助手的私信里输入 @，选「对话」里那个会话，它就会自己去看那边写的东西\n\n5、账号：自己有 Codex、Cursor、OpenCode 这类账号或 Key 可以带进去；没有就用统一 Credit，$10 = 10 credits",
+      "translation_status": "source_chinese",
+      "author_name": "老杨啊 | AI产品商业化",
+      "author_handle": "yhslgg",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2004167168632700929/E6cWf4yC_normal.jpg",
+      "author_followers": 29117,
+      "author_following": 1701,
+      "author_bio": "15+年创业老炮，专拆AI时代的产品和生意\n产品后端怎么做，AI怎么进岗位，流量怎么接到成交\n有啥说啥,不藏着.\n合作/交流：DM/VX:yhslgg",
+      "author_location": "shenzhen china",
+      "author_joined_at": "2010-08-01T16:07:26Z",
+      "author_verified": false,
+      "links": [
+        "https://mirasim.ai/r/a-bas95wft"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HX9x-VIaEAAZsAk.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HX9x-VIaEAAZsAk.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HX9x-VIaEAAZsAk.jpg",
+          "expanded_url": "https://x.com/yhslgg/status/2125543176106631606/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 249
+      }
+    },
+    {
+      "post_id": "2125543705528725946",
+      "url": "https://x.com/servasyy_ai/status/2125543705528725946",
+      "created_at": "2026-11-25T10:54:44Z",
+      "text": "@yhslgg Mirasim 不是最近做了一个媲美 T3 Code的吗？",
+      "original_text": "@yhslgg Mirasim 不是最近做了一个媲美 T3 Code的吗？",
+      "translation_zh": "@yhslgg Mirasim 不是最近做了一个媲美 T3 Code的吗？",
+      "translation_status": "source_chinese",
+      "author_name": "huangserva",
+      "author_handle": "servasyy_ai",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1998970271458537475/jcT0J2z6_normal.jpg",
+      "author_followers": 43565,
+      "author_following": 873,
+      "author_bio": "古早程序员 | AI出海 | 自由职业\n机车游侠&机速购&骑享租创始人\n15年前 freelance 起步 → 连续创业者 → 亏过1个亿，逆风翻盘中\n分享创业，AI，读书，生活，健身\nOfficial X channel of SERVASYY LLC",
+      "author_location": null,
+      "author_joined_at": "2025-12-11T04:11:24Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 93
+      }
+    },
+    {
+      "post_id": "2125546459890086329",
+      "url": "https://x.com/cl223/status/2125546459890086329",
+      "created_at": "2026-11-25T11:05:41Z",
+      "text": "@yhslgg Bot自己更新还让AI审，这懒偷得高级",
+      "original_text": "@yhslgg Bot自己更新还让AI审，这懒偷得高级",
+      "translation_zh": "@yhslgg Bot自己更新还让AI审，这懒偷得高级",
+      "translation_status": "source_chinese",
+      "author_name": "布丁是我",
+      "author_handle": "cl223",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1419173720329920513/SSauL007_normal.jpg",
+      "author_followers": 430,
+      "author_following": 325,
+      "author_bio": "🍮 布丁是我\n🚀 AI 工具实测｜ChatGPT · Claude · Gemini\n💳 U卡开卡避坑｜🏦 海外账户\n📶 eSIM 漫游攻略｜🧳 数字游民进行时\n💬 问题评论区聊",
+      "author_location": null,
+      "author_joined_at": "2020-08-19T16:58:28Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 8
+      }
+    },
+    {
+      "post_id": "2125556997664002331",
+      "url": "https://x.com/leaf_sanren/status/2125556997664002331",
+      "created_at": "2026-11-25T11:47:33Z",
+      "text": "@yhslgg 哈哈哈，好的，我是懒鬼，我来严肃学习",
+      "original_text": "@yhslgg 哈哈哈，好的，我是懒鬼，我来严肃学习",
+      "translation_zh": "@yhslgg 哈哈哈，好的，我是懒鬼，我来严肃学习",
+      "translation_status": "source_chinese",
+      "author_name": "Leaf Yeah!",
+      "author_handle": "leaf_sanren",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2075612818485792768/zgT9vETH_normal.jpg",
+      "author_followers": 7917,
+      "author_following": 180,
+      "author_bio": "🧘‍♂️ 哲学｜独立开发｜抖音万粉\n🤖 Claude 舔狗，Antigravity / DSH / Grok Bot  重度用户\n🤫AIGC不难，核心是和AI对齐审美\n✍️开源：SeeCut（数字人+网感剪辑）、easy-jianying（直推剪映草稿）、talk-to-fengge（抖音百万播放demo并变现）",
+      "author_location": "https://github.com/YeJe-cpu",
+      "author_joined_at": "2025-11-12T03:10:35Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 29
+      }
+    },
+    {
+      "post_id": "2125579712336671109",
+      "url": "https://x.com/jedeeai/status/2125579712336671109",
+      "created_at": "2026-11-25T13:17:49Z",
+      "text": "@yhslgg 这个产品做的非常好！",
+      "original_text": "@yhslgg 这个产品做的非常好！",
+      "translation_zh": "@yhslgg 这个产品做的非常好！",
+      "translation_status": "source_chinese",
+      "author_name": "琳小航",
+      "author_handle": "jedeeai",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2100519613641687040/of4NVUmm_normal.jpg",
+      "author_followers": 9384,
+      "author_following": 984,
+      "author_bio": "X榜单:https://t.co/GQD6YNSl44\nX的AI信息流:https://t.co/c0Vm7c4OSs\n专注分享AI Agent工作流｜AI 编程实战｜小白避坑教程\n生财AI教练｜All in AI & 独立开发",
+      "author_location": "深圳 · 个人主页👉",
+      "author_joined_at": "2026-02-26T16:40:25Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 38
+      }
+    }
+  ]
+}

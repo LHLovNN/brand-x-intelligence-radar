@@ -1,0 +1,87 @@
+{
+  "conversation_id": "2123556631300718612",
+  "anchor_post_id": "2123556631300718612",
+  "summary_zh": "前文围绕港大新开源的手机AI Agent PhoneGo，介绍其在安卓端用自然语言跨App操作、CLI+GUI混合执行及效率数据。收录帖用“小红书找港大附近酒店、携程查当晚价格”的例子把技术转到具体平台、酒店价格查询体验。后续作者补充GitHub地址，有助核验项目真实性；语气偏推荐，传播点在开源、可安装和效率提升。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2123556631300718612",
+      "url": "https://x.com/aigclink/status/2123556631300718612",
+      "created_at": "2026-11-19T23:18:49Z",
+      "text": "港大又出新项目，刚开源了一个跑在手机上的Agent，直接装Android上，用自然语言让AI帮你操作各种App\n\n无需电脑，也不用每一步都截图让模型猜怎么操作\n\n叫PhoneGo，比如说，你让它去小红书找一家香港大学附近的酒店，然后再到携程查询当晚价格\n\n它就会先搜小红书笔记、提取酒店名称，再切换携程搜索同一家酒店，查询可订日期和房价，最后把结果反馈给你\n\n全程无需你逐步指导它打开哪个App、点哪个按钮，App被藏在虚拟屏幕里驱动，不影响你自己用手机\n\n比纯视觉手机Agent，操作步骤减少了47%、执行耗时减少了56%、Token消耗减少了55%\n\n核心是CLI+GUI混合执行，已知的App操作路径直接调用命令，遇到陌生界面才让视觉模型接管\n\n它的工作流程是：离线探索App，建立App Navigation Map，把页面和导航路径编译成可执行命令\n\n在线执行任务，AI理解用户意图，优先调用已有命令，直接执行熟悉的操作流程\n\n然后视觉兜底，遇到未知页面、动态内容或者异常状态，再通过视觉模型识别屏幕、点击、滑动\n\n跨App协作，把一个应用获取的信息传递给另一个应用，完成连续任务\n\n目前支持Android 14+、ARM64，提供APK可直接安装；需自备模型API Key，通过无线调试和无障碍服务操作手机，大部分任务可后台执行\n\n#PhoneGo #PhoneAgent #手机AI",
+      "original_text": "港大又出新项目，刚开源了一个跑在手机上的Agent，直接装Android上，用自然语言让AI帮你操作各种App\n\n无需电脑，也不用每一步都截图让模型猜怎么操作\n\n叫PhoneGo，比如说，你让它去小红书找一家香港大学附近的酒店，然后再到携程查询当晚价格\n\n它就会先搜小红书笔记、提取酒店名称，再切换携程搜索同一家酒店，查询可订日期和房价，最后把结果反馈给你\n\n全程无需你逐步指导它打开哪个App、点哪个按钮，App被藏在虚拟屏幕里驱动，不影响你自己用手机\n\n比纯视觉手机Agent，操作步骤减少了47%、执行耗时减少了56%、Token消耗减少了55%\n\n核心是CLI+GUI混合执行，已知的App操作路径直接调用命令，遇到陌生界面才让视觉模型接管\n\n它的工作流程是：离线探索App，建立App Navigation Map，把页面和导航路径编译成可执行命令\n\n在线执行任务，AI理解用户意图，优先调用已有命令，直接执行熟悉的操作流程\n\n然后视觉兜底，遇到未知页面、动态内容或者异常状态，再通过视觉模型识别屏幕、点击、滑动\n\n跨App协作，把一个应用获取的信息传递给另一个应用，完成连续任务\n\n目前支持Android 14+、ARM64，提供APK可直接安装；需自备模型API Key，通过无线调试和无障碍服务操作手机，大部分任务可后台执行\n\n#PhoneGo #PhoneAgent #手机AI",
+      "translation_zh": "港大又出新项目，刚开源了一个跑在手机上的Agent，直接装Android上，用自然语言让AI帮你操作各种App\n\n无需电脑，也不用每一步都截图让模型猜怎么操作\n\n叫PhoneGo，比如说，你让它去小红书找一家香港大学附近的酒店，然后再到携程查询当晚价格\n\n它就会先搜小红书笔记、提取酒店名称，再切换携程搜索同一家酒店，查询可订日期和房价，最后把结果反馈给你\n\n全程无需你逐步指导它打开哪个App、点哪个按钮，App被藏在虚拟屏幕里驱动，不影响你自己用手机\n\n比纯视觉手机Agent，操作步骤减少了47%、执行耗时减少了56%、Token消耗减少了55%\n\n核心是CLI+GUI混合执行，已知的App操作路径直接调用命令，遇到陌生界面才让视觉模型接管\n\n它的工作流程是：离线探索App，建立App Navigation Map，把页面和导航路径编译成可执行命令\n\n在线执行任务，AI理解用户意图，优先调用已有命令，直接执行熟悉的操作流程\n\n然后视觉兜底，遇到未知页面、动态内容或者异常状态，再通过视觉模型识别屏幕、点击、滑动\n\n跨App协作，把一个应用获取的信息传递给另一个应用，完成连续任务\n\n目前支持Android 14+、ARM64，提供APK可直接安装；需自备模型API Key，通过无线调试和无障碍服务操作手机，大部分任务可后台执行\n\n#PhoneGo #PhoneAgent #手机AI",
+      "translation_status": "source_chinese",
+      "author_name": "AIGCLINK",
+      "author_handle": "aigclink",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1729450995850027008/gllXr6bh_normal.jpg",
+      "author_followers": 38339,
+      "author_following": 2052,
+      "author_bio": "致力于让每个想拥抱AI的人都能找到适合自己的AI产品，助力企业定制AIGC应用",
+      "author_location": null,
+      "author_joined_at": "2022-06-10T07:44:54Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/tweet_video_thumb/HXfaVVjbYAAszpR.jpg",
+          "type": "animated_gif",
+          "preview_image_url": "https://pbs.twimg.com/tweet_video_thumb/HXfaVVjbYAAszpR.jpg",
+          "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/HXfaVVjbYAAszpR.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              3,
+              2
+            ],
+            "variants": [
+              {
+                "bitrate": 0,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/tweet_video/HXfaVVjbYAAszpR.mp4"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/aigclink/status/2123556631300718612/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 30,
+        "reposts": 5,
+        "replies": 11,
+        "quotes": 1,
+        "bookmarks": 51,
+        "views": 4084
+      }
+    },
+    {
+      "post_id": "2123556635448852600",
+      "url": "https://x.com/aigclink/status/2123556635448852600",
+      "created_at": "2026-11-19T23:18:50Z",
+      "text": "github：https://t.co/ZoMp0nBudl",
+      "original_text": "github：https://t.co/ZoMp0nBudl",
+      "translation_zh": "GitHub 地址：https://t.co/ZoMp0nBudl",
+      "translation_status": "translated",
+      "author_name": "AIGCLINK",
+      "author_handle": "aigclink",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1729450995850027008/gllXr6bh_normal.jpg",
+      "author_followers": 38339,
+      "author_following": 2052,
+      "author_bio": "致力于让每个想拥抱AI的人都能找到适合自己的AI产品，助力企业定制AIGC应用",
+      "author_location": null,
+      "author_joined_at": "2022-06-10T07:44:54Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/HKUDS/PhoneGo"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 2,
+        "reposts": 1,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 3,
+        "views": 387
+      }
+    }
+  ]
+}

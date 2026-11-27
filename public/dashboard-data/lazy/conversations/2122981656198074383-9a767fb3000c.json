@@ -1,0 +1,110 @@
+{
+  "conversation_id": "2122981656198074383",
+  "anchor_post_id": "2122981656198074383",
+  "summary_zh": "前文延续作者此前用 DeepSeek Harness 搭建自媒体工作台的话题，收录帖把讨论具体转向工具体验：补充 OpenBiliClaw 做全网热点收集、social-auto-upload 做多平台分发，并提醒需自行对接及账号风控风险。后续仅有人表示“值得研究”。上下文显示这是个人试用分享，情绪偏正向但带谨慎，传播价值在工具推荐与工作流参考。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2122981656198074383",
+      "url": "https://x.com/xiaomovps/status/2122981656198074383",
+      "created_at": "2026-11-18T09:14:04Z",
+      "text": "前面我分享了自己使用 DeepSeek Harness 搭建的自媒体工作台，这次补全全网信息获取和多平台分发\n\n当时主要用了 3 个插件，但是在实际使用过程中，我发现其实还缺了两个最关键的部分，一个是全网信息获取，还有一个就是多平台分发\n\n所以我又找了两个开源项目，自己也体验了一下，刚好把前面的工作流补充完整\n\n第一个是 OpenBiliClaw，主要解决全网热点收集的问题\n\n它可以从 X、B 站、小红书、抖音、YouTube 等多个平台寻找相关内容，还可以根据自己的兴趣和关注方向去筛选信息，慢慢调整推荐结果\n\n像我平时主要关注 AI 和开源项目，就可以让它帮我收集这些领域的内容，再交给 DeepSeek Harness 去整理，筛选一些值得写的选题，不用每天自己打开好几个平台去找\n\n而且项目已经支持 DeepSeek Harness 插件，可以直接接入之前搭建的工作台\n\n第二个是 social-auto-upload，主要解决多平台分发的问题\n\n因为前面内容已经创作好了，最后还需要自己去不同的平台上传，这一步其实也挺麻烦的\n\n这个项目支持抖音、小红书、B 站、视频号、YouTube 等多个平台的视频自动上传，配置好之后，可以省去很多重复操作\n\n不过这里需要注意，它不是 DeepSeek Harness 的原生插件，需要自己额外对接，而且自动发布涉及账号登录和平台风控，我建议先拿小号去测试，不要直接使用主账号，也不能保证没有封号的风险\n\n这样的话，前面分享的 3 个插件，再加上这次的 2 个项目，就把整个自媒体工作流串联起来了\n\n从全网热点收集、内容创作、排版配图，再到最后的多平台分发，基本上都能通过不同的插件和项目去完成\n\n其实不管是运营 X、小红书还是抖音，整个流程都差不多，大家也可以根据自己的需求去调整",
+      "original_text": "前面我分享了自己使用 DeepSeek Harness 搭建的自媒体工作台，这次补全全网信息获取和多平台分发\n\n当时主要用了 3 个插件，但是在实际使用过程中，我发现其实还缺了两个最关键的部分，一个是全网信息获取，还有一个就是多平台分发\n\n所以我又找了两个开源项目，自己也体验了一下，刚好把前面的工作流补充完整\n\n第一个是 OpenBiliClaw，主要解决全网热点收集的问题\n\n它可以从 X、B 站、小红书、抖音、YouTube 等多个平台寻找相关内容，还可以根据自己的兴趣和关注方向去筛选信息，慢慢调整推荐结果\n\n像我平时主要关注 AI 和开源项目，就可以让它帮我收集这些领域的内容，再交给 DeepSeek Harness 去整理，筛选一些值得写的选题，不用每天自己打开好几个平台去找\n\n而且项目已经支持 DeepSeek Harness 插件，可以直接接入之前搭建的工作台\n\n第二个是 social-auto-upload，主要解决多平台分发的问题\n\n因为前面内容已经创作好了，最后还需要自己去不同的平台上传，这一步其实也挺麻烦的\n\n这个项目支持抖音、小红书、B 站、视频号、YouTube 等多个平台的视频自动上传，配置好之后，可以省去很多重复操作\n\n不过这里需要注意，它不是 DeepSeek Harness 的原生插件，需要自己额外对接，而且自动发布涉及账号登录和平台风控，我建议先拿小号去测试，不要直接使用主账号，也不能保证没有封号的风险\n\n这样的话，前面分享的 3 个插件，再加上这次的 2 个项目，就把整个自媒体工作流串联起来了\n\n从全网热点收集、内容创作、排版配图，再到最后的多平台分发，基本上都能通过不同的插件和项目去完成\n\n其实不管是运营 X、小红书还是抖音，整个流程都差不多，大家也可以根据自己的需求去调整",
+      "translation_zh": "前面我分享了自己使用 DeepSeek Harness 搭建的自媒体工作台，这次补全全网信息获取和多平台分发\n\n当时主要用了 3 个插件，但是在实际使用过程中，我发现其实还缺了两个最关键的部分，一个是全网信息获取，还有一个就是多平台分发\n\n所以我又找了两个开源项目，自己也体验了一下，刚好把前面的工作流补充完整\n\n第一个是 OpenBiliClaw，主要解决全网热点收集的问题\n\n它可以从 X、B 站、小红书、抖音、YouTube 等多个平台寻找相关内容，还可以根据自己的兴趣和关注方向去筛选信息，慢慢调整推荐结果\n\n像我平时主要关注 AI 和开源项目，就可以让它帮我收集这些领域的内容，再交给 DeepSeek Harness 去整理，筛选一些值得写的选题，不用每天自己打开好几个平台去找\n\n而且项目已经支持 DeepSeek Harness 插件，可以直接接入之前搭建的工作台\n\n第二个是 social-auto-upload，主要解决多平台分发的问题\n\n因为前面内容已经创作好了，最后还需要自己去不同的平台上传，这一步其实也挺麻烦的\n\n这个项目支持抖音、小红书、B 站、视频号、YouTube 等多个平台的视频自动上传，配置好之后，可以省去很多重复操作\n\n不过这里需要注意，它不是 DeepSeek Harness 的原生插件，需要自己额外对接，而且自动发布涉及账号登录和平台风控，我建议先拿小号去测试，不要直接使用主账号，也不能保证没有封号的风险\n\n这样的话，前面分享的 3 个插件，再加上这次的 2 个项目，就把整个自媒体工作流串联起来了\n\n从全网热点收集、内容创作、排版配图，再到最后的多平台分发，基本上都能通过不同的插件和项目去完成\n\n其实不管是运营 X、小红书还是抖音，整个流程都差不多，大家也可以根据自己的需求去调整",
+      "translation_status": "source_chinese",
+      "author_name": "小墨同学",
+      "author_handle": "xiaomovps",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2006310479975858176/PWGiJqg9_normal.jpg",
+      "author_followers": 18450,
+      "author_following": 414,
+      "author_bio": "🧠  AI Agent 实操｜Pi / DeepSeek Harness / Grok Bot / Claude Code\n💸 天天实测 Agent 怎么更省 token、更好用\n🔧 ESP32 DIY：把 Agent 装进小硬件\n📘 Pi 蓝皮书作者 · 合作 wx：lucky_bobe",
+      "author_location": "Osaka-shi Kita-ku, Osaka",
+      "author_joined_at": "2022-09-20T15:56:03Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2122981502841741312/img/PhmoO1FJ0dUADEj0.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2122981502841741312/img/PhmoO1FJ0dUADEj0.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2122981502841741312/img/PhmoO1FJ0dUADEj0.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              16,
+              9
+            ],
+            "duration_millis": 29650,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video-s.twimg.com/amplify_video/2122981502841741312/pl/-awS8aOUi2TJCy3W.m3u8?tag=29"
+              },
+              {
+                "bitrate": 256000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2122981502841741312/vid/avc1/480x270/-UBxql6S-sBV2jtt.mp4?tag=29"
+              },
+              {
+                "bitrate": 832000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2122981502841741312/vid/avc1/640x360/4l0y5WDzaYChKoQW.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2122981502841741312/vid/avc1/1280x720/NkvAqKyeMxjV9lLU.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2122981502841741312/vid/avc1/1920x1080/e6jyH8Il_87hJRb4.mp4?tag=29"
+              },
+              {
+                "bitrate": 25128000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2122981502841741312/vid/avc1/3360x1890/e05jeua9UjZvLaDn.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/xiaomovps/status/2122981656198074383/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 44,
+        "reposts": 4,
+        "replies": 1,
+        "quotes": 2,
+        "bookmarks": 44,
+        "views": 4451
+      }
+    },
+    {
+      "post_id": "2123196465396985884",
+      "url": "https://x.com/PanXing0827/status/2123196465396985884",
+      "created_at": "2026-11-18T23:27:39Z",
+      "text": "@xiaomovps 值得研究🤡",
+      "original_text": "@xiaomovps 值得研究🤡",
+      "translation_zh": "@xiaomovps 值得研究🤡",
+      "translation_status": "translated",
+      "author_name": "王小丑",
+      "author_handle": "PanXing0827",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1841464720622243840/gea6wfZ3_normal.jpg",
+      "author_followers": 9826,
+      "author_following": 3335,
+      "author_bio": "科学上网 | 海外基建｜数字移民｜美女舔狗｜ 用 AI 挣到 100 万｜PUT ON A HAPPY FACE！🤡",
+      "author_location": null,
+      "author_joined_at": "2023-07-04T07:27:00Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 23
+      }
+    }
+  ]
+}

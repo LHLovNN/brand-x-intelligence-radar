@@ -1,0 +1,1653 @@
+{
+  "platform": "xiaohongshu",
+  "display_name": "小红书",
+  "topic_label": "小红书增长方法",
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T00:18:51Z",
+  "generated_at_label": "2026-11-24 08:18 BJT",
+  "window_label": "2026-11-23 08:00 BJT - 2026-11-24 08:00 BJT",
+  "items": [
+    {
+      "post_id": "2124958040113967604",
+      "created_at": "2026-11-23T20:07:31Z",
+      "time": "2026-11-23T20:07:31Z",
+      "url": "https://x.com/octopusaia/status/2124958040113967604",
+      "external_href": "https://x.com/octopusaia/status/2124958040113967604",
+      "language": "zh",
+      "text": "同一篇稿子粘贴五遍，时间全耗在重复劳动上\n\n多平台运营最烦的不是写，是发：知乎发一遍、微博再贴一遍、小红书又来一遍，图片还得逐个传。\n\nMultiPost 就是干这个的：一个开源浏览器扩展，写一次，同步发到 10 多个平台。GitHub 上 3,945 星，Apache-2.0 开源，仓在 https://t.co/yvzeMParXW。官方文档写的平台包括知乎、微博、小红书、抖音、B站、YouTube、TikTok、Instagram、Facebook、X、LinkedIn。文字、图片、视频、音频、链接都能发，扩展本身不用登录、不用注册、不用 API Key。\n\n照着装，5 分钟能发第一篇：\n\n第1步：装扩展\nChrome 打开 Chrome 网上应用店搜 MultiPost，点「添加至 Chrome」；用 Edge 的去 Edge 加载项里搜同名装。装完浏览器右上角会出现它的图标，先点开看一眼，确认能打开再往下走。\n\n第2步：写稿子（两个入口选一个）\n入口一：打开官方 Markdown 编辑器 https://t.co/qAn6y3O4tD，直接在里面写，标题、正文、图片按 Markdown 排好，适合长文。\n入口二：在扩展里新建发布，把现成文案粘进去，图片视频逐个加。\n第一次先拿一篇短的试，别一上来就发长文。\n\n第3步：选平台，一次发出去\n写完在发布页勾上你要发的平台（比如先只勾知乎+微博两个），点发布。会看到它逐个平台执行发布任务，哪个失败会单独标出来，改完只重发失败的那个，不用全部重来。\n\n第4步（进阶，可跳过）：想自动化再看 API\n它给了两条路：Extension API 是在你自己的网页里调用扩展发布；Web API 是在脚本或服务器里用 REST 接口调用。普通人用前三步就够了，API 是给要批量跑的人准备的，文档在 https://t.co/hdBfAyU7Ek。\n\n两个提醒：\n一是商店版和开源仓不完全一样——README 写明了，Chrome/Edge 商店包由主仓库构建、带一个未开源的 Agent 模块，这个仓只放 Apache-2.0 开源部分。介意的话自己看源码再装。\n二是第一次发之前，先在每个平台确认自己是登录状态，扩展是借你浏览器里已登录的账号去发的，哪个平台没登录，哪个就会失败。\n\n适合谁：同时养三四个平台账号、每篇都要同步的人。只发一个平台的，用不上它，别硬装。",
+      "clean_text": "同一篇稿子粘贴五遍，时间全耗在重复劳动上\n\n多平台运营最烦的不是写，是发：知乎发一遍、微博再贴一遍、小红书又来一遍，图片还得逐个传。\n\nMultiPost 就是干这个的：一个开源浏览器扩展，写一次，同步发到 10 多个平台。GitHub 上 3,945 星，Apache-2.0 开源，仓在 https://t.co/yvzeMParXW。官方文档写的平台包括知乎、微博、小红书、抖音、B站、YouTube、TikTok、Instagram、Facebook、X、LinkedIn。文字、图片、视频、音频、链接都能发，扩展本身不用登录、不用注册、不用 API Key。\n\n照着装，5 分钟能发第一篇：\n\n第1步：装扩展\nChrome 打开 Chrome 网上应用店搜 MultiPost，点「添加至 Chrome」；用 Edge 的去 Edge 加载项里搜同名装。装完浏览器右上角会出现它的图标，先点开看一眼，确认能打开再往下走。\n\n第2步：写稿子（两个入口选一个）\n入口一：打开官方 Markdown 编辑器 https://t.co/qAn6y3O4tD，直接在里面写，标题、正文、图片按 Markdown 排好，适合长文。\n入口二：在扩展里新建发布，把现成文案粘进去，图片视频逐个加。\n第一次先拿一篇短的试，别一上来就发长文。\n\n第3步：选平台，一次发出去\n写完在发布页勾上你要发的平台（比如先只勾知乎+微博两个），点发布。会看到它逐个平台执行发布任务，哪个失败会单独标出来，改完只重发失败的那个，不用全部重来。\n\n第4步（进阶，可跳过）：想自动化再看 API\n它给了两条路：Extension API 是在你自己的网页里调用扩展发布；Web API 是在脚本或服务器里用 REST 接口调用。普通人用前三步就够了，API 是给要批量跑的人准备的，文档在 https://t.co/hdBfAyU7Ek。\n\n两个提醒：\n一是商店版和开源仓不完全一样——README 写明了，Chrome/Edge 商店包由主仓库构建、带一个未开源的 Agent 模块，这个仓只放 Apache-2.0 开源部分。介意的话自己看源码再装。\n二是第一次发之前，先在每个平台确认自己是登录状态，扩展是借你浏览器里已登录的账号去发的，哪个平台没登录，哪个就会失败。\n\n适合谁：同时养三四个平台账号、每篇都要同步的人。只发一个平台的，用不上它，别硬装。",
+      "original_text": "同一篇稿子粘贴五遍，时间全耗在重复劳动上\n\n多平台运营最烦的不是写，是发：知乎发一遍、微博再贴一遍、小红书又来一遍，图片还得逐个传。\n\nMultiPost 就是干这个的：一个开源浏览器扩展，写一次，同步发到 10 多个平台。GitHub 上 3,945 星，Apache-2.0 开源，仓在 https://t.co/yvzeMParXW。官方文档写的平台包括知乎、微博、小红书、抖音、B站、YouTube、TikTok、Instagram、Facebook、X、LinkedIn。文字、图片、视频、音频、链接都能发，扩展本身不用登录、不用注册、不用 API Key。\n\n照着装，5 分钟能发第一篇：\n\n第1步：装扩展\nChrome 打开 Chrome 网上应用店搜 MultiPost，点「添加至 Chrome」；用 Edge 的去 Edge 加载项里搜同名装。装完浏览器右上角会出现它的图标，先点开看一眼，确认能打开再往下走。\n\n第2步：写稿子（两个入口选一个）\n入口一：打开官方 Markdown 编辑器 https://t.co/qAn6y3O4tD，直接在里面写，标题、正文、图片按 Markdown 排好，适合长文。\n入口二：在扩展里新建发布，把现成文案粘进去，图片视频逐个加。\n第一次先拿一篇短的试，别一上来就发长文。\n\n第3步：选平台，一次发出去\n写完在发布页勾上你要发的平台（比如先只勾知乎+微博两个），点发布。会看到它逐个平台执行发布任务，哪个失败会单独标出来，改完只重发失败的那个，不用全部重来。\n\n第4步（进阶，可跳过）：想自动化再看 API\n它给了两条路：Extension API 是在你自己的网页里调用扩展发布；Web API 是在脚本或服务器里用 REST 接口调用。普通人用前三步就够了，API 是给要批量跑的人准备的，文档在 https://t.co/hdBfAyU7Ek。\n\n两个提醒：\n一是商店版和开源仓不完全一样——README 写明了，Chrome/Edge 商店包由主仓库构建、带一个未开源的 Agent 模块，这个仓只放 Apache-2.0 开源部分。介意的话自己看源码再装。\n二是第一次发之前，先在每个平台确认自己是登录状态，扩展是借你浏览器里已登录的账号去发的，哪个平台没登录，哪个就会失败。\n\n适合谁：同时养三四个平台账号、每篇都要同步的人。只发一个平台的，用不上它，别硬装。",
+      "translation_zh": "同一篇稿子粘贴五遍，时间全耗在重复劳动上\n\n多平台运营最烦的不是写，是发：知乎发一遍、微博再贴一遍、小红书又来一遍，图片还得逐个传。\n\nMultiPost 就是干这个的：一个开源浏览器扩展，写一次，同步发到 10 多个平台。GitHub 上 3,945 星，Apache-2.0 开源，仓在 https://t.co/yvzeMParXW。官方文档写的平台包括知乎、微博、小红书、抖音、B站、YouTube、TikTok、Instagram、Facebook、X、LinkedIn。文字、图片、视频、音频、链接都能发，扩展本身不用登录、不用注册、不用 API Key。\n\n照着装，5 分钟能发第一篇：\n\n第1步：装扩展\nChrome 打开 Chrome 网上应用店搜 MultiPost，点「添加至 Chrome」；用 Edge 的去 Edge 加载项里搜同名装。装完浏览器右上角会出现它的图标，先点开看一眼，确认能打开再往下走。\n\n第2步：写稿子（两个入口选一个）\n入口一：打开官方 Markdown 编辑器 https://t.co/qAn6y3O4tD，直接在里面写，标题、正文、图片按 Markdown 排好，适合长文。\n入口二：在扩展里新建发布，把现成文案粘进去，图片视频逐个加。\n第一次先拿一篇短的试，别一上来就发长文。\n\n第3步：选平台，一次发出去\n写完在发布页勾上你要发的平台（比如先只勾知乎+微博两个），点发布。会看到它逐个平台执行发布任务，哪个失败会单独标出来，改完只重发失败的那个，不用全部重来。\n\n第4步（进阶，可跳过）：想自动化再看 API\n它给了两条路：Extension API 是在你自己的网页里调用扩展发布；Web API 是在脚本或服务器里用 REST 接口调用。普通人用前三步就够了，API 是给要批量跑的人准备的，文档在 https://t.co/hdBfAyU7Ek。\n\n两个提醒：\n一是商店版和开源仓不完全一样——README 写明了，Chrome/Edge 商店包由主仓库构建、带一个未开源的 Agent 模块，这个仓只放 Apache-2.0 开源部分。介意的话自己看源码再装。\n二是第一次发之前，先在每个平台确认自己是登录状态，扩展是借你浏览器里已登录的账号去发的，哪个平台没登录，哪个就会失败。\n\n适合谁：同时养三四个平台账号、每篇都要同步的人。只发一个平台的，用不上它，别硬装。",
+      "translation_status": "source_chinese",
+      "summary_zh": "X 上关于小红书增长、运营或变现的方法论分享。",
+      "platform": "xiaohongshu",
+      "brand": "platform_xiaohongshu",
+      "source_type": "小红书增长方法",
+      "badge": "小红书",
+      "author_id": "2110610632198516736",
+      "author_name": "章鱼8̃爪铺🐙",
+      "author_handle": "octopusaia",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2110623530446704640/huuF0LPp_normal.jpg",
+      "author_followers": 869,
+      "author_following": 1615,
+      "author_bio": "",
+      "author_location": "USA",
+      "author_joined_at": "2026-10-15T06:06:42Z",
+      "author_verified": false,
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2124958040113967604",
+      "media": [
+        {
+          "allow_download_status": {
+            "allow_download": true
+          },
+          "display_url": "pic.x.com/dPBKYRgX1f",
+          "expanded_url": "https://x.com/octopusaia/status/2124958040113967604/photo/1",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "features": {
+            "large": {
+              "faces": []
+            },
+            "medium": {
+              "faces": []
+            },
+            "orig": {
+              "faces": []
+            },
+            "small": {
+              "faces": []
+            }
+          },
+          "id_str": "2124957756461563904",
+          "indices": [
+            146,
+            169
+          ],
+          "media_key": "3_2124957756461563904",
+          "media_results": {
+            "result": {
+              "media_key": "3_2124957756461563904"
+            }
+          },
+          "media_url_https": "https://pbs.twimg.com/media/HX1d0iyaQAA1XJc.jpg",
+          "original_info": {
+            "focus_rects": [
+              {
+                "h": 896,
+                "w": 1600,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 900,
+                "w": 900,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 900,
+                "w": 789,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 900,
+                "w": 450,
+                "x": 55,
+                "y": 0
+              },
+              {
+                "h": 900,
+                "w": 1600,
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "height": 900,
+            "width": 1600
+          },
+          "sizes": {
+            "large": {
+              "h": 900,
+              "resize": "fit",
+              "w": 1600
+            },
+            "medium": {
+              "h": 675,
+              "resize": "fit",
+              "w": 1200
+            },
+            "small": {
+              "h": 383,
+              "resize": "fit",
+              "w": 680
+            },
+            "thumb": {
+              "h": 150,
+              "resize": "crop",
+              "w": 150
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/dPBKYRgX1f"
+        },
+        {
+          "allow_download_status": {
+            "allow_download": true
+          },
+          "display_url": "pic.x.com/dPBKYRgX1f",
+          "expanded_url": "https://x.com/octopusaia/status/2124958040113967604/photo/2",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "features": {
+            "large": {
+              "faces": []
+            },
+            "medium": {
+              "faces": []
+            },
+            "orig": {
+              "faces": []
+            },
+            "small": {
+              "faces": []
+            }
+          },
+          "id_str": "2124957800325582848",
+          "indices": [
+            146,
+            169
+          ],
+          "media_key": "3_2124957800325582848",
+          "media_results": {
+            "result": {
+              "media_key": "3_2124957800325582848"
+            }
+          },
+          "media_url_https": "https://pbs.twimg.com/media/HX1d3GMaEAAU8MO.jpg",
+          "original_info": {
+            "focus_rects": [
+              {
+                "h": 630,
+                "w": 1125,
+                "x": 75,
+                "y": 0
+              },
+              {
+                "h": 630,
+                "w": 630,
+                "x": 375,
+                "y": 0
+              },
+              {
+                "h": 630,
+                "w": 553,
+                "x": 414,
+                "y": 0
+              },
+              {
+                "h": 630,
+                "w": 315,
+                "x": 533,
+                "y": 0
+              },
+              {
+                "h": 630,
+                "w": 1200,
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "height": 630,
+            "width": 1200
+          },
+          "sizes": {
+            "large": {
+              "h": 630,
+              "resize": "fit",
+              "w": 1200
+            },
+            "medium": {
+              "h": 630,
+              "resize": "fit",
+              "w": 1200
+            },
+            "small": {
+              "h": 357,
+              "resize": "fit",
+              "w": 680
+            },
+            "thumb": {
+              "h": 150,
+              "resize": "crop",
+              "w": 150
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/dPBKYRgX1f"
+        }
+      ],
+      "links": [
+        "http://github.com/leaperone/MultiPost-Extension",
+        "http://md.multipost.app",
+        "http://docs.multipost.app"
+      ],
+      "metrics": {
+        "likes": 7,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 5,
+        "views": 394
+      },
+      "post_metrics": {
+        "likes": 7,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 5,
+        "views": 394
+      },
+      "topic": "矩阵",
+      "quality_score": 83,
+      "score_value": 83,
+      "score_label": "GQS",
+      "quality_label": "黄金内容",
+      "selected_reason": "内容提供可用于小红书创作或运营的工具资源，主题归为「爆文与内容结构」，且已有一定传播反馈。",
+      "reusable_takeaway": "提炼选题、标题、封面、正文结构中的可复用写法。",
+      "tags": [
+        "矩阵",
+        "爆文与内容结构"
+      ],
+      "acceptance_path": "tool_resource",
+      "source_status": "verified",
+      "conversation_context": {
+        "conversation_id": "2124958040113967604",
+        "anchor_post_id": "2124958040113967604",
+        "summary_zh": "对话前文直接围绕多平台运营重复发稿的痛点展开，收录帖转向介绍 MultiPost 浏览器扩展的功能、安装步骤、支持平台和开源/商店版差异，未涉及价格或配送，强调“5分钟试发”“失败单独重发”等体验。后续作者补充先小范围测试，另有用户询问草稿功能，显示内容较具体、情绪偏正面，传播仍停留在实用讨论。",
+        "summary_status": "model",
+        "post_count": 3,
+        "detail_path": "dashboard-data/lazy/conversations/2124958040113967604-a634f20de444.json"
+      }
+    },
+    {
+      "post_id": "2124846260272410918",
+      "created_at": "2026-11-23T12:43:20Z",
+      "time": "2026-11-23T12:43:20Z",
+      "url": "https://x.com/404latitude/status/2124846260272410918",
+      "external_href": "https://x.com/404latitude/status/2124846260272410918",
+      "language": "zh",
+      "text": "X 上最火的 4 个 AI 赚钱项目，我按「要什么」给你拆了一遍\n\n副业清单满天飞，缺的从来不是项目，是门槛。\n这 4 个都来自 X 上的公开分享，我只保留了能说清「要什么、适合谁」的部分。\n\n▌1. 小红书验需求 → AI 做小程序 → 吃流量主\n先在小红书发内容验需求，确认有人要，再用 AI 写小程序，靠流量主广告收钱。\n封面广告约 0.5 元/次，激励视频约 0.2 元/次，分成 50%，创意类 200 万以内能拿 70%。\n适合：有商业嗅觉、缺技术的人。\n\n▌2. 小红书无货源电商\n7 篇连载、4.6 万字，赛道选择、选品、上架、笔记制作、运营，带 10 个爆品案例。\n重点是卖实物：要配运费模板、对接供应商、处理售后，必须按顺序读。\n适合：能沉下心按流程走的人。\n\n▌3. 站桩养生号\n只做很窄的养生赛道，一个月涨粉 2000，流量主 1000 多元加打赏 200 多元，好的时候一天 50。\n后来被限流，作者自嘲：幻想月入三五千，一下被打回现实。\n适合：能接受慢启动、不赌爆款的人。\n\n▌4. 公众号图文流量主矩阵\n收益 = 阅读量 × eCPM ÷ 1000，千次阅读 8–30 元。\n一人运营 8 个号月入 3 万+；十年老兵攒到 50 万粉，年均收益超 100 万，商单 8000 元一条。\n适合：有团队、每天能写的人。\n\n降温一句：上面所有收入数字都是作者自报，没附对账单，别当承诺看。\n流量主的天花板由平台 eCPM 决定，量越大越要矩阵化，矩阵化又会撞上原创度和重复内容的风控线。\n公众号流量主的硬门槛：粉丝≥100，且近 30 天发文≥4 篇。\n\n这 4 个里，你最想先试哪一个？",
+      "clean_text": "X 上最火的 4 个 AI 赚钱项目，我按「要什么」给你拆了一遍\n\n副业清单满天飞，缺的从来不是项目，是门槛。\n这 4 个都来自 X 上的公开分享，我只保留了能说清「要什么、适合谁」的部分。\n\n▌1. 小红书验需求 → AI 做小程序 → 吃流量主\n先在小红书发内容验需求，确认有人要，再用 AI 写小程序，靠流量主广告收钱。\n封面广告约 0.5 元/次，激励视频约 0.2 元/次，分成 50%，创意类 200 万以内能拿 70%。\n适合：有商业嗅觉、缺技术的人。\n\n▌2. 小红书无货源电商\n7 篇连载、4.6 万字，赛道选择、选品、上架、笔记制作、运营，带 10 个爆品案例。\n重点是卖实物：要配运费模板、对接供应商、处理售后，必须按顺序读。\n适合：能沉下心按流程走的人。\n\n▌3. 站桩养生号\n只做很窄的养生赛道，一个月涨粉 2000，流量主 1000 多元加打赏 200 多元，好的时候一天 50。\n后来被限流，作者自嘲：幻想月入三五千，一下被打回现实。\n适合：能接受慢启动、不赌爆款的人。\n\n▌4. 公众号图文流量主矩阵\n收益 = 阅读量 × eCPM ÷ 1000，千次阅读 8–30 元。\n一人运营 8 个号月入 3 万+；十年老兵攒到 50 万粉，年均收益超 100 万，商单 8000 元一条。\n适合：有团队、每天能写的人。\n\n降温一句：上面所有收入数字都是作者自报，没附对账单，别当承诺看。\n流量主的天花板由平台 eCPM 决定，量越大越要矩阵化，矩阵化又会撞上原创度和重复内容的风控线。\n公众号流量主的硬门槛：粉丝≥100，且近 30 天发文≥4 篇。\n\n这 4 个里，你最想先试哪一个？",
+      "original_text": "X 上最火的 4 个 AI 赚钱项目，我按「要什么」给你拆了一遍\n\n副业清单满天飞，缺的从来不是项目，是门槛。\n这 4 个都来自 X 上的公开分享，我只保留了能说清「要什么、适合谁」的部分。\n\n▌1. 小红书验需求 → AI 做小程序 → 吃流量主\n先在小红书发内容验需求，确认有人要，再用 AI 写小程序，靠流量主广告收钱。\n封面广告约 0.5 元/次，激励视频约 0.2 元/次，分成 50%，创意类 200 万以内能拿 70%。\n适合：有商业嗅觉、缺技术的人。\n\n▌2. 小红书无货源电商\n7 篇连载、4.6 万字，赛道选择、选品、上架、笔记制作、运营，带 10 个爆品案例。\n重点是卖实物：要配运费模板、对接供应商、处理售后，必须按顺序读。\n适合：能沉下心按流程走的人。\n\n▌3. 站桩养生号\n只做很窄的养生赛道，一个月涨粉 2000，流量主 1000 多元加打赏 200 多元，好的时候一天 50。\n后来被限流，作者自嘲：幻想月入三五千，一下被打回现实。\n适合：能接受慢启动、不赌爆款的人。\n\n▌4. 公众号图文流量主矩阵\n收益 = 阅读量 × eCPM ÷ 1000，千次阅读 8–30 元。\n一人运营 8 个号月入 3 万+；十年老兵攒到 50 万粉，年均收益超 100 万，商单 8000 元一条。\n适合：有团队、每天能写的人。\n\n降温一句：上面所有收入数字都是作者自报，没附对账单，别当承诺看。\n流量主的天花板由平台 eCPM 决定，量越大越要矩阵化，矩阵化又会撞上原创度和重复内容的风控线。\n公众号流量主的硬门槛：粉丝≥100，且近 30 天发文≥4 篇。\n\n这 4 个里，你最想先试哪一个？",
+      "translation_zh": "X 上最火的 4 个 AI 赚钱项目，我按「要什么」给你拆了一遍\n\n副业清单满天飞，缺的从来不是项目，是门槛。\n这 4 个都来自 X 上的公开分享，我只保留了能说清「要什么、适合谁」的部分。\n\n▌1. 小红书验需求 → AI 做小程序 → 吃流量主\n先在小红书发内容验需求，确认有人要，再用 AI 写小程序，靠流量主广告收钱。\n封面广告约 0.5 元/次，激励视频约 0.2 元/次，分成 50%，创意类 200 万以内能拿 70%。\n适合：有商业嗅觉、缺技术的人。\n\n▌2. 小红书无货源电商\n7 篇连载、4.6 万字，赛道选择、选品、上架、笔记制作、运营，带 10 个爆品案例。\n重点是卖实物：要配运费模板、对接供应商、处理售后，必须按顺序读。\n适合：能沉下心按流程走的人。\n\n▌3. 站桩养生号\n只做很窄的养生赛道，一个月涨粉 2000，流量主 1000 多元加打赏 200 多元，好的时候一天 50。\n后来被限流，作者自嘲：幻想月入三五千，一下被打回现实。\n适合：能接受慢启动、不赌爆款的人。\n\n▌4. 公众号图文流量主矩阵\n收益 = 阅读量 × eCPM ÷ 1000，千次阅读 8–30 元。\n一人运营 8 个号月入 3 万+；十年老兵攒到 50 万粉，年均收益超 100 万，商单 8000 元一条。\n适合：有团队、每天能写的人。\n\n降温一句：上面所有收入数字都是作者自报，没附对账单，别当承诺看。\n流量主的天花板由平台 eCPM 决定，量越大越要矩阵化，矩阵化又会撞上原创度和重复内容的风控线。\n公众号流量主的硬门槛：粉丝≥100，且近 30 天发文≥4 篇。\n\n这 4 个里，你最想先试哪一个？",
+      "translation_status": "source_chinese",
+      "summary_zh": "X 上关于小红书增长、运营或变现的方法论分享。",
+      "platform": "xiaohongshu",
+      "brand": "platform_xiaohongshu",
+      "source_type": "小红书增长方法",
+      "badge": "小红书",
+      "author_id": "2053800927858167808",
+      "author_name": "404资源库",
+      "author_handle": "404latitude",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2068986008352493568/RyrS6e1I_normal.jpg",
+      "author_followers": 3345,
+      "author_following": 3973,
+      "author_bio": "免费分享 AI 资料｜电子书｜实用工具｜副业资源，每日更新，记得收藏。",
+      "author_location": "互联网",
+      "author_joined_at": "2026-05-11T11:34:42Z",
+      "author_verified": false,
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2124846260272410918",
+      "media": [],
+      "links": [],
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 264
+      },
+      "post_metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 264
+      },
+      "topic": "变现",
+      "quality_score": 100,
+      "score_value": 100,
+      "score_label": "GQS",
+      "quality_label": "黄金内容",
+      "selected_reason": "内容包含可复用的方法、步骤或复盘结构，主题归为「账号冷启动」且已有一定传播反馈。",
+      "reusable_takeaway": "关注账号启动阶段的定位、互动和初始内容节奏。",
+      "tags": [
+        "变现",
+        "账号冷启动",
+        "爆文与内容结构",
+        "流量机制",
+        "风控对抗",
+        "矩阵",
+        "案例复盘"
+      ],
+      "acceptance_path": "monetization_opportunity",
+      "source_status": "claimed",
+      "conversation_context": {
+        "conversation_id": "2124846260272410918",
+        "anchor_post_id": "2124846260272410918",
+        "summary_zh": "前文即收录帖，作者盘点X上4个AI副业项目，按门槛和适合人群拆解，未转向具体品牌、商品或配送体验，只涉及广告分成、eCPM等价格/收益指标，并提醒收入为自报。后续作者补来源链接，评论多为认可和经验补充。上下文显示情绪理性偏正向，真实性仍需看原帖证据。",
+        "summary_status": "model",
+        "post_count": 5,
+        "detail_path": "dashboard-data/lazy/conversations/2124846260272410918-190ebb228968.json"
+      }
+    },
+    {
+      "post_id": "2124804620333551626",
+      "created_at": "2026-11-23T09:57:53Z",
+      "time": "2026-11-23T09:57:53Z",
+      "url": "https://x.com/RachidSettas/status/2124804620333551626",
+      "external_href": "https://x.com/RachidSettas/status/2124804620333551626",
+      "language": "zh",
+      "text": "普通人在家躺着可以做的6种AI搞钱副业：\n\n1. AI壁纸：用AI生成壁纸，发布到小红书、抖音出售，每单赚0.5～6元。\n\n2. 闲鱼倒卖：拼多多低价进货，挂到闲鱼赚差价，目标日赚100～300元。\n\n3. 公众号投稿：给大型公众号投稿，单篇稿费300～2000元。\n\n4. 虚拟资料：整理求职课程、面试技巧、演讲资料等，挂闲鱼出售。\n\n5. 抖音特效：制作并发布抖音特效，用户使用、跟拍后有机会获得平台收益。\n\n6. AI老照片修复：利用AI修复模糊、破损的老照片，在视频平台接单，每张收费30～60元。",
+      "clean_text": "普通人在家躺着可以做的6种AI搞钱副业：\n\n1. AI壁纸：用AI生成壁纸，发布到小红书、抖音出售，每单赚0.5～6元。\n\n2. 闲鱼倒卖：拼多多低价进货，挂到闲鱼赚差价，目标日赚100～300元。\n\n3. 公众号投稿：给大型公众号投稿，单篇稿费300～2000元。\n\n4. 虚拟资料：整理求职课程、面试技巧、演讲资料等，挂闲鱼出售。\n\n5. 抖音特效：制作并发布抖音特效，用户使用、跟拍后有机会获得平台收益。\n\n6. AI老照片修复：利用AI修复模糊、破损的老照片，在视频平台接单，每张收费30～60元。",
+      "original_text": "普通人在家躺着可以做的6种AI搞钱副业：\n\n1. AI壁纸：用AI生成壁纸，发布到小红书、抖音出售，每单赚0.5～6元。\n\n2. 闲鱼倒卖：拼多多低价进货，挂到闲鱼赚差价，目标日赚100～300元。\n\n3. 公众号投稿：给大型公众号投稿，单篇稿费300～2000元。\n\n4. 虚拟资料：整理求职课程、面试技巧、演讲资料等，挂闲鱼出售。\n\n5. 抖音特效：制作并发布抖音特效，用户使用、跟拍后有机会获得平台收益。\n\n6. AI老照片修复：利用AI修复模糊、破损的老照片，在视频平台接单，每张收费30～60元。",
+      "translation_zh": "普通人在家躺着可以做的6种AI搞钱副业：\n\n1. AI壁纸：用AI生成壁纸，发布到小红书、抖音出售，每单赚0.5～6元。\n\n2. 闲鱼倒卖：拼多多低价进货，挂到闲鱼赚差价，目标日赚100～300元。\n\n3. 公众号投稿：给大型公众号投稿，单篇稿费300～2000元。\n\n4. 虚拟资料：整理求职课程、面试技巧、演讲资料等，挂闲鱼出售。\n\n5. 抖音特效：制作并发布抖音特效，用户使用、跟拍后有机会获得平台收益。\n\n6. AI老照片修复：利用AI修复模糊、破损的老照片，在视频平台接单，每张收费30～60元。",
+      "translation_status": "source_chinese",
+      "summary_zh": "X 上关于小红书增长、运营或变现的方法论分享。",
+      "platform": "xiaohongshu",
+      "brand": "platform_xiaohongshu",
+      "source_type": "小红书增长方法",
+      "badge": "小红书",
+      "author_id": "3347199221",
+      "author_name": "MX狗哥",
+      "author_handle": "RachidSettas",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2105835581192474624/B8C67I0k_normal.jpg",
+      "author_followers": 20495,
+      "author_following": 0,
+      "author_bio": "",
+      "author_location": "",
+      "author_joined_at": "2026-11-24T00:07:03Z",
+      "author_verified": false,
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2124804620333551626",
+      "media": [],
+      "links": [],
+      "metrics": {
+        "likes": 20,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 15,
+        "views": 3714
+      },
+      "post_metrics": {
+        "likes": 20,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 15,
+        "views": 3714
+      },
+      "topic": "变现",
+      "quality_score": 79,
+      "score_value": 79,
+      "score_label": "GQS",
+      "quality_label": "黄金内容",
+      "selected_reason": "内容包含可复用的方法、步骤或复盘结构，主题归为「案例复盘」且已有一定传播反馈。",
+      "reusable_takeaway": "优先提取案例前提、动作、结果和可迁移限制。",
+      "tags": [
+        "变现"
+      ],
+      "acceptance_path": "monetization_opportunity",
+      "source_status": "claimed",
+      "conversation_context": {
+        "conversation_id": "2124804620333551626",
+        "anchor_post_id": "2124804620333551626",
+        "summary_zh": "前文是列举“在家用AI搞钱”的6类副业，收录帖把话题落到小红书壁纸、闲鱼倒卖、公众号投稿等平台商品和价格区间。后续有人说投稿稿费诱人但过稿难，也有人补充曾买过小红书壁纸。上下文显示这是经验/攻略讨论，情绪偏中性，真实性需依赖个人经历验证，传播价值在副业话题。",
+        "summary_status": "model",
+        "post_count": 3,
+        "detail_path": "dashboard-data/lazy/conversations/2124804620333551626-d32b247044b9.json"
+      }
+    },
+    {
+      "post_id": "2124798538202989042",
+      "created_at": "2026-11-23T09:33:43Z",
+      "time": "2026-11-23T09:33:43Z",
+      "url": "https://x.com/AIFinderLab/status/2124798538202989042",
+      "external_href": "https://x.com/AIFinderLab/status/2124798538202989042",
+      "language": "zh",
+      "text": "卧槽，做小红书从找选题到发帖，连最磨人的封面和排版，GitHub 上都有人给 AI 写好工具了。\n\n刷同行 → 拆爆款 → 想封面 → 做卡片 → 发笔记\n\n5 个开源项目，卡在哪一步就拿哪个👇\n\n① 选题荒｜Agent-Reach\n从小红书、X、YouTube、B 站搜热点和素材，找找最近大家在聊什么。\nhttps://t.co/XwxS2k5ZqO\n② 爆款看不懂｜xiaohongshu-ops-skill\n拿一篇热门笔记来拆，看看它怎么选题、怎么组织内容。也能辅助排查自己的账号数据。\nhttps://t.co/Vd9wxZrE39\n③ 封面憋不出来｜xhs-visual-director-skill\n先把封面怎么做、每一页放什么、出图提示词怎么写想清楚。\nhttps://t.co/ncwFWihRB1\n\n④ 文案写完了，还得一页页排版｜baoyu-xhs-images\n把一篇长文拆成一组小红书图文卡片。这个 Skill 在 baoyu-skills 仓库里。\nhttps://t.co/8luZI4hAG0\n⑤ 图文齐了，准备发｜xiaohongshu-mcp\n接到支持 MCP 的 AI 客户端，辅助发布笔记。\nhttps://t.co/e109F4f0TZ\n先收藏。下次文案都写完了，还在为封面抓头发，直接回来翻第 ③ 个。",
+      "clean_text": "卧槽，做小红书从找选题到发帖，连最磨人的封面和排版，GitHub 上都有人给 AI 写好工具了。\n\n刷同行 → 拆爆款 → 想封面 → 做卡片 → 发笔记\n\n5 个开源项目，卡在哪一步就拿哪个👇\n\n① 选题荒｜Agent-Reach\n从小红书、X、YouTube、B 站搜热点和素材，找找最近大家在聊什么。\nhttps://t.co/XwxS2k5ZqO\n② 爆款看不懂｜xiaohongshu-ops-skill\n拿一篇热门笔记来拆，看看它怎么选题、怎么组织内容。也能辅助排查自己的账号数据。\nhttps://t.co/Vd9wxZrE39\n③ 封面憋不出来｜xhs-visual-director-skill\n先把封面怎么做、每一页放什么、出图提示词怎么写想清楚。\nhttps://t.co/ncwFWihRB1\n\n④ 文案写完了，还得一页页排版｜baoyu-xhs-images\n把一篇长文拆成一组小红书图文卡片。这个 Skill 在 baoyu-skills 仓库里。\nhttps://t.co/8luZI4hAG0\n⑤ 图文齐了，准备发｜xiaohongshu-mcp\n接到支持 MCP 的 AI 客户端，辅助发布笔记。\nhttps://t.co/e109F4f0TZ\n先收藏。下次文案都写完了，还在为封面抓头发，直接回来翻第 ③ 个。",
+      "original_text": "卧槽，做小红书从找选题到发帖，连最磨人的封面和排版，GitHub 上都有人给 AI 写好工具了。\n\n刷同行 → 拆爆款 → 想封面 → 做卡片 → 发笔记\n\n5 个开源项目，卡在哪一步就拿哪个👇\n\n① 选题荒｜Agent-Reach\n从小红书、X、YouTube、B 站搜热点和素材，找找最近大家在聊什么。\nhttps://t.co/XwxS2k5ZqO\n② 爆款看不懂｜xiaohongshu-ops-skill\n拿一篇热门笔记来拆，看看它怎么选题、怎么组织内容。也能辅助排查自己的账号数据。\nhttps://t.co/Vd9wxZrE39\n③ 封面憋不出来｜xhs-visual-director-skill\n先把封面怎么做、每一页放什么、出图提示词怎么写想清楚。\nhttps://t.co/ncwFWihRB1\n\n④ 文案写完了，还得一页页排版｜baoyu-xhs-images\n把一篇长文拆成一组小红书图文卡片。这个 Skill 在 baoyu-skills 仓库里。\nhttps://t.co/8luZI4hAG0\n⑤ 图文齐了，准备发｜xiaohongshu-mcp\n接到支持 MCP 的 AI 客户端，辅助发布笔记。\nhttps://t.co/e109F4f0TZ\n先收藏。下次文案都写完了，还在为封面抓头发，直接回来翻第 ③ 个。",
+      "translation_zh": "卧槽，做小红书从找选题到发帖，连最磨人的封面和排版，GitHub 上都有人给 AI 写好工具了。\n\n刷同行 → 拆爆款 → 想封面 → 做卡片 → 发笔记\n\n5 个开源项目，卡在哪一步就拿哪个👇\n\n① 选题荒｜Agent-Reach\n从小红书、X、YouTube、B 站搜热点和素材，找找最近大家在聊什么。\nhttps://t.co/XwxS2k5ZqO\n② 爆款看不懂｜xiaohongshu-ops-skill\n拿一篇热门笔记来拆，看看它怎么选题、怎么组织内容。也能辅助排查自己的账号数据。\nhttps://t.co/Vd9wxZrE39\n③ 封面憋不出来｜xhs-visual-director-skill\n先把封面怎么做、每一页放什么、出图提示词怎么写想清楚。\nhttps://t.co/ncwFWihRB1\n\n④ 文案写完了，还得一页页排版｜baoyu-xhs-images\n把一篇长文拆成一组小红书图文卡片。这个 Skill 在 baoyu-skills 仓库里。\nhttps://t.co/8luZI4hAG0\n⑤ 图文齐了，准备发｜xiaohongshu-mcp\n接到支持 MCP 的 AI 客户端，辅助发布笔记。\nhttps://t.co/e109F4f0TZ\n先收藏。下次文案都写完了，还在为封面抓头发，直接回来翻第 ③ 个。",
+      "translation_status": "source_chinese",
+      "summary_zh": "X 上关于小红书增长、运营或变现的方法论分享。",
+      "platform": "xiaohongshu",
+      "brand": "platform_xiaohongshu",
+      "source_type": "小红书增长方法",
+      "badge": "小红书",
+      "author_id": "2122191347562250240",
+      "author_name": "AI 折腾哥",
+      "author_handle": "AIFinderLab",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2123603503931412480/YxdCIPh1_normal.jpg",
+      "author_followers": 134,
+      "author_following": 70,
+      "author_bio": "",
+      "author_location": "AI Tools & Productivity",
+      "author_joined_at": "2026-11-16T05:06:34Z",
+      "author_verified": false,
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2124798538202989042",
+      "media": [
+        {
+          "allow_download_status": {
+            "allow_download": true
+          },
+          "display_url": "pic.x.com/anwn6bLJyK",
+          "expanded_url": "https://x.com/AIFinderLab/status/2124798538202989042/photo/1",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "features": {
+            "large": {
+              "faces": [
+                {
+                  "h": 70,
+                  "w": 70,
+                  "x": 137,
+                  "y": 665
+                }
+              ]
+            },
+            "medium": {
+              "faces": [
+                {
+                  "h": 58,
+                  "w": 58,
+                  "x": 114,
+                  "y": 554
+                }
+              ]
+            },
+            "orig": {
+              "faces": [
+                {
+                  "h": 70,
+                  "w": 70,
+                  "x": 137,
+                  "y": 665
+                }
+              ]
+            },
+            "small": {
+              "faces": [
+                {
+                  "h": 33,
+                  "w": 33,
+                  "x": 64,
+                  "y": 314
+                }
+              ]
+            }
+          },
+          "id_str": "2124798520838496256",
+          "indices": [
+            178,
+            201
+          ],
+          "media_key": "3_2124798520838496256",
+          "media_results": {
+            "result": {
+              "media_key": "3_2124798520838496256"
+            }
+          },
+          "media_url_https": "https://pbs.twimg.com/media/HXzM_z3aoAAgTBs.jpg",
+          "original_info": {
+            "focus_rects": [
+              {
+                "h": 776,
+                "w": 1386,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 776,
+                "w": 776,
+                "x": 6,
+                "y": 0
+              },
+              {
+                "h": 776,
+                "w": 681,
+                "x": 54,
+                "y": 0
+              },
+              {
+                "h": 776,
+                "w": 388,
+                "x": 200,
+                "y": 0
+              },
+              {
+                "h": 776,
+                "w": 1438,
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "height": 776,
+            "width": 1438
+          },
+          "sizes": {
+            "large": {
+              "h": 776,
+              "resize": "fit",
+              "w": 1438
+            },
+            "medium": {
+              "h": 648,
+              "resize": "fit",
+              "w": 1200
+            },
+            "small": {
+              "h": 367,
+              "resize": "fit",
+              "w": 680
+            },
+            "thumb": {
+              "h": 150,
+              "resize": "crop",
+              "w": 150
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/anwn6bLJyK"
+        }
+      ],
+      "links": [
+        "https://github.com/Panniantong/Agent-Reach",
+        "https://github.com/Xiangyu-CAS/xiaohongshu-ops-skill",
+        "https://github.com/ziguishian/xhs-visual-director-skill",
+        "https://github.com/JimLiu/baoyu-skills",
+        "https://github.com/search?q=xiaohongshu-mcp&type=repositories"
+      ],
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 2,
+        "views": 132
+      },
+      "post_metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 2,
+        "views": 132
+      },
+      "topic": "爆文与内容结构",
+      "quality_score": 99,
+      "score_value": 99,
+      "score_label": "GQS",
+      "quality_label": "黄金内容",
+      "selected_reason": "内容提供可用于小红书创作或运营的工具资源，主题归为「爆文与内容结构」，且已有一定传播反馈。",
+      "reusable_takeaway": "提炼选题、标题、封面、正文结构中的可复用写法。",
+      "tags": [
+        "爆文与内容结构",
+        "流量机制"
+      ],
+      "acceptance_path": "tool_resource",
+      "source_status": "verified",
+      "conversation_context": {
+        "conversation_id": "2124798538202989042",
+        "anchor_post_id": "2124798538202989042",
+        "summary_zh": "对话前文围绕小红书运营流程，列出5个GitHub开源AI项目，覆盖选题、拆爆款、封面、排版和发布。收录帖未涉及具体品牌、商品、价格或配送体验，而是工具推荐清单。后续作者@Grok求评价，暂无他人回应；有助判断其为工具分享，情绪正向，传播价值在收藏转发。",
+        "summary_status": "model",
+        "post_count": 2,
+        "detail_path": "dashboard-data/lazy/conversations/2124798538202989042-3a1e1fe3cfc3.json"
+      }
+    },
+    {
+      "post_id": "2124793298997088578",
+      "created_at": "2026-11-23T09:12:53Z",
+      "time": "2026-11-23T09:12:53Z",
+      "url": "https://x.com/onchicelle/status/2124793298997088578",
+      "external_href": "https://x.com/onchicelle/status/2124793298997088578",
+      "language": "zh",
+      "text": "小红书赚钱必关注的 7 位博主名单\n\n先说结论：这份名单里最值钱的，不是一年涨粉 11 万那个，是今年提现 11 万那个。数字全是自述，先打个折再看。🧵\n\n路径一，虚拟资料——证据最硬的一条。\n冬青 @DongQingAsk：单店、单品，4 月才开，暑假单月近 3 万，全年提现 11 万。不靠粉丝，靠搜索和一个刚需品。\n\n启航 @qihang_zeng6688：00 后，8 家店，高峰月流水 6 万多。但注意：流水不是利润，8 家店拼运营能力；冬青的单品模式，才是普通人能抄的那个。\n\n路径二，内容接广。\n栋哥 @dontbesilent 一年涨 11 万粉，是大字报起号教程的源头之一——他的变现靠的是「教别人起号」。\nJessi Cao @JessiCao_JC 把接广报价、返点拆成教程，还反手在小红书写「怎么做 X」，谈成一单 5 位数合作。\n这条路的本质：卖的不是货，是经验。前提是你先真的跑通过一次。\n\n路径三，活动获客——最容易被低估。\nSerena 木瓜 @369Serena 和朋友在上海办 AI 线下活动，获客全靠小红书：五个账号一起打搜索词，低粉也能挂购物车。\n粉丝不多，但来的人直接付费。这是离钱最近的路径，不需要先当博主。\n\n路径四，AI 自动化运营。\n超级峰 @Mileson07 把选题、做图、发布、复盘全交给 AI，自己拿一个表情包出处号跑通，新号走搜索词也有几万曝光。\n这条路的门槛不在粉丝，在工具链和耐心——适合本来就在玩 AI 的人。\n\n个案拆一个最像「逆袭」的：四点金桃 @sidianjin，大厂下班后 10 分钟拍一条，3 天涨 1.5 万粉，月入过万。\n但请注意她的底牌：大厂 9 年运营经验。那 10 分钟是表象，9 年才是门槛。这类故事最容易误导人——你复制得了动作，复制不了底子。\n\n#小红书 #副业",
+      "clean_text": "小红书赚钱必关注的 7 位博主名单\n\n先说结论：这份名单里最值钱的，不是一年涨粉 11 万那个，是今年提现 11 万那个。数字全是自述，先打个折再看。🧵\n\n路径一，虚拟资料——证据最硬的一条。\n冬青 @DongQingAsk：单店、单品，4 月才开，暑假单月近 3 万，全年提现 11 万。不靠粉丝，靠搜索和一个刚需品。\n\n启航 @qihang_zeng6688：00 后，8 家店，高峰月流水 6 万多。但注意：流水不是利润，8 家店拼运营能力；冬青的单品模式，才是普通人能抄的那个。\n\n路径二，内容接广。\n栋哥 @dontbesilent 一年涨 11 万粉，是大字报起号教程的源头之一——他的变现靠的是「教别人起号」。\nJessi Cao @JessiCao_JC 把接广报价、返点拆成教程，还反手在小红书写「怎么做 X」，谈成一单 5 位数合作。\n这条路的本质：卖的不是货，是经验。前提是你先真的跑通过一次。\n\n路径三，活动获客——最容易被低估。\nSerena 木瓜 @369Serena 和朋友在上海办 AI 线下活动，获客全靠小红书：五个账号一起打搜索词，低粉也能挂购物车。\n粉丝不多，但来的人直接付费。这是离钱最近的路径，不需要先当博主。\n\n路径四，AI 自动化运营。\n超级峰 @Mileson07 把选题、做图、发布、复盘全交给 AI，自己拿一个表情包出处号跑通，新号走搜索词也有几万曝光。\n这条路的门槛不在粉丝，在工具链和耐心——适合本来就在玩 AI 的人。\n\n个案拆一个最像「逆袭」的：四点金桃 @sidianjin，大厂下班后 10 分钟拍一条，3 天涨 1.5 万粉，月入过万。\n但请注意她的底牌：大厂 9 年运营经验。那 10 分钟是表象，9 年才是门槛。这类故事最容易误导人——你复制得了动作，复制不了底子。\n\n#小红书 #副业",
+      "original_text": "小红书赚钱必关注的 7 位博主名单\n\n先说结论：这份名单里最值钱的，不是一年涨粉 11 万那个，是今年提现 11 万那个。数字全是自述，先打个折再看。🧵\n\n路径一，虚拟资料——证据最硬的一条。\n冬青 @DongQingAsk：单店、单品，4 月才开，暑假单月近 3 万，全年提现 11 万。不靠粉丝，靠搜索和一个刚需品。\n\n启航 @qihang_zeng6688：00 后，8 家店，高峰月流水 6 万多。但注意：流水不是利润，8 家店拼运营能力；冬青的单品模式，才是普通人能抄的那个。\n\n路径二，内容接广。\n栋哥 @dontbesilent 一年涨 11 万粉，是大字报起号教程的源头之一——他的变现靠的是「教别人起号」。\nJessi Cao @JessiCao_JC 把接广报价、返点拆成教程，还反手在小红书写「怎么做 X」，谈成一单 5 位数合作。\n这条路的本质：卖的不是货，是经验。前提是你先真的跑通过一次。\n\n路径三，活动获客——最容易被低估。\nSerena 木瓜 @369Serena 和朋友在上海办 AI 线下活动，获客全靠小红书：五个账号一起打搜索词，低粉也能挂购物车。\n粉丝不多，但来的人直接付费。这是离钱最近的路径，不需要先当博主。\n\n路径四，AI 自动化运营。\n超级峰 @Mileson07 把选题、做图、发布、复盘全交给 AI，自己拿一个表情包出处号跑通，新号走搜索词也有几万曝光。\n这条路的门槛不在粉丝，在工具链和耐心——适合本来就在玩 AI 的人。\n\n个案拆一个最像「逆袭」的：四点金桃 @sidianjin，大厂下班后 10 分钟拍一条，3 天涨 1.5 万粉，月入过万。\n但请注意她的底牌：大厂 9 年运营经验。那 10 分钟是表象，9 年才是门槛。这类故事最容易误导人——你复制得了动作，复制不了底子。\n\n#小红书 #副业",
+      "translation_zh": "小红书赚钱必关注的 7 位博主名单\n\n先说结论：这份名单里最值钱的，不是一年涨粉 11 万那个，是今年提现 11 万那个。数字全是自述，先打个折再看。🧵\n\n路径一，虚拟资料——证据最硬的一条。\n冬青 @DongQingAsk：单店、单品，4 月才开，暑假单月近 3 万，全年提现 11 万。不靠粉丝，靠搜索和一个刚需品。\n\n启航 @qihang_zeng6688：00 后，8 家店，高峰月流水 6 万多。但注意：流水不是利润，8 家店拼运营能力；冬青的单品模式，才是普通人能抄的那个。\n\n路径二，内容接广。\n栋哥 @dontbesilent 一年涨 11 万粉，是大字报起号教程的源头之一——他的变现靠的是「教别人起号」。\nJessi Cao @JessiCao_JC 把接广报价、返点拆成教程，还反手在小红书写「怎么做 X」，谈成一单 5 位数合作。\n这条路的本质：卖的不是货，是经验。前提是你先真的跑通过一次。\n\n路径三，活动获客——最容易被低估。\nSerena 木瓜 @369Serena 和朋友在上海办 AI 线下活动，获客全靠小红书：五个账号一起打搜索词，低粉也能挂购物车。\n粉丝不多，但来的人直接付费。这是离钱最近的路径，不需要先当博主。\n\n路径四，AI 自动化运营。\n超级峰 @Mileson07 把选题、做图、发布、复盘全交给 AI，自己拿一个表情包出处号跑通，新号走搜索词也有几万曝光。\n这条路的门槛不在粉丝，在工具链和耐心——适合本来就在玩 AI 的人。\n\n个案拆一个最像「逆袭」的：四点金桃 @sidianjin，大厂下班后 10 分钟拍一条，3 天涨 1.5 万粉，月入过万。\n但请注意她的底牌：大厂 9 年运营经验。那 10 分钟是表象，9 年才是门槛。这类故事最容易误导人——你复制得了动作，复制不了底子。\n\n#小红书 #副业",
+      "translation_status": "source_chinese",
+      "summary_zh": "X 上关于小红书增长、运营或变现的方法论分享。",
+      "platform": "xiaohongshu",
+      "brand": "platform_xiaohongshu",
+      "source_type": "小红书增长方法",
+      "badge": "小红书",
+      "author_id": "2041381678883414016",
+      "author_name": "Hustle Lab",
+      "author_handle": "onchicelle",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2057062248619929600/w566Y_xN_normal.jpg",
+      "author_followers": 139,
+      "author_following": 133,
+      "author_bio": "💰自由职业，不靠打工赚钱！坚信副业和复利投资。\n🧠 每天帮你拆解最值得看的：\n| 赚钱思路 | 副业机会 | 投资案例 | AI工具 | 趋势科技 |\n看热点，更看方法；看信息，更看机会！",
+      "author_location": "Dubai UAE",
+      "author_joined_at": "2026-04-07T05:05:10Z",
+      "author_verified": false,
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2124793298997088578",
+      "media": [],
+      "links": [],
+      "metrics": {
+        "likes": 8,
+        "reposts": 0,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 3,
+        "views": 332
+      },
+      "post_metrics": {
+        "likes": 8,
+        "reposts": 0,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 3,
+        "views": 332
+      },
+      "topic": "变现",
+      "quality_score": 100,
+      "score_value": 100,
+      "score_label": "GQS",
+      "quality_label": "黄金内容",
+      "selected_reason": "内容包含可复用的方法、步骤或复盘结构，主题归为「账号冷启动」且已有一定传播反馈。",
+      "reusable_takeaway": "关注账号启动阶段的定位、互动和初始内容节奏。",
+      "tags": [
+        "变现",
+        "账号冷启动",
+        "爆文与内容结构",
+        "流量机制",
+        "案例复盘"
+      ],
+      "acceptance_path": "case_lead",
+      "source_status": "claimed",
+      "conversation_context": {
+        "conversation_id": "2124793298997088578",
+        "anchor_post_id": "2124793298997088578",
+        "summary_zh": "前文即收录帖，围绕“小红书赚钱”盘点7位博主，比较虚拟资料、接广、活动获客、AI运营等变现路径，并提到提现11万、月流水6万等自述数字，未涉及具体品牌、配送或消费体验。后续多位被点名者致谢，sidianjin补充已发起号攻略，另有人认同“靠搜索不靠粉丝”。上下文显示信息主要来自当事人自述与互动认可，情绪正向，但真实性仍需打折看。",
+        "summary_status": "model",
+        "post_count": 5,
+        "detail_path": "dashboard-data/lazy/conversations/2124793298997088578-f6384e9fa94b.json"
+      }
+    },
+    {
+      "post_id": "2124783874010128402",
+      "created_at": "2026-11-23T08:35:26Z",
+      "time": "2026-11-23T08:35:26Z",
+      "url": "https://x.com/chun_wang35417/status/2124783874010128402",
+      "external_href": "https://x.com/chun_wang35417/status/2124783874010128402",
+      "language": "zh",
+      "text": "我为什么不选择做国内的自媒体呢？\n\n主要还是国内平台限制太严重了，公众号、头条、小红书随便发点内容就提醒限流了，这谁受的了？？\n\n小红书甚至不能提Github，当我的限流关键词有Github的时候，我就知道我该换平台了 哈哈🤣🤣",
+      "clean_text": "我为什么不选择做国内的自媒体呢？\n\n主要还是国内平台限制太严重了，公众号、头条、小红书随便发点内容就提醒限流了，这谁受的了？？\n\n小红书甚至不能提Github，当我的限流关键词有Github的时候，我就知道我该换平台了 哈哈🤣🤣",
+      "original_text": "我为什么不选择做国内的自媒体呢？\n\n主要还是国内平台限制太严重了，公众号、头条、小红书随便发点内容就提醒限流了，这谁受的了？？\n\n小红书甚至不能提Github，当我的限流关键词有Github的时候，我就知道我该换平台了 哈哈🤣🤣",
+      "translation_zh": "我为什么不选择做国内的自媒体呢？\n\n主要还是国内平台限制太严重了，公众号、头条、小红书随便发点内容就提醒限流了，这谁受的了？？\n\n小红书甚至不能提Github，当我的限流关键词有Github的时候，我就知道我该换平台了 哈哈🤣🤣",
+      "translation_status": "source_chinese",
+      "summary_zh": "X 上关于小红书增长、运营或变现的方法论分享。",
+      "platform": "xiaohongshu",
+      "brand": "platform_xiaohongshu",
+      "source_type": "小红书增长方法",
+      "badge": "小红书",
+      "author_id": "2004111445873815552",
+      "author_name": "王纯纯",
+      "author_handle": "chun_wang35417",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2004111478220365824/nD1mFqR2_normal.png",
+      "author_followers": 1584,
+      "author_following": 1585,
+      "author_bio": "",
+      "author_location": "",
+      "author_joined_at": "2025-12-25T08:46:25Z",
+      "author_verified": false,
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2124783874010128402",
+      "media": [],
+      "links": [],
+      "metrics": {
+        "likes": 20,
+        "reposts": 0,
+        "replies": 14,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 484
+      },
+      "post_metrics": {
+        "likes": 20,
+        "reposts": 0,
+        "replies": 14,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 484
+      },
+      "topic": "平台规则",
+      "quality_score": 87,
+      "score_value": 87,
+      "score_label": "GQS",
+      "quality_label": "黄金内容",
+      "selected_reason": "内容提供可用于小红书创作或运营的工具资源，主题归为「爆文与内容结构」，且已有一定传播反馈。",
+      "reusable_takeaway": "提炼选题、标题、封面、正文结构中的可复用写法。",
+      "tags": [
+        "平台规则",
+        "风控对抗"
+      ],
+      "acceptance_path": "platform_observation",
+      "source_status": "claimed",
+      "conversation_context": {
+        "conversation_id": "2124783874010128402",
+        "anchor_post_id": "2124783874010128402",
+        "summary_zh": "前文即收录帖，作者解释不做国内自媒体，称公众号、头条、小红书限流严重，甚至提Github都会触发，话题转向平台使用体验而非具体商品价格。后续多人回应认同，补充开源站点、比特币截图、违禁词等限流/封号经历，有助判断为用户真实体验型负面情绪，传播点在共鸣。",
+        "summary_status": "model",
+        "post_count": 15,
+        "detail_path": "dashboard-data/lazy/conversations/2124783874010128402-6709ca0b097c.json"
+      }
+    },
+    {
+      "post_id": "2124774964775518208",
+      "created_at": "2026-11-23T08:00:02Z",
+      "time": "2026-11-23T08:00:02Z",
+      "url": "https://x.com/DongQingAsk/status/2124774964775518208",
+      "external_href": "https://x.com/DongQingAsk/status/2124774964775518208",
+      "language": "zh",
+      "text": "在小红书上也可以售卖工作台相关的产品，这家店铺开店275天，一个商品撑起来的店铺销量，销售近500单，销售额预计1.7万，也是一个很不错的案例\n\n我之前分享过一期文章，很多人对我的小红书工作台就特别感兴趣，但是我认为个人工作台还是要针对个人的工作流程，强行适配效果可能会适得其反，最近一直在思考这个问题，会整一个尽可能通用的工作台给大家开源",
+      "clean_text": "在小红书上也可以售卖工作台相关的产品，这家店铺开店275天，一个商品撑起来的店铺销量，销售近500单，销售额预计1.7万，也是一个很不错的案例\n\n我之前分享过一期文章，很多人对我的小红书工作台就特别感兴趣，但是我认为个人工作台还是要针对个人的工作流程，强行适配效果可能会适得其反，最近一直在思考这个问题，会整一个尽可能通用的工作台给大家开源",
+      "original_text": "在小红书上也可以售卖工作台相关的产品，这家店铺开店275天，一个商品撑起来的店铺销量，销售近500单，销售额预计1.7万，也是一个很不错的案例\n\n我之前分享过一期文章，很多人对我的小红书工作台就特别感兴趣，但是我认为个人工作台还是要针对个人的工作流程，强行适配效果可能会适得其反，最近一直在思考这个问题，会整一个尽可能通用的工作台给大家开源",
+      "translation_zh": "在小红书上也可以售卖工作台相关的产品，这家店铺开店275天，一个商品撑起来的店铺销量，销售近500单，销售额预计1.7万，也是一个很不错的案例\n\n我之前分享过一期文章，很多人对我的小红书工作台就特别感兴趣，但是我认为个人工作台还是要针对个人的工作流程，强行适配效果可能会适得其反，最近一直在思考这个问题，会整一个尽可能通用的工作台给大家开源",
+      "translation_status": "source_chinese",
+      "summary_zh": "X 上关于小红书增长、运营或变现的方法论分享。",
+      "platform": "xiaohongshu",
+      "brand": "platform_xiaohongshu",
+      "source_type": "小红书增长方法",
+      "badge": "小红书",
+      "author_id": "2106566414702436352",
+      "author_name": "冬青",
+      "author_handle": "DongQingAsk",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2106588156929978368/AZoDcP71_normal.jpg",
+      "author_followers": 12225,
+      "author_following": 173,
+      "author_bio": "",
+      "author_location": "",
+      "author_joined_at": "2026-10-04T02:06:28Z",
+      "author_verified": false,
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2117527351605207182",
+      "conversation_id": "2124774964775518208",
+      "media": [
+        {
+          "allow_download_status": {
+            "allow_download": true
+          },
+          "display_url": "pic.x.com/fRNT8cZvc6",
+          "expanded_url": "https://x.com/DongQingAsk/status/2124774964775518208/photo/1",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "features": {
+            "large": {
+              "faces": [
+                {
+                  "h": 93,
+                  "w": 93,
+                  "x": 759,
+                  "y": 419
+                },
+                {
+                  "h": 173,
+                  "w": 173,
+                  "x": 855,
+                  "y": 1405
+                }
+              ]
+            },
+            "medium": {
+              "faces": [
+                {
+                  "h": 54,
+                  "w": 54,
+                  "x": 444,
+                  "y": 245
+                },
+                {
+                  "h": 101,
+                  "w": 101,
+                  "x": 501,
+                  "y": 823
+                }
+              ]
+            },
+            "orig": {
+              "faces": [
+                {
+                  "h": 117,
+                  "w": 117,
+                  "x": 950,
+                  "y": 525
+                },
+                {
+                  "h": 217,
+                  "w": 217,
+                  "x": 1070,
+                  "y": 1758
+                }
+              ]
+            },
+            "small": {
+              "faces": [
+                {
+                  "h": 31,
+                  "w": 31,
+                  "x": 252,
+                  "y": 139
+                },
+                {
+                  "h": 57,
+                  "w": 57,
+                  "x": 283,
+                  "y": 466
+                }
+              ]
+            }
+          },
+          "id_str": "2124720661939773442",
+          "indices": [
+            72,
+            95
+          ],
+          "media_key": "3_2124720661939773442",
+          "media_results": {
+            "result": {
+              "media_key": "3_2124720661939773442"
+            }
+          },
+          "media_url_https": "https://pbs.twimg.com/media/HXyGL03aYAISCS4.jpg",
+          "original_info": {
+            "focus_rects": [
+              {
+                "h": 1435,
+                "w": 2562,
+                "x": 0,
+                "y": 575
+              },
+              {
+                "h": 2010,
+                "w": 2010,
+                "x": 211,
+                "y": 0
+              },
+              {
+                "h": 2010,
+                "w": 1763,
+                "x": 335,
+                "y": 0
+              },
+              {
+                "h": 2010,
+                "w": 1005,
+                "x": 714,
+                "y": 0
+              },
+              {
+                "h": 2010,
+                "w": 2562,
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "height": 2010,
+            "width": 2562
+          },
+          "sizes": {
+            "large": {
+              "h": 1607,
+              "resize": "fit",
+              "w": 2048
+            },
+            "medium": {
+              "h": 941,
+              "resize": "fit",
+              "w": 1200
+            },
+            "small": {
+              "h": 533,
+              "resize": "fit",
+              "w": 680
+            },
+            "thumb": {
+              "h": 150,
+              "resize": "crop",
+              "w": 150
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/fRNT8cZvc6"
+        }
+      ],
+      "links": [],
+      "metrics": {
+        "likes": 7,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 9,
+        "views": 1160
+      },
+      "post_metrics": {
+        "likes": 7,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 9,
+        "views": 1160
+      },
+      "topic": "变现",
+      "quality_score": 92,
+      "score_value": 92,
+      "score_label": "GQS",
+      "quality_label": "黄金内容",
+      "selected_reason": "内容提出了明确的小红书变现模式，主题归为「爆文与内容结构」，且已有一定传播反馈。",
+      "reusable_takeaway": "提炼选题、标题、封面、正文结构中的可复用写法。",
+      "tags": [
+        "变现",
+        "爆文与内容结构",
+        "案例复盘"
+      ],
+      "acceptance_path": "monetization_opportunity",
+      "source_status": "claimed",
+      "conversation_context": {
+        "conversation_id": "2124774964775518208",
+        "anchor_post_id": "2124774964775518208",
+        "summary_zh": "前文围绕小红书工作台及其商业化案例展开：发帖人称某店开店275天靠单一工作台相关商品卖近500单、销售额约1.7万，并引出自己计划开源通用工作台。后续有人认可案例并询问先开放哪部分。上下文显示情绪偏正面，但数据为发帖人估算，真实性需另证。",
+        "summary_status": "model",
+        "post_count": 2,
+        "detail_path": "dashboard-data/lazy/conversations/2124774964775518208-81501dcc8a9d.json"
+      }
+    },
+    {
+      "post_id": "2124744759612965292",
+      "created_at": "2026-11-23T06:00:01Z",
+      "time": "2026-11-23T06:00:01Z",
+      "url": "https://x.com/DongQingAsk/status/2124744759612965292",
+      "external_href": "https://x.com/DongQingAsk/status/2124744759612965292",
+      "language": "zh",
+      "text": "做返利CPS机器人如果不知道如何引流，其实可以在小红书做一个前置动作，做虚拟资料的销售，比如这个装修手册，开店不到一年，销售1000单，前端收入近3万元\n\n后端可以转化为私域装修购买大件的人也比较多，用起来返利机器人帮你的客户省钱，自己也可以赚到返利的利润，一劳多得，后期装修稳定之后，这部分的装修用返利机器人的业主，还会从母婴、生活，日常消费等多渠道都会继续使用，这就是第一波种子人群",
+      "clean_text": "做返利CPS机器人如果不知道如何引流，其实可以在小红书做一个前置动作，做虚拟资料的销售，比如这个装修手册，开店不到一年，销售1000单，前端收入近3万元\n\n后端可以转化为私域装修购买大件的人也比较多，用起来返利机器人帮你的客户省钱，自己也可以赚到返利的利润，一劳多得，后期装修稳定之后，这部分的装修用返利机器人的业主，还会从母婴、生活，日常消费等多渠道都会继续使用，这就是第一波种子人群",
+      "original_text": "做返利CPS机器人如果不知道如何引流，其实可以在小红书做一个前置动作，做虚拟资料的销售，比如这个装修手册，开店不到一年，销售1000单，前端收入近3万元\n\n后端可以转化为私域装修购买大件的人也比较多，用起来返利机器人帮你的客户省钱，自己也可以赚到返利的利润，一劳多得，后期装修稳定之后，这部分的装修用返利机器人的业主，还会从母婴、生活，日常消费等多渠道都会继续使用，这就是第一波种子人群",
+      "translation_zh": "做返利CPS机器人如果不知道如何引流，其实可以在小红书做一个前置动作，做虚拟资料的销售，比如这个装修手册，开店不到一年，销售1000单，前端收入近3万元\n\n后端可以转化为私域装修购买大件的人也比较多，用起来返利机器人帮你的客户省钱，自己也可以赚到返利的利润，一劳多得，后期装修稳定之后，这部分的装修用返利机器人的业主，还会从母婴、生活，日常消费等多渠道都会继续使用，这就是第一波种子人群",
+      "translation_status": "source_chinese",
+      "summary_zh": "X 上关于小红书增长、运营或变现的方法论分享。",
+      "platform": "xiaohongshu",
+      "brand": "platform_xiaohongshu",
+      "source_type": "小红书增长方法",
+      "badge": "小红书",
+      "author_id": "2106566414702436352",
+      "author_name": "冬青",
+      "author_handle": "DongQingAsk",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2106588156929978368/AZoDcP71_normal.jpg",
+      "author_followers": 12225,
+      "author_following": 173,
+      "author_bio": "折腾 AI 工具、独立开发和虚拟产品\n把想法做成东西，把过程写成经验。\n分享实测、踩坑和新发现，偶尔聊聊生活。",
+      "author_location": "",
+      "author_joined_at": "2026-10-04T02:06:28Z",
+      "author_verified": false,
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2115717125402943986",
+      "conversation_id": "2124744759612965292",
+      "media": [
+        {
+          "display_url": "pic.x.com/txF1jP8lsl",
+          "expanded_url": "https://x.com/DongQingAsk/status/2124744759612965292/photo/1",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "id_str": "2124717226595115009",
+          "indices": [
+            0,
+            0
+          ],
+          "media_key": "3_2124717226595115009",
+          "media_results": {
+            "result": {
+              "media_key": "3_2124717226595115009"
+            }
+          },
+          "media_url_https": "https://pbs.twimg.com/media/HXyDD3Na4AE__1s.jpg",
+          "original_info": {
+            "focus_rects": [],
+            "height": 2010,
+            "width": 2562
+          },
+          "sizes": {
+            "large": {
+              "w": 2048,
+              "h": 1607,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 1200,
+              "h": 941,
+              "resize": "fit"
+            },
+            "small": {
+              "w": 680,
+              "h": 533,
+              "resize": "fit"
+            },
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/txF1jP8lsl"
+        }
+      ],
+      "links": [],
+      "metrics": {
+        "likes": 17,
+        "reposts": 3,
+        "replies": 2,
+        "quotes": 1,
+        "bookmarks": 22,
+        "views": 2477
+      },
+      "post_metrics": {
+        "likes": 17,
+        "reposts": 3,
+        "replies": 2,
+        "quotes": 1,
+        "bookmarks": 22,
+        "views": 2477
+      },
+      "topic": "私域引流",
+      "quality_score": 73,
+      "score_value": 73,
+      "score_label": "GQS",
+      "quality_label": "黄金内容",
+      "selected_reason": "内容命中明确的小红书运营/增长意图，主题归为「私域引流」且已有一定传播反馈。",
+      "reusable_takeaway": "关注从小红书内容到社群、私域或线索承接的路径。",
+      "tags": [
+        "私域引流"
+      ],
+      "acceptance_path": "monetization_opportunity",
+      "source_status": "claimed",
+      "conversation_context": {
+        "conversation_id": "2124744759612965292",
+        "anchor_post_id": "2124744759612965292",
+        "summary_zh": "前文主要在讲返利CPS机器人引流方法：先在小红书卖装修手册等虚拟资料，称不到一年1000单、收入近3万元，再转化装修大件消费人群使用返利机器人省钱并赚佣金。后续有人表示学习、追问是否先做小红书。语境偏经验分享/营销教学，无具体品牌投诉或交易体验，情绪正向，传播价值在引流模式参考。",
+        "summary_status": "model",
+        "post_count": 3,
+        "detail_path": "dashboard-data/lazy/conversations/2124744759612965292-49628e5bc8ba.json"
+      }
+    },
+    {
+      "post_id": "2124740905479589980",
+      "created_at": "2026-11-23T05:44:42Z",
+      "time": "2026-11-23T05:44:42Z",
+      "url": "https://x.com/Tangyium2/status/2124740905479589980",
+      "external_href": "https://x.com/Tangyium2/status/2124740905479589980",
+      "language": "zh",
+      "text": "我什么都没干啊\n\n这🐶小红书就给我店铺永久冻结了\n\n不懂就问这是怎么回事？友友们有遇到过吗？ https://t.co/LTIBHSWrbU",
+      "clean_text": "我什么都没干啊\n\n这🐶小红书就给我店铺永久冻结了\n\n不懂就问这是怎么回事？友友们有遇到过吗？",
+      "original_text": "我什么都没干啊\n\n这🐶小红书就给我店铺永久冻结了\n\n不懂就问这是怎么回事？友友们有遇到过吗？",
+      "translation_zh": "我什么都没干啊\n\n这🐶小红书就给我店铺永久冻结了\n\n不懂就问这是怎么回事？友友们有遇到过吗？",
+      "translation_status": "source_chinese",
+      "summary_zh": "X 上关于小红书增长、运营或变现的方法论分享。",
+      "platform": "xiaohongshu",
+      "brand": "platform_xiaohongshu",
+      "source_type": "小红书增长方法",
+      "badge": "小红书",
+      "author_id": "2110667651429384192",
+      "author_name": "黑光",
+      "author_handle": "Tangyium2",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2117545142706135040/yMF_Q1eX_normal.jpg",
+      "author_followers": 1396,
+      "author_following": 1066,
+      "author_bio": "有关必回！（没回就是等cd）\ninfj｜美术生｜爱好汽车🏍️｜多次项目失败者｜打不死的小强🪳｜健身🏋️｜慢慢学习Ai中｜八字命理爱好者\nAI会员网站：http://www.heiyyai.com",
+      "author_location": "",
+      "author_joined_at": "2026-10-15T09:44:00Z",
+      "author_verified": false,
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2124740905479589980",
+      "media": [
+        {
+          "display_url": "pic.x.com/LTIBHSWrbU",
+          "expanded_url": "https://x.com/Tangyium2/status/2124740905479589980/photo/1",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "id_str": "2124740889876598784",
+          "indices": [
+            47,
+            70
+          ],
+          "media_key": "3_2124740889876598784",
+          "media_results": {
+            "result": {
+              "media_key": "3_2124740889876598784"
+            }
+          },
+          "media_url_https": "https://pbs.twimg.com/media/HXyYlPzXkAA-Oq1.jpg",
+          "original_info": {
+            "focus_rects": [],
+            "height": 2048,
+            "width": 942
+          },
+          "sizes": {
+            "large": {
+              "w": 942,
+              "h": 2048,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 552,
+              "h": 1200,
+              "resize": "fit"
+            },
+            "small": {
+              "w": 313,
+              "h": 680,
+              "resize": "fit"
+            },
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/LTIBHSWrbU"
+        }
+      ],
+      "links": [],
+      "metrics": {
+        "likes": 3,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 188
+      },
+      "post_metrics": {
+        "likes": 3,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 188
+      },
+      "topic": "平台规则",
+      "quality_score": 72,
+      "score_value": 72,
+      "score_label": "GQS",
+      "quality_label": "黄金内容",
+      "selected_reason": "内容提出了明确的小红书变现模式，主题归为「变现」，且已有一定传播反馈。",
+      "reusable_takeaway": "记录从内容到商单、带货、店铺或服务成交的闭环。",
+      "tags": [
+        "平台规则",
+        "变现"
+      ],
+      "acceptance_path": "platform_observation",
+      "source_status": "claimed",
+      "conversation_context": {
+        "conversation_id": "2124740905479589980",
+        "anchor_post_id": "2124740905479589980",
+        "summary_zh": "前文没有更多铺垫，收录帖直接称自己的小红书店铺“什么都没干”却被永久冻结，话题集中在平台处置和店铺经营受影响，并未涉及具体商品、价格或配送。后续多人表示同情、建议申诉，也有人简单接话。该上下文显示信息源为当事人自述，情绪偏困惑不满，但缺少冻结原因和证据，真实性需谨慎判断，传播点在卖家遭遇平台封禁。",
+        "summary_status": "model",
+        "post_count": 4,
+        "detail_path": "dashboard-data/lazy/conversations/2124740905479589980-f0f4e8ff30fb.json"
+      }
+    },
+    {
+      "post_id": "2124707966670778845",
+      "created_at": "2026-11-23T03:33:49Z",
+      "time": "2026-11-23T03:33:49Z",
+      "url": "https://x.com/pamelaaaaa1218/status/2124707966670778845",
+      "external_href": "https://x.com/pamelaaaaa1218/status/2124707966670778845",
+      "language": "zh",
+      "text": "朋友们！文中说的第二个创作奖励活动第四期今天开始了！小红书发笔记最高能得¥1000！我要去激情创作了！\n\n除了之前的小红书和微信图文视频号，这次新增了知乎、B站、抖音平台的创作，一个内容多平台分发！一鱼多吃！\n\n可以把图文笔记发小红书，然后同步到微信；视频同时发抖音和B站；问答形式发知乎，发得越多更容易出爆款！都给我去发！前提要注册好平台获得Xpert ID才能顺利结算哈～参与入口：https://t.co/PIAMZO5wii",
+      "clean_text": "朋友们！文中说的第二个创作奖励活动第四期今天开始了！小红书发笔记最高能得¥1000！我要去激情创作了！\n\n除了之前的小红书和微信图文视频号，这次新增了知乎、B站、抖音平台的创作，一个内容多平台分发！一鱼多吃！\n\n可以把图文笔记发小红书，然后同步到微信；视频同时发抖音和B站；问答形式发知乎，发得越多更容易出爆款！都给我去发！前提要注册好平台获得Xpert ID才能顺利结算哈～参与入口：https://t.co/PIAMZO5wii",
+      "original_text": "朋友们！文中说的第二个创作奖励活动第四期今天开始了！小红书发笔记最高能得¥1000！我要去激情创作了！\n\n除了之前的小红书和微信图文视频号，这次新增了知乎、B站、抖音平台的创作，一个内容多平台分发！一鱼多吃！\n\n可以把图文笔记发小红书，然后同步到微信；视频同时发抖音和B站；问答形式发知乎，发得越多更容易出爆款！都给我去发！前提要注册好平台获得Xpert ID才能顺利结算哈～参与入口：https://t.co/PIAMZO5wii",
+      "translation_zh": "朋友们！文中说的第二个创作奖励活动第四期今天开始了！小红书发笔记最高能得¥1000！我要去激情创作了！\n\n除了之前的小红书和微信图文视频号，这次新增了知乎、B站、抖音平台的创作，一个内容多平台分发！一鱼多吃！\n\n可以把图文笔记发小红书，然后同步到微信；视频同时发抖音和B站；问答形式发知乎，发得越多更容易出爆款！都给我去发！前提要注册好平台获得Xpert ID才能顺利结算哈～参与入口：https://t.co/PIAMZO5wii",
+      "translation_status": "source_chinese",
+      "summary_zh": "X 上关于小红书增长、运营或变现的方法论分享。",
+      "platform": "xiaohongshu",
+      "brand": "platform_xiaohongshu",
+      "source_type": "小红书增长方法",
+      "badge": "小红书",
+      "author_id": "1919915608130650114",
+      "author_name": "PamelaAI·H",
+      "author_handle": "pamelaaaaa1218",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2108438041111003136/wmPmSJcc_normal.jpg",
+      "author_followers": 1041,
+      "author_following": 214,
+      "author_bio": "",
+      "author_location": "合作/交流WX：Xph12251218",
+      "author_joined_at": "2025-05-07T00:42:17Z",
+      "author_verified": false,
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2122151965207777790",
+      "conversation_id": "2124707966670778845",
+      "media": [
+        {
+          "allow_download_status": {
+            "allow_download": true
+          },
+          "display_url": "pic.x.com/WcoH3fQ8fE",
+          "expanded_url": "https://x.com/pamelaaaaa1218/status/2124707966670778845/photo/1",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "features": {
+            "large": {
+              "faces": []
+            },
+            "medium": {
+              "faces": []
+            },
+            "orig": {
+              "faces": []
+            },
+            "small": {
+              "faces": []
+            }
+          },
+          "id_str": "2124706530067173376",
+          "indices": [
+            105,
+            128
+          ],
+          "media_key": "3_2124706530067173376",
+          "media_results": {
+            "result": {
+              "media_key": "3_2124706530067173376"
+            }
+          },
+          "media_url_https": "https://pbs.twimg.com/media/HXx5VPibUAAGr21.jpg",
+          "original_info": {
+            "focus_rects": [
+              {
+                "h": 645,
+                "w": 1152,
+                "x": 0,
+                "y": 36
+              },
+              {
+                "h": 1152,
+                "w": 1152,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 1313,
+                "w": 1152,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 2048,
+                "w": 1024,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 2048,
+                "w": 1152,
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "height": 2048,
+            "width": 1152
+          },
+          "sizes": {
+            "large": {
+              "h": 2048,
+              "resize": "fit",
+              "w": 1152
+            },
+            "medium": {
+              "h": 1200,
+              "resize": "fit",
+              "w": 675
+            },
+            "small": {
+              "h": 680,
+              "resize": "fit",
+              "w": 383
+            },
+            "thumb": {
+              "h": 150,
+              "resize": "crop",
+              "w": 150
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/WcoH3fQ8fE"
+        }
+      ],
+      "links": [
+        "https://corexpertdata.com/x/lb-rDghjUt"
+      ],
+      "metrics": {
+        "likes": 11,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 6,
+        "views": 721
+      },
+      "post_metrics": {
+        "likes": 11,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 6,
+        "views": 721
+      },
+      "topic": "变现",
+      "quality_score": 67,
+      "score_value": 67,
+      "score_label": "GQS",
+      "quality_label": "黄金内容",
+      "selected_reason": "内容命中明确的小红书运营/增长意图，主题归为「爆文与内容结构」且已有一定传播反馈。",
+      "reusable_takeaway": "提炼选题、标题、封面、正文结构中的可复用写法。",
+      "tags": [
+        "变现",
+        "爆文与内容结构",
+        "私域引流"
+      ],
+      "acceptance_path": "monetization_opportunity",
+      "source_status": "claimed",
+      "conversation_context": {
+        "conversation_id": "2124707966670778845",
+        "anchor_post_id": "2124707966670778845",
+        "summary_zh": "对话中未见更早铺垫，收录帖主要通知创作奖励活动第四期启动，把话题转向平台发布与收益：小红书笔记最高¥1000，并扩展到知乎、B站、抖音等，需注册Xpert ID结算。后续仅有人表示“立刻了解”，无质疑或补充。上下文显示情绪积极、偏推广招募，真实性仍需以活动入口规则核验。",
+        "summary_status": "model",
+        "post_count": 2,
+        "detail_path": "dashboard-data/lazy/conversations/2124707966670778845-33d1475f661b.json"
+      }
+    },
+    {
+      "post_id": "2124674543117844655",
+      "created_at": "2026-11-23T01:21:00Z",
+      "time": "2026-11-23T01:21:00Z",
+      "url": "https://x.com/xiping_ai/status/2124674543117844655",
+      "external_href": "https://x.com/xiping_ai/status/2124674543117844655",
+      "language": "zh",
+      "text": "想做小红书赚钱或者起号的，关注这10位实战者：\n\n1、小晚不在 @bbkirstry ：做内容营销和 IP 策划，6 月底才开始做自媒体，一条视频就在小红书涨了 1 万多粉。11月初分享的小红书起号保姆级教程，从 0 找对标、坚持出摊到商业化，成为小红书入门必读教程。\n\n2、Yooee @Yooeec3 ：分享小红书起号和营销，写过一篇邪修起号教程，最近起的号，四天就成功起号，一周涨万粉，成功接到商单。\n\n3、Jessi Cao @JessiCao_JC ：把小红书从 0 到 1 写成了万字教程，接广怎么报价、怎么谈返点，获客从第一篇笔记到咨询，都拆过。有意思的是，她在小红书写过怎么做 X，后面有人找她做推广，很快谈成了一单 5 位数的合作。\n\n4、四点金桃 @sidianjin ：大厂做了 9 年运营，小红书起号 3 天涨了 1.5 万粉，就两条笔记，一条是装小龙虾，一条是 Codex 安装教程，而且还是下班 10 分钟拍的，一个月收入过万。\n\n5、夏木GROW @Tanghulu188 ：做 3C 数码，闲鱼和小红书都在做。10 月一周，在小红书就变现了 4000 多。\n\n6、Serena 木瓜 @369Serena ：9 月和朋友在上海办 AI 线下活动，主要获客就是从小红书来的，活动爆满，她将这些成果变更了经验，比如五个账号一起打搜索、低粉也能挂购物车，写成了矩阵获客教程。\n\n7、栋哥 @dontbesilent ：栋哥是天生吃互联网这碗粉的，一年里小红书涨了 11 万粉，两天时间能把小红书涨到万粉，并把大字报起号、投薯条、别急着开蓝 V 和开店，写成了标准教程。\n\n8、超级峰 @Mileson07 ：把小红书日常运营交给 AI，从选题、做图、发布到复盘，写成了全自动化保姆教程，自己拿表情包出处这个号跑过。他非常擅长打蓝孩子，他的新账号基本走搜索词，也能有几万曝光。\n\n9、冬青 @DongQingAsk ：做小红书虚拟资料，有一家店铺，今年 4 月才开始，就一个商品，暑假单月收入接近 3 万，今年一共提现了 11万 元。\n\n10、启航 @qihang_zeng6688 ：00 后，深耕小红书虚拟电商，去年开始做小红书电商，自营 8 家店，高峰时期月流水 6 万多，月订单 6000 多。\n\n从上面可以看出，小红书不一定要先涨到很大的粉，只要够垂直，做虚拟资料、接广、活动获客，都能赚钱。\n\n他们的教程和复盘帖，我放评论区了。",
+      "clean_text": "想做小红书赚钱或者起号的，关注这10位实战者：\n\n1、小晚不在 @bbkirstry ：做内容营销和 IP 策划，6 月底才开始做自媒体，一条视频就在小红书涨了 1 万多粉。11月初分享的小红书起号保姆级教程，从 0 找对标、坚持出摊到商业化，成为小红书入门必读教程。\n\n2、Yooee @Yooeec3 ：分享小红书起号和营销，写过一篇邪修起号教程，最近起的号，四天就成功起号，一周涨万粉，成功接到商单。\n\n3、Jessi Cao @JessiCao_JC ：把小红书从 0 到 1 写成了万字教程，接广怎么报价、怎么谈返点，获客从第一篇笔记到咨询，都拆过。有意思的是，她在小红书写过怎么做 X，后面有人找她做推广，很快谈成了一单 5 位数的合作。\n\n4、四点金桃 @sidianjin ：大厂做了 9 年运营，小红书起号 3 天涨了 1.5 万粉，就两条笔记，一条是装小龙虾，一条是 Codex 安装教程，而且还是下班 10 分钟拍的，一个月收入过万。\n\n5、夏木GROW @Tanghulu188 ：做 3C 数码，闲鱼和小红书都在做。10 月一周，在小红书就变现了 4000 多。\n\n6、Serena 木瓜 @369Serena ：9 月和朋友在上海办 AI 线下活动，主要获客就是从小红书来的，活动爆满，她将这些成果变更了经验，比如五个账号一起打搜索、低粉也能挂购物车，写成了矩阵获客教程。\n\n7、栋哥 @dontbesilent ：栋哥是天生吃互联网这碗粉的，一年里小红书涨了 11 万粉，两天时间能把小红书涨到万粉，并把大字报起号、投薯条、别急着开蓝 V 和开店，写成了标准教程。\n\n8、超级峰 @Mileson07 ：把小红书日常运营交给 AI，从选题、做图、发布到复盘，写成了全自动化保姆教程，自己拿表情包出处这个号跑过。他非常擅长打蓝孩子，他的新账号基本走搜索词，也能有几万曝光。\n\n9、冬青 @DongQingAsk ：做小红书虚拟资料，有一家店铺，今年 4 月才开始，就一个商品，暑假单月收入接近 3 万，今年一共提现了 11万 元。\n\n10、启航 @qihang_zeng6688 ：00 后，深耕小红书虚拟电商，去年开始做小红书电商，自营 8 家店，高峰时期月流水 6 万多，月订单 6000 多。\n\n从上面可以看出，小红书不一定要先涨到很大的粉，只要够垂直，做虚拟资料、接广、活动获客，都能赚钱。\n\n他们的教程和复盘帖，我放评论区了。",
+      "original_text": "想做小红书赚钱或者起号的，关注这10位实战者：\n\n1、小晚不在 @bbkirstry ：做内容营销和 IP 策划，6 月底才开始做自媒体，一条视频就在小红书涨了 1 万多粉。11月初分享的小红书起号保姆级教程，从 0 找对标、坚持出摊到商业化，成为小红书入门必读教程。\n\n2、Yooee @Yooeec3 ：分享小红书起号和营销，写过一篇邪修起号教程，最近起的号，四天就成功起号，一周涨万粉，成功接到商单。\n\n3、Jessi Cao @JessiCao_JC ：把小红书从 0 到 1 写成了万字教程，接广怎么报价、怎么谈返点，获客从第一篇笔记到咨询，都拆过。有意思的是，她在小红书写过怎么做 X，后面有人找她做推广，很快谈成了一单 5 位数的合作。\n\n4、四点金桃 @sidianjin ：大厂做了 9 年运营，小红书起号 3 天涨了 1.5 万粉，就两条笔记，一条是装小龙虾，一条是 Codex 安装教程，而且还是下班 10 分钟拍的，一个月收入过万。\n\n5、夏木GROW @Tanghulu188 ：做 3C 数码，闲鱼和小红书都在做。10 月一周，在小红书就变现了 4000 多。\n\n6、Serena 木瓜 @369Serena ：9 月和朋友在上海办 AI 线下活动，主要获客就是从小红书来的，活动爆满，她将这些成果变更了经验，比如五个账号一起打搜索、低粉也能挂购物车，写成了矩阵获客教程。\n\n7、栋哥 @dontbesilent ：栋哥是天生吃互联网这碗粉的，一年里小红书涨了 11 万粉，两天时间能把小红书涨到万粉，并把大字报起号、投薯条、别急着开蓝 V 和开店，写成了标准教程。\n\n8、超级峰 @Mileson07 ：把小红书日常运营交给 AI，从选题、做图、发布到复盘，写成了全自动化保姆教程，自己拿表情包出处这个号跑过。他非常擅长打蓝孩子，他的新账号基本走搜索词，也能有几万曝光。\n\n9、冬青 @DongQingAsk ：做小红书虚拟资料，有一家店铺，今年 4 月才开始，就一个商品，暑假单月收入接近 3 万，今年一共提现了 11万 元。\n\n10、启航 @qihang_zeng6688 ：00 后，深耕小红书虚拟电商，去年开始做小红书电商，自营 8 家店，高峰时期月流水 6 万多，月订单 6000 多。\n\n从上面可以看出，小红书不一定要先涨到很大的粉，只要够垂直，做虚拟资料、接广、活动获客，都能赚钱。\n\n他们的教程和复盘帖，我放评论区了。",
+      "translation_zh": "想做小红书赚钱或者起号的，关注这10位实战者：\n\n1、小晚不在 @bbkirstry ：做内容营销和 IP 策划，6 月底才开始做自媒体，一条视频就在小红书涨了 1 万多粉。11月初分享的小红书起号保姆级教程，从 0 找对标、坚持出摊到商业化，成为小红书入门必读教程。\n\n2、Yooee @Yooeec3 ：分享小红书起号和营销，写过一篇邪修起号教程，最近起的号，四天就成功起号，一周涨万粉，成功接到商单。\n\n3、Jessi Cao @JessiCao_JC ：把小红书从 0 到 1 写成了万字教程，接广怎么报价、怎么谈返点，获客从第一篇笔记到咨询，都拆过。有意思的是，她在小红书写过怎么做 X，后面有人找她做推广，很快谈成了一单 5 位数的合作。\n\n4、四点金桃 @sidianjin ：大厂做了 9 年运营，小红书起号 3 天涨了 1.5 万粉，就两条笔记，一条是装小龙虾，一条是 Codex 安装教程，而且还是下班 10 分钟拍的，一个月收入过万。\n\n5、夏木GROW @Tanghulu188 ：做 3C 数码，闲鱼和小红书都在做。10 月一周，在小红书就变现了 4000 多。\n\n6、Serena 木瓜 @369Serena ：9 月和朋友在上海办 AI 线下活动，主要获客就是从小红书来的，活动爆满，她将这些成果变更了经验，比如五个账号一起打搜索、低粉也能挂购物车，写成了矩阵获客教程。\n\n7、栋哥 @dontbesilent ：栋哥是天生吃互联网这碗粉的，一年里小红书涨了 11 万粉，两天时间能把小红书涨到万粉，并把大字报起号、投薯条、别急着开蓝 V 和开店，写成了标准教程。\n\n8、超级峰 @Mileson07 ：把小红书日常运营交给 AI，从选题、做图、发布到复盘，写成了全自动化保姆教程，自己拿表情包出处这个号跑过。他非常擅长打蓝孩子，他的新账号基本走搜索词，也能有几万曝光。\n\n9、冬青 @DongQingAsk ：做小红书虚拟资料，有一家店铺，今年 4 月才开始，就一个商品，暑假单月收入接近 3 万，今年一共提现了 11万 元。\n\n10、启航 @qihang_zeng6688 ：00 后，深耕小红书虚拟电商，去年开始做小红书电商，自营 8 家店，高峰时期月流水 6 万多，月订单 6000 多。\n\n从上面可以看出，小红书不一定要先涨到很大的粉，只要够垂直，做虚拟资料、接广、活动获客，都能赚钱。\n\n他们的教程和复盘帖，我放评论区了。",
+      "translation_status": "source_chinese",
+      "summary_zh": "X 上关于小红书增长、运营或变现的方法论分享。",
+      "platform": "xiaohongshu",
+      "brand": "platform_xiaohongshu",
+      "source_type": "小红书增长方法",
+      "badge": "小红书",
+      "author_id": "928079116238077952",
+      "author_name": "希平",
+      "author_handle": "xiping_ai",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2108357320313028608/X9sGwqmo_normal.jpg",
+      "author_followers": 1984,
+      "author_following": 65,
+      "author_bio": "4年职场、4年创业\n持续分享AI实战、推特X运营经验\n合作：fnt2023",
+      "author_location": "sz",
+      "author_joined_at": "2017-11-08T01:57:59Z",
+      "author_verified": false,
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2124315678710620390",
+      "conversation_id": "2124674543117844655",
+      "media": [],
+      "links": [],
+      "metrics": {
+        "likes": 271,
+        "reposts": 28,
+        "replies": 14,
+        "quotes": 1,
+        "bookmarks": 256,
+        "views": 13804
+      },
+      "post_metrics": {
+        "likes": 271,
+        "reposts": 28,
+        "replies": 14,
+        "quotes": 1,
+        "bookmarks": 256,
+        "views": 13804
+      },
+      "topic": "变现",
+      "quality_score": 100,
+      "score_value": 100,
+      "score_label": "GQS",
+      "quality_label": "黄金内容",
+      "selected_reason": "内容提出了明确的小红书变现模式，主题归为「账号冷启动」，且已有一定传播反馈。",
+      "reusable_takeaway": "关注账号启动阶段的定位、互动和初始内容节奏。",
+      "tags": [
+        "变现",
+        "账号冷启动",
+        "爆文与内容结构",
+        "流量机制",
+        "矩阵",
+        "案例复盘"
+      ],
+      "acceptance_path": "case_lead",
+      "source_status": "claimed",
+      "conversation_context": {
+        "conversation_id": "2124674543117844655",
+        "anchor_post_id": "2124674543117844655",
+        "summary_zh": "前文即收录帖本身，xiping_ai汇总10位小红书起号/变现实战者，话题从“做小红书赚钱”落到具体教程、账号案例与收益数据，如涨粉、商单、提现等，无配送体验内容。后续多位被推荐者致谢，有人追问方法，也有人称“小晚”教程最细。整体情绪正面、圈内传播价值较强，但案例多为自述，仍需核实。",
+        "summary_status": "model",
+        "post_count": 13,
+        "detail_path": "dashboard-data/lazy/conversations/2124674543117844655-b34ea5de4868.json"
+      }
+    },
+    {
+      "post_id": "2124674123309936775",
+      "created_at": "2026-11-23T01:19:20Z",
+      "time": "2026-11-23T01:19:20Z",
+      "url": "https://x.com/better_christal/status/2124674123309936775",
+      "external_href": "https://x.com/better_christal/status/2124674123309936775",
+      "language": "zh",
+      "text": "小红书现在有个「小工具」入口，据不少博主分享，H5 网页可以直接挂在笔记里，点开就能玩，不用下载 App。\n\n对会用 AI 写网页的人来说，这是一个新的分发口。\n\n上周我说过帮人做定制小游戏，现在多了一条路：自己做轻工具，挂在笔记里引流。\n\n适合普通人先试的三类：\n1. 心理测试、性格选择题\n2. 节日祝福、抽签类小游戏\n3. 某个行业的小计算器，比如装修预算\n\n步骤：用 Grok Bot 或 Claude 写单页，自己手机测顺，再挂一篇笔记看点开率。网上说的几百万人玩过是个例，先拿一篇笔记验证。",
+      "clean_text": "小红书现在有个「小工具」入口，据不少博主分享，H5 网页可以直接挂在笔记里，点开就能玩，不用下载 App。\n\n对会用 AI 写网页的人来说，这是一个新的分发口。\n\n上周我说过帮人做定制小游戏，现在多了一条路：自己做轻工具，挂在笔记里引流。\n\n适合普通人先试的三类：\n1. 心理测试、性格选择题\n2. 节日祝福、抽签类小游戏\n3. 某个行业的小计算器，比如装修预算\n\n步骤：用 Grok Bot 或 Claude 写单页，自己手机测顺，再挂一篇笔记看点开率。网上说的几百万人玩过是个例，先拿一篇笔记验证。",
+      "original_text": "小红书现在有个「小工具」入口，据不少博主分享，H5 网页可以直接挂在笔记里，点开就能玩，不用下载 App。\n\n对会用 AI 写网页的人来说，这是一个新的分发口。\n\n上周我说过帮人做定制小游戏，现在多了一条路：自己做轻工具，挂在笔记里引流。\n\n适合普通人先试的三类：\n1. 心理测试、性格选择题\n2. 节日祝福、抽签类小游戏\n3. 某个行业的小计算器，比如装修预算\n\n步骤：用 Grok Bot 或 Claude 写单页，自己手机测顺，再挂一篇笔记看点开率。网上说的几百万人玩过是个例，先拿一篇笔记验证。",
+      "translation_zh": "小红书现在有个「小工具」入口，据不少博主分享，H5 网页可以直接挂在笔记里，点开就能玩，不用下载 App。\n\n对会用 AI 写网页的人来说，这是一个新的分发口。\n\n上周我说过帮人做定制小游戏，现在多了一条路：自己做轻工具，挂在笔记里引流。\n\n适合普通人先试的三类：\n1. 心理测试、性格选择题\n2. 节日祝福、抽签类小游戏\n3. 某个行业的小计算器，比如装修预算\n\n步骤：用 Grok Bot 或 Claude 写单页，自己手机测顺，再挂一篇笔记看点开率。网上说的几百万人玩过是个例，先拿一篇笔记验证。",
+      "translation_status": "source_chinese",
+      "summary_zh": "X 上关于小红书增长、运营或变现的方法论分享。",
+      "platform": "xiaohongshu",
+      "brand": "platform_xiaohongshu",
+      "source_type": "小红书增长方法",
+      "badge": "小红书",
+      "author_id": "775603683794923520",
+      "author_name": "Christal.Z",
+      "author_handle": "better_christal",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2055191526733656064/4i6cJurF_normal.jpg",
+      "author_followers": 11572,
+      "author_following": 437,
+      "author_bio": "",
+      "author_location": "",
+      "author_joined_at": "2016-09-13T07:55:03Z",
+      "author_verified": false,
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2124674123309936775",
+      "media": [],
+      "links": [],
+      "metrics": {
+        "likes": 10,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 4,
+        "views": 575
+      },
+      "post_metrics": {
+        "likes": 10,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 4,
+        "views": 575
+      },
+      "topic": "流量机制",
+      "quality_score": 99,
+      "score_value": 99,
+      "score_label": "GQS",
+      "quality_label": "黄金内容",
+      "selected_reason": "内容包含可复用的方法、步骤或复盘结构，主题归为「爆文与内容结构」且已有一定传播反馈。",
+      "reusable_takeaway": "提炼选题、标题、封面、正文结构中的可复用写法。",
+      "tags": [
+        "流量机制",
+        "爆文与内容结构",
+        "私域引流"
+      ],
+      "acceptance_path": "platform_update",
+      "source_status": "claimed",
+      "conversation_context": {
+        "conversation_id": "2124674123309936775",
+        "anchor_post_id": "2124674123309936775",
+        "summary_zh": "前文围绕小红书新增“小工具”入口展开，称H5可挂在笔记里免下载打开，适合用AI做心理测试、小游戏、行业计算器等轻工具引流。收录帖把话题聚焦到小红书功能体验和创作者分发价值，未涉及价格或配送。后续有人认同“免下载”是关键，也有人转发给他人看。上下文显示情绪偏积极，但信息主要来自博主分享，真实性仍需官方或实测验证。",
+        "summary_status": "model",
+        "post_count": 3,
+        "detail_path": "dashboard-data/lazy/conversations/2124674123309936775-56544dc9feed.json"
+      }
+    }
+  ],
+  "collection_status": {
+    "status": "complete",
+    "completion_reason": "query_group_targets_reached",
+    "warnings": [],
+    "accepted_count": 12,
+    "candidates_inspected": 93,
+    "metric_filtered": 32,
+    "conversation_deduped": 0,
+    "semantic_filtered": 11,
+    "configured_query_groups": 6,
+    "query_groups_completed": 6,
+    "query_targets_met": 6,
+    "max_items": null,
+    "max_candidates": null,
+    "source_request_limit_reached": false,
+    "min_views": 100,
+    "min_likes": 1,
+    "translation": {
+      "configured": true,
+      "counts": {
+        "source_chinese": 12
+      },
+      "missing_count": 0,
+      "fallback_original_count": 0
+    },
+    "conversation_context": {
+      "eligible": 13,
+      "attempted": 13,
+      "filtered_noise": 0,
+      "capped_contexts": 0,
+      "attached": 12,
+      "unresolved": 0,
+      "fetch_limit": 50,
+      "summary": {
+        "model": 13
+      },
+      "warnings": [],
+      "review_evidence_attempted": 4
+    },
+    "semantic_review": {
+      "mode": "model",
+      "reviewed_count": 23,
+      "accepted_count": 12,
+      "rejected_count": 11,
+      "fallback_count": 0,
+      "overridden_count": 1,
+      "override_reasons": {
+        "monetization_opportunity": 1
+      },
+      "rejection_reasons": {
+        "low_value": 3,
+        "content_policy": 4,
+        "not_central_subject": 4
+      }
+    }
+  },
+  "summary": {
+    "accepted": 12,
+    "candidates_inspected": 93,
+    "metric_filtered": 32,
+    "conversation_deduped": 0,
+    "semantic_filtered": 11,
+    "max_items": null,
+    "max_candidates": null,
+    "max_candidates_per_query": null,
+    "configured_query_groups": 6,
+    "query_groups_completed": 6,
+    "query_targets_met": 6,
+    "query_rounds": 2,
+    "max_pages_per_query_round": 3,
+    "configured_query_tasks": 12,
+    "query_tasks_completed": 12,
+    "page_targets_met": 0,
+    "round_stats": [
+      {
+        "round": 1,
+        "queries_completed": 6,
+        "requests_used": 14,
+        "pages_used": 5,
+        "raw_candidates_fetched": 90,
+        "unique_candidates": 65,
+        "overlap_with_prior_rounds": 0,
+        "new_unique_candidates": 65
+      },
+      {
+        "round": 2,
+        "queries_completed": 6,
+        "requests_used": 18,
+        "pages_used": 5,
+        "raw_candidates_fetched": 88,
+        "unique_candidates": 63,
+        "overlap_with_prior_rounds": 35,
+        "new_unique_candidates": 28
+      }
+    ],
+    "raw_candidates_fetched": 178,
+    "group_unique_candidates_fetched": 178,
+    "within_query_duplicates": 0,
+    "cross_query_duplicates": 85,
+    "max_source_requests": 50,
+    "min_views": 100,
+    "min_likes": 1
+  }
+}

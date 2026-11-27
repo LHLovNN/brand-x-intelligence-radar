@@ -1,0 +1,159 @@
+{
+  "conversation_id": "2124337082995024293",
+  "anchor_post_id": "2124337082995024293",
+  "summary_zh": "对话以作者评测终端 Agent 联网采集能力不足开场，收录帖将话题转向 Agent Reach，具体介绍其支持平台、安装方式、零平台 API 费用、兜底抓取和安全隔离体验。后续回复多为支持或认同登录墙、国内平台抓取痛点，无反驳，有助判断舆情偏正面但主要来自使用感受与附和。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2124337082995024293",
+      "url": "https://x.com/realfxw/status/2124337082995024293",
+      "created_at": "2026-11-22T03:00:03Z",
+      "text": "用了一阵子 Claude Code 和 OpenClaw，我一直觉得这帮终端里的 Agent 有个挺尴尬的毛病：名义上能联网，真干活的时候跟半个瞎子差不多。\n\n平时让它帮我调研点东西，碰到要登录的小红书、X 直接卡壳；丢个 B站或者 YouTube 视频链接过去，连字幕都扒不下来；更别提 V2EX、雪球、BOSS直聘这些中文社区了，靠自带搜索出来的全是残缺信息，抓回来的网页也经常是一团乱码。\n\n最近试了下 GitHub 上挺火的 Agent Reach（已经 114k Star 了），用下来感觉思路特别实在。它没去造什么花里胡哨的新概念，就是把各平台现成好用的采集工具提前装好、测通，统一塞进一套命令行给 Agent 调用。除了语音转文字要自备 Groq 或 OpenAI 的 Key，各平台这边零 API 费用。\n\n装起来也不用自己折腾环境，直接把下面这句话发给 Agent 就行：\n「帮我安装 Agent Reach：https://t.co/ybrzu7GpVN」\n\n依赖和配置全收在本地 `~/.agent-reach/` 目录里，挺干净。默认开箱就能刷 B站、YouTube、GitHub、V2EX 和普通网页；像小红书笔记和评论、雪球行情热帖、BOSS直聘、小宇宙播客转文字，还有 Reddit 和 LinkedIn，要用的时候跟 Agent 说一声就能开，X、Facebook、Instagram 目前也有实验性渠道。后面想查哪个渠道挂了、换个账号甚至彻底卸载，直接打字吩咐就行。\n\n真正让我决定留着它没卸载的，是它的备选兜底机制。写过爬虫的都懂，平台三天两头改版加反爬，单吊一个接口根本扛不住。它给每个平台的动作都排了备选链——比如抓 B站先走 bili-cli，失败了自动切公开接口；读网页先用 Jina Reader，不行就换 Exa。底层怎么切无所谓，Agent 这头调用的姿势完全不变，确实省心。\n\n往本机装这种带登录态的工具，安全这块我一开始也犯嘀咕。看下来它守得还算死：全程只读，不发帖、不评论、不点赞也不私信，更不碰密码库。需要登录的渠道会单独跑在一个只允许本机访问的后台浏览器里，跟你平时用的浏览器完全隔离。不过按我自己的习惯，还是听官方的劝，老老实实上小号，没必要拿主力账号去赌平台风控。\n\n对了，装的时候留个心眼：PyPI 上面有个同名包，跟这个项目半毛钱关系没有，千万别手快直接 pip install，老老实实走 GitHub 官方文档装。\n\n项目地址：https://t.co/6bkwbUsVc9\n\n#AIAgent #ClaudeCode #开源项目 #GitHub",
+      "original_text": "用了一阵子 Claude Code 和 OpenClaw，我一直觉得这帮终端里的 Agent 有个挺尴尬的毛病：名义上能联网，真干活的时候跟半个瞎子差不多。\n\n平时让它帮我调研点东西，碰到要登录的小红书、X 直接卡壳；丢个 B站或者 YouTube 视频链接过去，连字幕都扒不下来；更别提 V2EX、雪球、BOSS直聘这些中文社区了，靠自带搜索出来的全是残缺信息，抓回来的网页也经常是一团乱码。\n\n最近试了下 GitHub 上挺火的 Agent Reach（已经 114k Star 了），用下来感觉思路特别实在。它没去造什么花里胡哨的新概念，就是把各平台现成好用的采集工具提前装好、测通，统一塞进一套命令行给 Agent 调用。除了语音转文字要自备 Groq 或 OpenAI 的 Key，各平台这边零 API 费用。\n\n装起来也不用自己折腾环境，直接把下面这句话发给 Agent 就行：\n「帮我安装 Agent Reach：https://t.co/ybrzu7GpVN」\n\n依赖和配置全收在本地 `~/.agent-reach/` 目录里，挺干净。默认开箱就能刷 B站、YouTube、GitHub、V2EX 和普通网页；像小红书笔记和评论、雪球行情热帖、BOSS直聘、小宇宙播客转文字，还有 Reddit 和 LinkedIn，要用的时候跟 Agent 说一声就能开，X、Facebook、Instagram 目前也有实验性渠道。后面想查哪个渠道挂了、换个账号甚至彻底卸载，直接打字吩咐就行。\n\n真正让我决定留着它没卸载的，是它的备选兜底机制。写过爬虫的都懂，平台三天两头改版加反爬，单吊一个接口根本扛不住。它给每个平台的动作都排了备选链——比如抓 B站先走 bili-cli，失败了自动切公开接口；读网页先用 Jina Reader，不行就换 Exa。底层怎么切无所谓，Agent 这头调用的姿势完全不变，确实省心。\n\n往本机装这种带登录态的工具，安全这块我一开始也犯嘀咕。看下来它守得还算死：全程只读，不发帖、不评论、不点赞也不私信，更不碰密码库。需要登录的渠道会单独跑在一个只允许本机访问的后台浏览器里，跟你平时用的浏览器完全隔离。不过按我自己的习惯，还是听官方的劝，老老实实上小号，没必要拿主力账号去赌平台风控。\n\n对了，装的时候留个心眼：PyPI 上面有个同名包，跟这个项目半毛钱关系没有，千万别手快直接 pip install，老老实实走 GitHub 官方文档装。\n\n项目地址：https://t.co/6bkwbUsVc9\n\n#AIAgent #ClaudeCode #开源项目 #GitHub",
+      "translation_zh": "用了一阵子 Claude Code 和 OpenClaw，我一直觉得这帮终端里的 Agent 有个挺尴尬的毛病：名义上能联网，真干活的时候跟半个瞎子差不多。\n\n平时让它帮我调研点东西，碰到要登录的小红书、X 直接卡壳；丢个 B站或者 YouTube 视频链接过去，连字幕都扒不下来；更别提 V2EX、雪球、BOSS直聘这些中文社区了，靠自带搜索出来的全是残缺信息，抓回来的网页也经常是一团乱码。\n\n最近试了下 GitHub 上挺火的 Agent Reach（已经 114k Star 了），用下来感觉思路特别实在。它没去造什么花里胡哨的新概念，就是把各平台现成好用的采集工具提前装好、测通，统一塞进一套命令行给 Agent 调用。除了语音转文字要自备 Groq 或 OpenAI 的 Key，各平台这边零 API 费用。\n\n装起来也不用自己折腾环境，直接把下面这句话发给 Agent 就行：\n「帮我安装 Agent Reach：https://t.co/ybrzu7GpVN」\n\n依赖和配置全收在本地 `~/.agent-reach/` 目录里，挺干净。默认开箱就能刷 B站、YouTube、GitHub、V2EX 和普通网页；像小红书笔记和评论、雪球行情热帖、BOSS直聘、小宇宙播客转文字，还有 Reddit 和 LinkedIn，要用的时候跟 Agent 说一声就能开，X、Facebook、Instagram 目前也有实验性渠道。后面想查哪个渠道挂了、换个账号甚至彻底卸载，直接打字吩咐就行。\n\n真正让我决定留着它没卸载的，是它的备选兜底机制。写过爬虫的都懂，平台三天两头改版加反爬，单吊一个接口根本扛不住。它给每个平台的动作都排了备选链——比如抓 B站先走 bili-cli，失败了自动切公开接口；读网页先用 Jina Reader，不行就换 Exa。底层怎么切无所谓，Agent 这头调用的姿势完全不变，确实省心。\n\n往本机装这种带登录态的工具，安全这块我一开始也犯嘀咕。看下来它守得还算死：全程只读，不发帖、不评论、不点赞也不私信，更不碰密码库。需要登录的渠道会单独跑在一个只允许本机访问的后台浏览器里，跟你平时用的浏览器完全隔离。不过按我自己的习惯，还是听官方的劝，老老实实上小号，没必要拿主力账号去赌平台风控。\n\n对了，装的时候留个心眼：PyPI 上面有个同名包，跟这个项目半毛钱关系没有，千万别手快直接 pip install，老老实实走 GitHub 官方文档装。\n\n项目地址：https://t.co/6bkwbUsVc9\n\n#AIAgent #ClaudeCode #开源项目 #GitHub",
+      "translation_status": "source_chinese",
+      "author_name": "TechVerser",
+      "author_handle": "realfxw",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2072335456419897344/ktRiDNBp_normal.jpg",
+      "author_followers": 2925,
+      "author_following": 1022,
+      "author_bio": "学习成瘾者｜AI 研究方向\n用严谨把复杂讲清楚\n关注：模型、自动化、工程化",
+      "author_location": null,
+      "author_joined_at": "2022-05-09T05:21:51Z",
+      "author_verified": false,
+      "links": [
+        "https://raw.githubusercontent.com/Panniantong/Agent-Reach/main/docs/install.md",
+        "https://github.com/Panniantong/Agent-Reach"
+      ],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HXsboewXUAAg7zR.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HXsboewXUAAg7zR.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HXsboewXUAAg7zR.jpg",
+          "expanded_url": "https://x.com/realfxw/status/2124337082995024293/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 5,
+        "reposts": 1,
+        "replies": 4,
+        "quotes": 0,
+        "bookmarks": 2,
+        "views": 452
+      }
+    },
+    {
+      "post_id": "2124337910447260117",
+      "url": "https://x.com/Mr3195628745/status/2124337910447260117",
+      "created_at": "2026-11-22T03:03:20Z",
+      "text": "@realfxw 必须支持，捧个场，哈哈哈哈\n点赞评论统统安排上，加油朋友🧑‍🤝‍🧑！",
+      "original_text": "@realfxw 必须支持，捧个场，哈哈哈哈\n点赞评论统统安排上，加油朋友🧑‍🤝‍🧑！",
+      "translation_zh": "@realfxw 必须支持，捧个场，哈哈哈哈\n点赞评论统统安排上，加油朋友🧑‍🤝‍🧑！",
+      "translation_status": "source_chinese",
+      "author_name": "Aaa 朴亦笙",
+      "author_handle": "Mr3195628745",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2096738527883206656/qo1gYfdg_normal.jpg",
+      "author_followers": 11147,
+      "author_following": 7500,
+      "author_bio": "Telegram:@pys8766\n觉醒的新人，努力跟上时代\n金融交易者/自媒体学习者/",
+      "author_location": "Los Angeles, CA",
+      "author_joined_at": "2023-07-20T14:10:01Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 8
+      }
+    },
+    {
+      "post_id": "2124340813706695056",
+      "url": "https://x.com/misselvexu/status/2124340813706695056",
+      "created_at": "2026-11-22T03:14:52Z",
+      "text": "@realfxw 国内平台一直是 agent 的盲区，有人专门做兜底链挺好",
+      "original_text": "@realfxw 国内平台一直是 agent 的盲区，有人专门做兜底链挺好",
+      "translation_zh": "@realfxw 国内平台一直是 agent 的盲区，有人专门做兜底链挺好",
+      "translation_status": "source_chinese",
+      "author_name": "Hailey 海莉",
+      "author_handle": "misselvexu",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2111829835978874880/kicRLRJn_normal.jpg",
+      "author_followers": 113,
+      "author_following": 513,
+      "author_bio": "用着最贵的 Token，干着最脏的活  . 🐙",
+      "author_location": "Hong Kong",
+      "author_joined_at": "2012-01-17T09:36:59Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 11
+      }
+    },
+    {
+      "post_id": "2124343678043115985",
+      "url": "https://x.com/KalinJunYAI/status/2124343678043115985",
+      "created_at": "2026-11-22T03:26:15Z",
+      "text": "@realfxw 抓取这块确实还得自己写 我那个也是半瞎",
+      "original_text": "@realfxw 抓取这块确实还得自己写 我那个也是半瞎",
+      "translation_zh": "@realfxw 抓取这块确实还得自己写 我那个也是半瞎",
+      "translation_status": "source_chinese",
+      "author_name": "Kalin | AI builds & gotchas",
+      "author_handle": "KalinJunYAI",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2093660551486517248/uglSLEXN_normal.jpg",
+      "author_followers": 2504,
+      "author_following": 2112,
+      "author_bio": "🛡️ 信息安全出身，赶鸭子上架 PM。\n🛠️ 做喜欢的 AI 产品，从想法到落地，分享过程。\n🧪 实测 AI 工具，帮你踩坑。\n🌍 用 AI 探索世界，好用的、好玩的，我都想帮你看看。\n📮 公众号：卡霖说。",
+      "author_location": null,
+      "author_joined_at": "2015-04-01T05:50:52Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 5
+      }
+    },
+    {
+      "post_id": "2124344318198677946",
+      "url": "https://x.com/lianshangbiji/status/2124344318198677946",
+      "created_at": "2026-11-22T03:28:48Z",
+      "text": "@realfxw 登录墙一堵就歇菜",
+      "original_text": "@realfxw 登录墙一堵就歇菜",
+      "translation_zh": "@realfxw 登录墙一堵就歇菜",
+      "translation_status": "source_chinese",
+      "author_name": "发财姐",
+      "author_handle": "lianshangbiji",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2108355650640392192/XzTTwlPv_normal.jpg",
+      "author_followers": 4801,
+      "author_following": 4616,
+      "author_bio": "我来到这里，是因为收到了神的召唤！\n伟大的时代，伟大的AI！",
+      "author_location": null,
+      "author_joined_at": "2026-09-16T12:22:46Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 11
+      }
+    }
+  ]
+}

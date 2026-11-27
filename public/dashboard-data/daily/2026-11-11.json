@@ -1,0 +1,3817 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T03:00:57Z",
+  "generated_at_label": "2026-11-11 11:00 BJT",
+  "window_label": "2026-11-10 08:00 BJT - 2026-11-11 08:00 BJT",
+  "metrics": {
+    "effective_intelligence": 2,
+    "high_risk": 0,
+    "needs_review": 0,
+    "primary_volume": 15,
+    "primary_candidate_volume": 26,
+    "competitor_volume": 20,
+    "negative_share": 0
+  },
+  "source_status": {
+    "status": "normal",
+    "raw_posts_collected": 46,
+    "effective_posts": 35,
+    "brand_breakdown": {
+      "primary_candidates": 26,
+      "primary_effective": 15,
+      "competitor_candidates": 20,
+      "competitor_effective": 20
+    },
+    "translation": {
+      "counts": {
+        "source_chinese": 17,
+        "translated": 29
+      },
+      "missing_count": 0,
+      "fallback_original_count": 0
+    },
+    "notes": [
+      "Public social data collection is active. Review duplicate rate and relevance regularly.",
+      "Bookmarks are collected only when the data source provides them.",
+      "Quote counts are treated as public propagation signals.",
+      "Chinese translation coverage is complete."
+    ]
+  },
+  "collection_status": {
+    "status": "complete",
+    "warnings": [],
+    "translation": {
+      "configured": true,
+      "counts": {
+        "source_chinese": 17,
+        "translated": 29
+      },
+      "missing_count": 0,
+      "fallback_original_count": 0
+    }
+  },
+  "executive_summary": {
+    "headline": "今日最高优先级主品牌舆情为：General 主品牌 overseas shopping discussion。",
+    "risk": "Overall risk is medium with IPS 63.",
+    "action": "建议动作：观察。样例竞品基线讨论涉及 refund and delivery。"
+  },
+  "competitor": {
+    "brand": "competitor",
+    "volume": 20,
+    "sentiment": {
+      "negative": 1,
+      "neutral": 16,
+      "positive": 3
+    },
+    "top_terms": [
+      {
+        "term": "good",
+        "count": 3
+      },
+      {
+        "term": "delivery",
+        "count": 1
+      },
+      {
+        "term": "scam",
+        "count": 1
+      }
+    ],
+    "top_posts": [
+      {
+        "post_id": "2120221430772375737",
+        "url": "https://x.com/DukeDarls/status/2120221430772375737",
+        "text": "My first Temu order just landed 😎😂",
+        "original_text": "My first Temu order just landed 😎😂 https://t.co/CXLCRZeHF0",
+        "links": [],
+        "translation_zh": "我的第一单 Temu 订单刚刚到了 😎😂",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "BIG DUKE",
+        "author_handle": "DukeDarls",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2064409698674098176/707kzJbB_normal.jpg",
+        "author_followers": 103064,
+        "author_following": 2572,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2019-07-10T08:43:04Z",
+        "author_verified": false,
+        "created_at": "2026-11-10T18:25:55Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": "2118259682259394566",
+        "conversation_id": "2120221430772375737",
+        "conversation_context": {},
+        "language": "en",
+        "media": [
+          {
+            "additional_media_info": {
+              "monetizable": false
+            },
+            "allow_download_status": {
+              "allow_download": true
+            },
+            "display_url": "pic.x.com/CXLCRZeHF0",
+            "expanded_url": "https://x.com/DukeDarls/status/2120221430772375737/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "id_str": "2120221261531877376",
+            "indices": [
+              35,
+              58
+            ],
+            "media_key": "13_2120221261531877376",
+            "media_results": {
+              "result": {
+                "media_key": "13_2120221261531877376"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2120221261531877376/img/_lJAk5hL-fE-DOSB.jpg",
+            "original_info": {
+              "focus_rects": [],
+              "height": 1920,
+              "width": 1080
+            },
+            "sizes": {
+              "large": {
+                "h": 1920,
+                "resize": "fit",
+                "w": 1080
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 675
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 383
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/CXLCRZeHF0",
+            "video_info": {
+              "aspect_ratio": [
+                9,
+                16
+              ],
+              "duration_millis": 48645,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/amplify_video/2120221261531877376/pl/V_dKxr0ZddCBF85m.m3u8?tag=29&v=22b"
+                },
+                {
+                  "bitrate": 632000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/2120221261531877376/vid/avc1/320x568/0qrXnnVKe48tYk4C.mp4?tag=29"
+                },
+                {
+                  "bitrate": 950000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/2120221261531877376/vid/avc1/480x852/xPE_9jaFebq_C4jv.mp4?tag=29"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/2120221261531877376/vid/avc1/720x1280/XfNkZkn_iNnaKnG_.mp4?tag=29"
+                },
+                {
+                  "bitrate": 10368000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/2120221261531877376/vid/avc1/1080x1920/H__1ZQ2ff1urtAJj.mp4?tag=29"
+                }
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "likes": 555,
+          "reposts": 23,
+          "replies": 45,
+          "quotes": 3,
+          "bookmarks": 85,
+          "views": 32964
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2120197429207158889",
+        "url": "https://x.com/BigTinzy/status/2120197429207158889",
+        "text": "Your order power bank case and you Dey talk say Temu wan k!ll you 😂😭",
+        "original_text": "Your order power bank case and you Dey talk say Temu wan k!ll you 😂😭 https://t.co/eLEo2fr2Fx",
+        "links": [],
+        "translation_zh": "你下单的是充电宝外壳，还在说 Temu 想 k!ll 你 😂😭",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "Big Tinzy 👑",
+        "author_handle": "BigTinzy",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2117767741788553216/WKSPgY1v_normal.jpg",
+        "author_followers": 7572,
+        "author_following": 1677,
+        "author_bio": null,
+        "author_location": "Lagos, Nigeria",
+        "author_joined_at": "2023-01-03T13:19:53Z",
+        "author_verified": false,
+        "created_at": "2026-11-10T16:50:33Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": "2120187229234426143",
+        "conversation_id": "2120197429207158889",
+        "conversation_context": {},
+        "language": "en",
+        "media": [
+          {
+            "allow_download_status": {
+              "allow_download": true
+            },
+            "display_url": "pic.x.com/eLEo2fr2Fx",
+            "expanded_url": "https://x.com/BigTinzy/status/2120197429207158889/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              }
+            },
+            "id_str": "2120197418977292288",
+            "indices": [
+              69,
+              92
+            ],
+            "media_key": "3_2120197418977292288",
+            "media_results": {
+              "result": {
+                "media_key": "3_2120197418977292288"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/media/HWx0UbvXcAARiHo.jpg",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 717,
+                  "w": 1280,
+                  "x": 0,
+                  "y": 1331
+                },
+                {
+                  "h": 1280,
+                  "w": 1280,
+                  "x": 0,
+                  "y": 768
+                },
+                {
+                  "h": 1459,
+                  "w": 1280,
+                  "x": 0,
+                  "y": 589
+                },
+                {
+                  "h": 2048,
+                  "w": 1024,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 2048,
+                  "w": 1280,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 2048,
+              "width": 1280
+            },
+            "sizes": {
+              "large": {
+                "h": 2048,
+                "resize": "fit",
+                "w": 1280
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 750
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 425
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/eLEo2fr2Fx"
+          }
+        ],
+        "metrics": {
+          "likes": 20,
+          "reposts": 12,
+          "replies": 5,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 574
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2119997652594983128",
+        "url": "https://x.com/KadeChristt/status/2119997652594983128",
+        "text": "Temu blade I'm about to be a fucking problem on this app",
+        "original_text": "Temu blade I'm about to be a fucking problem on this app https://t.co/EuA5N3rrhK",
+        "links": [],
+        "translation_zh": "Temu 刀片，我马上要在这个 app 上成为一个他妈的大麻烦了",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "Kill_Kade(⁠〒⁠﹏⁠〒⁠)",
+        "author_handle": "KadeChristt",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2116364540464029696/W-l2wvlm_normal.jpg",
+        "author_followers": 262,
+        "author_following": 196,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2026-07-08T00:25:24Z",
+        "author_verified": false,
+        "created_at": "2026-11-10T03:36:42Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2119997652594983128",
+        "conversation_context": {},
+        "language": "en",
+        "media": [
+          {
+            "display_url": "pic.x.com/EuA5N3rrhK",
+            "expanded_url": "https://x.com/KadeChristt/status/2119997652594983128/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "h": 181,
+                    "w": 181,
+                    "x": 0,
+                    "y": 1204
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "h": 135,
+                    "w": 135,
+                    "x": 0,
+                    "y": 901
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "h": 181,
+                    "w": 181,
+                    "x": 0,
+                    "y": 1204
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "h": 76,
+                    "w": 76,
+                    "x": 0,
+                    "y": 510
+                  }
+                ]
+              }
+            },
+            "id_str": "2119997649017278464",
+            "indices": [
+              57,
+              80
+            ],
+            "media_key": "3_2119997649017278464",
+            "media_results": {
+              "result": {
+                "media_key": "3_2119997649017278464"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/media/HWu-oSpWkAAPEDR.jpg",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 403,
+                  "w": 720,
+                  "x": 0,
+                  "y": 799
+                },
+                {
+                  "h": 720,
+                  "w": 720,
+                  "x": 0,
+                  "y": 640
+                },
+                {
+                  "h": 821,
+                  "w": 720,
+                  "x": 0,
+                  "y": 590
+                },
+                {
+                  "h": 1440,
+                  "w": 720,
+                  "x": 0,
+                  "y": 164
+                },
+                {
+                  "h": 1604,
+                  "w": 720,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 1604,
+              "width": 720
+            },
+            "sizes": {
+              "large": {
+                "h": 1604,
+                "resize": "fit",
+                "w": 720
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 539
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 305
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/EuA5N3rrhK"
+          }
+        ],
+        "metrics": {
+          "likes": 11,
+          "reposts": 0,
+          "replies": 2,
+          "quotes": 0,
+          "bookmarks": 1,
+          "views": 835
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2119952351541018766",
+        "url": "https://x.com/nossoorgulhoth/status/2119952351541018766",
+        "text": "👨\n\nTemu discount code for both new and existing users! 🎉 Use👣code acs583731 to get up to 85% off, including free shipping. 🛍️✨",
+        "original_text": "👨\n\nTemu discount code for both new and existing users! 🎉 Use👣code acs583731 to get up to 85% off, including free shipping. 🛍️✨ https://t.co/ObNwKA1v4M",
+        "links": [],
+        "translation_zh": "👨\n\n适用于新老用户的 Temu 折扣码！🎉 使用👣代码 acs583731 可享高达85%折扣，并包含免费配送。🛍️✨",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+        "author_name": "ㅤlary",
+        "author_handle": "nossoorgulhoth",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/983907142989156353/kawsMCFv_normal.jpg",
+        "author_followers": 1403,
+        "author_following": 733,
+        "author_bio": null,
+        "author_location": "+55 011",
+        "author_joined_at": "2012-10-14T02:22:57Z",
+        "author_verified": false,
+        "created_at": "2026-11-10T00:36:42Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2119952351541018766",
+        "conversation_context": {},
+        "language": "en",
+        "media": [
+          {
+            "display_url": "pic.x.com/ObNwKA1v4M",
+            "expanded_url": "https://x.com/nossoorgulhoth/status/2119952351541018766/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              }
+            },
+            "id_str": "2119952312475283457",
+            "indices": [
+              127,
+              150
+            ],
+            "media_key": "3_2119952312475283457",
+            "media_results": {
+              "result": {
+                "media_key": "3_2119952312475283457"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/media/HWuVZW3bcAEu780.jpg",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 806,
+                  "w": 1440,
+                  "x": 0,
+                  "y": 281
+                },
+                {
+                  "h": 1440,
+                  "w": 1440,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 1440,
+                  "w": 1263,
+                  "x": 125,
+                  "y": 0
+                },
+                {
+                  "h": 1440,
+                  "w": 720,
+                  "x": 396,
+                  "y": 0
+                },
+                {
+                  "h": 1440,
+                  "w": 1440,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 1440,
+              "width": 1440
+            },
+            "sizes": {
+              "large": {
+                "h": 1440,
+                "resize": "fit",
+                "w": 1440
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/ObNwKA1v4M"
+          },
+          {
+            "additional_media_info": {
+              "monetizable": false
+            },
+            "display_url": "pic.x.com/ObNwKA1v4M",
+            "expanded_url": "https://x.com/nossoorgulhoth/status/2119952351541018766/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "id_str": "2119952330875682816",
+            "indices": [
+              127,
+              150
+            ],
+            "media_key": "7_2119952330875682816",
+            "media_results": {
+              "result": {
+                "media_key": "7_2119952330875682816"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/2119952330875682816/pu/img/YY-ePXkwoPhHgXpu.jpg",
+            "original_info": {
+              "focus_rects": [],
+              "height": 1254,
+              "width": 1254
+            },
+            "sizes": {
+              "large": {
+                "h": 1254,
+                "resize": "fit",
+                "w": 1254
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/ObNwKA1v4M",
+            "video_info": {
+              "aspect_ratio": [
+                1,
+                1
+              ],
+              "duration_millis": 4083,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/2119952330875682816/pu/pl/WMdyC5DokWUzBoAg.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 432000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/2119952330875682816/pu/vid/avc1/318x320/qUevTsDkOfORSd9C.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/2119952330875682816/pu/vid/avc1/540x540/GY52-frK1SM1XY2S.mp4?tag=12"
+                },
+                {
+                  "bitrate": 1280000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/2119952330875682816/pu/vid/avc1/720x720/5sHIBAmXARwTspa6.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "likes": 2,
+          "reposts": 1,
+          "replies": 2,
+          "quotes": 0,
+          "bookmarks": 1,
+          "views": 23
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2120147092349820948",
+        "url": "https://x.com/1OneBasket/status/2120147092349820948",
+        "text": "🛒🔥 TEMU CART BELOW ₦20,000? DON'T ABANDON IT!\n\nYour cart might be small, but that shouldn't stop you from shopping! 💚🧡\n\nWith ONE BASKET, you can combine your Temu orders with other shoppers in your vicinity, share shipping costs and shop conveniently.",
+        "original_text": "🛒🔥 TEMU CART BELOW ₦20,000? DON'T ABANDON IT!\n\nYour cart might be small, but that shouldn't stop you from shopping! 💚🧡\n\nWith ONE BASKET, you can combine your Temu orders with other shoppers in your vicinity, share shipping costs and shop conveniently. https://t.co/91pceKGUBk",
+        "links": [],
+        "translation_zh": "🛒🔥 TEMU 购物车不到 ₦20,000？别放弃它！\n\n你的购物车可能金额不大，但这不应该阻止你购物！💚🧡\n\n通过 ONE BASKET，你可以把你的 Temu 订单与附近其他购物者的订单合并，分摊运费，并方便地购物。",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+        "author_name": "One Basket 🧺",
+        "author_handle": "1OneBasket",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2113332455755190272/7aOA2lcL_normal.jpg",
+        "author_followers": 10,
+        "author_following": 30,
+        "author_bio": null,
+        "author_location": "Lagos, Nigeria",
+        "author_joined_at": "2020-10-02T20:23:39Z",
+        "author_verified": false,
+        "created_at": "2026-11-10T13:30:31Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2120147092349820948",
+        "conversation_context": {},
+        "language": "en",
+        "media": [
+          {
+            "display_url": "pic.x.com/91pceKGUBk",
+            "expanded_url": "https://x.com/1OneBasket/status/2120147092349820948/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "h": 61,
+                    "w": 61,
+                    "x": 293,
+                    "y": 295
+                  },
+                  {
+                    "h": 64,
+                    "w": 64,
+                    "x": 602,
+                    "y": 203
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "h": 61,
+                    "w": 61,
+                    "x": 293,
+                    "y": 295
+                  },
+                  {
+                    "h": 64,
+                    "w": 64,
+                    "x": 602,
+                    "y": 203
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "h": 61,
+                    "w": 61,
+                    "x": 293,
+                    "y": 295
+                  },
+                  {
+                    "h": 64,
+                    "w": 64,
+                    "x": 602,
+                    "y": 203
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "h": 38,
+                    "w": 38,
+                    "x": 184,
+                    "y": 185
+                  },
+                  {
+                    "h": 40,
+                    "w": 40,
+                    "x": 379,
+                    "y": 127
+                  }
+                ]
+              }
+            },
+            "id_str": "2120147055108599808",
+            "indices": [
+              252,
+              275
+            ],
+            "media_key": "3_2120147055108599808",
+            "media_results": {
+              "result": {
+                "media_key": "3_2120147055108599808"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/media/HWxGg3tWsAA1mmM.jpg",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 484,
+                  "w": 864,
+                  "x": 0,
+                  "y": 596
+                },
+                {
+                  "h": 864,
+                  "w": 864,
+                  "x": 0,
+                  "y": 216
+                },
+                {
+                  "h": 985,
+                  "w": 864,
+                  "x": 0,
+                  "y": 95
+                },
+                {
+                  "h": 1080,
+                  "w": 540,
+                  "x": 189,
+                  "y": 0
+                },
+                {
+                  "h": 1080,
+                  "w": 864,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 1080,
+              "width": 864
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 864
+              },
+              "medium": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 864
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 544
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/91pceKGUBk"
+          },
+          {
+            "display_url": "pic.x.com/91pceKGUBk",
+            "expanded_url": "https://x.com/1OneBasket/status/2120147092349820948/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              }
+            },
+            "id_str": "2120147064562585600",
+            "indices": [
+              252,
+              275
+            ],
+            "media_key": "3_2120147064562585600",
+            "media_results": {
+              "result": {
+                "media_key": "3_2120147064562585600"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/media/HWxGha7XEAAKLRI.jpg",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 484,
+                  "w": 864,
+                  "x": 0,
+                  "y": 325
+                },
+                {
+                  "h": 864,
+                  "w": 864,
+                  "x": 0,
+                  "y": 135
+                },
+                {
+                  "h": 985,
+                  "w": 864,
+                  "x": 0,
+                  "y": 75
+                },
+                {
+                  "h": 1080,
+                  "w": 540,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 1080,
+                  "w": 864,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 1080,
+              "width": 864
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 864
+              },
+              "medium": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 864
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 544
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/91pceKGUBk"
+          },
+          {
+            "display_url": "pic.x.com/91pceKGUBk",
+            "expanded_url": "https://x.com/1OneBasket/status/2120147092349820948/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              }
+            },
+            "id_str": "2120147072682745856",
+            "indices": [
+              252,
+              275
+            ],
+            "media_key": "3_2120147072682745856",
+            "media_results": {
+              "result": {
+                "media_key": "3_2120147072682745856"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/media/HWxGh5LW4AA8S-6.jpg",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 484,
+                  "w": 864,
+                  "x": 0,
+                  "y": 325
+                },
+                {
+                  "h": 864,
+                  "w": 864,
+                  "x": 0,
+                  "y": 135
+                },
+                {
+                  "h": 985,
+                  "w": 864,
+                  "x": 0,
+                  "y": 75
+                },
+                {
+                  "h": 1080,
+                  "w": 540,
+                  "x": 324,
+                  "y": 0
+                },
+                {
+                  "h": 1080,
+                  "w": 864,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 1080,
+              "width": 864
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 864
+              },
+              "medium": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 864
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 544
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/91pceKGUBk"
+          },
+          {
+            "display_url": "pic.x.com/91pceKGUBk",
+            "expanded_url": "https://x.com/1OneBasket/status/2120147092349820948/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": [
+                  {
+                    "h": 148,
+                    "w": 148,
+                    "x": 156,
+                    "y": 729
+                  }
+                ]
+              },
+              "medium": {
+                "faces": [
+                  {
+                    "h": 148,
+                    "w": 148,
+                    "x": 156,
+                    "y": 729
+                  }
+                ]
+              },
+              "orig": {
+                "faces": [
+                  {
+                    "h": 148,
+                    "w": 148,
+                    "x": 156,
+                    "y": 729
+                  }
+                ]
+              },
+              "small": {
+                "faces": [
+                  {
+                    "h": 93,
+                    "w": 93,
+                    "x": 98,
+                    "y": 459
+                  }
+                ]
+              }
+            },
+            "id_str": "2120147083810230272",
+            "indices": [
+              252,
+              275
+            ],
+            "media_key": "3_2120147083810230272",
+            "media_results": {
+              "result": {
+                "media_key": "3_2120147083810230272"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/media/HWxGiioW0AAj6T6.jpg",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 484,
+                  "w": 864,
+                  "x": 0,
+                  "y": 325
+                },
+                {
+                  "h": 864,
+                  "w": 864,
+                  "x": 0,
+                  "y": 135
+                },
+                {
+                  "h": 985,
+                  "w": 864,
+                  "x": 0,
+                  "y": 75
+                },
+                {
+                  "h": 1080,
+                  "w": 540,
+                  "x": 243,
+                  "y": 0
+                },
+                {
+                  "h": 1080,
+                  "w": 864,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 1080,
+              "width": 864
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 864
+              },
+              "medium": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 864
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 544
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/91pceKGUBk"
+          }
+        ],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 5
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2120220076582506523",
+        "url": "https://x.com/Real_AK4SeVeN/status/2120220076582506523",
+        "text": "@JezebelJazzJett It's on TEMU app. It's still available for like $11-$16 👍",
+        "original_text": "@JezebelJazzJett It's on TEMU app. It's still available for like $11-$16 👍",
+        "links": [],
+        "translation_zh": "@JezebelJazzJett 在 TEMU app 上。现在还可以买到，大概 $11-$16 👍",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "Rob Ryan 𝕏",
+        "author_handle": "Real_AK4SeVeN",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2116832751529668608/HBAFSHW0_normal.jpg",
+        "author_followers": 429,
+        "author_following": 271,
+        "author_bio": null,
+        "author_location": "El Paso, Tx",
+        "author_joined_at": "2014-11-05T23:18:37Z",
+        "author_verified": false,
+        "created_at": "2026-11-10T18:20:32Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2094602437340356986",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 1,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 14
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2120282446373490774",
+        "url": "https://x.com/CreativeLukman/status/2120282446373490774",
+        "text": "So you’ll blame Temu? But here you are and failed to read the product description.",
+        "original_text": "So you’ll blame Temu? But here you are and failed to read the product description.",
+        "links": [],
+        "translation_zh": "所以你要怪 Temu？但你自己就在这里，却没看产品描述。",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "Lukman | Email & Marketing Design",
+        "author_handle": "CreativeLukman",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2080902663978315776/1LXSMAXH_normal.jpg",
+        "author_followers": 2899,
+        "author_following": 1057,
+        "author_bio": null,
+        "author_location": "Work with me →",
+        "author_joined_at": "2023-03-30T22:28:37Z",
+        "author_verified": false,
+        "created_at": "2026-11-10T22:28:22Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": "2120231849062814018",
+        "conversation_id": "2120282446373490774",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 1,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 125
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2120304423855587818",
+        "url": "https://x.com/JuanitaGolisze1/status/2120304423855587818",
+        "text": "🎁Complete daily claims to earn $1,000 rewards! \n✨ Click temu.to/k \n⚠️Enter the promotion with a qualifying order. Place multiple orders to unlock and claim rewards including Temu Credits, over the consecutive claim period\n👉 temu.to/k",
+        "original_text": "🎁Complete daily claims to earn $1,000 rewards! \n✨ Click https://t.co/xuybYXLA87 \n⚠️Enter the promotion with a qualifying order. Place multiple orders to unlock and claim rewards including Temu Credits, over the consecutive claim period\n👉 https://t.co/xuybYXLA87",
+        "links": [
+          "https://temu.to/k/pvk9enmqcy7",
+          "https://temu.to/k/pvk9enmqcy7"
+        ],
+        "translation_zh": "🎁完成每日领取即可获得 $1,000 奖励！\n✨ 点击 temu.to/k \n⚠️通过符合条件的订单参与促销。在连续领取期内下多笔订单，即可解锁并领取包括 Temu Credits 在内的奖励\n👉 temu.to/k",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论价格、优惠或正向购物体验。",
+        "author_name": "Juanita Goliszewski",
+        "author_handle": "JuanitaGolisze1",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1458790079887982596/71yofoEh_normal.jpg",
+        "author_followers": 101,
+        "author_following": 433,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2021-11-11T13:33:52Z",
+        "author_verified": false,
+        "created_at": "2026-11-10T23:55:42Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2120304423855587818",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 3
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      },
+      {
+        "post_id": "2120078801698988457",
+        "url": "https://x.com/JensOnlineDeals/status/2120078801698988457",
+        "text": "✨ BLACK FRIDAY DEAL DROP! ✨\nScore $0 gifts on Temu by tapping temu.to/k and searching ali320934 in the app.\nThen redeem acm665757 and save 40% on your order — with free returns within 90 days! 🔥",
+        "original_text": "✨ BLACK FRIDAY DEAL DROP! ✨\nScore $0 gifts on Temu by tapping https://t.co/OVy75Dc7c5 and searching ali320934 in the app.\nThen redeem acm665757 and save 40% on your order — with free returns within 90 days! 🔥 https://t.co/nmbqdcc0J9",
+        "links": [
+          "https://temu.to/k/pit1yttferl"
+        ],
+        "translation_zh": "✨ 黑色星期五优惠来了！✨\n在应用里点击 temu.to/k 并搜索 ali320934，即可在 Temu 上领取 $0 礼品。\n然后兑换 acm665757，你的订单可省 40%——还可享 90 天内免费退货！🔥",
+        "translation_status": "translated",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "author_name": "Dealdiva's",
+        "author_handle": "JensOnlineDeals",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/378800000827384501/623e5e65c2c8da4d711c3a0b98f396a4_normal.jpeg",
+        "author_followers": 1064,
+        "author_following": 4790,
+        "author_bio": null,
+        "author_location": "Online",
+        "author_joined_at": "2013-12-04T05:37:45Z",
+        "author_verified": false,
+        "created_at": "2026-11-10T08:59:10Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2120078801698988457",
+        "conversation_context": {},
+        "language": "en",
+        "media": [
+          {
+            "display_url": "pic.x.com/nmbqdcc0J9",
+            "expanded_url": "https://x.com/JensOnlineDeals/status/2120078801698988457/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "features": {
+              "large": {
+                "faces": []
+              },
+              "medium": {
+                "faces": []
+              },
+              "orig": {
+                "faces": []
+              },
+              "small": {
+                "faces": []
+              }
+            },
+            "id_str": "2120078797961875456",
+            "indices": [
+              209,
+              232
+            ],
+            "media_key": "3_2120078797961875456",
+            "media_results": {
+              "result": {
+                "media_key": "3_2120078797961875456"
+              }
+            },
+            "media_url_https": "https://pbs.twimg.com/media/HWwIbyBa0AAoDxq.jpg",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 392,
+                  "w": 700,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 392,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 344,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 196,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 392,
+                  "w": 750,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 392,
+              "width": 750
+            },
+            "sizes": {
+              "large": {
+                "h": 392,
+                "resize": "fit",
+                "w": 750
+              },
+              "medium": {
+                "h": 392,
+                "resize": "fit",
+                "w": 750
+              },
+              "small": {
+                "h": 355,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/nmbqdcc0J9"
+          }
+        ],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 3
+        },
+        "sentiment": "neutral",
+        "matched_terms": [
+          "return"
+        ]
+      },
+      {
+        "post_id": "2120282665366761770",
+        "url": "https://x.com/LandonKirby6/status/2120282665366761770",
+        "text": "🎁Complete daily claims to earn $1,000 rewards! A new reward is available to unlock every day—come back daily to earn exclusive coupons, deals, and more. \n✨ Click temu.to/k or search alw130482 to view today's available reward and start participating.\n⚠️Enter the promotion with a qualifying order. Place multiple qualifying orders to unlock and claim rewards including Temu Credits, coupons and free gifts over the consecutive claim period shown on the promotion page. Available only in the United States, Brazil, and, Mexico. T&Cs apply. Ad. temu.to/k via @shoptemu",
+        "original_text": "🎁Complete daily claims to earn $1,000 rewards! A new reward is available to unlock every day—come back daily to earn exclusive coupons, deals, and more. \n✨ Click https://t.co/aGaRexbhHc or search alw130482 to view today's available reward and start participating.\n⚠️Enter the promotion with a qualifying order. Place multiple qualifying orders to unlock and claim rewards including Temu Credits, coupons and free gifts over the consecutive claim period shown on the promotion page. Available only in the United States, Brazil, and, Mexico. T&Cs apply. Ad. https://t.co/fVYorp6EFn via @shoptemu",
+        "links": [
+          "https://temu.to/k/piagcefnkt5",
+          "https://temu.to/k/pj9yjwnwlpx"
+        ],
+        "translation_zh": "🎁完成每日领取即可赚取 $1,000 奖励！每天都有新的奖励可解锁——每天回来即可获得专属优惠券、优惠等更多福利。\n✨ 点击 temu.to/k 或搜索 alw130482，查看今天可领取的奖励并开始参与。\n⚠️通过符合条件的订单参与促销活动。在促销页面显示的连续领取期内，下多个符合条件的订单即可解锁并领取奖励，包括 Temu Credits、优惠券和免费礼品。仅限美国、巴西和墨西哥。适用条款与条件。广告。temu.to/k via @shoptemu",
+        "translation_status": "translated",
+        "summary_zh": "用户讨论价格、优惠或正向购物体验。",
+        "author_name": "Professor Landon Kirby",
+        "author_handle": "LandonKirby6",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/938967262953738240/J7VWx8Sn_normal.jpg",
+        "author_followers": 295,
+        "author_following": 339,
+        "author_bio": null,
+        "author_location": "Missouri, USA",
+        "author_joined_at": "2013-11-02T23:00:52Z",
+        "author_verified": false,
+        "created_at": "2026-11-10T22:29:15Z",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2120282665366761770",
+        "conversation_context": {},
+        "language": "en",
+        "media": [],
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 5
+        },
+        "sentiment": "neutral",
+        "matched_terms": []
+      }
+    ],
+    "anomalies": []
+  },
+  "featured_items": [
+    {
+      "id": "featured-primary-cluster-001",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "source_type": "公开舆情",
+      "source_name": "主品牌 · @_Moximoxixi",
+      "author_name": "Moses",
+      "author_handle": "_Moximoxixi",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2082955882397356032/lwMW8LLg_normal.jpg",
+      "author_followers": 56,
+      "author_following": 168,
+      "author_bio": null,
+      "author_location": "Seattle, WA",
+      "author_joined_at": "2025-06-25T23:12:31Z",
+      "author_verified": false,
+      "post_url": "https://x.com/_Moximoxixi/status/2120002124859982054",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2119805127641215450",
+      "conversation_context": {},
+      "created_at": "2026-11-10T03:54:28Z",
+      "language": "zh",
+      "title": "Corporate, market and strategy discussion",
+      "display_title": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "original_text": "@hlxf99 作为消费者是挺喜欢京东的。但要买他股票的话是实在没办法下手。",
+      "translation_zh": "@hlxf99 作为消费者是挺喜欢京东的。但要买他股票的话是实在没办法下手。",
+      "translation_status": "source_chinese",
+      "summary_zh": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "links": [],
+      "media": [],
+      "score": {
+        "ips": 49,
+        "level": "low",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 48,
+        "current_impact": 25,
+        "future_potential": 41,
+        "credibility": 58,
+        "business_impact": 56,
+        "urgency": 41,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "背景观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "corporate_context"
+        ],
+        "special_flags": [],
+        "explanation": "公司、资本市场或战略背景信息对品牌心智有间接影响，当前综合优先级为 49。"
+      },
+      "score_value": 49,
+      "score_label": "IPS",
+      "tags": [
+        "company_market",
+        "corporate_context"
+      ],
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 355,
+        "max_author_followers": 56,
+        "public_interactions": 0
+      },
+      "post_metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 355
+      },
+      "source_count": 1,
+      "related_sources": 0,
+      "selected_reason": "内容指向公司/资本市场信息：内容涉及公司战略、资本市场、行业报告或管理层动态；当前传播仍弱，355 浏览且暂无赞评转引；研判：对品牌心智有间接影响，应与消费者体验类舆情分开阅读。",
+      "recommended_action": "背景观察",
+      "href": "",
+      "external_href": "https://x.com/_Moximoxixi/status/2120002124859982054",
+      "sentiment": "neutral",
+      "level": "low"
+    },
+    {
+      "id": "featured-competitor-2120221430772375737",
+      "brand": "competitor",
+      "cluster_id": "",
+      "source_type": "竞品异常",
+      "source_name": "样例竞品 · @DukeDarls",
+      "author_name": "BIG DUKE",
+      "author_handle": "DukeDarls",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2064409698674098176/707kzJbB_normal.jpg",
+      "author_followers": 103064,
+      "author_following": 2572,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2019-07-10T08:43:04Z",
+      "author_verified": false,
+      "post_url": "https://x.com/DukeDarls/status/2120221430772375737",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2118259682259394566",
+      "conversation_id": "2120221430772375737",
+      "conversation_context": {
+        "posts": []
+      },
+      "created_at": "2026-11-10T18:25:55Z",
+      "language": "en",
+      "title": "样例竞品购买意向与日常购物进入竞品观察",
+      "display_title": "样例竞品购买意向与日常购物进入竞品观察",
+      "original_text": "My first Temu order just landed 😎😂",
+      "translation_zh": "我的第一单 Temu 订单刚刚到了 😎😂",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2120221261531877376/img/_lJAk5hL-fE-DOSB.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2120221261531877376/img/_lJAk5hL-fE-DOSB.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2120221261531877376/img/_lJAk5hL-fE-DOSB.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              9,
+              16
+            ],
+            "duration_millis": 48645,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video.twimg.com/amplify_video/2120221261531877376/pl/V_dKxr0ZddCBF85m.m3u8?tag=29&v=22b"
+              },
+              {
+                "bitrate": 632000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2120221261531877376/vid/avc1/320x568/0qrXnnVKe48tYk4C.mp4?tag=29"
+              },
+              {
+                "bitrate": 950000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2120221261531877376/vid/avc1/480x852/xPE_9jaFebq_C4jv.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2120221261531877376/vid/avc1/720x1280/XfNkZkn_iNnaKnG_.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2120221261531877376/vid/avc1/1080x1920/H__1ZQ2ff1urtAJj.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/DukeDarls/status/2120221430772375737/video/1"
+        }
+      ],
+      "score": {
+        "ips": 100,
+        "level": "medium",
+        "sentiment": "neutral"
+      },
+      "score_value": 100,
+      "score_label": "CSI",
+      "tags": [
+        "竞品",
+        "neutral"
+      ],
+      "metrics": {
+        "likes": 555,
+        "reposts": 23,
+        "replies": 45,
+        "quotes": 3,
+        "bookmarks": 85,
+        "views": 32964
+      },
+      "post_metrics": {
+        "likes": 555,
+        "reposts": 23,
+        "replies": 45,
+        "quotes": 3,
+        "bookmarks": 85,
+        "views": 32964
+      },
+      "source_count": 1,
+      "related_sources": 0,
+      "selected_reason": "内容指向购买意向与日常购物：用户表达下单、加购或尝试购买意向；作者具备较高影响力（103064 followers），当前 626 次赞评转引、32964 浏览；研判：可作为竞品自然需求与用户使用场景样本，需结合互动与浏览判断是否异常。",
+      "recommended_action": "纳入竞品基线观察",
+      "href": "",
+      "external_href": "https://x.com/DukeDarls/status/2120221430772375737",
+      "sentiment": "neutral",
+      "level": "medium"
+    },
+    {
+      "id": "featured-competitor-2119997652594983128",
+      "brand": "competitor",
+      "cluster_id": "",
+      "source_type": "竞品异常",
+      "source_name": "样例竞品 · @KadeChristt",
+      "author_name": "Kill_Kade(⁠〒⁠﹏⁠〒⁠)",
+      "author_handle": "KadeChristt",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2116364540464029696/W-l2wvlm_normal.jpg",
+      "author_followers": 262,
+      "author_following": 196,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-07-08T00:25:24Z",
+      "author_verified": false,
+      "post_url": "https://x.com/KadeChristt/status/2119997652594983128",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2119997652594983128",
+      "conversation_context": {
+        "posts": []
+      },
+      "created_at": "2026-11-10T03:36:42Z",
+      "language": "en",
+      "title": "样例竞品异常讨论",
+      "display_title": "样例竞品异常讨论",
+      "original_text": "Temu blade I'm about to be a fucking problem on this app",
+      "translation_zh": "Temu 刀片，我马上要在这个 app 上成为一个他妈的大麻烦了",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWu-oSpWkAAPEDR.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWu-oSpWkAAPEDR.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWu-oSpWkAAPEDR.jpg",
+          "expanded_url": "https://x.com/KadeChristt/status/2119997652594983128/photo/1"
+        }
+      ],
+      "score": {
+        "ips": 57,
+        "level": "medium",
+        "sentiment": "neutral"
+      },
+      "score_value": 57,
+      "score_label": "CSI",
+      "tags": [
+        "竞品",
+        "neutral"
+      ],
+      "metrics": {
+        "likes": 11,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 835
+      },
+      "post_metrics": {
+        "likes": 11,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 835
+      },
+      "source_count": 1,
+      "related_sources": 0,
+      "selected_reason": "内容指向竞品日常声量：原帖没有明显投诉或处置线索，主要体现日常提及；当前 13 次赞评转引、835 浏览；研判：适合进入声量基线，用于和后续异常波动做对照。",
+      "recommended_action": "纳入竞品基线观察",
+      "href": "",
+      "external_href": "https://x.com/KadeChristt/status/2119997652594983128",
+      "sentiment": "neutral",
+      "level": "medium"
+    }
+  ],
+  "hot_topics": [
+    {
+      "rank": 1,
+      "title": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "cluster_id": "primary-signal-001",
+      "score_value": 49,
+      "level": "low",
+      "source_count": 1,
+      "count_label": "公开舆情",
+      "reason": "内容指向公司/资本市场信息：内容涉及公司战略、资本市场、行业报告或管理层动态；当前传播仍弱，355 浏览且暂无赞评转引；研判：对品牌心智有间接影响，应与消费者体验类舆情分开阅读。"
+    },
+    {
+      "rank": 2,
+      "title": "样例竞品购买意向与日常购物进入竞品观察",
+      "cluster_id": "",
+      "score_value": 100,
+      "level": "medium",
+      "source_count": 1,
+      "count_label": "竞品异常",
+      "reason": "内容指向购买意向与日常购物：用户表达下单、加购或尝试购买意向；作者具备较高影响力（103064 followers），当前 626 次赞评转引、32964 浏览；研判：可作为竞品自然需求与用户使用场景样本，需结合互动与浏览判断是否异常。"
+    },
+    {
+      "rank": 3,
+      "title": "样例竞品异常讨论",
+      "cluster_id": "",
+      "score_value": 57,
+      "level": "medium",
+      "source_count": 1,
+      "count_label": "竞品异常",
+      "reason": "内容指向竞品日常声量：原帖没有明显投诉或处置线索，主要体现日常提及；当前 13 次赞评转引、835 浏览；研判：适合进入声量基线，用于和后续异常波动做对照。"
+    }
+  ],
+  "effective_posts": [
+    {
+      "post_id": "2120304423855587818",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/JuanitaGolisze1/status/2120304423855587818",
+      "text": "🎁Complete daily claims to earn $1,000 rewards! \n✨ Click temu.to/k \n⚠️Enter the promotion with a qualifying order. Place multiple orders to unlock and claim rewards including Temu Credits, over the consecutive claim period\n👉 temu.to/k",
+      "original_text": "🎁Complete daily claims to earn $1,000 rewards! \n✨ Click https://t.co/xuybYXLA87 \n⚠️Enter the promotion with a qualifying order. Place multiple orders to unlock and claim rewards including Temu Credits, over the consecutive claim period\n👉 https://t.co/xuybYXLA87",
+      "links": [
+        "https://temu.to/k/pvk9enmqcy7",
+        "https://temu.to/k/pvk9enmqcy7"
+      ],
+      "translation_zh": "🎁完成每日领取即可获得 $1,000 奖励！\n✨ 点击 temu.to/k \n⚠️通过符合条件的订单参与促销。在连续领取期内下多笔订单，即可解锁并领取包括 Temu Credits 在内的奖励\n👉 temu.to/k",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论价格、优惠或正向购物体验。",
+      "author_name": "Juanita Goliszewski",
+      "author_handle": "JuanitaGolisze1",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1458790079887982596/71yofoEh_normal.jpg",
+      "author_followers": 101,
+      "author_following": 433,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2021-11-11T13:33:52Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T23:55:42Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120304423855587818",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 3
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120302734859530402",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/mhytee_gram/status/2120302734859530402",
+      "text": "Na you no order battery 🔋 no blame temu 🥺",
+      "original_text": "Na you no order battery 🔋 no blame temu 🥺 https://t.co/iGYX7klMnk",
+      "links": [],
+      "translation_zh": "是你自己没下单买电池 🔋，别怪 Temu 🥺",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Mhytee_",
+      "author_handle": "mhytee_gram",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2100980090469326848/dLqyBGbS_normal.jpg",
+      "author_followers": 437,
+      "author_following": 562,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-02-24T11:13:32Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T23:48:59Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2120231849062814018",
+      "conversation_id": "2120302734859530402",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWzUGMcXMAAbN4A.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWzUGMcXMAAbN4A.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWzUGMcXMAAbN4A.jpg",
+          "expanded_url": "https://x.com/mhytee_gram/status/2120302734859530402/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 4
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120282665366761770",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/LandonKirby6/status/2120282665366761770",
+      "text": "🎁Complete daily claims to earn $1,000 rewards! A new reward is available to unlock every day—come back daily to earn exclusive coupons, deals, and more. \n✨ Click temu.to/k or search alw130482 to view today's available reward and start participating.\n⚠️Enter the promotion with a qualifying order. Place multiple qualifying orders to unlock and claim rewards including Temu Credits, coupons and free gifts over the consecutive claim period shown on the promotion page. Available only in the United States, Brazil, and, Mexico. T&Cs apply. Ad. temu.to/k via @shoptemu",
+      "original_text": "🎁Complete daily claims to earn $1,000 rewards! A new reward is available to unlock every day—come back daily to earn exclusive coupons, deals, and more. \n✨ Click https://t.co/aGaRexbhHc or search alw130482 to view today's available reward and start participating.\n⚠️Enter the promotion with a qualifying order. Place multiple qualifying orders to unlock and claim rewards including Temu Credits, coupons and free gifts over the consecutive claim period shown on the promotion page. Available only in the United States, Brazil, and, Mexico. T&Cs apply. Ad. https://t.co/fVYorp6EFn via @shoptemu",
+      "links": [
+        "https://temu.to/k/piagcefnkt5",
+        "https://temu.to/k/pj9yjwnwlpx"
+      ],
+      "translation_zh": "🎁完成每日领取即可赚取 $1,000 奖励！每天都有新的奖励可解锁——每天回来即可获得专属优惠券、优惠等更多福利。\n✨ 点击 temu.to/k 或搜索 alw130482，查看今天可领取的奖励并开始参与。\n⚠️通过符合条件的订单参与促销活动。在促销页面显示的连续领取期内，下多个符合条件的订单即可解锁并领取奖励，包括 Temu Credits、优惠券和免费礼品。仅限美国、巴西和墨西哥。适用条款与条件。广告。temu.to/k via @shoptemu",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论价格、优惠或正向购物体验。",
+      "author_name": "Professor Landon Kirby",
+      "author_handle": "LandonKirby6",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/938967262953738240/J7VWx8Sn_normal.jpg",
+      "author_followers": 295,
+      "author_following": 339,
+      "author_bio": null,
+      "author_location": "Missouri, USA",
+      "author_joined_at": "2013-11-02T23:00:52Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T22:29:15Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120282665366761770",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 5
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120282446373490774",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/CreativeLukman/status/2120282446373490774",
+      "text": "So you’ll blame Temu? But here you are and failed to read the product description.",
+      "original_text": "So you’ll blame Temu? But here you are and failed to read the product description.",
+      "links": [],
+      "translation_zh": "所以你要怪 Temu？但你自己就在这里，却没看产品描述。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Lukman | Email & Marketing Design",
+      "author_handle": "CreativeLukman",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2080902663978315776/1LXSMAXH_normal.jpg",
+      "author_followers": 2899,
+      "author_following": 1057,
+      "author_bio": null,
+      "author_location": "Work with me →",
+      "author_joined_at": "2023-03-30T22:28:37Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T22:28:22Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2120231849062814018",
+      "conversation_id": "2120282446373490774",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 125
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120267843430387804",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/JJIKAAF/status/2120267843430387804",
+      "text": "🛒 Temu 30% OFF — Just use code: \"alv083823\"\nGrab the Temu app, apply the code at checkout, and enjoy 30% off your entire order.\nSimple, clean, no fuss — just solid savings. Perfect for everything from home essentials to gadgets.",
+      "original_text": "🛒 Temu 30% OFF — Just use code: \"alv083823\"\nGrab the Temu app, apply the code at checkout, and enjoy 30% off your entire order.\nSimple, clean, no fuss — just solid savings. Perfect for everything from home essentials to gadgets.",
+      "links": [],
+      "translation_zh": "🛒 Temu 30% 折扣——只需使用代码：\"alv083823\"\n下载 Temu 应用，在结账时使用该代码，即可享受整单 30% 折扣。\n简单、清爽、不麻烦——就是实实在在的省钱。无论是家居必需品还是小工具都很适合。",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "S1r_cyberst0ne DreamChaser_K",
+      "author_handle": "JJIKAAF",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2089972121296363520/LI6HO3Nd_normal.jpg",
+      "author_followers": 31,
+      "author_following": 92,
+      "author_bio": null,
+      "author_location": "Nigeria",
+      "author_joined_at": "2024-01-02T12:58:34Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T21:30:21Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120267843430387804",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 3
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120258303871901783",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/sigma_man_lv/status/2120258303871901783",
+      "text": "🔥 BIG DEAL ALERT! 0€ gifts are calling! 🎁\nTap temu.to/k search alw340459 in the Temu App, and discover your deal.\nPlus, redeem alv112536 for 30% off and enjoy free returns within 90 days! 🛍️\n temu.to/k via @shoptemu",
+      "original_text": "🔥 BIG DEAL ALERT! 0€ gifts are calling! 🎁\nTap https://t.co/Kp8GEjUXir, search alw340459 in the Temu App, and discover your deal.\nPlus, redeem alv112536 for 30% off and enjoy free returns within 90 days! 🛍️\n https://t.co/WgGd7rm64V via @shoptemu",
+      "links": [
+        "https://temu.to/k/erum84epxtj",
+        "https://temu.to/k/egpv3kpj31e"
+      ],
+      "translation_zh": "🔥 超值优惠提醒！0€ 礼物在召唤！🎁\n点击 temu.to/k，在 Temu App 中搜索 alw340459，发现你的优惠。\n此外，兑换 alv112536 可享 30% 折扣，并享受 90 天内免费退货！🛍️\n temu.to/k 来自 @shoptemu",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "A BUM",
+      "author_handle": "sigma_man_lv",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1866814497781907456/1Lq4KoHQ_normal.jpg",
+      "author_followers": 3,
+      "author_following": 351,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-12-11T11:57:14Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T20:52:26Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120258303871901783",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 3
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120227365632491602",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/WormThrones/status/2120227365632491602",
+      "text": "If you’re new to the Temu App, there are some pretty good prices to browse here:\ntemu.to/k\n#TemuFinds\n⚠️New app users only. Min spend of €10 within 24 hour. T&Cs apply. Please note that extra import-related fees will apply if your orders are shipped from outside",
+      "original_text": "If you’re new to the Temu App, there are some pretty good prices to browse here:\nhttps://t.co/1aPKbnHP6f\n#TemuFinds\n⚠️New app users only. Min spend of €10 within 24 hour. T&amp;Cs apply. Please note that extra import-related fees will apply if your orders are shipped from outside",
+      "links": [
+        "https://temu.to/k/erc2y74trjk"
+      ],
+      "translation_zh": "如果你是 Temu App 的新用户，这里有一些相当不错的价格可以浏览：\ntemu.to/k\n#TemuFinds\n⚠️仅限新 App 用户。24 小时内最低消费 €10。适用条款与条件。请注意，如果你的订单是从境外发货，将会产生额外的进口相关费用",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Nuh Uh",
+      "author_handle": "WormThrones",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1975249465578545152/4cJOGhD4_normal.jpg",
+      "author_followers": 18,
+      "author_following": 236,
+      "author_bio": null,
+      "author_location": "Overlea, MD",
+      "author_joined_at": "2025-10-03T18:42:54Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T18:49:30Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120227365632491602",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 2
+      },
+      "sentiment": "positive",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120221430772375737",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/DukeDarls/status/2120221430772375737",
+      "text": "My first Temu order just landed 😎😂",
+      "original_text": "My first Temu order just landed 😎😂 https://t.co/CXLCRZeHF0",
+      "links": [],
+      "translation_zh": "我的第一单 Temu 订单刚刚到了 😎😂",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "BIG DUKE",
+      "author_handle": "DukeDarls",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2064409698674098176/707kzJbB_normal.jpg",
+      "author_followers": 103064,
+      "author_following": 2572,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2019-07-10T08:43:04Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T18:25:55Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2118259682259394566",
+      "conversation_id": "2120221430772375737",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2120221261531877376/img/_lJAk5hL-fE-DOSB.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2120221261531877376/img/_lJAk5hL-fE-DOSB.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2120221261531877376/img/_lJAk5hL-fE-DOSB.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              9,
+              16
+            ],
+            "duration_millis": 48645,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video.twimg.com/amplify_video/2120221261531877376/pl/V_dKxr0ZddCBF85m.m3u8?tag=29&v=22b"
+              },
+              {
+                "bitrate": 632000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2120221261531877376/vid/avc1/320x568/0qrXnnVKe48tYk4C.mp4?tag=29"
+              },
+              {
+                "bitrate": 950000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2120221261531877376/vid/avc1/480x852/xPE_9jaFebq_C4jv.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2120221261531877376/vid/avc1/720x1280/XfNkZkn_iNnaKnG_.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2120221261531877376/vid/avc1/1080x1920/H__1ZQ2ff1urtAJj.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/DukeDarls/status/2120221430772375737/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 555,
+        "reposts": 23,
+        "replies": 45,
+        "quotes": 3,
+        "bookmarks": 85,
+        "views": 32964
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120220076582506523",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/Real_AK4SeVeN/status/2120220076582506523",
+      "text": "@JezebelJazzJett It's on TEMU app. It's still available for like $11-$16 👍",
+      "original_text": "@JezebelJazzJett It's on TEMU app. It's still available for like $11-$16 👍",
+      "links": [],
+      "translation_zh": "@JezebelJazzJett 在 TEMU app 上。现在还可以买到，大概 $11-$16 👍",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Rob Ryan 𝕏",
+      "author_handle": "Real_AK4SeVeN",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2116832751529668608/HBAFSHW0_normal.jpg",
+      "author_followers": 429,
+      "author_following": 271,
+      "author_bio": null,
+      "author_location": "El Paso, Tx",
+      "author_joined_at": "2014-11-05T23:18:37Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T18:20:32Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2094602437340356986",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 14
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120218363649773751",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/aeonflows/status/2120218363649773751",
+      "text": "Bruh I might get the Temu AF hat too actually. 3-5 weeks delivery is crazy 😭",
+      "original_text": "Bruh I might get the Temu AF hat too actually. 3-5 weeks delivery is crazy 😭 https://t.co/34D5YwX8Sb",
+      "links": [],
+      "translation_zh": "兄弟，说真的我可能也要买那顶 Temu AF 帽子。3-5 周送达也太离谱了 😭",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+      "author_name": "Andrew Flows 🐦‍🔥",
+      "author_handle": "aeonflows",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2113323225220333568/huH2Mji1_normal.jpg",
+      "author_followers": 253,
+      "author_following": 362,
+      "author_bio": null,
+      "author_location": "Raleigh, NC",
+      "author_joined_at": "2025-10-21T20:08:51Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T18:13:44Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120218363649773751",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWyHXXAXgAE6JEm.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWyHXXAXgAE6JEm.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWyHXXAXgAE6JEm.jpg",
+          "expanded_url": "https://x.com/aeonflows/status/2120218363649773751/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 54
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "delivery",
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120197429207158889",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/BigTinzy/status/2120197429207158889",
+      "text": "Your order power bank case and you Dey talk say Temu wan k!ll you 😂😭",
+      "original_text": "Your order power bank case and you Dey talk say Temu wan k!ll you 😂😭 https://t.co/eLEo2fr2Fx",
+      "links": [],
+      "translation_zh": "你下单的是充电宝外壳，还在说 Temu 想 k!ll 你 😂😭",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Big Tinzy 👑",
+      "author_handle": "BigTinzy",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2117767741788553216/WKSPgY1v_normal.jpg",
+      "author_followers": 7572,
+      "author_following": 1677,
+      "author_bio": null,
+      "author_location": "Lagos, Nigeria",
+      "author_joined_at": "2023-01-03T13:19:53Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T16:50:33Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2120187229234426143",
+      "conversation_id": "2120197429207158889",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWx0UbvXcAARiHo.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWx0UbvXcAARiHo.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWx0UbvXcAARiHo.jpg",
+          "expanded_url": "https://x.com/BigTinzy/status/2120197429207158889/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 20,
+        "reposts": 12,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 574
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120186243321647471",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/00jnl00/status/2120186243321647471",
+      "text": "katak orang nyimeng😭😭 coba balikin kl dia jd seller mau ga dikasih syarat kek gini😭😭😭😭",
+      "original_text": "katak orang nyimeng😭😭 coba balikin kl dia jd seller mau ga dikasih syarat kek gini😭😭😭😭",
+      "links": [],
+      "translation_zh": "说得像是吸嗨了的人😭😭 试着反过来想想，如果他当卖家，愿不愿意被提这种条件😭😭😭😭",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "🦋",
+      "author_handle": "00jnl00",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2112065513157537792/CFG8Voyk_normal.jpg",
+      "author_followers": 329,
+      "author_following": 323,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2021-03-17T16:19:23Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T16:06:06Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2120012551690039417",
+      "conversation_id": "2120186243321647471",
+      "conversation_context": {},
+      "language": "in",
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 149
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120183213733925346",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/00jnl00/status/2120183213733925346",
+      "text": "Alhamdulillah selalu dapet cust ya satset dan ngga cari ribut ke kita. setiap minta cod venue ku jabanin tp ttp harus dp sampe pernah dp cm 200 yg penting dapet jaminan. full cod venue cuma berlaku di hari h dan tix udah jdi wb. jd seller jangan mau ya full cod venue 🙂‍↔️",
+      "original_text": "Alhamdulillah selalu dapet cust ya satset dan ngga cari ribut ke kita. setiap minta cod venue ku jabanin tp ttp harus dp sampe pernah dp cm 200 yg penting dapet jaminan. full cod venue cuma berlaku di hari h dan tix udah jdi wb. jd seller jangan mau ya full cod venue 🙂‍↔️ https://t.co/erkfdqk5sN",
+      "links": [],
+      "translation_zh": "Alhamdulillah，一直都能遇到爽快、不会来找我们吵架的 cust。每次要求 cod venue 我都答应，但还是必须付 dp，甚至有过 dp 只有 200 的，重要的是有个保障。full cod venue 只适用于当天，而且 tix 已经变成 wb。做卖家的不要同意 full cod venue 啊 🙂‍↔️",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "🦋",
+      "author_handle": "00jnl00",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2112065513157537792/CFG8Voyk_normal.jpg",
+      "author_followers": 329,
+      "author_following": 323,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2021-03-17T16:19:23Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T15:54:03Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2120114486317363541",
+      "conversation_id": "2120183213733925346",
+      "conversation_context": {},
+      "language": "in",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWxnY78bwAAkkPA.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWxnY78bwAAkkPA.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWxnY78bwAAkkPA.jpg",
+          "expanded_url": "https://x.com/00jnl00/status/2120183213733925346/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWxnY78bQAA9s6N.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWxnY78bQAA9s6N.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWxnY78bQAA9s6N.jpg",
+          "expanded_url": "https://x.com/00jnl00/status/2120183213733925346/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 238
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120163101551022225",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/dabiggestrugrat/status/2120163101551022225",
+      "text": "Is temu a legit site or is it a scam lol",
+      "original_text": "Is temu a legit site or is it a scam lol",
+      "links": [],
+      "translation_zh": "Temu 是合法的吗，还是诈骗网站啊 lol",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "tommiesky",
+      "author_handle": "dabiggestrugrat",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2114009609773981697/c566y3J2_normal.jpg",
+      "author_followers": 525,
+      "author_following": 492,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2012-10-29T03:38:28Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T14:34:08Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120163101551022225",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 30
+      },
+      "sentiment": "negative",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "scam",
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120147092349820948",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/1OneBasket/status/2120147092349820948",
+      "text": "🛒🔥 TEMU CART BELOW ₦20,000? DON'T ABANDON IT!\n\nYour cart might be small, but that shouldn't stop you from shopping! 💚🧡\n\nWith ONE BASKET, you can combine your Temu orders with other shoppers in your vicinity, share shipping costs and shop conveniently.",
+      "original_text": "🛒🔥 TEMU CART BELOW ₦20,000? DON'T ABANDON IT!\n\nYour cart might be small, but that shouldn't stop you from shopping! 💚🧡\n\nWith ONE BASKET, you can combine your Temu orders with other shoppers in your vicinity, share shipping costs and shop conveniently. https://t.co/91pceKGUBk",
+      "links": [],
+      "translation_zh": "🛒🔥 TEMU 购物车不到 ₦20,000？别放弃它！\n\n你的购物车可能金额不大，但这不应该阻止你购物！💚🧡\n\n通过 ONE BASKET，你可以把你的 Temu 订单与附近其他购物者的订单合并，分摊运费，并方便地购物。",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+      "author_name": "One Basket 🧺",
+      "author_handle": "1OneBasket",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2113332455755190272/7aOA2lcL_normal.jpg",
+      "author_followers": 10,
+      "author_following": 30,
+      "author_bio": null,
+      "author_location": "Lagos, Nigeria",
+      "author_joined_at": "2020-10-02T20:23:39Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T13:30:31Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120147092349820948",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWxGg3tWsAA1mmM.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWxGg3tWsAA1mmM.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWxGg3tWsAA1mmM.jpg",
+          "expanded_url": "https://x.com/1OneBasket/status/2120147092349820948/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWxGha7XEAAKLRI.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWxGha7XEAAKLRI.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWxGha7XEAAKLRI.jpg",
+          "expanded_url": "https://x.com/1OneBasket/status/2120147092349820948/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWxGh5LW4AA8S-6.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWxGh5LW4AA8S-6.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWxGh5LW4AA8S-6.jpg",
+          "expanded_url": "https://x.com/1OneBasket/status/2120147092349820948/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HWxGiioW0AAj6T6.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWxGiioW0AAj6T6.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWxGiioW0AAj6T6.jpg",
+          "expanded_url": "https://x.com/1OneBasket/status/2120147092349820948/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 5
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120145729507492012",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/sani_phunge/status/2120145729507492012",
+      "text": "Know someone who’s always looking for a good bargain? 👀\nSend them this one.\nNew app users can check out these Temu special prices here → temu.to/k\nSearch alp679180 in the app to take a look.\n#TemuDeals #Deals\n👉 temu.to/k",
+      "original_text": "Know someone who’s always looking for a good bargain? 👀\nSend them this one.\nNew app users can check out these Temu special prices here → https://t.co/EWaNJJOqmZ\nSearch alp679180 in the app to take a look.\n#TemuDeals #Deals\n👉 https://t.co/EWaNJJOqmZ",
+      "links": [
+        "https://temu.to/k/egsb9piw52e",
+        "https://temu.to/k/egsb9piw52e"
+      ],
+      "translation_zh": "认识总是在找好价的人吗？👀\n把这个发给他们。\n新 app 用户可以在这里查看这些 Temu 特价 → temu.to/k\n在 app 里搜索 alp679180 看看。\n#TemuDeals #Deals\n👉 temu.to/k",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "coco",
+      "author_handle": "sani_phunge",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1787217889885323264/GNw393lk_normal.jpg",
+      "author_followers": 148,
+      "author_following": 280,
+      "author_bio": null,
+      "author_location": "Pretoria, South Africa",
+      "author_joined_at": "2017-04-30T20:13:31Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T13:25:06Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120145729507492012",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 4
+      },
+      "sentiment": "positive",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120138156259328256",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/djsjhd270376/status/2120138156259328256",
+      "text": "Found this while browsing Temu and thought I’d share 😄\nIf you’re new to the Temu App, there are some pretty good prices to browse here:\ntemu.to/k\n#TemuFinds temu.to/k via @shoptemu",
+      "original_text": "Found this while browsing Temu and thought I’d share 😄\nIf you’re new to the Temu App, there are some pretty good prices to browse here:\nhttps://t.co/Nq1f4f70s9\n#TemuFinds https://t.co/SIK2fFbKJR via @shoptemu",
+      "links": [
+        "https://temu.to/k/e57heton34e",
+        "https://temu.to/k/e77deacq6po"
+      ],
+      "translation_zh": "浏览 Temu 时发现了这个，想分享一下 😄\n如果你是 Temu App 的新用户，这里有一些相当不错的价格可以逛：\ntemu.to/k\n#TemuFinds temu.to/k via @shoptemu",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "djsjhd",
+      "author_handle": "djsjhd270376",
+      "author_avatar_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "author_followers": 2,
+      "author_following": 60,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-04-06T23:38:08Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T12:55:01Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120138156259328256",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 1
+      },
+      "sentiment": "positive",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120118105108353318",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/huanghetan4/status/2120118105108353318",
+      "text": "@hlxf99 我是电商卖家，一个商品在拼多多卖90不用推广，纯自然流，有10块钱纯利润，在京东卖135，不推广就卖不出去，推广了也是10块钱利润，卖家利润不变，买家到手价格差距很大，我就不明白了京东为啥比多多利润率低？",
+      "original_text": "@hlxf99 我是电商卖家，一个商品在拼多多卖90不用推广，纯自然流，有10块钱纯利润，在京东卖135，不推广就卖不出去，推广了也是10块钱利润，卖家利润不变，买家到手价格差距很大，我就不明白了京东为啥比多多利润率低？",
+      "links": [],
+      "translation_zh": "@hlxf99 我是电商卖家，一个商品在拼多多卖90不用推广，纯自然流，有10块钱纯利润，在京东卖135，不推广就卖不出去，推广了也是10块钱利润，卖家利润不变，买家到手价格差距很大，我就不明白了京东为啥比多多利润率低？",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "北方的天空",
+      "author_handle": "huanghetan4",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1531238582178164736/IMvrVKCM_normal.jpg",
+      "author_followers": 6,
+      "author_following": 94,
+      "author_bio": null,
+      "author_location": "中国北京/天津/廊坊",
+      "author_joined_at": "2022-04-09T12:41:17Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T11:35:20Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2119805127641215450",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 324
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120098322631553343",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/WaterfordLive/status/2120098322631553343",
+      "text": "'Stop use immediately' - TEMU recalls product from Ireland amid serious risk of eye damage www.​waterfordlive.​ie/national/stop-use-immediately-temu-recalls-product-from-ireland-amid-serious-ri[REDACTED_SECRET]",
+      "original_text": "'Stop use immediately' - TEMU recalls product from Ireland amid serious risk of eye damage www.​waterfordlive.​ie/national/stop-use-immediately-temu-recalls-product-from-ireland-amid-serious-ri[REDACTED_SECRET] https://t.co/dK16dTB0yY",
+      "links": [],
+      "translation_zh": "“立即停止使用”——TEMU 在爱尔兰召回一款产品，因存在严重眼部损伤风险 www.​waterfordlive.​ie/national/stop-use-immediately-temu-recalls-product-from-ireland-amid-serious-ri[REDACTED_SECRET]",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "WaterfordLive",
+      "author_handle": "WaterfordLive",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1717540864069648384/RKdQ_b6X_normal.jpg",
+      "author_followers": 597,
+      "author_following": 356,
+      "author_bio": null,
+      "author_location": "Waterford, Ireland",
+      "author_joined_at": "2018-05-29T11:46:11Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T10:16:44Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120098322631553343",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWwaMJBaEAAXgEu.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWwaMJBaEAAXgEu.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWwaMJBaEAAXgEu.jpg",
+          "expanded_url": "https://x.com/WaterfordLive/status/2120098322631553343/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 19
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120093514314977532",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/wanshiyu2022/status/2120093514314977532",
+      "text": "@hlxf99 评论区吹京东的都活在梦里吗？是不是对国内一无所知？京东的利润以前是猛砸在物流行业，这两年猛砸在外卖行业，跟美团拼结果两败俱伤，京东的外卖平台不知道坑了多少商家和外卖员，忽悠起来一套一套的。外卖行业京东的名声早就烂大街了",
+      "original_text": "@hlxf99 评论区吹京东的都活在梦里吗？是不是对国内一无所知？京东的利润以前是猛砸在物流行业，这两年猛砸在外卖行业，跟美团拼结果两败俱伤，京东的外卖平台不知道坑了多少商家和外卖员，忽悠起来一套一套的。外卖行业京东的名声早就烂大街了",
+      "links": [],
+      "translation_zh": "@hlxf99 评论区吹京东的都活在梦里吗？是不是对国内一无所知？京东的利润以前是猛砸在物流行业，这两年猛砸在外卖行业，跟美团拼结果两败俱伤，京东的外卖平台不知道坑了多少商家和外卖员，忽悠起来一套一套的。外卖行业京东的名声早就烂大街了",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "大白菜",
+      "author_handle": "wanshiyu2022",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1455222707960770568/tK0u3RMv_normal.png",
+      "author_followers": 58,
+      "author_following": 121,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2021-11-01T17:18:24Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T09:57:37Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2119805127641215450",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 7,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 2292
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120078801698988457",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/JensOnlineDeals/status/2120078801698988457",
+      "text": "✨ BLACK FRIDAY DEAL DROP! ✨\nScore $0 gifts on Temu by tapping temu.to/k and searching ali320934 in the app.\nThen redeem acm665757 and save 40% on your order — with free returns within 90 days! 🔥",
+      "original_text": "✨ BLACK FRIDAY DEAL DROP! ✨\nScore $0 gifts on Temu by tapping https://t.co/OVy75Dc7c5 and searching ali320934 in the app.\nThen redeem acm665757 and save 40% on your order — with free returns within 90 days! 🔥 https://t.co/nmbqdcc0J9",
+      "links": [
+        "https://temu.to/k/pit1yttferl"
+      ],
+      "translation_zh": "✨ 黑色星期五优惠来了！✨\n在应用里点击 temu.to/k 并搜索 ali320934，即可在 Temu 上领取 $0 礼品。\n然后兑换 acm665757，你的订单可省 40%——还可享 90 天内免费退货！🔥",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Dealdiva's",
+      "author_handle": "JensOnlineDeals",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/378800000827384501/623e5e65c2c8da4d711c3a0b98f396a4_normal.jpeg",
+      "author_followers": 1064,
+      "author_following": 4790,
+      "author_bio": null,
+      "author_location": "Online",
+      "author_joined_at": "2013-12-04T05:37:45Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T08:59:10Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120078801698988457",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWwIbyBa0AAoDxq.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWwIbyBa0AAoDxq.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWwIbyBa0AAoDxq.jpg",
+          "expanded_url": "https://x.com/JensOnlineDeals/status/2120078801698988457/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 3
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "return",
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120065533089300772",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/technodechina/status/2120065533089300772",
+      "text": "JD.com reportedly tests free short dramas with plans for in-show shopping ift.tt/DwSK5OR",
+      "original_text": "https://t.co/E5C7W1tvyl reportedly tests free short dramas with plans for in-show shopping https://t.co/dbCaTEsW7M",
+      "links": [
+        "https://JD.com",
+        "https://ift.tt/DwSK5OR"
+      ],
+      "translation_zh": "据报道，JD.com 正在测试免费短剧，并计划推出剧中购物 ift.tt/DwSK5OR",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "TechNode",
+      "author_handle": "technodechina",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1237300409779314689/Emv8Hb7-_normal.jpg",
+      "author_followers": 17648,
+      "author_following": 996,
+      "author_bio": null,
+      "author_location": "Beijing & Shanghai",
+      "author_joined_at": "2011-01-23T07:32:38Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T08:06:26Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120065533089300772",
+      "conversation_context": {},
+      "language": "en",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 1,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 150
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120055543909810479",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/Bagel8343/status/2120055543909810479",
+      "text": "@big_hu73715 选B，京东送货确实快一点，不过拼多多现在补贴也很猛，日常囤货就在那边买了",
+      "original_text": "@big_hu73715 选B，京东送货确实快一点，不过拼多多现在补贴也很猛，日常囤货就在那边买了",
+      "links": [],
+      "translation_zh": "@big_hu73715 选B，京东送货确实快一点，不过拼多多现在补贴也很猛，日常囤货就在那边买了",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Bagel🥯",
+      "author_handle": "Bagel8343",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2114243122511106048/gENAMu3s_normal.jpg",
+      "author_followers": 3398,
+      "author_following": 3090,
+      "author_bio": null,
+      "author_location": "New York, USA",
+      "author_joined_at": "2021-11-22T07:02:54Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T07:26:45Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120054251389079846",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 19
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120054251389079846",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/big_hu73715/status/2120054251389079846",
+      "text": "做个调查⚡\n\n你现在用的最多的购物软件是什么？\n\nA、淘宝 B、京东\n\nC、拼多多 D、其他",
+      "original_text": "做个调查⚡\n\n你现在用的最多的购物软件是什么？\n\nA、淘宝            B、京东\n\nC、拼多多        D、其他",
+      "links": [],
+      "translation_zh": "做个调查⚡\n\n你现在用的最多的购物软件是什么？\n\nA、淘宝 B、京东\n\nC、拼多多 D、其他",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "局部地区有雷阵雨",
+      "author_handle": "big_hu73715",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2115723877548539904/1MLGWcpB_normal.jpg",
+      "author_followers": 3912,
+      "author_following": 3648,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-01-07T13:00:37Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T07:21:36Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120054251389079846",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 61,
+        "reposts": 2,
+        "replies": 103,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 817
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120050043592040781",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/leennskii/status/2120050043592040781",
+      "text": "capenya jd seller wkkww",
+      "original_text": "capenya jd seller wkkww",
+      "links": [],
+      "translation_zh": "当卖家真累 wkkww",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "len◠‿◠",
+      "author_handle": "leennskii",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2094744119512125440/PjWJNTcc_normal.jpg",
+      "author_followers": 1362,
+      "author_following": 1284,
+      "author_bio": null,
+      "author_location": "svt enha bnd's♡",
+      "author_joined_at": "2019-06-10T13:32:49Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T07:04:53Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2120012551690039417",
+      "conversation_id": "2120050043592040781",
+      "conversation_context": {},
+      "language": "in",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 108
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120036519922786425",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/frischanandaa/status/2120036519922786425",
+      "text": "Wakakaka jd seller galak adalah koentji, alias gue selalu blg yang mau mau aja🤭🙏🏻",
+      "original_text": "Wakakaka jd seller galak adalah koentji, alias gue selalu blg yang mau mau aja🤭🙏🏻",
+      "links": [],
+      "translation_zh": "哈哈哈哈，所以当个凶一点的卖家才是关键，也就是说我总是说：想要就要，不想要就算🤭🙏🏻",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "chaa",
+      "author_handle": "frischanandaa",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1823216735715299328/QXqdHLEz_normal.jpg",
+      "author_followers": 513,
+      "author_following": 503,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2011-12-26T04:04:50Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T06:11:09Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2120012551690039417",
+      "conversation_id": "2120036519922786425",
+      "conversation_context": {},
+      "language": "in",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 1,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 116
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120035730554863939",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/notscreet/status/2120035730554863939",
+      "text": "elu yg nyicil elu yg bikin tnc, konsepnya tuh gimana sih? yaudah skalian jd seller aja sono😭😭😭",
+      "original_text": "elu yg nyicil elu yg bikin tnc, konsepnya tuh gimana sih? yaudah skalian jd seller aja sono😭😭😭",
+      "links": [],
+      "translation_zh": "你分期付款，你还自己制定 tnc，这到底是什么概念啊？那你干脆自己去当卖家吧😭😭😭",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "𝓲𝓴𝔂𝔂𝔂✨",
+      "author_handle": "notscreet",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2042555193674600449/SDUHQ2Mc_normal.jpg",
+      "author_followers": 1306,
+      "author_following": 1220,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2020-02-13T04:54:23Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T06:08:01Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": "2120012551690039417",
+      "conversation_id": "2120035730554863939",
+      "conversation_context": {},
+      "language": "in",
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 1328
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120023258150080544",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/gimcall/status/2120023258150080544",
+      "text": "分享一个热知识：\n\n最牛逼的翻墙工具，可能根本不是 VPN！\n\n而是花200块钱，直接去京东买一张 HK 万能卡！\n\n插上就自带翻墙功能。\n\n不用天天折腾节点，也不用担心 VPN 动不动断线。\n\n比 VPN 方便10000倍！！",
+      "original_text": "分享一个热知识：\n\n最牛逼的翻墙工具，可能根本不是 VPN！\n\n而是花200块钱，直接去京东买一张 HK 万能卡！\n\n插上就自带翻墙功能。\n\n不用天天折腾节点，也不用担心 VPN 动不动断线。\n\n比 VPN 方便10000倍！！",
+      "links": [],
+      "translation_zh": "分享一个热知识：\n\n最牛逼的翻墙工具，可能根本不是 VPN！\n\n而是花200块钱，直接去京东买一张 HK 万能卡！\n\n插上就自带翻墙功能。\n\n不用天天折腾节点，也不用担心 VPN 动不动断线。\n\n比 VPN 方便10000倍！！",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "英俊哥",
+      "author_handle": "gimcall",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2102012351813947392/iDBmDSiv_normal.jpg",
+      "author_followers": 12018,
+      "author_following": 10396,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2024-03-15T10:34:29Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T05:18:27Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120023258150080544",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 3,
+        "reposts": 0,
+        "replies": 10,
+        "quotes": 0,
+        "bookmarks": 4,
+        "views": 7973
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120018434712895662",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/themoneygps/status/2120018434712895662",
+      "text": "I created the best soccer/football app there is\n\nNo advertising and I’m getting users daily\n\nI built an algorithm that rivals the sports books\n\n- Now I’m using the Temu strategy of implementing games into the app to increase retention\n\nIf you don’t want to play you would never even see the game\n\n- This is the idea:\n\nLets say Italy plays France and take 10 shots on net, 2 goals\n\nThe app shows exactly where on the net they scored\n\nWell now you can see if you can beat them shooting at the exact location and if the goalie can stop you\n\nThere is no app that’s exists like this at all\n\nFree\n\nthe90fc.com/get\n\nThe game feature is super raw right now so give me some time to improve!",
+      "original_text": "I created the best soccer/football app there is\n\nNo advertising and I’m getting users daily\n\nI built an algorithm that rivals the sports books\n\n- Now I’m using the Temu strategy of implementing games into the app to increase retention\n\nIf you don’t want to play you would never even see the game\n\n- This is the idea:\n\nLets say Italy plays France and take 10 shots on net, 2 goals\n\nThe app shows exactly where on the net they scored\n\nWell now you can see if you can beat them shooting at the exact location and if the goalie can stop you\n\nThere is no app that’s exists like this at all\n\nFree\n\nhttps://t.co/kimqw21sm8\n\nThe game feature is super raw right now so give me some time to improve!",
+      "links": [
+        "Https://the90fc.com/get"
+      ],
+      "translation_zh": "我开发了目前最好的 soccer/football 应用\n\n没有广告，而且我每天都在获得用户\n\n我构建了一个能与体育博彩公司匹敌的算法\n\n- 现在我正在使用 Temu 的策略，把游戏加入应用中以提高留存率\n\n如果你不想玩，你甚至永远都不会看到这个游戏\n\n- 想法是这样的：\n\n假设意大利对阵法国，并且有 10 次射正，2 个进球\n\n这个应用会精确显示他们在球门的哪个位置进球\n\n那么现在你就可以看看自己能不能朝完全相同的位置射门击败他们，以及守门员能不能挡住你\n\n完全不存在这样的应用\n\n免费\n\nthe90fc.com/get\n\n这个游戏功能现在还非常粗糙，所以请给我一些时间来改进！",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "David Quintieri",
+      "author_handle": "themoneygps",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2028519595326484480/H1WocqfH_normal.jpg",
+      "author_followers": 6639,
+      "author_following": 75,
+      "author_bio": null,
+      "author_location": "Italy",
+      "author_joined_at": "2011-10-16T18:35:48Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T04:59:17Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120018434712895662",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2120018284837801984/img/Sm8TBplmCqoIU3Xl.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2120018284837801984/img/Sm8TBplmCqoIU3Xl.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2120018284837801984/img/Sm8TBplmCqoIU3Xl.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              563,
+              1218
+            ],
+            "duration_millis": 44788,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video.twimg.com/amplify_video/2120018284837801984/pl/2sNGVRhOj6iqDt6H.m3u8?tag=29"
+              },
+              {
+                "bitrate": 632000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2120018284837801984/vid/avc1/320x692/2pUauC8S4cmznUMM.mp4?tag=29"
+              },
+              {
+                "bitrate": 950000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2120018284837801984/vid/avc1/480x1038/bOqyOGjLHft2mCLq.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2120018284837801984/vid/avc1/720x1556/28udF4COAb1HYLEG.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/amplify_video/2120018284837801984/vid/avc1/1126x2436/tqj_fVcv2yVIeisL.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/themoneygps/status/2120018434712895662/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 195
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2120012948211204458",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/moumoonggg/status/2120012948211204458",
+      "text": "@hlxf99 所以同样的东西我肯定买京东",
+      "original_text": "@hlxf99 所以同样的东西我肯定买京东",
+      "links": [],
+      "translation_zh": "@hlxf99 所以同样的东西我肯定买京东",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "moumoon",
+      "author_handle": "moumoonggg",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2096991616112463872/wGwHZ_oG_normal.jpg",
+      "author_followers": 4,
+      "author_following": 78,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-04-26T09:29:44Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T04:37:29Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2119805127641215450",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 90
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120008287496347822",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/dawnfiy/status/2120008287496347822",
+      "text": "我不理解！！\n\n200块在京东上 买张香港流量卡，直接就能上X\n\n大家为啥非要去买VPN？？？",
+      "original_text": "我不理解！！\n\n200块在京东上 买张香港流量卡，直接就能上X\n\n大家为啥非要去买VPN？？？",
+      "links": [],
+      "translation_zh": "我不理解！！\n\n200块在京东上 买张香港流量卡，直接就能上X\n\n大家为啥非要去买VPN？？？",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "阿南",
+      "author_handle": "dawnfiy",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2106019865031278592/bJmXzHoR_normal.jpg",
+      "author_followers": 10080,
+      "author_following": 7818,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2021-07-14T01:48:24Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T04:18:58Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2120008287496347822",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 6,
+        "reposts": 0,
+        "replies": 7,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 3345
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2120002124859982054",
+      "brand": "primary",
+      "cluster_id": "primary-signal-001",
+      "topic": "company_market",
+      "url": "https://x.com/_Moximoxixi/status/2120002124859982054",
+      "text": "@hlxf99 作为消费者是挺喜欢京东的。但要买他股票的话是实在没办法下手。",
+      "original_text": "@hlxf99 作为消费者是挺喜欢京东的。但要买他股票的话是实在没办法下手。",
+      "links": [],
+      "translation_zh": "@hlxf99 作为消费者是挺喜欢京东的。但要买他股票的话是实在没办法下手。",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Moses",
+      "author_handle": "_Moximoxixi",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2082955882397356032/lwMW8LLg_normal.jpg",
+      "author_followers": 56,
+      "author_following": 168,
+      "author_bio": null,
+      "author_location": "Seattle, WA",
+      "author_joined_at": "2025-06-25T23:12:31Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T03:54:28Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2119805127641215450",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 355
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": 49,
+      "score_label": "IPS",
+      "matched_terms": [
+        "corporate_context",
+        "company_market"
+      ]
+    },
+    {
+      "post_id": "2119997652594983128",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/KadeChristt/status/2119997652594983128",
+      "text": "Temu blade I'm about to be a fucking problem on this app",
+      "original_text": "Temu blade I'm about to be a fucking problem on this app https://t.co/EuA5N3rrhK",
+      "links": [],
+      "translation_zh": "Temu 刀片，我马上要在这个 app 上成为一个他妈的大麻烦了",
+      "translation_status": "translated",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "Kill_Kade(⁠〒⁠﹏⁠〒⁠)",
+      "author_handle": "KadeChristt",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2116364540464029696/W-l2wvlm_normal.jpg",
+      "author_followers": 262,
+      "author_following": 196,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-07-08T00:25:24Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T03:36:42Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2119997652594983128",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWu-oSpWkAAPEDR.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWu-oSpWkAAPEDR.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWu-oSpWkAAPEDR.jpg",
+          "expanded_url": "https://x.com/KadeChristt/status/2119997652594983128/photo/1"
+        }
+      ],
+      "metrics": {
+        "likes": 11,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 835
+      },
+      "sentiment": "neutral",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    },
+    {
+      "post_id": "2119967685866049717",
+      "brand": "primary",
+      "cluster_id": "primary-signal-002",
+      "topic": "general_observation",
+      "url": "https://x.com/shangmaumau/status/2119967685866049717",
+      "text": "@hlxf99 所以我现在更常用京东，京东的东西很多时候，只要你会买，都能比淘宝便宜。",
+      "original_text": "@hlxf99 所以我现在更常用京东，京东的东西很多时候，只要你会买，都能比淘宝便宜。",
+      "links": [],
+      "translation_zh": "@hlxf99 所以我现在更常用京东，京东的东西很多时候，只要你会买，都能比淘宝便宜。",
+      "translation_status": "source_chinese",
+      "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+      "author_name": "suxiangnan",
+      "author_handle": "shangmaumau",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1365330048421482497/2ZwGYg8P_normal.jpg",
+      "author_followers": 227,
+      "author_following": 1135,
+      "author_bio": null,
+      "author_location": "Shanghai",
+      "author_joined_at": "2013-05-12T06:00:55Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T01:37:38Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2119805127641215450",
+      "conversation_context": {},
+      "language": "zh",
+      "media": [],
+      "metrics": {
+        "likes": 8,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 5548
+      },
+      "sentiment": "neutral",
+      "level": "medium",
+      "score_value": 63,
+      "score_label": "IPS",
+      "matched_terms": [
+        "general_observation"
+      ]
+    },
+    {
+      "post_id": "2119952351541018766",
+      "brand": "competitor",
+      "cluster_id": "",
+      "topic": "competitor_baseline",
+      "url": "https://x.com/nossoorgulhoth/status/2119952351541018766",
+      "text": "👨\n\nTemu discount code for both new and existing users! 🎉 Use👣code acs583731 to get up to 85% off, including free shipping. 🛍️✨",
+      "original_text": "👨\n\nTemu discount code for both new and existing users! 🎉 Use👣code acs583731 to get up to 85% off, including free shipping. 🛍️✨ https://t.co/ObNwKA1v4M",
+      "links": [],
+      "translation_zh": "👨\n\n适用于新老用户的 Temu 折扣码！🎉 使用👣代码 acs583731 可享高达85%折扣，并包含免费配送。🛍️✨",
+      "translation_status": "translated",
+      "summary_zh": "用户讨论物流、配送或包裹追踪体验。",
+      "author_name": "ㅤlary",
+      "author_handle": "nossoorgulhoth",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/983907142989156353/kawsMCFv_normal.jpg",
+      "author_followers": 1403,
+      "author_following": 733,
+      "author_bio": null,
+      "author_location": "+55 011",
+      "author_joined_at": "2012-10-14T02:22:57Z",
+      "author_verified": false,
+      "created_at": "2026-11-10T00:36:42Z",
+      "reply_to_post_id": null,
+      "reply_to_handle": null,
+      "quoted_post_id": null,
+      "conversation_id": "2119952351541018766",
+      "conversation_context": {},
+      "language": "en",
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HWuVZW3bcAEu780.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HWuVZW3bcAEu780.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HWuVZW3bcAEu780.jpg",
+          "expanded_url": "https://x.com/nossoorgulhoth/status/2119952351541018766/video/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/ext_tw_video_thumb/2119952330875682816/pu/img/YY-ePXkwoPhHgXpu.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/ext_tw_video_thumb/2119952330875682816/pu/img/YY-ePXkwoPhHgXpu.jpg",
+          "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/2119952330875682816/pu/img/YY-ePXkwoPhHgXpu.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "duration_millis": 4083,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video.twimg.com/ext_tw_video/2119952330875682816/pu/pl/WMdyC5DokWUzBoAg.m3u8?tag=12"
+              },
+              {
+                "bitrate": 432000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/ext_tw_video/2119952330875682816/pu/vid/avc1/318x320/qUevTsDkOfORSd9C.mp4?tag=12"
+              },
+              {
+                "bitrate": 832000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/ext_tw_video/2119952330875682816/pu/vid/avc1/540x540/GY52-frK1SM1XY2S.mp4?tag=12"
+              },
+              {
+                "bitrate": 1280000,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/ext_tw_video/2119952330875682816/pu/vid/avc1/720x720/5sHIBAmXARwTspa6.mp4?tag=12"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/nossoorgulhoth/status/2119952351541018766/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 2,
+        "reposts": 1,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 23
+      },
+      "sentiment": "positive",
+      "level": "low",
+      "score_value": null,
+      "score_label": "互动",
+      "matched_terms": [
+        "competitor_baseline"
+      ]
+    }
+  ],
+  "summary_only": false,
+  "clusters": [
+    {
+      "cluster_id": "primary-signal-002",
+      "title": "General 主品牌 overseas shopping discussion",
+      "summary": "14 related posts discuss 主品牌 overseas shopping context.",
+      "summary_zh": "相关讨论涉及 主品牌 海外购物的一般体验和认知问题。",
+      "lead_post": {
+        "post_id": "2120093514314977532",
+        "created_at": "2026-11-10T09:57:37Z",
+        "author": {
+          "id": "1455222666118393859",
+          "handle": "wanshiyu2022",
+          "name": "大白菜",
+          "avatar_url": "https://pbs.twimg.com/profile_images/1455222707960770568/tK0u3RMv_normal.png",
+          "followers": 58,
+          "following": 121,
+          "bio": null,
+          "location": null,
+          "joined_at": "2021-11-01T17:18:24Z",
+          "verified": false
+        },
+        "author_name": "大白菜",
+        "author_handle": "wanshiyu2022",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/1455222707960770568/tK0u3RMv_normal.png",
+        "author_followers": 58,
+        "author_following": 121,
+        "author_bio": null,
+        "author_location": null,
+        "author_joined_at": "2021-11-01T17:18:24Z",
+        "author_verified": false,
+        "url": "https://x.com/wanshiyu2022/status/2120093514314977532",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2119805127641215450",
+        "conversation_context": {},
+        "language": "zh",
+        "text": "@hlxf99 评论区吹京东的都活在梦里吗？是不是对国内一无所知？京东的利润以前是猛砸在物流行业，这两年猛砸在外卖行业，跟美团拼结果两败俱伤，京东的外卖平台不知道坑了多少商家和外卖员，忽悠起来一套一套的。外卖行业京东的名声早就烂大街了",
+        "clean_text": "@hlxf99 评论区吹京东的都活在梦里吗？是不是对国内一无所知？京东的利润以前是猛砸在物流行业，这两年猛砸在外卖行业，跟美团拼结果两败俱伤，京东的外卖平台不知道坑了多少商家和外卖员，忽悠起来一套一套的。外卖行业京东的名声早就烂大街了",
+        "links": [],
+        "translation_zh": "@hlxf99 评论区吹京东的都活在梦里吗？是不是对国内一无所知？京东的利润以前是猛砸在物流行业，这两年猛砸在外卖行业，跟美团拼结果两败俱伤，京东的外卖平台不知道坑了多少商家和外卖员，忽悠起来一套一套的。外卖行业京东的名声早就烂大街了",
+        "translation_status": "source_chinese",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 7,
+          "reposts": 0,
+          "replies": 2,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 2292
+        },
+        "media": []
+      },
+      "topic": "general_observation",
+      "risk_types": [],
+      "opportunity_types": [],
+      "post_count": 14,
+      "first_seen_at": "2026-11-10T01:37:38Z",
+      "last_seen_at": "2026-11-10T16:06:06Z",
+      "metrics": {
+        "total_likes": 89,
+        "total_reposts": 4,
+        "total_replies": 124,
+        "total_quotes": 0,
+        "total_bookmarks": 4,
+        "total_views": 22497,
+        "max_author_followers": 17648,
+        "public_interactions": 217
+      },
+      "score": {
+        "ips": 63,
+        "level": "medium",
+        "brand_relevance": 100,
+        "risk_or_opportunity_intensity": 40,
+        "current_impact": 53,
+        "future_potential": 59,
+        "credibility": 86,
+        "business_impact": 42,
+        "urgency": 41,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "观察",
+        "risk_labels": [],
+        "opportunity_labels": [],
+        "special_flags": [],
+        "explanation": "该情报与 主品牌 海外购物相关，当前综合优先级为 63。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 3,
+        "popular": 3,
+        "amplifiers": 0,
+        "latest": 3,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 0
+      }
+    },
+    {
+      "cluster_id": "primary-signal-001",
+      "title": "Corporate, market and strategy discussion",
+      "summary": "1 related posts discuss corporate, market or strategy context.",
+      "summary_zh": "相关讨论涉及公司、资本市场、战略或行业报告背景。",
+      "lead_post": {
+        "post_id": "2120002124859982054",
+        "created_at": "2026-11-10T03:54:28Z",
+        "author": {
+          "id": "1938012421777723395",
+          "handle": "_Moximoxixi",
+          "name": "Moses",
+          "avatar_url": "https://pbs.twimg.com/profile_images/2082955882397356032/lwMW8LLg_normal.jpg",
+          "followers": 56,
+          "following": 168,
+          "bio": null,
+          "location": "Seattle, WA",
+          "joined_at": "2025-06-25T23:12:31Z",
+          "verified": false
+        },
+        "author_name": "Moses",
+        "author_handle": "_Moximoxixi",
+        "author_avatar_url": "https://pbs.twimg.com/profile_images/2082955882397356032/lwMW8LLg_normal.jpg",
+        "author_followers": 56,
+        "author_following": 168,
+        "author_bio": null,
+        "author_location": "Seattle, WA",
+        "author_joined_at": "2025-06-25T23:12:31Z",
+        "author_verified": false,
+        "url": "https://x.com/_Moximoxixi/status/2120002124859982054",
+        "reply_to_post_id": null,
+        "reply_to_handle": null,
+        "quoted_post_id": null,
+        "conversation_id": "2119805127641215450",
+        "conversation_context": {},
+        "language": "zh",
+        "text": "@hlxf99 作为消费者是挺喜欢京东的。但要买他股票的话是实在没办法下手。",
+        "clean_text": "@hlxf99 作为消费者是挺喜欢京东的。但要买他股票的话是实在没办法下手。",
+        "links": [],
+        "translation_zh": "@hlxf99 作为消费者是挺喜欢京东的。但要买他股票的话是实在没办法下手。",
+        "translation_status": "source_chinese",
+        "summary_zh": "用户在 公开社媒上讨论与品牌相关的购物体验。",
+        "metrics": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "bookmarks": 0,
+          "views": 355
+        },
+        "media": []
+      },
+      "topic": "company_market",
+      "risk_types": [],
+      "opportunity_types": [
+        "corporate_context"
+      ],
+      "post_count": 1,
+      "first_seen_at": "2026-11-10T03:54:28Z",
+      "last_seen_at": "2026-11-10T03:54:28Z",
+      "metrics": {
+        "total_likes": 0,
+        "total_reposts": 0,
+        "total_replies": 0,
+        "total_quotes": 0,
+        "total_bookmarks": 0,
+        "total_views": 355,
+        "max_author_followers": 56,
+        "public_interactions": 0
+      },
+      "score": {
+        "ips": 49,
+        "level": "low",
+        "brand_relevance": 70,
+        "risk_or_opportunity_intensity": 48,
+        "current_impact": 25,
+        "future_potential": 41,
+        "credibility": 58,
+        "business_impact": 56,
+        "urgency": 41,
+        "sentiment": "neutral",
+        "confidence": 0.81,
+        "recommended_action": "背景观察",
+        "risk_labels": [],
+        "opportunity_labels": [
+          "corporate_context"
+        ],
+        "special_flags": [],
+        "explanation": "公司、资本市场或战略背景信息对品牌心智有间接影响，当前综合优先级为 49。"
+      },
+      "evidence_counts": {
+        "origin": 1,
+        "stakeholders": 0,
+        "popular": 1,
+        "amplifiers": 0,
+        "latest": 1,
+        "supporting_evidence": 0,
+        "contradicting_evidence": 1
+      }
+    }
+  ]
+}

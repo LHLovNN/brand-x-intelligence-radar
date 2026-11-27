@@ -1,0 +1,67 @@
+{
+  "conversation_id": "2122858035710243185",
+  "anchor_post_id": "2122858035710243185",
+  "summary_zh": "前文由Ryrenz介绍开源项目“麦田”可安排多平台视频发布、回收数据并生成复盘，强调不存密码、Mac支持和GitHub热度。后续sahuaja3669回应称未试用，关注发布失败处理、人工点击状态和各平台指标口径。上下文显示舆情偏理性评估，真实性与体验仍需实测验证。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2122858035710243185",
+      "url": "https://x.com/Ryrenz/status/2122858035710243185",
+      "created_at": "2026-11-18T01:02:51Z",
+      "text": "🌾 多平台博主的中控台来了：麦田能把一期视频排进 B 站、抖音、小红书、视频号、YouTube、X 和 Instagram 的发布计划，发完数据还会自己回来找你。\n\n麦田仓库 11 月 14 号才建，已经上了 Trendshift 日榜，三天就有 286 个 fork。作者是做 AI Agent 教程的麦当，知识站在 https://t.co/NWRr1CFO91。\n\n做过多平台分发的都懂：一条视频要在七个后台挨个填标题、简介、封面，发完还得每天去各家后台抄播放量，复盘全靠记性。\n\n麦田把这套活接了过去。发布由 Claude Code 或 Codex 里的发布 skill 配合 Chrome 插件完成，用的是你自己已经登录的浏览器，不存平台密码。B 站、抖音、小红书、视频号只帮你把发布页填好，最后那一下由你自己点；X、YouTube、Instagram 核对完文案和定时才自动提交。\n\n发完之后，它每天采集各平台的播放、互动和粉丝数，新一期头三天每 6 小时采一次，第 1、3、7 天自动出复盘卡片，每周一出周报，全都推到飞书。目前只支持常开的 Mac，Windows 安装脚本是社区贡献的。\n\n把搬运的时间省下来，留给下一期内容。\n\nGitHub：https://t.co/WLxswMZQDR",
+      "original_text": "🌾 多平台博主的中控台来了：麦田能把一期视频排进 B 站、抖音、小红书、视频号、YouTube、X 和 Instagram 的发布计划，发完数据还会自己回来找你。\n\n麦田仓库 11 月 14 号才建，已经上了 Trendshift 日榜，三天就有 286 个 fork。作者是做 AI Agent 教程的麦当，知识站在 https://t.co/NWRr1CFO91。\n\n做过多平台分发的都懂：一条视频要在七个后台挨个填标题、简介、封面，发完还得每天去各家后台抄播放量，复盘全靠记性。\n\n麦田把这套活接了过去。发布由 Claude Code 或 Codex 里的发布 skill 配合 Chrome 插件完成，用的是你自己已经登录的浏览器，不存平台密码。B 站、抖音、小红书、视频号只帮你把发布页填好，最后那一下由你自己点；X、YouTube、Instagram 核对完文案和定时才自动提交。\n\n发完之后，它每天采集各平台的播放、互动和粉丝数，新一期头三天每 6 小时采一次，第 1、3、7 天自动出复盘卡片，每周一出周报，全都推到飞书。目前只支持常开的 Mac，Windows 安装脚本是社区贡献的。\n\n把搬运的时间省下来，留给下一期内容。\n\nGitHub：https://t.co/WLxswMZQDR",
+      "translation_zh": "🌾 多平台博主的中控台来了：麦田能把一期视频排进 B 站、抖音、小红书、视频号、YouTube、X 和 Instagram 的发布计划，发完数据还会自己回来找你。\n\n麦田仓库 11 月 14 号才建，已经上了 Trendshift 日榜，三天就有 286 个 fork。作者是做 AI Agent 教程的麦当，知识站在 https://t.co/NWRr1CFO91。\n\n做过多平台分发的都懂：一条视频要在七个后台挨个填标题、简介、封面，发完还得每天去各家后台抄播放量，复盘全靠记性。\n\n麦田把这套活接了过去。发布由 Claude Code 或 Codex 里的发布 skill 配合 Chrome 插件完成，用的是你自己已经登录的浏览器，不存平台密码。B 站、抖音、小红书、视频号只帮你把发布页填好，最后那一下由你自己点；X、YouTube、Instagram 核对完文案和定时才自动提交。\n\n发完之后，它每天采集各平台的播放、互动和粉丝数，新一期头三天每 6 小时采一次，第 1、3、7 天自动出复盘卡片，每周一出周报，全都推到飞书。目前只支持常开的 Mac，Windows 安装脚本是社区贡献的。\n\n把搬运的时间省下来，留给下一期内容。\n\nGitHub：https://t.co/WLxswMZQDR",
+      "translation_status": "source_chinese",
+      "author_name": "Ren",
+      "author_handle": "Ryrenz",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2047148133746933760/iEtNYePb_normal.jpg",
+      "author_followers": 12130,
+      "author_following": 696,
+      "author_bio": "AI Engineer | 分享实用 AI 工具和实战心得",
+      "author_location": "Virginia, USA",
+      "author_joined_at": "2025-03-16T20:39:47Z",
+      "author_verified": false,
+      "links": [
+        "http://mdldm.club",
+        "https://github.com/CzzzzzzJ/mdldm-maitian"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 4,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 2,
+        "views": 460
+      }
+    },
+    {
+      "post_id": "2123029071680401612",
+      "url": "https://x.com/sahuaja3669/status/2123029071680401612",
+      "created_at": "2026-11-18T12:22:29Z",
+      "text": "@Ryrenz 这类中控台我最想看“七个平台只成功了五个”时的界面：已发布的给真实链接，待人工点击的别算成功，结果不明的先查再补发。另把各平台的指标口径保留下来，播放量都叫播放量，也未必能直接放一列横比。还没试麦田，这是我会优先验的两处。",
+      "original_text": "@Ryrenz 这类中控台我最想看“七个平台只成功了五个”时的界面：已发布的给真实链接，待人工点击的别算成功，结果不明的先查再补发。另把各平台的指标口径保留下来，播放量都叫播放量，也未必能直接放一列横比。还没试麦田，这是我会优先验的两处。",
+      "translation_zh": "@Ryrenz 这类中控台我最想看“七个平台只成功了五个”时的界面：已发布的给真实链接，待人工点击的别算成功，结果不明的先查再补发。另把各平台的指标口径保留下来，播放量都叫播放量，也未必能直接放一列横比。还没试麦田，这是我会优先验的两处。",
+      "translation_status": "source_chinese",
+      "author_name": "老王实验室",
+      "author_handle": "sahuaja3669",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2107470619965353984/taQsgPb4_normal.jpg",
+      "author_followers": 1123,
+      "author_following": 1147,
+      "author_bio": "前大厂后端，现做 FDE 落地。\n分享 AI 工具实测、软件开发和 AI 内容创作。\n实测、做项目、写复盘，欢迎来找老王交流。",
+      "author_location": null,
+      "author_joined_at": "2025-11-23T12:37:14Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 2
+      }
+    }
+  ]
+}

@@ -17,7 +17,7 @@ const localBrowserCandidates = [
 ].filter(Boolean);
 
 function isIgnorableConsoleError(text) {
-  return /^Failed to load resource: the server responded with a status of (?:404|503)/i.test(String(text || ""));
+  return /^Failed to load resource: the server responded with a status of (?:403|404|503)/i.test(String(text || ""));
 }
 
 function localBrowserExecutable() {
@@ -78,6 +78,11 @@ async function main() {
     const requestedPaths = [];
   page.on("pageerror", (error) => errors.push(error.message));
   page.on("request", (request) => requestedPaths.push(new URL(request.url()).pathname));
+  page.on("response", (response) => {
+    if (response.status() !== 403) return;
+    const responseUrl = new URL(response.url());
+    if (responseUrl.origin === origin) errors.push(`Local dashboard resource returned 403: ${responseUrl.pathname}`);
+  });
   page.on("console", (message) => {
     const text = message.text();
     if (message.type() === "error" && !isIgnorableConsoleError(text)) errors.push(text);

@@ -1,0 +1,94 @@
+{
+  "conversation_id": "2121816716191674651",
+  "anchor_post_id": "2121816716191674651",
+  "summary_zh": "前文即收录帖，Ryrenz介绍开源 Claude Code/Codex Skill 与插件 article2media，主打把文章/视频生成多平台内容，并强调转写速度、自动验收和授权提醒，未提价格或配送。随后有人询问能否用自己声音配音，也有人认可省时但建议人工复核。上下文显示讨论围绕功能体验，情绪偏正向，传播点在自媒体分发效率。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2121816716191674651",
+      "url": "https://x.com/Ryrenz/status/2121816716191674651",
+      "created_at": "2026-11-15T04:05:01Z",
+      "text": "♻️ 自媒体人的一鱼多吃神器 article2media，一篇文章或一个视频丢进去，长图、小红书卡片、公众号排版、竖屏口播视频一次全出。\n\narticle2media 是一套开源的 Claude Code / Codex Skill，同时也是 Claude Code 插件，10 个能力配一个总入口，能一键组合，也能批量处理。\n\n以前一篇稿子想多平台发，得自己切成小红书卡片、再去公众号后台重新排版、再录一遍口播剪成竖屏视频，一篇内容要折腾好几轮。\n\n现在 X 长文、网页、公众号文章、本地 Markdown，甚至抖音、YouTube、B 站视频都能当原料：视频先转成逐字稿，README 里写 6 分钟的 B 站视频 16 秒就转完；口播视频配上本地语音，再用 Whisper 把字幕逐字对齐。\n\n最省心的是每种产出都带自动验收，长图、卡片和公众号排版会逐块读回来和原文比对，不合格直接报错，不会悄悄塞给你一份错版。\n\n拿别人的文章和视频改编之前，记得先确认授权。\n\n一份内容写一次，剩下的交给 agent 去分发。\n\nGitHub：https://t.co/eGLRfcSY4U",
+      "original_text": "♻️ 自媒体人的一鱼多吃神器 article2media，一篇文章或一个视频丢进去，长图、小红书卡片、公众号排版、竖屏口播视频一次全出。\n\narticle2media 是一套开源的 Claude Code / Codex Skill，同时也是 Claude Code 插件，10 个能力配一个总入口，能一键组合，也能批量处理。\n\n以前一篇稿子想多平台发，得自己切成小红书卡片、再去公众号后台重新排版、再录一遍口播剪成竖屏视频，一篇内容要折腾好几轮。\n\n现在 X 长文、网页、公众号文章、本地 Markdown，甚至抖音、YouTube、B 站视频都能当原料：视频先转成逐字稿，README 里写 6 分钟的 B 站视频 16 秒就转完；口播视频配上本地语音，再用 Whisper 把字幕逐字对齐。\n\n最省心的是每种产出都带自动验收，长图、卡片和公众号排版会逐块读回来和原文比对，不合格直接报错，不会悄悄塞给你一份错版。\n\n拿别人的文章和视频改编之前，记得先确认授权。\n\n一份内容写一次，剩下的交给 agent 去分发。\n\nGitHub：https://t.co/eGLRfcSY4U",
+      "translation_zh": "♻️ 自媒体人的一鱼多吃神器 article2media，一篇文章或一个视频丢进去，长图、小红书卡片、公众号排版、竖屏口播视频一次全出。\n\narticle2media 是一套开源的 Claude Code / Codex Skill，同时也是 Claude Code 插件，10 个能力配一个总入口，能一键组合，也能批量处理。\n\n以前一篇稿子想多平台发，得自己切成小红书卡片、再去公众号后台重新排版、再录一遍口播剪成竖屏视频，一篇内容要折腾好几轮。\n\n现在 X 长文、网页、公众号文章、本地 Markdown，甚至抖音、YouTube、B 站视频都能当原料：视频先转成逐字稿，README 里写 6 分钟的 B 站视频 16 秒就转完；口播视频配上本地语音，再用 Whisper 把字幕逐字对齐。\n\n最省心的是每种产出都带自动验收，长图、卡片和公众号排版会逐块读回来和原文比对，不合格直接报错，不会悄悄塞给你一份错版。\n\n拿别人的文章和视频改编之前，记得先确认授权。\n\n一份内容写一次，剩下的交给 agent 去分发。\n\nGitHub：https://t.co/eGLRfcSY4U",
+      "translation_status": "source_chinese",
+      "author_name": "Ren",
+      "author_handle": "Ryrenz",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2047148133746933760/iEtNYePb_normal.jpg",
+      "author_followers": 12110,
+      "author_following": 696,
+      "author_bio": "AI Engineer | 分享实用 AI 工具和实战心得",
+      "author_location": "Virginia, USA",
+      "author_joined_at": "2025-03-16T20:39:47Z",
+      "author_verified": false,
+      "links": [
+        "https://github.com/threerocks/article2media"
+      ],
+      "media": [],
+      "metrics": {
+        "likes": 52,
+        "reposts": 11,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 76,
+        "views": 2643
+      }
+    },
+    {
+      "post_id": "2121843489453555782",
+      "url": "https://x.com/yangleiocx3/status/2121843489453555782",
+      "created_at": "2026-11-15T05:51:24Z",
+      "text": "@Ryrenz 口播配音能用自己的声音吗？",
+      "original_text": "@Ryrenz 口播配音能用自己的声音吗？",
+      "translation_zh": "@Ryrenz 口播配音能用自己的声音吗？",
+      "translation_status": "source_chinese",
+      "author_name": "阿磊",
+      "author_handle": "yangleiocx3",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2097886694062088199/Kc64L72f_normal.jpg",
+      "author_followers": 8918,
+      "author_following": 2946,
+      "author_bio": "🌟 15 年独立开发者经验 ｜开源「词光」作者 · GitHub 5K+\n💻 用 AI 做产品，新出的 AI 工具我先上手实测\n🚀 Build in public｜替兄弟们先踩坑\n📮 合作：afang0762@gmail.com",
+      "author_location": "Hong Kong",
+      "author_joined_at": "2026-06-20T13:48:39Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 80
+      }
+    },
+    {
+      "post_id": "2121982184659792268",
+      "url": "https://x.com/KevinWeb3Nomad/status/2121982184659792268",
+      "created_at": "2026-11-15T15:02:32Z",
+      "text": "@Ryrenz 一份内容适配多个平台确实省时间，但每个平台的尺寸、语气和受众不同。自动生成后再人工检查一遍会更合适。",
+      "original_text": "@Ryrenz 一份内容适配多个平台确实省时间，但每个平台的尺寸、语气和受众不同。自动生成后再人工检查一遍会更合适。",
+      "translation_zh": "@Ryrenz 一份内容适配多个平台确实省时间，但每个平台的尺寸、语气和受众不同。自动生成后再人工检查一遍会更合适。",
+      "translation_status": "source_chinese",
+      "author_name": "Kevin Lin",
+      "author_handle": "KevinWeb3Nomad",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2022656517410115584/N3oEB84j_normal.jpg",
+      "author_followers": 3224,
+      "author_following": 3071,
+      "author_bio": "Web3 × AI × Nomad Life ◆\nExperimenting with income systems & borderless living.\n探索线上收入系统与无国界数字生活 🌙\nhttps://t.co/vic4g93aPQ\n#DigitalNomad #Web3 #RemoteWork",
+      "author_location": "大阪 大阪市 北区",
+      "author_joined_at": "2021-05-08T09:04:28Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 36
+      }
+    }
+  ]
+}

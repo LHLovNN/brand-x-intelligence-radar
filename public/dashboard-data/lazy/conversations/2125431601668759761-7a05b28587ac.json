@@ -1,0 +1,135 @@
+{
+  "conversation_id": "2125431601668759761",
+  "anchor_post_id": "2125431601668759761",
+  "summary_zh": "对话围绕 Google Antigravity/AGY 的使用展开，收录帖以自媒体工作台搭建经验切入，具体介绍 Agent Reach、wewrite、guizang-social-card-skill 等开源 Skill 的创作、素材和排版体验，未涉及价格或配送。后续回复补充来源清单、风格反例清单等建议，也有人表示想试用 wewrite，整体更像真实使用交流，情绪偏正面，具备一定工具传播价值。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2125431601668759761",
+      "url": "https://x.com/xiaomovps/status/2125431601668759761",
+      "created_at": "2026-11-25T03:29:17Z",
+      "text": "我最近尝试把 Google Antigravity 打造成了自己的 AI 自媒体工作台，只靠 3 个开源 Skill，就把日常的创作流程串联起来了\n\n很多人平时用 AGY 主要是拿来写代码，但我这段时间主力用下来，发现它其实非常适合拿来做内容创作\n\n因为它原生兼容通用的 SKILL.md 标准和 MCP，社区里现成的开源工具都能直接放进本地目录里调用，按自己的习惯组合一下，就是一个很好用的私人智能体工作台\n\n这里就分享一下我目前的搭建思路，核心只用到了 3 个开源 Skill，各自负责不同的环节\n\n1、Agent Reach：负责全网热点和素材收集\n\n这是整个工作流的第一步，主要帮我去抓取 X、YouTube、GitHub、Reddit 以及小红书等平台上的最新动态\n\n以前找选题得自己挨个刷网页、翻讨论串，看英文视频还要专门去扒字幕，现在直接让它在后台把相关资讯、开源项目和视频字幕拉下来整理好，最后我只需要从中筛选出值得写的选题就行\n\n2、wewrite：负责内容创作和风格打磨\n\n这是我整个工作台里最核心的一环\n\n选题和资料准备好之后，就可以交给它来整理大纲、写初稿或者拆解视频脚本，而且它能直接读取我本地以前写过的文章，摸清我的表达习惯后再动笔\n\n写完之后它还会顺带做一轮审稿，帮我把明显的 AI 腔调筛掉，如果我手动改了稿子，它还能反过来学习我的修改习惯，越用越顺手\n\n3、guizang-social-card-skill：负责视觉排版和配图制作\n\n内容定稿之后，接下来就是解决配图和排版的问题\n\n这个 Skill 可以直接把文字内容做成公众号头图、信息长图以及小红书图文卡片，平时拿来做一些清爽的教程封面或者对比图也很方便\n\n对于经常需要把同一份内容分发到多个平台的人来说，省去了不少反复调尺寸和排版的功夫，还是挺实用的\n\n这样一套组合下来，整个自媒体工作流就彻底跑通了\n\nAgent Reach 负责在前面收集信息和找选题，wewrite 负责在中间把控内容创作和文风，guizang-social-card-skill 负责最后的视觉排版和出图\n\n几个工具各司其职，而且全都在 AGY 的同一个本地工作区里完成，不用再像以前那样在十几个网页和软件之间来回切换，整个创作过程顺畅了很多\n\n其实不管是运营 X、公众号，还是小红书和视频平台，自媒体的创作流程都差不多，无非就是找选题、攒素材、写内容、做配图，最后再发布出去\n\n工具本身不在于多复杂，能把这几个固定环节顺畅地接起来就足够好用了\n\n希望这次的分享对大家有用，也欢迎大家分享一下自己在 AGY 里常用的插件或 Skill",
+      "original_text": "我最近尝试把 Google Antigravity 打造成了自己的 AI 自媒体工作台，只靠 3 个开源 Skill，就把日常的创作流程串联起来了\n\n很多人平时用 AGY 主要是拿来写代码，但我这段时间主力用下来，发现它其实非常适合拿来做内容创作\n\n因为它原生兼容通用的 SKILL.md 标准和 MCP，社区里现成的开源工具都能直接放进本地目录里调用，按自己的习惯组合一下，就是一个很好用的私人智能体工作台\n\n这里就分享一下我目前的搭建思路，核心只用到了 3 个开源 Skill，各自负责不同的环节\n\n1、Agent Reach：负责全网热点和素材收集\n\n这是整个工作流的第一步，主要帮我去抓取 X、YouTube、GitHub、Reddit 以及小红书等平台上的最新动态\n\n以前找选题得自己挨个刷网页、翻讨论串，看英文视频还要专门去扒字幕，现在直接让它在后台把相关资讯、开源项目和视频字幕拉下来整理好，最后我只需要从中筛选出值得写的选题就行\n\n2、wewrite：负责内容创作和风格打磨\n\n这是我整个工作台里最核心的一环\n\n选题和资料准备好之后，就可以交给它来整理大纲、写初稿或者拆解视频脚本，而且它能直接读取我本地以前写过的文章，摸清我的表达习惯后再动笔\n\n写完之后它还会顺带做一轮审稿，帮我把明显的 AI 腔调筛掉，如果我手动改了稿子，它还能反过来学习我的修改习惯，越用越顺手\n\n3、guizang-social-card-skill：负责视觉排版和配图制作\n\n内容定稿之后，接下来就是解决配图和排版的问题\n\n这个 Skill 可以直接把文字内容做成公众号头图、信息长图以及小红书图文卡片，平时拿来做一些清爽的教程封面或者对比图也很方便\n\n对于经常需要把同一份内容分发到多个平台的人来说，省去了不少反复调尺寸和排版的功夫，还是挺实用的\n\n这样一套组合下来，整个自媒体工作流就彻底跑通了\n\nAgent Reach 负责在前面收集信息和找选题，wewrite 负责在中间把控内容创作和文风，guizang-social-card-skill 负责最后的视觉排版和出图\n\n几个工具各司其职，而且全都在 AGY 的同一个本地工作区里完成，不用再像以前那样在十几个网页和软件之间来回切换，整个创作过程顺畅了很多\n\n其实不管是运营 X、公众号，还是小红书和视频平台，自媒体的创作流程都差不多，无非就是找选题、攒素材、写内容、做配图，最后再发布出去\n\n工具本身不在于多复杂，能把这几个固定环节顺畅地接起来就足够好用了\n\n希望这次的分享对大家有用，也欢迎大家分享一下自己在 AGY 里常用的插件或 Skill",
+      "translation_zh": "我最近尝试把 Google Antigravity 打造成了自己的 AI 自媒体工作台，只靠 3 个开源 Skill，就把日常的创作流程串联起来了\n\n很多人平时用 AGY 主要是拿来写代码，但我这段时间主力用下来，发现它其实非常适合拿来做内容创作\n\n因为它原生兼容通用的 SKILL.md 标准和 MCP，社区里现成的开源工具都能直接放进本地目录里调用，按自己的习惯组合一下，就是一个很好用的私人智能体工作台\n\n这里就分享一下我目前的搭建思路，核心只用到了 3 个开源 Skill，各自负责不同的环节\n\n1、Agent Reach：负责全网热点和素材收集\n\n这是整个工作流的第一步，主要帮我去抓取 X、YouTube、GitHub、Reddit 以及小红书等平台上的最新动态\n\n以前找选题得自己挨个刷网页、翻讨论串，看英文视频还要专门去扒字幕，现在直接让它在后台把相关资讯、开源项目和视频字幕拉下来整理好，最后我只需要从中筛选出值得写的选题就行\n\n2、wewrite：负责内容创作和风格打磨\n\n这是我整个工作台里最核心的一环\n\n选题和资料准备好之后，就可以交给它来整理大纲、写初稿或者拆解视频脚本，而且它能直接读取我本地以前写过的文章，摸清我的表达习惯后再动笔\n\n写完之后它还会顺带做一轮审稿，帮我把明显的 AI 腔调筛掉，如果我手动改了稿子，它还能反过来学习我的修改习惯，越用越顺手\n\n3、guizang-social-card-skill：负责视觉排版和配图制作\n\n内容定稿之后，接下来就是解决配图和排版的问题\n\n这个 Skill 可以直接把文字内容做成公众号头图、信息长图以及小红书图文卡片，平时拿来做一些清爽的教程封面或者对比图也很方便\n\n对于经常需要把同一份内容分发到多个平台的人来说，省去了不少反复调尺寸和排版的功夫，还是挺实用的\n\n这样一套组合下来，整个自媒体工作流就彻底跑通了\n\nAgent Reach 负责在前面收集信息和找选题，wewrite 负责在中间把控内容创作和文风，guizang-social-card-skill 负责最后的视觉排版和出图\n\n几个工具各司其职，而且全都在 AGY 的同一个本地工作区里完成，不用再像以前那样在十几个网页和软件之间来回切换，整个创作过程顺畅了很多\n\n其实不管是运营 X、公众号，还是小红书和视频平台，自媒体的创作流程都差不多，无非就是找选题、攒素材、写内容、做配图，最后再发布出去\n\n工具本身不在于多复杂，能把这几个固定环节顺畅地接起来就足够好用了\n\n希望这次的分享对大家有用，也欢迎大家分享一下自己在 AGY 里常用的插件或 Skill",
+      "translation_status": "source_chinese",
+      "author_name": "小墨同学",
+      "author_handle": "xiaomovps",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2006310479975858176/PWGiJqg9_normal.jpg",
+      "author_followers": 19123,
+      "author_following": 407,
+      "author_bio": "🧠  AI Agent 实操｜Pi / DeepSeek Harness / Grok Bot / Claude Code\n💸 天天实测 Agent 怎么更省 token、更好用\n🔧 ESP32 DIY：把 Agent 装进小硬件\n📘 Pi 蓝皮书作者 · 合作 wx：lucky_bobe",
+      "author_location": "Osaka-shi Kita-ku, Osaka",
+      "author_joined_at": "2022-09-20T15:56:03Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HX8MpeEbwAEsonT.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HX8MpeEbwAEsonT.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HX8MpeEbwAEsonT.jpg",
+          "expanded_url": "https://x.com/xiaomovps/status/2125431601668759761/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HX8Mw_Hb0AASV8v.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HX8Mw_Hb0AASV8v.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HX8Mw_Hb0AASV8v.jpg",
+          "expanded_url": "https://x.com/xiaomovps/status/2125431601668759761/photo/2"
+        }
+      ],
+      "metrics": {
+        "likes": 44,
+        "reposts": 8,
+        "replies": 4,
+        "quotes": 0,
+        "bookmarks": 56,
+        "views": 4057
+      }
+    },
+    {
+      "post_id": "2125434064597610770",
+      "url": "https://x.com/C_C_W_U/status/2125434064597610770",
+      "created_at": "2026-11-25T03:39:04Z",
+      "text": "@xiaomovps 这套流程可以给初稿留一个来源清单。改成 X 帖或公众号文章时，至少每个关键数据还能点回原出处，审稿会省不少时间。",
+      "original_text": "@xiaomovps 这套流程可以给初稿留一个来源清单。改成 X 帖或公众号文章时，至少每个关键数据还能点回原出处，审稿会省不少时间。",
+      "translation_zh": "@xiaomovps 这套流程可以给初稿留一个来源清单。改成 X 帖或公众号文章时，至少每个关键数据还能点回原出处，审稿会省不少时间。",
+      "translation_status": "source_chinese",
+      "author_name": "C_C_WU | AI Security",
+      "author_handle": "C_C_W_U",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1643150343428268033/vd7a3X3F_normal.png",
+      "author_followers": 1729,
+      "author_following": 1785,
+      "author_bio": "AI Builder & CISO | Building secure AI agents | Agentic SOC · AI Identity · AI Governance | Background: Baidu · Tencent · PKU",
+      "author_location": null,
+      "author_joined_at": "2023-04-04T07:15:44Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 62
+      }
+    },
+    {
+      "post_id": "2125547100729458760",
+      "url": "https://x.com/ericzhong29/status/2125547100729458760",
+      "created_at": "2026-11-25T11:08:14Z",
+      "text": "@xiaomovps wewrite 读本地旧文、学修改习惯这步最关键。还可以再加一环：把自己每次手动改掉的句子单独存成一份“反例清单”，喂回去比让它自己猜风格稳得多。",
+      "original_text": "@xiaomovps wewrite 读本地旧文、学修改习惯这步最关键。还可以再加一环：把自己每次手动改掉的句子单独存成一份“反例清单”，喂回去比让它自己猜风格稳得多。",
+      "translation_zh": "@xiaomovps wewrite 读本地旧文、学修改习惯这步最关键。还可以再加一环：把自己每次手动改掉的句子单独存成一份“反例清单”，喂回去比让它自己猜风格稳得多。",
+      "translation_status": "source_chinese",
+      "author_name": "ericzhong",
+      "author_handle": "ericzhong29",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2043304723374297088/s8hg-ibT_normal.jpg",
+      "author_followers": 10,
+      "author_following": 50,
+      "author_bio": "这个账号由 @ericzhong29 本人运营，部分内容由自动化工具辅助发布。",
+      "author_location": null,
+      "author_joined_at": "2026-04-12T12:25:00Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 50
+      }
+    },
+    {
+      "post_id": "2125585250978045952",
+      "url": "https://x.com/universe2048/status/2125585250978045952",
+      "created_at": "2026-11-25T13:39:49Z",
+      "text": "@xiaomovps ai写作真是有时候太差了，试下 wewrite如何",
+      "original_text": "@xiaomovps ai写作真是有时候太差了，试下 wewrite如何",
+      "translation_zh": "@xiaomovps ai写作真是有时候太差了，试下 wewrite如何",
+      "translation_status": "source_chinese",
+      "author_name": "理性边疆 | Rational Frontier",
+      "author_handle": "universe2048",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2100172069828960256/G0m1qX1X_normal.jpg",
+      "author_followers": 36,
+      "author_following": 83,
+      "author_bio": "科技  |  时政 ｜ 未来演进。记录技术浪潮下的地缘博弈。留存深度，拒绝噪音。\nTech | Realpolitik | Speculative Futures. Tracking geopolitical shifts and tech frontiers. Depth over noise.",
+      "author_location": "Earth",
+      "author_joined_at": "2011-01-16T09:13:14Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 50
+      }
+    }
+  ]
+}

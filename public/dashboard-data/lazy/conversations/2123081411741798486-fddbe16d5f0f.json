@@ -1,0 +1,114 @@
+{
+  "conversation_id": "2123081411741798486",
+  "anchor_post_id": "2123081411741798486",
+  "summary_zh": "前文未见更多铺垫，收录帖直接分享把 Pi Agent 从 Coding Agent 改造成自媒体工作台的体验，具体列出 hidrix-tools、Social Media Skills、baoyu-skills 的分工，话题转向工具能力与使用方案。后续两人回应技能衔接、权限控制和未跑通组合，说明内容偏实测讨论，情绪中性偏认可，有一定参考传播价值。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2123081411741798486",
+      "url": "https://x.com/xiaomovps/status/2123081411741798486",
+      "created_at": "2026-11-18T15:50:28Z",
+      "text": "Pi Agent 也能打造成自己的自媒体创作工作台了\n\n前面我分享过，自己是怎么通过 3 个插件，把 DeepSeek Harness 的整个自媒体创作流程串联起来的\n\n我发现了其实 Pi 也可以实现类似的效果，只不过方式从插件变成了通过 skill 就可以完成，我也找了一下相关的插件 但是都效果不是太好\n\n我这里就把我测试的方案分享出来：\n\n1、hidrix-tools：负责热点搜索和资料收集\n\n这是整个流程的第一步，可以让 Pi 搜索 X、Reddit、YouTube 等平台的内容，还能根据互动数据分析哪些话题比较热门\n\n比如我平时比较关注 AI 新闻、开源项目和 Agent 生态，就可以让它先收集相关信息，再筛选值得创作的选题\n\n2、Social Media Skills：负责内容创作和管理\n\n这个项目提供了一整套自媒体相关的 Skills，包括推文写作、内容策略、多平台改写和内容排期\n\n我觉得比较实用的是，可以把自己以前写过的文章作为参考，让 Pi 按照自己的表达习惯来创作\n\n而且一份内容也可以改写成不同平台需要的格式，不用每次从头开始\n\n3、baoyu-skills：负责内容设计和配图\n\n文章写完之后，接下来就是设计和排版了\n\n这里可以使用宝玉的 Skills，生成小红书图文卡片、公众号封面、文章插图等素材\n\n对于经常需要把同一份内容发布到多个平台的人来说，可以节约不少配图时间\n\n其实自媒体工作流都是大同小异，都是汇总信息 然后二次创作 然后多平台发布\n\n很多人都觉得 PI agent 只适合写代码，其实它最特殊的就是它的扩展性和轻便，你可以基于 PI 核心把它打造成任何你想要的形式，这才是它最最核心的含义\n\n别看他默认功能不多，但是只要把插件搭配好，也能从一个 Coding Agent 变成自己需要的自媒体工作台",
+      "original_text": "Pi Agent 也能打造成自己的自媒体创作工作台了\n\n前面我分享过，自己是怎么通过 3 个插件，把 DeepSeek Harness 的整个自媒体创作流程串联起来的\n\n我发现了其实 Pi 也可以实现类似的效果，只不过方式从插件变成了通过 skill 就可以完成，我也找了一下相关的插件 但是都效果不是太好\n\n我这里就把我测试的方案分享出来：\n\n1、hidrix-tools：负责热点搜索和资料收集\n\n这是整个流程的第一步，可以让 Pi 搜索 X、Reddit、YouTube 等平台的内容，还能根据互动数据分析哪些话题比较热门\n\n比如我平时比较关注 AI 新闻、开源项目和 Agent 生态，就可以让它先收集相关信息，再筛选值得创作的选题\n\n2、Social Media Skills：负责内容创作和管理\n\n这个项目提供了一整套自媒体相关的 Skills，包括推文写作、内容策略、多平台改写和内容排期\n\n我觉得比较实用的是，可以把自己以前写过的文章作为参考，让 Pi 按照自己的表达习惯来创作\n\n而且一份内容也可以改写成不同平台需要的格式，不用每次从头开始\n\n3、baoyu-skills：负责内容设计和配图\n\n文章写完之后，接下来就是设计和排版了\n\n这里可以使用宝玉的 Skills，生成小红书图文卡片、公众号封面、文章插图等素材\n\n对于经常需要把同一份内容发布到多个平台的人来说，可以节约不少配图时间\n\n其实自媒体工作流都是大同小异，都是汇总信息 然后二次创作 然后多平台发布\n\n很多人都觉得 PI agent 只适合写代码，其实它最特殊的就是它的扩展性和轻便，你可以基于 PI 核心把它打造成任何你想要的形式，这才是它最最核心的含义\n\n别看他默认功能不多，但是只要把插件搭配好，也能从一个 Coding Agent 变成自己需要的自媒体工作台",
+      "translation_zh": "Pi Agent 也能打造成自己的自媒体创作工作台了\n\n前面我分享过，自己是怎么通过 3 个插件，把 DeepSeek Harness 的整个自媒体创作流程串联起来的\n\n我发现了其实 Pi 也可以实现类似的效果，只不过方式从插件变成了通过 skill 就可以完成，我也找了一下相关的插件 但是都效果不是太好\n\n我这里就把我测试的方案分享出来：\n\n1、hidrix-tools：负责热点搜索和资料收集\n\n这是整个流程的第一步，可以让 Pi 搜索 X、Reddit、YouTube 等平台的内容，还能根据互动数据分析哪些话题比较热门\n\n比如我平时比较关注 AI 新闻、开源项目和 Agent 生态，就可以让它先收集相关信息，再筛选值得创作的选题\n\n2、Social Media Skills：负责内容创作和管理\n\n这个项目提供了一整套自媒体相关的 Skills，包括推文写作、内容策略、多平台改写和内容排期\n\n我觉得比较实用的是，可以把自己以前写过的文章作为参考，让 Pi 按照自己的表达习惯来创作\n\n而且一份内容也可以改写成不同平台需要的格式，不用每次从头开始\n\n3、baoyu-skills：负责内容设计和配图\n\n文章写完之后，接下来就是设计和排版了\n\n这里可以使用宝玉的 Skills，生成小红书图文卡片、公众号封面、文章插图等素材\n\n对于经常需要把同一份内容发布到多个平台的人来说，可以节约不少配图时间\n\n其实自媒体工作流都是大同小异，都是汇总信息 然后二次创作 然后多平台发布\n\n很多人都觉得 PI agent 只适合写代码，其实它最特殊的就是它的扩展性和轻便，你可以基于 PI 核心把它打造成任何你想要的形式，这才是它最最核心的含义\n\n别看他默认功能不多，但是只要把插件搭配好，也能从一个 Coding Agent 变成自己需要的自媒体工作台",
+      "translation_status": "source_chinese",
+      "author_name": "小墨同学",
+      "author_handle": "xiaomovps",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2006310479975858176/PWGiJqg9_normal.jpg",
+      "author_followers": 18450,
+      "author_following": 414,
+      "author_bio": "🧠  AI Agent 实操｜Pi / DeepSeek Harness / Grok Bot / Claude Code\n💸 天天实测 Agent 怎么更省 token、更好用\n🔧 ESP32 DIY：把 Agent 装进小硬件\n📘 Pi 蓝皮书作者 · 合作 wx：lucky_bobe",
+      "author_location": "Osaka-shi Kita-ku, Osaka",
+      "author_joined_at": "2022-09-20T15:56:03Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/media/HXazRvCaIAEhTSs.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HXazRvCaIAEhTSs.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HXazRvCaIAEhTSs.jpg",
+          "expanded_url": "https://x.com/xiaomovps/status/2123081411741798486/photo/1"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HXazRu_a8AAvd1L.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HXazRu_a8AAvd1L.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HXazRu_a8AAvd1L.jpg",
+          "expanded_url": "https://x.com/xiaomovps/status/2123081411741798486/photo/2"
+        },
+        {
+          "url": "https://pbs.twimg.com/media/HXazRu2bYAIYzJP.jpg",
+          "type": "photo",
+          "preview_image_url": "https://pbs.twimg.com/media/HXazRu2bYAIYzJP.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/HXazRu2bYAIYzJP.jpg",
+          "expanded_url": "https://x.com/xiaomovps/status/2123081411741798486/photo/3"
+        }
+      ],
+      "metrics": {
+        "likes": 24,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 15,
+        "views": 1326
+      }
+    },
+    {
+      "post_id": "2123175731786358955",
+      "url": "https://x.com/SunspotAlgo/status/2123175731786358955",
+      "created_at": "2026-11-18T22:05:15Z",
+      "text": "@xiaomovps 你用 3 个插件就能把创作流程串起来，Pi 这边换成 skill，少的是插件帮你兜住的那层衔接，效果参差多半卡在这。",
+      "original_text": "@xiaomovps 你用 3 个插件就能把创作流程串起来，Pi 这边换成 skill，少的是插件帮你兜住的那层衔接，效果参差多半卡在这。",
+      "translation_zh": "@xiaomovps 你用 3 个插件就能把创作流程串起来，Pi 这边换成 skill，少的是插件帮你兜住的那层衔接，效果参差多半卡在这。",
+      "translation_status": "source_chinese",
+      "author_name": "SunspotAlgo",
+      "author_handle": "SunspotAlgo",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2119630838677880832/mpxh-BVv_normal.jpg",
+      "author_followers": 4087,
+      "author_following": 3130,
+      "author_bio": "全职交易员｜全品种趋势交易者｜指标与 AI 开发者\n用代码量化趋势，用纪律约束人性。\n商务合作：https://t.co/fygkCc37S8\n交易信号：https://t.co/eVf1zm7pNc",
+      "author_location": null,
+      "author_joined_at": "2025-05-27T07:43:13Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 10
+      }
+    },
+    {
+      "post_id": "2123189998937571360",
+      "url": "https://x.com/prolibertine/status/2123189998937571360",
+      "created_at": "2026-11-18T23:01:57Z",
+      "text": "@xiaomovps 按选题收集、用自己以前的文章定口吻、再改成多平台格式，这个拆法适合用 skill 来做，不必再堆一套插件。给客户配的话，我会先关掉能直接发布的权限，只让它出草稿，人工看过再发。你列的这三条 skill，我还没按这个组合跑通过。",
+      "original_text": "@xiaomovps 按选题收集、用自己以前的文章定口吻、再改成多平台格式，这个拆法适合用 skill 来做，不必再堆一套插件。给客户配的话，我会先关掉能直接发布的权限，只让它出草稿，人工看过再发。你列的这三条 skill，我还没按这个组合跑通过。",
+      "translation_zh": "@xiaomovps 按选题收集、用自己以前的文章定口吻、再改成多平台格式，这个拆法适合用 skill 来做，不必再堆一套插件。给客户配的话，我会先关掉能直接发布的权限，只让它出草稿，人工看过再发。你列的这三条 skill，我还没按这个组合跑通过。",
+      "translation_status": "source_chinese",
+      "author_name": "Light@白酒云",
+      "author_handle": "prolibertine",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2101908158545534976/d6tYB4CM_normal.jpg",
+      "author_followers": 908,
+      "author_following": 1840,
+      "author_bio": "做 agent 平台，也做酒类数字营销 SaaS 白酒云（https://t.co/nVnlO1ZSMZ）。酒业 18 年，连续创业。日常折腾 agent 记忆、知识库和多 agent 协同，重度 vibe coding。这里写用下来的真实判断，不搬新闻。",
+      "author_location": "济南",
+      "author_joined_at": "2009-10-26T05:05:46Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 7
+      }
+    }
+  ]
+}

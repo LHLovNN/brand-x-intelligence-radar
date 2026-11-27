@@ -1,0 +1,245 @@
+{
+  "conversation_id": "2120391438106251293",
+  "anchor_post_id": "2120391438106251293",
+  "summary_zh": "前文由作者直接发布3分钟真机演示，介绍自制SUDO桌面AI代码控制器：4寸屏看Agent状态、半按语音、重按发送/批准、NO键拒绝、SNAP截图、旋钮切会话，并称已上架淘宝和小红书店“机箱上的猫”，无价格配送信息。后续多为正向互动，夸方便、想试手感，也有人追问多Agent确认提示，有助判断为产品推广且体验兴趣较真实。",
+  "summary_status": "model",
+  "posts": [
+    {
+      "post_id": "2120391438106251293",
+      "url": "https://x.com/stl96746010/status/2120391438106251293",
+      "created_at": "2026-11-11T05:41:28Z",
+      "text": "我做了一个 AI 写代码专用的桌面小控制器。它能实时显示 Agent 在干嘛，再也不用频繁切窗口回去看了。下面是 3 分钟真机实操演示 👇👇\n\n这是我做的桌面小控制器 SUDO，专门放键盘旁边伺候 AI 的。\n\n开始进入 Vibe Coding 状态时，我越来越发现自己给自己的时间越来越少了。因为很多时候我们大部分时间都是在盯着他们干活。但其实很多时候我们是想要解放自己的，所以才让 AI 来帮我们干这些事情。但是现在很多状态都是我们一直盯着，所以我们就想做这么一个 Vibe Coding 键盘。它能够主动地让像 Codex 这样的工具，把任务推送到你的键盘屏幕上，而不会推到前台。而且处于后台状态下，你也可以通过我们的语音键和深按发送出去给后台的 Codex，让它继续干活，而不会耽误你现在的前台活动。就比如说像我现在的话，特别喜欢一个状态，就是我打开英雄联盟在玩游戏的时候，有的时候我会喜欢用 GPT-6.1 Terra。就是会直接问它：“我的英雄组合是什么？”然后它能够及时地反馈给我，这也是一种不错的状态。然后再切换线程，让它继续去执行我之前派给它的任务。\n\n所以我给自己造了这个Vibe Coding 键盘，我给它设定了几个比较有趣的按键。它不同于目前互联网上大家都在使用的那种宏键盘，我们想要做出一个很区别的产品，它能够真正地解放我们的生产力，解放我们的时间。\n首先，我们必须要看到后台 Agent 的状态，所以我们设定了一个 4 寸的屏幕。这个屏幕刚刚好，一方面能够显示出绘画线程，还能显示出额度，并且它的空间占比比较小。毕竟是放在桌面上的，我们不想让它过于太大。然后其次就是我们的按键\n交互全都塞进了这几颗键里： 主键做成了两段式。半按说话，语音转好字直接进输入框；重按到底并停住，就是批准或发送，机身震一下代表搞定，平时随便摸不会误批。遇到AI乱改代码，直接按 NO 键拒绝；懒得打字描述界面，按 SNAP 键截图丢给它。开了好几个任务的时候，拧一下侧面的金属旋钮就能直接切会话。\n目前我们做了两种适配：一种是基础适配，一种是深度适配。\n1. 深度适配就像 Codex 这种状态，Agent 处于后台的情况下，也能执行发送任务、语音转写、看到线程、切换会话、切换模型、切换努力值等操作。\n2. 基础适配则像市面上宏键盘一样，当 Claude 在前台时，我们可以正常进行语音转写、深按发送等基础操作。\n并且在这个月内，我们会上线 Mac 版本的适配，还有 DeepSeek-Harness 的。如果顺利的话，我们会将 Claude 适配上线。那么这样的话，可能到时候你就可以获得了一个：一方面配色是 Claude 的颜色，还能有一个 Claude 适配的 Vibe Coding 键盘。即使你放在这里，它也是一个很好看的桌面摆件。\n下面这支 3 分钟的视频没做任何特效，全是真机实操：看状态、语音派活、放行网络请求、拦截写文件请求，基本就是我现在每天写代码的真实状态。\n现在我们的产品已经上架到了淘宝，还有我们的小红书店铺。大家可以去搜索“机箱上的猫”去了解更多情况。除此之外，我们还上线了两个额外的颜色，一个是蓝色，一个是黑色，这两个颜色也是特别好看。",
+      "original_text": "我做了一个 AI 写代码专用的桌面小控制器。它能实时显示 Agent 在干嘛，再也不用频繁切窗口回去看了。下面是 3 分钟真机实操演示 👇👇\n\n这是我做的桌面小控制器 SUDO，专门放键盘旁边伺候 AI 的。\n\n开始进入 Vibe Coding 状态时，我越来越发现自己给自己的时间越来越少了。因为很多时候我们大部分时间都是在盯着他们干活。但其实很多时候我们是想要解放自己的，所以才让 AI 来帮我们干这些事情。但是现在很多状态都是我们一直盯着，所以我们就想做这么一个 Vibe Coding 键盘。它能够主动地让像 Codex 这样的工具，把任务推送到你的键盘屏幕上，而不会推到前台。而且处于后台状态下，你也可以通过我们的语音键和深按发送出去给后台的 Codex，让它继续干活，而不会耽误你现在的前台活动。就比如说像我现在的话，特别喜欢一个状态，就是我打开英雄联盟在玩游戏的时候，有的时候我会喜欢用 GPT-6.1 Terra。就是会直接问它：“我的英雄组合是什么？”然后它能够及时地反馈给我，这也是一种不错的状态。然后再切换线程，让它继续去执行我之前派给它的任务。\n\n所以我给自己造了这个Vibe Coding 键盘，我给它设定了几个比较有趣的按键。它不同于目前互联网上大家都在使用的那种宏键盘，我们想要做出一个很区别的产品，它能够真正地解放我们的生产力，解放我们的时间。\n首先，我们必须要看到后台 Agent 的状态，所以我们设定了一个 4 寸的屏幕。这个屏幕刚刚好，一方面能够显示出绘画线程，还能显示出额度，并且它的空间占比比较小。毕竟是放在桌面上的，我们不想让它过于太大。然后其次就是我们的按键\n交互全都塞进了这几颗键里： 主键做成了两段式。半按说话，语音转好字直接进输入框；重按到底并停住，就是批准或发送，机身震一下代表搞定，平时随便摸不会误批。遇到AI乱改代码，直接按 NO 键拒绝；懒得打字描述界面，按 SNAP 键截图丢给它。开了好几个任务的时候，拧一下侧面的金属旋钮就能直接切会话。\n目前我们做了两种适配：一种是基础适配，一种是深度适配。\n1. 深度适配就像 Codex 这种状态，Agent 处于后台的情况下，也能执行发送任务、语音转写、看到线程、切换会话、切换模型、切换努力值等操作。\n2. 基础适配则像市面上宏键盘一样，当 Claude 在前台时，我们可以正常进行语音转写、深按发送等基础操作。\n并且在这个月内，我们会上线 Mac 版本的适配，还有 DeepSeek-Harness 的。如果顺利的话，我们会将 Claude 适配上线。那么这样的话，可能到时候你就可以获得了一个：一方面配色是 Claude 的颜色，还能有一个 Claude 适配的 Vibe Coding 键盘。即使你放在这里，它也是一个很好看的桌面摆件。\n下面这支 3 分钟的视频没做任何特效，全是真机实操：看状态、语音派活、放行网络请求、拦截写文件请求，基本就是我现在每天写代码的真实状态。\n现在我们的产品已经上架到了淘宝，还有我们的小红书店铺。大家可以去搜索“机箱上的猫”去了解更多情况。除此之外，我们还上线了两个额外的颜色，一个是蓝色，一个是黑色，这两个颜色也是特别好看。",
+      "translation_zh": "我做了一个 AI 写代码专用的桌面小控制器。它能实时显示 Agent 在干嘛，再也不用频繁切窗口回去看了。下面是 3 分钟真机实操演示 👇👇\n\n这是我做的桌面小控制器 SUDO，专门放键盘旁边伺候 AI 的。\n\n开始进入 Vibe Coding 状态时，我越来越发现自己给自己的时间越来越少了。因为很多时候我们大部分时间都是在盯着他们干活。但其实很多时候我们是想要解放自己的，所以才让 AI 来帮我们干这些事情。但是现在很多状态都是我们一直盯着，所以我们就想做这么一个 Vibe Coding 键盘。它能够主动地让像 Codex 这样的工具，把任务推送到你的键盘屏幕上，而不会推到前台。而且处于后台状态下，你也可以通过我们的语音键和深按发送出去给后台的 Codex，让它继续干活，而不会耽误你现在的前台活动。就比如说像我现在的话，特别喜欢一个状态，就是我打开英雄联盟在玩游戏的时候，有的时候我会喜欢用 GPT-6.1 Terra。就是会直接问它：“我的英雄组合是什么？”然后它能够及时地反馈给我，这也是一种不错的状态。然后再切换线程，让它继续去执行我之前派给它的任务。\n\n所以我给自己造了这个Vibe Coding 键盘，我给它设定了几个比较有趣的按键。它不同于目前互联网上大家都在使用的那种宏键盘，我们想要做出一个很区别的产品，它能够真正地解放我们的生产力，解放我们的时间。\n首先，我们必须要看到后台 Agent 的状态，所以我们设定了一个 4 寸的屏幕。这个屏幕刚刚好，一方面能够显示出绘画线程，还能显示出额度，并且它的空间占比比较小。毕竟是放在桌面上的，我们不想让它过于太大。然后其次就是我们的按键\n交互全都塞进了这几颗键里： 主键做成了两段式。半按说话，语音转好字直接进输入框；重按到底并停住，就是批准或发送，机身震一下代表搞定，平时随便摸不会误批。遇到AI乱改代码，直接按 NO 键拒绝；懒得打字描述界面，按 SNAP 键截图丢给它。开了好几个任务的时候，拧一下侧面的金属旋钮就能直接切会话。\n目前我们做了两种适配：一种是基础适配，一种是深度适配。\n1. 深度适配就像 Codex 这种状态，Agent 处于后台的情况下，也能执行发送任务、语音转写、看到线程、切换会话、切换模型、切换努力值等操作。\n2. 基础适配则像市面上宏键盘一样，当 Claude 在前台时，我们可以正常进行语音转写、深按发送等基础操作。\n并且在这个月内，我们会上线 Mac 版本的适配，还有 DeepSeek-Harness 的。如果顺利的话，我们会将 Claude 适配上线。那么这样的话，可能到时候你就可以获得了一个：一方面配色是 Claude 的颜色，还能有一个 Claude 适配的 Vibe Coding 键盘。即使你放在这里，它也是一个很好看的桌面摆件。\n下面这支 3 分钟的视频没做任何特效，全是真机实操：看状态、语音派活、放行网络请求、拦截写文件请求，基本就是我现在每天写代码的真实状态。\n现在我们的产品已经上架到了淘宝，还有我们的小红书店铺。大家可以去搜索“机箱上的猫”去了解更多情况。除此之外，我们还上线了两个额外的颜色，一个是蓝色，一个是黑色，这两个颜色也是特别好看。",
+      "translation_status": "source_chinese",
+      "author_name": "s tl",
+      "author_handle": "stl96746010",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1565500501722275840/mDrByQem_normal.jpg",
+      "author_followers": 17,
+      "author_following": 118,
+      "author_bio": "AI engineer\nGoYoung Studio",
+      "author_location": "New York, USA",
+      "author_joined_at": "2022-04-16T15:05:38Z",
+      "author_verified": false,
+      "links": [],
+      "media": [
+        {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2120389346054561792/img/qJJfzjaFEu6AosZ7.jpg",
+          "type": "video",
+          "preview_image_url": "https://pbs.twimg.com/amplify_video_thumb/2120389346054561792/img/qJJfzjaFEu6AosZ7.jpg",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2120389346054561792/img/qJJfzjaFEu6AosZ7.jpg",
+          "video_info": {
+            "aspect_ratio": [
+              16,
+              9
+            ],
+            "duration_millis": 185194,
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "url": "https://video-s.twimg.com/amplify_video/2120389346054561792/pl/1yVNilo_dcDSit0r.m3u8?tag=29"
+              },
+              {
+                "bitrate": 256000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2120389346054561792/vid/avc1/480x270/93YvjsJMfqM77JKJ.mp4?tag=29"
+              },
+              {
+                "bitrate": 832000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2120389346054561792/vid/avc1/640x360/TkS2u8EabbsGqLOK.mp4?tag=29"
+              },
+              {
+                "bitrate": 2176000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2120389346054561792/vid/avc1/1280x720/jHM0aU7dmRexxYm_.mp4?tag=29"
+              },
+              {
+                "bitrate": 10368000,
+                "content_type": "video/mp4",
+                "url": "https://video-s.twimg.com/amplify_video/2120389346054561792/vid/avc1/1920x1080/7_Flc9DAApU1Ufr6.mp4?tag=29"
+              }
+            ]
+          },
+          "expanded_url": "https://x.com/stl96746010/status/2120391438106251293/video/1"
+        }
+      ],
+      "metrics": {
+        "likes": 4,
+        "reposts": 0,
+        "replies": 6,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 2785
+      }
+    },
+    {
+      "post_id": "2120393095758205225",
+      "url": "https://x.com/leisu559327/status/2120393095758205225",
+      "created_at": "2026-11-11T05:48:03Z",
+      "text": "@stl96746010 键盘旁专属 AI 副驾，实时状态一目了然，再也不用疯狂 Alt+Tab 切屏了， 已关，望回踩",
+      "original_text": "@stl96746010 键盘旁专属 AI 副驾，实时状态一目了然，再也不用疯狂 Alt+Tab 切屏了， 已关，望回踩",
+      "translation_zh": "@stl96746010 键盘旁专属 AI 副驾，实时状态一目了然，再也不用疯狂 Alt+Tab 切屏了， 已关，望回踩",
+      "translation_status": "source_chinese",
+      "author_name": "Lei｜工程师玩 AI",
+      "author_handle": "leisu559327",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2109254699736326144/H5sPU2U9_normal.jpg",
+      "author_followers": 5052,
+      "author_following": 5531,
+      "author_bio": "程序员，实测 AI 工具和自动化，分享副业接单真实经验｜蓝V互关，关必回",
+      "author_location": null,
+      "author_joined_at": "2024-10-26T09:35:52Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 27
+      }
+    },
+    {
+      "post_id": "2120404326783013045",
+      "url": "https://x.com/JasonPang0720/status/2120404326783013045",
+      "created_at": "2026-11-11T06:32:41Z",
+      "text": "@stl96746010 半按说话，按到底再发，这手感想试试。",
+      "original_text": "@stl96746010 半按说话，按到底再发，这手感想试试。",
+      "translation_zh": "@stl96746010 半按说话，按到底再发，这手感想试试。",
+      "translation_status": "source_chinese",
+      "author_name": "Jason",
+      "author_handle": "JasonPang0720",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2091134245272276992/NKZ-U6x2_normal.jpg",
+      "author_followers": 1915,
+      "author_following": 2279,
+      "author_bio": "AI 实践者｜把重复工作交给 AI，把时间留给创造。\n折腾 Agent、AI 编程与自动化工作流，分享论文解读、实测方法和踩坑记录。\n探索一个人 + AI，能做成多少事。",
+      "author_location": null,
+      "author_joined_at": "2016-11-10T08:02:27Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 16
+      }
+    },
+    {
+      "post_id": "2120404352498356643",
+      "url": "https://x.com/JasonPang0720/status/2120404352498356643",
+      "created_at": "2026-11-11T06:32:47Z",
+      "text": "@stl96746010 已关注你，欢迎互关交流～",
+      "original_text": "@stl96746010 已关注你，欢迎互关交流～",
+      "translation_zh": "@stl96746010 已关注你，欢迎互关交流～",
+      "translation_status": "source_chinese",
+      "author_name": "Jason",
+      "author_handle": "JasonPang0720",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2091134245272276992/NKZ-U6x2_normal.jpg",
+      "author_followers": 1915,
+      "author_following": 2279,
+      "author_bio": "AI 实践者｜把重复工作交给 AI，把时间留给创造。\n折腾 Agent、AI 编程与自动化工作流，分享论文解读、实测方法和踩坑记录。\n探索一个人 + AI，能做成多少事。",
+      "author_location": null,
+      "author_joined_at": "2016-11-10T08:02:27Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 14
+      }
+    },
+    {
+      "post_id": "2120410910347173908",
+      "url": "https://x.com/alistyun1x/status/2120410910347173908",
+      "created_at": "2026-11-11T06:58:51Z",
+      "text": "@stl96746010 最戳我的是那个 NO 键 😂 AI 乱改代码的时候能直接一键喊停，这比切回窗口翻半天强多了。半按说话、按到底发送这手感听着就上头，不过我已经在脑补按错直接把语音发给 Codex 的场面了……打英雄联盟顺手问 GPT 组合这段也太真实了，我现在就是边玩边切屏盯着 Agent，确实烦。",
+      "original_text": "@stl96746010 最戳我的是那个 NO 键 😂 AI 乱改代码的时候能直接一键喊停，这比切回窗口翻半天强多了。半按说话、按到底发送这手感听着就上头，不过我已经在脑补按错直接把语音发给 Codex 的场面了……打英雄联盟顺手问 GPT 组合这段也太真实了，我现在就是边玩边切屏盯着 Agent，确实烦。",
+      "translation_zh": "@stl96746010 最戳我的是那个 NO 键 😂 AI 乱改代码的时候能直接一键喊停，这比切回窗口翻半天强多了。半按说话、按到底发送这手感听着就上头，不过我已经在脑补按错直接把语音发给 Codex 的场面了……打英雄联盟顺手问 GPT 组合这段也太真实了，我现在就是边玩边切屏盯着 Agent，确实烦。",
+      "translation_status": "source_chinese",
+      "author_name": "飞身踢",
+      "author_handle": "alistyun1x",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2118956593287147520/5hp_p8HD_normal.jpg",
+      "author_followers": 530,
+      "author_following": 154,
+      "author_bio": null,
+      "author_location": null,
+      "author_joined_at": "2026-06-22T15:28:27Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 11
+      }
+    },
+    {
+      "post_id": "2120412219926081696",
+      "url": "https://x.com/robinyi1222/status/2120412219926081696",
+      "created_at": "2026-11-11T07:04:03Z",
+      "text": "@stl96746010 好方便啊，这个小控制器",
+      "original_text": "@stl96746010 好方便啊，这个小控制器",
+      "translation_zh": "@stl96746010 好方便啊，这个小控制器",
+      "translation_status": "source_chinese",
+      "author_name": "座山雕",
+      "author_handle": "robinyi1222",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2055345867394306048/wdMGqDrt_normal.jpg",
+      "author_followers": 1800,
+      "author_following": 1743,
+      "author_bio": "00后传媒公司创始人🧑‍💻\nAI｜web3｜美股｜段子手🌍\n记录X从0-1的过程🔥",
+      "author_location": null,
+      "author_joined_at": "2026-05-15T17:53:03Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 12
+      }
+    },
+    {
+      "post_id": "2120439423808753822",
+      "url": "https://x.com/jacewbuilds/status/2120439423808753822",
+      "created_at": "2026-11-11T08:52:09Z",
+      "text": "@stl96746010 几个 Agent 同时跑时，桌面控制器能不能单独提示哪个在等你确认？这一步一眼看见就省得挨个切窗口了。",
+      "original_text": "@stl96746010 几个 Agent 同时跑时，桌面控制器能不能单独提示哪个在等你确认？这一步一眼看见就省得挨个切窗口了。",
+      "translation_zh": "@stl96746010 几个 Agent 同时跑时，桌面控制器能不能单独提示哪个在等你确认？这一步一眼看见就省得挨个切窗口了。",
+      "translation_status": "source_chinese",
+      "author_name": "Jace W.",
+      "author_handle": "jacewbuilds",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2085204608394412033/6G3oKb7b_normal.jpg",
+      "author_followers": 1666,
+      "author_following": 2982,
+      "author_bio": "个人开发者｜可接单 · INDIE DEV — OPEN FOR COMMISSIONS\nAI / agents / 全球虚拟卡 / crypto 支付｜工具实测和研究\nBYBIT: NLGAQYX\nBitget: RQctM6aD",
+      "author_location": null,
+      "author_joined_at": "2025-03-07T02:19:57Z",
+      "author_verified": false,
+      "links": [],
+      "media": [],
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 16
+      }
+    }
+  ]
+}
