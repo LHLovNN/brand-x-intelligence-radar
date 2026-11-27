@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-27",
+  "thread_id": "45370",
+  "count": 13,
+  "replies": [
+    {
+      "id": "697857",
+      "text": "私人定制服务？",
+      "time": "09:44",
+      "sender_name": "榕城 公子",
+      "sender_id": 765567999
+    },
+    {
+      "id": "697865",
+      "text": "我的钱在你兜里。",
+      "time": "09:45",
+      "sender_name": "肉鸡版",
+      "sender_id": 5155705635
+    },
+    {
+      "id": "697867",
+      "text": "反过来说..",
+      "time": "09:45",
+      "sender_name": "foot ball",
+      "sender_id": 8451034619
+    },
+    {
+      "id": "697921",
+      "text": "一句话总结区别：**苹果在证明自己看不见，OpenAI 在承诺自己看不见。**\n苹果 PCC 是自研 Apple Silicon + 加固系统，运行的是**无状态计算**；连自家运维都没留远程 shell 和交互调试口，还搞了可公开查验的镜像透明日志 [[1]](https://security.apple.com/blog/private-cloud-compute/)。OpenAI 的 Private Inference 走机密计算路线（数据在密封芯片里跑）加上\"严格可验证的控制\"，但现在是 **alpha、少量企业客户**，细节基本停在产品页的宣传语上 [[3]](https://thenextweb.com/news/openai-private-inference-testing-customers)。\n所以，拿着苹果那份博客当标尺去量，OpenAI 这份更像是\"同方向、早两站\"的车票。至于\"OpenAI 人员无法接触底层内容\"：先让它把可审计的证据端上桌再鼓掌。",
+      "time": "09:56",
+      "sender_name": "🔫 ~biu~biu~biu",
+      "sender_id": 8439882275
+    },
+    {
+      "id": "697938",
+      "text": "这种话有人信的话那真的，世界还有那么一点纯真在",
+      "time": "10:00",
+      "sender_name": "Tom & Jerry",
+      "sender_id": 527168267
+    },
+    {
+      "id": "697940",
+      "text": "gpt 从5.6 开始疯狂走下坡路 现在还不如哈基米",
+      "time": "10:00",
+      "sender_name": "dxh",
+      "sender_id": 8003107684
+    },
+    {
+      "id": "697941",
+      "text": "真追求隐私的企业已经在拥抱开源模型了",
+      "time": "10:00",
+      "sender_name": "𝕬𝖒𝖊 𝕾𝖈𝖆𝖗𝖑𝖊𝖙",
+      "sender_id": 5358686436
+    },
+    {
+      "id": "697942",
+      "text": "不如开放权重",
+      "time": "10:00",
+      "sender_name": "masaru",
+      "sender_id": 5434838648
+    },
+    {
+      "id": "697956",
+      "text": "所以更证明了之前是不隐私的🤡",
+      "time": "10:16",
+      "sender_name": "BaoS",
+      "sender_id": 586889239
+    },
+    {
+      "id": "698025",
+      "text": "把5.6还给我",
+      "time": "10:24",
+      "sender_name": "Mario D",
+      "sender_id": 7602531965
+    },
+    {
+      "id": "698026",
+      "text": "隐私是社会的基石",
+      "time": "10:24",
+      "sender_id": 9132767134
+    },
+    {
+      "id": "698030",
+      "text": "有功夫折腾这些，不如把模型训练的强大一些",
+      "time": "10:24",
+      "sender_name": "Mario D",
+      "sender_id": 7602531965
+    },
+    {
+      "id": "698382",
+      "text": "涨价的意思",
+      "time": "12:54",
+      "sender_name": "ʀᵤₒₘᵤ 🌱",
+      "sender_id": 5566171804
+    }
+  ]
+}
